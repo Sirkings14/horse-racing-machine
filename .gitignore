@@ -1,31 +1,62 @@
+# ============================================================
 # Python
+# ============================================================
+
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 .Python
 
+
+# ============================================================
 # Virtual environments
+# ============================================================
+
 venv/
 env/
 .venv/
 
+
+# ============================================================
 # Environment files
+# ============================================================
+
 .env
 
-# Generated data
-data/raw/upcoming/*
-data/processed/*
-data/results/*
 
-# Keep folder structure
-!data/raw/upcoming/.gitkeep
-!data/processed/.gitkeep
-!data/results/.gitkeep
+# ============================================================
+# Downloaded raw race data
+# ============================================================
 
+data/raw/programs/*
+data/raw/results/*
+
+!data/raw/programs/.gitkeep
+!data/raw/results/.gitkeep
+
+
+# ============================================================
+# Processed extracted data
+# ============================================================
+
+data/processed/programs/*
+data/processed/results/*
+
+!data/processed/programs/.gitkeep
+!data/processed/results/.gitkeep
+
+
+# ============================================================
 # Logs
+# ============================================================
+
 *.log
 
-# OS files
+
+# ============================================================
+# Operating system files
+# ============================================================
+
 .DS_Store
 Thumbs.db
