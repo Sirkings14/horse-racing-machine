@@ -1,62 +1,25 @@
-# ============================================================
 # Python
-# ============================================================
-
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 .Python
 
-
-# ============================================================
 # Virtual environments
-# ============================================================
-
 venv/
 env/
 .venv/
 
-
-# ============================================================
 # Environment files
-# ============================================================
-
 .env
 
-
-# ============================================================
-# Downloaded raw race data
-# ============================================================
-
-data/raw/programs/*
-data/raw/results/*
-
-!data/raw/programs/.gitkeep
-!data/raw/results/.gitkeep
-
-
-# ============================================================
-# Processed extracted data
-# ============================================================
-
-data/processed/programs/*
-data/processed/results/*
-
-!data/processed/programs/.gitkeep
-!data/processed/results/.gitkeep
-
-
-# ============================================================
 # Logs
-# ============================================================
-
 *.log
 
-
-# ============================================================
-# Operating system files
-# ============================================================
-
+# OS files
 .DS_Store
 Thumbs.db
+
+# Keep generated race data in the repository
+# The machine needs historical programs and results
+# to build its long-term racing database.
