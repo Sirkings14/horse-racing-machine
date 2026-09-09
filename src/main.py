@@ -1,29 +1,29 @@
+from src.processors.process_pdfs import process_all_pdfs
 from src.scraper import run_scraper
-from src.processors.process_pdfs import (
-    process_all_pdfs
-)
-from src.parsers.race_parser import (
-    parse_all_files
-)
+from src.parsers.program_parser import process_all_programs
 
 
 def main():
 
-    print("\n" + "=" * 60)
     print("STARTING HORSE RACING MACHINE")
-    print("=" * 60)
 
-    print("\nSTEP 1: SCRAPING LONAB DATA")
+    print("\n" + "=" * 60)
+    print("STEP 1: SCRAPING LONAB DATA")
+    print("=" * 60)
 
     run_scraper()
 
-    print("\nSTEP 2: PROCESSING RACE PDFs")
+    print("\n" + "=" * 60)
+    print("STEP 2: PROCESSING RACE PDFs")
+    print("=" * 60)
 
     process_all_pdfs()
 
-    print("\nSTEP 3: PARSING STRUCTURED RACE DATA")
+    print("\n" + "=" * 60)
+    print("STEP 3: PARSING PROGRAM DATA")
+    print("=" * 60)
 
-    parse_all_files()
+    process_all_programs()
 
     print("\n" + "=" * 60)
     print("HORSE RACING MACHINE FINISHED SUCCESSFULLY")
