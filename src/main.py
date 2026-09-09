@@ -1,61 +1,97 @@
-from datetime import datetime, timezone
+from datetime import (
+    datetime,
+    timezone,
+)
 
-from src.ingestion.provider_factory import get_race_provider
-from src.ingestion.race_discovery import RaceDiscovery
-from src.notification.telegram_bot import telegram_bot
+from src.ingestion.lonab_collector import (
+    LonabCollector,
+)
+
+from src.notification.telegram_bot import (
+    telegram_bot,
+)
 
 
 def run_machine():
 
-    started_at = datetime.now(timezone.utc)
+    started_at = datetime.now(
+        timezone.utc
+    )
 
     print("=" * 60)
-    print("RACE MACHINE AUTOPILOT STARTED")
-    print(f"UTC TIME: {started_at.isoformat()}")
+    print(
+        "RACE MACHINE AUTOPILOT STARTED"
+    )
+    print(
+        f"UTC TIME: "
+        f"{started_at.isoformat()}"
+    )
     print("=" * 60)
 
     try:
 
-        provider = get_race_provider()
+        collector = LonabCollector()
 
-        discovery = RaceDiscovery(provider)
-
-        next_race = discovery.get_next_race()
-
-        if next_race is None:
-
-            message = (
-                "🏇 <b>RACE MACHINE AUTOPILOT</b>\n\n"
-                "Status: No race data available.\n\n"
-                "The machine is running correctly, but no race-data "
-                "provider has been connected yet."
+        collected = (
+            collector.collect(
+                pages=2
             )
-
-            telegram_bot.send_message(message)
-
-            return
-
-        print("Next race found:")
-        print(next_race)
-
-        message = (
-            "🏇 <b>RACE MACHINE AUTOPILOT</b>\n\n"
-            "Next race discovered.\n\n"
-            f"<b>Track:</b> {next_race.get('track', 'Unknown')}\n"
-            f"<b>Race:</b> {next_race.get('race_name', 'Unknown')}\n"
-            f"<b>Time:</b> {next_race.get('race_time', 'Unknown')}\n\n"
-            "Analysis engine connection comes next."
         )
 
-        telegram_bot.send_message(message)
+        print(
+            f"Documents collected: "
+            f"{len(collected)}"
+        )
+
+        programs = [
+            item
+            for item in collected
+            if item["post_type"]
+            == "program"
+        ]
+
+        results = [
+            item
+            for item in collected
+            if item["post_type"]
+            == "result"
+        ]
+
+        message = (
+            "🏇 <b>RACE MACHINE REPORT</b>\n\n"
+            "Status: LONAB DATA COLLECTION COMPLETE\n\n"
+            f"📄 Programs collected: "
+            f"{len(programs)}\n"
+            f"🏁 Results collected: "
+            f"{len(results)}\n"
+            f"📦 Total documents: "
+            f"{len(collected)}\n\n"
+            "Next stage: converting race "
+            "programs and results into the "
+            "machine's historical memory."
+        )
+
+        telegram_bot.send_message(
+            message
+        )
+
+        print(
+            "Collection completed."
+        )
 
     except Exception as error:
 
-        print(f"Machine error: {error}")
+        error_message = (
+            f"Machine error: {error}"
+        )
+
+        print(
+            error_message
+        )
 
         telegram_bot.send_message(
             "⚠️ <b>RACE MACHINE ERROR</b>\n\n"
-            f"{str(error)}"
+            f"{error_message}"
         )
 
 
