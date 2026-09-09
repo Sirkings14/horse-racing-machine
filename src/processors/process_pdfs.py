@@ -23,6 +23,22 @@ def make_output_name(pdf_path):
     return f"{pdf_path.stem}_{file_hash}.txt"
 
 
+def ensure_directory(path):
+    """
+    Ensure that a path exists and is a directory.
+    """
+
+    if path.exists() and not path.is_dir():
+        raise RuntimeError(
+            f"Expected a directory but found a file: {path}"
+        )
+
+    path.mkdir(
+        parents=True,
+        exist_ok=True
+    )
+
+
 def process_folder(source_folder, document_type):
     """
     Process every PDF inside a folder.
@@ -30,9 +46,8 @@ def process_folder(source_folder, document_type):
 
     output_folder = PROCESSED_FOLDER / document_type
 
-    output_folder.mkdir(
-        parents=True,
-        exist_ok=True
+    ensure_directory(
+        output_folder
     )
 
     pdf_files = sorted(
@@ -49,6 +64,7 @@ def process_folder(source_folder, document_type):
 
     processed_count = 0
     failed_count = 0
+    skipped_count = 0
 
     for pdf_file in pdf_files:
 
@@ -69,6 +85,8 @@ def process_folder(source_folder, document_type):
                     f"Already processed: "
                     f"{pdf_file.name}"
                 )
+
+                skipped_count += 1
 
                 continue
 
@@ -120,29 +138,54 @@ def process_folder(source_folder, document_type):
 
             failed_count += 1
 
+    print(
+        f"Processed: {processed_count} | "
+        f"Skipped: {skipped_count} | "
+        f"Failed: {failed_count}"
+    )
+
     return (
         processed_count,
-        failed_count
+        failed_count,
+        skipped_count
     )
 
 
 def process_all_pdfs():
 
-    print("\nHORSE RACING MACHINE")
+    print("\n" + "=" * 60)
+    print("HORSE RACING MACHINE")
     print("PDF PROCESSING ENGINE")
+    print("=" * 60)
 
-    program_success, program_failed = (
-        process_folder(
-            PROGRAMS_FOLDER,
-            "programs"
-        )
+    ensure_directory(
+        PROGRAMS_FOLDER
     )
 
-    result_success, result_failed = (
-        process_folder(
-            RESULTS_FOLDER,
-            "results"
-        )
+    ensure_directory(
+        RESULTS_FOLDER
+    )
+
+    ensure_directory(
+        PROCESSED_FOLDER
+    )
+
+    (
+        program_success,
+        program_failed,
+        program_skipped
+    ) = process_folder(
+        PROGRAMS_FOLDER,
+        "programs"
+    )
+
+    (
+        result_success,
+        result_failed,
+        result_skipped
+    ) = process_folder(
+        RESULTS_FOLDER,
+        "results"
     )
 
     print("\n" + "=" * 60)
@@ -155,6 +198,11 @@ def process_all_pdfs():
     )
 
     print(
+        f"Programs skipped: "
+        f"{program_skipped}"
+    )
+
+    print(
         f"Program failures: "
         f"{program_failed}"
     )
@@ -162,6 +210,11 @@ def process_all_pdfs():
     print(
         f"Results processed: "
         f"{result_success}"
+    )
+
+    print(
+        f"Results skipped: "
+        f"{result_skipped}"
     )
 
     print(
