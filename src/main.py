@@ -1,3 +1,4 @@
+from src.processors.process_pdfs import process_all_pdfs
 from src.scraper import run_scraper
 
 
