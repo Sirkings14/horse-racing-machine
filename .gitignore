@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Environment files
+.env
+
+# Generated data
+data/raw/upcoming/*
+data/processed/*
+data/results/*
+
+# Keep folder structure
+!data/raw/upcoming/.gitkeep
+!data/processed/.gitkeep
+!data/results/.gitkeep
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
