@@ -1,16 +1,14 @@
-
-from src.lonab_scraper import (
-    LonabScraper
-)
+from src.scraper import run_scraper
 
 
 def main():
 
-    scraper = LonabScraper()
+    print("Starting Horse Racing Machine")
 
-    scraper.run()
+    run_scraper()
+
+    print("Horse Racing Machine finished successfully")
 
 
 if __name__ == "__main__":
-
     main()
