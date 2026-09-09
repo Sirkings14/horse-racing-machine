@@ -1,13 +1,13 @@
-name: Race Machine Autopilot
+name: Run Race Machine
 
 on:
   workflow_dispatch:
 
-  schedule:
-    - cron: "0 */6 * * *"
+permissions:
+  contents: write
 
 jobs:
-  run-race-machine:
+  run-machine:
 
     runs-on: ubuntu-latest
 
@@ -15,6 +15,8 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -26,9 +28,20 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Race Machine
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - name: Run Horse Racing Machine
         run: |
           python -m src.main
+
+      - name: Save machine data
+        run: |
+          git config --global user.name "Horse Racing Machine"
+          git config --global user.email "race-machine@github-actions"
+
+          git add data/
+
+          if git diff --cached --quiet; then
+            echo "No new machine data to save."
+          else
+            git commit -m "Update race machine data"
+            git push
+          fi
