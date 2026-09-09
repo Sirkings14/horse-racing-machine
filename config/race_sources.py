@@ -1,25 +1,20 @@
-import os
-
-
 class RaceSources:
     """
-    External race-data source configuration.
-
-    URLs and API credentials are intentionally loaded from GitHub Secrets
-    or environment variables rather than hard-coded.
+    Official race data sources used by the machine.
     """
 
-    # Provider / source name
-    PROVIDER_NAME = os.getenv("RACE_PROVIDER_NAME", "")
+    LONAB_BASE_URL = "https://www.lonab.bf"
 
-    # Base URL or API endpoint
-    BASE_URL = os.getenv("RACE_PROVIDER_BASE_URL", "")
+    # Number of LONAB archive pages to inspect during each discovery run.
+    DISCOVERY_PAGES = 5
 
-    # Optional API key
-    API_KEY = os.getenv("RACE_PROVIDER_API_KEY", "")
-
-    # Request timeout
+    # Network timeout in seconds.
     REQUEST_TIMEOUT = 30
+
+    USER_AGENT = (
+        "RaceMachine/1.0 "
+        "(automated historical race analysis)"
+    )
 
 
 race_sources = RaceSources()
