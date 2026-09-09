@@ -1,44 +1,62 @@
 from datetime import datetime, timezone
 
+from src.ingestion.provider_factory import get_race_provider
+from src.ingestion.race_discovery import RaceDiscovery
 from src.notification.telegram_bot import telegram_bot
 
 
 def run_machine():
-    """
-    Main autopilot entry point.
-
-    The later modules will be connected here in this order:
-
-    1. Find upcoming races
-    2. Collect race programs
-    3. Load historical backbone
-    4. Normalize race data
-    5. Build performance features
-    6. Find similar historical races
-    7. Run strategies
-    8. Backtest / score strategies
-    9. Generate predictions
-    10. Send report to Telegram
-    """
 
     started_at = datetime.now(timezone.utc)
 
     print("=" * 60)
-    print("RACE MACHINE STARTED")
+    print("RACE MACHINE AUTOPILOT STARTED")
     print(f"UTC TIME: {started_at.isoformat()}")
     print("=" * 60)
 
-    message = (
-        "🏇 <b>RACE MACHINE AUTOPILOT</b>\n\n"
-        "Status: Running\n"
-        f"Time: {started_at.strftime('%Y-%m-%d %H:%M UTC')}\n\n"
-        "Machine backbone initialized successfully.\n"
-        "Next stage: automatic race discovery and data collection."
-    )
+    try:
 
-    telegram_bot.send_message(message)
+        provider = get_race_provider()
 
-    print("Race machine run completed.")
+        discovery = RaceDiscovery(provider)
+
+        next_race = discovery.get_next_race()
+
+        if next_race is None:
+
+            message = (
+                "🏇 <b>RACE MACHINE AUTOPILOT</b>\n\n"
+                "Status: No race data available.\n\n"
+                "The machine is running correctly, but no race-data "
+                "provider has been connected yet."
+            )
+
+            telegram_bot.send_message(message)
+
+            return
+
+        print("Next race found:")
+        print(next_race)
+
+        message = (
+            "🏇 <b>RACE MACHINE AUTOPILOT</b>\n\n"
+            "Next race discovered.\n\n"
+            f"<b>Track:</b> {next_race.get('track', 'Unknown')}\n"
+            f"<b>Race:</b> {next_race.get('race_name', 'Unknown')}\n"
+            f"<b>Time:</b> {next_race.get('race_time', 'Unknown')}\n\n"
+            "Analysis engine connection comes next."
+        )
+
+        telegram_bot.send_message(message)
+
+    except Exception as error:
+
+        print(f"Machine error: {error}")
+
+        telegram_bot.send_message(
+            "⚠️ <b>RACE MACHINE ERROR</b>\n\n"
+            f"{str(error)}"
+        )
 
 
 if __name__ == "__main__":
