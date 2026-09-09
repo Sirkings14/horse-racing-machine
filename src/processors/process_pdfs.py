@@ -1,37 +1,42 @@
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 import hashlib
 
 from src.processors.pdf_reader import read_pdf_file
 
 
+# ============================================================
+# FOLDER CONFIGURATION
+# ============================================================
+
 PROGRAMS_FOLDER = Path("data/raw/programs")
 RESULTS_FOLDER = Path("data/raw/results")
-
 PROCESSED_FOLDER = Path("data/processed")
 
 
-def make_output_name(pdf_path):
-    """
-    Create a short, unique filename.
-    """
-
-    file_hash = hashlib.md5(
-        str(pdf_path).encode("utf-8")
-    ).hexdigest()[:10]
-
-    return f"{pdf_path.stem}_{file_hash}.txt"
-
+# ============================================================
+# DIRECTORY SAFETY
+# ============================================================
 
 def ensure_directory(path):
     """
-    Ensure that a path exists and is a directory.
+    Ensure that the given path exists as a directory.
+
+    Raises an error if something exists at the path
+    but it is a file instead of a directory.
     """
 
-    if path.exists() and not path.is_dir():
-        raise RuntimeError(
-            f"Expected a directory but found a file: {path}"
-        )
+    path = Path(path)
+
+    if path.exists():
+
+        if not path.is_dir():
+
+            raise RuntimeError(
+                f"Expected directory but found file: {path}"
+            )
+
+        return
 
     path.mkdir(
         parents=True,
@@ -39,32 +44,82 @@ def ensure_directory(path):
     )
 
 
+# ============================================================
+# OUTPUT FILENAME
+# ============================================================
+
+def make_output_name(pdf_path):
+    """
+    Create a short and deterministic output filename.
+
+    The hash prevents filename conflicts while keeping
+    the generated filename short.
+    """
+
+    pdf_path = Path(pdf_path)
+
+    file_hash = hashlib.md5(
+        str(pdf_path).encode("utf-8")
+    ).hexdigest()[:10]
+
+    return (
+        f"{pdf_path.stem}_"
+        f"{file_hash}.txt"
+    )
+
+
+# ============================================================
+# PROCESS ONE FOLDER
+# ============================================================
+
 def process_folder(source_folder, document_type):
     """
-    Process every PDF inside a folder.
+    Process every PDF inside a source folder.
+
+    Parameters:
+        source_folder: Folder containing PDF files.
+        document_type: 'programs' or 'results'.
+
+    Returns:
+        processed_count,
+        failed_count,
+        skipped_count
     """
 
-    output_folder = PROCESSED_FOLDER / document_type
+    source_folder = Path(source_folder)
 
-    ensure_directory(
-        output_folder
+    output_folder = (
+        PROCESSED_FOLDER /
+        document_type
     )
+
+    # Make sure both folders exist correctly
+    ensure_directory(source_folder)
+    ensure_directory(PROCESSED_FOLDER)
+    ensure_directory(output_folder)
 
     pdf_files = sorted(
         source_folder.glob("*.pdf")
     )
 
     print("\n" + "=" * 60)
-    print(f"PROCESSING {document_type.upper()}")
+    print(
+        f"PROCESSING {document_type.upper()}"
+    )
     print("=" * 60)
 
     print(
-        f"PDF files found: {len(pdf_files)}"
+        f"PDF files found: "
+        f"{len(pdf_files)}"
     )
 
     processed_count = 0
     failed_count = 0
     skipped_count = 0
+
+    # --------------------------------------------------------
+    # PROCESS EVERY PDF
+    # --------------------------------------------------------
 
     for pdf_file in pdf_files:
 
@@ -79,6 +134,7 @@ def process_folder(source_folder, document_type):
                 output_name
             )
 
+            # Do not process the same PDF twice
             if output_path.exists():
 
                 print(
@@ -90,12 +146,16 @@ def process_folder(source_folder, document_type):
 
                 continue
 
+            # Read PDF
             result = read_pdf_file(
                 pdf_file
             )
 
-            extracted_text = result["text"]
+            extracted_text = (
+                result.get("text", "")
+            )
 
+            # Check that useful text exists
             if not extracted_text.strip():
 
                 print(
@@ -107,16 +167,30 @@ def process_folder(source_folder, document_type):
 
                 continue
 
+            # Metadata header
+            processed_at = (
+                datetime.now(
+                    timezone.utc
+                ).isoformat()
+            )
+
             header = (
-                f"DOCUMENT TYPE: {document_type}\n"
-                f"SOURCE FILE: {pdf_file.name}\n"
+                f"DOCUMENT TYPE: "
+                f"{document_type}\n"
+
+                f"SOURCE FILE: "
+                f"{pdf_file.name}\n"
+
                 f"PROCESSED AT: "
-                f"{datetime.utcnow().isoformat()}Z\n"
+                f"{processed_at}\n"
+
                 f"TEXT LENGTH: "
                 f"{len(extracted_text)}\n"
+
                 f"{'=' * 60}\n\n"
             )
 
+            # Save extracted text
             output_path.write_text(
                 header + extracted_text,
                 encoding="utf-8"
@@ -133,15 +207,34 @@ def process_folder(source_folder, document_type):
 
             print(
                 f"Processing failed for "
-                f"{pdf_file.name}: {error}"
+                f"{pdf_file.name}"
+            )
+
+            print(
+                f"Reason: {error}"
             )
 
             failed_count += 1
 
+    # --------------------------------------------------------
+    # FOLDER SUMMARY
+    # --------------------------------------------------------
+
+    print("\nFolder summary:")
+
     print(
-        f"Processed: {processed_count} | "
-        f"Skipped: {skipped_count} | "
-        f"Failed: {failed_count}"
+        f"Processed: "
+        f"{processed_count}"
+    )
+
+    print(
+        f"Skipped: "
+        f"{skipped_count}"
+    )
+
+    print(
+        f"Failed: "
+        f"{failed_count}"
     )
 
     return (
@@ -151,13 +244,25 @@ def process_folder(source_folder, document_type):
     )
 
 
+# ============================================================
+# PROCESS ALL PROGRAMS AND RESULTS
+# ============================================================
+
 def process_all_pdfs():
+    """
+    Main PDF processing engine.
+
+    Processes:
+        - Race program PDFs
+        - Race result PDFs
+    """
 
     print("\n" + "=" * 60)
     print("HORSE RACING MACHINE")
     print("PDF PROCESSING ENGINE")
     print("=" * 60)
 
+    # Ensure base directories exist
     ensure_directory(
         PROGRAMS_FOLDER
     )
@@ -170,6 +275,10 @@ def process_all_pdfs():
         PROCESSED_FOLDER
     )
 
+    # --------------------------------------------------------
+    # PROCESS PROGRAMS
+    # --------------------------------------------------------
+
     (
         program_success,
         program_failed,
@@ -178,6 +287,10 @@ def process_all_pdfs():
         PROGRAMS_FOLDER,
         "programs"
     )
+
+    # --------------------------------------------------------
+    # PROCESS RESULTS
+    # --------------------------------------------------------
 
     (
         result_success,
@@ -188,9 +301,13 @@ def process_all_pdfs():
         "results"
     )
 
-    print("\n" + "=" * 60)
+    # --------------------------------------------------------
+    # FINAL SUMMARY
+    # --------------------------------------------------------
 
+    print("\n" + "=" * 60)
     print("PDF PROCESSING COMPLETE")
+    print("=" * 60)
 
     print(
         f"Programs processed: "
@@ -206,6 +323,8 @@ def process_all_pdfs():
         f"Program failures: "
         f"{program_failed}"
     )
+
+    print("-" * 60)
 
     print(
         f"Results processed: "
@@ -225,5 +344,10 @@ def process_all_pdfs():
     print("=" * 60)
 
 
+# ============================================================
+# DIRECT EXECUTION
+# ============================================================
+
 if __name__ == "__main__":
+
     process_all_pdfs()
