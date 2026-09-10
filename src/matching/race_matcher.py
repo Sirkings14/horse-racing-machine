@@ -5,47 +5,17 @@ from datetime import datetime
 from pathlib import Path
 
 
-# ==================================================
-# PATHS
-# ==================================================
-
-BASE_DIR = Path(__file__).resolve().parents[2]
-
-PROGRAMS_DIR = BASE_DIR / "data" / "parsed" / "programs"
-RESULTS_DIR = BASE_DIR / "data" / "parsed" / "results"
-
-OUTPUT_DIR = BASE_DIR / "data" / "matched"
-
-OUTPUT_FILE = OUTPUT_DIR / "matched_races.json"
-
-
-# ==================================================
-# NORMALIZATION
-# ==================================================
-
 def normalize_text(value):
-    """
-    Normalize text so different representations
-    can be compared safely.
-    """
-
-    if value is None:
-        return None
-
-    value = str(value).strip().upper()
-
+    """Normalize text for reliable comparisons."""
     if not value:
-        return None
+        return ""
+
+    value = str(value).upper().strip()
 
     # Remove accents
-    value = unicodedata.normalize(
-        "NFD",
-        value
-    )
-
+    value = unicodedata.normalize("NFD", value)
     value = "".join(
-        char
-        for char in value
+        char for char in value
         if unicodedata.category(char) != "Mn"
     )
 
@@ -53,1078 +23,417 @@ def normalize_text(value):
     value = value.replace("-", " ")
     value = value.replace("_", " ")
 
-    # Remove punctuation
-    value = re.sub(
-        r"[^A-Z0-9\s]",
-        " ",
-        value
-    )
+    # Remove special characters
+    value = re.sub(r"[^A-Z0-9 ]", " ", value)
 
     # Collapse spaces
-    value = re.sub(
-        r"\s+",
-        " ",
-        value
-    ).strip()
+    value = re.sub(r"\s+", " ", value).strip()
 
     return value
 
 
-def normalize_track_name(track):
-    """
-    Convert different track names into a common
-    standard representation.
-    """
-
+def normalize_track(track):
+    """Normalize track names and common variations."""
     track = normalize_text(track)
 
     if not track:
-        return None
+        return ""
 
     aliases = {
+        "PARIS VINCENNES NOCTURNE": "PARIS VINCENNES",
+        "VINCENNES NOCTURNE": "PARIS VINCENNES",
+        "VINCENNES": "PARIS VINCENNES",
 
-        # ------------------------------------------
-        # PARIS VINCENNES
-        # ------------------------------------------
+        "PARIS LONGCHAMP": "PARISLONGCHAMP",
+        "LONGCHAMP": "PARISLONGCHAMP",
 
-        "PARIS VINCENNES": "PARIS VINCENNES",
-
-        "PARIS VINCENNES NOCTURNE":
-            "PARIS VINCENNES",
-
-        "VINCENNES":
-            "PARIS VINCENNES",
-
-        "VINCENNES NOCTURNE":
-            "PARIS VINCENNES",
-
-        # ------------------------------------------
-        # PARIS LONGCHAMP
-        # ------------------------------------------
-
-        "PARISLONGCHAMP":
-            "PARIS LONGCHAMP",
-
-        "PARIS LONGCHAMP":
-            "PARIS LONGCHAMP",
-
-        "LONGCHAMP":
-            "PARIS LONGCHAMP",
-
-        # ------------------------------------------
-        # OTHER TRACKS
-        # ------------------------------------------
-
-        "AUTEUIL":
-            "AUTEUIL",
-
-        "CRAON":
-            "CRAON",
-
-        "LA CAPELLE":
-            "LA CAPELLE",
-
-        "LACAPELLE":
-            "LA CAPELLE",
-
+        "AUTEUIL": "AUTEUIL",
+        "CRAON": "CRAON",
+        "LA CAPELLE": "LA CAPELLE",
     }
 
-    return aliases.get(
-        track,
-        track
-    )
+    return aliases.get(track, track)
 
-
-# ==================================================
-# DATE NORMALIZATION
-# ==================================================
 
 def normalize_date(value):
-    """
-    Normalize dates into YYYY-MM-DD where possible.
-    """
-
+    """Normalize dates to YYYY-MM-DD."""
     if not value:
         return None
 
     value = str(value).strip()
 
     formats = [
-
         "%Y-%m-%d",
-
         "%d/%m/%Y",
-
         "%d-%m-%Y",
-
         "%d.%m.%Y",
-
-        "%Y/%m/%d",
-
     ]
 
     for date_format in formats:
-
         try:
-
-            return datetime.strptime(
-                value,
-                date_format
-            ).strftime(
-                "%Y-%m-%d"
-            )
-
+            return datetime.strptime(value, date_format).strftime("%Y-%m-%d")
         except ValueError:
-
             pass
 
     return value
 
 
-# ==================================================
-# LOAD JSON FILES
-# ==================================================
-
-def load_json_files(folder):
-    """
-    Load all JSON files from a directory.
-    """
-
-    items = []
-
-    if not folder.exists():
-
-        print(
-            f"Folder not found: {folder}"
-        )
-
-        return items
-
-    for file_path in folder.glob("*.json"):
-
-        try:
-
-            with open(
-                file_path,
-                "r",
-                encoding="utf-8"
-            ) as file:
-
-                data = json.load(file)
-
-            if not isinstance(
-                data,
-                dict
-            ):
-
-                print(
-                    f"Skipping invalid JSON structure: "
-                    f"{file_path.name}"
-                )
-
-                continue
-
-            data["_source_file"] = (
-                file_path.name
-            )
-
-            items.append(
-                data
-            )
-
-        except Exception as error:
-
-            print(
-                f"Error reading "
-                f"{file_path.name}: "
-                f"{error}"
-            )
-
-    return items
-
-
-# ==================================================
-# HELPER FUNCTIONS
-# ==================================================
-
-def get_program_info(program):
-    """
-    Extract normalized program information.
-    """
-
-    race = program.get(
-        "race",
-        {}
-    )
-
-    date = normalize_date(
-        program.get("date")
-    )
-
-    track = normalize_track_name(
-        race.get("track")
-    )
-
-    race_number = race.get(
-        "race_number"
-    )
-
-    return {
-        "date": date,
-        "track": track,
-        "race_number": race_number
-    }
-
-
-def get_result_info(result):
-    """
-    Extract normalized result information.
-    """
-
-    date = normalize_date(
-        result.get("date")
-    )
-
-    track = normalize_track_name(
-        result.get("track")
-    )
-
-    return {
-        "date": date,
-        "track": track
-    }
-
-
-def get_race_number(value):
-    """
-    Safely normalize race number.
-    """
-
-    if value is None:
-        return None
-
-    try:
-
-        return int(value)
-
-    except (
-        ValueError,
-        TypeError
-    ):
-
-        return value
-
-
-# ==================================================
-# REMOVE DUPLICATES
-# ==================================================
-
-def get_unique_programs(programs):
-    """
-    Keep one unique program for each:
-
-    date + track + race number
-    """
-
-    unique = {}
-
-    for program in programs:
-
-        info = get_program_info(
-            program
-        )
-
-        key = (
-
-            info["date"],
-
-            info["track"],
-
-            get_race_number(
-                info["race_number"]
-            )
-
-        )
-
-        unique[key] = program
-
-    return unique
-
-
-def get_unique_results(results):
-    """
-    Keep one unique result meeting for each:
-
-    date + track
-    """
-
-    unique = {}
-
-    for result in results:
-
-        info = get_result_info(
-            result
-        )
-
-        key = (
-
-            info["date"],
-
-            info["track"]
-
-        )
-
-        unique[key] = result
-
-    return unique
-
-
-# ==================================================
-# RESULT RACE LOOKUP
-# ==================================================
-
-def find_race_in_result(
-    result,
-    race_number
-):
-    """
-    Find a specific race inside a result meeting.
-    """
-
-    target_race_number = (
-        get_race_number(
-            race_number
-        )
-    )
-
-    for race in result.get(
-        "races",
-        []
-    ):
-
-        result_race_number = (
-            get_race_number(
-                race.get(
-                    "race_number"
-                )
-            )
-        )
-
-        if (
-            result_race_number
-            == target_race_number
-        ):
-
-            return race
+def get_race_number(race):
+    """Extract race number safely."""
+    for key in ["race_number", "race", "number"]:
+        value = race.get(key)
+
+        if value is not None:
+            match = re.search(r"\d+", str(value))
+
+            if match:
+                return int(match.group())
 
     return None
 
 
-# ==================================================
-# MATCH CANDIDATES
-# ==================================================
+def get_horse_names(race):
+    """Extract normalized horse names."""
+    horses = race.get("horses", [])
 
-def find_exact_result(
-    results,
-    date,
-    track
-):
-    """
-    Match using exact date and track.
-    """
+    names = set()
 
-    candidates = []
-
-    for result in results:
-
-        info = get_result_info(
-            result
-        )
-
-        if (
-            info["date"] == date
-            and info["track"] == track
-        ):
-
-            candidates.append(
-                result
+    for horse in horses:
+        if isinstance(horse, dict):
+            name = (
+                horse.get("name")
+                or horse.get("horse")
+                or horse.get("horse_name")
             )
 
-    return candidates
+            if name:
+                names.add(normalize_text(name))
+
+        elif isinstance(horse, str):
+            names.add(normalize_text(horse))
+
+    return names
 
 
-def find_track_candidates(
-    results,
-    track
-):
-    """
-    Find all result meetings
-    with the same track.
-    """
+def calculate_match(program_race, result_race):
+    """Calculate confidence score between program and result."""
 
-    candidates = []
+    program_date = normalize_date(program_race.get("date"))
+    result_date = normalize_date(result_race.get("date"))
 
-    if not track:
-
-        return candidates
-
-    for result in results:
-
-        info = get_result_info(
-            result
-        )
-
-        if info["track"] == track:
-
-            candidates.append(
-                result
-            )
-
-    return candidates
-
-
-def find_date_candidates(
-    results,
-    date
-):
-    """
-    Find all result meetings
-    on the same date.
-    """
-
-    candidates = []
-
-    if not date:
-
-        return candidates
-
-    for result in results:
-
-        info = get_result_info(
-            result
-        )
-
-        if info["date"] == date:
-
-            candidates.append(
-                result
-            )
-
-    return candidates
-
-
-# ==================================================
-# SMART MATCHING
-# ==================================================
-
-def match_single_program(
-    program,
-    results
-):
-    """
-    Match one program to a result.
-
-    Matching priority:
-
-    1. Exact date + track + race number
-    2. Same track + race number
-       when only one safe candidate exists
-    3. Same date + race number
-       when track is missing
-    4. No unsafe guessing
-    """
-
-    program_info = (
-        get_program_info(
-            program
-        )
+    program_track = normalize_track(
+        program_race.get("track")
     )
 
-    date = (
-        program_info["date"]
+    result_track = normalize_track(
+        result_race.get("track")
     )
 
-    track = (
-        program_info["track"]
-    )
+    program_number = get_race_number(program_race)
+    result_number = get_race_number(result_race)
 
-    race_number = (
-        get_race_number(
-            program_info["race_number"]
-        )
-    )
+    score = 0
+    max_score = 0
+    reasons = []
 
-    # ==============================================
-    # STRATEGY 1
-    #
-    # EXACT DATE + TRACK
-    # ==============================================
+    # DATE
+    if program_date and result_date:
+        max_score += 40
 
-    exact_candidates = (
-        find_exact_result(
-            results,
-            date,
-            track
-        )
-    )
+        if program_date == result_date:
+            score += 40
+            reasons.append("date exact")
 
-    exact_matches = []
+    # TRACK
+    if program_track and result_track:
+        max_score += 30
 
-    for result in exact_candidates:
+        if program_track == result_track:
+            score += 30
+            reasons.append("track exact")
 
-        matching_race = (
-            find_race_in_result(
-                result,
-                race_number
+    # RACE NUMBER
+    if (
+        program_number is not None
+        and result_number is not None
+    ):
+        max_score += 20
+
+        if program_number == result_number:
+            score += 20
+            reasons.append("race number exact")
+
+    # HORSE OVERLAP
+    program_horses = get_horse_names(program_race)
+    result_horses = get_horse_names(result_race)
+
+    if program_horses and result_horses:
+        max_score += 10
+
+        overlap = (
+            len(program_horses & result_horses)
+            / min(
+                len(program_horses),
+                len(result_horses)
             )
         )
 
-        if matching_race:
+        horse_score = round(overlap * 10)
+        score += horse_score
 
-            exact_matches.append(
-                (
-                    result,
-                    matching_race
-                )
+        if horse_score:
+            reasons.append(
+                f"horse overlap {overlap:.0%}"
             )
 
-    if len(exact_matches) == 1:
+    confidence = 0
 
-        result, matching_race = (
-            exact_matches[0]
+    if max_score > 0:
+        confidence = round(
+            (score / max_score) * 100,
+            2
         )
-
-        return {
-
-            "status":
-                "matched",
-
-            "strategy":
-                "exact_date_track",
-
-            "result":
-                result,
-
-            "race":
-                matching_race,
-
-            "candidates":
-                []
-
-        }
-
-    # ==============================================
-    # STRATEGY 2
-    #
-    # SAME TRACK + RACE NUMBER
-    # ==============================================
-
-    track_candidates = (
-        find_track_candidates(
-            results,
-            track
-        )
-    )
-
-    track_matches = []
-
-    for result in track_candidates:
-
-        matching_race = (
-            find_race_in_result(
-                result,
-                race_number
-            )
-        )
-
-        if matching_race:
-
-            track_matches.append(
-                (
-                    result,
-                    matching_race
-                )
-            )
-
-    if len(track_matches) == 1:
-
-        result, matching_race = (
-            track_matches[0]
-        )
-
-        return {
-
-            "status":
-                "matched",
-
-            "strategy":
-                "track_race_fallback",
-
-            "result":
-                result,
-
-            "race":
-                matching_race,
-
-            "candidates":
-                []
-
-        }
-
-    # ==============================================
-    # STRATEGY 3
-    #
-    # SAME DATE + RACE NUMBER
-    #
-    # Used when track is missing.
-    # ==============================================
-
-    if not track:
-
-        date_candidates = (
-            find_date_candidates(
-                results,
-                date
-            )
-        )
-
-        date_matches = []
-
-        for result in date_candidates:
-
-            matching_race = (
-                find_race_in_result(
-                    result,
-                    race_number
-                )
-            )
-
-            if matching_race:
-
-                date_matches.append(
-                    (
-                        result,
-                        matching_race
-                    )
-                )
-
-        if len(date_matches) == 1:
-
-            result, matching_race = (
-                date_matches[0]
-            )
-
-            return {
-
-                "status":
-                    "matched",
-
-                "strategy":
-                    "date_race_fallback",
-
-                "result":
-                    result,
-
-                "race":
-                    matching_race,
-
-                "candidates":
-                    []
-
-            }
-
-    # ==============================================
-    # NO SAFE MATCH
-    # ==============================================
-
-    candidate_info = []
-
-    for result in results:
-
-        info = get_result_info(
-            result
-        )
-
-        result_race = (
-            find_race_in_result(
-                result,
-                race_number
-            )
-        )
-
-        if result_race:
-
-            candidate_info.append({
-
-                "date":
-                    info["date"],
-
-                "track":
-                    info["track"],
-
-                "source":
-                    result.get(
-                        "_source_file"
-                    )
-
-            })
 
     return {
-
-        "status":
-            "unmatched",
-
-        "strategy":
-            None,
-
-        "result":
-            None,
-
-        "race":
-            None,
-
-        "candidates":
-            candidate_info
-
+        "score": score,
+        "max_score": max_score,
+        "confidence": confidence,
+        "reasons": reasons,
     }
 
 
-# ==================================================
-# MATCH ALL RACES
-# ==================================================
+def load_json_files(folder):
+    """Load all JSON files from folder."""
+    folder = Path(folder)
+
+    records = []
+
+    for path in folder.glob("*.json"):
+        try:
+            with open(path, "r", encoding="utf-8") as file:
+                data = json.load(file)
+
+            if isinstance(data, list):
+                records.extend(data)
+
+            elif isinstance(data, dict):
+                records.append(data)
+
+        except Exception as error:
+            print(f"Failed loading {path.name}: {error}")
+
+    return records
+
+
+def deduplicate_races(races):
+    """Remove duplicate parsed races."""
+
+    unique = {}
+    result = []
+
+    for race in races:
+
+        key = (
+            normalize_date(race.get("date")),
+            normalize_track(race.get("track")),
+            get_race_number(race),
+        )
+
+        # If exact key is incomplete,
+        # keep it because missing data may differ.
+        if not all(key):
+            result.append(race)
+            continue
+
+        if key not in unique:
+            unique[key] = race
+            result.append(race)
+
+    return result
+
+
+def classify_unmatched(program_race):
+    """Classify unmatched races."""
+
+    race_date = normalize_date(
+        program_race.get("date")
+    )
+
+    if race_date:
+        try:
+            race_datetime = datetime.strptime(
+                race_date,
+                "%Y-%m-%d"
+            )
+
+            if race_datetime.date() > datetime.now().date():
+                return "FUTURE_RACE"
+
+        except ValueError:
+            pass
+
+    if not program_race.get("track"):
+        return "PARSER_DATA_MISSING"
+
+    return "RESULT_NOT_FOUND"
+
 
 def match_races(
     programs,
-    results
+    results,
+    threshold=75,
 ):
+    """Match program races against result races."""
 
-    print(
-        "\n" + "=" * 60
-    )
+    matched = []
+    unmatched = []
 
-    print(
-        "MATCHING RACES"
-    )
+    for program in programs:
 
-    print(
-        "=" * 60
-    )
+        best_match = None
+        best_result = None
 
-    matched_races = []
+        for result in results:
 
-    unmatched_programs = []
-
-    unique_programs = (
-        get_unique_programs(
-            programs
-        )
-    )
-
-    unique_results = (
-        get_unique_results(
-            results
-        )
-    )
-
-    programs_to_match = list(
-        unique_programs.values()
-    )
-
-    results_to_match = list(
-        unique_results.values()
-    )
-
-    print(
-        f"\nUnique programs: "
-        f"{len(programs_to_match)}"
-    )
-
-    print(
-        f"Unique results: "
-        f"{len(results_to_match)}"
-    )
-
-    for program in programs_to_match:
-
-        info = get_program_info(
-            program
-        )
-
-        date = info["date"]
-
-        track = info["track"]
-
-        race_number = (
-            get_race_number(
-                info["race_number"]
-            )
-        )
-
-        match = (
-            match_single_program(
+            match_info = calculate_match(
                 program,
-                results_to_match
+                result,
             )
-        )
 
-        # ==========================================
-        # SUCCESS
-        # ==========================================
+            if (
+                best_match is None
+                or match_info["confidence"]
+                > best_match["confidence"]
+            ):
+                best_match = match_info
+                best_result = result
 
         if (
-            match["status"]
-            == "matched"
+            best_match
+            and best_match["confidence"] >= threshold
         ):
 
-            result = (
-                match["result"]
-            )
-
-            matching_race = (
-                match["race"]
-            )
-
-            matched_race = {
-
-                "date":
-                    date,
-
-                "track":
-                    track,
-
-                "race_number":
-                    race_number,
-
-                "match_strategy":
-                    match["strategy"],
-
-                "program":
-                    program,
-
-                "result":
-                    matching_race,
-
-                "arrival":
-                    matching_race.get(
-                        "arrival"
-                    ),
-
-                "program_source":
-                    program.get(
-                        "_source_file"
-                    ),
-
-                "result_source":
-                    result.get(
-                        "_source_file"
-                    )
-
-            }
-
-            matched_races.append(
-                matched_race
-            )
+            matched.append({
+                "program": program,
+                "result": best_result,
+                "match": best_match,
+            })
 
             print(
-                f"\nMATCHED "
-                f"[{match['strategy']}]: "
-                f"{date} | "
-                f"{track} | "
-                f"Race {race_number}"
+                f"MATCHED "
+                f"{normalize_date(program.get('date'))} | "
+                f"{program.get('track')} | "
+                f"Race {get_race_number(program)} | "
+                f"{best_match['confidence']}%"
             )
-
-        # ==========================================
-        # FAILURE
-        # ==========================================
 
         else:
 
-            unmatched_program = {
+            status = classify_unmatched(program)
 
-                "program":
-                    program,
+            unmatched.append({
+                "program": program,
+                "status": status,
+                "best_candidate": (
+                    {
+                        "result": best_result,
+                        "match": best_match,
+                    }
+                    if best_result
+                    else None
+                ),
+            })
 
-                "date":
-                    date,
-
-                "track":
-                    track,
-
-                "race_number":
-                    race_number,
-
-                "possible_candidates":
-                    match["candidates"]
-
-            }
-
-            unmatched_programs.append(
-                unmatched_program
+            confidence = (
+                best_match["confidence"]
+                if best_match
+                else 0
             )
 
             print(
-                f"\nNO SAFE MATCH: "
-                f"{date} | "
-                f"{track} | "
-                f"Race {race_number}"
+                f"UNMATCHED [{status}] "
+                f"{normalize_date(program.get('date'))} | "
+                f"{program.get('track')} | "
+                f"Race {get_race_number(program)} | "
+                f"Best confidence: {confidence}%"
             )
 
-            if match["candidates"]:
-
-                print(
-                    "Possible result candidates:"
-                )
-
-                for candidate in (
-                    match["candidates"]
-                ):
-
-                    print(
-                        f"  - "
-                        f"{candidate['date']} | "
-                        f"{candidate['track']} | "
-                        f"{candidate['source']}"
-                    )
-
-    return (
-        matched_races,
-        unmatched_programs
-    )
+    return matched, unmatched
 
 
-# ==================================================
-# SAVE RESULTS
-# ==================================================
-
-def save_matches(
-    matched_races,
-    unmatched_programs
+def run_matching(
+    programs_path="data/parsed/programs",
+    results_path="data/parsed/results",
+    output_path="data/matched/matched_races.json",
+    review_path="data/matched/match_review.json",
 ):
+    """Run complete race matching engine."""
 
-    OUTPUT_DIR.mkdir(
-        parents=True,
-        exist_ok=True
+    print("\n" + "=" * 60)
+    print("HORSE RACING MACHINE")
+    print("SMART RACE MATCHING ENGINE")
+    print("=" * 60)
+
+    programs = load_json_files(programs_path)
+    results = load_json_files(results_path)
+
+    print(f"\nPrograms loaded: {len(programs)}")
+    print(f"Results loaded: {len(results)}")
+
+    programs = deduplicate_races(programs)
+    results = deduplicate_races(results)
+
+    print(f"Unique programs: {len(programs)}")
+    print(f"Unique results: {len(results)}")
+
+    print("\nMATCHING RACES")
+    print("=" * 60)
+
+    matched, unmatched = match_races(
+        programs,
+        results,
+        threshold=75,
     )
 
-    output = {
-
-        "matched_races":
-            matched_races,
-
-        "unmatched_programs":
-            unmatched_programs,
-
-        "summary": {
-
-            "matched_count":
-                len(
-                    matched_races
-                ),
-
-            "unmatched_count":
-                len(
-                    unmatched_programs
-                )
-
-        }
-
-    }
+    Path(output_path).parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
     with open(
-        OUTPUT_FILE,
+        output_path,
         "w",
-        encoding="utf-8"
+        encoding="utf-8",
     ) as file:
-
         json.dump(
-            output,
+            matched,
             file,
-            indent=4,
-            ensure_ascii=False
+            ensure_ascii=False,
+            indent=2,
         )
 
-    print(
-        "\n" + "=" * 60
-    )
-
-    print(
-        "RACE MATCHING COMPLETE"
-    )
-
-    print(
-        "=" * 60
-    )
-
-    print(
-        f"\nMatched races: "
-        f"{len(matched_races)}"
-    )
-
-    print(
-        f"Unmatched programs: "
-        f"{len(unmatched_programs)}"
-    )
-
-    print(
-        f"\nSaved:\n"
-        f"{OUTPUT_FILE}"
-    )
-
-
-# ==================================================
-# MAIN FUNCTION
-# ==================================================
-
-def run_race_matching():
-
-    print(
-        "\n" + "=" * 60
-    )
-
-    print(
-        "HORSE RACING MACHINE"
-    )
-
-    print(
-        "RACE MATCHING ENGINE"
-    )
-
-    print(
-        "=" * 60
-    )
-
-    programs = (
-        load_json_files(
-            PROGRAMS_DIR
+    with open(
+        review_path,
+        "w",
+        encoding="utf-8",
+    ) as file:
+        json.dump(
+            unmatched,
+            file,
+            ensure_ascii=False,
+            indent=2,
         )
-    )
 
-    results = (
-        load_json_files(
-            RESULTS_DIR
-        )
-    )
+    print("\n" + "=" * 60)
+    print("RACE MATCHING COMPLETE")
+    print("=" * 60)
+    print(f"Matched races: {len(matched)}")
+    print(f"Unmatched programs: {len(unmatched)}")
+    print(f"Saved: {output_path}")
+    print(f"Review: {review_path}")
 
-    print(
-        f"\nPrograms loaded: "
-        f"{len(programs)}"
-    )
+    return matched, unmatched
 
-    print(
-        f"Results loaded: "
-        f"{len(results)}"
-    )
 
-    matched_races, unmatched_programs = (
-        match_races(
-            programs,
-            results
-        )
-    )
-
-    save_matches(
-        matched_races,
-        unmatched_programs
-    )
-
-    return matched_races
+if __name__ == "__main__":
+    run_matching()
