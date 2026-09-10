@@ -1,8 +1,8 @@
 from src.scraper import run_scraper
 from src.processors.process_pdfs import process_all_pdfs
 from src.parsers.program_parser import process_all_programs
-from src.parsers.results_parser import process_all_results
-from src.matching.race_matcher import run_race_matcher
+from src.parsers.result_parser import process_all_results
+from src.matching.race_matcher import run_matching
 
 
 def main():
@@ -20,7 +20,7 @@ def main():
     run_scraper()
 
     # ========================================================
-    # STEP 2: PROCESSING PDFs
+    # STEP 2: PDF PROCESSING
     # ========================================================
 
     print("\nSTEP 2: PROCESSING RACE PDFs")
@@ -49,10 +49,15 @@ def main():
 
     print("\nSTEP 5: MATCHING PROGRAMS WITH RESULTS")
 
-    run_race_matcher()
+    run_matching(
+        programs_path="data/parsed/programs",
+        results_path="data/parsed/results",
+        output_path="data/matched/matched_races.json",
+        review_path="data/matched/match_review.json",
+    )
 
     # ========================================================
-    # FINISHED
+    # COMPLETE
     # ========================================================
 
     print("\n" + "=" * 60)
