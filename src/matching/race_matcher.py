@@ -10,12 +10,18 @@ from pathlib import Path
 # TEXT NORMALIZATION
 # ============================================================
 
+
 def normalize_text(value):
+    """
+    Normalize text for reliable comparisons.
+    """
 
     if not value:
         return ""
 
-    value = str(value).upper().strip()
+    value = str(
+        value
+    ).upper().strip()
 
     value = unicodedata.normalize(
         "NFD",
@@ -23,9 +29,16 @@ def normalize_text(value):
     )
 
     value = "".join(
+
         char
+
         for char in value
-        if unicodedata.category(char) != "Mn"
+
+        if unicodedata.category(
+            char
+        )
+        != "Mn"
+
     )
 
     value = value.replace(
@@ -39,15 +52,23 @@ def normalize_text(value):
     )
 
     value = re.sub(
+
         r"[^A-Z0-9 ]",
+
         " ",
+
         value,
+
     )
 
     value = re.sub(
+
         r"\s+",
+
         " ",
+
         value,
+
     ).strip()
 
     return value
@@ -57,7 +78,11 @@ def normalize_text(value):
 # TRACK NORMALIZATION
 # ============================================================
 
+
 def normalize_track(track):
+    """
+    Normalize race track names.
+    """
 
     track = normalize_text(
         track
@@ -68,13 +93,16 @@ def normalize_track(track):
 
     aliases = {
 
+        "PARIS VINCENNES":
+            "PARIS VINCENNES",
+
+        "VINCENNES":
+            "PARIS VINCENNES",
+
         "PARIS VINCENNES NOCTURNE":
             "PARIS VINCENNES",
 
         "VINCENNES NOCTURNE":
-            "PARIS VINCENNES",
-
-        "VINCENNES":
             "PARIS VINCENNES",
 
         "PARIS LONGCHAMP":
@@ -83,8 +111,17 @@ def normalize_track(track):
         "LONGCHAMP":
             "PARISLONGCHAMP",
 
-        "PARIS LONGCHAMP NOCTURNE":
+        "PARISLONGCHAMP":
             "PARISLONGCHAMP",
+
+        "AUTEUIL":
+            "AUTEUIL",
+
+        "CRAON":
+            "CRAON",
+
+        "LA CAPELLE":
+            "LA CAPELLE",
 
     }
 
@@ -98,7 +135,11 @@ def normalize_track(track):
 # DATE NORMALIZATION
 # ============================================================
 
+
 def normalize_date(value):
+    """
+    Normalize date to YYYY-MM-DD.
+    """
 
     if not value:
         return None
@@ -117,6 +158,8 @@ def normalize_date(value):
 
         "%d.%m.%Y",
 
+        "%Y/%m/%d",
+
     ]
 
     for date_format in formats:
@@ -124,8 +167,11 @@ def normalize_date(value):
         try:
 
             return datetime.strptime(
+
                 value,
+
                 date_format,
+
             ).strftime(
                 "%Y-%m-%d"
             )
@@ -138,25 +184,72 @@ def normalize_date(value):
 
 
 # ============================================================
-# EXTRACT RACE NUMBER
+# SAFE FIELD ACCESS
 # ============================================================
 
-def get_race_number(race):
+
+def get_nested_race(race):
+    """
+    Return nested race object if present.
+    """
 
     if not isinstance(
         race,
         dict,
     ):
+
+        return {}
+
+    nested = race.get(
+        "race"
+    )
+
+    if isinstance(
+        nested,
+        dict,
+    ):
+
+        return nested
+
+    return {}
+
+
+# ============================================================
+# RACE NUMBER
+# ============================================================
+
+
+def get_race_number(race):
+    """
+    Extract race number safely.
+    """
+
+    if not isinstance(
+        race,
+        dict,
+    ):
+
         return None
 
     locations = [
 
         race,
 
-        race.get(
-            "race",
-            {},
+        get_nested_race(
+            race
         ),
+
+    ]
+
+    possible_keys = [
+
+        "race_number",
+
+        "number",
+
+        "race",
+
+        "course_number",
 
     ]
 
@@ -166,28 +259,27 @@ def get_race_number(race):
             location,
             dict,
         ):
+
             continue
 
-        for key in [
-
-            "race_number",
-
-            "number",
-
-            "race",
-
-        ]:
+        for key in possible_keys:
 
             value = location.get(
                 key
             )
 
             if value is None:
+
                 continue
 
             match = re.search(
+
                 r"\d+",
-                str(value),
+
+                str(
+                    value
+                ),
+
             )
 
             if match:
@@ -200,116 +292,172 @@ def get_race_number(race):
 
 
 # ============================================================
-# EXTRACT DATE
+# RACE DATE
 # ============================================================
 
+
 def get_race_date(race):
+    """
+    Extract race date.
+    """
 
     if not isinstance(
         race,
         dict,
     ):
+
         return None
 
-    value = race.get(
-        "date"
-    )
+    locations = [
 
-    if value:
+        race,
 
-        return normalize_date(
-            value
-        )
+        get_nested_race(
+            race
+        ),
 
-    nested = race.get(
-        "race",
-        {}
-    )
+    ]
 
-    if isinstance(
-        nested,
-        dict,
-    ):
+    possible_keys = [
 
-        return normalize_date(
-            nested.get(
-                "date"
+        "date",
+
+        "race_date",
+
+        "meeting_date",
+
+    ]
+
+    for location in locations:
+
+        if not isinstance(
+            location,
+            dict,
+        ):
+
+            continue
+
+        for key in possible_keys:
+
+            value = location.get(
+                key
             )
-        )
+
+            normalized = normalize_date(
+                value
+            )
+
+            if normalized:
+
+                return normalized
 
     return None
 
 
 # ============================================================
-# EXTRACT TRACK
+# RACE TRACK
 # ============================================================
 
+
 def get_race_track(race):
+    """
+    Extract race track.
+    """
 
     if not isinstance(
         race,
         dict,
     ):
+
         return ""
 
-    value = race.get(
-        "track"
-    )
+    locations = [
 
-    if value:
+        race,
 
-        return normalize_track(
-            value
-        )
+        get_nested_race(
+            race
+        ),
 
-    nested = race.get(
-        "race",
-        {}
-    )
+    ]
 
-    if isinstance(
-        nested,
-        dict,
-    ):
+    possible_keys = [
 
-        return normalize_track(
-            nested.get(
-                "track"
+        "track",
+
+        "hippodrome",
+
+        "racecourse",
+
+        "course",
+
+    ]
+
+    for location in locations:
+
+        if not isinstance(
+            location,
+            dict,
+        ):
+
+            continue
+
+        for key in possible_keys:
+
+            value = location.get(
+                key
             )
-        )
+
+            if value:
+
+                return normalize_track(
+                    value
+                )
 
     return ""
 
 
 # ============================================================
-# EXTRACT HORSES
+# HORSE NAMES
 # ============================================================
 
+
 def get_horse_names(race):
+    """
+    Extract normalized horse names.
+    """
+
+    if not isinstance(
+        race,
+        dict,
+    ):
+
+        return set()
 
     horses = race.get(
         "horses",
-        [],
+        []
     )
 
     if not horses:
 
-        nested = race.get(
-            "race",
-            {},
+        nested = get_nested_race(
+            race
         )
 
-        if isinstance(
-            nested,
-            dict,
-        ):
-
-            horses = nested.get(
-                "horses",
-                [],
-            )
+        horses = nested.get(
+            "horses",
+            []
+        )
 
     names = set()
+
+    if not isinstance(
+        horses,
+        list,
+    ):
+
+        return names
 
     for horse in horses:
 
@@ -336,31 +484,179 @@ def get_horse_names(race):
 
             if name:
 
-                names.add(
-                    normalize_text(
-                        name
-                    )
+                normalized = normalize_text(
+                    name
                 )
+
+                if normalized:
+
+                    names.add(
+                        normalized
+                    )
 
         elif isinstance(
             horse,
             str,
         ):
 
-            names.add(
-                normalize_text(
-                    horse
-                )
+            normalized = normalize_text(
+                horse
             )
 
+            if normalized:
+
+                names.add(
+                    normalized
+                )
+
     return names
+
+
+# ============================================================
+# RECORD IS A REAL RACE
+# ============================================================
+
+
+def is_valid_race_record(race):
+    """
+    Determine whether a record
+    actually represents a usable race.
+    """
+
+    if not isinstance(
+        race,
+        dict,
+    ):
+
+        return False
+
+    date = get_race_date(
+        race
+    )
+
+    number = get_race_number(
+        race
+    )
+
+    track = get_race_track(
+        race
+    )
+
+    # Minimum requirement:
+    # date + race number
+
+    if not date:
+
+        return False
+
+    if number is None:
+
+        return False
+
+    # Track is strongly preferred.
+    # Missing track is allowed because
+    # some parsers may fail to extract it.
+
+    return True
 
 
 # ============================================================
 # LOAD JSON FILES
 # ============================================================
 
+
+def extract_race_records(data):
+    """
+    Extract race records from different
+    possible JSON structures.
+    """
+
+    records = []
+
+    # --------------------------------------------------------
+    # CASE 1
+    # FILE CONTAINS A LIST
+    # --------------------------------------------------------
+
+    if isinstance(
+        data,
+        list,
+    ):
+
+        for item in data:
+
+            if isinstance(
+                item,
+                dict,
+            ):
+
+                # Nested races list
+
+                if isinstance(
+                    item.get(
+                        "races"
+                    ),
+                    list,
+                ):
+
+                    records.extend(
+                        item[
+                            "races"
+                        ]
+                    )
+
+                else:
+
+                    records.append(
+                        item
+                    )
+
+        return records
+
+    # --------------------------------------------------------
+    # CASE 2
+    # FILE CONTAINS A DICTIONARY
+    # --------------------------------------------------------
+
+    if isinstance(
+        data,
+        dict,
+    ):
+
+        # Common structure:
+        # {
+        #   "races": [...]
+        # }
+
+        if isinstance(
+            data.get(
+                "races"
+            ),
+            list,
+        ):
+
+            records.extend(
+                data[
+                    "races"
+                ]
+            )
+
+            return records
+
+        # Otherwise dictionary itself
+        # may represent one race.
+
+        records.append(
+            data
+        )
+
+    return records
+
+
 def load_json_files(folder):
+    """
+    Load and extract races from all JSON files.
+    """
 
     folder = Path(
         folder
@@ -368,56 +664,165 @@ def load_json_files(folder):
 
     records = []
 
-    for path in folder.glob(
-        "*.json"
-    ):
+    files_loaded = 0
+
+    files_failed = 0
+
+    files_empty = 0
+
+    if not folder.exists():
+
+        print(
+            f"\nERROR: Folder does not exist: "
+            f"{folder}"
+        )
+
+        return records
+
+    json_files = list(
+
+        folder.glob(
+            "*.json"
+        )
+
+    )
+
+    print(
+
+        f"\nLoading JSON files from: "
+        f"{folder}"
+
+    )
+
+    print(
+
+        f"JSON files found: "
+        f"{len(json_files)}"
+
+    )
+
+    for path in json_files:
 
         try:
 
             with open(
+
                 path,
+
                 "r",
+
                 encoding="utf-8",
+
             ) as file:
 
                 data = json.load(
                     file
                 )
 
-            if isinstance(
-                data,
-                list,
-            ):
+            extracted = extract_race_records(
+                data
+            )
 
-                records.extend(
-                    data
+            valid_in_file = [
+
+                race
+
+                for race in extracted
+
+                if is_valid_race_record(
+                    race
                 )
 
-            elif isinstance(
-                data,
-                dict,
-            ):
+            ]
 
-                records.append(
-                    data
+            if not extracted:
+
+                files_empty += 1
+
+                print(
+
+                    f"WARNING: No records extracted "
+                    f"from {path.name}"
+
                 )
+
+                continue
+
+            if not valid_in_file:
+
+                files_empty += 1
+
+                print(
+
+                    f"WARNING: No valid race records "
+                    f"in {path.name}"
+
+                )
+
+                continue
+
+            records.extend(
+                valid_in_file
+            )
+
+            files_loaded += 1
 
         except Exception as error:
 
+            files_failed += 1
+
             print(
+
                 f"Failed loading "
                 f"{path.name}: "
                 f"{error}"
+
             )
+
+    print(
+        "\nJSON load summary:"
+    )
+
+    print(
+
+        f"Files loaded: "
+        f"{files_loaded}"
+
+    )
+
+    print(
+
+        f"Files with no valid races: "
+        f"{files_empty}"
+
+    )
+
+    print(
+
+        f"Files failed: "
+        f"{files_failed}"
+
+    )
+
+    print(
+
+        f"Valid race records: "
+        f"{len(records)}"
+
+    )
 
     return records
 
 
 # ============================================================
-# CREATE RACE IDENTITY KEY
+# RACE KEY
 # ============================================================
 
+
 def create_race_key(race):
+    """
+    Create stable race identity key.
+    """
 
     return (
 
@@ -437,307 +842,279 @@ def create_race_key(race):
 
 
 # ============================================================
-# DEDUPLICATE RACES
+# DEDUPLICATION
 # ============================================================
 
+
 def deduplicate_races(races):
+    """
+    Remove duplicate races safely.
+    """
 
     unique = {}
 
+    result = []
+
     for race in races:
 
-        date = get_race_date(
+        if not is_valid_race_record(
             race
-        )
-
-        track = get_race_track(
-            race
-        )
-
-        number = get_race_number(
-            race
-        )
-
-        # Do not trust incomplete races
-        # as unique identities.
-
-        if not date:
+        ):
 
             continue
 
-        if number is None:
-
-            continue
-
-        key = (
-
-            date,
-
-            track,
-
-            number,
-
+        key = create_race_key(
+            race
         )
-
-        # Prefer the record with more horses.
 
         if key not in unique:
 
             unique[key] = race
 
-        else:
-
-            existing_horses = len(
-                get_horse_names(
-                    unique[key]
-                )
+            result.append(
+                race
             )
 
-            new_horses = len(
-                get_horse_names(
-                    race
-                )
+            continue
+
+        # ----------------------------------------------------
+        # DUPLICATE HANDLING
+        #
+        # Keep record with more horse information.
+        # ----------------------------------------------------
+
+        existing = unique[
+            key
+        ]
+
+        existing_horses = len(
+
+            get_horse_names(
+                existing
             )
 
-            if new_horses > existing_horses:
+        )
 
-                unique[key] = race
+        new_horses = len(
 
-    return list(
-        unique.values()
-    )
+            get_horse_names(
+                race
+            )
+
+        )
+
+        if new_horses > existing_horses:
+
+            unique[
+                key
+            ] = race
+
+            index = result.index(
+                existing
+            )
+
+            result[
+                index
+            ] = race
+
+    return result
 
 
 # ============================================================
-# CHECK EXACT CORE IDENTITY
+# MATCH CALCULATION
 # ============================================================
 
-def core_identity_matches(
-    program,
-    result,
+
+def calculate_match(
+    program_race,
+    result_race,
 ):
+    """
+    Calculate race match confidence.
+    """
 
     program_date = get_race_date(
-        program
+        program_race
     )
 
     result_date = get_race_date(
-        result
+        result_race
     )
 
     program_track = get_race_track(
-        program
+        program_race
     )
 
     result_track = get_race_track(
-        result
+        result_race
     )
 
     program_number = get_race_number(
-        program
+        program_race
     )
 
     result_number = get_race_number(
-        result
+        result_race
     )
 
-    if not program_date:
-        return False
+    score = 0
 
-    if not result_date:
-        return False
+    max_score = 0
 
-    if program_date != result_date:
-        return False
+    reasons = []
 
-    if (
-        program_number is not None
-        and result_number is not None
-        and program_number != result_number
-    ):
-        return False
+    # --------------------------------------------------------
+    # DATE
+    # --------------------------------------------------------
 
-    # If both tracks exist,
-    # they MUST match.
+    if program_date and result_date:
 
-    if (
-        program_track
-        and result_track
-        and program_track != result_track
-    ):
-        return False
+        max_score += 40
 
-    return True
+        if program_date == result_date:
 
+            score += 40
 
-# ============================================================
-# CALCULATE HORSE OVERLAP
-# ============================================================
+            reasons.append(
+                "date exact"
+            )
 
-def calculate_horse_overlap(
-    program,
-    result,
-):
-
-    program_horses = get_horse_names(
-        program
-    )
-
-    result_horses = get_horse_names(
-        result
-    )
-
-    if not program_horses:
-
-        return 0
-
-    if not result_horses:
-
-        return 0
-
-    common = (
-
-        program_horses
-        & result_horses
-
-    )
-
-    overlap = (
-
-        len(common)
-        / min(
-            len(program_horses),
-            len(result_horses),
-        )
-
-    )
-
-    return round(
-        overlap * 100,
-        2,
-    )
-
-
-# ============================================================
-# CALCULATE MATCH
-# ============================================================
-
-def calculate_match(
-    program,
-    result,
-):
-
-    if not core_identity_matches(
-        program,
-        result,
-    ):
-
-        return {
-
-            "confidence": 0,
-
-            "horse_overlap": 0,
-
-            "reasons": [
-
-                "core identity mismatch"
-
-            ],
-
-        }
-
-    program_track = get_race_track(
-        program
-    )
-
-    result_track = get_race_track(
-        result
-    )
-
-    program_number = get_race_number(
-        program
-    )
-
-    result_number = get_race_number(
-        result
-    )
-
-    score = 60
-
-    reasons = [
-
-        "date exact"
-
-    ]
-
-    # Track
+    # --------------------------------------------------------
+    # TRACK
+    # --------------------------------------------------------
 
     if program_track and result_track:
 
-        score += 20
+        max_score += 30
 
-        reasons.append(
-            "track exact"
-        )
+        if program_track == result_track:
 
-    # Race number
+            score += 30
+
+            reasons.append(
+                "track exact"
+            )
+
+    # --------------------------------------------------------
+    # RACE NUMBER
+    # --------------------------------------------------------
 
     if (
 
-        program_number is not None
+        program_number
+        is not None
 
-        and result_number is not None
-
-        and program_number == result_number
+        and result_number
+        is not None
 
     ):
 
-        score += 10
+        max_score += 20
 
-        reasons.append(
-            "race number exact"
-        )
+        if (
 
-    # Horses
+            program_number
+            == result_number
 
-    horse_overlap = calculate_horse_overlap(
+        ):
 
-        program,
+            score += 20
 
-        result,
+            reasons.append(
+                "race number exact"
+            )
 
+    # --------------------------------------------------------
+    # HORSE OVERLAP
+    # --------------------------------------------------------
+
+    program_horses = get_horse_names(
+        program_race
     )
 
-    if horse_overlap > 0:
-
-        horse_points = round(
-
-            horse_overlap
-            * 0.1
-
-        )
-
-        score += horse_points
-
-        reasons.append(
-
-            f"horse overlap "
-            f"{horse_overlap}%"
-
-        )
-
-    confidence = min(
-        score,
-        100,
+    result_horses = get_horse_names(
+        result_race
     )
+
+    if (
+
+        program_horses
+        and result_horses
+
+    ):
+
+        max_score += 10
+
+        overlap_count = len(
+
+            program_horses
+            & result_horses
+
+        )
+
+        overlap = (
+
+            overlap_count
+
+            / min(
+
+                len(
+                    program_horses
+                ),
+
+                len(
+                    result_horses
+                ),
+
+            )
+
+        )
+
+        horse_score = round(
+            overlap * 10
+        )
+
+        score += horse_score
+
+        if horse_score:
+
+            reasons.append(
+
+                f"horse overlap "
+                f"{overlap:.0%}"
+
+            )
+
+    # --------------------------------------------------------
+    # CONFIDENCE
+    # --------------------------------------------------------
+
+    confidence = 0
+
+    if max_score > 0:
+
+        confidence = round(
+
+            (
+                score
+                / max_score
+            )
+            * 100,
+
+            2,
+
+        )
 
     return {
 
+        "score":
+            score,
+
+        "max_score":
+            max_score,
+
         "confidence":
             confidence,
-
-        "horse_overlap":
-            horse_overlap,
 
         "reasons":
             reasons,
@@ -746,15 +1123,19 @@ def calculate_match(
 
 
 # ============================================================
-# CLASSIFY UNMATCHED
+# UNMATCHED CLASSIFICATION
 # ============================================================
 
+
 def classify_unmatched(
-    program,
+    program_race,
 ):
+    """
+    Classify unmatched race.
+    """
 
     race_date = get_race_date(
-        program
+        program_race
     )
 
     if race_date:
@@ -784,7 +1165,7 @@ def classify_unmatched(
             pass
 
     if not get_race_track(
-        program
+        program_race
     ):
 
         return "PARSER_DATA_MISSING"
@@ -796,17 +1177,21 @@ def classify_unmatched(
 # MATCH RACES
 # ============================================================
 
+
 def match_races(
     programs,
     results,
     threshold=75,
 ):
+    """
+    Match program races against result races.
+    """
 
     matched = []
 
     unmatched = []
 
-    used_results = set()
+    used_result_indexes = set()
 
     for program in programs:
 
@@ -820,7 +1205,7 @@ def match_races(
             results
         ):
 
-            if index in used_results:
+            if index in used_result_indexes:
 
                 continue
 
@@ -832,19 +1217,11 @@ def match_races(
 
             )
 
-            if not best_match:
-
-                best_match = match_info
-
-                best_result = result
-
-                best_index = index
-
-                continue
-
             if (
 
-                match_info[
+                best_match is None
+
+                or match_info[
                     "confidence"
                 ]
 
@@ -859,6 +1236,10 @@ def match_races(
                 best_result = result
 
                 best_index = index
+
+        # ----------------------------------------------------
+        # ACCEPT MATCH
+        # ----------------------------------------------------
 
         if (
 
@@ -885,7 +1266,7 @@ def match_races(
 
             })
 
-            used_results.add(
+            used_result_indexes.add(
                 best_index
             )
 
@@ -908,6 +1289,10 @@ def match_races(
                 f"{best_match['confidence']}%"
 
             )
+
+        # ----------------------------------------------------
+        # NO MATCH
+        # ----------------------------------------------------
 
         else:
 
@@ -941,17 +1326,17 @@ def match_races(
 
             })
 
-            confidence = 0
+            confidence = (
 
-            if best_match:
+                best_match[
+                    "confidence"
+                ]
 
-                confidence = best_match.get(
+                if best_match
 
-                    "confidence",
+                else 0
 
-                    0,
-
-                )
+            )
 
             print(
 
@@ -988,13 +1373,14 @@ def match_races(
 # RUN MATCHING ENGINE
 # ============================================================
 
+
 def run_matching(
 
     programs_path=
         "data/structured/programs",
 
     results_path=
-        "data/parsed/results",
+        "data/structured/results",
 
     output_path=
         "data/matched/matched_races.json",
@@ -1003,6 +1389,9 @@ def run_matching(
         "data/matched/match_review.json",
 
 ):
+    """
+    Run the race matching engine.
+    """
 
     print(
         "\n"
@@ -1021,9 +1410,17 @@ def run_matching(
         "=" * 60
     )
 
+    # --------------------------------------------------------
+    # LOAD PROGRAMS
+    # --------------------------------------------------------
+
     programs = load_json_files(
         programs_path
     )
+
+    # --------------------------------------------------------
+    # LOAD RESULTS
+    # --------------------------------------------------------
 
     results = load_json_files(
         results_path
@@ -1042,6 +1439,10 @@ def run_matching(
         f"{len(results)}"
 
     )
+
+    # --------------------------------------------------------
+    # DEDUPLICATE
+    # --------------------------------------------------------
 
     programs = deduplicate_races(
         programs
@@ -1065,6 +1466,34 @@ def run_matching(
 
     )
 
+    # ========================================================
+    # CRITICAL SAFETY CHECKS
+    # ========================================================
+
+    if not programs:
+
+        raise RuntimeError(
+
+            "No valid program races were found. "
+            "Matching cannot continue."
+
+        )
+
+    if not results:
+
+        raise RuntimeError(
+
+            "No valid result races were found. "
+            "This usually means the results parser "
+            "produced the wrong JSON structure or "
+            "failed to extract date/race number."
+
+        )
+
+    # --------------------------------------------------------
+    # MATCHING
+    # --------------------------------------------------------
+
     print(
         "\nMATCHING RACES"
     )
@@ -1083,6 +1512,10 @@ def run_matching(
 
     )
 
+    # --------------------------------------------------------
+    # CREATE OUTPUT FOLDERS
+    # --------------------------------------------------------
+
     Path(
         output_path
     ).parent.mkdir(
@@ -1092,6 +1525,20 @@ def run_matching(
         exist_ok=True,
 
     )
+
+    Path(
+        review_path
+    ).parent.mkdir(
+
+        parents=True,
+
+        exist_ok=True,
+
+    )
+
+    # --------------------------------------------------------
+    # SAVE MATCHES
+    # --------------------------------------------------------
 
     with open(
 
@@ -1115,6 +1562,10 @@ def run_matching(
 
         )
 
+    # --------------------------------------------------------
+    # SAVE UNMATCHED
+    # --------------------------------------------------------
+
     with open(
 
         review_path,
@@ -1136,6 +1587,10 @@ def run_matching(
             indent=2,
 
         )
+
+    # --------------------------------------------------------
+    # SUMMARY
+    # --------------------------------------------------------
 
     print(
         "\n"
@@ -1188,8 +1643,9 @@ def run_matching(
 
 
 # ============================================================
-# START
+# DIRECT EXECUTION
 # ============================================================
+
 
 if __name__ == "__main__":
 
