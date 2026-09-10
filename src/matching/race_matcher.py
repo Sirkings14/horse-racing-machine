@@ -1,14 +1,16 @@
 import json
 import re
 import unicodedata
+
 from datetime import datetime
 from pathlib import Path
 
 
+# ============================================================
+# TEXT NORMALIZATION
+# ============================================================
+
 def normalize_text(value):
-    """
-    Normalize text for reliable comparisons.
-    """
 
     if not value:
         return ""
@@ -51,12 +53,15 @@ def normalize_text(value):
     return value
 
 
-def normalize_track(track):
-    """
-    Normalize race track names.
-    """
+# ============================================================
+# TRACK NORMALIZATION
+# ============================================================
 
-    track = normalize_text(track)
+def normalize_track(track):
+
+    track = normalize_text(
+        track
+    )
 
     if not track:
         return ""
@@ -89,15 +94,18 @@ def normalize_track(track):
     )
 
 
+# ============================================================
+# DATE NORMALIZATION
+# ============================================================
+
 def normalize_date(value):
-    """
-    Normalize date to YYYY-MM-DD.
-    """
 
     if not value:
         return None
 
-    value = str(value).strip()
+    value = str(
+        value
+    ).strip()
 
     formats = [
 
@@ -129,10 +137,11 @@ def normalize_date(value):
     return None
 
 
+# ============================================================
+# EXTRACT RACE NUMBER
+# ============================================================
+
 def get_race_number(race):
-    """
-    Extract race number safely.
-    """
 
     if not isinstance(
         race,
@@ -140,7 +149,7 @@ def get_race_number(race):
     ):
         return None
 
-    possible_locations = [
+    locations = [
 
         race,
 
@@ -151,7 +160,7 @@ def get_race_number(race):
 
     ]
 
-    for location in possible_locations:
+    for location in locations:
 
         if not isinstance(
             location,
@@ -170,7 +179,7 @@ def get_race_number(race):
         ]:
 
             value = location.get(
-                key,
+                key
             )
 
             if value is None:
@@ -190,11 +199,11 @@ def get_race_number(race):
     return None
 
 
+# ============================================================
+# EXTRACT DATE
+# ============================================================
+
 def get_race_date(race):
-    """
-    Get date from either
-    top-level or nested race object.
-    """
 
     if not isinstance(
         race,
@@ -202,28 +211,28 @@ def get_race_date(race):
     ):
         return None
 
-    date = race.get(
+    value = race.get(
         "date"
     )
 
-    if date:
+    if value:
 
         return normalize_date(
-            date
+            value
         )
 
-    nested_race = race.get(
+    nested = race.get(
         "race",
         {}
     )
 
     if isinstance(
-        nested_race,
+        nested,
         dict,
     ):
 
         return normalize_date(
-            nested_race.get(
+            nested.get(
                 "date"
             )
         )
@@ -231,11 +240,11 @@ def get_race_date(race):
     return None
 
 
+# ============================================================
+# EXTRACT TRACK
+# ============================================================
+
 def get_race_track(race):
-    """
-    Get track from either
-    top-level or nested race object.
-    """
 
     if not isinstance(
         race,
@@ -243,28 +252,28 @@ def get_race_track(race):
     ):
         return ""
 
-    track = race.get(
+    value = race.get(
         "track"
     )
 
-    if track:
+    if value:
 
         return normalize_track(
-            track
+            value
         )
 
-    nested_race = race.get(
+    nested = race.get(
         "race",
         {}
     )
 
     if isinstance(
-        nested_race,
+        nested,
         dict,
     ):
 
         return normalize_track(
-            nested_race.get(
+            nested.get(
                 "track"
             )
         )
@@ -272,10 +281,11 @@ def get_race_track(race):
     return ""
 
 
+# ============================================================
+# EXTRACT HORSES
+# ============================================================
+
 def get_horse_names(race):
-    """
-    Extract normalized horse names.
-    """
 
     horses = race.get(
         "horses",
@@ -284,17 +294,17 @@ def get_horse_names(race):
 
     if not horses:
 
-        nested_race = race.get(
+        nested = race.get(
             "race",
             {},
         )
 
         if isinstance(
-            nested_race,
+            nested,
             dict,
         ):
 
-            horses = nested_race.get(
+            horses = nested.get(
                 "horses",
                 [],
             )
@@ -346,191 +356,11 @@ def get_horse_names(race):
     return names
 
 
-def calculate_match(
-    program_race,
-    result_race,
-):
-    """
-    Calculate confidence score.
-    """
-
-    program_date = get_race_date(
-        program_race
-    )
-
-    result_date = get_race_date(
-        result_race
-    )
-
-    program_track = get_race_track(
-        program_race
-    )
-
-    result_track = get_race_track(
-        result_race
-    )
-
-    program_number = get_race_number(
-        program_race
-    )
-
-    result_number = get_race_number(
-        result_race
-    )
-
-    score = 0
-
-    max_score = 0
-
-    reasons = []
-
-    # DATE
-
-    if program_date and result_date:
-
-        max_score += 40
-
-        if program_date == result_date:
-
-            score += 40
-
-            reasons.append(
-                "date exact"
-            )
-
-    # TRACK
-
-    if program_track and result_track:
-
-        max_score += 30
-
-        if program_track == result_track:
-
-            score += 30
-
-            reasons.append(
-                "track exact"
-            )
-
-    # RACE NUMBER
-
-    if (
-
-        program_number
-        is not None
-
-        and result_number
-        is not None
-
-    ):
-
-        max_score += 20
-
-        if (
-
-            program_number
-            == result_number
-
-        ):
-
-            score += 20
-
-            reasons.append(
-                "race number exact"
-            )
-
-    # HORSE OVERLAP
-
-    program_horses = get_horse_names(
-        program_race
-    )
-
-    result_horses = get_horse_names(
-        result_race
-    )
-
-    if (
-
-        program_horses
-        and result_horses
-
-    ):
-
-        max_score += 10
-
-        overlap = (
-
-            len(
-                program_horses
-                & result_horses
-            )
-
-            / min(
-
-                len(
-                    program_horses
-                ),
-
-                len(
-                    result_horses
-                ),
-
-            )
-
-        )
-
-        horse_score = round(
-            overlap * 10
-        )
-
-        score += horse_score
-
-        if horse_score:
-
-            reasons.append(
-
-                f"horse overlap "
-                f"{overlap:.0%}"
-
-            )
-
-    confidence = 0
-
-    if max_score > 0:
-
-        confidence = round(
-
-            (
-                score
-                / max_score
-            )
-            * 100,
-
-            2,
-
-        )
-
-    return {
-
-        "score":
-            score,
-
-        "max_score":
-            max_score,
-
-        "confidence":
-            confidence,
-
-        "reasons":
-            reasons,
-
-    }
-
+# ============================================================
+# LOAD JSON FILES
+# ============================================================
 
 def load_json_files(folder):
-    """
-    Load all JSON files.
-    """
 
     folder = Path(
         folder
@@ -575,57 +405,44 @@ def load_json_files(folder):
         except Exception as error:
 
             print(
-
                 f"Failed loading "
                 f"{path.name}: "
                 f"{error}"
-
             )
 
     return records
 
 
+# ============================================================
+# CREATE RACE IDENTITY KEY
+# ============================================================
+
 def create_race_key(race):
-    """
-    Create stable race identity key.
-    """
-
-    date = get_race_date(
-        race
-    )
-
-    track = get_race_track(
-        race
-    )
-
-    number = get_race_number(
-        race
-    )
 
     return (
 
-        date,
+        get_race_date(
+            race
+        ),
 
-        track,
+        get_race_track(
+            race
+        ),
 
-        number,
+        get_race_number(
+            race
+        ),
 
     )
 
 
+# ============================================================
+# DEDUPLICATE RACES
+# ============================================================
+
 def deduplicate_races(races):
-    """
-    Remove duplicate races.
-
-    A race must have at least:
-    date + race number.
-
-    Track is used when available.
-    """
 
     unique = {}
-
-    result = []
 
     for race in races:
 
@@ -641,24 +458,16 @@ def deduplicate_races(races):
             race
         )
 
-        # Cannot safely deduplicate
-        # without date and race number.
+        # Do not trust incomplete races
+        # as unique identities.
 
-        if (
-
-            not date
-
-            or number is None
-
-        ):
-
-            result.append(
-                race
-            )
+        if not date:
 
             continue
 
-        # Primary key
+        if number is None:
+
+            continue
 
         key = (
 
@@ -670,30 +479,282 @@ def deduplicate_races(races):
 
         )
 
-        # If track is missing,
-        # still prevent exact duplicates
-        # from appearing repeatedly.
+        # Prefer the record with more horses.
 
         if key not in unique:
 
             unique[key] = race
 
-            result.append(
-                race
+        else:
+
+            existing_horses = len(
+                get_horse_names(
+                    unique[key]
+                )
             )
 
-    return result
+            new_horses = len(
+                get_horse_names(
+                    race
+                )
+            )
 
+            if new_horses > existing_horses:
+
+                unique[key] = race
+
+    return list(
+        unique.values()
+    )
+
+
+# ============================================================
+# CHECK EXACT CORE IDENTITY
+# ============================================================
+
+def core_identity_matches(
+    program,
+    result,
+):
+
+    program_date = get_race_date(
+        program
+    )
+
+    result_date = get_race_date(
+        result
+    )
+
+    program_track = get_race_track(
+        program
+    )
+
+    result_track = get_race_track(
+        result
+    )
+
+    program_number = get_race_number(
+        program
+    )
+
+    result_number = get_race_number(
+        result
+    )
+
+    if not program_date:
+        return False
+
+    if not result_date:
+        return False
+
+    if program_date != result_date:
+        return False
+
+    if (
+        program_number is not None
+        and result_number is not None
+        and program_number != result_number
+    ):
+        return False
+
+    # If both tracks exist,
+    # they MUST match.
+
+    if (
+        program_track
+        and result_track
+        and program_track != result_track
+    ):
+        return False
+
+    return True
+
+
+# ============================================================
+# CALCULATE HORSE OVERLAP
+# ============================================================
+
+def calculate_horse_overlap(
+    program,
+    result,
+):
+
+    program_horses = get_horse_names(
+        program
+    )
+
+    result_horses = get_horse_names(
+        result
+    )
+
+    if not program_horses:
+
+        return 0
+
+    if not result_horses:
+
+        return 0
+
+    common = (
+
+        program_horses
+        & result_horses
+
+    )
+
+    overlap = (
+
+        len(common)
+        / min(
+            len(program_horses),
+            len(result_horses),
+        )
+
+    )
+
+    return round(
+        overlap * 100,
+        2,
+    )
+
+
+# ============================================================
+# CALCULATE MATCH
+# ============================================================
+
+def calculate_match(
+    program,
+    result,
+):
+
+    if not core_identity_matches(
+        program,
+        result,
+    ):
+
+        return {
+
+            "confidence": 0,
+
+            "horse_overlap": 0,
+
+            "reasons": [
+
+                "core identity mismatch"
+
+            ],
+
+        }
+
+    program_track = get_race_track(
+        program
+    )
+
+    result_track = get_race_track(
+        result
+    )
+
+    program_number = get_race_number(
+        program
+    )
+
+    result_number = get_race_number(
+        result
+    )
+
+    score = 60
+
+    reasons = [
+
+        "date exact"
+
+    ]
+
+    # Track
+
+    if program_track and result_track:
+
+        score += 20
+
+        reasons.append(
+            "track exact"
+        )
+
+    # Race number
+
+    if (
+
+        program_number is not None
+
+        and result_number is not None
+
+        and program_number == result_number
+
+    ):
+
+        score += 10
+
+        reasons.append(
+            "race number exact"
+        )
+
+    # Horses
+
+    horse_overlap = calculate_horse_overlap(
+
+        program,
+
+        result,
+
+    )
+
+    if horse_overlap > 0:
+
+        horse_points = round(
+
+            horse_overlap
+            * 0.1
+
+        )
+
+        score += horse_points
+
+        reasons.append(
+
+            f"horse overlap "
+            f"{horse_overlap}%"
+
+        )
+
+    confidence = min(
+        score,
+        100,
+    )
+
+    return {
+
+        "confidence":
+            confidence,
+
+        "horse_overlap":
+            horse_overlap,
+
+        "reasons":
+            reasons,
+
+    }
+
+
+# ============================================================
+# CLASSIFY UNMATCHED
+# ============================================================
 
 def classify_unmatched(
-    program_race,
+    program,
 ):
-    """
-    Classify unmatched race.
-    """
 
     race_date = get_race_date(
-        program_race
+        program
     )
 
     if race_date:
@@ -723,7 +784,7 @@ def classify_unmatched(
             pass
 
     if not get_race_track(
-        program_race
+        program
     ):
 
         return "PARSER_DATA_MISSING"
@@ -731,21 +792,21 @@ def classify_unmatched(
     return "RESULT_NOT_FOUND"
 
 
+# ============================================================
+# MATCH RACES
+# ============================================================
+
 def match_races(
     programs,
     results,
     threshold=75,
 ):
-    """
-    Match program races
-    against result races.
-    """
 
     matched = []
 
     unmatched = []
 
-    used_result_indexes = set()
+    used_results = set()
 
     for program in programs:
 
@@ -759,7 +820,7 @@ def match_races(
             results
         ):
 
-            if index in used_result_indexes:
+            if index in used_results:
 
                 continue
 
@@ -771,11 +832,19 @@ def match_races(
 
             )
 
+            if not best_match:
+
+                best_match = match_info
+
+                best_result = result
+
+                best_index = index
+
+                continue
+
             if (
 
-                best_match is None
-
-                or match_info[
+                match_info[
                     "confidence"
                 ]
 
@@ -816,11 +885,9 @@ def match_races(
 
             })
 
-            if best_index is not None:
-
-                used_result_indexes.add(
-                    best_index
-                )
+            used_results.add(
+                best_index
+            )
 
             print(
 
@@ -874,17 +941,17 @@ def match_races(
 
             })
 
-            confidence = (
+            confidence = 0
 
-                best_match[
-                    "confidence"
-                ]
+            if best_match:
 
-                if best_match
+                confidence = best_match.get(
 
-                else 0
+                    "confidence",
 
-            )
+                    0,
+
+                )
 
             print(
 
@@ -917,6 +984,10 @@ def match_races(
     )
 
 
+# ============================================================
+# RUN MATCHING ENGINE
+# ============================================================
+
 def run_matching(
 
     programs_path=
@@ -932,9 +1003,6 @@ def run_matching(
         "data/matched/match_review.json",
 
 ):
-    """
-    Run race matching engine.
-    """
 
     print(
         "\n"
@@ -1118,6 +1186,10 @@ def run_matching(
 
     )
 
+
+# ============================================================
+# START
+# ============================================================
 
 if __name__ == "__main__":
 
