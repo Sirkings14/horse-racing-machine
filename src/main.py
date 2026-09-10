@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from src.scrapers.scraper import LonabScraper
+from src.scraper import LonabScraper
 from src.processors.pdf_processor import PDFProcessor
 from src.parsers.program_parser import ProgramParser
 from src.parsers.result_parser import ResultParser
