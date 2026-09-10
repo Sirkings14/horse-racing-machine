@@ -1,38 +1,17 @@
 import json
-
 from pathlib import Path
 
-
-# ============================================================
-# IMPORT RACE HELPERS
-# ============================================================
-
-from src.matching.race_matcher import (
-
+from src.utils.race_utils import (
+    expand_records,
     get_race_date,
-
     get_race_number,
-
     get_race_track,
-
-    get_horse_names,
-
-    is_valid_race_record,
-
-    extract_race_records,
-
 )
 
 
-# ============================================================
-# LOAD JSON FILES
-# ============================================================
-
-
-def load_records(folder):
+def load_json_files(folder):
     """
-    Load race records from all JSON files
-    inside a folder.
+    Load JSON files and keep diagnostics.
     """
 
     folder = Path(
@@ -49,128 +28,52 @@ def load_records(folder):
 
         "files_failed": 0,
 
-        "files_without_records": 0,
+        "files_without_valid_races": 0,
 
         "invalid_records": 0,
 
     }
 
-    # --------------------------------------------------------
-    # FOLDER CHECK
-    # --------------------------------------------------------
-
-    if not folder.exists():
+    for path in folder.glob(
+        "*.json"
+    ):
 
         diagnostics[
-            "folder_missing"
-        ] = True
-
-        return (
-
-            records,
-
-            diagnostics,
-
-        )
-
-    diagnostics[
-        "folder_missing"
-    ] = False
-
-    json_files = list(
-
-        folder.glob(
-            "*.json"
-        )
-
-    )
-
-    diagnostics[
-        "files_found"
-    ] = len(
-        json_files
-    )
-
-    # --------------------------------------------------------
-    # LOAD FILES
-    # --------------------------------------------------------
-
-    for path in json_files:
+            "files_found"
+        ] += 1
 
         try:
 
             with open(
-
                 path,
-
                 "r",
-
                 encoding="utf-8",
-
             ) as file:
 
                 data = json.load(
                     file
                 )
 
-            extracted = extract_race_records(
-                data
-            )
+            diagnostics[
+                "files_loaded"
+            ] += 1
 
-            if not extracted:
-
-                diagnostics[
-                    "files_without_records"
-                ] += 1
-
-                print(
-
-                    f"WARNING: No race records "
-                    f"found in {path.name}"
-
-                )
-
-                continue
-
-            valid_records = []
-
-            for record in extracted:
-
-                if is_valid_race_record(
-                    record
-                ):
-
-                    valid_records.append(
-                        record
-                    )
-
-                else:
-
-                    diagnostics[
-                        "invalid_records"
-                    ] += 1
-
-            if valid_records:
+            if isinstance(
+                data,
+                list,
+            ):
 
                 records.extend(
-                    valid_records
+                    data
                 )
 
-                diagnostics[
-                    "files_loaded"
-                ] += 1
+            elif isinstance(
+                data,
+                dict,
+            ):
 
-            else:
-
-                diagnostics[
-                    "files_without_records"
-                ] += 1
-
-                print(
-
-                    f"WARNING: No valid race records "
-                    f"in {path.name}"
-
+                records.append(
+                    data
                 )
 
         except Exception as error:
@@ -181,261 +84,101 @@ def load_records(folder):
 
             print(
 
-                f"ERROR loading "
-                f"{path.name}: "
-                f"{error}"
+                f"WARNING: Failed loading "
+                f"{path.name}: {error}"
 
             )
 
+    return records, diagnostics
+
+
+def is_valid_race(record):
+    """
+    A valid race requires:
+
+    - date
+    - race number
+
+    Track is allowed to be missing,
+    but will generate a warning.
+    """
+
+    date = get_race_date(
+        record
+    )
+
+    race_number = get_race_number(
+        record
+    )
+
     return (
 
-        records,
+        date is not None
 
-        diagnostics,
+        and race_number is not None
 
     )
 
 
-# ============================================================
-# VALIDATE PROGRAM RECORDS
-# ============================================================
-
-
-def validate_programs(
-    programs,
+def validate_records(
+    records,
+    diagnostics,
+    record_type,
 ):
     """
-    Validate program race records.
+    Expand and validate race records.
     """
 
-    errors = []
+    expanded_records = expand_records(
+        records
+    )
 
-    warnings = []
-
-    if not programs:
-
-        errors.append(
-
-            "No valid program races found."
-
-        )
-
-        return {
-
-            "valid": False,
-
-            "errors": errors,
-
-            "warnings": warnings,
-
-            "count": 0,
-
-        }
+    valid_records = []
 
     missing_track = 0
 
-    missing_horses = 0
+    for record in expanded_records:
 
-    for race in programs:
-
-        if not get_race_date(
-            race
+        if not isinstance(
+            record,
+            dict,
         ):
 
-            errors.append(
+            diagnostics[
+                "invalid_records"
+            ] += 1
 
-                "Program race missing date."
+            continue
 
-            )
-
-        if (
-
-            get_race_number(
-                race
-            )
-            is None
-
+        if not is_valid_race(
+            record
         ):
 
-            errors.append(
+            diagnostics[
+                "invalid_records"
+            ] += 1
 
-                "Program race missing "
-                "race number."
+            continue
 
-            )
+        track = get_race_track(
+            record
+        )
 
-        if not get_race_track(
-            race
-        ):
+        if not track:
 
             missing_track += 1
 
-        if not get_horse_names(
-            race
-        ):
-
-            missing_horses += 1
-
-    if missing_track:
-
-        warnings.append(
-
-            f"{missing_track} program race(s) "
-            f"missing track information."
-
+        valid_records.append(
+            record
         )
 
-    if missing_horses:
+    return (
 
-        warnings.append(
+        valid_records,
 
-            f"{missing_horses} program race(s) "
-            f"missing horse information."
+        missing_track,
 
-        )
-
-    return {
-
-        "valid":
-            len(errors) == 0,
-
-        "errors":
-            errors,
-
-        "warnings":
-            warnings,
-
-        "count":
-            len(programs),
-
-    }
-
-
-# ============================================================
-# VALIDATE RESULT RECORDS
-# ============================================================
-
-
-def validate_results(
-    results,
-):
-    """
-    Validate result race records.
-    """
-
-    errors = []
-
-    warnings = []
-
-    # --------------------------------------------------------
-    # CRITICAL CHECK
-    # --------------------------------------------------------
-
-    if not results:
-
-        errors.append(
-
-            "No valid result races found. "
-            "Results parser output is empty "
-            "or does not contain recognizable "
-            "date + race number fields."
-
-        )
-
-        return {
-
-            "valid": False,
-
-            "errors": errors,
-
-            "warnings": warnings,
-
-            "count": 0,
-
-        }
-
-    missing_track = 0
-
-    missing_horses = 0
-
-    for race in results:
-
-        if not get_race_date(
-            race
-        ):
-
-            errors.append(
-
-                "Result race missing date."
-
-            )
-
-        if (
-
-            get_race_number(
-                race
-            )
-            is None
-
-        ):
-
-            errors.append(
-
-                "Result race missing "
-                "race number."
-
-            )
-
-        if not get_race_track(
-            race
-        ):
-
-            missing_track += 1
-
-        if not get_horse_names(
-            race
-        ):
-
-            missing_horses += 1
-
-    if missing_track:
-
-        warnings.append(
-
-            f"{missing_track} result race(s) "
-            f"missing track information."
-
-        )
-
-    if missing_horses:
-
-        warnings.append(
-
-            f"{missing_horses} result race(s) "
-            f"missing horse information."
-
-        )
-
-    return {
-
-        "valid":
-            len(errors) == 0,
-
-        "errors":
-            errors,
-
-        "warnings":
-            warnings,
-
-        "count":
-            len(results),
-
-    }
-
-
-# ============================================================
-# PRINT DIAGNOSTICS
-# ============================================================
+    )
 
 
 def print_diagnostics(
@@ -443,7 +186,7 @@ def print_diagnostics(
     diagnostics,
 ):
     """
-    Print file loading diagnostics.
+    Print validation diagnostics.
     """
 
     print(
@@ -452,71 +195,43 @@ def print_diagnostics(
     )
 
     print(
-        title
+        f"{title} FILE DIAGNOSTICS"
     )
 
     print(
         "-" * 60
     )
 
-    if diagnostics.get(
-        "folder_missing"
-    ):
-
-        print(
-            "FOLDER DOES NOT EXIST"
-        )
-
-        return
-
     print(
 
         f"JSON files found: "
-
-        f"{diagnostics.get('files_found', 0)}"
+        f"{diagnostics['files_found']}"
 
     )
 
     print(
 
         f"Files loaded: "
-
-        f"{diagnostics.get('files_loaded', 0)}"
+        f"{diagnostics['files_loaded']}"
 
     )
 
     print(
 
         f"Files failed: "
-
-        f"{diagnostics.get('files_failed', 0)}"
-
-    )
-
-    print(
-
-        f"Files without valid races: "
-
-        f"{diagnostics.get('files_without_records', 0)}"
+        f"{diagnostics['files_failed']}"
 
     )
 
     print(
 
         f"Invalid records ignored: "
-
-        f"{diagnostics.get('invalid_records', 0)}"
+        f"{diagnostics['invalid_records']}"
 
     )
 
 
-# ============================================================
-# MAIN PIPELINE VALIDATOR
-# ============================================================
-
-
 def validate_pipeline(
-
     programs_path=
         "data/structured/programs",
 
@@ -525,18 +240,8 @@ def validate_pipeline(
 
 ):
     """
-    Validate all pipeline data before
-    allowing the matching engine to run.
-
-    Returns:
-
-    {
-        "valid": bool,
-        "programs": {...},
-        "results": {...},
-        "errors": [...],
-        "warnings": [...]
-    }
+    Validate the entire pipeline before
+    the race matching engine runs.
     """
 
     print(
@@ -556,131 +261,109 @@ def validate_pipeline(
         "=" * 60
     )
 
-    # --------------------------------------------------------
-    # LOAD PROGRAMS
-    # --------------------------------------------------------
-
     print(
         "\nVALIDATING PROGRAM DATA"
     )
 
-    programs, program_diagnostics = load_records(
+    program_records, program_diagnostics = (
+        load_json_files(
+            programs_path
+        )
+    )
 
-        programs_path
+    valid_programs, programs_missing_track = (
+        validate_records(
 
+            program_records,
+
+            program_diagnostics,
+
+            "PROGRAM",
+
+        )
     )
 
     print_diagnostics(
 
-        "PROGRAM FILE DIAGNOSTICS",
+        "PROGRAM",
 
         program_diagnostics,
 
     )
 
-    # --------------------------------------------------------
-    # LOAD RESULTS
-    # --------------------------------------------------------
-
     print(
         "\nVALIDATING RESULT DATA"
     )
 
-    results, result_diagnostics = load_records(
+    result_records, result_diagnostics = (
+        load_json_files(
+            results_path
+        )
+    )
 
-        results_path
+    valid_results, results_missing_track = (
+        validate_records(
 
+            result_records,
+
+            result_diagnostics,
+
+            "RESULT",
+
+        )
     )
 
     print_diagnostics(
 
-        "RESULT FILE DIAGNOSTICS",
+        "RESULT",
 
         result_diagnostics,
 
     )
 
-    # --------------------------------------------------------
-    # VALIDATE RECORDS
-    # --------------------------------------------------------
-
-    program_validation = validate_programs(
-
-        programs
-
-    )
-
-    result_validation = validate_results(
-
-        results
-
-    )
-
-    # --------------------------------------------------------
-    # COMBINE ERRORS
-    # --------------------------------------------------------
-
     errors = []
 
     warnings = []
 
-    for error in program_validation[
-        "errors"
-    ]:
+    if not valid_programs:
 
         errors.append(
 
-            f"PROGRAM: {error}"
+            "PROGRAM: No valid program "
+            "races found."
 
         )
 
-    for error in result_validation[
-        "errors"
-    ]:
+    if not valid_results:
 
         errors.append(
 
-            f"RESULT: {error}"
+            "RESULT: No valid result "
+            "races found."
 
         )
 
-    for warning in program_validation[
-        "warnings"
-    ]:
+    if programs_missing_track:
 
         warnings.append(
 
-            f"PROGRAM: {warning}"
+            f"PROGRAM: "
+            f"{programs_missing_track} "
+            f"program race(s) missing "
+            f"track information."
 
         )
 
-    for warning in result_validation[
-        "warnings"
-    ]:
+    if results_missing_track:
 
         warnings.append(
 
-            f"RESULT: {warning}"
+            f"RESULT: "
+            f"{results_missing_track} "
+            f"result race(s) missing "
+            f"track information."
 
         )
-
-    # --------------------------------------------------------
-    # FINAL STATUS
-    # --------------------------------------------------------
-
-    valid = (
-
-        program_validation[
-            "valid"
-        ]
-
-        and
-
-        result_validation[
-            "valid"
-        ]
-
-    )
 
     print(
         "\n"
@@ -697,23 +380,17 @@ def validate_pipeline(
 
     print(
 
-        f"\nValid program races: "
-
-        f"{program_validation['count']}"
+        f"Valid program races: "
+        f"{len(valid_programs)}"
 
     )
 
     print(
 
         f"Valid result races: "
-
-        f"{result_validation['count']}"
+        f"{len(valid_results)}"
 
     )
-
-    # --------------------------------------------------------
-    # ERRORS
-    # --------------------------------------------------------
 
     if errors:
 
@@ -724,14 +401,8 @@ def validate_pipeline(
         for error in errors:
 
             print(
-
                 f"  - {error}"
-
             )
-
-    # --------------------------------------------------------
-    # WARNINGS
-    # --------------------------------------------------------
 
     if warnings:
 
@@ -742,31 +413,51 @@ def validate_pipeline(
         for warning in warnings:
 
             print(
-
                 f"  - {warning}"
-
             )
 
-    # --------------------------------------------------------
-    # FINAL RESULT
-    # --------------------------------------------------------
+    if errors:
+
+        print(
+            "\n"
+            + "=" * 60
+        )
+
+        print(
+            "PIPELINE VALIDATION FAILED"
+        )
+
+        print(
+            "=" * 60
+        )
+
+        return {
+
+            "valid":
+                False,
+
+            "programs":
+                valid_programs,
+
+            "results":
+                valid_results,
+
+            "errors":
+                errors,
+
+            "warnings":
+                warnings,
+
+        }
 
     print(
         "\n"
         + "=" * 60
     )
 
-    if valid:
-
-        print(
-            "PIPELINE VALIDATION PASSED"
-        )
-
-    else:
-
-        print(
-            "PIPELINE VALIDATION FAILED"
-        )
+    print(
+        "PIPELINE VALIDATION PASSED"
+    )
 
     print(
         "=" * 60
@@ -775,13 +466,13 @@ def validate_pipeline(
     return {
 
         "valid":
-            valid,
+            True,
 
         "programs":
-            program_validation,
+            valid_programs,
 
         "results":
-            result_validation,
+            valid_results,
 
         "errors":
             errors,
@@ -789,38 +480,4 @@ def validate_pipeline(
         "warnings":
             warnings,
 
-        "program_diagnostics":
-            program_diagnostics,
-
-        "result_diagnostics":
-            result_diagnostics,
-
     }
-
-
-# ============================================================
-# DIRECT EXECUTION
-# ============================================================
-
-
-if __name__ == "__main__":
-
-    validation = validate_pipeline()
-
-    if validation[
-        "valid"
-    ]:
-
-        print(
-
-            "\nValidation successful."
-
-        )
-
-    else:
-
-        print(
-
-            "\nValidation failed."
-
-        )
