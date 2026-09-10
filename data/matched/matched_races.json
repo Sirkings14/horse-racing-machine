@@ -1,403 +1,2040 @@
 [
-    {
-        "date": "2026-09-07",
-        "track": "CRAON",
-        "race_number": 1,
-        "race_name": "PRIX V AND B - ATTELE",
-        "race_type": "ATTELE",
-        "distance": 2775,
-        "runners_count": 16,
-        "horses": [
-            {
-                "number": 1,
-                "horse": "JAMBIER D'OURVILLE",
-                "description": "Vainqueur de l'étape de Nîmes, ce représentant de l'écurie Salleloise n'a pu se mettre en évidence lors des étapes suivantes, ne faisant jamais mieux que onzième. Il monte sérieusement de catégorie par rapport à sa dernière sortie et aura bien du mal à se distinguer."
-            },
-            {
-                "number": 2,
-                "horse": "IDEAL DE SASSY",
-                "description": "Très surprenant dauphin de KING OPERA (14) dans l'étape d'Agon-Coutainville, ce cheval de Pascal Rousseau n'a toutefois pas pu confirmer cette performance lors de ses sorties suivantes. Il vient de se classer troisième à Vincennes, mais dans une épreuve nettement moins relevée. Face à une telle opposition, il viendra dans un second choix."
-            },
-            {
-                "number": 3,
-                "horse": "KING DE L'OUEST",
-                "description": "Ce fils de Booster Winner court relativement peu, mais toujours à bon escient. Il s'est d'ailleurs imposé en force dans l'étape de Sablé-sur-Sarthe avant d'être dominé que par KING OPERA (14) dans celle de Royan-La Palmyre. Il a depuis repris de la fraîcheur et mérite un large crédit pour son retour à la compétition."
-            },
-            {
-                "number": 4,
-                "horse": "GENERAL DU NORD",
-                "description": "Après une longue traversée du désert, ce représentant de l'écurie Escapade AB a pris une surprenante deuxième place à Montignac, en dominant plusieurs de ses adversaires du jour. Il n'a toutefois pu confirmer à Aix-les-Bains ou à Vibraye et monte sérieusement de catégorie ici. Sa tâche ne s'annonce pas simple !"
-            },
-            {
-                "number": 5,
-                "horse": "GUMP DU PONCELET",
-                "description": "Vainqueur avec autorité à Vincennes au mois de février, ce protégé de Dries Kumpen a ensuite quelque peu déçu avant de refaire surface (2e) dans la dernière étape, celle de Montier-en-Der. Il a certainement été préparé en vue de cette finale et pourrait confirmer son retour en forme. Méfiance !"
-            },
-            {
-                "number": 6,
-                "horse": "ILEO PIERJI",
-                "description": "Intéressant cinquième de l'épreuve lavalloise du Grand National du Trot, ce concurrent de Pierre Julienne a depuis pris quelques bonnes places, donnant toujours le meilleur de lui-même. Il n'a pas eu un bon parcours lors de l'étape disputée à La Gacilly et il s'est pourtant classé sixième. Sans être une priorité, il reste capable de se placer. Un petit regret !"
-            },
-            {
-                "number": 7,
-                "horse": "HECTOR DE BASSIERE",
-                "description": "Surprenant dauphin de JUST DE L'OISON (13), alors qu'ils s'élançaient au même poteau, cet élève de Pierre-Louis Desaunette n'a toutefois jamais pu confirmer lors de ses sorties suivantes. Il a même été dominé par plusieurs de ses rivaux à Agon-Coutainville et à Montignac. Il va retrouver Antonin André, avec qui il s'est imposé. Comme d'autres, il peut se placer."
-            },
-            {
-                "number": 8,
-                "horse": "INHERIT",
-                "description": "Après de nombreux échecs, ce cheval de la famille Beaufils a esquissé un retour en forme à Montignac avant de le confirmer dans l'étape de La Gacilly, n'étant dominé que par les bons IDEAL DU ROCHER (16) et KING OPERA (14). Sauf incident, il devrait prendre une part active à l'emballage final, d'autant plus qu'Éric Raffin lui renouvelle sa confiance."
-            },
-            {
-                "number": 9,
-                "horse": "IRIS FROM",
-                "description": "Dominée dans les deux étapes du circuit auxquelles elle a participé cette année, cette concurrente de William Bigeon vient toutefois de rassurer dans un lot nettement inférieur à Royan-La Palmyre, prouvant par la même occasion qu'elle était capable de s'illustrer sur l'herbe. Elle n'a cependant pas de marge à ce niveau, et viendra plutôt dans un second choix."
-            },
-            {
-                "number": 10,
-                "horse": "JOYCE DELTO",
-                "description": "En dernier lieu, alors qu'elle était seulement plaquée aux antérieurs, cette représentant de l'écurie Delto a tracé une belle ligne droite et s'est ainsi classée sixième de l'étape malouine du Grand National du Trot. Troisième de cette même épreuve l'an passé, elle bénéficie d'un bel engagement à la limite du recul et devrait en profiter pour s'illustrer."
-            },
-            {
-                "number": 11,
-                "horse": "HOLD UP DU DIGEON",
-                "description": "Ce fils de Bold Eagle ne compte qu'un seul podium depuis le début de l'année et n'a pu faire mieux que dixième sur l'herbe. Ses dernières tentatives n'incitent pas à l'optimisme. À 9 ans, il semble avoir sa carrière derrière lui et devra, dans un premier temps, rassurer."
-            },
-            {
-                "number": 12,
-                "horse": "IDOLE OF LOVE",
-                "description": "Depuis le début de l'été, cette concurrente d'Emmanuel Varin semble avoir retrouvé un peu de mordant. Quatrième de l'étape de Royan-La Palmyre, elle a ensuite pris des places intéressantes sur des pistes en dur. Véritable droitière et en forme, elle est capable de se placer à l'issue d'un bon parcours. Attention !"
-            },
-            {
-                "number": 13,
-                "horse": "JUST DE L'OISON",
-                "description": "Irréprochable depuis plusieurs mois, ce fils de Quaro s'est plaisamment imposé au niveau Groupe 3 en août. Plus tôt dans l'année, il a remporté les étapes d'Ecommoy, du Touquet et de Bernay et ne devrait donc pas être dérangé par un retour sur l'herbe. Deuxième tout près de KING OPERA (14) au classement général, il pourrait bien faire coup double dans cette finale."
-            },
-            {
-                "number": 14,
-                "horse": "KING OPERA",
-                "description": "Ce protégé de Joël Séché n'a débuté dans ce circuit que lors de la cinquième étape, disputée à Granville, et a depuis enchaîné les bonnes performances et fait de Trophée Vert un objectif. Après s'être imposé à Agon-Coutainville et Royan-La Palmyre, il a été dominé par IDEAL DU ROCHER (16). Actuel leader du classement général, il devrait lutter pour les premières places."
-            },
-            {
-                "number": 15,
-                "horse": "HIDALGO DES NOES",
-                "description": "Ce représentant de l'écurie Danover a pris part à neuf étapes. S'il s'est plutôt bien comporté lors de la première (4e) à Ecommoy, il a ensuite enchaîné les échecs se classant toujours au-delà de la septième place. Il n'a plus la moindre marge de manœuvre et n'aura pas la partie facile. Sans nous !"
-            },
-            {
-                "number": 16,
-                "horse": "IDEAL DU ROCHER",
-                "description": "Largement dominé à Bernay, ce concurrent de Charley Mottier a depuis remis les pendules à l'heure en s'imposant en force à La Gacilly, dominant notamment KING OPERA (14). Ce cheval dur à l'effort bénéficie d'un bel engagement au plafond des gains et va tenter de confirmer sa récente victoire. Dans le coup !"
-            }
-        ],
-        "rankings": {
-            "favorites": [
-                13,
-                16,
-                14,
-                3,
-                10,
-                8,
-                5
-            ],
-            "form": [
-                14,
-                13,
-                16,
-                12,
-                3
-            ],
-            "class": [
-                5,
-                6,
-                8,
-                10,
-                12
-            ],
-            "progress": [
-                6,
-                10,
-                9,
-                7,
-                5
-            ],
-            "regularity": [
-                13,
-                12,
-                14,
-                6,
-                16
-            ]
-        },
-        "actual_arrival": [
-            13,
-            16,
-            7
-        ],
-        "source_program": "program_20260909_49316c96b0_81ec76e5a1.txt",
-        "source_result": "result_20260909_936d65d253_7c78b8f828.txt"
-    },
-    {
-        "date": "2026-09-08",
+  {
+    "program": {
+      "document_type": "program",
+      "source_file": "program_20260910_b266c2b0a3_f4ad76474b.txt",
+      "parsed_at": "2026-09-10T12:54:44.060171Z",
+      "date": "2026-09-08",
+      "race": {
+        "race_name": "PRIX JEAN BART - HAIES",
         "track": "AUTEUIL",
         "race_number": 1,
-        "race_name": "PRIX JEAN BART - HAIES",
         "race_type": "PLAT",
-        "distance": 3600,
         "runners_count": 16,
-        "horses": [
-            {
-                "number": 1,
-                "horse": "HAMANDIO",
-                "description": "Lauréat de l'édition 2025 de ce Quinté+ en valeur 61, il se présentera cette saison en 64. Au mois de mai, sur ce parcours, il a prouvé qu'il était capable de briller sous un poids aussi élevé. Une nouvelle fois, il devrait animer les débats et aller très loin."
-            },
-            {
-                "number": 2,
-                "horse": "ASTA LA PASTA",
-                "description": "Irréprochable depuis qu'il se produit en France, ce protégé de Nathan Vergne s'est montré convaincant dans la Grande Course de Haies de Clairefontaine. Il découvre Auteuil en devant composer avec sept livres de surcharge, mais ses véritables limites restent à définir. Attention !"
-            },
-            {
-                "number": 3,
-                "horse": "NORVILLE",
-                "description": "Ce placé de Groupe 1 (Prix Alain du Breil 2022) n'a pas été épargné par les ennuis de santé mais vient d'afficher du mieux dans un handicap dieppois (5e). Cela dit, il aurait largement préféré évoluer sur une piste lourde. En bout de piste seulement."
-            },
-            {
-                "number": 4,
-                "horse": "GREY FIGHTER",
-                "description": "Absent depuis le 29 octobre 2025, ce fils d'Iffraaj est toutefois annoncé prêt à briller d'entrée par son entourage. Il a déjà remporté un Quinté+ sur ce parcours et appréciera l'état du terrain. Même si sa seule association à Kevin Nabet s'est soldée par un échec, il a son mot à dire."
-            },
-            {
-                "number": 5,
-                "horse": "ROCK AND ROLL",
-                "description": "Excellente troisième de cette épreuve l'an dernier, en valeur 61, il se présentera cette saison avec un kilo de moins. Il a réalisé un été correct sur les tracés coulants de Dieppe et Clairefontaine et abordera ce rendez-vous en grande forme. Première chance théorique."
-            },
-            {
-                "number": 6,
-                "horse": "KASSEL ALLEN",
-                "description": "Ce pensionnaire d'Hugo Mérienne est absent depuis le 25 avril dernier et risque de manquer de compétition. Il reste plus performant en terrain profond et aura de meilleures opportunités durant l'automne. D'autres protagonistes lui sont préférables."
-            },
-            {
-                "number": 7,
-                "horse": "PINK PERSEVERANCE",
-                "description": "Sévèrement pénalisée de neuf livres pour son succès dans la Grande Course de Haies de La Teste, cette fille de Pastorius n'a désormais plus de marge dans les handicaps. Elle a déjà gagné sur ce parcours, d'autres protagonistes sont mieux placés qu'elle. En bout de piste."
-            },
-            {
-                "number": 8,
-                "horse": "WEBCAM",
-                "description": "Bonne deuxième d'un handicap bien composé le 26 mai, sur ce parcours, cette élève de Dominique Bressou effectuera ici une nouvelle rentrée. Elle a la pointure d'un tel lot en valeur pure, reste à savoir si elle sera suffisamment affûtée pour performer d'emblée. Du pour et du contre."
-            },
-            {
-                "number": 9,
-                "horse": "MR DIAFOIRUS",
-                "description": "Après une honorable carrière en plat sous la houlette d'André Fabre, il a réussi sa reconversion sur les haies (trois succès). Néanmoins, il a échoué lors de ses deux essais à Auteuil et doit composer avec une pénalisation de trois kilos. Il y a mieux."
-            },
-            {
-                "number": 10,
-                "horse": "JOYEUSE ROQUE",
-                "description": "Après quasiment trois ans d'absence, cette fille de Gémix a remarquablement couru à trois reprises durant le premier semestre. Elle est très bien placée au poids dans les handicaps et s'entend parfaitement avec Felix de Giles (un succès et quatre places en cinq associations). En dépit d'une rentrée, elle s'annonce redoutable."
-            },
-            {
-                "number": 11,
-                "horse": "LOU FAST",
-                "description": "Grand habitué de ce genre d'événements, il avait fini quatrième de l'édition 2025, alors qu'il effectuait déjà une rentrée. Il est beaucoup moins régulier que par le passé mais reste capable de surprendre en pareille compagnie. Affaire d'impression."
-            },
-            {
-                "number": 12,
-                "horse": "HACKER DU BERLAIS",
-                "description": "Lauréat de Groupe 2 en steeple (Prix Congress 2024), il souffle le chaud et le froid cette année sur les \"balais\". Dominé dans un gros handicap sur ce parcours le 26 mai dernier (8e), il a également échoué dans la course clé du 17 août à Clairefontaine (14e). Malgré la très grande forme de son entourage, il ne viendra que dans un second choix."
-            },
-            {
-                "number": 13,
-                "horse": "ROBIN HILL",
-                "description": "Excellent troisième de l'événement du 30 mai, sur ce parcours, ce protégé de Louis Carberry n'a pas été revu depuis. L'état du terrain lui conviendra parfaitement et sa valeur l'autorise à viser la victoire. Malgré une rentrée, il mérite le plus grand respect."
-            },
-            {
-                "number": 14,
-                "horse": "KEL STORY",
-                "description": "Depuis ses deux succès du mois de décembre à Cagnes-sur-Mer, il accumule les déceptions. Cela dit, il n'a pas démérité dans la course clé du 17 août à Clairefontaine (7e) et reste capable de coups d'éclat à ce niveau. Avis aux amateurs de sensations fortes."
-            },
-            {
-                "number": 15,
-                "horse": "TITI DE PARIS",
-                "description": "Il a ponctué son premier semestre par trois cuisants échecs, mais il avait auparavant décroché deux podiums dans des handicaps de bon aloi. Il effectue une rentrée, mais ses meilleures performances lui confèrent une belle chance théorique en pareille société. Probablement tout ou rien."
-            },
-            {
-                "number": 16,
-                "horse": "LORELEY DES PLACES",
-                "description": "Cette jument régulière a fait bonne figure dans la Grande Course de Haies de Clairefontaine (3e), mais elle n'a encore jamais couru sur les haies d'Auteuil. Elle a franchi un cap depuis qu'elle est associée à Lucas Zuliani (un succès et trois places en quatre associations) et fait partie des candidats aux places."
-            }
-        ],
-        "rankings": {
-            "favorites": [
-                10,
-                1,
-                2,
-                5,
-                13,
-                4,
-                16
-            ],
-            "form": [
-                5,
-                13,
-                10,
-                1,
-                2
-            ],
-            "class": [
-                1,
-                16,
-                2,
-                4,
-                10
-            ],
-            "progress": [
-                4,
-                16,
-                13,
-                5,
-                15
-            ],
-            "regularity": [
-                16,
-                10,
-                2,
-                8,
-                12
-            ]
+        "distance": 3600,
+        "prize_euros": 98000
+      },
+      "horses": [
+        {
+          "number": 1,
+          "horse": "HAMANDIO",
+          "description": "Lauréat de l'édition 2025 de ce Quinté+ en valeur 61, il se présentera cette saison en 64. Au mois de mai, sur ce parcours, il a prouvé qu'il était capable de briller sous un poids aussi élevé. Une nouvelle fois, il devrait animer les débats et aller très loin."
         },
-        "actual_arrival": [
+        {
+          "number": 2,
+          "horse": "ASTA LA PASTA",
+          "description": "Irréprochable depuis qu'il se produit en France, ce protégé de Nathan Vergne s'est montré convaincant dans la Grande Course de Haies de Clairefontaine. Il découvre Auteuil en devant composer avec sept livres de surcharge, mais ses véritables limites restent à définir. Attention !"
+        },
+        {
+          "number": 3,
+          "horse": "NORVILLE",
+          "description": "Ce placé de Groupe 1 (Prix Alain du Breil 2022) n'a pas été épargné par les ennuis de santé mais vient d'afficher du mieux dans un handicap dieppois (5e). Cela dit, il aurait largement préféré évoluer sur une piste lourde. En bout de piste seulement."
+        },
+        {
+          "number": 4,
+          "horse": "GREY FIGHTER",
+          "description": "Absent depuis le 29 octobre 2025, ce fils d'Iffraaj est toutefois annoncé prêt à briller d'entrée par son entourage. Il a déjà remporté un Quinté+ sur ce parcours et appréciera l'état du terrain. Même si sa seule association à Kevin Nabet s'est soldée par un échec, il a son mot à dire."
+        },
+        {
+          "number": 5,
+          "horse": "ROCK AND ROLL",
+          "description": "Excellente troisième de cette épreuve l'an dernier, en valeur 61, il se présentera cette saison avec un kilo de moins. Il a réalisé un été correct sur les tracés coulants de Dieppe et Clairefontaine et abordera ce rendez-vous en grande forme. Première chance théorique."
+        },
+        {
+          "number": 6,
+          "horse": "KASSEL ALLEN",
+          "description": "Ce pensionnaire d'Hugo Mérienne est absent depuis le 25 avril dernier et risque de manquer de compétition. Il reste plus performant en terrain profond et aura de meilleures opportunités durant l'automne. D'autres protagonistes lui sont préférables."
+        },
+        {
+          "number": 7,
+          "horse": "PINK PERSEVERANCE",
+          "description": "Sévèrement pénalisée de neuf livres pour son succès dans la Grande Course de Haies de La Teste, cette fille de Pastorius n'a désormais plus de marge dans les handicaps. Elle a déjà gagné sur ce parcours, d'autres protagonistes sont mieux placés qu'elle. En bout de piste."
+        },
+        {
+          "number": 8,
+          "horse": "WEBCAM",
+          "description": "Bonne deuxième d'un handicap bien composé le 26 mai, sur ce parcours, cette élève de Dominique Bressou effectuera ici une nouvelle rentrée. Elle a la pointure d'un tel lot en valeur pure, reste à savoir si elle sera suffisamment affûtée pour performer d'emblée. Du pour et du contre."
+        },
+        {
+          "number": 9,
+          "horse": "MR DIAFOIRUS",
+          "description": "Après une honorable carrière en plat sous la houlette d'André Fabre, il a réussi sa reconversion sur les haies (trois succès). Néanmoins, il a échoué lors de ses deux essais à Auteuil et doit composer avec une pénalisation de trois kilos. Il y a mieux."
+        },
+        {
+          "number": 10,
+          "horse": "JOYEUSE ROQUE",
+          "description": "Après quasiment trois ans d'absence, cette fille de Gémix a remarquablement couru à trois reprises durant le premier semestre. Elle est très bien placée au poids dans les handicaps et s'entend parfaitement avec Felix de Giles (un succès et quatre places en cinq associations). En dépit d'une rentrée, elle s'annonce redoutable."
+        },
+        {
+          "number": 11,
+          "horse": "LOU FAST",
+          "description": "Grand habitué de ce genre d'événements, il avait fini quatrième de l'édition 2025, alors qu'il effectuait déjà une rentrée. Il est beaucoup moins régulier que par le passé mais reste capable de surprendre en pareille compagnie. Affaire d'impression."
+        },
+        {
+          "number": 12,
+          "horse": "HACKER DU BERLAIS",
+          "description": "Lauréat de Groupe 2 en steeple (Prix Congress 2024), il souffle le chaud et le froid cette année sur les \"balais\". Dominé dans un gros handicap sur ce parcours le 26 mai dernier (8e), il a également échoué dans la course clé du 17 août à Clairefontaine (14e). Malgré la très grande forme de son entourage, il ne viendra que dans un second choix."
+        },
+        {
+          "number": 13,
+          "horse": "ROBIN HILL",
+          "description": "Excellent troisième de l'événement du 30 mai, sur ce parcours, ce protégé de Louis Carberry n'a pas été revu depuis. L'état du terrain lui conviendra parfaitement et sa valeur l'autorise à viser la victoire. Malgré une rentrée, il mérite le plus grand respect."
+        },
+        {
+          "number": 14,
+          "horse": "KEL STORY",
+          "description": "Depuis ses deux succès du mois de décembre à Cagnes-sur-Mer, il accumule les déceptions. Cela dit, il n'a pas démérité dans la course clé du 17 août à Clairefontaine (7e) et reste capable de coups d'éclat à ce niveau. Avis aux amateurs de sensations fortes."
+        },
+        {
+          "number": 15,
+          "horse": "TITI DE PARIS",
+          "description": "Il a ponctué son premier semestre par trois cuisants échecs, mais il avait auparavant décroché deux podiums dans des handicaps de bon aloi. Il effectue une rentrée, mais ses meilleures performances lui confèrent une belle chance théorique en pareille société. Probablement tout ou rien."
+        },
+        {
+          "number": 16,
+          "horse": "LORELEY DES PLACES",
+          "description": "Cette jument régulière a fait bonne figure dans la Grande Course de Haies de Clairefontaine (3e), mais elle n'a encore jamais couru sur les haies d'Auteuil. Elle a franchi un cap depuis qu'elle est associée à Lucas Zuliani (un succès et trois places en quatre associations) et fait partie des candidats aux places."
+        }
+      ],
+      "rankings": {
+        "favorites": [
+          10,
+          1,
+          2,
+          5,
+          13,
+          4,
+          16
+        ],
+        "form": [
+          5,
+          13,
+          10,
+          1,
+          2
+        ],
+        "class": [
+          1,
+          16,
+          2,
+          4,
+          10
+        ],
+        "progress": [
+          4,
+          16,
+          13,
+          5,
+          15
+        ],
+        "regularity": [
+          16,
+          10,
+          2,
+          8,
+          12
+        ]
+      },
+      "published_arrival": [
+        9,
+        2,
+        16,
+        12,
+        1
+      ]
+    },
+    "result": {
+      "document_type": "result",
+      "source_file": "result_20260909_8c6c9b45c9_4cc562963c.txt",
+      "parsed_at": "2026-09-10T12:54:44.070204Z",
+      "date": "2026-09-08",
+      "meeting": 1,
+      "track": "AUTEUIL",
+      "races": [
+        {
+          "race_number": 1,
+          "arrival": [
             8,
             14,
             9
-        ],
-        "source_program": "program_20260909_b266c2b0a3_ae0b0ea500.txt",
-        "source_result": "result_20260909_8c6c9b45c9_4cc562963c.txt"
+          ],
+          "winner": 8,
+          "second": 14,
+          "third": 9
+        },
+        {
+          "race_number": 2,
+          "arrival": [
+            4,
+            2,
+            8
+          ],
+          "winner": 4,
+          "second": 2,
+          "third": 8
+        },
+        {
+          "race_number": 3,
+          "arrival": [
+            13,
+            8,
+            5
+          ],
+          "winner": 13,
+          "second": 8,
+          "third": 5
+        },
+        {
+          "race_number": 4,
+          "arrival": [
+            5,
+            13,
+            8
+          ],
+          "winner": 5,
+          "second": 13,
+          "third": 8
+        },
+        {
+          "race_number": 5,
+          "arrival": [
+            1,
+            7,
+            7
+          ],
+          "winner": 1,
+          "second": 7,
+          "third": 7
+        },
+        {
+          "race_number": 6,
+          "arrival": [
+            2,
+            3,
+            9
+          ],
+          "winner": 2,
+          "second": 3,
+          "third": 9
+        },
+        {
+          "race_number": 7,
+          "arrival": [
+            11,
+            1,
+            9
+          ],
+          "winner": 11,
+          "second": 1,
+          "third": 9
+        },
+        {
+          "race_number": 8,
+          "arrival": [
+            4,
+            13,
+            7
+          ],
+          "winner": 4,
+          "second": 13,
+          "third": 7
+        },
+        {
+          "race_number": 9,
+          "arrival": [
+            15,
+            16,
+            4
+          ],
+          "winner": 15,
+          "second": 16,
+          "third": 4
+        }
+      ]
     },
-    {
-        "date": "2026-09-05",
+    "match": {
+      "score": 40,
+      "max_score": 40,
+      "confidence": 100.0,
+      "reasons": [
+        "date exact"
+      ]
+    }
+  },
+  {
+    "program": {
+      "document_type": "program",
+      "source_file": "program_20260909_8a0b8d2440_5cd0e4567b.txt",
+      "parsed_at": "2026-09-10T12:54:43.894037Z",
+      "date": "2026-09-06",
+      "race": {
+        "race_name": null,
+        "track": null,
+        "race_number": 3,
+        "race_type": "MONTE",
+        "runners_count": 16,
+        "distance": 2400,
+        "prize_euros": 50900
+      },
+      "horses": [
+        {
+          "number": 1,
+          "horse": "CASSIUS",
+          "description": "Cet élève des très en forme Pia et Joakim Brand avait profité d'un bel engagement, le 17 mars à Fontainebleau, pour renouer avec le succès. Il n'a ensuite pu s'illustrer dans un Quinté+ au mois de mai, mais sur une distance un peu courte. Avantagé par l'assouplissement des pistes et abaissé de trois livres, ce bon finisseur détient une belle carte à jouer."
+        },
+        {
+          "number": 2,
+          "horse": "REMBRAND TO GO",
+          "description": "Quasiment irréprochable depuis le début de sa carrière, ce pensionnaire de Miroslav Rulec a remporté le Quinté+ du 7 mai et a prouvé quelques jours plus tard qu'il était en mesure de s'illustrer (4e) malgré les trois kilos de surcharge. Il a depuis repris de la fraîcheur et retrouve un parcours sur lequel il n'a jamais fini plus loin que deuxième. À surveiller d'emblée."
+        },
+        {
+          "number": 3,
+          "horse": "SHRIHARA",
+          "description": "Cette fille de Waldgeist fait preuve d'une belle régularité en compétition et a enlevé son Quinté+ au printemps à Strasbourg, sur 3 000 mètres. Elle va toutefois devoir composer avec six livres de plus face à une opposition bien plus relevée. Absente depuis plusieurs mois, nous lui en avons préféré d'autres."
+        },
+        {
+          "number": 4,
+          "horse": "DIXMUDE",
+          "description": "Après avoir ouvert son palmarès à Pornichet, ce protégé de David Layani a pris une bonne deuxième place dans un Quinté+ relevé puisqu'il finissait tout près de Quest for Magic, lauréate de Listed depuis, et il dominait Zelzari, vainqueur de trois handicaps ensuite. Il a assurément la pointure d'une telle épreuve, mais il est absent depuis le mois de mars. Oui, mais…"
+        },
+        {
+          "number": 5,
+          "horse": "ALMIRO",
+          "description": "Auteur d'un bel effort final à Vichy (2e), ce protégé de Philippe Decouz a depuis confirmé ses bonnes dispositions en se classant troisième d'une Classe 2 au Lion d'Angers, sur la distance proposée. Il retrouve les handicaps avec trois livres de moins et pourrait bien en profiter pour se placer."
+        },
+        {
+          "number": 6,
+          "horse": "ZILYA",
+          "description": "Depuis sa victoire à Marseille-Borély, cette pensionnaire de Maxime Cesandri n'a pu faire mieux que sixième dans les handicaps. Elle n'a plus la moindre marge de manœuvre à ce niveau et même si elle a été abaissée d'un kilo, elle devra dans un premier temps rassurer son entourage. Il y a mieux !"
+        },
+        {
+          "number": 7,
+          "horse": "PAOLINO",
+          "description": "Après avoir remporté une deuxième épreuve sur 2 000 mètres, ce concurrent de Didier et Pauline Prod'homme a eu le droit à un petit break durant l'été pour être amené au mieux sur les terrains assouplis. Pour sa reprise de contact, à Deauville, il a fourni un effort correct en retrait. Il va certainement progresser là-dessus et peut se placer à belle cote."
+        },
+        {
+          "number": 8,
+          "horse": "PRINCESSE D'AMOUR",
+          "description": "Facile lauréate à Angers, le 8 juin, cette représentante de l'écurie Victoria Dreams s'est depuis très bien comportée pour son retour dans les Quinté+, échouant du minimum à Deauville le mois dernier. Elle a incontestablement la pointure d'une telle épreuve et n'a jamais fini plus loin que cinquième sur ce parcours. Obligé d'y croire !"
+        },
+        {
+          "number": 9,
+          "horse": "YES ZARA",
+          "description": "Lauréate de trois handicaps depuis début juin, elle a subi neuf kilos de pénalisation au total. Pour son retour dans les Quinté+, à Deauville, elle a fini dernière et n'a pas la moindre marge à ce niveau. Elle est, de plus, raccourcie pour l'occasion et surprendrait en prenant l'une des cinq premières places. Sans nous !"
+        },
+        {
+          "number": 10,
+          "horse": "CRISTABEL",
+          "description": "Cette pensionnaire d'Alain Couétil court de manière espacée, mais toujours à bon escient. Pour sa première sortie sur 2 400 mètres, elle a pris une bonne troisième place dans le Quinté+ du 19 juillet, qui était cependant réservée aux femelles. Même si elle monte de catégorie, elle a été préservée et pourrait bien prendre une part active à l'emballage final, comme d'autres."
+        },
+        {
+          "number": 11,
+          "horse": "MACHETE",
+          "description": "Ce fils de Myboycharlie a fait preuve d'une certaine régularité en Angleterre. Pour son retour sur notre sol, il n'a toutefois pu faire mieux que sixième d'une épreuve à réclamer. Il retrouve les handicaps en valeur 37, mais il est difficile de savoir où il en est exactement. Affaire d'impression."
+        },
+        {
+          "number": 12,
+          "horse": "MONONOF",
+          "description": "Pris en valeur 42 l'an passé à pareille époque, ce pensionnaire de Satoshi Kobayashi n'évolue plus qu'en 37 et s'est d'ailleurs très bien comporté dans le Quinté+ du 15 juin, se classant quatrième. Jamais plus loin que cinquième depuis le début de l'année, il fait montre d'une certaine régularité et mérite, une nouvelle fois, un certain crédit."
+        },
+        {
+          "number": 13,
+          "horse": "MARINALEDA",
+          "description": "Auteur d'un très bon début d'année avec notamment deux deuxièmes places dans des Quinté+, cette fille de Recoletos a connu deux échecs ensuite, mais a refait surface le 19 juillet (4e), derrière CRISTABEL (10). Elle aura cependant les mâles sur sa route cette fois et monte tout de même de catégorie. Malgré tout, elle peut se placer, comme d'autres."
+        },
+        {
+          "number": 14,
+          "horse": "MISTER GATZ",
+          "description": "Pour sa rentrée, à Deauville, ce concur- rent de Gérard Augustin-Normand a fourni un bon effort final et a ainsi pris une intéressante septième place. Il n'a pas une grande marge de manœuvre à ce niveau, mais semble proche de renouer avec les bonnes performances. Deuxième de Listed sur ce parcours, il est à surveiller de près."
+        },
+        {
+          "number": 15,
+          "horse": "GOLD PLAYER",
+          "description": "Après plusieurs échecs, cet élève de Franck Forési vient de refaire surface en se classant troisième du Quinté+ du 18 août, en léger retrait de PRINCESSE D'AMOUR (8). Il a retrouvé une zone de poids dans laquelle il était compétitif et pourrait bien confirmer sa dernière performance. Notre regret !"
+        },
+        {
+          "number": 16,
+          "horse": "ZELKER",
+          "description": "Ce fils de Zelzal n'a pu réellement se mettre en évidence au printemps et il est absent depuis le mois de mai. Il voit certes sa valeur diminuer, mais il affronte une opposition de taille et aura certainement besoin de reprendre le rythme de la compétition. Pas cette fois !"
+        }
+      ],
+      "rankings": {
+        "favorites": [
+          8,
+          4,
+          1,
+          2,
+          5,
+          12,
+          14
+        ],
+        "form": [
+          8,
+          12,
+          1,
+          5,
+          14
+        ],
+        "class": [
+          1,
+          8,
+          14,
+          2,
+          7
+        ],
+        "progress": [
+          12,
+          10,
+          7,
+          13,
+          4
+        ],
+        "regularity": [
+          6,
+          11,
+          4,
+          7,
+          13
+        ]
+      },
+      "published_arrival": []
+    },
+    "result": {
+      "document_type": "result",
+      "source_file": "result_20260909_5fbb825a47_6d0b511ce7.txt",
+      "parsed_at": "2026-09-10T12:54:44.068625Z",
+      "date": "2026-09-06",
+      "meeting": 1,
+      "track": "PARISLONGCHAMP",
+      "races": [
+        {
+          "race_number": 1,
+          "arrival": [
+            1,
+            3,
+            3
+          ],
+          "winner": 1,
+          "second": 3,
+          "third": 3
+        },
+        {
+          "race_number": 2,
+          "arrival": [
+            6,
+            5,
+            8
+          ],
+          "winner": 6,
+          "second": 5,
+          "third": 8
+        },
+        {
+          "race_number": 3,
+          "arrival": [
+            9,
+            2,
+            16
+          ],
+          "winner": 9,
+          "second": 2,
+          "third": 16
+        },
+        {
+          "race_number": 4,
+          "arrival": [
+            3,
+            6,
+            2
+          ],
+          "winner": 3,
+          "second": 6,
+          "third": 2
+        },
+        {
+          "race_number": 5,
+          "arrival": [
+            4,
+            3,
+            3
+          ],
+          "winner": 4,
+          "second": 3,
+          "third": 3
+        },
+        {
+          "race_number": 6,
+          "arrival": [
+            1,
+            2,
+            2
+          ],
+          "winner": 1,
+          "second": 2,
+          "third": 2
+        },
+        {
+          "race_number": 7,
+          "arrival": [
+            1,
+            3,
+            3
+          ],
+          "winner": 1,
+          "second": 3,
+          "third": 3
+        },
+        {
+          "race_number": 8,
+          "arrival": [
+            3,
+            5,
+            5
+          ],
+          "winner": 3,
+          "second": 5,
+          "third": 5
+        },
+        {
+          "race_number": 9,
+          "arrival": [
+            10,
+            15,
+            11
+          ],
+          "winner": 10,
+          "second": 15,
+          "third": 11
+        }
+      ]
+    },
+    "match": {
+      "score": 40,
+      "max_score": 40,
+      "confidence": 100.0,
+      "reasons": [
+        "date exact"
+      ]
+    }
+  },
+  {
+    "program": {
+      "document_type": "program",
+      "source_file": "program_20260909_fe1f366bd8_fbd6793ee1.txt",
+      "parsed_at": "2026-09-10T12:54:44.043466Z",
+      "date": "2026-09-05",
+      "race": {
+        "race_name": "PRIX DU MONT SAINT MICHEL",
         "track": "PARIS-VINCENNES",
         "race_number": 4,
-        "race_name": "PRIX DU MONT SAINT MICHEL",
         "race_type": "ATTELE",
-        "distance": 2700,
         "runners_count": 14,
-        "horses": [
-            {
-                "number": 1,
-                "horse": "FEU DE REVOLTE",
-                "description": "Après une rentrée à Sablé- sur-Sarthe, ce concurrent de Romain Jajolet s'est montré fautif à Vincennes alors qu'il était en mesure de prendre la troisième place et de créer ainsi une énorme surprise. Il prouvait ce jour-là qu'il était toujours ingambe à 11 ans. Il fait cependant face à une opposition de taille et viendra dans un second choix."
-            },
-            {
-                "number": 2,
-                "horse": "INES DE LA ROUVRE",
-                "description": "Cette fille de Briac Dark a réalisé un bel été sur l'herbe avec une victoire et une deuxième place. Pour son retour sur une piste en dur, elle a conclu honorablement, sans parvenir à faire mieux que septième. En neuf tentatives sur le parcours proposé, elle n'est cependant jamais montée sur le podium. Face à une telle opposition, elle viendra dans un second choix."
-            },
-            {
-                "number": 3,
-                "horse": "JIPET DE CREPIN",
-                "description": "Après un échec sur l'herbe de Carentan, ce pensionnaire de Sébastien Ernault s'est imposé en force sur l'hippodrome d'Enghien dans un lot de qualité. Il évolue en retard de gains et il est tout simplement invaincu à Vincennes en 2026. Sauf incident, il ne devrait pas taper loin."
-            },
-            {
-                "number": 4,
-                "horse": "GAI MATIN",
-                "description": "Ce fils de Rieussec et de la bonne Nuit Torride reste sur vingt-et-une course sans le moindre podium, pire il compte quatre disqualifications lors de ses cinq dernières tentatives. Il a réalisé une bonne partie du premier semestre en Corse, sans résultat. Il a incontestablement sa carrière derrière lui. Sans nous !"
-            },
-            {
-                "number": 5,
-                "horse": "GOLD D'ECROVILLE",
-                "description": "Après avoir esquissé un retour en forme (5e) dans le Quinté+ 29 juillet, remporté par JIZOU D'ETANG (10), cet élève de Bruno Marie n'a toutefois pu confirmer à Divonne-les-Bains le mois dernier. Il ne sera que plaqué aux quatre pieds et n'aura pas la partie facile face à ses cadets. Il y a mieux."
-            },
-            {
-                "number": 6,
-                "horse": "INDIEN DE FONTAINE",
-                "description": "Lors de sa dernière sortie sur ce parcours, au mois de mai, ce protégé de Pascal Danet a fourni un bon effort final et s'est ainsi classé troisième. Il s'est depuis bien comporté dans le relevé Prix du Quercy (5e). Pour son retour sur la cendrée parisienne, il affronte une opposition à sa portée et devrait prendre une part active à l'emballage final."
-            },
-            {
-                "number": 7,
-                "horse": "JOLIVERT DU GERS",
-                "description": "Bon sixième du Quinté+ du 9 juillet, alors qu'il n'était que plaqué aux antérieurs, ce concurrent de Jean-Pascal Bragato s'est depuis classé deuxième de JIZOU D'ETANG (10). Il aura certainement du mal à prendre sa revanche, mais il reste un cheval de qualité. Si tout se passe bien, il est en mesure de figurer à l'une des cinq premières places."
-            },
-            {
-                "number": 8,
-                "horse": "I STILL LOVING YOU",
-                "description": "Ce rejeton de Prince Gédé a réalisé un très bon premier semestre avec déjà quatre victoires à la clé. Il a repris un peu de fraîcheur durant l'été et va retrouver une piste qu'il affectionne tout particulièrement. Alexandre Abdrivard le connaît par cœur puisqu'il en est l'heureux propriétaire. À suivre d'entrée de jeu !"
-            },
-            {
-                "number": 9,
-                "horse": "JOUR DE FETE",
-                "description": "Plaisant au trot monté en début d'année, ce concurrent du Haras d'Erable a moins de réussite à l'attelé, mais donne toujours le meilleur de lui-même et fait montre d'une certaine régularité. Il n'a pas beaucoup de marge de manœuvre à ce niveau dans cette spécialité, mais reste tout de même capable de se placer. Un petit regret."
-            },
-            {
-                "number": 10,
-                "horse": "JIZOU D'ETANG",
-                "description": "Depuis le début du mois de mars, ce représentant de l'élevage de l'Etang alterne les disqualifications et les victoires acquises avec facilité. Il est assurément en retard de gains et David Thomain l'a déjà mené au succès. S'il reste sage d'un bout à l'autre du parcours, il s'annonce compétitif pour les premières places."
-            },
-            {
-                "number": 11,
-                "horse": "JOJO TOONS",
-                "description": "Attendu dans l'étape lavalloise du GNT, ce protégé de la famille Bézier n'a pu faire mieux que huitième. Il a eu le droit à quelques vacances depuis et vient de réaliser une rentrée discrète à Mons. Jugé sur ce qu'il a fait de mieux, il a suffisamment de qualité pour briller en pareille société. De retour sur la piste de sa dernière victoire, il est à reprendre impérativement !"
-            },
-            {
-                "number": 12,
-                "horse": "HORS BORD",
-                "description": "Cet élève de Jean-Marc Chaineux avait pris une bonne quatrième place en mars ici même, mais il n'a jamais pu confirmer lors de ses sorties suivantes. Il est déferré des quatre pieds pour l'occasion et n'aura pas les Européens sur sa route. S'il bénéficie d'un parcours sans encombre, il pourrait bien causer une petite surprise en prenant la quatrième ou cinquième place."
-            },
-            {
-                "number": 13,
-                "horse": "GAMIN DES ISLES",
-                "description": "Deuxième du Quinté+ du 9 juillet, en dominant notamment JACOMO BELLO (14), ce concurrent de Stéphane Bourlier a enchaîné avec des performances intéressantes et notamment une plaisante fin de course à Laval le mois dernier. Il semble beaucoup se plaire à Vincennes et fait face à un engagement intéressant au plafond des gains sans les étrangers. Dans le coup !"
-            },
-            {
-                "number": 14,
-                "horse": "JACOMO BELLO",
-                "description": "Ce protégé de Thomas Levesque enchaîne les bonnes performances. En début d'été, dans le Quinté+ du 9 juillet, il a pris une intéressante troisième place alors qu'il a dû contourner le peloton dans le dernier kilomètre. Il a depuis repris de la fraîcheur et a été déclaré avec un emoji vert pour ce retour à la compétition. À retentir en haut rang."
-            }
-        ],
-        "rankings": {
-            "favorites": [
-                3,
-                10,
-                14,
-                8,
-                11,
-                13,
-                6
-            ],
-            "form": [
-                3,
-                14,
-                11,
-                13,
-                10
-            ],
-            "class": [
-                10,
-                6,
-                13,
-                14,
-                8
-            ],
-            "progress": [
-                8,
-                12,
-                7,
-                3,
-                9
-            ],
-            "regularity": [
-                12,
-                9,
-                7,
-                11,
-                8
-            ]
+        "distance": 2700,
+        "prize_euros": 68000
+      },
+      "horses": [
+        {
+          "number": 1,
+          "horse": "FEU DE REVOLTE",
+          "description": "Après une rentrée à Sablé- sur-Sarthe, ce concurrent de Romain Jajolet s'est montré fautif à Vincennes alors qu'il était en mesure de prendre la troisième place et de créer ainsi une énorme surprise. Il prouvait ce jour-là qu'il était toujours ingambe à 11 ans. Il fait cependant face à une opposition de taille et viendra dans un second choix."
         },
-        "actual_arrival": [
-            10,
-            3,
-            13
+        {
+          "number": 2,
+          "horse": "INES DE LA ROUVRE",
+          "description": "Cette fille de Briac Dark a réalisé un bel été sur l'herbe avec une victoire et une deuxième place. Pour son retour sur une piste en dur, elle a conclu honorablement, sans parvenir à faire mieux que septième. En neuf tentatives sur le parcours proposé, elle n'est cependant jamais montée sur le podium. Face à une telle opposition, elle viendra dans un second choix."
+        },
+        {
+          "number": 3,
+          "horse": "JIPET DE CREPIN",
+          "description": "Après un échec sur l'herbe de Carentan, ce pensionnaire de Sébastien Ernault s'est imposé en force sur l'hippodrome d'Enghien dans un lot de qualité. Il évolue en retard de gains et il est tout simplement invaincu à Vincennes en 2026. Sauf incident, il ne devrait pas taper loin."
+        },
+        {
+          "number": 4,
+          "horse": "GAI MATIN",
+          "description": "Ce fils de Rieussec et de la bonne Nuit Torride reste sur vingt-et-une course sans le moindre podium, pire il compte quatre disqualifications lors de ses cinq dernières tentatives. Il a réalisé une bonne partie du premier semestre en Corse, sans résultat. Il a incontestablement sa carrière derrière lui. Sans nous !"
+        },
+        {
+          "number": 5,
+          "horse": "GOLD D'ECROVILLE",
+          "description": "Après avoir esquissé un retour en forme (5e) dans le Quinté+ 29 juillet, remporté par JIZOU D'ETANG (10), cet élève de Bruno Marie n'a toutefois pu confirmer à Divonne-les-Bains le mois dernier. Il ne sera que plaqué aux quatre pieds et n'aura pas la partie facile face à ses cadets. Il y a mieux."
+        },
+        {
+          "number": 6,
+          "horse": "INDIEN DE FONTAINE",
+          "description": "Lors de sa dernière sortie sur ce parcours, au mois de mai, ce protégé de Pascal Danet a fourni un bon effort final et s'est ainsi classé troisième. Il s'est depuis bien comporté dans le relevé Prix du Quercy (5e). Pour son retour sur la cendrée parisienne, il affronte une opposition à sa portée et devrait prendre une part active à l'emballage final."
+        },
+        {
+          "number": 7,
+          "horse": "JOLIVERT DU GERS",
+          "description": "Bon sixième du Quinté+ du 9 juillet, alors qu'il n'était que plaqué aux antérieurs, ce concurrent de Jean-Pascal Bragato s'est depuis classé deuxième de JIZOU D'ETANG (10). Il aura certainement du mal à prendre sa revanche, mais il reste un cheval de qualité. Si tout se passe bien, il est en mesure de figurer à l'une des cinq premières places."
+        },
+        {
+          "number": 8,
+          "horse": "I STILL LOVING YOU",
+          "description": "Ce rejeton de Prince Gédé a réalisé un très bon premier semestre avec déjà quatre victoires à la clé. Il a repris un peu de fraîcheur durant l'été et va retrouver une piste qu'il affectionne tout particulièrement. Alexandre Abdrivard le connaît par cœur puisqu'il en est l'heureux propriétaire. À suivre d'entrée de jeu !"
+        },
+        {
+          "number": 9,
+          "horse": "JOUR DE FETE",
+          "description": "Plaisant au trot monté en début d'année, ce concurrent du Haras d'Erable a moins de réussite à l'attelé, mais donne toujours le meilleur de lui-même et fait montre d'une certaine régularité. Il n'a pas beaucoup de marge de manœuvre à ce niveau dans cette spécialité, mais reste tout de même capable de se placer. Un petit regret."
+        },
+        {
+          "number": 10,
+          "horse": "JIZOU D'ETANG",
+          "description": "Depuis le début du mois de mars, ce représentant de l'élevage de l'Etang alterne les disqualifications et les victoires acquises avec facilité. Il est assurément en retard de gains et David Thomain l'a déjà mené au succès. S'il reste sage d'un bout à l'autre du parcours, il s'annonce compétitif pour les premières places."
+        },
+        {
+          "number": 11,
+          "horse": "JOJO TOONS",
+          "description": "Attendu dans l'étape lavalloise du GNT, ce protégé de la famille Bézier n'a pu faire mieux que huitième. Il a eu le droit à quelques vacances depuis et vient de réaliser une rentrée discrète à Mons. Jugé sur ce qu'il a fait de mieux, il a suffisamment de qualité pour briller en pareille société. De retour sur la piste de sa dernière victoire, il est à reprendre impérativement !"
+        },
+        {
+          "number": 12,
+          "horse": "HORS BORD",
+          "description": "Cet élève de Jean-Marc Chaineux avait pris une bonne quatrième place en mars ici même, mais il n'a jamais pu confirmer lors de ses sorties suivantes. Il est déferré des quatre pieds pour l'occasion et n'aura pas les Européens sur sa route. S'il bénéficie d'un parcours sans encombre, il pourrait bien causer une petite surprise en prenant la quatrième ou cinquième place."
+        },
+        {
+          "number": 13,
+          "horse": "GAMIN DES ISLES",
+          "description": "Deuxième du Quinté+ du 9 juillet, en dominant notamment JACOMO BELLO (14), ce concurrent de Stéphane Bourlier a enchaîné avec des performances intéressantes et notamment une plaisante fin de course à Laval le mois dernier. Il semble beaucoup se plaire à Vincennes et fait face à un engagement intéressant au plafond des gains sans les étrangers. Dans le coup !"
+        },
+        {
+          "number": 14,
+          "horse": "JACOMO BELLO",
+          "description": "Ce protégé de Thomas Levesque enchaîne les bonnes performances. En début d'été, dans le Quinté+ du 9 juillet, il a pris une intéressante troisième place alors qu'il a dû contourner le peloton dans le dernier kilomètre. Il a depuis repris de la fraîcheur et a été déclaré avec un emoji vert pour ce retour à la compétition. À retentir en haut rang."
+        }
+      ],
+      "rankings": {
+        "favorites": [
+          3,
+          10,
+          14,
+          8,
+          11,
+          13,
+          6
         ],
-        "source_program": "program_20260909_fe1f366bd8_fbd6793ee1.txt",
-        "source_result": "result_20260909_6be2a5d506_34a1a7f3ae.txt"
+        "form": [
+          3,
+          14,
+          11,
+          13,
+          10
+        ],
+        "class": [
+          10,
+          6,
+          13,
+          14,
+          8
+        ],
+        "progress": [
+          8,
+          12,
+          7,
+          3,
+          9
+        ],
+        "regularity": [
+          12,
+          9,
+          7,
+          11,
+          8
+        ]
+      },
+      "published_arrival": [
+        14,
+        1,
+        10,
+        3,
+        13
+      ]
+    },
+    "result": {
+      "document_type": "result",
+      "source_file": "result_20260910_cac85ba7e4_f11a252c3a.txt",
+      "parsed_at": "2026-09-10T12:54:44.075307Z",
+      "date": "2026-09-05",
+      "meeting": 3,
+      "track": "LA TESTE DE BUCH",
+      "races": [
+        {
+          "race_number": 1,
+          "arrival": [
+            4,
+            1,
+            1
+          ],
+          "winner": 4,
+          "second": 1,
+          "third": 1
+        },
+        {
+          "race_number": 2,
+          "arrival": [
+            5,
+            3,
+            3
+          ],
+          "winner": 5,
+          "second": 3,
+          "third": 3
+        },
+        {
+          "race_number": 3,
+          "arrival": [
+            2,
+            9,
+            6
+          ],
+          "winner": 2,
+          "second": 9,
+          "third": 6
+        },
+        {
+          "race_number": 4,
+          "arrival": [
+            1,
+            3,
+            4
+          ],
+          "winner": 1,
+          "second": 3,
+          "third": 4
+        },
+        {
+          "race_number": 5,
+          "arrival": [
+            7,
+            10,
+            11
+          ],
+          "winner": 7,
+          "second": 10,
+          "third": 11
+        },
+        {
+          "race_number": 6,
+          "arrival": [
+            3,
+            5,
+            11
+          ],
+          "winner": 3,
+          "second": 5,
+          "third": 11
+        },
+        {
+          "race_number": 7,
+          "arrival": [
+            6,
+            4,
+            2
+          ],
+          "winner": 6,
+          "second": 4,
+          "third": 2
+        },
+        {
+          "race_number": 8,
+          "arrival": [
+            9,
+            3,
+            8
+          ],
+          "winner": 9,
+          "second": 3,
+          "third": 8
+        }
+      ]
+    },
+    "match": {
+      "score": 40,
+      "max_score": 40,
+      "confidence": 100.0,
+      "reasons": [
+        "date exact"
+      ]
     }
+  },
+  {
+    "program": {
+      "document_type": "program",
+      "source_file": "program_20260910_49316c96b0_c070112fa9.txt",
+      "parsed_at": "2026-09-10T12:54:44.049789Z",
+      "date": "2026-09-07",
+      "race": {
+        "race_name": "PRIX V AND B - ATTELE",
+        "track": "CRAON",
+        "race_number": 1,
+        "race_type": "ATTELE",
+        "runners_count": 16,
+        "distance": 2775,
+        "prize_euros": 80000
+      },
+      "horses": [
+        {
+          "number": 1,
+          "horse": "JAMBIER D'OURVILLE",
+          "description": "Vainqueur de l'étape de Nîmes, ce représentant de l'écurie Salleloise n'a pu se mettre en évidence lors des étapes suivantes, ne faisant jamais mieux que onzième. Il monte sérieusement de catégorie par rapport à sa dernière sortie et aura bien du mal à se distinguer."
+        },
+        {
+          "number": 2,
+          "horse": "IDEAL DE SASSY",
+          "description": "Très surprenant dauphin de KING OPERA (14) dans l'étape d'Agon-Coutainville, ce cheval de Pascal Rousseau n'a toutefois pas pu confirmer cette performance lors de ses sorties suivantes. Il vient de se classer troisième à Vincennes, mais dans une épreuve nettement moins relevée. Face à une telle opposition, il viendra dans un second choix."
+        },
+        {
+          "number": 3,
+          "horse": "KING DE L'OUEST",
+          "description": "Ce fils de Booster Winner court relativement peu, mais toujours à bon escient. Il s'est d'ailleurs imposé en force dans l'étape de Sablé-sur-Sarthe avant d'être dominé que par KING OPERA (14) dans celle de Royan-La Palmyre. Il a depuis repris de la fraîcheur et mérite un large crédit pour son retour à la compétition."
+        },
+        {
+          "number": 4,
+          "horse": "GENERAL DU NORD",
+          "description": "Après une longue traversée du désert, ce représentant de l'écurie Escapade AB a pris une surprenante deuxième place à Montignac, en dominant plusieurs de ses adversaires du jour. Il n'a toutefois pu confirmer à Aix-les-Bains ou à Vibraye et monte sérieusement de catégorie ici. Sa tâche ne s'annonce pas simple !"
+        },
+        {
+          "number": 5,
+          "horse": "GUMP DU PONCELET",
+          "description": "Vainqueur avec autorité à Vincennes au mois de février, ce protégé de Dries Kumpen a ensuite quelque peu déçu avant de refaire surface (2e) dans la dernière étape, celle de Montier-en-Der. Il a certainement été préparé en vue de cette finale et pourrait confirmer son retour en forme. Méfiance !"
+        },
+        {
+          "number": 6,
+          "horse": "ILEO PIERJI",
+          "description": "Intéressant cinquième de l'épreuve lavalloise du Grand National du Trot, ce concurrent de Pierre Julienne a depuis pris quelques bonnes places, donnant toujours le meilleur de lui-même. Il n'a pas eu un bon parcours lors de l'étape disputée à La Gacilly et il s'est pourtant classé sixième. Sans être une priorité, il reste capable de se placer. Un petit regret !"
+        },
+        {
+          "number": 7,
+          "horse": "HECTOR DE BASSIERE",
+          "description": "Surprenant dauphin de JUST DE L'OISON (13), alors qu'ils s'élançaient au même poteau, cet élève de Pierre-Louis Desaunette n'a toutefois jamais pu confirmer lors de ses sorties suivantes. Il a même été dominé par plusieurs de ses rivaux à Agon-Coutainville et à Montignac. Il va retrouver Antonin André, avec qui il s'est imposé. Comme d'autres, il peut se placer."
+        },
+        {
+          "number": 8,
+          "horse": "INHERIT",
+          "description": "Après de nombreux échecs, ce cheval de la famille Beaufils a esquissé un retour en forme à Montignac avant de le confirmer dans l'étape de La Gacilly, n'étant dominé que par les bons IDEAL DU ROCHER (16) et KING OPERA (14). Sauf incident, il devrait prendre une part active à l'emballage final, d'autant plus qu'Éric Raffin lui renouvelle sa confiance."
+        },
+        {
+          "number": 9,
+          "horse": "IRIS FROM",
+          "description": "Dominée dans les deux étapes du circuit auxquelles elle a participé cette année, cette concurrente de William Bigeon vient toutefois de rassurer dans un lot nettement inférieur à Royan-La Palmyre, prouvant par la même occasion qu'elle était capable de s'illustrer sur l'herbe. Elle n'a cependant pas de marge à ce niveau, et viendra plutôt dans un second choix."
+        },
+        {
+          "number": 10,
+          "horse": "JOYCE DELTO",
+          "description": "En dernier lieu, alors qu'elle était seulement plaquée aux antérieurs, cette représentant de l'écurie Delto a tracé une belle ligne droite et s'est ainsi classée sixième de l'étape malouine du Grand National du Trot. Troisième de cette même épreuve l'an passé, elle bénéficie d'un bel engagement à la limite du recul et devrait en profiter pour s'illustrer."
+        },
+        {
+          "number": 11,
+          "horse": "HOLD UP DU DIGEON",
+          "description": "Ce fils de Bold Eagle ne compte qu'un seul podium depuis le début de l'année et n'a pu faire mieux que dixième sur l'herbe. Ses dernières tentatives n'incitent pas à l'optimisme. À 9 ans, il semble avoir sa carrière derrière lui et devra, dans un premier temps, rassurer."
+        },
+        {
+          "number": 12,
+          "horse": "IDOLE OF LOVE",
+          "description": "Depuis le début de l'été, cette concurrente d'Emmanuel Varin semble avoir retrouvé un peu de mordant. Quatrième de l'étape de Royan-La Palmyre, elle a ensuite pris des places intéressantes sur des pistes en dur. Véritable droitière et en forme, elle est capable de se placer à l'issue d'un bon parcours. Attention !"
+        },
+        {
+          "number": 13,
+          "horse": "JUST DE L'OISON",
+          "description": "Irréprochable depuis plusieurs mois, ce fils de Quaro s'est plaisamment imposé au niveau Groupe 3 en août. Plus tôt dans l'année, il a remporté les étapes d'Ecommoy, du Touquet et de Bernay et ne devrait donc pas être dérangé par un retour sur l'herbe. Deuxième tout près de KING OPERA (14) au classement général, il pourrait bien faire coup double dans cette finale."
+        },
+        {
+          "number": 14,
+          "horse": "KING OPERA",
+          "description": "Ce protégé de Joël Séché n'a débuté dans ce circuit que lors de la cinquième étape, disputée à Granville, et a depuis enchaîné les bonnes performances et fait de Trophée Vert un objectif. Après s'être imposé à Agon-Coutainville et Royan-La Palmyre, il a été dominé par IDEAL DU ROCHER (16). Actuel leader du classement général, il devrait lutter pour les premières places."
+        },
+        {
+          "number": 15,
+          "horse": "HIDALGO DES NOES",
+          "description": "Ce représentant de l'écurie Danover a pris part à neuf étapes. S'il s'est plutôt bien comporté lors de la première (4e) à Ecommoy, il a ensuite enchaîné les échecs se classant toujours au-delà de la septième place. Il n'a plus la moindre marge de manœuvre et n'aura pas la partie facile. Sans nous !"
+        },
+        {
+          "number": 16,
+          "horse": "IDEAL DU ROCHER",
+          "description": "Largement dominé à Bernay, ce concurrent de Charley Mottier a depuis remis les pendules à l'heure en s'imposant en force à La Gacilly, dominant notamment KING OPERA (14). Ce cheval dur à l'effort bénéficie d'un bel engagement au plafond des gains et va tenter de confirmer sa récente victoire. Dans le coup !"
+        }
+      ],
+      "rankings": {
+        "favorites": [
+          13,
+          16,
+          14,
+          3,
+          10,
+          8,
+          5
+        ],
+        "form": [
+          14,
+          13,
+          16,
+          12,
+          3
+        ],
+        "class": [
+          5,
+          6,
+          8,
+          10,
+          12
+        ],
+        "progress": [
+          6,
+          10,
+          9,
+          7,
+          5
+        ],
+        "regularity": [
+          13,
+          12,
+          14,
+          6,
+          16
+        ]
+      },
+      "published_arrival": [
+        10,
+        3,
+        13
+      ]
+    },
+    "result": {
+      "document_type": "result",
+      "source_file": "result_20260909_936d65d253_7c78b8f828.txt",
+      "parsed_at": "2026-09-10T12:54:44.070585Z",
+      "date": "2026-09-07",
+      "meeting": 1,
+      "track": "CRAON",
+      "races": [
+        {
+          "race_number": 1,
+          "arrival": [
+            13,
+            16,
+            7
+          ],
+          "winner": 13,
+          "second": 16,
+          "third": 7
+        },
+        {
+          "race_number": 2,
+          "arrival": [
+            8,
+            1,
+            2
+          ],
+          "winner": 8,
+          "second": 1,
+          "third": 2
+        },
+        {
+          "race_number": 3,
+          "arrival": [
+            7,
+            3,
+            3
+          ],
+          "winner": 7,
+          "second": 3,
+          "third": 3
+        },
+        {
+          "race_number": 4,
+          "arrival": [
+            14,
+            1,
+            13
+          ],
+          "winner": 14,
+          "second": 1,
+          "third": 13
+        },
+        {
+          "race_number": 5,
+          "arrival": [
+            3,
+            1,
+            1
+          ],
+          "winner": 3,
+          "second": 1,
+          "third": 1
+        },
+        {
+          "race_number": 6,
+          "arrival": [
+            4,
+            6,
+            5
+          ],
+          "winner": 4,
+          "second": 6,
+          "third": 5
+        },
+        {
+          "race_number": 7,
+          "arrival": [
+            13,
+            12,
+            2
+          ],
+          "winner": 13,
+          "second": 12,
+          "third": 2
+        },
+        {
+          "race_number": 8,
+          "arrival": [
+            13,
+            11,
+            15
+          ],
+          "winner": 13,
+          "second": 11,
+          "third": 15
+        },
+        {
+          "race_number": 9,
+          "arrival": [
+            5,
+            2,
+            7
+          ],
+          "winner": 5,
+          "second": 2,
+          "third": 7
+        }
+      ]
+    },
+    "match": {
+      "score": 40,
+      "max_score": 40,
+      "confidence": 100.0,
+      "reasons": [
+        "date exact"
+      ]
+    }
+  },
+  {
+    "program": {
+      "document_type": "program",
+      "source_file": "program_20260909_49316c96b0_81ec76e5a1.txt",
+      "parsed_at": "2026-09-10T12:54:43.689270Z",
+      "date": "2026-09-07",
+      "race": {
+        "race_name": "PRIX V AND B - ATTELE",
+        "track": "CRAON",
+        "race_number": 1,
+        "race_type": "ATTELE",
+        "runners_count": 16,
+        "distance": 2775,
+        "prize_euros": 80000
+      },
+      "horses": [
+        {
+          "number": 1,
+          "horse": "JAMBIER D'OURVILLE",
+          "description": "Vainqueur de l'étape de Nîmes, ce représentant de l'écurie Salleloise n'a pu se mettre en évidence lors des étapes suivantes, ne faisant jamais mieux que onzième. Il monte sérieusement de catégorie par rapport à sa dernière sortie et aura bien du mal à se distinguer."
+        },
+        {
+          "number": 2,
+          "horse": "IDEAL DE SASSY",
+          "description": "Très surprenant dauphin de KING OPERA (14) dans l'étape d'Agon-Coutainville, ce cheval de Pascal Rousseau n'a toutefois pas pu confirmer cette performance lors de ses sorties suivantes. Il vient de se classer troisième à Vincennes, mais dans une épreuve nettement moins relevée. Face à une telle opposition, il viendra dans un second choix."
+        },
+        {
+          "number": 3,
+          "horse": "KING DE L'OUEST",
+          "description": "Ce fils de Booster Winner court relativement peu, mais toujours à bon escient. Il s'est d'ailleurs imposé en force dans l'étape de Sablé-sur-Sarthe avant d'être dominé que par KING OPERA (14) dans celle de Royan-La Palmyre. Il a depuis repris de la fraîcheur et mérite un large crédit pour son retour à la compétition."
+        },
+        {
+          "number": 4,
+          "horse": "GENERAL DU NORD",
+          "description": "Après une longue traversée du désert, ce représentant de l'écurie Escapade AB a pris une surprenante deuxième place à Montignac, en dominant plusieurs de ses adversaires du jour. Il n'a toutefois pu confirmer à Aix-les-Bains ou à Vibraye et monte sérieusement de catégorie ici. Sa tâche ne s'annonce pas simple !"
+        },
+        {
+          "number": 5,
+          "horse": "GUMP DU PONCELET",
+          "description": "Vainqueur avec autorité à Vincennes au mois de février, ce protégé de Dries Kumpen a ensuite quelque peu déçu avant de refaire surface (2e) dans la dernière étape, celle de Montier-en-Der. Il a certainement été préparé en vue de cette finale et pourrait confirmer son retour en forme. Méfiance !"
+        },
+        {
+          "number": 6,
+          "horse": "ILEO PIERJI",
+          "description": "Intéressant cinquième de l'épreuve lavalloise du Grand National du Trot, ce concurrent de Pierre Julienne a depuis pris quelques bonnes places, donnant toujours le meilleur de lui-même. Il n'a pas eu un bon parcours lors de l'étape disputée à La Gacilly et il s'est pourtant classé sixième. Sans être une priorité, il reste capable de se placer. Un petit regret !"
+        },
+        {
+          "number": 7,
+          "horse": "HECTOR DE BASSIERE",
+          "description": "Surprenant dauphin de JUST DE L'OISON (13), alors qu'ils s'élançaient au même poteau, cet élève de Pierre-Louis Desaunette n'a toutefois jamais pu confirmer lors de ses sorties suivantes. Il a même été dominé par plusieurs de ses rivaux à Agon-Coutainville et à Montignac. Il va retrouver Antonin André, avec qui il s'est imposé. Comme d'autres, il peut se placer."
+        },
+        {
+          "number": 8,
+          "horse": "INHERIT",
+          "description": "Après de nombreux échecs, ce cheval de la famille Beaufils a esquissé un retour en forme à Montignac avant de le confirmer dans l'étape de La Gacilly, n'étant dominé que par les bons IDEAL DU ROCHER (16) et KING OPERA (14). Sauf incident, il devrait prendre une part active à l'emballage final, d'autant plus qu'Éric Raffin lui renouvelle sa confiance."
+        },
+        {
+          "number": 9,
+          "horse": "IRIS FROM",
+          "description": "Dominée dans les deux étapes du circuit auxquelles elle a participé cette année, cette concurrente de William Bigeon vient toutefois de rassurer dans un lot nettement inférieur à Royan-La Palmyre, prouvant par la même occasion qu'elle était capable de s'illustrer sur l'herbe. Elle n'a cependant pas de marge à ce niveau, et viendra plutôt dans un second choix."
+        },
+        {
+          "number": 10,
+          "horse": "JOYCE DELTO",
+          "description": "En dernier lieu, alors qu'elle était seulement plaquée aux antérieurs, cette représentant de l'écurie Delto a tracé une belle ligne droite et s'est ainsi classée sixième de l'étape malouine du Grand National du Trot. Troisième de cette même épreuve l'an passé, elle bénéficie d'un bel engagement à la limite du recul et devrait en profiter pour s'illustrer."
+        },
+        {
+          "number": 11,
+          "horse": "HOLD UP DU DIGEON",
+          "description": "Ce fils de Bold Eagle ne compte qu'un seul podium depuis le début de l'année et n'a pu faire mieux que dixième sur l'herbe. Ses dernières tentatives n'incitent pas à l'optimisme. À 9 ans, il semble avoir sa carrière derrière lui et devra, dans un premier temps, rassurer."
+        },
+        {
+          "number": 12,
+          "horse": "IDOLE OF LOVE",
+          "description": "Depuis le début de l'été, cette concurrente d'Emmanuel Varin semble avoir retrouvé un peu de mordant. Quatrième de l'étape de Royan-La Palmyre, elle a ensuite pris des places intéressantes sur des pistes en dur. Véritable droitière et en forme, elle est capable de se placer à l'issue d'un bon parcours. Attention !"
+        },
+        {
+          "number": 13,
+          "horse": "JUST DE L'OISON",
+          "description": "Irréprochable depuis plusieurs mois, ce fils de Quaro s'est plaisamment imposé au niveau Groupe 3 en août. Plus tôt dans l'année, il a remporté les étapes d'Ecommoy, du Touquet et de Bernay et ne devrait donc pas être dérangé par un retour sur l'herbe. Deuxième tout près de KING OPERA (14) au classement général, il pourrait bien faire coup double dans cette finale."
+        },
+        {
+          "number": 14,
+          "horse": "KING OPERA",
+          "description": "Ce protégé de Joël Séché n'a débuté dans ce circuit que lors de la cinquième étape, disputée à Granville, et a depuis enchaîné les bonnes performances et fait de Trophée Vert un objectif. Après s'être imposé à Agon-Coutainville et Royan-La Palmyre, il a été dominé par IDEAL DU ROCHER (16). Actuel leader du classement général, il devrait lutter pour les premières places."
+        },
+        {
+          "number": 15,
+          "horse": "HIDALGO DES NOES",
+          "description": "Ce représentant de l'écurie Danover a pris part à neuf étapes. S'il s'est plutôt bien comporté lors de la première (4e) à Ecommoy, il a ensuite enchaîné les échecs se classant toujours au-delà de la septième place. Il n'a plus la moindre marge de manœuvre et n'aura pas la partie facile. Sans nous !"
+        },
+        {
+          "number": 16,
+          "horse": "IDEAL DU ROCHER",
+          "description": "Largement dominé à Bernay, ce concurrent de Charley Mottier a depuis remis les pendules à l'heure en s'imposant en force à La Gacilly, dominant notamment KING OPERA (14). Ce cheval dur à l'effort bénéficie d'un bel engagement au plafond des gains et va tenter de confirmer sa récente victoire. Dans le coup !"
+        }
+      ],
+      "rankings": {
+        "favorites": [
+          13,
+          16,
+          14,
+          3,
+          10,
+          8,
+          5
+        ],
+        "form": [
+          14,
+          13,
+          16,
+          12,
+          3
+        ],
+        "class": [
+          5,
+          6,
+          8,
+          10,
+          12
+        ],
+        "progress": [
+          6,
+          10,
+          9,
+          7,
+          5
+        ],
+        "regularity": [
+          13,
+          12,
+          14,
+          6,
+          16
+        ]
+      },
+      "published_arrival": [
+        10,
+        3,
+        13
+      ]
+    },
+    "result": {
+      "document_type": "result",
+      "source_file": "result_20260909_936d65d253_7c78b8f828.txt",
+      "parsed_at": "2026-09-10T12:54:44.070585Z",
+      "date": "2026-09-07",
+      "meeting": 1,
+      "track": "CRAON",
+      "races": [
+        {
+          "race_number": 1,
+          "arrival": [
+            13,
+            16,
+            7
+          ],
+          "winner": 13,
+          "second": 16,
+          "third": 7
+        },
+        {
+          "race_number": 2,
+          "arrival": [
+            8,
+            1,
+            2
+          ],
+          "winner": 8,
+          "second": 1,
+          "third": 2
+        },
+        {
+          "race_number": 3,
+          "arrival": [
+            7,
+            3,
+            3
+          ],
+          "winner": 7,
+          "second": 3,
+          "third": 3
+        },
+        {
+          "race_number": 4,
+          "arrival": [
+            14,
+            1,
+            13
+          ],
+          "winner": 14,
+          "second": 1,
+          "third": 13
+        },
+        {
+          "race_number": 5,
+          "arrival": [
+            3,
+            1,
+            1
+          ],
+          "winner": 3,
+          "second": 1,
+          "third": 1
+        },
+        {
+          "race_number": 6,
+          "arrival": [
+            4,
+            6,
+            5
+          ],
+          "winner": 4,
+          "second": 6,
+          "third": 5
+        },
+        {
+          "race_number": 7,
+          "arrival": [
+            13,
+            12,
+            2
+          ],
+          "winner": 13,
+          "second": 12,
+          "third": 2
+        },
+        {
+          "race_number": 8,
+          "arrival": [
+            13,
+            11,
+            15
+          ],
+          "winner": 13,
+          "second": 11,
+          "third": 15
+        },
+        {
+          "race_number": 9,
+          "arrival": [
+            5,
+            2,
+            7
+          ],
+          "winner": 5,
+          "second": 2,
+          "third": 7
+        }
+      ]
+    },
+    "match": {
+      "score": 40,
+      "max_score": 40,
+      "confidence": 100.0,
+      "reasons": [
+        "date exact"
+      ]
+    }
+  },
+  {
+    "program": {
+      "document_type": "program",
+      "source_file": "program_20260910_fe1f366bd8_43d38ca4e0.txt",
+      "parsed_at": "2026-09-10T12:54:44.065769Z",
+      "date": "2026-09-05",
+      "race": {
+        "race_name": "PRIX DU MONT SAINT MICHEL",
+        "track": "PARIS-VINCENNES",
+        "race_number": 4,
+        "race_type": "ATTELE",
+        "runners_count": 14,
+        "distance": 2700,
+        "prize_euros": 68000
+      },
+      "horses": [
+        {
+          "number": 1,
+          "horse": "FEU DE REVOLTE",
+          "description": "Après une rentrée à Sablé- sur-Sarthe, ce concurrent de Romain Jajolet s'est montré fautif à Vincennes alors qu'il était en mesure de prendre la troisième place et de créer ainsi une énorme surprise. Il prouvait ce jour-là qu'il était toujours ingambe à 11 ans. Il fait cependant face à une opposition de taille et viendra dans un second choix."
+        },
+        {
+          "number": 2,
+          "horse": "INES DE LA ROUVRE",
+          "description": "Cette fille de Briac Dark a réalisé un bel été sur l'herbe avec une victoire et une deuxième place. Pour son retour sur une piste en dur, elle a conclu honorablement, sans parvenir à faire mieux que septième. En neuf tentatives sur le parcours proposé, elle n'est cependant jamais montée sur le podium. Face à une telle opposition, elle viendra dans un second choix."
+        },
+        {
+          "number": 3,
+          "horse": "JIPET DE CREPIN",
+          "description": "Après un échec sur l'herbe de Carentan, ce pensionnaire de Sébastien Ernault s'est imposé en force sur l'hippodrome d'Enghien dans un lot de qualité. Il évolue en retard de gains et il est tout simplement invaincu à Vincennes en 2026. Sauf incident, il ne devrait pas taper loin."
+        },
+        {
+          "number": 4,
+          "horse": "GAI MATIN",
+          "description": "Ce fils de Rieussec et de la bonne Nuit Torride reste sur vingt-et-une course sans le moindre podium, pire il compte quatre disqualifications lors de ses cinq dernières tentatives. Il a réalisé une bonne partie du premier semestre en Corse, sans résultat. Il a incontestablement sa carrière derrière lui. Sans nous !"
+        },
+        {
+          "number": 5,
+          "horse": "GOLD D'ECROVILLE",
+          "description": "Après avoir esquissé un retour en forme (5e) dans le Quinté+ 29 juillet, remporté par JIZOU D'ETANG (10), cet élève de Bruno Marie n'a toutefois pu confirmer à Divonne-les-Bains le mois dernier. Il ne sera que plaqué aux quatre pieds et n'aura pas la partie facile face à ses cadets. Il y a mieux."
+        },
+        {
+          "number": 6,
+          "horse": "INDIEN DE FONTAINE",
+          "description": "Lors de sa dernière sortie sur ce parcours, au mois de mai, ce protégé de Pascal Danet a fourni un bon effort final et s'est ainsi classé troisième. Il s'est depuis bien comporté dans le relevé Prix du Quercy (5e). Pour son retour sur la cendrée parisienne, il affronte une opposition à sa portée et devrait prendre une part active à l'emballage final."
+        },
+        {
+          "number": 7,
+          "horse": "JOLIVERT DU GERS",
+          "description": "Bon sixième du Quinté+ du 9 juillet, alors qu'il n'était que plaqué aux antérieurs, ce concurrent de Jean-Pascal Bragato s'est depuis classé deuxième de JIZOU D'ETANG (10). Il aura certainement du mal à prendre sa revanche, mais il reste un cheval de qualité. Si tout se passe bien, il est en mesure de figurer à l'une des cinq premières places."
+        },
+        {
+          "number": 8,
+          "horse": "I STILL LOVING YOU",
+          "description": "Ce rejeton de Prince Gédé a réalisé un très bon premier semestre avec déjà quatre victoires à la clé. Il a repris un peu de fraîcheur durant l'été et va retrouver une piste qu'il affectionne tout particulièrement. Alexandre Abdrivard le connaît par cœur puisqu'il en est l'heureux propriétaire. À suivre d'entrée de jeu !"
+        },
+        {
+          "number": 9,
+          "horse": "JOUR DE FETE",
+          "description": "Plaisant au trot monté en début d'année, ce concurrent du Haras d'Erable a moins de réussite à l'attelé, mais donne toujours le meilleur de lui-même et fait montre d'une certaine régularité. Il n'a pas beaucoup de marge de manœuvre à ce niveau dans cette spécialité, mais reste tout de même capable de se placer. Un petit regret."
+        },
+        {
+          "number": 10,
+          "horse": "JIZOU D'ETANG",
+          "description": "Depuis le début du mois de mars, ce représentant de l'élevage de l'Etang alterne les disqualifications et les victoires acquises avec facilité. Il est assurément en retard de gains et David Thomain l'a déjà mené au succès. S'il reste sage d'un bout à l'autre du parcours, il s'annonce compétitif pour les premières places."
+        },
+        {
+          "number": 11,
+          "horse": "JOJO TOONS",
+          "description": "Attendu dans l'étape lavalloise du GNT, ce protégé de la famille Bézier n'a pu faire mieux que huitième. Il a eu le droit à quelques vacances depuis et vient de réaliser une rentrée discrète à Mons. Jugé sur ce qu'il a fait de mieux, il a suffisamment de qualité pour briller en pareille société. De retour sur la piste de sa dernière victoire, il est à reprendre impérativement !"
+        },
+        {
+          "number": 12,
+          "horse": "HORS BORD",
+          "description": "Cet élève de Jean-Marc Chaineux avait pris une bonne quatrième place en mars ici même, mais il n'a jamais pu confirmer lors de ses sorties suivantes. Il est déferré des quatre pieds pour l'occasion et n'aura pas les Européens sur sa route. S'il bénéficie d'un parcours sans encombre, il pourrait bien causer une petite surprise en prenant la quatrième ou cinquième place."
+        },
+        {
+          "number": 13,
+          "horse": "GAMIN DES ISLES",
+          "description": "Deuxième du Quinté+ du 9 juillet, en dominant notamment JACOMO BELLO (14), ce concurrent de Stéphane Bourlier a enchaîné avec des performances intéressantes et notamment une plaisante fin de course à Laval le mois dernier. Il semble beaucoup se plaire à Vincennes et fait face à un engagement intéressant au plafond des gains sans les étrangers. Dans le coup !"
+        },
+        {
+          "number": 14,
+          "horse": "JACOMO BELLO",
+          "description": "Ce protégé de Thomas Levesque enchaîne les bonnes performances. En début d'été, dans le Quinté+ du 9 juillet, il a pris une intéressante troisième place alors qu'il a dû contourner le peloton dans le dernier kilomètre. Il a depuis repris de la fraîcheur et a été déclaré avec un emoji vert pour ce retour à la compétition. À retentir en haut rang."
+        }
+      ],
+      "rankings": {
+        "favorites": [
+          3,
+          10,
+          14,
+          8,
+          11,
+          13,
+          6
+        ],
+        "form": [
+          3,
+          14,
+          11,
+          13,
+          10
+        ],
+        "class": [
+          10,
+          6,
+          13,
+          14,
+          8
+        ],
+        "progress": [
+          8,
+          12,
+          7,
+          3,
+          9
+        ],
+        "regularity": [
+          12,
+          9,
+          7,
+          11,
+          8
+        ]
+      },
+      "published_arrival": [
+        14,
+        1,
+        10,
+        3,
+        13
+      ]
+    },
+    "result": {
+      "document_type": "result",
+      "source_file": "result_20260910_cac85ba7e4_f11a252c3a.txt",
+      "parsed_at": "2026-09-10T12:54:44.075307Z",
+      "date": "2026-09-05",
+      "meeting": 3,
+      "track": "LA TESTE DE BUCH",
+      "races": [
+        {
+          "race_number": 1,
+          "arrival": [
+            4,
+            1,
+            1
+          ],
+          "winner": 4,
+          "second": 1,
+          "third": 1
+        },
+        {
+          "race_number": 2,
+          "arrival": [
+            5,
+            3,
+            3
+          ],
+          "winner": 5,
+          "second": 3,
+          "third": 3
+        },
+        {
+          "race_number": 3,
+          "arrival": [
+            2,
+            9,
+            6
+          ],
+          "winner": 2,
+          "second": 9,
+          "third": 6
+        },
+        {
+          "race_number": 4,
+          "arrival": [
+            1,
+            3,
+            4
+          ],
+          "winner": 1,
+          "second": 3,
+          "third": 4
+        },
+        {
+          "race_number": 5,
+          "arrival": [
+            7,
+            10,
+            11
+          ],
+          "winner": 7,
+          "second": 10,
+          "third": 11
+        },
+        {
+          "race_number": 6,
+          "arrival": [
+            3,
+            5,
+            11
+          ],
+          "winner": 3,
+          "second": 5,
+          "third": 11
+        },
+        {
+          "race_number": 7,
+          "arrival": [
+            6,
+            4,
+            2
+          ],
+          "winner": 6,
+          "second": 4,
+          "third": 2
+        },
+        {
+          "race_number": 8,
+          "arrival": [
+            9,
+            3,
+            8
+          ],
+          "winner": 9,
+          "second": 3,
+          "third": 8
+        }
+      ]
+    },
+    "match": {
+      "score": 40,
+      "max_score": 40,
+      "confidence": 100.0,
+      "reasons": [
+        "date exact"
+      ]
+    }
+  },
+  {
+    "program": {
+      "document_type": "program",
+      "source_file": "program_20260909_b266c2b0a3_ae0b0ea500.txt",
+      "parsed_at": "2026-09-10T12:54:44.037917Z",
+      "date": "2026-09-08",
+      "race": {
+        "race_name": "PRIX JEAN BART - HAIES",
+        "track": "AUTEUIL",
+        "race_number": 1,
+        "race_type": "PLAT",
+        "runners_count": 16,
+        "distance": 3600,
+        "prize_euros": 98000
+      },
+      "horses": [
+        {
+          "number": 1,
+          "horse": "HAMANDIO",
+          "description": "Lauréat de l'édition 2025 de ce Quinté+ en valeur 61, il se présentera cette saison en 64. Au mois de mai, sur ce parcours, il a prouvé qu'il était capable de briller sous un poids aussi élevé. Une nouvelle fois, il devrait animer les débats et aller très loin."
+        },
+        {
+          "number": 2,
+          "horse": "ASTA LA PASTA",
+          "description": "Irréprochable depuis qu'il se produit en France, ce protégé de Nathan Vergne s'est montré convaincant dans la Grande Course de Haies de Clairefontaine. Il découvre Auteuil en devant composer avec sept livres de surcharge, mais ses véritables limites restent à définir. Attention !"
+        },
+        {
+          "number": 3,
+          "horse": "NORVILLE",
+          "description": "Ce placé de Groupe 1 (Prix Alain du Breil 2022) n'a pas été épargné par les ennuis de santé mais vient d'afficher du mieux dans un handicap dieppois (5e). Cela dit, il aurait largement préféré évoluer sur une piste lourde. En bout de piste seulement."
+        },
+        {
+          "number": 4,
+          "horse": "GREY FIGHTER",
+          "description": "Absent depuis le 29 octobre 2025, ce fils d'Iffraaj est toutefois annoncé prêt à briller d'entrée par son entourage. Il a déjà remporté un Quinté+ sur ce parcours et appréciera l'état du terrain. Même si sa seule association à Kevin Nabet s'est soldée par un échec, il a son mot à dire."
+        },
+        {
+          "number": 5,
+          "horse": "ROCK AND ROLL",
+          "description": "Excellente troisième de cette épreuve l'an dernier, en valeur 61, il se présentera cette saison avec un kilo de moins. Il a réalisé un été correct sur les tracés coulants de Dieppe et Clairefontaine et abordera ce rendez-vous en grande forme. Première chance théorique."
+        },
+        {
+          "number": 6,
+          "horse": "KASSEL ALLEN",
+          "description": "Ce pensionnaire d'Hugo Mérienne est absent depuis le 25 avril dernier et risque de manquer de compétition. Il reste plus performant en terrain profond et aura de meilleures opportunités durant l'automne. D'autres protagonistes lui sont préférables."
+        },
+        {
+          "number": 7,
+          "horse": "PINK PERSEVERANCE",
+          "description": "Sévèrement pénalisée de neuf livres pour son succès dans la Grande Course de Haies de La Teste, cette fille de Pastorius n'a désormais plus de marge dans les handicaps. Elle a déjà gagné sur ce parcours, d'autres protagonistes sont mieux placés qu'elle. En bout de piste."
+        },
+        {
+          "number": 8,
+          "horse": "WEBCAM",
+          "description": "Bonne deuxième d'un handicap bien composé le 26 mai, sur ce parcours, cette élève de Dominique Bressou effectuera ici une nouvelle rentrée. Elle a la pointure d'un tel lot en valeur pure, reste à savoir si elle sera suffisamment affûtée pour performer d'emblée. Du pour et du contre."
+        },
+        {
+          "number": 9,
+          "horse": "MR DIAFOIRUS",
+          "description": "Après une honorable carrière en plat sous la houlette d'André Fabre, il a réussi sa reconversion sur les haies (trois succès). Néanmoins, il a échoué lors de ses deux essais à Auteuil et doit composer avec une pénalisation de trois kilos. Il y a mieux."
+        },
+        {
+          "number": 10,
+          "horse": "JOYEUSE ROQUE",
+          "description": "Après quasiment trois ans d'absence, cette fille de Gémix a remarquablement couru à trois reprises durant le premier semestre. Elle est très bien placée au poids dans les handicaps et s'entend parfaitement avec Felix de Giles (un succès et quatre places en cinq associations). En dépit d'une rentrée, elle s'annonce redoutable."
+        },
+        {
+          "number": 11,
+          "horse": "LOU FAST",
+          "description": "Grand habitué de ce genre d'événements, il avait fini quatrième de l'édition 2025, alors qu'il effectuait déjà une rentrée. Il est beaucoup moins régulier que par le passé mais reste capable de surprendre en pareille compagnie. Affaire d'impression."
+        },
+        {
+          "number": 12,
+          "horse": "HACKER DU BERLAIS",
+          "description": "Lauréat de Groupe 2 en steeple (Prix Congress 2024), il souffle le chaud et le froid cette année sur les \"balais\". Dominé dans un gros handicap sur ce parcours le 26 mai dernier (8e), il a également échoué dans la course clé du 17 août à Clairefontaine (14e). Malgré la très grande forme de son entourage, il ne viendra que dans un second choix."
+        },
+        {
+          "number": 13,
+          "horse": "ROBIN HILL",
+          "description": "Excellent troisième de l'événement du 30 mai, sur ce parcours, ce protégé de Louis Carberry n'a pas été revu depuis. L'état du terrain lui conviendra parfaitement et sa valeur l'autorise à viser la victoire. Malgré une rentrée, il mérite le plus grand respect."
+        },
+        {
+          "number": 14,
+          "horse": "KEL STORY",
+          "description": "Depuis ses deux succès du mois de décembre à Cagnes-sur-Mer, il accumule les déceptions. Cela dit, il n'a pas démérité dans la course clé du 17 août à Clairefontaine (7e) et reste capable de coups d'éclat à ce niveau. Avis aux amateurs de sensations fortes."
+        },
+        {
+          "number": 15,
+          "horse": "TITI DE PARIS",
+          "description": "Il a ponctué son premier semestre par trois cuisants échecs, mais il avait auparavant décroché deux podiums dans des handicaps de bon aloi. Il effectue une rentrée, mais ses meilleures performances lui confèrent une belle chance théorique en pareille société. Probablement tout ou rien."
+        },
+        {
+          "number": 16,
+          "horse": "LORELEY DES PLACES",
+          "description": "Cette jument régulière a fait bonne figure dans la Grande Course de Haies de Clairefontaine (3e), mais elle n'a encore jamais couru sur les haies d'Auteuil. Elle a franchi un cap depuis qu'elle est associée à Lucas Zuliani (un succès et trois places en quatre associations) et fait partie des candidats aux places."
+        }
+      ],
+      "rankings": {
+        "favorites": [
+          10,
+          1,
+          2,
+          5,
+          13,
+          4,
+          16
+        ],
+        "form": [
+          5,
+          13,
+          10,
+          1,
+          2
+        ],
+        "class": [
+          1,
+          16,
+          2,
+          4,
+          10
+        ],
+        "progress": [
+          4,
+          16,
+          13,
+          5,
+          15
+        ],
+        "regularity": [
+          16,
+          10,
+          2,
+          8,
+          12
+        ]
+      },
+      "published_arrival": [
+        9,
+        2,
+        16,
+        12,
+        1
+      ]
+    },
+    "result": {
+      "document_type": "result",
+      "source_file": "result_20260909_8c6c9b45c9_4cc562963c.txt",
+      "parsed_at": "2026-09-10T12:54:44.070204Z",
+      "date": "2026-09-08",
+      "meeting": 1,
+      "track": "AUTEUIL",
+      "races": [
+        {
+          "race_number": 1,
+          "arrival": [
+            8,
+            14,
+            9
+          ],
+          "winner": 8,
+          "second": 14,
+          "third": 9
+        },
+        {
+          "race_number": 2,
+          "arrival": [
+            4,
+            2,
+            8
+          ],
+          "winner": 4,
+          "second": 2,
+          "third": 8
+        },
+        {
+          "race_number": 3,
+          "arrival": [
+            13,
+            8,
+            5
+          ],
+          "winner": 13,
+          "second": 8,
+          "third": 5
+        },
+        {
+          "race_number": 4,
+          "arrival": [
+            5,
+            13,
+            8
+          ],
+          "winner": 5,
+          "second": 13,
+          "third": 8
+        },
+        {
+          "race_number": 5,
+          "arrival": [
+            1,
+            7,
+            7
+          ],
+          "winner": 1,
+          "second": 7,
+          "third": 7
+        },
+        {
+          "race_number": 6,
+          "arrival": [
+            2,
+            3,
+            9
+          ],
+          "winner": 2,
+          "second": 3,
+          "third": 9
+        },
+        {
+          "race_number": 7,
+          "arrival": [
+            11,
+            1,
+            9
+          ],
+          "winner": 11,
+          "second": 1,
+          "third": 9
+        },
+        {
+          "race_number": 8,
+          "arrival": [
+            4,
+            13,
+            7
+          ],
+          "winner": 4,
+          "second": 13,
+          "third": 7
+        },
+        {
+          "race_number": 9,
+          "arrival": [
+            15,
+            16,
+            4
+          ],
+          "winner": 15,
+          "second": 16,
+          "third": 4
+        }
+      ]
+    },
+    "match": {
+      "score": 40,
+      "max_score": 40,
+      "confidence": 100.0,
+      "reasons": [
+        "date exact"
+      ]
+    }
+  },
+  {
+    "program": {
+      "document_type": "program",
+      "source_file": "program_20260910_8a0b8d2440_2fa33ed582.txt",
+      "parsed_at": "2026-09-10T12:54:44.051998Z",
+      "date": "2026-09-06",
+      "race": {
+        "race_name": null,
+        "track": null,
+        "race_number": 3,
+        "race_type": "MONTE",
+        "runners_count": 16,
+        "distance": 2400,
+        "prize_euros": 50900
+      },
+      "horses": [
+        {
+          "number": 1,
+          "horse": "CASSIUS",
+          "description": "Cet élève des très en forme Pia et Joakim Brand avait profité d'un bel engagement, le 17 mars à Fontainebleau, pour renouer avec le succès. Il n'a ensuite pu s'illustrer dans un Quinté+ au mois de mai, mais sur une distance un peu courte. Avantagé par l'assouplissement des pistes et abaissé de trois livres, ce bon finisseur détient une belle carte à jouer."
+        },
+        {
+          "number": 2,
+          "horse": "REMBRAND TO GO",
+          "description": "Quasiment irréprochable depuis le début de sa carrière, ce pensionnaire de Miroslav Rulec a remporté le Quinté+ du 7 mai et a prouvé quelques jours plus tard qu'il était en mesure de s'illustrer (4e) malgré les trois kilos de surcharge. Il a depuis repris de la fraîcheur et retrouve un parcours sur lequel il n'a jamais fini plus loin que deuxième. À surveiller d'emblée."
+        },
+        {
+          "number": 3,
+          "horse": "SHRIHARA",
+          "description": "Cette fille de Waldgeist fait preuve d'une belle régularité en compétition et a enlevé son Quinté+ au printemps à Strasbourg, sur 3 000 mètres. Elle va toutefois devoir composer avec six livres de plus face à une opposition bien plus relevée. Absente depuis plusieurs mois, nous lui en avons préféré d'autres."
+        },
+        {
+          "number": 4,
+          "horse": "DIXMUDE",
+          "description": "Après avoir ouvert son palmarès à Pornichet, ce protégé de David Layani a pris une bonne deuxième place dans un Quinté+ relevé puisqu'il finissait tout près de Quest for Magic, lauréate de Listed depuis, et il dominait Zelzari, vainqueur de trois handicaps ensuite. Il a assurément la pointure d'une telle épreuve, mais il est absent depuis le mois de mars. Oui, mais…"
+        },
+        {
+          "number": 5,
+          "horse": "ALMIRO",
+          "description": "Auteur d'un bel effort final à Vichy (2e), ce protégé de Philippe Decouz a depuis confirmé ses bonnes dispositions en se classant troisième d'une Classe 2 au Lion d'Angers, sur la distance proposée. Il retrouve les handicaps avec trois livres de moins et pourrait bien en profiter pour se placer."
+        },
+        {
+          "number": 6,
+          "horse": "ZILYA",
+          "description": "Depuis sa victoire à Marseille-Borély, cette pensionnaire de Maxime Cesandri n'a pu faire mieux que sixième dans les handicaps. Elle n'a plus la moindre marge de manœuvre à ce niveau et même si elle a été abaissée d'un kilo, elle devra dans un premier temps rassurer son entourage. Il y a mieux !"
+        },
+        {
+          "number": 7,
+          "horse": "PAOLINO",
+          "description": "Après avoir remporté une deuxième épreuve sur 2 000 mètres, ce concurrent de Didier et Pauline Prod'homme a eu le droit à un petit break durant l'été pour être amené au mieux sur les terrains assouplis. Pour sa reprise de contact, à Deauville, il a fourni un effort correct en retrait. Il va certainement progresser là-dessus et peut se placer à belle cote."
+        },
+        {
+          "number": 8,
+          "horse": "PRINCESSE D'AMOUR",
+          "description": "Facile lauréate à Angers, le 8 juin, cette représentante de l'écurie Victoria Dreams s'est depuis très bien comportée pour son retour dans les Quinté+, échouant du minimum à Deauville le mois dernier. Elle a incontestablement la pointure d'une telle épreuve et n'a jamais fini plus loin que cinquième sur ce parcours. Obligé d'y croire !"
+        },
+        {
+          "number": 9,
+          "horse": "YES ZARA",
+          "description": "Lauréate de trois handicaps depuis début juin, elle a subi neuf kilos de pénalisation au total. Pour son retour dans les Quinté+, à Deauville, elle a fini dernière et n'a pas la moindre marge à ce niveau. Elle est, de plus, raccourcie pour l'occasion et surprendrait en prenant l'une des cinq premières places. Sans nous !"
+        },
+        {
+          "number": 10,
+          "horse": "CRISTABEL",
+          "description": "Cette pensionnaire d'Alain Couétil court de manière espacée, mais toujours à bon escient. Pour sa première sortie sur 2 400 mètres, elle a pris une bonne troisième place dans le Quinté+ du 19 juillet, qui était cependant réservée aux femelles. Même si elle monte de catégorie, elle a été préservée et pourrait bien prendre une part active à l'emballage final, comme d'autres."
+        },
+        {
+          "number": 11,
+          "horse": "MACHETE",
+          "description": "Ce fils de Myboycharlie a fait preuve d'une certaine régularité en Angleterre. Pour son retour sur notre sol, il n'a toutefois pu faire mieux que sixième d'une épreuve à réclamer. Il retrouve les handicaps en valeur 37, mais il est difficile de savoir où il en est exactement. Affaire d'impression."
+        },
+        {
+          "number": 12,
+          "horse": "MONONOF",
+          "description": "Pris en valeur 42 l'an passé à pareille époque, ce pensionnaire de Satoshi Kobayashi n'évolue plus qu'en 37 et s'est d'ailleurs très bien comporté dans le Quinté+ du 15 juin, se classant quatrième. Jamais plus loin que cinquième depuis le début de l'année, il fait montre d'une certaine régularité et mérite, une nouvelle fois, un certain crédit."
+        },
+        {
+          "number": 13,
+          "horse": "MARINALEDA",
+          "description": "Auteur d'un très bon début d'année avec notamment deux deuxièmes places dans des Quinté+, cette fille de Recoletos a connu deux échecs ensuite, mais a refait surface le 19 juillet (4e), derrière CRISTABEL (10). Elle aura cependant les mâles sur sa route cette fois et monte tout de même de catégorie. Malgré tout, elle peut se placer, comme d'autres."
+        },
+        {
+          "number": 14,
+          "horse": "MISTER GATZ",
+          "description": "Pour sa rentrée, à Deauville, ce concur- rent de Gérard Augustin-Normand a fourni un bon effort final et a ainsi pris une intéressante septième place. Il n'a pas une grande marge de manœuvre à ce niveau, mais semble proche de renouer avec les bonnes performances. Deuxième de Listed sur ce parcours, il est à surveiller de près."
+        },
+        {
+          "number": 15,
+          "horse": "GOLD PLAYER",
+          "description": "Après plusieurs échecs, cet élève de Franck Forési vient de refaire surface en se classant troisième du Quinté+ du 18 août, en léger retrait de PRINCESSE D'AMOUR (8). Il a retrouvé une zone de poids dans laquelle il était compétitif et pourrait bien confirmer sa dernière performance. Notre regret !"
+        },
+        {
+          "number": 16,
+          "horse": "ZELKER",
+          "description": "Ce fils de Zelzal n'a pu réellement se mettre en évidence au printemps et il est absent depuis le mois de mai. Il voit certes sa valeur diminuer, mais il affronte une opposition de taille et aura certainement besoin de reprendre le rythme de la compétition. Pas cette fois !"
+        }
+      ],
+      "rankings": {
+        "favorites": [
+          8,
+          4,
+          1,
+          2,
+          5,
+          12,
+          14
+        ],
+        "form": [
+          8,
+          12,
+          1,
+          5,
+          14
+        ],
+        "class": [
+          1,
+          8,
+          14,
+          2,
+          7
+        ],
+        "progress": [
+          12,
+          10,
+          7,
+          13,
+          4
+        ],
+        "regularity": [
+          6,
+          11,
+          4,
+          7,
+          13
+        ]
+      },
+      "published_arrival": []
+    },
+    "result": {
+      "document_type": "result",
+      "source_file": "result_20260909_5fbb825a47_6d0b511ce7.txt",
+      "parsed_at": "2026-09-10T12:54:44.068625Z",
+      "date": "2026-09-06",
+      "meeting": 1,
+      "track": "PARISLONGCHAMP",
+      "races": [
+        {
+          "race_number": 1,
+          "arrival": [
+            1,
+            3,
+            3
+          ],
+          "winner": 1,
+          "second": 3,
+          "third": 3
+        },
+        {
+          "race_number": 2,
+          "arrival": [
+            6,
+            5,
+            8
+          ],
+          "winner": 6,
+          "second": 5,
+          "third": 8
+        },
+        {
+          "race_number": 3,
+          "arrival": [
+            9,
+            2,
+            16
+          ],
+          "winner": 9,
+          "second": 2,
+          "third": 16
+        },
+        {
+          "race_number": 4,
+          "arrival": [
+            3,
+            6,
+            2
+          ],
+          "winner": 3,
+          "second": 6,
+          "third": 2
+        },
+        {
+          "race_number": 5,
+          "arrival": [
+            4,
+            3,
+            3
+          ],
+          "winner": 4,
+          "second": 3,
+          "third": 3
+        },
+        {
+          "race_number": 6,
+          "arrival": [
+            1,
+            2,
+            2
+          ],
+          "winner": 1,
+          "second": 2,
+          "third": 2
+        },
+        {
+          "race_number": 7,
+          "arrival": [
+            1,
+            3,
+            3
+          ],
+          "winner": 1,
+          "second": 3,
+          "third": 3
+        },
+        {
+          "race_number": 8,
+          "arrival": [
+            3,
+            5,
+            5
+          ],
+          "winner": 3,
+          "second": 5,
+          "third": 5
+        },
+        {
+          "race_number": 9,
+          "arrival": [
+            10,
+            15,
+            11
+          ],
+          "winner": 10,
+          "second": 15,
+          "third": 11
+        }
+      ]
+    },
+    "match": {
+      "score": 40,
+      "max_score": 40,
+      "confidence": 100.0,
+      "reasons": [
+        "date exact"
+      ]
+    }
+  }
 ]
