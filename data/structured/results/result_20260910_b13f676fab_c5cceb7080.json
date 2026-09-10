@@ -1,14 +1,25 @@
 {
     "document_type": "result",
-    "source_file": "result_20260910_5fbb825a47_83efb7eaa6.txt",
-    "parsed_at": "2026-09-10T17:08:12.238691Z",
-    "date": "2026-09-06",
+    "source_file": "result_20260910_b13f676fab_c5cceb7080.txt",
+    "parsed_at": "2026-09-10T17:08:12.243317Z",
+    "date": "2026-09-10",
     "meeting": 1,
     "track": "PARISLONGCHAMP",
     "races": [
         {
             "race_number": 1,
             "arrival": [
+                3,
+                9,
+                13
+            ],
+            "winner": 3,
+            "second": 9,
+            "third": 13
+        },
+        {
+            "race_number": 2,
+            "arrival": [
                 1,
                 3,
                 3
@@ -18,92 +29,81 @@
             "third": 3
         },
         {
-            "race_number": 2,
-            "arrival": [
-                6,
-                5,
-                8
-            ],
-            "winner": 6,
-            "second": 5,
-            "third": 8
-        },
-        {
             "race_number": 3,
             "arrival": [
-                9,
-                2,
-                16
+                3,
+                5,
+                4
             ],
-            "winner": 9,
-            "second": 2,
-            "third": 16
+            "winner": 3,
+            "second": 5,
+            "third": 4
         },
         {
             "race_number": 4,
             "arrival": [
-                3,
                 6,
-                2
+                8,
+                3
             ],
-            "winner": 3,
-            "second": 6,
-            "third": 2
+            "winner": 6,
+            "second": 8,
+            "third": 3
         },
         {
             "race_number": 5,
             "arrival": [
-                4,
+                2,
                 3,
-                3
+                6
             ],
-            "winner": 4,
+            "winner": 2,
             "second": 3,
-            "third": 3
+            "third": 6
         },
         {
             "race_number": 6,
             "arrival": [
                 1,
                 2,
-                2
+                6
             ],
             "winner": 1,
             "second": 2,
-            "third": 2
+            "third": 6
         },
         {
             "race_number": 7,
             "arrival": [
-                1,
-                3,
-                3
+                15,
+                14,
+                6
             ],
-            "winner": 1,
-            "second": 3,
-            "third": 3
+            "winner": 15,
+            "second": 14,
+            "third": 6
         },
         {
             "race_number": 8,
             "arrival": [
-                3,
-                5,
-                5
+                10,
+                6,
+                3
             ],
-            "winner": 3,
-            "second": 5,
-            "third": 5
+            "winner": 10,
+            "second": 6,
+            "third": 3
         },
         {
             "race_number": 9,
             "arrival": [
-                10,
-                15,
-                11
+                6,
+                12,
+                13
             ],
-            "winner": 10,
-            "second": 15,
-            "third": 11
+            "winner": 6,
+            "second": 12,
+            "third": 13
         }
     ]
 }
