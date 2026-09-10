@@ -1,6 +1,6 @@
 from src.scraper import run_scraper
 
-from src.processors.pdf_processor import run_pdf_processor
+from src.processors.process_pdfs import process_all_pdfs
 from src.parsers.program_parser import run_program_parser
 from src.parsers.result_parser import run_result_parser
 from src.matching.race_matcher import run_race_matcher
@@ -20,15 +20,13 @@ def main():
 
     run_scraper()
 
-
     # ========================================================
     # STEP 2: PROCESS RACE PDFs
     # ========================================================
 
     print("\nSTEP 2: PROCESSING RACE PDFs")
 
-    run_pdf_processor()
-
+    process_all_pdfs()
 
     # ========================================================
     # STEP 3: PARSE PROGRAM DATA
@@ -38,7 +36,6 @@ def main():
 
     run_program_parser()
 
-
     # ========================================================
     # STEP 4: PARSE RESULT DATA
     # ========================================================
@@ -47,7 +44,6 @@ def main():
 
     run_result_parser()
 
-
     # ========================================================
     # STEP 5: MATCH PROGRAMS WITH RESULTS
     # ========================================================
@@ -55,7 +51,6 @@ def main():
     print("\nSTEP 5: MATCHING PROGRAMS WITH RESULTS")
 
     run_race_matcher()
-
 
     print("\n" + "=" * 60)
     print("HORSE RACING MACHINE FINISHED SUCCESSFULLY")
