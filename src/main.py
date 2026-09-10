@@ -1,7 +1,7 @@
 from src.scraper import run_scraper
 from src.processors.process_pdfs import process_all_pdfs
 from src.parsers.program_parser import process_all_programs
-from src.parsers.result_parser import process_all_results
+from src.parsers.results_parser import process_all_results
 from src.matching.race_matcher import run_matching
 
 
@@ -44,14 +44,14 @@ def main():
     process_all_results()
 
     # ========================================================
-    # STEP 5: MATCHING
+    # STEP 5: MATCHING PROGRAMS WITH RESULTS
     # ========================================================
 
     print("\nSTEP 5: MATCHING PROGRAMS WITH RESULTS")
 
     run_matching(
-        programs_path="data/parsed/programs",
-        results_path="data/parsed/results",
+        programs_path="data/structured/programs",
+        results_path="data/structured/results",
         output_path="data/matched/matched_races.json",
         review_path="data/matched/match_review.json",
     )
