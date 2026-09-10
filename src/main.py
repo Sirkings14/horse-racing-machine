@@ -1,19 +1,18 @@
 from src.scraper import run_scraper
-
 from src.processors.process_pdfs import process_all_pdfs
-from src.parsers.program_parser import run_program_parser
-from src.parsers.result_parser import run_result_parser
+from src.parsers.program_parser import process_all_programs
+from src.parsers.results_parser import process_all_results
 from src.matching.race_matcher import run_race_matcher
 
 
 def main():
 
-    print("=" * 60)
+    print("\n" + "=" * 60)
     print("STARTING HORSE RACING MACHINE")
     print("=" * 60)
 
     # ========================================================
-    # STEP 1: SCRAPE LONAB DATA
+    # STEP 1: SCRAPING
     # ========================================================
 
     print("\nSTEP 1: SCRAPING LONAB DATA")
@@ -21,7 +20,7 @@ def main():
     run_scraper()
 
     # ========================================================
-    # STEP 2: PROCESS RACE PDFs
+    # STEP 2: PROCESSING PDFs
     # ========================================================
 
     print("\nSTEP 2: PROCESSING RACE PDFs")
@@ -29,28 +28,32 @@ def main():
     process_all_pdfs()
 
     # ========================================================
-    # STEP 3: PARSE PROGRAM DATA
+    # STEP 3: PARSING PROGRAMS
     # ========================================================
 
     print("\nSTEP 3: PARSING PROGRAM DATA")
 
-    run_program_parser()
+    process_all_programs()
 
     # ========================================================
-    # STEP 4: PARSE RESULT DATA
+    # STEP 4: PARSING RESULTS
     # ========================================================
 
     print("\nSTEP 4: PARSING RESULT DATA")
 
-    run_result_parser()
+    process_all_results()
 
     # ========================================================
-    # STEP 5: MATCH PROGRAMS WITH RESULTS
+    # STEP 5: MATCHING
     # ========================================================
 
     print("\nSTEP 5: MATCHING PROGRAMS WITH RESULTS")
 
     run_race_matcher()
+
+    # ========================================================
+    # FINISHED
+    # ========================================================
 
     print("\n" + "=" * 60)
     print("HORSE RACING MACHINE FINISHED SUCCESSFULLY")
