@@ -42,3 +42,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+from src.dataset.race_matcher import match_races
+
+print("\n" + "=" * 60)
+print("STEP 5: MATCHING PROGRAMS WITH RESULTS")
+print("=" * 60)
+
+match_races()
