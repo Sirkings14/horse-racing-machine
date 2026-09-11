@@ -16,11 +16,17 @@ def clean_text(text):
     text = text.replace("\u202f", " ")
     text = text.replace("\xa0", " ")
 
-    # Replace multiple spaces with one space
-    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(
+        r"[ \t]+",
+        " ",
+        text
+    )
 
-    # Keep line structure clean
-    text = re.sub(r"\n{3,}", "\n\n", text)
+    text = re.sub(
+        r"\n{3,}",
+        "\n\n",
+        text
+    )
 
     return text.strip()
 
@@ -30,17 +36,17 @@ def extract_date(text):
     Extract race date.
 
     Example:
-    "4+1" DU VENDREDI 11 SEPTEMBRE 2026
+    DU VENDREDI 11 SEPTEMBRE 2026
     """
 
     pattern = (
-        r'DU\s+(?:LUNDI|MARDI|MERCREDI|JEUDI|'
-        r'VENDREDI|SAMEDI|DIMANCHE)\s+'
-        r'(\d{1,2})\s+'
-        r'(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|'
-        r'JUILLET|AOUT|AOÛT|SEPTEMBRE|OCTOBRE|'
-        r'NOVEMBRE|DECEMBRE|DÉCEMBRE)\s+'
-        r'(\d{4})'
+        r"DU\s+(?:LUNDI|MARDI|MERCREDI|JEUDI|"
+        r"VENDREDI|SAMEDI|DIMANCHE)\s+"
+        r"(\d{1,2})\s+"
+        r"(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|"
+        r"JUILLET|AOUT|AOÛT|SEPTEMBRE|OCTOBRE|"
+        r"NOVEMBRE|DECEMBRE|DÉCEMBRE)\s+"
+        r"(\d{4})"
     )
 
     match = re.search(
@@ -96,7 +102,7 @@ def extract_date(text):
 
 def extract_race_info(text):
     """
-    Extract race information from the first page.
+    Extract race information.
     """
 
     race = {
@@ -111,104 +117,112 @@ def extract_race_info(text):
 
     # -------------------------------------------------
     # TRACK + RACE NAME
-    # Example:
-    # PARIS-VINCENNES NOCTURNE - PRIX ALGORAH
     # -------------------------------------------------
 
-    track_pattern = (
-        r'\n([A-ZÀ-Ü0-9\'\-\s]+?)'
-        r'\s*-\s*'
-        r'(PRIX\s+[A-ZÀ-Ü0-9\'\-\s]+)'
-        r'\n'
-    )
+    track_patterns = [
+        (
+            r"\n([A-ZÀ-Ü0-9'\-\s]+?)"
+            r"\s*-\s*"
+            r"(PRIX\s+[A-ZÀ-Ü0-9'\-\s]+)"
+            r"\n"
+        ),
+        (
+            r"^([A-ZÀ-Ü0-9'\-\s]+?)"
+            r"\s*-\s*"
+            r"(PRIX\s+[A-ZÀ-Ü0-9'\-\s]+)"
+            r"$"
+        ),
+    ]
 
-    match = re.search(
-        track_pattern,
-        text
-    )
+    for track_pattern in track_patterns:
 
-    if match:
+        match = re.search(
+            track_pattern,
+            text,
+            re.MULTILINE
+        )
+
+        if not match:
+            continue
 
         track = match.group(1).strip()
         race_name = match.group(2).strip()
 
-        # Avoid capturing page headings
         if len(track) > 2:
-
             race["track"] = track
 
         race["race_name"] = race_name
 
+        break
+
     # -------------------------------------------------
     # RUNNERS COUNT
-    # Example:
-    # 14 CONCURRENTS
     # -------------------------------------------------
 
     match = re.search(
-        r'(\d+)\s+CONCURRENTS?',
+        r"(\d+)\s+CONCURRENTS?",
         text,
         re.IGNORECASE
     )
 
     if match:
-
         race["runners_count"] = int(
             match.group(1)
         )
 
     # -------------------------------------------------
     # RACE NUMBER
-    # Example:
-    # 4ème COURSE
     # -------------------------------------------------
 
-    match = re.search(
-        r'(\d+)(?:ère|ere|ème|eme)\s+COURSE',
-        text,
-        re.IGNORECASE
-    )
+    race_number_patterns = [
+        r"(\d+)(?:ère|ere|ème|eme)\s+COURSE",
+        r"(\d+)(?:ER|E|EME|ÈME)\s+COURSE",
+    ]
 
-    if match:
+    for pattern in race_number_patterns:
 
-        race["race_number"] = int(
-            match.group(1)
+        match = re.search(
+            pattern,
+            text,
+            re.IGNORECASE
         )
+
+        if match:
+            race["race_number"] = int(
+                match.group(1)
+            )
+            break
 
     # -------------------------------------------------
     # RACE TYPE
     # -------------------------------------------------
 
     race_types = [
+        "STEEPLE-CHASE",
         "ATTELE",
         "MONTÉ",
         "MONTE",
         "PLAT",
         "OBSTACLE",
-        "STEEPLE-CHASE",
         "HAIES",
     ]
 
     for race_type in race_types:
 
         if re.search(
-            rf'\b{re.escape(race_type)}\b',
+            rf"\b{re.escape(race_type)}\b",
             text,
             re.IGNORECASE
         ):
-
             race["race_type"] = race_type
-
             break
 
     # -------------------------------------------------
     # PRIZE
-    # Example:
-    # 59 000 EUROS
     # -------------------------------------------------
 
     match = re.search(
-        r'(\d[\d\s]*)\s+EUROS',
+        r"(\d[\d\s]*)\s+EUROS",
         text,
         re.IGNORECASE
     )
@@ -216,29 +230,22 @@ def extract_race_info(text):
     if match:
 
         value = re.sub(
-            r'\s+',
-            '',
+            r"\s+",
+            "",
             match.group(1)
         )
 
         try:
-
-            race["prize_euros"] = int(
-                value
-            )
-
+            race["prize_euros"] = int(value)
         except ValueError:
-
             pass
 
     # -------------------------------------------------
     # DISTANCE
-    # Example:
-    # 2 850 METRES
     # -------------------------------------------------
 
     match = re.search(
-        r'(\d[\d\s]*)\s+METRES?',
+        r"(\d[\d\s]*)\s+METRES?",
         text,
         re.IGNORECASE
     )
@@ -246,52 +253,121 @@ def extract_race_info(text):
     if match:
 
         value = re.sub(
-            r'\s+',
-            '',
+            r"\s+",
+            "",
             match.group(1)
         )
 
         try:
-
-            race["distance"] = int(
-                value
-            )
-
+            race["distance"] = int(value)
         except ValueError:
-
             pass
 
     return race
 
 
-def extract_horses(text):
+def clean_horse_name(name):
     """
-    Extract horse numbers, names and descriptions.
-
-    Horse descriptions stop at:
-    - the next horse number
-    - RESULTATS DES COURSES
-    - PAGE 2
-    - end of first-page race analysis
+    Normalize a horse name.
     """
 
-    horses = []
+    name = name.strip()
 
-    # Find the beginning of horse analysis.
+    name = re.sub(
+        r"\s+",
+        " ",
+        name
+    )
+
+    return name
+
+
+def clean_description(description):
+    """
+    Normalize a horse description.
+    """
+
+    description = re.sub(
+        r"\s+",
+        " ",
+        description
+    ).strip()
+
+    return description
+
+
+def extract_horses(text, expected_runners=None):
+    """
+    Extract one horse record per horse number.
+
+    Duplicate horse numbers are explicitly deduplicated.
+
+    When a duplicate occurs, the version with the longer
+    description is retained.
+    """
+
+    stop_markers = [
+        "RESULTATS DES COURSES",
+        "RÉSULTATS DES COURSES",
+        "===== PAGE 2 =====",
+        "JOURNAL HIPPIQUE",
+        "CHEVAUX DRIVERS",
+        "LES MEILLEURS DE LA SEMAINE",
+        "PARIS TURF",
+        "TIERCE MAGAZINE",
+        "FAVORIS :",
+        "FAVORIS:",
+        "FORME :",
+        "FORME:",
+        "CLASSE :",
+        "CLASSE:",
+        "PROGRES :",
+        "PROGRÈS :",
+        "PROGRES:",
+        "PROGRÈS:",
+        "REGULARITE :",
+        "RÉGULARITÉ :",
+        "REGULARITE:",
+        "RÉGULARITÉ:",
+    ]
+
+    # Only process the portion of the document before
+    # the first strong stop marker.
+    working_text = text
+
+    marker_positions = []
+
+    upper_text = text.upper()
+
+    for marker in stop_markers:
+
+        position = upper_text.find(
+            marker.upper()
+        )
+
+        if position != -1:
+            marker_positions.append(position)
+
+    if marker_positions:
+        working_text = text[
+            :min(marker_positions)
+        ]
 
     horse_pattern = (
-        r'(?m)^'
-        r'\s*(\d{1,2})\s*-\s*'
-        r'([A-ZÀ-Ü][A-ZÀ-Ü0-9\'\.\-\s]+?)'
-        r'\s*:\s*'
+        r"(?m)^\s*"
+        r"(\d{1,2})\s*-\s*"
+        r"([A-ZÀ-Ü][A-ZÀ-Ü0-9'\.\- ]+?)"
+        r"\s*:\s*"
     )
 
     matches = list(
         re.finditer(
             horse_pattern,
-            text
+            working_text
         )
     )
+
+    horses_by_number = {}
 
     for index, match in enumerate(matches):
 
@@ -299,70 +375,78 @@ def extract_horses(text):
             match.group(1)
         )
 
-        horse_name = (
+        horse_name = clean_horse_name(
             match.group(2)
-            .strip()
         )
 
-        description_start = (
-            match.end()
-        )
+        description_start = match.end()
 
-        # Default end = next horse
         if index + 1 < len(matches):
-
             description_end = (
                 matches[index + 1].start()
             )
-
         else:
+            description_end = len(
+                working_text
+            )
 
-            description_end = len(text)
-
-        description = text[
+        description = working_text[
             description_start:
             description_end
         ]
 
-        # Hard stop markers.
-        stop_markers = [
-            "RESULTATS DES COURSES",
-            "===== PAGE 2 =====",
-            "JOURNAL HIPPIQUE",
-            "CHEVAUX DRIVERS",
-            "LES MEILLEURS DE LA SEMAINE",
-            "PARIS TURF",
-            "TIERCE MAGAZINE",
-        ]
-
-        for marker in stop_markers:
-
-            marker_position = (
-                description.upper()
-                .find(
-                    marker.upper()
-                )
-            )
-
-            if marker_position != -1:
-
-                description = description[
-                    :marker_position
-                ]
-
-        # Clean description
-        description = re.sub(
-            r'\s+',
-            ' ',
+        description = clean_description(
             description
-        ).strip()
+        )
 
-        horses.append(
-            {
-                "number": number,
-                "horse": horse_name,
-                "description": description,
-            }
+        candidate = {
+            "number": number,
+            "horse": horse_name,
+            "description": description,
+        }
+
+        # Deduplicate by horse number.
+        existing = horses_by_number.get(
+            number
+        )
+
+        if existing is None:
+            horses_by_number[number] = candidate
+            continue
+
+        # Prefer the more informative entry.
+        existing_score = (
+            len(existing["horse"])
+            + len(existing["description"])
+        )
+
+        candidate_score = (
+            len(candidate["horse"])
+            + len(candidate["description"])
+        )
+
+        if candidate_score > existing_score:
+            horses_by_number[number] = candidate
+
+    horses = list(
+        horses_by_number.values()
+    )
+
+    horses.sort(
+        key=lambda item: item["number"]
+    )
+
+    # If the program tells us the expected
+    # number of runners, report a warning rather
+    # than manufacturing missing horses.
+    if (
+        expected_runners is not None
+        and len(horses) != expected_runners
+    ):
+        print(
+            "WARNING: horse count mismatch: "
+            f"expected {expected_runners}, "
+            f"extracted {len(horses)}"
         )
 
     return horses
@@ -371,16 +455,12 @@ def extract_horses(text):
 def extract_number_list(text, label):
     """
     Extract a ranking list from one line only.
-
-    Example:
-
-    FAVORIS : 14 – 11 – 5 – 3 – 8 – 13 – 10
     """
 
     pattern = (
-        rf'{re.escape(label)}'
-        r'\s*:\s*'
-        r'([^\n\r]+)'
+        rf"{re.escape(label)}"
+        r"\s*:\s*"
+        r"([^\n\r]+)"
     )
 
     match = re.search(
@@ -390,13 +470,12 @@ def extract_number_list(text, label):
     )
 
     if not match:
-
         return []
 
     line = match.group(1)
 
     numbers = re.findall(
-        r'\b\d{1,2}\b',
+        r"\b\d{1,2}\b",
         line
     )
 
@@ -408,7 +487,7 @@ def extract_number_list(text, label):
 
 def extract_rankings(text):
     """
-    Extract favorites and aptitude rankings.
+    Extract rankings.
     """
 
     return {
@@ -442,18 +521,13 @@ def extract_rankings(text):
 def extract_published_arrival(text):
     """
     Extract previous published arrival.
-
-    Example:
-
-    ARRIVEE DU "4+1" DU MERCREDI 09 SEPTEMBRE 2026 :
-    14 - 3 - 5 - 6 - 12
     """
 
     pattern = (
         r'ARRIVEE\s+DU.*?'
-        r':\s*'
-        r'([0-9\s\-–]+)'
-        r'(?:NPO|NP|$)'
+        r":\s*"
+        r"([0-9\s\-–]+)"
+        r"(?:NPO|NP|$)"
     )
 
     match = re.search(
@@ -463,11 +537,10 @@ def extract_published_arrival(text):
     )
 
     if not match:
-
         return []
 
     numbers = re.findall(
-        r'\d+',
+        r"\d+",
         match.group(1)
     )
 
@@ -490,6 +563,17 @@ def parse_program_file(file_path):
         raw_text
     )
 
+    race_info = extract_race_info(
+        text
+    )
+
+    horses = extract_horses(
+        text,
+        expected_runners=race_info.get(
+            "runners_count"
+        )
+    )
+
     return {
         "document_type": "program",
 
@@ -505,13 +589,9 @@ def parse_program_file(file_path):
             text
         ),
 
-        "race": extract_race_info(
-            text
-        ),
+        "race": race_info,
 
-        "horses": extract_horses(
-            text
-        ),
+        "horses": horses,
 
         "rankings": extract_rankings(
             text
@@ -526,9 +606,6 @@ def parse_program_file(file_path):
 
 
 def process_all_programs():
-    """
-    Parse all processed program files.
-    """
 
     OUTPUT_FOLDER.mkdir(
         parents=True,
@@ -562,11 +639,8 @@ def process_all_programs():
             )
 
             output_path = (
-                OUTPUT_FOLDER /
-                (
-                    file_path.stem
-                    + ".json"
-                )
+                OUTPUT_FOLDER
+                / f"{file_path.stem}.json"
             )
 
             output_path.write_text(
@@ -581,6 +655,11 @@ def process_all_programs():
             print(
                 f"Parsed successfully: "
                 f"{file_path.name}"
+            )
+
+            print(
+                f"Horses extracted: "
+                f"{len(data['horses'])}"
             )
 
             success_count += 1
@@ -614,5 +693,4 @@ def process_all_programs():
 
 
 if __name__ == "__main__":
-
     process_all_programs()
