@@ -1,7 +1,7 @@
 import os
 import re
+import glob
 import hashlib
-from datetime import datetime
 from urllib.parse import urljoin, urlparse, unquote
 
 import requests
@@ -11,9 +11,7 @@ from bs4 import BeautifulSoup
 PROGRAM_URL = "https://www.lonab.bf/fr/programme-pmub"
 RESULTS_URL = "https://www.lonab.bf/fr/resultats-gains-ecd"
 
-# Number of archive pages to crawl.
-# LONAB currently exposes roughly 10 documents per page.
-# 16 pages gives us a substantial historical window.
+# Number of archive pages to inspect.
 HISTORICAL_PAGES = 16
 
 HEADERS = {
@@ -30,26 +28,12 @@ def ensure_directories():
 
 
 def normalize_url(url):
-    """
-    Normalize URLs so duplicate links are treated as the same URL.
-    """
-
     url = url.strip()
-
-    # Remove fragments.
     url = url.split("#")[0]
-
-    # Decode one level of URL encoding.
-    decoded = unquote(url)
-
-    return decoded
+    return unquote(url)
 
 
 def url_hash(url):
-    """
-    Stable hash based only on the source URL.
-    """
-
     normalized = normalize_url(url)
 
     return hashlib.md5(
@@ -58,10 +42,6 @@ def url_hash(url):
 
 
 def safe_original_filename(url):
-    """
-    Get a safe filename from the source URL.
-    """
-
     parsed = urlparse(url)
 
     original_name = os.path.basename(
@@ -71,9 +51,7 @@ def safe_original_filename(url):
     if not original_name:
         original_name = "document.pdf"
 
-    original_name = unquote(
-        original_name
-    )
+    original_name = unquote(original_name)
 
     if not original_name.lower().endswith(".pdf"):
         original_name += ".pdf"
@@ -85,25 +63,13 @@ def safe_original_filename(url):
     )
 
     if len(original_name) > 100:
-        original_name = (
-            original_name[:96] + ".pdf"
-        )
+        original_name = original_name[:96] + ".pdf"
 
     return original_name
 
 
 def stable_filename(url, prefix):
-    """
-    Create a stable filename.
-
-    Unlike the previous scraper, this filename does NOT contain
-    today's date. The same source URL therefore maps to the same
-    local filename every day.
-    """
-
-    original_name = safe_original_filename(
-        url
-    )
+    original_name = safe_original_filename(url)
 
     source_hash = url_hash(url)
 
@@ -121,16 +87,8 @@ def stable_filename(url, prefix):
 def existing_file_for_url(
     url,
     folder,
-    prefix,
+    prefix
 ):
-    """
-    Find a previously downloaded copy.
-
-    Supports both:
-    1. New stable filenames.
-    2. Old filenames produced by the previous scraper.
-    """
-
     source_hash = url_hash(url)
 
     stable_name = stable_filename(
@@ -146,27 +104,20 @@ def existing_file_for_url(
     if os.path.exists(stable_path):
         return stable_path
 
-    # Backward compatibility with files like:
-    #
-    # program_20260911_032388a005.pdf
-    # result_20260911_043a0bb415.pdf
-    #
     old_pattern = os.path.join(
         folder,
         f"{prefix}_*_{source_hash}.pdf"
     )
 
-    matches = sorted(
-        [
-            path
-            for path in (
-                __import__("glob").glob(
-                    old_pattern
-                )
-            ]
-            if os.path.isfile(path)
-        ]
-    )
+    matches = glob.glob(old_pattern)
+
+    matches = [
+        path
+        for path in matches
+        if os.path.isfile(path)
+    ]
+
+    matches.sort()
 
     if matches:
         return matches[0]
@@ -175,18 +126,9 @@ def existing_file_for_url(
 
 
 def build_archive_page_urls(base_url):
-    """
-    Build the archive pages.
-
-    Page 0 is the current page.
-    Older documents are exposed through ?page=1, ?page=2, etc.
-    """
-
     urls = []
 
-    for page in range(
-        HISTORICAL_PAGES
-    ):
+    for page in range(HISTORICAL_PAGES):
         if page == 0:
             url = base_url
         else:
@@ -207,10 +149,6 @@ def build_archive_page_urls(base_url):
 
 
 def get_pdf_links(page_url):
-    """
-    Get real PDF links from one LONAB archive page.
-    """
-
     print(
         f"Checking archive page: "
         f"{page_url}"
@@ -219,21 +157,21 @@ def get_pdf_links(page_url):
     response = requests.get(
         page_url,
         headers=HEADERS,
-        timeout=30,
+        timeout=30
     )
 
     response.raise_for_status()
 
     soup = BeautifulSoup(
         response.text,
-        "html.parser",
+        "html.parser"
     )
 
     pdf_links = []
 
     for link in soup.find_all(
         "a",
-        href=True,
+        href=True
     ):
         href = link.get(
             "href",
@@ -248,7 +186,7 @@ def get_pdf_links(page_url):
 
         absolute_url = urljoin(
             page_url,
-            href,
+            href
         )
 
         absolute_url = normalize_url(
@@ -259,9 +197,7 @@ def get_pdf_links(page_url):
             absolute_url
         )
 
-        if not parsed.path.lower().endswith(
-            ".pdf"
-        ):
+        if not parsed.path.lower().endswith(".pdf"):
             continue
 
         if absolute_url not in pdf_links:
@@ -272,14 +208,7 @@ def get_pdf_links(page_url):
     return pdf_links
 
 
-def collect_historical_pdf_links(
-    base_url
-):
-    """
-    Crawl multiple LONAB archive pages and collect
-    unique PDF URLs.
-    """
-
+def collect_historical_pdf_links(base_url):
     all_links = []
     seen = set()
 
@@ -288,7 +217,6 @@ def collect_historical_pdf_links(
     for page_url in build_archive_page_urls(
         base_url
     ):
-
         try:
             links = get_pdf_links(
                 page_url
@@ -311,13 +239,8 @@ def collect_historical_pdf_links(
                 if normalized in seen:
                     continue
 
-                seen.add(
-                    normalized
-                )
-
-                all_links.append(
-                    normalized
-                )
+                seen.add(normalized)
+                all_links.append(normalized)
 
                 new_links += 1
 
@@ -326,8 +249,6 @@ def collect_historical_pdf_links(
                 f"{new_links}"
             )
 
-            # If an archive page has no PDFs,
-            # stop walking older pages.
             if not links:
                 print(
                     "No PDFs found on this page. "
@@ -361,18 +282,14 @@ def collect_historical_pdf_links(
 def download_pdf(
     url,
     folder,
-    prefix,
+    prefix
 ):
-    """
-    Download one PDF using a stable filename.
-    """
-
     ensure_directories()
 
     existing = existing_file_for_url(
         url,
         folder,
-        prefix,
+        prefix
     )
 
     if existing:
@@ -385,12 +302,12 @@ def download_pdf(
 
     filename = stable_filename(
         url,
-        prefix,
+        prefix
     )
 
     filepath = os.path.join(
         folder,
-        filename,
+        filename
     )
 
     print(
@@ -401,7 +318,7 @@ def download_pdf(
     response = requests.get(
         url,
         headers=HEADERS,
-        timeout=60,
+        timeout=60
     )
 
     response.raise_for_status()
@@ -410,7 +327,7 @@ def download_pdf(
         response.headers
         .get(
             "Content-Type",
-            "",
+            ""
         )
         .lower()
     )
@@ -419,9 +336,7 @@ def download_pdf(
 
     if (
         "pdf" not in content_type
-        and not content.startswith(
-            b"%PDF"
-        )
+        and not content.startswith(b"%PDF")
     ):
         print(
             f"Skipped non-PDF response: "
@@ -432,7 +347,7 @@ def download_pdf(
 
     with open(
         filepath,
-        "wb",
+        "wb"
     ) as file:
         file.write(content)
 
@@ -446,12 +361,8 @@ def download_pdf(
 def scrape_archive(
     base_url,
     folder,
-    prefix,
+    prefix
 ):
-    """
-    Crawl and download an entire LONAB archive.
-    """
-
     ensure_directories()
 
     links = collect_historical_pdf_links(
@@ -462,9 +373,8 @@ def scrape_archive(
 
     for index, url in enumerate(
         links,
-        start=1,
+        start=1
     ):
-
         print(
             "\n"
             f"[{index}/{len(links)}]"
@@ -474,7 +384,7 @@ def scrape_archive(
             filepath = download_pdf(
                 url,
                 folder,
-                prefix,
+                prefix
             )
 
             if filepath:
@@ -483,7 +393,6 @@ def scrape_archive(
                 )
 
         except requests.HTTPError as error:
-
             print(
                 f"{prefix.capitalize()} "
                 f"download error: "
@@ -491,7 +400,6 @@ def scrape_archive(
             )
 
         except Exception as error:
-
             print(
                 f"{prefix.capitalize()} "
                 f"unexpected download error: "
@@ -502,7 +410,6 @@ def scrape_archive(
 
 
 def scrape_programs():
-
     print(
         "\n"
         "SCRAPING PROGRAM ARCHIVE"
@@ -511,7 +418,7 @@ def scrape_programs():
     programs = scrape_archive(
         PROGRAM_URL,
         "data/raw/programs",
-        "program",
+        "program"
     )
 
     print(
@@ -528,7 +435,6 @@ def scrape_programs():
 
 
 def scrape_results():
-
     print(
         "\n"
         "SCRAPING RESULT ARCHIVE"
@@ -537,7 +443,7 @@ def scrape_results():
     results = scrape_archive(
         RESULTS_URL,
         "data/raw/results",
-        "result",
+        "result"
     )
 
     print(
@@ -554,7 +460,6 @@ def scrape_results():
 
 
 def run_scraper():
-
     print("=" * 60)
     print(
         "LONAB HISTORICAL RACE MACHINE SCRAPER"
@@ -600,7 +505,7 @@ def run_scraper():
 
     return {
         "programs": programs,
-        "results": results,
+        "results": results
     }
 
 
