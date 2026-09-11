@@ -2,13 +2,14 @@ from pathlib import Path
 from datetime import datetime
 import json
 import re
+from typing import List, Dict, Any, Optional
 
 
 INPUT_FOLDER = Path("data/processed/results")
 OUTPUT_FOLDER = Path("data/structured/results")
 
 
-def extract_date(text):
+def extract_date(text: str) -> Optional[str]:
     """
     Extract the race date.
 
@@ -26,7 +27,7 @@ def extract_date(text):
     match = re.search(
         pattern,
         text,
-        re.IGNORECASE
+        re.IGNORECASE,
     )
 
     if not match:
@@ -39,7 +40,7 @@ def extract_date(text):
     return f"{year}-{month}-{day}"
 
 
-def extract_meeting(text):
+def extract_meeting(text: str) -> Optional[int]:
     """
     Extract meeting number.
 
@@ -50,7 +51,7 @@ def extract_meeting(text):
     match = re.search(
         r"REUNION\s*-?\s*(\d+)",
         text,
-        re.IGNORECASE
+        re.IGNORECASE,
     )
 
     if not match:
@@ -59,7 +60,7 @@ def extract_meeting(text):
     return int(match.group(1))
 
 
-def extract_track(text):
+def extract_track(text: str) -> Optional[str]:
     """
     Extract track name.
 
@@ -69,88 +70,258 @@ def extract_track(text):
 
     match = re.search(
         r"\(\s*([A-ZÀ-Ÿ'\-\s]+?)\s*\)",
-        text
+        text,
     )
 
     if not match:
         return None
 
-    track = match.group(1).strip()
+    track = " ".join(
+        match.group(1).strip().split()
+    )
 
     return track
 
 
-def extract_race_arrivals(text):
+def clean_number_sequence(
+    values: List[str],
+) -> List[int]:
     """
-    Extract race arrivals.
-
-    The result PDF structure usually contains:
-
-    1ère 3 - 9 - 8
-    2ième 6 - 10 - 11
-    3ième 3 - 8 - 5
-
-    We only extract the first three arrival numbers.
-
-    Prize amounts and betting data are ignored.
+    Convert extracted numeric tokens to integers
+    and remove duplicates while preserving order.
     """
 
-    races = []
+    output: List[int] = []
+    seen = set()
 
-    pattern = (
-        r"(?P<label>"
-        r"\d+(?:ère|ieme|ième|e)"
+    for value in values:
+        try:
+            number = int(value)
+        except (TypeError, ValueError):
+            continue
+
+        if number <= 0:
+            continue
+
+        if number in seen:
+            continue
+
+        seen.add(number)
+        output.append(number)
+
+    return output
+
+
+def extract_arrival_from_line(
+    line: str,
+) -> Optional[Dict[str, Any]]:
+    """
+    Extract one race arrival from a single line.
+
+    Supported examples:
+
+        1ère 3 - 9 - 8
+        2ième 6 - 10 - 11
+        3ème 5 - 2 - 14 - 7 - 9
+
+    The parser captures every horse number that appears
+    in the arrival portion of the line.
+
+    It does NOT invent missing positions.
+    """
+
+    pattern = re.compile(
+        r"^\s*"
+        r"(?P<race>\d+)"
+        r"\s*"
+        r"(?:"
+        r"ère|"
+        r"er|"
+        r"ieme|"
+        r"ième|"
+        r"ème|"
+        r"eme|"
+        r"e"
+        r")"
+        r"\s*"
+        r"(?P<arrival>.+?)"
+        r"\s*$",
+        re.IGNORECASE,
+    )
+
+    match = pattern.match(line)
+
+    if not match:
+        return None
+
+    race_number = int(
+        match.group("race")
+    )
+
+    arrival_text = match.group("arrival")
+
+    # Keep only a sequence of horse numbers separated
+    # by common separators. This avoids accidentally
+    # consuming prize amounts or unrelated numeric data.
+    number_tokens = re.findall(
+        r"\d+",
+        arrival_text,
+    )
+
+    arrival = clean_number_sequence(
+        number_tokens
+    )
+
+    if not arrival:
+        return None
+
+    return {
+        "race_number": race_number,
+        "arrival": arrival,
+    }
+
+
+def extract_arrival_from_text_fallback(
+    text: str,
+) -> List[Dict[str, Any]]:
+    """
+    Fallback parser for documents where arrival information
+    is not cleanly separated line-by-line.
+
+    Example:
+
+        1ère 3 - 9 - 8
+        2ième 6 - 10 - 11
+
+    This uses the same race-label structure but searches
+    globally through the text.
+    """
+
+    pattern = re.compile(
+        r"(?P<race>\d+)"
+        r"\s*"
+        r"(?:"
+        r"ère|"
+        r"er|"
+        r"ieme|"
+        r"ième|"
+        r"ème|"
+        r"eme|"
+        r"e"
         r")"
         r"\s+"
-        r"(?P<a>\d+)"
-        r"\s*-\s*"
-        r"(?P<b>\d+)"
-        r"\s*-\s*"
-        r"(?P<c>\d+)"
+        r"(?P<arrival>"
+        r"\d+(?:\s*[-;/]\s*\d+)+"
+        r")",
+        re.IGNORECASE,
     )
 
-    matches = re.finditer(
-        pattern,
-        text,
-        re.IGNORECASE
-    )
+    races: List[Dict[str, Any]] = []
 
-    race_number = 1
-
-    for match in matches:
-
-        first = int(
-            match.group("a")
+    for match in pattern.finditer(text):
+        race_number = int(
+            match.group("race")
         )
 
-        second = int(
-            match.group("b")
+        arrival_text = match.group("arrival")
+
+        number_tokens = re.findall(
+            r"\d+",
+            arrival_text,
         )
 
-        third = int(
-            match.group("c")
+        arrival = clean_number_sequence(
+            number_tokens
         )
+
+        if not arrival:
+            continue
 
         races.append(
             {
                 "race_number": race_number,
-                "arrival": [
-                    first,
-                    second,
-                    third
-                ],
-                "winner": first,
-                "second": second,
-                "third": third
+                "arrival": arrival,
             }
         )
-
-        race_number += 1
 
     return races
 
 
-def parse_result_file(file_path):
+def extract_race_arrivals(
+    text: str,
+) -> List[Dict[str, Any]]:
+    """
+    Extract race arrivals.
+
+    First attempts line-by-line extraction.
+
+    If that produces nothing, falls back to a global
+    text search.
+
+    The parser preserves every arrival position that is
+    actually available in the processed text.
+    """
+
+    races_by_number: Dict[int, Dict[str, Any]] = {}
+
+    lines = text.splitlines()
+
+    for line in lines:
+        result = extract_arrival_from_line(
+            line
+        )
+
+        if result is None:
+            continue
+
+        race_number = result["race_number"]
+
+        races_by_number[race_number] = result
+
+    if not races_by_number:
+        fallback_races = (
+            extract_arrival_from_text_fallback(
+                text
+            )
+        )
+
+        for race in fallback_races:
+            race_number = race["race_number"]
+
+            if race_number not in races_by_number:
+                races_by_number[race_number] = race
+
+    races: List[Dict[str, Any]] = []
+
+    for race_number in sorted(
+        races_by_number.keys()
+    ):
+        race = races_by_number[race_number]
+
+        arrival = race["arrival"]
+
+        output = {
+            "race_number": race_number,
+            "arrival": arrival,
+            "winner": arrival[0] if len(arrival) >= 1 else None,
+            "second": arrival[1] if len(arrival) >= 2 else None,
+            "third": arrival[2] if len(arrival) >= 3 else None,
+        }
+
+        if len(arrival) >= 4:
+            output["fourth"] = arrival[3]
+
+        if len(arrival) >= 5:
+            output["fifth"] = arrival[4]
+
+        races.append(output)
+
+    return races
+
+
+def parse_result_file(
+    file_path: Path,
+) -> Dict[str, Any]:
     """
     Parse one processed result text file.
     """
@@ -189,26 +360,28 @@ def parse_result_file(file_path):
             track,
 
         "races":
-            races
+            races,
     }
 
 
-def make_output_path(file_path):
+def make_output_path(
+    file_path: Path,
+) -> Path:
     """
     Create output JSON filename.
     """
 
     return (
-        OUTPUT_FOLDER /
-        f"{file_path.stem}.json"
+        OUTPUT_FOLDER
+        / f"{file_path.stem}.json"
     )
 
 
-def process_all_results():
+def process_all_results() -> None:
 
     OUTPUT_FOLDER.mkdir(
         parents=True,
-        exist_ok=True
+        exist_ok=True,
     )
 
     files = sorted(
@@ -226,6 +399,9 @@ def process_all_results():
 
     success_count = 0
     failed_count = 0
+
+    total_races = 0
+    total_arrival_positions = 0
 
     for file_path in files:
 
@@ -247,9 +423,23 @@ def process_all_results():
                 json.dumps(
                     parsed_data,
                     indent=4,
-                    ensure_ascii=False
+                    ensure_ascii=False,
                 ),
-                encoding="utf-8"
+                encoding="utf-8",
+            )
+
+            race_count = len(
+                parsed_data["races"]
+            )
+
+            arrival_positions = sum(
+                len(race["arrival"])
+                for race in parsed_data["races"]
+            )
+
+            total_races += race_count
+            total_arrival_positions += (
+                arrival_positions
             )
 
             print(
@@ -259,7 +449,12 @@ def process_all_results():
 
             print(
                 f"Races found: "
-                f"{len(parsed_data['races'])}"
+                f"{race_count}"
+            )
+
+            print(
+                f"Arrival positions captured: "
+                f"{arrival_positions}"
             )
 
             success_count += 1
@@ -289,6 +484,16 @@ def process_all_results():
     print(
         f"Failed: "
         f"{failed_count}"
+    )
+
+    print(
+        f"Total races extracted: "
+        f"{total_races}"
+    )
+
+    print(
+        f"Total arrival positions captured: "
+        f"{total_arrival_positions}"
     )
 
 
