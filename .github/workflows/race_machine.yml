@@ -27,6 +27,27 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Check dataset files
+        run: |
+          echo "Checking dataset files..."
+
+          if [ -f src/dataset/build_dataset.py ]; then
+            echo "Found: src/dataset/build_dataset.py"
+          else
+            echo "ERROR: src/dataset/build_dataset.py not found"
+            exit 1
+          fi
+
+          if [ -f src/dataset/dataset_validator.py ]; then
+            echo "Found: src/dataset/dataset_validator.py"
+          else
+            echo "ERROR: src/dataset/dataset_validator.py not found"
+            echo ""
+            echo "Files currently inside src/dataset:"
+            find src/dataset -maxdepth 2 -type f -print
+            exit 1
+          fi
+
       - name: Run Horse Racing Machine
         run: |
           python -m src.main
@@ -37,7 +58,7 @@ jobs:
 
       - name: Validate Training Dataset
         run: |
-          python -m src.dataset.dataset_validator
+          python src/dataset/dataset_validator.py
 
       - name: Show Dataset Summary
         run: |
