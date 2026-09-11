@@ -3,7 +3,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_20260909_032388a005_df198c54a3.txt",
-      "parsed_at": "2026-09-11T23:18:33.553819Z",
+      "parsed_at": "2026-09-11T23:42:01.810624Z",
       "date": "2026-09-11",
       "race": {
         "race_name": "PRIX ALGORAH",
@@ -170,8 +170,181 @@
   {
     "program": {
       "document_type": "program",
+      "source_file": "program_20260909_41f6245d71_a59dfc47ab.txt",
+      "parsed_at": "2026-09-11T23:42:01.816804Z",
+      "date": "2026-09-04",
+      "race": {
+        "race_name": "PRIX BRUNA",
+        "track": "PARIS-VINCENNES NOCTURNE",
+        "race_number": 4,
+        "race_type": "ATTELE",
+        "runners_count": 15,
+        "distance": 2850,
+        "prize_euros": 46000
+      },
+      "horses": [
+        {
+          "number": 1,
+          "horse": "LOULIANA DE VANDEL",
+          "description": "En deux tentatives sur ce parcours, elle n'a pu faire mieux que huitième. Elle ne bénéficie pas d'un très bel engagement et va d'ailleurs rester ferrée pour l'occasion. Déclarée avec un émoji rouge, elle est à écarter. Une prochaine fois."
+        },
+        {
+          "number": 2,
+          "horse": "LODEN D'HERFRAIE",
+          "description": "Lauréat à Vincennes à la fin du meeting d'hiver, ce protégé de Jean-Michel Baudouin a depuis plaisamment renoué avec la victoire à Châtelaillon-La Rochelle. Eric Raffin lui renouvelle sa confiance et son entourage est confiant. Si tout se passe bien, il devrait prendre une part active à l'emballage final."
+        },
+        {
+          "number": 3,
+          "horse": "LUTIN JABA",
+          "description": "Durant l'été, ce fils d'Excellent est passé des boxes de Nicolas Bazire à ceux de Victoriane-Marie Goetz, mais n'a pu faire mieux que huitième pour sa première sortie sous ses nouvelles couleurs. Il n'est plus monté sur un podium depuis février 2025 et a été déclaré avec un émoji rouge. À écarter !"
+        },
+        {
+          "number": 4,
+          "horse": "LEDETROIT CHENOU",
+          "description": "Ce fils de Detroit Castelets a conclu l'année 2025 par trois victoires au trot monté. Il n'a cependant pu se mettre en évidence lors de ses deux premières sorties en 2026, se classant onzième et septième. Il évolue certainement sur la montante, mais aura bien plus son mot à dire dans l'autre spécialité. Sans nous !"
+        },
+        {
+          "number": 5,
+          "horse": "LULU JIVE",
+          "description": "Il a renoué avec la victoire au mois de mai à Vichy, à l'issue d'un bel effort final, et a depuis enchaîné avec plusieurs bonnes performances. Il fait preuve d'une louable régularité, mais a tout de même été dominé par LE CAPORAL (15) et LOOK MESLOIS (8) lors de sa dernière sortie. Même s'il semble barré pour le succès, il peut se placer, comme d'autres."
+        },
+        {
+          "number": 6,
+          "horse": "L'AS DES CARAIBES",
+          "description": "Ce protégé de Rodolphe Douyère réalise un très bel été avec notamment une victoire à Bagnoles-de-l'Orne. Il s'est depuis très bien comporté à Enghien, se classant cinquième tout près de LOOPING MIL (9), avant de fournir un bon effort final à La Capelle la semaine dernière. En forme, il devrait, sauf incident, lutter pour les places."
+        },
+        {
+          "number": 7,
+          "horse": "LUCKY LOVE",
+          "description": "Après une deuxième place au Mans, ce représentant de l'écurie Hazelaar n'a pu se mettre en évidence à Bernay et Cagnes-sur-Mer. Il avait été dominé par LOOK MESLOIS (8) au printemps et ne semble pas avoir la moindre marge de manœuvre à ce niveau. Jamais mieux que cinquième sur ce parcours, nous lui avons préféré d'autres candidatures."
+        },
+        {
+          "number": 8,
+          "horse": "LOOK MESLOIS",
+          "description": "En dernier lieu, à Lisieux, alors qu'il était très attendu, ce concurrent de la famille Belloche n'a pu faire mieux que sixième. Plus tôt dans l'année, il s'était plaisamment imposé au Mans, aux dépens de LUCKY LOVE (7). En dix tentatives sur la grande piste, il compte sept disqualifications. S'il reste toutefois appliqué jusqu'au bout, il garde son mot à dire pour les places."
+        },
+        {
+          "number": 9,
+          "horse": "LOOPING MIL",
+          "description": "Après plusieurs échecs, ce représentant de l'écurie Mil'stud a renoué avec la victoire à Biarritz au début de l'été. Il a depuis confirmé en prenant des accessits sur cette piste, en dominant notamment L'AS DES CARAIBES (6) le 1er août. Allégé dans sa ferrure par rapport à ses dernières tentatives, il ambitionnera une place sur le podium."
+        },
+        {
+          "number": 10,
+          "horse": "LOUIS QUATORZE",
+          "description": "Ce représentant de l'écurie des Charmes fait preuve d'une belle régularité en compétition. Il ne s'est certes plus imposé depuis 2024, mais il a réalisé des performances intéressantes à Enghien (3e et 4e) ces dernières semaines. Il lui faudra impérativement un bon parcours mais, si tel est le cas, il est en mesure de prendre une place."
+        },
+        {
+          "number": 11,
+          "horse": "LORD DE BRION",
+          "description": "Deuxième à Saint-Malo au début du mois dernier, ce rejeton de Up And Quick s'est depuis facilement imposé à Divonne-les-Bains. Il a été longuement préservé par son entourage et évolue ainsi en léger retard de gains. Déclaré avec un émoji vert, ce pensionnaire de Matthieu Abrivard devrait lutter pour les premières places."
+        },
+        {
+          "number": 12,
+          "horse": "LORDIUS",
+          "description": "Ce fils de Titan d'Occagnes donne toujours le meilleur de lui-même en compétition, mais il ne semble plus avoir une grande marge de manœuvre. Cette année, en quatre sorties corde à gauche, il n'a, par exemple, pu faire mieux que cinquième. Il y a mieux !"
+        },
+        {
+          "number": 13,
+          "horse": "LUTECE D'ELA",
+          "description": "Après s'être imposée très plaisamment à Vincennes au mois d'avril, cette représentante de l'écurie Daïdou a eu le droit à un petit break. Elle a depuis réalisé une rentrée intéressante à Cholet avant de décevoir à Enghien. À reprendre impérativement !"
+        },
+        {
+          "number": 14,
+          "horse": "LADY PRINCESS",
+          "description": "Après un début d'année compliquée, cette pensionnaire de Bernard Piton a fourni un superbe effort final à Enghien le 22 juillet, s'imposant avec autorité. Elle bénéficie d'un bon engagement aux gains, mais aura cependant les mâles sur sa route cette fois. À l'issue d'un bon parcours, elle devrait tout de même terminer très vite. Candidate aux accessits."
+        },
+        {
+          "number": 15,
+          "horse": "LE CAPORAL",
+          "description": "Ce fils d'Un Amour d'Haufor fait preuve d'une belle régularité en compétition. Lors de sa dernière sortie sur un tracé corde à gauche, il n'a été dominé que par le très bon Lord de Chenu. Il est idéalement engagé au plafond des gains et Adrien Garato le connaît par cœur. Bon finisseur en dernier lieu, il est capable de mettre tout le monde d'accord."
+        }
+      ],
+      "rankings": {
+        "favorites": [
+          15,
+          11,
+          9,
+          14,
+          2,
+          13,
+          6
+        ],
+        "form": [
+          15,
+          2,
+          14,
+          11,
+          13
+        ],
+        "class": [
+          9,
+          15,
+          5,
+          6,
+          2
+        ],
+        "progress": [
+          14,
+          6,
+          2,
+          8,
+          5
+        ],
+        "regularity": [
+          10,
+          5,
+          8,
+          6,
+          9
+        ]
+      },
+      "published_arrival": [
+        9,
+        13,
+        10,
+        6,
+        11
+      ]
+    },
+    "result": {
+      "date": "2026-09-04",
+      "track": "PARIS VINCENNES",
+      "meeting": 1,
+      "race_number": 4,
+      "arrival": [
+        8,
+        11,
+        12,
+        800,
+        226,
+        17,
+        850,
+        794
+      ],
+      "winner": 8,
+      "second": 11,
+      "third": 12
+    },
+    "match": {
+      "status": "MATCHED",
+      "confidence": 100.0,
+      "identity": {
+        "date": "2026-09-04",
+        "track": "PARIS VINCENNES",
+        "race_number": 4
+      },
+      "verification": {
+        "date_match": true,
+        "track_match": true,
+        "race_number_match": true
+      }
+    }
+  },
+  {
+    "program": {
+      "document_type": "program",
       "source_file": "program_20260909_49316c96b0_81ec76e5a1.txt",
-      "parsed_at": "2026-09-11T23:18:33.559870Z",
+      "parsed_at": "2026-09-11T23:42:01.820226Z",
       "date": "2026-09-07",
       "race": {
         "race_name": "PRIX V AND B - ATTELE",
@@ -346,8 +519,176 @@
   {
     "program": {
       "document_type": "program",
+      "source_file": "program_20260909_a8444592f5_59965327f9.txt",
+      "parsed_at": "2026-09-11T23:42:01.829367Z",
+      "date": "2026-09-02",
+      "race": {
+        "race_name": "PRIX DU CREDIT AGRICOLE NORD-EST - ATTELE",
+        "track": "LA CAPELLE",
+        "race_number": 1,
+        "race_type": "ATTELE",
+        "runners_count": 14,
+        "distance": 2700,
+        "prize_euros": 35000
+      },
+      "horses": [
+        {
+          "number": 1,
+          "horse": "IOUPY TOLLEVILLE",
+          "description": "Auteur d'un bon effort final (4e) à Pornichet le 8 juillet, cet élève d'Erno Szirmay n'a toutefois pu confirmer lors de ses deux sorties suivantes à Enghien (11e et 8e), même s'il n'a pas démérité lors de la plus récente. Franck Nivard se remet toutefois à son sulky. Sans avoir une grande marge, il peut se placer, comme d'autres."
+        },
+        {
+          "number": 2,
+          "horse": "ILIO MANNETOT",
+          "description": "Seulement huitième dans le Quinté+ du 18 juillet, ce pensionnaire d'Erno Szirmay a depuis été présenté au trot monté, sans succès. Pour son retour à l'attelé, il affronte une opposition de taille et, malgré sa bonne position derrière la voiture, nous ne l'avons pas retenu."
+        },
+        {
+          "number": 3,
+          "horse": "HERMES D'ECROVILLE",
+          "description": "Mis à part une troisième place à Jallais au mois de juin, cet élève de Bruno Marie enchaîne les échecs depuis plusieurs mois. Contrairement à ses dernières sorties, il va, de plus, croiser la route des Européens et n'aura ainsi pas la partie facile. Sans nous."
+        },
+        {
+          "number": 4,
+          "horse": "HORIZON D'EYMY",
+          "description": "Lors de son avant-dernière sortie, dans le Quinté+ du 18 juillet, ce fils de Quaro a fourni un effort honorable dans la ligne droite. Il n'a pu répéter par la suite, toujours à Enghien, mais bénéficie cette fois d'un bon numéro derrière la voiture. Même s'il n'a que peu de marge de manœuvre, il semble capable de créer une petite surprise à l'issue d'un bon parcours."
+        },
+        {
+          "number": 5,
+          "horse": "IDYLLE DU PERSIL",
+          "description": "Surprenante lauréate à Amiens le 29 juillet, cette pensionnaire de Gilles Curens n'a toutefois pu confirmer à Enghien lors de sa sortie suivante, étant disqualifiée. Elle a certes hérité d'un bon numéro derrière la voiture, mais elle n'a pas de marge à ce niveau et n'est jamais à l'abri de commettre une faute. Il y a mieux !"
+        },
+        {
+          "number": 6,
+          "horse": "JALIMEDE",
+          "description": "Auteur d'un bon printemps avec deux victoires à Laon et ici même, ce pensionnaire de Christophe Mirandel s'est depuis classé du Quinté+ du 29 juillet, qui était bien plus relevé. Il retrouve la piste de son dernier succès et sera, une nouvelle fois, associé à Mathieu Verve. Sauf incident, il devrait logiquement lutter pour les premières places."
+        },
+        {
+          "number": 7,
+          "horse": "IDREAMIS",
+          "description": "Lors de sa dernière tentative sur ce parcours, le 20 juillet, cette fille d'Akim du Cap Vert n'était pas battue au moment de sa faute au début de la ligne droite. Elle s'est depuis classée deuxième à Enghien sur un parcours de vitesse, puis s'est imposée de toute une classe à Cagnes-sur-Mer, sur plus long. En grande forme, elle est à suivre de près."
+        },
+        {
+          "number": 8,
+          "horse": "JUST DU CHATELET",
+          "description": "Vainqueur de deux courses d'affilée au printemps sur la cendrée parisienne, ce concurrent d'Arnaud Randon sera toutefois ferré pour l'occasion et il n'a pas la même réussite dans cette configuration. Drivé par son entraîneur et déclaré avec un emoji rouge, il est à écarter."
+        },
+        {
+          "number": 9,
+          "horse": "RUGER",
+          "description": "Cet élève d'Erik Lindegren réalise un superbe été avec déjà trois victoires acquises facilement, dont la dernière face à RED HOT ROADSTER (14). Il va certes devoir se sortir du numéro 9 derrière la voiture, mais Florian Desmigneux s'entend très bien avec lui. En retard de gains, il a un premier rôle à jouer."
+        },
+        {
+          "number": 10,
+          "horse": "COMES WITH AGE",
+          "description": "Ce concurrent de Markus Svedberg fait preuve d'une belle régularité en compétition et s'est montré presque irréprochable depuis son arrivée en France. En dernier lieu, il s'est bien comporté à Enghien, même s'il a terminé en retrait de RUGER (9). Sauf incident, il devrait, une nouvelle fois, donner le meilleur de lui-même et fait partie des candidats aux accessits."
+        },
+        {
+          "number": 11,
+          "horse": "JUNON DE LOU",
+          "description": "Décevante à Amiens alors qu'elle était très attendue, cette jument de Christian Germain s'est depuis montrée fautive à mi-ligne droite à Divonne-les-Bains alors qu'elle était encore compétitive pour la victoire. Elle n'est pas la plus régulière du lot, mais reste capable d'un coup d'éclat. Placée potentielle."
+        },
+        {
+          "number": 12,
+          "horse": "ILLICO DE BOUTEAU",
+          "description": "Vainqueur aux Sables- d'Olonne le mois dernier, ce concurrent de la famille Dupuis n'a toutefois pu confirmer à Laval, se classant sixième sans démériter. Il va devoir s'élancer du second échelon, ce qui n'est jamais facile, et monte de catégorie. Même s'il n'est pas à écarter, nous lui en avons préféré d'autres."
+        },
+        {
+          "number": 13,
+          "horse": "JOS MAZA",
+          "description": "Lors de sa dernière sortie sur cette piste, ce fils de Bird Parker avait hésité en partant, mais s'était tout de même classé quatrième d'une épreuve remportée par JALIMEDE (6). Il est plutôt régulier et se plaît sur les profils plats. Confié pour la première fois à Pierre-Yves Verva, il est à surveiller de très près."
+        },
+        {
+          "number": 14,
+          "horse": "RED HOT ROADSTER",
+          "description": "Depuis le mois de juin, ce représentant de la Stall Armanbo Roadsters est monté à trois reprises sur le podium en quatre tentatives. En dernier lieu, à Cabourg, il a fourni un bel effort final, se classant toutefois deuxième à distance de RUGER (9). Il n'a certes pas été très heureux au tirage au sort, mais reste malgré tout capable de se placer en pareille société."
+        }
+      ],
+      "rankings": {
+        "favorites": [
+          9,
+          6,
+          7,
+          10,
+          14,
+          13,
+          11
+        ],
+        "form": [
+          9,
+          7,
+          10,
+          6,
+          14
+        ],
+        "class": [
+          11,
+          6,
+          14,
+          13,
+          10
+        ],
+        "progress": [
+          10,
+          2,
+          4,
+          1,
+          13
+        ],
+        "regularity": [
+          9,
+          1,
+          4,
+          10,
+          11
+        ]
+      },
+      "published_arrival": [
+        1,
+        2,
+        15,
+        14
+      ]
+    },
+    "result": {
+      "date": "2026-09-02",
+      "track": "LA CAPELLE",
+      "meeting": 1,
+      "race_number": 1,
+      "arrival": [
+        9,
+        13,
+        10,
+        1,
+        350,
+        44,
+        2,
+        400,
+        4970
+      ],
+      "winner": 9,
+      "second": 13,
+      "third": 10
+    },
+    "match": {
+      "status": "MATCHED",
+      "confidence": 100.0,
+      "identity": {
+        "date": "2026-09-02",
+        "track": "LA CAPELLE",
+        "race_number": 1
+      },
+      "verification": {
+        "date_match": true,
+        "track_match": true,
+        "race_number_match": true
+      }
+    }
+  },
+  {
+    "program": {
+      "document_type": "program",
       "source_file": "program_20260909_b266c2b0a3_ae0b0ea500.txt",
-      "parsed_at": "2026-09-11T23:18:33.570914Z",
+      "parsed_at": "2026-09-11T23:42:01.831609Z",
       "date": "2026-09-08",
       "race": {
         "race_name": "PRIX JEAN BART - HAIES",
@@ -526,7 +867,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_20260909_f3c5353885_d0b3f4e0c3.txt",
-      "parsed_at": "2026-09-11T23:18:33.573811Z",
+      "parsed_at": "2026-09-11T23:42:01.834993Z",
       "date": "2026-09-10",
       "race": {
         "race_name": "PRIX CARRUS",
@@ -703,7 +1044,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_20260909_fe1f366bd8_fbd6793ee1.txt",
-      "parsed_at": "2026-09-11T23:18:33.576598Z",
+      "parsed_at": "2026-09-11T23:42:01.839702Z",
       "date": "2026-09-05",
       "race": {
         "race_name": "PRIX DU MONT SAINT MICHEL",
@@ -871,7 +1212,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH-PMU_DU_11-07-2026_0a04ca2108_623d34b14c.txt",
-      "parsed_at": "2026-09-11T23:18:33.634063Z",
+      "parsed_at": "2026-09-11T23:42:01.898882Z",
       "date": "2026-07-11",
       "race": {
         "race_name": "PRIX DE ROMAINVILLE - ATTELE",
@@ -961,7 +1302,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU-23-06-2026_7194de85f4_70a92203e5.txt",
-      "parsed_at": "2026-09-11T23:18:33.679954Z",
+      "parsed_at": "2026-09-11T23:42:01.943631Z",
       "date": "2026-06-23",
       "race": {
         "race_name": "PRIX DIEPPE MARITIME",
@@ -1140,7 +1481,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_01-07-2026_4ce1c91430_61c8169111.txt",
-      "parsed_at": "2026-09-11T23:18:33.687945Z",
+      "parsed_at": "2026-09-11T23:42:01.951611Z",
       "date": "2026-07-01",
       "race": {
         "race_name": "PRIX DE LA TOUR EIFFEL - ATTELE",
@@ -1231,7 +1572,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_04-07-2026_95c4c95bb5_b80fa0095f.txt",
-      "parsed_at": "2026-09-11T23:18:33.708852Z",
+      "parsed_at": "2026-09-11T23:42:01.972477Z",
       "date": "2026-07-04",
       "race": {
         "race_name": "PRIX D'ORGEV AL - ATTELE",
@@ -1323,7 +1664,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_06-07-2026_45f3fc086f_4eb938bed8.txt",
-      "parsed_at": "2026-09-11T23:18:33.719695Z",
+      "parsed_at": "2026-09-11T23:42:01.983429Z",
       "date": "2026-07-06",
       "race": {
         "race_name": "PRIX DES SABLES D'OLONNE AGGLOMERATION - ATTELE",
@@ -1418,7 +1759,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_07-07-2026_a4afc899d9_1350672dc2.txt",
-      "parsed_at": "2026-09-11T23:18:33.721098Z",
+      "parsed_at": "2026-09-11T23:42:01.984889Z",
       "date": "2026-07-07",
       "race": {
         "race_name": "PRIX LE ROI SOLEIL",
@@ -1520,7 +1861,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_12-08-2026_a63998ec62_4b1b192267.txt",
-      "parsed_at": "2026-09-11T23:18:33.743368Z",
+      "parsed_at": "2026-09-11T23:42:02.009487Z",
       "date": "2026-08-12",
       "race": {
         "race_name": "PRIX DES GRANDES CARRIERES",
@@ -1609,7 +1950,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_15-07-2026_ea94aaeb32_5d7ce34c4f.txt",
-      "parsed_at": "2026-09-11T23:18:33.773282Z",
+      "parsed_at": "2026-09-11T23:42:02.040584Z",
       "date": "2026-07-15",
       "race": {
         "race_name": "PRIX DE COQUAINVILLIERS - ATTELE",
@@ -1777,7 +2118,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_18-07-2026_77b9557492_f3f2b5ed3b.txt",
-      "parsed_at": "2026-09-11T23:18:33.798083Z",
+      "parsed_at": "2026-09-11T23:42:02.065343Z",
       "date": "2026-07-18",
       "race": {
         "race_name": "PRIX DE LA PORTE MONTMARTRE - ATTELE",
@@ -1939,7 +2280,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_19-07-2026_f4be6c6a9e_2238b625be.txt",
-      "parsed_at": "2026-09-11T23:18:33.802700Z",
+      "parsed_at": "2026-09-11T23:42:02.069996Z",
       "date": "2026-07-19",
       "race": {
         "race_name": "PRIX MISS ALLEGED",
@@ -2119,7 +2460,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_20-07-2026_96ec496463_24a8c70819.txt",
-      "parsed_at": "2026-09-11T23:18:33.808348Z",
+      "parsed_at": "2026-09-11T23:42:02.075542Z",
       "date": "2026-07-20",
       "race": {
         "race_name": "PRIX HUBERT DE CATHEU",
@@ -2296,7 +2637,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_22-07-2026_da2a803d50_31f1c3b6e6.txt",
-      "parsed_at": "2026-09-11T23:18:33.828894Z",
+      "parsed_at": "2026-09-11T23:42:02.091031Z",
       "date": "2026-07-22",
       "race": {
         "race_name": "PRIX DE PICPUS - ATTELE",
@@ -2388,7 +2729,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_25-07-2026_9b50cbc97f_5dad3ee8f5.txt",
-      "parsed_at": "2026-09-11T23:18:33.855963Z",
+      "parsed_at": "2026-09-11T23:42:02.118341Z",
       "date": "2026-07-25",
       "race": {
         "race_name": "PRIX DE L'HAY-LES-ROSES - ATTELE",
@@ -2479,7 +2820,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_27-06-2026_732dcc5130_3c405987ba.txt",
-      "parsed_at": "2026-09-11T23:18:33.876003Z",
+      "parsed_at": "2026-09-11T23:42:02.144007Z",
       "date": "2026-06-27",
       "race": {
         "race_name": "PRIX DE NEUILLY-LEV ALLOIS",
@@ -2651,7 +2992,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMUB_DU_31-08-2026_729de45912_8ada240694.txt",
-      "parsed_at": "2026-09-11T23:18:33.908817Z",
+      "parsed_at": "2026-09-11T23:42:02.176889Z",
       "date": "2026-08-31",
       "race": {
         "race_name": "PRIX DE SAINT-PAIR-DU-MONT",
@@ -2832,7 +3173,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMU_DU_08-07-2026_028328a0e8_e83955462f.txt",
-      "parsed_at": "2026-09-11T23:18:33.926240Z",
+      "parsed_at": "2026-09-11T23:42:02.194782Z",
       "date": "2026-07-08",
       "race": {
         "race_name": "PRIX DU CASINO PARTOUCHE DE PORNICHET",
@@ -2923,7 +3264,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMU_DU_24-08-2026_62a484fa10_d61e39c937.txt",
-      "parsed_at": "2026-09-11T23:18:33.985211Z",
+      "parsed_at": "2026-09-11T23:42:02.254115Z",
       "date": "2026-08-24",
       "race": {
         "race_name": "PRIX DE MORTAIN",
@@ -3110,7 +3451,7 @@
     "program": {
       "document_type": "program",
       "source_file": "program_JH_PMU_DU_29-07-2026_23abf40a4a_4dc523559e.txt",
-      "parsed_at": "2026-09-11T23:18:33.990248Z",
+      "parsed_at": "2026-09-11T23:42:02.258816Z",
       "date": "2026-07-29",
       "race": {
         "race_name": "PRIX DE PIGALLE",
