@@ -32,6 +32,32 @@ jobs:
         run: |
           python -m src.main
 
+      - name: Build Training Dataset
+        run: |
+          python -m src.dataset.build_dataset
+
+      - name: Show Dataset Summary
+        run: |
+          echo "============================================"
+          echo "TRAINING DATASET"
+          echo "============================================"
+
+          if [ -f data/dataset/training_dataset.json ]; then
+            echo "JSON dataset found:"
+            ls -lh data/dataset/training_dataset.json
+          else
+            echo "ERROR: JSON dataset was not created."
+            exit 1
+          fi
+
+          if [ -f data/dataset/training_dataset.csv ]; then
+            echo "CSV dataset found:"
+            ls -lh data/dataset/training_dataset.csv
+          else
+            echo "ERROR: CSV dataset was not created."
+            exit 1
+          fi
+
       - name: Save machine data
         run: |
           git config --global user.name "Horse Racing Machine"
@@ -42,6 +68,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No new machine data to save."
           else
-            git commit -m "Update race machine data"
+            git commit -m "Update race machine data and training dataset"
             git push
           fi
