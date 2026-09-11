@@ -4,6 +4,10 @@ from datetime import datetime, date
 from pathlib import Path
 
 
+# ============================================================
+# PATHS
+# ============================================================
+
 BASE_DIR = Path(__file__).resolve().parents[2]
 
 PROGRAM_DIR = BASE_DIR / "data" / "parsed" / "programs"
@@ -92,13 +96,13 @@ def normalize_date(value):
     if not value:
         return None
 
-    # Already ISO
+    # ISO date or ISO datetime
     try:
         return datetime.fromisoformat(value).date().isoformat()
     except ValueError:
         pass
 
-    # Common formats
+    # Common date formats
     formats = [
         "%Y-%m-%d",
         "%d/%m/%Y",
@@ -107,7 +111,11 @@ def normalize_date(value):
 
     for fmt in formats:
         try:
-            return datetime.strptime(value, fmt).date().isoformat()
+            return datetime.strptime(
+                value,
+                fmt,
+            ).date().isoformat()
+
         except ValueError:
             continue
 
@@ -121,6 +129,7 @@ def safe_int(value):
 
     try:
         return int(value)
+
     except (TypeError, ValueError):
         return None
 
@@ -137,24 +146,44 @@ def load_json_files(folder):
     records = []
 
     if not folder.exists():
-        print(f"Folder not found: {folder}")
+
+        print(
+            f"Folder not found: {folder}"
+        )
+
         return records
 
-    for path in sorted(folder.glob("*.json")):
+    for path in sorted(
+        folder.glob("*.json")
+    ):
 
         try:
-            with path.open("r", encoding="utf-8") as file:
+
+            with path.open(
+                "r",
+                encoding="utf-8",
+            ) as file:
+
                 data = json.load(file)
 
             if isinstance(data, list):
+
                 records.extend(data)
 
             elif isinstance(data, dict):
+
                 records.append(data)
 
         except Exception as error:
-            print(f"Failed to load: {path.name}")
-            print(f"Reason: {error}")
+
+            print(
+                f"Failed to load: "
+                f"{path.name}"
+            )
+
+            print(
+                f"Reason: {error}"
+            )
 
     return records
 
@@ -166,19 +195,29 @@ def load_json_files(folder):
 def expand_program_records(records):
     """
     Program files normally represent one race.
+
+    Keep only valid program records.
     """
 
     expanded = []
 
     for record in records:
 
-        if not isinstance(record, dict):
+        if not isinstance(
+            record,
+            dict,
+        ):
             continue
 
-        if record.get("document_type") != "program":
+        if (
+            record.get("document_type")
+            != "program"
+        ):
             continue
 
-        expanded.append(record)
+        expanded.append(
+            record
+        )
 
     return expanded
 
@@ -190,54 +229,94 @@ def expand_result_records(records):
     Convert:
 
     {
-        date: ...,
-        track: ...,
-        meeting: ...,
-        races: [...]
+        "date": ...,
+        "track": ...,
+        "meeting": ...,
+        "races": [...]
     }
 
-    into one record per race.
+    into one result record per race.
     """
 
     expanded = []
 
     for record in records:
 
-        if not isinstance(record, dict):
+        if not isinstance(
+            record,
+            dict,
+        ):
             continue
 
-        if record.get("document_type") != "result":
+        if (
+            record.get("document_type")
+            != "result"
+        ):
             continue
 
-        document_date = normalize_date(record.get("date"))
-        document_track = normalize_track(record.get("track"))
-        meeting = record.get("meeting")
+        document_date = normalize_date(
+            record.get("date")
+        )
 
-        races = record.get("races", [])
+        document_track = normalize_track(
+            record.get("track")
+        )
 
-        if not isinstance(races, list):
+        meeting = record.get(
+            "meeting"
+        )
+
+        races = record.get(
+            "races",
+            [],
+        )
+
+        if not isinstance(
+            races,
+            list,
+        ):
             continue
 
         for race in races:
 
-            if not isinstance(race, dict):
+            if not isinstance(
+                race,
+                dict,
+            ):
                 continue
 
-            expanded.append({
-                "date": document_date,
-                "track": document_track,
-                "meeting": meeting,
+            expanded.append(
+                {
+                    "date": document_date,
 
-                "race_number": safe_int(
-                    race.get("race_number")
-                ),
+                    "track": document_track,
 
-                "arrival": race.get("arrival", []),
+                    "meeting": meeting,
 
-                "winner": race.get("winner"),
-                "second": race.get("second"),
-                "third": race.get("third"),
-            })
+                    "race_number": safe_int(
+                        race.get(
+                            "race_number"
+                        )
+                    ),
+
+                    "arrival": race.get(
+                        "arrival",
+                        [],
+                    ),
+
+                    "winner": race.get(
+                        "winner"
+                    ),
+
+                    "second": race.get(
+                        "second"
+                    ),
+
+                    "third": race.get(
+                        "third"
+                    ),
+                }
+            )
 
     return expanded
 
@@ -251,12 +330,23 @@ def program_key(program):
     Unique identity for a program race.
     """
 
-    race = program.get("race", {})
+    race = program.get(
+        "race",
+        {},
+    )
 
     return (
-        normalize_date(program.get("date")),
-        normalize_track(race.get("track")),
-        safe_int(race.get("race_number")),
+        normalize_date(
+            program.get("date")
+        ),
+
+        normalize_track(
+            race.get("track")
+        ),
+
+        safe_int(
+            race.get("race_number")
+        ),
     )
 
 
@@ -266,9 +356,17 @@ def result_key(result):
     """
 
     return (
-        normalize_date(result.get("date")),
-        normalize_track(result.get("track")),
-        safe_int(result.get("race_number")),
+        normalize_date(
+            result.get("date")
+        ),
+
+        normalize_track(
+            result.get("track")
+        ),
+
+        safe_int(
+            result.get("race_number")
+        ),
     )
 
 
@@ -281,12 +379,17 @@ def deduplicate_programs(programs):
 
     for program in programs:
 
-        key = program_key(program)
+        key = program_key(
+            program
+        )
 
         if key not in unique:
+
             unique[key] = program
 
-    return list(unique.values())
+    return list(
+        unique.values()
+    )
 
 
 def deduplicate_results(results):
@@ -298,25 +401,43 @@ def deduplicate_results(results):
 
     for result in results:
 
-        key = result_key(result)
+        key = result_key(
+            result
+        )
 
         if key not in unique:
+
             unique[key] = result
 
-    return list(unique.values())
+    return list(
+        unique.values()
+    )
 
 
 # ============================================================
-# MATCHING LOGIC
+# MATCHING IDENTITIES
 # ============================================================
 
 def get_program_identity(program):
+    """
+    Extract the identity used to match
+    a program race.
+    """
 
-    race = program.get("race", {})
+    race = program.get(
+        "race",
+        {},
+    )
 
     return {
-        "date": normalize_date(program.get("date")),
-        "track": normalize_track(race.get("track")),
+        "date": normalize_date(
+            program.get("date")
+        ),
+
+        "track": normalize_track(
+            race.get("track")
+        ),
+
         "race_number": safe_int(
             race.get("race_number")
         ),
@@ -324,81 +445,142 @@ def get_program_identity(program):
 
 
 def get_result_identity(result):
+    """
+    Extract the identity used to match
+    a result race.
+    """
 
     return {
-        "date": normalize_date(result.get("date")),
-        "track": normalize_track(result.get("track")),
+        "date": normalize_date(
+            result.get("date")
+        ),
+
+        "track": normalize_track(
+            result.get("track")
+        ),
+
         "race_number": safe_int(
             result.get("race_number")
         ),
     }
 
 
-def calculate_diagnostic_score(program, result):
+# ============================================================
+# DIAGNOSTIC SCORING
+# ============================================================
+
+def calculate_diagnostic_score(
+    program,
+    result,
+):
     """
     Diagnostic scoring only.
 
     IMPORTANT:
-    This score never creates a match.
+    This score NEVER creates a match.
 
-    It is only used to show the closest candidate
-    inside match_review.json.
+    It is used only to show the closest
+    candidate inside match_review.json.
+
+    Strict matching is handled separately.
     """
 
-    program_id = get_program_identity(program)
-    result_id = get_result_identity(result)
+    program_id = get_program_identity(
+        program
+    )
+
+    result_id = get_result_identity(
+        result
+    )
 
     score = 0
+
     max_score = 100
 
     reasons = []
 
+    # --------------------------------------------------------
+    # DATE
+    # --------------------------------------------------------
+
     if (
         program_id["date"]
         and result_id["date"]
-        and program_id["date"] == result_id["date"]
+        and program_id["date"]
+        == result_id["date"]
     ):
+
         score += 50
-        reasons.append("date exact")
+
+        reasons.append(
+            "date exact"
+        )
+
+    # --------------------------------------------------------
+    # TRACK
+    # --------------------------------------------------------
 
     if (
         program_id["track"]
         and result_id["track"]
-        and program_id["track"] == result_id["track"]
+        and program_id["track"]
+        == result_id["track"]
     ):
+
         score += 30
-        reasons.append("track exact")
+
+        reasons.append(
+            "track exact"
+        )
+
+    # --------------------------------------------------------
+    # RACE NUMBER
+    # --------------------------------------------------------
 
     if (
-        program_id["race_number"] is not None
-        and result_id["race_number"] is not None
+        program_id["race_number"]
+        is not None
+        and result_id["race_number"]
+        is not None
         and program_id["race_number"]
         == result_id["race_number"]
     ):
+
         score += 20
-        reasons.append("race number exact")
+
+        reasons.append(
+            "race number exact"
+        )
 
     confidence = round(
         (score / max_score) * 100,
-        2
+        2,
     )
 
     return {
         "score": score,
+
         "max_score": max_score,
+
         "confidence": confidence,
+
         "reasons": reasons,
     }
 
 
-def find_best_candidate(program, results):
+def find_best_candidate(
+    program,
+    results,
+):
     """
-    Find closest result for diagnostics.
+    Find the closest result for diagnostics.
 
-    This DOES NOT mean the candidate is a match.
+    IMPORTANT:
+    The returned candidate is NOT a match.
     """
 
     best_result = None
+
     best_match = None
 
     for result in results:
@@ -409,63 +591,115 @@ def find_best_candidate(program, results):
         )
 
         if best_match is None:
+
             best_result = result
+
             best_match = match
+
             continue
 
-        if match["score"] > best_match["score"]:
+        if (
+            match["score"]
+            > best_match["score"]
+        ):
 
             best_result = result
+
             best_match = match
 
     if best_result is None:
+
         return None
 
     return {
         "result": best_result,
+
         "match": best_match,
     }
 
 
-def find_exact_match(program, results):
+# ============================================================
+# STRICT MATCHING
+# ============================================================
+
+def find_exact_match(
+    program,
+    results,
+):
     """
     STRICT MATCHING RULE.
 
-    A race can ONLY match if:
+    A program race can ONLY match a result
+    when ALL THREE conditions are exact:
 
     1. Date matches
     2. Track matches
     3. Race number matches
 
     Wrong dates are NEVER allowed.
+
+    Diagnostic scores NEVER create matches.
     """
 
-    program_id = get_program_identity(program)
+    program_id = get_program_identity(
+        program
+    )
 
-    program_date = program_id["date"]
-    program_track = program_id["track"]
-    program_race_number = program_id["race_number"]
+    program_date = program_id[
+        "date"
+    ]
 
-    # Missing essential identity information
+    program_track = program_id[
+        "track"
+    ]
+
+    program_race_number = program_id[
+        "race_number"
+    ]
+
+    # --------------------------------------------------------
+    # REQUIRE COMPLETE PROGRAM IDENTITY
+    # --------------------------------------------------------
+
     if not program_date:
+
         return None
 
     if not program_track:
+
         return None
 
-    if program_race_number is None:
+    if (
+        program_race_number
+        is None
+    ):
+
         return None
+
+    # --------------------------------------------------------
+    # SEARCH RESULTS
+    # --------------------------------------------------------
 
     for result in results:
 
-        result_id = get_result_identity(result)
+        result_id = get_result_identity(
+            result
+        )
 
         # DATE IS REQUIRED
-        if result_id["date"] != program_date:
+        if (
+            result_id["date"]
+            != program_date
+        ):
+
             continue
 
         # TRACK IS REQUIRED
-        if result_id["track"] != program_track:
+        if (
+            result_id["track"]
+            != program_track
+        ):
+
             continue
 
         # RACE NUMBER IS REQUIRED
@@ -473,6 +707,7 @@ def find_exact_match(program, results):
             result_id["race_number"]
             != program_race_number
         ):
+
             continue
 
         return result
@@ -486,7 +721,13 @@ def find_exact_match(program, results):
 
 def determine_status(program):
     """
-    Determine whether a program belongs to a future race.
+    Determine whether a program belongs
+    to a future race.
+
+    If the race date has already passed and
+    there is no exact result match, return:
+
+    RESULT_NOT_FOUND
     """
 
     program_date = normalize_date(
@@ -494,6 +735,7 @@ def determine_status(program):
     )
 
     if not program_date:
+
         return "RESULT_NOT_FOUND"
 
     try:
@@ -506,9 +748,11 @@ def determine_status(program):
         today = date.today()
 
         if race_date > today:
+
             return "FUTURE_RACE"
 
     except ValueError:
+
         pass
 
     return "RESULT_NOT_FOUND"
@@ -518,10 +762,21 @@ def determine_status(program):
 # OUTPUT BUILDING
 # ============================================================
 
-def build_matched_record(program, result):
+def build_matched_record(
+    program,
+    result,
+):
+    """
+    Build a verified matched race record.
+    """
 
-    program_id = get_program_identity(program)
-    result_id = get_result_identity(result)
+    program_id = get_program_identity(
+        program
+    )
+
+    result_id = get_result_identity(
+        result
+    )
 
     return {
         "program": program,
@@ -534,10 +789,16 @@ def build_matched_record(program, result):
             "confidence": 100.0,
 
             "identity": {
-                "date": program_id["date"],
-                "track": program_id["track"],
+                "date":
+                    program_id["date"],
+
+                "track":
+                    program_id["track"],
+
                 "race_number":
-                    program_id["race_number"],
+                    program_id[
+                        "race_number"
+                    ],
             },
 
             "verification": {
@@ -550,8 +811,12 @@ def build_matched_record(program, result):
                     == result_id["track"],
 
                 "race_number_match":
-                    program_id["race_number"]
-                    == result_id["race_number"],
+                    program_id[
+                        "race_number"
+                    ]
+                    == result_id[
+                        "race_number"
+                    ],
             },
         },
     }
@@ -561,8 +826,14 @@ def build_unmatched_record(
     program,
     results,
 ):
+    """
+    Build a review record for a program
+    that does not have an exact result.
+    """
 
-    status = determine_status(program)
+    status = determine_status(
+        program
+    )
 
     best_candidate = find_best_candidate(
         program,
@@ -574,7 +845,8 @@ def build_unmatched_record(
 
         "status": status,
 
-        "best_candidate": best_candidate,
+        "best_candidate":
+            best_candidate,
     }
 
 
@@ -583,11 +855,26 @@ def build_unmatched_record(
 # ============================================================
 
 def run_race_matching():
+    """
+    Run the complete program/result
+    matching engine.
+    """
 
     print("=" * 60)
-    print("HORSE RACING MACHINE")
-    print("SMART RACE MATCHING ENGINE")
+
+    print(
+        "HORSE RACING MACHINE"
+    )
+
+    print(
+        "SMART RACE MATCHING ENGINE"
+    )
+
     print("=" * 60)
+
+    # --------------------------------------------------------
+    # CREATE OUTPUT DIRECTORY
+    # --------------------------------------------------------
 
     MATCHED_DIR.mkdir(
         parents=True,
@@ -617,7 +904,7 @@ def run_race_matching():
     )
 
     # --------------------------------------------------------
-    # EXPAND
+    # EXPAND RECORDS
     # --------------------------------------------------------
 
     programs = expand_program_records(
@@ -661,10 +948,13 @@ def run_race_matching():
     )
 
     # --------------------------------------------------------
-    # MATCH
+    # MATCH RACES
     # --------------------------------------------------------
 
-    print("MATCHING RACES")
+    print(
+        "MATCHING RACES"
+    )
+
     print("=" * 60)
 
     matched_records = []
@@ -682,6 +972,10 @@ def run_race_matching():
             results,
         )
 
+        # ----------------------------------------------------
+        # EXACT MATCH FOUND
+        # ----------------------------------------------------
+
         if result is not None:
 
             matched = build_matched_record(
@@ -697,9 +991,14 @@ def run_race_matching():
                 "MATCHED: "
                 f"{identity['date']} | "
                 f"{identity['track']} | "
-                f"Race {identity['race_number']} | "
+                f"Race "
+                f"{identity['race_number']} | "
                 "100.0%"
             )
+
+        # ----------------------------------------------------
+        # NO EXACT MATCH
+        # ----------------------------------------------------
 
         else:
 
@@ -713,11 +1012,12 @@ def run_race_matching():
             )
 
             print(
-                f"UNMATCHED "
+                "UNMATCHED "
                 f"[{unmatched['status']}] "
                 f"{identity['date']} | "
                 f"{identity['track']} | "
-                f"Race {identity['race_number']}"
+                f"Race "
+                f"{identity['race_number']}"
             )
 
     # --------------------------------------------------------
@@ -757,7 +1057,11 @@ def run_race_matching():
     # --------------------------------------------------------
 
     print("=" * 60)
-    print("RACE MATCHING COMPLETE")
+
+    print(
+        "RACE MATCHING COMPLETE"
+    )
+
     print("=" * 60)
 
     print(
@@ -783,9 +1087,30 @@ def run_race_matching():
     print("=" * 60)
 
     return {
-        "matched": matched_records,
-        "unmatched": unmatched_records,
+        "matched":
+            matched_records,
+
+        "unmatched":
+            unmatched_records,
     }
+
+
+# ============================================================
+# PIPELINE COMPATIBILITY ENTRY POINT
+# ============================================================
+
+def run_matching():
+    """
+    Entry point imported and called by src.main.
+
+    This function exists so that main.py can use:
+
+        from src.matching.race_matcher import run_matching
+
+    without changing the rest of the pipeline.
+    """
+
+    return run_race_matching()
 
 
 # ============================================================
