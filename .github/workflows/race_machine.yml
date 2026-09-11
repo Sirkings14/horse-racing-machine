@@ -8,7 +8,6 @@ permissions:
 
 jobs:
   run-machine:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -36,6 +35,10 @@ jobs:
         run: |
           python -m src.dataset.build_dataset
 
+      - name: Validate Training Dataset
+        run: |
+          python -m src.dataset.dataset_validator
+
       - name: Show Dataset Summary
         run: |
           echo "============================================"
@@ -43,18 +46,39 @@ jobs:
           echo "============================================"
 
           if [ -f data/dataset/training_dataset.json ]; then
-            echo "JSON dataset found:"
+            echo "Raw JSON dataset found:"
             ls -lh data/dataset/training_dataset.json
           else
-            echo "ERROR: JSON dataset was not created."
+            echo "ERROR: Raw JSON dataset was not created."
             exit 1
           fi
 
           if [ -f data/dataset/training_dataset.csv ]; then
-            echo "CSV dataset found:"
+            echo "Raw CSV dataset found:"
             ls -lh data/dataset/training_dataset.csv
           else
-            echo "ERROR: CSV dataset was not created."
+            echo "ERROR: Raw CSV dataset was not created."
+            exit 1
+          fi
+
+          echo ""
+          echo "============================================"
+          echo "CLEAN TRAINING DATASET"
+          echo "============================================"
+
+          if [ -f data/dataset/training_dataset_clean.json ]; then
+            echo "Clean JSON dataset found:"
+            ls -lh data/dataset/training_dataset_clean.json
+          else
+            echo "ERROR: Clean JSON dataset was not created."
+            exit 1
+          fi
+
+          if [ -f data/dataset/dataset_review.json ]; then
+            echo "Dataset review file found:"
+            ls -lh data/dataset/dataset_review.json
+          else
+            echo "ERROR: Dataset review file was not created."
             exit 1
           fi
 
@@ -68,6 +92,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No new machine data to save."
           else
-            git commit -m "Update race machine data and training dataset"
+            git commit -m "Update race machine data and validated training dataset"
             git push
           fi
