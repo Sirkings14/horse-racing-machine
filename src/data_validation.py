@@ -1,774 +1,306 @@
-import re
-import unicodedata
-from datetime import datetime
+from __future__ import annotations
+
+import json
+from collections import defaultdict
+from pathlib import Path
+from typing import Any, Dict, List, Tuple
 
 
-# ============================================================
-# TEXT NORMALIZATION
-# ============================================================
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+DATASET_FILE = BASE_DIR / "data" / "dataset" / "training_dataset.json"
+
+CLEAN_DATASET_FILE = (
+    BASE_DIR
+    / "data"
+    / "dataset"
+    / "training_dataset_clean.json"
+)
+
+REVIEW_FILE = (
+    BASE_DIR
+    / "data"
+    / "dataset"
+    / "dataset_review.json"
+)
+
+MIN_HORSES_PER_RACE = 8
 
 
-def normalize_text(value):
-    """
-    Normalize text for reliable comparisons.
-    """
+def load_dataset() -> List[Dict[str, Any]]:
+    if not DATASET_FILE.exists():
+        raise FileNotFoundError(
+            f"Dataset not found: {DATASET_FILE}"
+        )
 
-    if not value:
-        return ""
+    with DATASET_FILE.open(
+        "r",
+        encoding="utf-8",
+    ) as f:
+        data = json.load(f)
 
-    value = str(value).upper().strip()
+    if not isinstance(data, list):
+        raise ValueError(
+            "training_dataset.json must contain a JSON list."
+        )
 
-    value = unicodedata.normalize(
-        "NFD",
-        value,
-    )
-
-    value = "".join(
-        char
-        for char in value
-        if unicodedata.category(char) != "Mn"
-    )
-
-    value = value.replace(
-        "-",
-        " ",
-    )
-
-    value = value.replace(
-        "_",
-        " ",
-    )
-
-    value = re.sub(
-        r"[^A-Z0-9 ]",
-        " ",
-        value,
-    )
-
-    value = re.sub(
-        r"\s+",
-        " ",
-        value,
-    ).strip()
-
-    return value
+    return data
 
 
-# ============================================================
-# TRACK NORMALIZATION
-# ============================================================
+def group_by_race(
+    rows: List[Dict[str, Any]],
+) -> Dict[str, List[Dict[str, Any]]]:
+    races: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
 
+    for row in rows:
+        race_key = row.get("race_key")
 
-def normalize_track(track):
-    """
-    Normalize race track names.
-    """
-
-    track = normalize_text(
-        track
-    )
-
-    if not track:
-        return ""
-
-    aliases = {
-
-        "PARIS VINCENNES NOCTURNE":
-            "PARIS VINCENNES",
-
-        "VINCENNES NOCTURNE":
-            "PARIS VINCENNES",
-
-        "VINCENNES":
-            "PARIS VINCENNES",
-
-        "PARIS LONGCHAMP":
-            "PARISLONGCHAMP",
-
-        "LONGCHAMP":
-            "PARISLONGCHAMP",
-
-        "PARIS LONGCHAMP NOCTURNE":
-            "PARISLONGCHAMP",
-
-    }
-
-    return aliases.get(
-        track,
-        track,
-    )
-
-
-# ============================================================
-# DATE NORMALIZATION
-# ============================================================
-
-
-def normalize_date(value):
-    """
-    Normalize date to YYYY-MM-DD.
-    """
-
-    if not value:
-        return None
-
-    value = str(
-        value
-    ).strip()
-
-    formats = [
-
-        "%Y-%m-%d",
-
-        "%d/%m/%Y",
-
-        "%d-%m-%Y",
-
-        "%d.%m.%Y",
-
-    ]
-
-    for date_format in formats:
-
-        try:
-
-            return datetime.strptime(
-                value,
-                date_format,
-            ).strftime(
-                "%Y-%m-%d"
-            )
-
-        except ValueError:
-
+        if not race_key:
             continue
 
-    return None
+        races[str(race_key)].append(row)
 
-
-# ============================================================
-# SAFE RACE FIELD EXTRACTION
-# ============================================================
-
-
-def get_race_date(record):
-    """
-    Extract race date from multiple
-    possible parser structures.
-    """
-
-    if not isinstance(
-        record,
-        dict,
-    ):
-        return None
-
-    # Top-level
-
-    value = record.get(
-        "date"
-    )
-
-    if value:
-
-        return normalize_date(
-            value
-        )
-
-    # Nested race object
-
-    race = record.get(
-        "race",
-        {}
-    )
-
-    if isinstance(
-        race,
-        dict,
-    ):
-
-        value = race.get(
-            "date"
-        )
-
-        if value:
-
-            return normalize_date(
-                value
-            )
-
-    return None
-
-
-def get_race_track(record):
-    """
-    Extract race track from multiple
-    possible parser structures.
-    """
-
-    if not isinstance(
-        record,
-        dict,
-    ):
-        return ""
-
-    value = record.get(
-        "track"
-    )
-
-    if value:
-
-        return normalize_track(
-            value
-        )
-
-    race = record.get(
-        "race",
-        {}
-    )
-
-    if isinstance(
-        race,
-        dict,
-    ):
-
-        value = race.get(
-            "track"
-        )
-
-        if value:
-
-            return normalize_track(
-                value
-            )
-
-    return ""
-
-
-def get_race_number(record):
-    """
-    Extract race number safely.
-    """
-
-    if not isinstance(
-        record,
-        dict,
-    ):
-        return None
-
-    locations = [
-
-        record,
-
-        record.get(
-            "race",
-            {},
-        ),
-
-    ]
-
-    for location in locations:
-
-        if not isinstance(
-            location,
-            dict,
-        ):
-            continue
-
-        for key in [
-
-            "race_number",
-
-            "number",
-
-            "race",
-
-        ]:
-
-            value = location.get(
-                key
-            )
-
-            if value is None:
-
-                continue
-
-            match = re.search(
-                r"\d+",
-                str(
-                    value
-                ),
-            )
-
-            if match:
-
-                return int(
-                    match.group()
-                )
-
-    return None
-
-
-def get_horses(record):
-    """
-    Extract horses from multiple
-    possible parser structures.
-    """
-
-    if not isinstance(
-        record,
-        dict,
-    ):
-        return []
-
-    horses = record.get(
-        "horses"
-    )
-
-    if not horses:
-
-        race = record.get(
-            "race",
-            {}
-        )
-
-        if isinstance(
-            race,
-            dict,
-        ):
-
-            horses = race.get(
-                "horses",
-                []
-            )
-
-    if not isinstance(
-        horses,
-        list,
-    ):
-
-        return []
-
-    return horses
-
-
-# ============================================================
-# HORSE NORMALIZATION
-# ============================================================
-
-
-def normalize_horse(
-    horse,
-):
-    """
-    Convert any horse representation
-    into canonical structure.
-    """
-
-    if isinstance(
-        horse,
-        str,
-    ):
-
-        name = normalize_text(
-            horse
-        )
-
-        if not name:
-
-            return None
-
-        return {
-
-            "number": None,
-
-            "name": name,
-
-            "position": None,
-
-        }
-
-    if not isinstance(
-        horse,
-        dict,
-    ):
-
-        return None
-
-    name = (
-
-        horse.get("name")
-
-        or horse.get("horse")
-
-        or horse.get("horse_name")
-
-    )
-
-    if not name:
-
-        return None
-
-    number = (
-
-        horse.get("number")
-
-        or horse.get("horse_number")
-
-        or horse.get("num")
-
-    )
-
-    position = (
-
-        horse.get("position")
-
-        or horse.get("rank")
-
-        or horse.get("place")
-
-        or horse.get("arrival_position")
-
-    )
-
-    return {
-
-        "number":
-            number,
-
-        "name":
-            normalize_text(
-                name
-            ),
-
-        "position":
-            position,
-
-    }
-
-
-# ============================================================
-# CANONICALIZATION
-# ============================================================
-
-
-def canonicalize_race(
-    record,
-    source_type=None,
-    source_file=None,
-):
-    """
-    Convert any parser output into
-    one canonical race structure.
-    """
-
-    if not isinstance(
-        record,
-        dict,
-    ):
-
-        return None
-
-    horses = []
-
-    for horse in get_horses(
-        record
-    ):
-
-        normalized = normalize_horse(
-            horse
-        )
-
-        if normalized:
-
-            horses.append(
-                normalized
-            )
-
-    canonical = {
-
-        "source_type":
-            source_type
-            or record.get(
-                "source_type"
-            ),
-
-        "source_file":
-            source_file
-            or record.get(
-                "source_file"
-            ),
-
-        "race": {
-
-            "date":
-                get_race_date(
-                    record
-                ),
-
-            "track":
-                get_race_track(
-                    record
-                ),
-
-            "race_number":
-                get_race_number(
-                    record
-                ),
-
-        },
-
-        "horses":
-            horses,
-
-    }
-
-    return canonical
-
-
-# ============================================================
-# VALIDATION
-# ============================================================
+    return dict(races)
 
 
 def validate_race(
-    race,
-    require_track=True,
-    require_horses=True,
-):
-    """
-    Validate canonical race.
-    """
+    race_key: str,
+    rows: List[Dict[str, Any]],
+) -> Tuple[bool, List[str]]:
+    reasons: List[str] = []
 
-    errors = []
-
-    if not isinstance(
-        race,
-        dict,
-    ):
-
-        return {
-
-            "valid":
-                False,
-
-            "errors":
-                [
-                    "INVALID_RACE_OBJECT"
-                ],
-
-        }
-
-    race_info = race.get(
-        "race",
-        {}
-    )
-
-    if not isinstance(
-        race_info,
-        dict,
-    ):
-
-        errors.append(
-            "MISSING_RACE_OBJECT"
+    if len(rows) < MIN_HORSES_PER_RACE:
+        reasons.append(
+            f"only {len(rows)} horse rows; "
+            f"minimum is {MIN_HORSES_PER_RACE}"
         )
 
-        race_info = {}
-
-    date = race_info.get(
-        "date"
-    )
-
-    track = race_info.get(
-        "track"
-    )
-
-    number = race_info.get(
-        "race_number"
-    )
-
-    horses = race.get(
-        "horses",
-        []
-    )
-
-    if not date:
-
-        errors.append(
-            "MISSING_DATE"
-        )
-
-    if require_track and not track:
-
-        errors.append(
-            "MISSING_TRACK"
-        )
-
-    if number is None:
-
-        errors.append(
-            "MISSING_RACE_NUMBER"
-        )
-
-    if require_horses and not horses:
-
-        errors.append(
-            "MISSING_HORSES"
-        )
-
-    return {
-
-        "valid":
-            len(errors) == 0,
-
-        "errors":
-            errors,
-
+    tracks = {
+        str(row.get("track", "")).strip()
+        for row in rows
+        if row.get("track")
     }
 
-
-# ============================================================
-# RACE EXTRACTION
-# ============================================================
-
-
-def extract_races(
-    data,
-):
-    """
-    Extract individual races from
-    known JSON structures.
-
-    This is the safety boundary
-    between parsers and the
-    rest of the machine.
-    """
-
-    # Direct list
-
-    if isinstance(
-        data,
-        list,
-    ):
-
-        return data
-
-    if not isinstance(
-        data,
-        dict,
-    ):
-
-        return []
-
-    # Container with races
-
-    if isinstance(
-        data.get(
-            "races"
-        ),
-        list,
-    ):
-
-        return data[
-            "races"
-        ]
-
-    # Single race object
-
-    if (
-
-        get_race_date(
-            data
+    if len(tracks) != 1:
+        reasons.append(
+            "missing or inconsistent track information"
         )
 
-        or
+    dates = {
+        str(row.get("date", "")).strip()
+        for row in rows
+        if row.get("date")
+    }
 
-        get_race_number(
-            data
+    if len(dates) != 1:
+        reasons.append(
+            "missing or inconsistent date information"
         )
 
-        or
+    race_numbers = {
+        row.get("race_number")
+        for row in rows
+        if row.get("race_number") is not None
+    }
 
-        get_race_track(
-            data
+    if len(race_numbers) != 1:
+        reasons.append(
+            "missing or inconsistent race number"
         )
 
-    ):
+    winners = [
+        row
+        for row in rows
+        if row.get("won") == 1
+    ]
 
-        return [
-            data
-        ]
+    if len(winners) != 1:
+        reasons.append(
+            f"expected exactly 1 winner, found {len(winners)}"
+        )
 
-    return []
-
-
-# ============================================================
-# DATASET HEALTH CHECK
-# ============================================================
-
-
-def dataset_health(
-    races,
-):
-    """
-    Calculate dataset health.
-    """
-
-    total = len(
-        races
+    top3_count = sum(
+        1
+        for row in rows
+        if row.get("top3") == 1
     )
 
-    valid = 0
-
-    invalid = 0
-
-    error_counts = {}
-
-    for race in races:
-
-        validation = validate_race(
-            race
+    if top3_count != 3:
+        reasons.append(
+            f"expected 3 top-3 horses, found {top3_count}"
         )
 
-        if validation[
-            "valid"
-        ]:
+    horse_numbers = [
+        row.get("horse_number")
+        for row in rows
+        if row.get("horse_number") is not None
+    ]
 
-            valid += 1
+    if len(horse_numbers) != len(set(horse_numbers)):
+        reasons.append(
+            "duplicate horse numbers found"
+        )
+
+    if not horse_numbers:
+        reasons.append(
+            "no horse numbers found"
+        )
+
+    return len(reasons) == 0, reasons
+
+
+def validate_dataset(
+    rows: List[Dict[str, Any]],
+) -> Tuple[
+    List[Dict[str, Any]],
+    List[Dict[str, Any]],
+]:
+    races = group_by_race(rows)
+
+    clean_rows: List[Dict[str, Any]] = []
+    review: List[Dict[str, Any]] = []
+
+    for race_key, race_rows in sorted(
+        races.items()
+    ):
+        valid, reasons = validate_race(
+            race_key,
+            race_rows,
+        )
+
+        if valid:
+            clean_rows.extend(race_rows)
 
         else:
+            review.append(
+                {
+                    "race_key": race_key,
+                    "horse_rows": len(race_rows),
+                    "reasons": reasons,
+                }
+            )
 
-            invalid += 1
+    return clean_rows, review
 
-            for error in validation[
-                "errors"
-            ]:
 
-                error_counts[
-                    error
-                ] = (
+def save_json(
+    path: Path,
+    data: Any,
+) -> None:
+    path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
-                    error_counts.get(
-                        error,
-                        0,
-                    )
+    with path.open(
+        "w",
+        encoding="utf-8",
+    ) as f:
+        json.dump(
+            data,
+            f,
+            indent=4,
+            ensure_ascii=False,
+        )
 
-                    + 1
 
+def print_summary(
+    rows: List[Dict[str, Any]],
+    clean_rows: List[Dict[str, Any]],
+    review: List[Dict[str, Any]],
+) -> None:
+    original_races = {
+        row.get("race_key")
+        for row in rows
+        if row.get("race_key")
+    }
+
+    clean_races = {
+        row.get("race_key")
+        for row in clean_rows
+        if row.get("race_key")
+    }
+
+    print("\n" + "=" * 60)
+    print("DATASET VALIDATION COMPLETE")
+    print("=" * 60)
+
+    print(
+        f"Original races: "
+        f"{len(original_races)}"
+    )
+
+    print(
+        f"Original horse rows: "
+        f"{len(rows)}"
+    )
+
+    print(
+        f"Clean races: "
+        f"{len(clean_races)}"
+    )
+
+    print(
+        f"Clean horse rows: "
+        f"{len(clean_rows)}"
+    )
+
+    print(
+        f"Rejected races: "
+        f"{len(review)}"
+    )
+
+    if review:
+        print("\nREJECTED RACES")
+
+        for item in review:
+            print(
+                f"  {item['race_key']}"
+            )
+
+            for reason in item["reasons"]:
+                print(
+                    f"    - {reason}"
                 )
 
-    return {
+    print(
+        f"\nSaved clean dataset: "
+        f"{CLEAN_DATASET_FILE}"
+    )
 
-        "total":
-            total,
+    print(
+        f"Saved review file: "
+        f"{REVIEW_FILE}"
+    )
 
-        "valid":
-            valid,
 
-        "invalid":
-            invalid,
+def main() -> None:
+    print("\n" + "=" * 60)
+    print("VALIDATING HORSE RACING TRAINING DATASET")
+    print("=" * 60)
 
-        "errors":
-            error_counts,
+    rows = load_dataset()
 
-    }
+    clean_rows, review = validate_dataset(
+        rows
+    )
+
+    save_json(
+        CLEAN_DATASET_FILE,
+        clean_rows,
+    )
+
+    save_json(
+        REVIEW_FILE,
+        review,
+    )
+
+    print_summary(
+        rows,
+        clean_rows,
+        review,
+    )
+
+
+if __name__ == "__main__":
+    main()
