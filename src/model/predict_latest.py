@@ -203,6 +203,9 @@ def main():
             "Skipped "
             f"{len(skipped_invalid_metadata)} program(s) with incomplete race metadata."
         )
+        print("Newest invalid program files:")
+        for name in sorted(skipped_invalid_metadata)[-10:]:
+            print(f"  - {name}")
 
     today = today_utc()
 
