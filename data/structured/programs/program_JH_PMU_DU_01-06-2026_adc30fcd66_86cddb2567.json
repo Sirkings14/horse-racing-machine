@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_01-06-2026_adc30fcd66_86cddb2567.txt",
-    "parsed_at": "2026-09-12T00:03:55.736011Z",
+    "parsed_at": "2026-09-12T00:21:31.264323Z",
     "date": "2026-06-01",
     "race": {
         "race_name": "PRIX DE CHATELPERRON",
@@ -12,7 +12,73 @@
         "distance": 2950,
         "prize_euros": 33000
     },
-    "horses": [],
+    "horses": [
+        {
+            "number": 1,
+            "horse": "IVAN DU JAYLE",
+            "description": ""
+        },
+        {
+            "number": 2,
+            "horse": "HELLO BOY DU PIC",
+            "description": ""
+        },
+        {
+            "number": 3,
+            "horse": "IRIS INTENSE",
+            "description": ""
+        },
+        {
+            "number": 4,
+            "horse": "IDEAL MOSSA",
+            "description": ""
+        },
+        {
+            "number": 5,
+            "horse": "IMPERATOR D'EM",
+            "description": ""
+        },
+        {
+            "number": 6,
+            "horse": "GOLDY SMILE",
+            "description": ""
+        },
+        {
+            "number": 7,
+            "horse": "HIGH TECH ROC",
+            "description": ""
+        },
+        {
+            "number": 8,
+            "horse": "HELIA SUCCES",
+            "description": ""
+        },
+        {
+            "number": 9,
+            "horse": "IASELMA",
+            "description": ""
+        },
+        {
+            "number": 10,
+            "horse": "HALTESS GRIFF",
+            "description": ""
+        },
+        {
+            "number": 11,
+            "horse": "IRENO DES PLAINES",
+            "description": ""
+        },
+        {
+            "number": 12,
+            "horse": "IDEAL DELADOU",
+            "description": ""
+        },
+        {
+            "number": 13,
+            "horse": "INDIAN PACIFIC",
+            "description": ""
+        }
+    ],
     "rankings": {
         "favorites": [
             13,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_01-05-2026_45278b86a1_bf9732a203.txt",
-    "parsed_at": "2026-09-12T00:03:55.518891Z",
+    "parsed_at": "2026-09-12T00:21:31.006622Z",
     "date": "2026-05-01",
     "race": {
         "race_name": "PRIX DE BEAUMESNIL",
@@ -12,7 +12,88 @@
         "distance": 2000,
         "prize_euros": 52800
     },
-    "horses": [],
+    "horses": [
+        {
+            "number": 1,
+            "horse": "LIBECCIO WIND",
+            "description": "Issu de Kingman et d'une lauréate de Groupe 1 à Ascot, ce frère utérin de Wuheida (Prix Marcel Boussac 2016) a dévoilé un bon potentiel, sans toutefois être à la hauteur de ses prestigieuses origines. Il débute dans les handicaps mais sa valeur semble cohérente, eu égard à ses excellentes lignes. Première chance."
+        },
+        {
+            "number": 2,
+            "horse": "LOHENGREEN",
+            "description": "Jugé digne de débuter dans le convoité Prix de Fontenoy, ce protégé de Christophe Escuder a simplement été devancé par deux excellents compétiteurs lors de ses deux dernières sorties. Sa valeur semble cohérente et il découvre donc le Val d'Or avec de solides ambitions."
+        },
+        {
+            "number": 3,
+            "horse": "TABEO",
+            "description": "Ce poulain allemand vient de signer une probante rentrée au Croisé-Laroche, dans une épreuve remportée par l'invaincu Wintersonne. Il a gagné pour son seul essai sur 2 000 mètres et devrait trouver sa voie à ce niveau, mais il aurait préféré une piste plus souple. Pourquoi pas ?"
+        },
+        {
+            "number": 4,
+            "horse": "MUST BAY",
+            "description": "Doté d'une bonne pointe de vitesse finale, ce représentant de Jean-Claude Seroul a fait bonne impression lors de ses deux parcours de remise en route. Ses lignes sont bonnes et sa valeur semble lui laisser toutes ses chances. Belle chance théorique."
+        },
+        {
+            "number": 5,
+            "horse": "PERSIAN GRACE",
+            "description": "Auteur d'un effort final d'anthologie en débutant, dans le convoité Prix de la Reboursière, elle nous a quelque peu laissés sur notre faim cette année. Elle va retrouver une piste rapide et semble très bien située en valeur 38. Si la course est sélective, sa redoutable pointe de vitesse peut faire merveille."
+        },
+        {
+            "number": 6,
+            "horse": "MON PAULIN",
+            "description": "Ce sujet régulier s'est très bien comporté dans le Quinté+ du 30 mars à Chantilly (4e). Cette distance est un peu longue pour lui et il aurait sans doute préféré une piste plus souple, mais sa compétitivité à cette valeur est certaine. Pas impossible."
+        },
+        {
+            "number": 7,
+            "horse": "BOX OFFICER",
+            "description": "Ce protégé de Stéphane Wattel s'est pleinement révélé cette année et vient de réaliser une véritable balade de santé à Argentan, pour ses débuts sur le gazon. Il possède beaucoup de tenue et semble correctement traité au poids. La méfiance est de mise."
+        },
+        {
+            "number": 8,
+            "horse": "ZELZARA",
+            "description": "Probablement rebutée par le terrain très souple le 10 mars, elle a montré un tout autre visage en dernier lieu à Deauville (2e), sur une piste rapide. Compétitive à cette valeur, cette excellente finisseuse a les moyens de jouer un rôle actif."
+        },
+        {
+            "number": 9,
+            "horse": "TI AMO BELLO",
+            "description": "Pour ses débuts dans les handicaps, le 30 mars à Chantilly, il a patienté en dernière position avant de finir de belle manière en dehors (5e). Il n'a probablement pas une grande marge à cette valeur, mais il peut, comme beaucoup d’autres vicé une place"
+        },
+        {
+            "number": 10,
+            "horse": "MARIA APOLLONIA",
+            "description": "Lors de sa rentrée, qui coïncidait avec ses débuts dans les handicaps, elle a bénéficié d'un bon parcours mais n'a pu franchement hausser le ton pour finir (5e). Elle n'a certainement pas une grande marge à cette valeur et sera uniquement envisagée en cas de défaillances des chevaux en vue."
+        },
+        {
+            "number": 11,
+            "horse": "EXTRAVAGANTE",
+            "description": "Jugée digne de débuter dans le recherché Prix de la Cascade (7e et dernière), cette élève de Mauricio Delcher-Sanchez est certainement montée en condition sur sa rentrée. Au mois d'octobre, elle avait fini tout près de Naomis, qui a remporté il y a peu une Listed toulousaine. Outsider intéressant."
+        },
+        {
+            "number": 12,
+            "horse": "WITTELSBACH",
+            "description": "Lors de sa rentrée, à Toulouse, il a patienté en net retrait avant de fournir un très bel effort final, montrant ainsi sa compétitivité en valeur 36. Il débute sur 2 000 mètres mais avait dévoilé de la tenue l'an dernier à Lyon-La Soie."
+        },
+        {
+            "number": 13,
+            "horse": "BLACKCLOVER",
+            "description": "Toujours maiden après cinq courses, cette pensionnaire de Xavier Blanchet compte toutefois quelques places intéressantes. Sa récente cinquième place est très intéressante et le retour sur 2 000 mètres ne va pas la déranger. Avis aux amateurs de sensations fortes !"
+        },
+        {
+            "number": 14,
+            "horse": "TOO DARN QUICK",
+            "description": "Ce frère utérin de la très bonne Melo Melo (lauréate de Groupe 2 et placée de Groupe 1) a joué de malchance lors de ses récents débuts dans les handicaps, alors qu'il avait les ressources pour gagner. Très bien placé au poids, il peut mettre tout le monde d'accord !"
+        },
+        {
+            "number": 15,
+            "horse": "YZYA",
+            "description": "Pour ses débuts sur 2 000 mètres, cette fille de Sottsass n'a pu réellement s'exprimer et a rallié le poteau avec des ressources intactes (10e). Elle est compétitive à cette valeur mais a besoin d'un déroulement au millimètre pour donner sa pleine mesure. Une question de parcours !"
+        },
+        {
+            "number": 16,
+            "horse": "POET'S LYRICS",
+            "description": "Estimée en début de carrière, elle s'est ensuite montrée assez décevante. Pour sa rentrée, à Pornichet, elle a dû changer de ligne mais a tout de même terminé correctement. Elle monte de catégorie et d'autres protagonistes lui sont tout de même préférables."
+        }
+    ],
     "rankings": {
         "favorites": [
             5,

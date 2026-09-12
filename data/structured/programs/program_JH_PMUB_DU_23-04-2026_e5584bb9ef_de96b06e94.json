@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_23-04-2026_e5584bb9ef_de96b06e94.txt",
-    "parsed_at": "2026-09-12T00:03:55.647628Z",
+    "parsed_at": "2026-09-12T00:21:31.168100Z",
     "date": "2026-03-14",
     "race": {
         "race_name": "PRIX DU PANTHEON",
@@ -12,7 +12,88 @@
         "distance": 3000,
         "prize_euros": 50900
     },
-    "horses": [],
+    "horses": [
+        {
+            "number": 1,
+            "horse": "EPHESUS",
+            "description": "Ce pensionnaire des époux Brandt, qui font feu de tout bois dans les handicaps actuellement, vient de signer une réapparition pleine de promesses à Deauville (2e). Il apprécie les distances de longue haleine et s'adapte à tous les terrains. Bref, ses débuts dans les handicaps se présentent sous de favorables auspices."
+        },
+        {
+            "number": 2,
+            "horse": "ANNABEL'S GHOST",
+            "description": "Ce fils de Waldgeist affiche certes un zéro pointé dans les Quinté+ en six essais, mais il est loin d'avoir démérité dans l'épreuve clé du 31 mars (7e). Il n'a aucune marge à cette valeur, mais reste capable de se placer à l'issue d'un parcours sur mesure."
+        },
+        {
+            "number": 3,
+            "horse": "CHESS",
+            "description": "Second atout Brandt, ce lauréat de Quinté+ a retrouvé du mordant grâce aux oeillères traditionnelles. Dans la course clé, il a simplement été devancé par Blarney, qui a ensuite survolé une Classe 2 bien composée. Première chance théorique."
+        },
+        {
+            "number": 4,
+            "horse": "EL CANEY",
+            "description": "Lauréat dès sa première sortie sous la férule de Damien Artu, le 13 mars, il a ensuite essuyé un cuisant échec dans l'épreuve clé. Sa marge de manoeuvre est inexistante à ce niveau et il aura sans doute du mal à se réhabiliter. Sans nous."
+        },
+        {
+            "number": 5,
+            "horse": "FERDINAND PREMIER",
+            "description": "Ce poulain délicat, notamment en avant-course, a été « dompté » par Christophe Soumillon lors de ses deux dernières sorties. Sa valeur a fait un bond de onze livres, mais ses limites actuelles sont inconnues et la longue distance devrait l'avantager. Attention !"
+        },
+        {
+            "number": 6,
+            "horse": "A BEAUREGARD",
+            "description": "Lauréat du Quinté+ du 11 novembre à Toulouse, à l'issue d'une belle lutte, il a ensuite eu du mal à encaisser sa pénalisation de sept livres. Même s'il a été délesté d'un kilo suite à son échec dans l'épreuve clé, d'autres protagonistes lui sont préférables."
+        },
+        {
+            "number": 7,
+            "horse": "BLACK SAXON",
+            "description": "Ce cheval dur a remporté la deuxième épreuve du Quinté+ de référence en costaud. Sa pénalisation de deux kilos n'est pas insurmontable et il peut adopter toutes les tactiques. De nouveau monté par le très en forme Augustin Madamet, il mérite une mention spéciale."
+        },
+        {
+            "number": 8,
+            "horse": "CUNCERTO",
+            "description": "Ce sujet éclectique monte en puissance après cinq mois d'absence et n'a pas démérité dans le Quinté+ de référence (5e). Néanmoins, il aurait préféré une piste souple et la corde 16 l'obligera sans doute à fournir un effort au début pour figurer en bon rang."
+        },
+        {
+            "number": 9,
+            "horse": "HUCHENANE",
+            "description": "Même s'il a déjà gagné sur gazon, il a signé ses meilleures valeurs sur le sable fibré. Il n'a plus de marge depuis son succès du 18 février à Pornichet et la corde 15 risque de le contraindre à patienter en retrait. Il y a mieux."
+        },
+        {
+            "number": 10,
+            "horse": "LA GUERCHE",
+            "description": "Véritable modèle de régularité, cette protégée de François Monfort enchaîne les places dans les handicaps provinciaux. Elle s'attaque à plus forte partie cette fois, mais notons qu'elle n'est jamais sortie des cinq premiers en six essais sur 3 000 mètres et plus. À glisser éventuellement en fin de combinaison."
+        },
+        {
+            "number": 11,
+            "horse": "HAVIASSOR",
+            "description": "Après deux sorties décevantes, il a réalisé un excellent mois de mars avec deux accessits, dont un dans la course de référence. Cette sortie atteste de sa capacité à briller dans les épreuves pour stayers. À l'issue d'un parcours sans encombre, sa place est à l'arrivée."
+        },
+        {
+            "number": 12,
+            "horse": "DEMPY",
+            "description": "Titulaire de cinq places en huit essais dans les Quinté+, cet élève de Davy Bonilla a montré sa compétitivité en valeur 34,5. Début décembre, il avait fini deuxième d'un événement sur 3 200 mètres, preuve que la distance ne lui posera aucun souci. Attention !"
+        },
+        {
+            "number": 13,
+            "horse": "MYKISS",
+            "description": "Ce double lauréat de Quinté+ n'a plus sa valeur d'antan, mais a conservé de beaux restes du haut de ses 9 ans. Il a signé une honorable réapparition à Moulins (5e) et a prouvé qu'il pouvait s'illustrer en bon terrain. À cette valeur, il n'est pas hors d'affaire pour les places."
+        },
+        {
+            "number": 14,
+            "horse": "SHEEMA'S ROSE",
+            "description": "Elle vient de mieux courir que ne l'indique le classement brut (6e) et les 600 mètres supplémentaires vont grandement l'avantager. Elle a retrouvé une valeur attrayante et n'a certainement pas été supplémentée sans ambitions. Très bon outsider !"
+        },
+        {
+            "number": 15,
+            "horse": "KING KARA",
+            "description": "Ce bon finisseur est confirmé sur ce genre de distances, mais il s'attaque à plus forte partie qu'à l'accoutumée. Il a déçu dans la deuxième épreuve de la course clé du 31 mars et semble un ton en dessous des principaux favoris. Gros outsider."
+        },
+        {
+            "number": 16,
+            "horse": "FAVOLO",
+            "description": "Certes, il vient de décevoir dans un handicap clodoaldien alors qu'il était très joué, mais le rallongement de la distance va grandement jouer en sa faveur. Il monte de catégorie, mais n'a pas encore tout montré. Il peut tenter les amateurs de sensations fortes."
+        }
+    ],
     "rankings": {
         "favorites": [
             3,

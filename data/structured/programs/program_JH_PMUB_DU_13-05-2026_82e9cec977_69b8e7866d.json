@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_13-05-2026_82e9cec977_69b8e7866d.txt",
-    "parsed_at": "2026-09-12T00:03:55.582597Z",
+    "parsed_at": "2026-09-12T00:21:31.085195Z",
     "date": "2026-05-13",
     "race": {
         "race_name": "PRIX DU PERREUX",
@@ -12,7 +12,88 @@
         "distance": 2700,
         "prize_euros": 90000
     },
-    "horses": [],
+    "horses": [
+        {
+            "number": 1,
+            "horse": "OMERTA BOKO",
+            "description": "En trois associations avec Paul Ploquin, ce fils de Face Time Bourbon compte un succès et une deuxième place. Il est absent depuis le 9 mars mais a pour habitude de bien courir frais. Malgré la qualité du lot, il n'est pas hors d'affaire, loin s'en faut !"
+        },
+        {
+            "number": 2,
+            "horse": "LOBBING DE BLARY",
+            "description": "Régulier dans l'ensemble, ce pensionnaire de Thomas Levesque a renoué avec le succès dans le Quinté+ du 10 avril. Il monte de catégorie cette fois et devra hausser son niveau de jeu pour espérer rivaliser. Sans en faire une impossibilité, il y a clairement mieux."
+        },
+        {
+            "number": 3,
+            "horse": "NELSON GREENWOOD",
+            "description": "Très appuyé lors de sa rentrée à Toulouse (1,3/1 !), il a causé une vive déception en prenant seulement la troisième place. Des progrès sont logiquement attendus et rappelons-nous qu'il avait joué de malchance sur la grande piste de Vincennes le 14 décembre, dans un bon lot. Un énorme regret."
+        },
+        {
+            "number": 4,
+            "horse": "ENOCK",
+            "description": "Ce fils de Vivid Wise As a bien du mal à rester dans les bonnes allures ces derniers temps. Ses performances de la fin d'été 2025 l'autorisent à avoir des ambitions en pareille compagnie, mais où en est-il réellement ? Pour l'heure, il doit rassurer."
+        },
+        {
+            "number": 5,
+            "horse": "KERALDO",
+            "description": "Ce protégé d'Alphonse Vanberghen présente la particularité de n'avoir jamais été disqualifié en 41 sorties publiques. Il va encore faire ce qu'il peut, mais force est de constater qu'il est largement barré par les 5 ans. Pas évident."
+        },
+        {
+            "number": 6,
+            "horse": "KEVIN PRINCE",
+            "description": "En dernier lieu, sur les 2 100 mètres de la grande piste, il n'a jamais pu s'exprimer et a rallié le poteau avec d'évidentes ressources (8e). Il a retrouvé la forme après un passage à vide en fin d'année dernière, mais il affronte un lot particulièrement relevé. Il remplirait son contrat en accrochant la quatrième ou cinquième place."
+        },
+        {
+            "number": 7,
+            "horse": "LOVER MAN",
+            "description": "Après deux sorties assez décevantes, ce cheval de train a renoué avec le succès le 27 avril à Cholet. Il fait partie des plus jeunes, possède de solides références sur ce parcours classique et se présentera de nouveau déferré des quatre pieds. Bref, il a beaucoup d'atouts dans son jeu !"
+        },
+        {
+            "number": 8,
+            "horse": "LUDIVINE",
+            "description": "Cette jument estimée a réalisé un bel hiver, même si celui-ci s'est conclu par une disqualification dans le Prix de la Mayenne (Gr. 3). Elle a déjà devancé LUNELLA LEMAN (14) sur ce parcours et peut espérer un bon classement dès sa rentrée."
+        },
+        {
+            "number": 9,
+            "horse": "KEY LADY",
+            "description": "Cette excellente sprinteuse vient de rassurer ses supporters dans l'étape du Trophée Vert au Touquet (2e), derrière l'intouchable Just de l'Oison. Elle apprécie les courses rythmées et reste tributaire du parcours, mais elle peut, comme d'autres, envisager une place."
+        },
+        {
+            "number": 10,
+            "horse": "EVERY TIME WINNER",
+            "description": "Très joué dans le Prix de Garabit (5,1/1), il a rapidement disparu sur faute, causant ainsi une vive déception. Il affrontera des 5 ans de grande qualité, mais ses performances hivernales lui confèrent une bonne chance théorique. À retenir."
+        },
+        {
+            "number": 11,
+            "horse": "KEY OF LOVE",
+            "description": "Elle s'est bien assagie après un début de carrière riche en disqualifications. Elle a montré sa forme dans un récent Quinté+ lavallois et retrouve un parcours sur lequel elle avait fait belle impression l'hiver dernier (deux succès et une deuxième place). Malgré la forte opposition, elle peut espérer un accessit."
+        },
+        {
+            "number": 12,
+            "horse": "LORD DELO",
+            "description": "Ce trotteur de premier plan est délicat dans la phase initiale mais possède un gros « moteur ». Il a repris de la fraîcheur depuis son accessit du 11 mars et sera déferré des antérieurs, comme lors de ses meilleures sorties. Rarement décevant avec \"JMB\" aux commandes (cinq succès et quatre places en dix associations), il s'annonce très dangereux !"
+        },
+        {
+            "number": 13,
+            "horse": "BROTHERS IN ARMS",
+            "description": "Entraîné en Allemagne par la famille Nimczyk, il a repris de la fraîcheur depuis son très honorable hiver (deux accessits d'honneur). Il se présentera en 'mode course' d'emblée, mais trouvera d'excellents 5 ans sur sa route. Pour la quatrième ou cinquième place seulement."
+        },
+        {
+            "number": 14,
+            "horse": "LUNELLA LEMAN",
+            "description": "Époustouflante l'hiver dernier, cette élève de Benoît Robin a signé une rentrée victorieuse dans le Prix Henri Levesque (Gr. 2), face aux seules femelles. Elle a déjà devancé les mâles et trouve ici une tâche à sa portée. Candidate au succès !"
+        },
+        {
+            "number": 15,
+            "horse": "KOOL DES CHAMPS",
+            "description": "Désormais entraîné en Belgique, cet ex-pensionnaire de Frédéric Prat se heurte à trop forte partie ici. Il reste meilleur sur les profils plats et les 5 ans lui sont nettement supérieurs en valeur pure. Sa tâche s'annonce difficile."
+        },
+        {
+            "number": 16,
+            "horse": "KARLITO",
+            "description": "Absent des programmes durant onze mois, ce sujet doué aura besoin de plusieurs parcours pour recouvrer ses sensations. Il découvre un bon engagement sur le papier mais restera chaussé. Dès lors, mieux vaut le mettre de côté."
+        }
+    ],
     "rankings": {
         "favorites": [
             14,

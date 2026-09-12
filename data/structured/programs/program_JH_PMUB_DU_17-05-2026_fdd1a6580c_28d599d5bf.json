@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_17-05-2026_fdd1a6580c_28d599d5bf.txt",
-    "parsed_at": "2026-09-12T00:03:55.616479Z",
+    "parsed_at": "2026-09-12T00:21:31.125040Z",
     "date": "2026-05-17",
     "race": {
         "race_name": null,
@@ -12,7 +12,78 @@
         "distance": 6000,
         "prize_euros": 837000
     },
-    "horses": [],
+    "horses": [
+        {
+            "number": 1,
+            "horse": "IN LOVE",
+            "description": "Quatrième en 2024 et septième l'an dernier, ce protégé d'Hugo Mérienne nous a quelque peu déçus cette saison. La piste collante va lui convenir et il tient la distance, mais sa marge de manoeuvre est inexistante. Il devra bénéficier de circonstances favorables pour accrocher une allocation."
+        },
+        {
+            "number": 2,
+            "horse": "GOLD TWEET",
+            "description": "Ce formidable compétiteur s'est montré impérial dans le Prix Ingré, un Groupe 2 qui sert de tremplin à ce sommet. Il possède beaucoup de fond et ne sera pas dérangé par la piste collante. Sixième en 2024, il semble en mesure de faire beaucoup mieux cette saison. On y croit."
+        },
+        {
+            "number": 3,
+            "horse": "BON GARCON",
+            "description": "Très convaincant l'an dernier, ce fils de Masterstroke s'est montré décevant lors de ses deux parcours de remise en jambes. Il vaut beaucoup mieux que cela et va apprécier la piste collante. S'il tient la distance, il peut venir jouer les trouble-fête."
+        },
+        {
+            "number": 4,
+            "horse": "JUNTOS GANAMOS",
+            "description": "Tombé dans l'édition 2024 alors qu'il était grandissime favori, il éprouve toutes les peines du monde à retrouver son meilleur niveau après une longue absence. Ses deux courses de remise en route à Compiègne sont intéressantes, mais où en est-il réellement ? De sérieux doutes subsistent."
+        },
+        {
+            "number": 5,
+            "horse": "TOSCANA DU BERLAIS",
+            "description": "Sacré dans le Prix La Haye Jousselin 2025, l'équivalent automnal de ce Groupe 1, ce sujet régulier a connu une préparation idéale. Il a remarquablement tenu sa partie dans le Prix Ingré (2e) et retrouve GOLD TWEET (2) avec quatre kilos d'avantage. Quatrième l'an dernier, il devrait au moins faire aussi bien."
+        },
+        {
+            "number": 6,
+            "horse": "KAPACA DE THAIX",
+            "description": "Épatant à Pau l'hiver dernier, ce protégé de Daniela Mele a profité de sa condition avancée pour s'illustrer dans les épreuves préparatoires à ce Groupe 1. Il a repris un peu de fraîcheur et appréciera la piste collante, mais il semble tout de même un ton en dessous des meilleurs. En fin de combinaison."
+        },
+        {
+            "number": 7,
+            "horse": "KENTUCKY WOOD",
+            "description": "Bon deuxième du Prix Troytown, il a ensuite causé une vive déception dans le Prix Ingré (9e). Il a déjà brillé en terrain collant, mais devra sortir le grand jeu face à une telle opposition. Pour ses débuts sur aussi long, il aura sans doute du mal à tirer son épingle du jeu."
+        },
+        {
+            "number": 8,
+            "horse": "KOLOKICO",
+            "description": "Abonné aux deuxièmes places depuis plus d'un an, ce champion est monté en puissance après sa probante réapparition dans le Prix Murat. Il s'adapte à tous les terrains et avait montré l'an dernier que les 6 000 mètres ne lui posaient aucun problème. C'est son année !"
+        },
+        {
+            "number": 9,
+            "horse": "SEL JEM",
+            "description": "Arrêté près de deux ans après son sacre dans l'édition 2022, ce représentant de la famille Papot s'est montré plaisant en fin d'année dernière au plus haut niveau. Ses deux courses de remise en jambes lui ont sans doute fait le plus grand bien et l'état de la piste va lui convenir. Attention !"
+        },
+        {
+            "number": 10,
+            "horse": "KAADAM",
+            "description": "S'il n'a plus gagné depuis son sacre dans le Grand Steeple-Chase des 4 ans (Gr.1) en novembre 2024, il a régulièrement prouvé sa valeur au plus haut niveau, sans être très chanceux. Par exemple, il galopait librement dans le Prix Ingré au moment de sa bévue. S'il reste debout, il peut gagner."
+        },
+        {
+            "number": 11,
+            "horse": "LE PETIT CHEVAL",
+            "description": "Endurci à la rude école des gros handicaps, ce pensionnaire de Florian Bellemere a franchi un cap cette année. Il a impressionné dans un récent Groupe 3, en devançant KAADAM (10), mais il découvre cette distance atypique et retrouve son rival avec trois kilos de désavantage. Plutôt pour une place."
+        },
+        {
+            "number": 12,
+            "horse": "KARRE D'AS",
+            "description": "Cette adepte de la course en tête n'a pas été épargnée par les ennuis de santé et ne s'est produite qu'à dix reprises à l'âge de 6 ans. Elle avait besoin de courir lors de sa rentrée et sera bien plus affûtée cette fois. Si elle tient la distance, elle peut mener la vie dure à ses rivaux."
+        },
+        {
+            "number": 13,
+            "horse": "CROWN DU BERLAIS",
+            "description": "Ce représentant d'Hugo et Pierre Pilarski tente un sacré pari à l'âge de 5 ans. Il n'a pu réellement confirmer son probant accessit dans le Prix Robert de Clermont- Tonnerre (Gr.3) et pourrait se révéler un peu tendre pour briller face à des chevaux aussi expérimentés. Tâche difficile."
+        },
+        {
+            "number": 14,
+            "horse": "KIVALA DU BERLAIS",
+            "description": "Ce troisième atout de David Cottin a marqué les esprits dans le Prix Murat (Gr.3), alors qu'il débutait en steeple-chase, après une faute sérieuse. Viser le Grand Steeple de Paris avec si peu d'expérience dans la spécialité est un pari osé, mais ce fils de Saint des Saints sort clairement de l'ordinaire. Coup de poker."
+        }
+    ],
     "rankings": {
         "favorites": [
             8,

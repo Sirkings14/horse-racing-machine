@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-06-08-2026_f92cecf611_c428a1ac4a.txt",
-    "parsed_at": "2026-09-12T00:03:55.494361Z",
+    "parsed_at": "2026-09-12T00:21:30.978567Z",
     "date": "2026-08-06",
     "race": {
         "race_name": "PRIX DES PYRAMIDES",
@@ -12,7 +12,78 @@
         "distance": 2875,
         "prize_euros": 46000
     },
-    "horses": [],
+    "horses": [
+        {
+            "number": 1,
+            "horse": "MISTI DE CORDAY",
+            "description": "Il a pris la cinquième place du Quinté+ de référence, sur le parcours du jour, il y a une quinzaine de jours (1'13\"0). Il va évoluer dans la même configuration de ferrure, mais il y a quand même quelques clients supplémentaires au départ. Un accessit reste dans ses cordes."
+        },
+        {
+            "number": 2,
+            "horse": "MISTER CHARLY",
+            "description": "En quatre tentatives à Enghien, il compte deux accessits (dont un sur le parcours du jour) et deux disqualifications. Il déçoit cette année et évoluer dans cette nouvelle configuration de ferrure ne l'a pas réellement amélioré. On ne peut le retenir que dans un second choix."
+        },
+        {
+            "number": 3,
+            "horse": "MISS DISCO",
+            "description": "Elle s'est contentée d'une septième place, il y a une quinzaine de jours, pour son premier essai sur le parcours. Il ne s'agissait que de la seconde course de rentrée pour cette pouliche qui avait séduit en fin de meeting d'hiver. Benjamin Rochard l'a, a priori, préférée à MY SAVE QUICK (10). Méfiance."
+        },
+        {
+            "number": 4,
+            "horse": "MOURILLON",
+            "description": "S'il vient de se montrer fautif sur le parcours du jour, il s'y était imposé l'été dernier. Ce sujet de qualité n'est présenté qu'à bon escient et court après une victoire depuis plusieurs semaines. Il performe déferré, mais est parfois fautif dans cette configuration. Tout bon ou tout mauvais."
+        },
+        {
+            "number": 5,
+            "horse": "MEYDAN VOIRONS",
+            "description": "Ce sujet tout neuf reste sur deux victoires et un accessit d'honneur sur cette piste et vient de tourner en 1'12\"6 sur le parcours du jour. Rarement déferré, il performe dans cette configuration et sa candidature ne présente aucune ombre au tableau. Il ne sera pas loin du compte."
+        },
+        {
+            "number": 6,
+            "horse": "MAESTRO DU CHOQUEL",
+            "description": "Il s'est imposé à Enghien, sur 2 150 mètres, et compte une troisième place et une disqualification sur le parcours du jour. Ecarté plusieurs mois de la compétition, il totalise trois disqualifications en autant de tentatives depuis son retour. On le réservera aux amateurs de sensations fortes."
+        },
+        {
+            "number": 7,
+            "horse": "MARS COBBA",
+            "description": "Il compte deux accessits en autant d'apparitions sur le parcours du jour, avec un meilleur chrono de 1'12\"8. Ecarté de la compétition cet hiver, il monte en puissance et s'est classé deuxième, à Vincennes, la seule fois qu'Alexandre Abrivard l'a piloté. C'est une chance régulière."
+        },
+        {
+            "number": 8,
+            "horse": "MONSIEUR AS",
+            "description": "Il s'est contenté de la sixième place, sur le parcours du jour, pour sa première incursion à Enghien (1'14\"2). Cela n'empêche pas Sébastien Guarato d'afficher sa confiance dans ce sujet qui avait aligné quatre victoires à 3 ans. Confié pour la première fois à Paul Ploquin, c'est un regret."
+        },
+        {
+            "number": 9,
+            "horse": "MARILYN MONROE",
+            "description": "En trois tentatives à Enghien, elle totalise deux accessits d'honneur (dont un sur le parcours du jour) et une disqualification dernièrement, alors qu'elle s'annonçait compétitive. Elle reste associée à Franck Nivard, mais évoluera seulement déferrée des postérieurs cette fois. Plutôt un accessit."
+        },
+        {
+            "number": 10,
+            "horse": "MY SAVE QUICK",
+            "description": "Elle vient de se classer deuxième sur le parcours (1'13\"0) pour sa première incursion à Enghien. Elle a franchi un cap depuis qu'elle évolue déferrée. Seul hic, elle doit à nouveau changer de partenaire, mais est confiée à Alexis Collette, un homme en forme. Obligé d'y croire."
+        },
+        {
+            "number": 11,
+            "horse": "MOHAWK",
+            "description": "Il compte une victoire et une troisième place (plus une disqualification) en trois apparitions sur le parcours, avec un meilleur chrono de 1'13\"8. Il est en forme, évolue dans une configuration qui lui convient et s'est imposé la seule fois qu'Eric Raffin l'a drivé. Sa place est à l'arrivée."
+        },
+        {
+            "number": 12,
+            "horse": "MISTER BARRA",
+            "description": "Il n'a pu faire mieux qu'une quatrième place en trois apparitions sur le parcours, avec un meilleur chrono de 1'14\"4. Ecarté de la compétition au sortir de l'hiver, il effectue ici une seconde course de rentrée, toujours ferré, a priori sans ambition. On peut l'écarter."
+        },
+        {
+            "number": 13,
+            "horse": "MARQUISE DE MAGNY",
+            "description": "Ce sera une première à Enghien pour elle. Elle est absente depuis une disqualification sous la selle à Vincennes début avril. Elle est plus confirmée au sulky et a largement fait ses preuves, toujours dans le temple du trot. Elle nous laisse cependant dans le doute cette saison. Attendons de voir."
+        },
+        {
+            "number": 14,
+            "horse": "MUZE MAKER",
+            "description": "Ce sujet de qualité n'a que neuf courses au compteur (pour cinq victoires) et va découvrir la piste d'Enghien. Tracé et distance ne devraient pas lui poser de problème. Il a repris de la fraîcheur après sa dernière sortie fin mai et ne pouvait rêver meilleure opportunité. Base incontournable."
+        }
+    ],
     "rankings": {
         "favorites": [
             14,
