@@ -161,61 +161,106 @@ def build_archive_page_urls(base_url):
     return urls
 
 
+def extract_pdf_links_from_soup(soup, page_url):
+    links = []
+
+    for link in soup.find_all("a", href=True):
+        href = link.get("href", "").strip()
+        if not href or href.startswith("#"):
+            continue
+
+        absolute_url = normalize_url(urljoin(page_url, href))
+        parsed = urlparse(absolute_url)
+
+        if parsed.path.lower().endswith(".pdf") and absolute_url not in links:
+            links.append(absolute_url)
+
+    return links
+
+
 def get_pdf_links(page_url):
-    print(
-        f"Checking archive page: "
-        f"{page_url}"
-    )
+    print(f"Checking archive page: {page_url}")
 
     response = requests.get(
         page_url,
         headers=HEADERS,
-        timeout=30
+        timeout=30,
     )
-
     response.raise_for_status()
 
-    soup = BeautifulSoup(
-        response.text,
-        "html.parser"
-    )
+    soup = BeautifulSoup(response.text, "html.parser")
+    pdf_links = extract_pdf_links_from_soup(soup, page_url)
 
-    pdf_links = []
+    # Some LONAB listing pages link first to an article/detail page rather than
+    # directly to the PDF. Follow likely journal/result detail links one level
+    # and extract the real PDF from there. This prevents a fresh daily program
+    # from being missed simply because the listing HTML changed shape.
+    detail_urls = []
 
-    for link in soup.find_all(
-        "a",
-        href=True
-    ):
-        href = link.get(
-            "href",
-            ""
-        ).strip()
+    for link in soup.find_all("a", href=True):
+        label = " ".join(
+            filter(
+                None,
+                [
+                    link.get_text(" ", strip=True),
+                    link.get("title", ""),
+                    link.get("aria-label", ""),
+                ],
+            )
+        ).upper()
 
-        if not href:
+        if not any(
+            token in label
+            for token in (
+                "JOURNAL HIPPIQUE",
+                "PMU'B",
+                "PMU’B",
+                "RÉSULTAT",
+                "RESULTAT",
+                "TÉLÉCHARGER",
+                "TELECHARGER",
+            )
+        ):
             continue
 
-        if href.startswith("#"):
+        href = link.get("href", "").strip()
+        if not href or href.startswith("#"):
             continue
 
-        absolute_url = urljoin(
-            page_url,
-            href
-        )
-
-        absolute_url = normalize_url(
-            absolute_url
-        )
-
-        parsed = urlparse(
-            absolute_url
-        )
-
-        if not parsed.path.lower().endswith(".pdf"):
+        detail_url = normalize_url(urljoin(page_url, href))
+        if detail_url.lower().endswith(".pdf"):
             continue
 
-        if absolute_url not in pdf_links:
-            pdf_links.append(
-                absolute_url
+        if urlparse(detail_url).netloc != urlparse(page_url).netloc:
+            continue
+
+        if detail_url not in detail_urls:
+            detail_urls.append(detail_url)
+
+    for detail_url in detail_urls[:50]:
+        try:
+            detail_response = requests.get(
+                detail_url,
+                headers=HEADERS,
+                timeout=30,
+            )
+            detail_response.raise_for_status()
+
+            detail_soup = BeautifulSoup(
+                detail_response.text,
+                "html.parser",
+            )
+
+            for pdf_url in extract_pdf_links_from_soup(
+                detail_soup,
+                detail_url,
+            ):
+                if pdf_url not in pdf_links:
+                    pdf_links.append(pdf_url)
+
+        except Exception as error:
+            print(
+                f"Detail page skipped: {detail_url} | {error}"
             )
 
     return pdf_links
