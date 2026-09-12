@@ -1,6 +1,6 @@
 from __future__ import annotations
 import json, os
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 import requests
 
@@ -14,7 +14,7 @@ def send_latest_prediction() -> bool:
         print("Telegram skipped: secrets are not configured.")
         return False
     payload = json.loads(PREDICTION_FILE.read_text(encoding="utf-8"))
-    if payload.get("mode") != "future_or_unmatched":
+    if payload.get("mode") not in {"future_or_unmatched", "current_or_future_unmatched"}:
         print("Telegram skipped: no current/future prediction is available.")
         return False
     race = payload.get("race") or {}
@@ -24,10 +24,11 @@ def send_latest_prediction() -> bool:
     except ValueError:
         print("Telegram skipped: prediction has an invalid race date.")
         return False
-    if parsed_race_date < date.today():
+    today = datetime.now(timezone.utc).date()
+    if parsed_race_date < today:
         print(
             f"Telegram skipped: stale prediction for {parsed_race_date.isoformat()} "
-            f"(today is {date.today().isoformat()})."
+            f"(today is {today.isoformat()})."
         )
         return False
     numbers = payload.get("recommended_numbers") or []
