@@ -23,7 +23,9 @@ RESULTS_URLS = (
 )
 
 # Number of archive pages to inspect.
-HISTORICAL_PAGES = int(os.getenv("HISTORICAL_PAGES", "250"))
+# Daily autonomous runs should stay fast and prioritize the newest pages.
+# Use HISTORICAL_PAGES=250 only for an intentional one-off historical backfill.
+HISTORICAL_PAGES = int(os.getenv("HISTORICAL_PAGES", "5"))
 
 HEADERS = {
     "User-Agent": (
