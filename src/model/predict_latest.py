@@ -209,14 +209,25 @@ def main():
 
     today = today_utc()
 
-    # Predict the nearest eligible race first. Never select a stale program.
-    eligible = [
-        item
-        for item in programs
-        if race_key(item[1]) not in historical
-        and program_race_date(item[1]) is not None
+    # First prefer genuinely upcoming unmatched programs. Historical matching
+    # must not be allowed to hide a newly published program just because a
+    # malformed/old record produced the same key.
+    future = [
+        item for item in programs
+        if program_race_date(item[1]) is not None
         and program_race_date(item[1]) >= today
     ]
+    future_unmatched = [
+        item for item in future
+        if race_key(item[1]) not in historical
+    ]
+    eligible = future_unmatched or future
+
+    if future and not future_unmatched:
+        print(
+            "All current/future programs already exist in historical keys; "
+            "using the nearest current/future program instead of sending nothing."
+        )
 
     eligible.sort(
         key=lambda item: (
@@ -226,6 +237,15 @@ def main():
     )
 
     if not eligible:
+        available_dates = sorted({
+            program_race_date(payload).isoformat()
+            for _, payload in programs
+            if program_race_date(payload) is not None
+        })
+        print(
+            "Available parsed program dates: "
+            + (", ".join(available_dates[-10:]) if available_dates else "none")
+        )
         result = {
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "mode": "no_eligible_future_race",
