@@ -39,7 +39,16 @@ jobs:
       - name: Validate Training Dataset
         run: python src/dataset/dataset_validator.py
 
-      - name: Show Dataset Summary
+      - name: Train Final Model
+        run: python -m src.model.train_model
+
+      - name: Run Walk-Forward Backtest
+        run: python -m src.model.backtest
+
+      - name: Generate Latest Prediction
+        run: python -m src.model.predict_latest
+
+      - name: Show Dataset and Model Summary
         run: |
           echo "============================================"
           echo "TRAINING DATASET"
@@ -48,11 +57,31 @@ jobs:
           ls -lh data/dataset/training_dataset_clean.json data/dataset/dataset_review.json
 
           echo ""
-          echo "Structured programs/results:" 
+          echo "============================================"
+          echo "MODEL OUTPUTS"
+          echo "============================================"
+          ls -lh data/model/top3_model.json
+          ls -lh data/model/backtest_report.json
+          ls -lh data/model/latest_prediction.json
+
+          echo ""
+          echo "============================================"
+          echo "BACKTEST REPORT"
+          echo "============================================"
+          cat data/model/backtest_report.json
+
+          echo ""
+          echo "============================================"
+          echo "LATEST PREDICTION"
+          echo "============================================"
+          cat data/model/latest_prediction.json
+
+          echo ""
+          echo "Structured programs/results:"
           find data/structured/programs -name '*.json' | wc -l
           find data/structured/results -name '*.json' | wc -l
 
-      - name: Save machine data
+      - name: Save machine data and model outputs
         run: |
           git config --global user.name "Horse Racing Machine"
           git config --global user.email "race-machine@github-actions"
@@ -60,7 +89,7 @@ jobs:
           git add data/
 
           if git diff --cached --quiet; then
-            echo "No new machine data to save."
+            echo "No new machine data or model outputs to save."
           else
             git commit -m "Update race machine data and validated training dataset"
             git push
