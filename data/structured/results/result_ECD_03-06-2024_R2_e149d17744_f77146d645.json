@@ -1,0 +1,131 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_03-06-2024_R2_e149d17744_f77146d645.txt",
+    "parsed_at": "2026-09-12T07:31:24.844251Z",
+    "date": "2024-06-03",
+    "meeting": 2,
+    "track": "CHATEAUBRIANT",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                10,
+                6,
+                12,
+                700,
+                17,
+                33,
+                600,
+                7
+            ],
+            "winner": 10,
+            "second": 6,
+            "third": 12,
+            "fourth": 700,
+            "fifth": 17
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                3,
+                8,
+                7,
+                650,
+                6,
+                1,
+                400,
+                284
+            ],
+            "winner": 3,
+            "second": 8,
+            "third": 7,
+            "fourth": 650,
+            "fifth": 6
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                2,
+                4,
+                7,
+                650,
+                400,
+                154
+            ],
+            "winner": 2,
+            "second": 4,
+            "third": 7,
+            "fourth": 650,
+            "fifth": 400
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                10,
+                14,
+                1,
+                2,
+                800,
+                17,
+                500,
+                28
+            ],
+            "winner": 10,
+            "second": 14,
+            "third": 1,
+            "fourth": 2,
+            "fifth": 800
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                1,
+                8,
+                10,
+                350,
+                7,
+                900,
+                621
+            ],
+            "winner": 1,
+            "second": 8,
+            "third": 10,
+            "fourth": 350,
+            "fifth": 7
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                1,
+                4,
+                2,
+                750,
+                5,
+                650,
+                350
+            ],
+            "winner": 1,
+            "second": 4,
+            "third": 2,
+            "fourth": 750,
+            "fifth": 5
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                10,
+                3,
+                1,
+                750,
+                16,
+                350,
+                30
+            ],
+            "winner": 10,
+            "second": 3,
+            "third": 1,
+            "fourth": 750,
+            "fifth": 16
+        }
+    ]
+}

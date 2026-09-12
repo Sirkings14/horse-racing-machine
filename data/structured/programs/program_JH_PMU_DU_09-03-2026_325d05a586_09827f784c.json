@@ -1,0 +1,141 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMU_DU_09-03-2026_325d05a586_09827f784c.txt",
+    "parsed_at": "2026-09-12T07:31:24.593299Z",
+    "date": "2026-03-09",
+    "race": {
+        "race_name": "PRIX DE CANAPVILLE - ATTELE",
+        "track": "CAEN",
+        "race_number": 4,
+        "race_type": "ATTELE",
+        "runners_count": 16,
+        "distance": 2450,
+        "prize_euros": 35000
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "LIONEL MEARAS",
+            "description": "Ce sera une première à Caen pour ce trotteur scandinave arrivé sur notre sol au sortir de l'été dernier. Sans parvenir à vaincre, il a laissé entrevoir de belles possibilités cet hiver à Vincennes. Reste l'inconnue de la corde à droite, mais cela n'inquiète pas son pilote. Peut même gagner."
+        },
+        {
+            "number": 2,
+            "horse": "LOCO FLIGNY",
+            "description": "Il va découvrir la piste de Caen. S'il se produit peu corde à droite, il y obtient d'excellents résultats. Il n'a pas démérité à Vincennes cet hiver après un succès en début de meeting. Evoluer pieds nus ne l'a pas métamorphosé et il a besoin d'être préservé dans un parcours. Un accessit seulement."
+        },
+        {
+            "number": 3,
+            "horse": "FORCE OF NATURE",
+            "description": "Ce grand voyageur a posé ses valises sur notre sol cet hiver. On l'a notamment vu se classer dans le sillage immédiat de Lionel Mearas à Vincennes. A l'inverse de son rival, il a l'expérience des tracés à main droite. David Thomain va le driver pour la première fois. Obligé d'y croire."
+        },
+        {
+            "number": 4,
+            "horse": "LARIANO",
+            "description": "Prometteur en début de carrière, il a vu son ascension contrariée par des soucis de santé. Il compte une disqualification à Caen, pour ses débuts, et son aptitude à la piste reste donc une énigme. Il est en retard de gains et a maintenant deux courses de rentrée dans les jambes. On s'en méfie."
+        },
+        {
+            "number": 5,
+            "horse": "L'ATOLL",
+            "description": "Après une faute \"mortelle\", il avait tracé un parcours intéressant pour sa seule incursion sur le tracé, en 2024. Il est d'ailleurs très performant corde à droite. Il a couru après un succès cet hiver à Vincennes et dispose d'une marge de progression. Sa place est encore à l'arrivée."
+        },
+        {
+            "number": 6,
+            "horse": "LOVEBIRD",
+            "description": "Il avait joué de malchance pour son premier essai sur le parcours, en octobre dernier. Gabi Gelormini affiche avec lui 83% de réussite (5 sur 6) et est persuadé que cette piste est faite pour lui. Ce n'est certes pas un \"gagneur\", mais il est sérieux et va encore faire sa course. Un gros regret."
+        },
+        {
+            "number": 7,
+            "horse": "LAROZE DU GERS",
+            "description": "Elle va découvrir la piste caennaise et n'est pas une grande droitière (même si elle a gagné à Reims), de l'aveu même de son entourage. Imprévisible, elle totalise sept victoires et huit disqualifications en dix-sept tentatives ! Une chose est sûre, c'est sa grande forme. Ce sera donc tout ou rien."
+        },
+        {
+            "number": 8,
+            "horse": "LUMINOUS STAR",
+            "description": "Cette bonne droitière s'était classée deuxième pour sa seule apparition sur le parcours, en début de carrière. Elle s'est montrée particulièrement indocile cet hiver. Changer de piste va lui faire du bien. Elle n'a pas de marge de manoeuvre. Mais l'engagement est idéal. En fin de combinaison."
+        },
+        {
+            "number": 9,
+            "horse": "FIGHTER KRONOS",
+            "description": "Ce trotteur venu de Suède a joué de malchance pour sa première apparition sur notre sol, à Vincennes, et va donc découvrir un tracé à main droite. Cela n'inquiète pas son mentor et sa qualité ne fait aucun doute. Même s'il n'est pas des mieux engagés, il faudra compter avec lui."
+        },
+        {
+            "number": 10,
+            "horse": "OMERTA BOKO",
+            "description": "Ce fils de Face Time Bourbon est arrivé chez Dominik Locqueneux pour le meeting d'hiver et s'est imposé d'entrée de jeu à Vincennes, avant d'échouer au niveau supérieur. Sa forme est donc sujette à caution et il va découvrir un tracé à main droite. Mais, en valeur pure, il a son mot à dire."
+        },
+        {
+            "number": 11,
+            "horse": "FEUDALE DEGLI DEI",
+            "description": "Si ce sera une première à Caen pour ce sujet étranger, fils de Brillantissime, il a déjà gagné corde à droite (Berlin-Mariendorf). Sur notre sol, il s'est imposé à Vincennes (déjà associé à Yoann Lebourgeois) et son mentor ne cache pas avoir préparé cet objectif. Mieux vaut le retenir."
+        },
+        {
+            "number": 12,
+            "horse": "LA STAR ROC",
+            "description": "Cette bonne droitière s'était rapidement montrée fautive pour sa première apparition à Caen. Sans démériter, elle n'a pas fait d'étincelles à Vincennes cet hiver. Son mentor n'est cependant pas négatif et elle va évoluer dans sa meilleure configuration. Un accessit reste dans ses cordes."
+        },
+        {
+            "number": 13,
+            "horse": "LYZIA DES AGETS",
+            "description": "Cette bonne jument montée, lauréate à Vincennes en début de meeting d'hiver, n'a pu faire mieux qu'une cinquième place en deux apparitions sous la selle à Caen. Son mentor ne lui interdit rien, mais elle va affronter une sérieuse opposition et reste ferrée. Mieux vaut la revoir."
+        },
+        {
+            "number": 14,
+            "horse": "LARA DU LERRE",
+            "description": "Cette bonne jument montée (deuxième sur le parcours du jour en mai dernier) n'est pas dénuée de moyens au sulky. L'engagement n'est guère favorable au second échelon. Elle manque de vitesse et va tenter de \"ramasser les morts\" si l'épreuve est sélective. Cela reste très hypothétique."
+        },
+        {
+            "number": 15,
+            "horse": "LIZZANO D'ALOUETTE",
+            "description": "Il va découvrir la piste de Caen, mais a déjà bien fait corde à droite (Vichy). Il a été malade après s'être imposé à Vincennes mi-janvier et effectue donc ici une vraie course de rentrée. Il va rester ferré pour l'occasion et son pilote va le driver sans ambition. Pas pour cette fois."
+        },
+        {
+            "number": 16,
+            "horse": "LORD DU BASSIN",
+            "description": "Ce sujet de qualité a échoué pour sa seule apparition à main droite (Meslay-du-Maine). Il reste sur deux victoires à Vincennes et courir de façon espacée n'est pas un souci pour lui. En revanche, il va évoluer ferrer cette fois-ci. Toutes les conditions ne sont donc pas réunies. Plutôt une place."
+        }
+    ],
+    "rankings": {
+        "favorites": [
+            7,
+            1,
+            3,
+            5,
+            11,
+            9,
+            4
+        ],
+        "form": [
+            5,
+            7,
+            3,
+            16,
+            9
+        ],
+        "class": [
+            6,
+            9,
+            11,
+            1,
+            12
+        ],
+        "progress": [
+            9,
+            10,
+            4,
+            3,
+            1
+        ],
+        "regularity": [
+            16,
+            6,
+            5,
+            12,
+            3
+        ]
+    },
+    "published_arrival": [
+        5,
+        8,
+        15
+    ]
+}

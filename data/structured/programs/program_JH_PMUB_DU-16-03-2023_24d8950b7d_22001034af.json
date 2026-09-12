@@ -1,0 +1,136 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMUB_DU-16-03-2023_24d8950b7d_22001034af.txt",
+    "parsed_at": "2026-09-12T07:31:21.913101Z",
+    "date": "2023-03-14",
+    "race": {
+        "race_name": null,
+        "track": null,
+        "race_number": null,
+        "race_type": "ATTELE",
+        "runners_count": 16,
+        "distance": 200,
+        "prize_euros": 35000
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "DUEL DU GERS",
+            "description": ""
+        },
+        {
+            "number": 2,
+            "horse": "ETONNANT",
+            "description": ""
+        },
+        {
+            "number": 3,
+            "horse": "GOSPEL PAT",
+            "description": ""
+        },
+        {
+            "number": 4,
+            "horse": "DEXTER CHATHO",
+            "description": ""
+        },
+        {
+            "number": 5,
+            "horse": "ELVIS DU VALLON",
+            "description": ""
+        },
+        {
+            "number": 6,
+            "horse": "CE BELLO ROMAIN",
+            "description": ""
+        },
+        {
+            "number": 7,
+            "horse": "CAPITAL MAIL",
+            "description": ""
+        },
+        {
+            "number": 8,
+            "horse": "FLORE DE JANEIRO",
+            "description": ""
+        },
+        {
+            "number": 9,
+            "horse": "CYRIEL D'ATOM",
+            "description": ""
+        },
+        {
+            "number": 10,
+            "horse": "GIROLAMO",
+            "description": ""
+        },
+        {
+            "number": 11,
+            "horse": "FLAUBERT GEDE",
+            "description": ""
+        },
+        {
+            "number": 12,
+            "horse": "EMIR DE REBOMARD",
+            "description": ""
+        },
+        {
+            "number": 13,
+            "horse": "GALIPETTE PIERJI",
+            "description": ""
+        },
+        {
+            "number": 14,
+            "horse": "DIGNE ET DROIT",
+            "description": ""
+        },
+        {
+            "number": 15,
+            "horse": "FALCON D'OURVILLE",
+            "description": ""
+        },
+        {
+            "number": 16,
+            "horse": "IMPRESSIONIST",
+            "description": ""
+        }
+    ],
+    "rankings": {
+        "favorites": [
+            2,
+            5,
+            6,
+            1,
+            7,
+            4,
+            11
+        ],
+        "form": [],
+        "class": [
+            4,
+            7,
+            5,
+            1,
+            11
+        ],
+        "progress": [
+            5,
+            2,
+            6,
+            11,
+            14
+        ],
+        "regularity": [
+            9,
+            11,
+            5,
+            2,
+            6
+        ]
+    },
+    "published_arrival": [
+        9,
+        6,
+        7,
+        5
+    ]
+}

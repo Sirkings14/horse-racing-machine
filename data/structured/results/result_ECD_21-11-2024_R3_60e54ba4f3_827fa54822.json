@@ -1,0 +1,38 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_21-11-2024_R3_60e54ba4f3_827fa54822.txt",
+    "parsed_at": "2026-09-12T07:31:25.319576Z",
+    "date": "2024-11-21",
+    "meeting": 3,
+    "track": "CHANTILLY",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                4,
+                3,
+                2,
+                450,
+                9
+            ],
+            "winner": 4,
+            "second": 3,
+            "third": 2,
+            "fourth": 450,
+            "fifth": 9
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                3,
+                1,
+                950,
+                24
+            ],
+            "winner": 3,
+            "second": 1,
+            "third": 950,
+            "fourth": 24
+        }
+    ]
+}

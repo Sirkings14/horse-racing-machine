@@ -1,0 +1,136 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMUB_DU-06-03-2024_ea1d075d3f_9036ed8b19.txt",
+    "parsed_at": "2026-09-12T07:31:21.414296Z",
+    "date": "2024-03-06",
+    "race": {
+        "race_name": null,
+        "track": null,
+        "race_number": null,
+        "race_type": "ATTELE",
+        "runners_count": 16,
+        "distance": 900,
+        "prize_euros": 90000
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "FORBAN",
+            "description": ""
+        },
+        {
+            "number": 2,
+            "horse": "GLOIRE DU PERCHE",
+            "description": ""
+        },
+        {
+            "number": 3,
+            "horse": "FORBACH",
+            "description": ""
+        },
+        {
+            "number": 4,
+            "horse": "EMENCOURT BLEQUIN",
+            "description": ""
+        },
+        {
+            "number": 5,
+            "horse": "FRONSAC MADRIK",
+            "description": ""
+        },
+        {
+            "number": 6,
+            "horse": "GILMOUR",
+            "description": ""
+        },
+        {
+            "number": 7,
+            "horse": "HANNAH",
+            "description": ""
+        },
+        {
+            "number": 8,
+            "horse": "EVEIL DU LUPIN",
+            "description": ""
+        },
+        {
+            "number": 9,
+            "horse": "FALCO DES ROCHERS",
+            "description": ""
+        },
+        {
+            "number": 10,
+            "horse": "EASTON OF MY LIFE",
+            "description": ""
+        },
+        {
+            "number": 11,
+            "horse": "HIDALGO DES NOES",
+            "description": ""
+        },
+        {
+            "number": 12,
+            "horse": "EUREKA VRIE",
+            "description": ""
+        },
+        {
+            "number": 13,
+            "horse": "FLOWER BY MAGALOU",
+            "description": ""
+        },
+        {
+            "number": 14,
+            "horse": "GUIDE MOI FORGAN",
+            "description": ""
+        },
+        {
+            "number": 15,
+            "horse": "EBERTON",
+            "description": ""
+        },
+        {
+            "number": 16,
+            "horse": "GALET STED",
+            "description": ""
+        }
+    ],
+    "rankings": {
+        "favorites": [
+            16,
+            14,
+            6,
+            2,
+            12,
+            7,
+            3
+        ],
+        "form": [],
+        "class": [
+            5,
+            6,
+            3,
+            9,
+            16
+        ],
+        "progress": [
+            3,
+            1,
+            8,
+            5,
+            6
+        ],
+        "regularity": [
+            2,
+            14,
+            16,
+            3,
+            12
+        ]
+    },
+    "published_arrival": [
+        2,
+        15,
+        6,
+        5
+    ]
+}

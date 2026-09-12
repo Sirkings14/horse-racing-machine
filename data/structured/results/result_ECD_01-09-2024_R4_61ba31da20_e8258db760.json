@@ -1,0 +1,125 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_01-09-2024_R4_61ba31da20_e8258db760.txt",
+    "parsed_at": "2026-09-12T07:31:24.791233Z",
+    "date": "2024-09-01",
+    "meeting": 4,
+    "track": "CRAON",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                3,
+                1,
+                600,
+                71
+            ],
+            "winner": 3,
+            "second": 1,
+            "third": 600,
+            "fourth": 71
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                4,
+                3,
+                8,
+                550,
+                250,
+                66
+            ],
+            "winner": 4,
+            "second": 3,
+            "third": 8,
+            "fourth": 550,
+            "fifth": 250
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                6,
+                3,
+                7,
+                600,
+                12,
+                4,
+                400,
+                116
+            ],
+            "winner": 6,
+            "second": 3,
+            "third": 7,
+            "fourth": 600,
+            "fifth": 12
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                11,
+                5,
+                3,
+                850,
+                9,
+                1,
+                950,
+                361
+            ],
+            "winner": 11,
+            "second": 5,
+            "third": 3,
+            "fourth": 850,
+            "fifth": 9
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                6,
+                4,
+                10,
+                1,
+                750,
+                3,
+                54,
+                850
+            ],
+            "winner": 6,
+            "second": 4,
+            "third": 10,
+            "fourth": 1,
+            "fifth": 750
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                8,
+                2,
+                3,
+                1,
+                500,
+                5,
+                126
+            ],
+            "winner": 8,
+            "second": 2,
+            "third": 3,
+            "fourth": 1,
+            "fifth": 500
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                5,
+                4,
+                1,
+                250,
+                29
+            ],
+            "winner": 5,
+            "second": 4,
+            "third": 1,
+            "fourth": 250,
+            "fifth": 29
+        }
+    ]
+}

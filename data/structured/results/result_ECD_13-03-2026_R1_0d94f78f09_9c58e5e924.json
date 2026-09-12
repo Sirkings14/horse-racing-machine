@@ -1,0 +1,99 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_13-03-2026_R1_0d94f78f09_9c58e5e924.txt",
+    "parsed_at": "2026-09-12T07:31:25.114075Z",
+    "date": "2026-03-13",
+    "meeting": 1,
+    "track": "ENGHIEN",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                2,
+                11,
+                4,
+                1,
+                100,
+                3,
+                650,
+                89
+            ],
+            "winner": 2,
+            "second": 11,
+            "third": 4,
+            "fourth": 1,
+            "fifth": 100
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                6,
+                11,
+                5,
+                700,
+                7,
+                3,
+                550,
+                136
+            ],
+            "winner": 6,
+            "second": 11,
+            "third": 5,
+            "fourth": 700,
+            "fifth": 7
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                2,
+                10,
+                9,
+                1,
+                150,
+                5,
+                350,
+                85
+            ],
+            "winner": 2,
+            "second": 10,
+            "third": 9,
+            "fourth": 1,
+            "fifth": 150
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                8,
+                16,
+                9,
+                1,
+                950,
+                2,
+                13,
+                300,
+                39
+            ],
+            "winner": 8,
+            "second": 16,
+            "third": 9,
+            "fourth": 1,
+            "fifth": 950
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                4,
+                1,
+                2,
+                650,
+                500,
+                231
+            ],
+            "winner": 4,
+            "second": 1,
+            "third": 2,
+            "fourth": 650,
+            "fifth": 500
+        }
+    ]
+}

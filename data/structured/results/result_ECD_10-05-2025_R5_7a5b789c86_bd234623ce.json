@@ -1,0 +1,96 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_10-05-2025_R5_7a5b789c86_bd234623ce.txt",
+    "parsed_at": "2026-09-12T07:31:25.041859Z",
+    "date": "2025-05-10",
+    "meeting": 5,
+    "track": "COMPIEGNE",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                9,
+                12,
+                6,
+                4,
+                150,
+                1,
+                5,
+                72
+            ],
+            "winner": 9,
+            "second": 12,
+            "third": 6,
+            "fourth": 4,
+            "fifth": 150
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                3,
+                1,
+                2,
+                4,
+                300,
+                47
+            ],
+            "winner": 3,
+            "second": 1,
+            "third": 2,
+            "fourth": 4,
+            "fifth": 300
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                10,
+                8,
+                4,
+                1,
+                50,
+                3,
+                2,
+                800,
+                126
+            ],
+            "winner": 10,
+            "second": 8,
+            "third": 4,
+            "fourth": 1,
+            "fifth": 50
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                7,
+                5,
+                10,
+                4,
+                50,
+                86
+            ],
+            "winner": 7,
+            "second": 5,
+            "third": 10,
+            "fourth": 4,
+            "fifth": 50
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                1,
+                11,
+                2,
+                600,
+                7,
+                50,
+                243
+            ],
+            "winner": 1,
+            "second": 11,
+            "third": 2,
+            "fourth": 600,
+            "fifth": 7
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "document_type": "result",
+    "source_file": "result_res_ECD_19-05-2023_R5_36075dc091_5fcf4c0d54.txt",
+    "parsed_at": "2026-09-12T07:31:25.679644Z",
+    "date": "2023-05-19",
+    "meeting": 5,
+    "track": "NANCY",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                4,
+                2,
+                7,
+                600,
+                13,
+                1,
+                400,
+                294
+            ],
+            "winner": 4,
+            "second": 2,
+            "third": 7,
+            "fourth": 600,
+            "fifth": 13
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                1,
+                6,
+                8,
+                3,
+                150,
+                67
+            ],
+            "winner": 1,
+            "second": 6,
+            "third": 8,
+            "fourth": 3,
+            "fifth": 150
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                9,
+                3,
+                6,
+                2,
+                250,
+                950,
+                152
+            ],
+            "winner": 9,
+            "second": 3,
+            "third": 6,
+            "fourth": 2,
+            "fifth": 250
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                2,
+                4,
+                7,
+                1,
+                200,
+                6,
+                700,
+                202
+            ],
+            "winner": 2,
+            "second": 4,
+            "third": 7,
+            "fourth": 1,
+            "fifth": 200
+        }
+    ]
+}

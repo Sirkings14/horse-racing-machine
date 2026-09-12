@@ -1,0 +1,127 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_06-02-2025_R3_18a4b72bba_6580e857f3.txt",
+    "parsed_at": "2026-09-12T07:31:24.914264Z",
+    "date": "2025-02-06",
+    "meeting": 3,
+    "track": "MARSEILLE-BORELY",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                1,
+                5,
+                750,
+                28
+            ],
+            "winner": 1,
+            "second": 5,
+            "third": 750,
+            "fourth": 28
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                8,
+                9,
+                4,
+                1,
+                550,
+                2,
+                250,
+                127
+            ],
+            "winner": 8,
+            "second": 9,
+            "third": 4,
+            "fourth": 1,
+            "fifth": 550
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                4,
+                2,
+                9,
+                1,
+                300,
+                18,
+                900
+            ],
+            "winner": 4,
+            "second": 2,
+            "third": 9,
+            "fourth": 1,
+            "fifth": 300
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                4,
+                3,
+                7,
+                5,
+                450,
+                62
+            ],
+            "winner": 4,
+            "second": 3,
+            "third": 7,
+            "fourth": 5,
+            "fifth": 450
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                11,
+                4,
+                3,
+                650,
+                6,
+                950,
+                153
+            ],
+            "winner": 11,
+            "second": 4,
+            "third": 3,
+            "fourth": 650,
+            "fifth": 6
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                5,
+                2,
+                12,
+                200,
+                3,
+                7,
+                400,
+                107
+            ],
+            "winner": 5,
+            "second": 2,
+            "third": 12,
+            "fourth": 200,
+            "fifth": 3
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                3,
+                9,
+                10,
+                1,
+                500,
+                7,
+                350,
+                92
+            ],
+            "winner": 3,
+            "second": 9,
+            "third": 10,
+            "fourth": 1,
+            "fifth": 500
+        }
+    ]
+}
