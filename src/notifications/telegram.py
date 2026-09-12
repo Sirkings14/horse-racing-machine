@@ -1,5 +1,6 @@
 from __future__ import annotations
 import json, os
+from datetime import date
 from pathlib import Path
 import requests
 
@@ -14,9 +15,21 @@ def send_latest_prediction() -> bool:
         return False
     payload = json.loads(PREDICTION_FILE.read_text(encoding="utf-8"))
     if payload.get("mode") != "future_or_unmatched":
-        print("Telegram skipped: latest prediction is retrospective.")
+        print("Telegram skipped: no current/future prediction is available.")
         return False
     race = payload.get("race") or {}
+    race_date = str(race.get("date") or "")[:10]
+    try:
+        parsed_race_date = date.fromisoformat(race_date)
+    except ValueError:
+        print("Telegram skipped: prediction has an invalid race date.")
+        return False
+    if parsed_race_date < date.today():
+        print(
+            f"Telegram skipped: stale prediction for {parsed_race_date.isoformat()} "
+            f"(today is {date.today().isoformat()})."
+        )
+        return False
     numbers = payload.get("recommended_numbers") or []
     lines = ["🏇 HORSE RACING MACHINE","",f"Race: {payload.get('race_key')}",
         f"Track: {race.get('track')}",f"Distance: {race.get('distance')}m",

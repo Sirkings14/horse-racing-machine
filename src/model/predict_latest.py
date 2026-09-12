@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from src.model.logistic_model import LogisticModel
@@ -117,6 +117,20 @@ def program_to_rows(program):
     return rows
 
 
+def program_race_date(program):
+    value = race_metadata(program)["date"]
+    if not value:
+        return None
+    try:
+        return date.fromisoformat(str(value)[:10])
+    except ValueError:
+        return None
+
+
+def today_utc():
+    return datetime.now(timezone.utc).date()
+
+
 def program_sort_key(program):
     date = race_metadata(program)["date"]
     if not date:
@@ -178,23 +192,37 @@ def main():
         reverse=True,
     )
 
-    selected = next(
-        (
-            item
-            for item in programs
-            if race_key(item[1]) not in historical
-        ),
-        None,
-    )
+    today = today_utc()
+    eligible = [
+        item
+        for item in programs
+        if race_key(item[1]) not in historical
+        and program_race_date(item[1]) is not None
+        and program_race_date(item[1]) >= today
+    ]
 
+    if not eligible:
+        result = {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "mode": "no_eligible_future_race",
+            "today": today.isoformat(),
+            "recommended_numbers": [],
+            "adaptive_top_count": 0,
+            "ranked_horses": [],
+        }
+        OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+        OUTPUT_FILE.write_text(
+            json.dumps(result, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        print(
+            "No current or future unmatched race is available for prediction. "
+            "Stale programs were not predicted."
+        )
+        return
+
+    selected = eligible[0]
     mode = "future_or_unmatched"
-
-    if selected is None:
-        # Never fabricate a "latest" prediction from a malformed program.
-        # A valid historical program may still be generated for local inspection,
-        # but notification code will not send retrospective predictions.
-        selected = programs[0]
-        mode = "retrospective_latest_available"
 
     path, program = selected
     key = race_key(program)
