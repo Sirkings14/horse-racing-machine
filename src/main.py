@@ -1,3 +1,6 @@
+from pathlib import Path
+import json
+
 from src.scraper import run_scraper
 
 from src.processors.process_pdfs import (
@@ -20,189 +23,120 @@ from src.validators.pipeline_validator import (
     validate_pipeline,
 )
 
+from src.dataset.build_dataset import (
+    main as build_dataset,
+)
 
-def print_step(
-    number,
-    title,
-):
-    print(
-        "\n"
-        + "=" * 60
-    )
+from src.dataset.dataset_validator import (
+    main as validate_dataset,
+)
 
-    print(
-        f"STEP {number}: {title}"
-    )
+from src.model.train_model import (
+    main as train_model,
+)
 
-    print(
-        "=" * 60
-    )
+from src.model.backtest import (
+    main as run_backtest,
+)
+
+from src.model.predict_latest import (
+    main as generate_prediction,
+)
+
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+REVIEW_FILE = BASE_DIR / "data" / "dataset" / "dataset_review.json"
+
+
+def print_step(number, title):
+    print("\n" + "=" * 60)
+    print(f"STEP {number}: {title}")
+    print("=" * 60)
+
+
+def assert_dataset_clean() -> None:
+    if not REVIEW_FILE.exists():
+        raise RuntimeError(
+            f"Dataset review file was not created: {REVIEW_FILE}"
+        )
+
+    with REVIEW_FILE.open("r", encoding="utf-8") as handle:
+        review = json.load(handle)
+
+    if not isinstance(review, list):
+        raise RuntimeError("dataset_review.json must contain a JSON list.")
+
+    if review:
+        print("\nDATASET VALIDATION FAILED")
+        for item in review:
+            print(f"  {item.get('race_key')}")
+            for reason in item.get("reasons", []):
+                print(f"    - {reason}")
+        raise RuntimeError(
+            f"Training dataset rejected {len(review)} race(s)."
+        )
+
+    print("\nTraining dataset validation passed: 0 rejected races.")
 
 
 def main():
+    print("\n" + "=" * 60)
+    print("STARTING HORSE RACING MACHINE")
+    print("=" * 60)
 
-    print(
-        "\n"
-        + "=" * 60
-    )
-
-    print(
-        "STARTING HORSE RACING MACHINE"
-    )
-
-    print(
-        "=" * 60
-    )
-
-    # ========================================================
-    # STEP 1
-    # SCRAPING
-    # ========================================================
-
-    print_step(
-        1,
-        "SCRAPING LONAB DATA",
-    )
-
+    print_step(1, "SCRAPING LONAB DATA")
     run_scraper()
 
-    # ========================================================
-    # STEP 2
-    # PROCESS PDFs
-    # ========================================================
-
-    print_step(
-        2,
-        "PROCESSING RACE PDFs",
-    )
-
+    print_step(2, "PROCESSING RACE PDFs")
     process_all_pdfs()
 
-    # ========================================================
-    # STEP 3
-    # PARSE PROGRAMS
-    # ========================================================
-
-    print_step(
-        3,
-        "PARSING PROGRAM DATA",
-    )
-
+    print_step(3, "PARSING PROGRAM DATA")
     process_all_programs()
 
-    # ========================================================
-    # STEP 4
-    # PARSE RESULTS
-    # ========================================================
-
-    print_step(
-        4,
-        "PARSING RESULT DATA",
-    )
-
+    print_step(4, "PARSING RESULT DATA")
     process_all_results()
 
-    # ========================================================
-    # STEP 5
-    # VALIDATE PIPELINE
-    # ========================================================
-
-    print_step(
-        5,
-        "VALIDATING PIPELINE DATA",
-    )
-
+    print_step(5, "VALIDATING PIPELINE DATA")
     validation = validate_pipeline(
-
-        programs_path=
-            "data/structured/programs",
-
-        results_path=
-            "data/structured/results",
-
+        programs_path="data/structured/programs",
+        results_path="data/structured/results",
     )
 
-    # --------------------------------------------------------
-    # STOP PIPELINE IF DATA IS INVALID
-    # --------------------------------------------------------
-
-    if not validation.get(
-        "valid"
-    ):
-
-        print(
-            "\n"
-            + "=" * 60
+    if not validation.get("valid"):
+        raise RuntimeError(
+            "Pipeline validation failed; matching and modelling were stopped."
         )
 
-        print(
-            "PIPELINE VALIDATION FAILED"
-        )
+    print("Pipeline validation passed.")
 
-        print(
-            "=" * 60
-        )
-
-        print(
-            "\nThe matching engine "
-            "will NOT run."
-        )
-
-        print(
-            "\nFix the parser/data problems "
-            "shown above and run again."
-        )
-
-        return
-
-    print(
-        "\nPipeline validation passed."
-    )
-
-    # ========================================================
-    # STEP 6
-    # MATCH PROGRAMS WITH RESULTS
-    # ========================================================
-
-    print_step(
-        6,
-        "MATCHING PROGRAMS WITH RESULTS",
-    )
-
+    print_step(6, "MATCHING PROGRAMS WITH RESULTS")
     run_matching(
-
-        programs_path=
-            "data/structured/programs",
-
-        results_path=
-            "data/structured/results",
-
-        output_path=
-            "data/matched/matched_races.json",
-
-        review_path=
-            "data/matched/match_review.json",
-
+        programs_path="data/structured/programs",
+        results_path="data/structured/results",
+        output_path="data/matched/matched_races.json",
+        review_path="data/matched/match_review.json",
     )
 
-    # ========================================================
-    # COMPLETE
-    # ========================================================
+    print_step(7, "BUILDING TRAINING DATASET")
+    build_dataset()
 
-    print(
-        "\n"
-        + "=" * 60
-    )
+    print_step(8, "VALIDATING TRAINING DATASET")
+    validate_dataset()
+    assert_dataset_clean()
 
-    print(
-        "HORSE RACING MACHINE FINISHED SUCCESSFULLY"
-    )
+    print_step(9, "TRAINING FINAL TOP-3 MODEL")
+    train_model()
 
-    print(
-        "=" * 60
-    )
+    print_step(10, "RUNNING WALK-FORWARD BACKTEST")
+    run_backtest()
+
+    print_step(11, "GENERATING LATEST PREDICTION")
+    generate_prediction()
+
+    print("\n" + "=" * 60)
+    print("HORSE RACING MACHINE FINISHED SUCCESSFULLY")
+    print("=" * 60)
 
 
 if __name__ == "__main__":
-
     main()
