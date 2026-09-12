@@ -2,16 +2,19 @@ name: Run Race Machine
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
   run-machine:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.head_commit == null || !contains(github.event.head_commit.message, 'Update race machine data') }}
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -27,81 +30,27 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Check dataset files
-        run: |
-          echo "Checking dataset files..."
-
-          if [ -f src/dataset/build_dataset.py ]; then
-            echo "Found: src/dataset/build_dataset.py"
-          else
-            echo "ERROR: src/dataset/build_dataset.py not found"
-            exit 1
-          fi
-
-          if [ -f src/dataset/dataset_validator.py ]; then
-            echo "Found: src/dataset/dataset_validator.py"
-          else
-            echo "ERROR: src/dataset/dataset_validator.py not found"
-            echo ""
-            echo "Files currently inside src/dataset:"
-            find src/dataset -maxdepth 2 -type f -print
-            exit 1
-          fi
-
       - name: Run Horse Racing Machine
-        run: |
-          python -m src.main
+        run: python -m src.main
 
       - name: Build Training Dataset
-        run: |
-          python -m src.dataset.build_dataset
+        run: python -m src.dataset.build_dataset
 
       - name: Validate Training Dataset
-        run: |
-          python src/dataset/dataset_validator.py
+        run: python src/dataset/dataset_validator.py
 
       - name: Show Dataset Summary
         run: |
           echo "============================================"
           echo "TRAINING DATASET"
           echo "============================================"
-
-          if [ -f data/dataset/training_dataset.json ]; then
-            echo "Raw JSON dataset found:"
-            ls -lh data/dataset/training_dataset.json
-          else
-            echo "ERROR: Raw JSON dataset was not created."
-            exit 1
-          fi
-
-          if [ -f data/dataset/training_dataset.csv ]; then
-            echo "Raw CSV dataset found:"
-            ls -lh data/dataset/training_dataset.csv
-          else
-            echo "ERROR: Raw CSV dataset was not created."
-            exit 1
-          fi
+          ls -lh data/dataset/training_dataset.json data/dataset/training_dataset.csv
+          ls -lh data/dataset/training_dataset_clean.json data/dataset/dataset_review.json
 
           echo ""
-          echo "============================================"
-          echo "CLEAN TRAINING DATASET"
-          echo "============================================"
-
-          if [ -f data/dataset/training_dataset_clean.json ]; then
-            echo "Clean JSON dataset found:"
-            ls -lh data/dataset/training_dataset_clean.json
-          else
-            echo "ERROR: Clean JSON dataset was not created."
-            exit 1
-          fi
-
-          if [ -f data/dataset/dataset_review.json ]; then
-            echo "Dataset review file found:"
-            ls -lh data/dataset/dataset_review.json
-          else
-            echo "ERROR: Dataset review file was not created."
-            exit 1
-          fi
+          echo "Structured programs/results:" 
+          find data/structured/programs -name '*.json' | wc -l
+          find data/structured/results -name '*.json' | wc -l
 
       - name: Save machine data
         run: |
