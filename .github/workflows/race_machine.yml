@@ -1,27 +1,38 @@
-name: Run Race Machine
+name: Autonomous Horse Racing Machine
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
+    inputs:
+      mode:
+        description: "Run mode"
+        required: false
+        default: "predict"
+        type: choice
+        options:
+          - predict
+          - results
+          - full
+  schedule:
+    - cron: "0 7 * * *"
+    - cron: "30 15 * * *"
+    - cron: "15 20 * * *"
 
 permissions:
   contents: write
 
 jobs:
-  run-machine:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.head_commit == null || !contains(github.event.head_commit.message, 'Update race machine data') }}
+  machine:
     runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
@@ -30,52 +41,30 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Complete Horse Racing Machine
-        run: python -m src.main
-
-      - name: Show Dataset and Model Summary
+      - name: Decide mode
+        id: mode
         run: |
-          echo "============================================"
-          echo "TRAINING DATASET"
-          echo "============================================"
-          ls -lh data/dataset/training_dataset.json data/dataset/training_dataset.csv
-          ls -lh data/dataset/training_dataset_clean.json data/dataset/dataset_review.json
+          MODE="${{ github.event.inputs.mode }}"
+          if [ -z "$MODE" ]; then
+            if [ "${{ github.event.schedule }}" = "15 20 * * *" ]; then
+              MODE="results"
+            else
+              MODE="predict"
+            fi
+          fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
 
-          echo ""
-          echo "============================================"
-          echo "MODEL OUTPUTS"
-          echo "============================================"
-          ls -lh data/model/top3_model.json
-          ls -lh data/model/backtest_report.json
-          ls -lh data/model/latest_prediction.json
+      - name: Run autonomous machine
+        run: python -m src.main --mode "${{ steps.mode.outputs.mode }}"
 
-          echo ""
-          echo "============================================"
-          echo "BACKTEST REPORT"
-          echo "============================================"
-          cat data/model/backtest_report.json
-
-          echo ""
-          echo "============================================"
-          echo "LATEST PREDICTION"
-          echo "============================================"
-          cat data/model/latest_prediction.json
-
-          echo ""
-          echo "Structured programs/results:"
-          find data/structured/programs -name '*.json' | wc -l
-          find data/structured/results -name '*.json' | wc -l
-
-      - name: Save machine data and model outputs
+      - name: Save machine data and outputs
         run: |
           git config --global user.name "Horse Racing Machine"
           git config --global user.email "race-machine@github-actions"
-
           git add data/
-
           if git diff --cached --quiet; then
-            echo "No new machine data or model outputs to save."
+            echo "No new machine data."
           else
-            git commit -m "Update race machine data and validated training dataset"
+            git commit -m "Update race machine data"
             git push
           fi

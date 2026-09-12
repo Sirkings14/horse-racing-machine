@@ -211,6 +211,8 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
 
         finish_position = arrival_map.get(horse_number)
         top3 = 1 if finish_position is not None and finish_position <= 3 else 0
+        top4 = 1 if finish_position is not None and finish_position <= 4 else 0
+        top5 = 1 if finish_position is not None and finish_position <= 5 else 0
         won = 1 if finish_position == 1 else 0
 
         ranking_values = {
@@ -244,6 +246,8 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
                 "finish_position": finish_position,
                 "won": won,
                 "top3": top3,
+                "top4": top4,
+                "top5": top5,
                 "source_program": program.get("source_file"),
                 "source_result": result.get("source_file"),
             }
@@ -297,7 +301,7 @@ def write_csv(rows: List[Dict[str, Any]]) -> None:
         "distance", "runners_count", "prize_euros", "horse_number", "horse_name",
         "horse_description", "favorites_rank", "form_rank", "class_rank",
         "progress_rank", "regularity_rank", "ranking_average", "ranking_presence",
-        "finish_position", "won", "top3", "source_program", "source_result",
+        "finish_position", "won", "top3", "top4", "top5", "source_program", "source_result",
     ]
 
     with DATASET_CSV.open("w", newline="", encoding="utf-8") as file:
@@ -339,6 +343,8 @@ def main() -> None:
     print(f"Training rows: {len(all_rows)}")
     print(f"Winners: {winner_count}")
     print(f"Top-3 rows: {top3_count}")
+    print(f"Top-4 rows: {sum(1 for row in all_rows if row.get('top4') == 1)}")
+    print(f"Top-5 rows: {sum(1 for row in all_rows if row.get('top5') == 1)}")
     print(f"Non-runners excluded: {non_runner_count}")
     print("Rows per race:")
     for race_key, count in sorted(race_counter.items()):

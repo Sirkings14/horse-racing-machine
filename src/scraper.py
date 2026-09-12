@@ -12,7 +12,7 @@ PROGRAM_URL = "https://www.lonab.bf/fr/programme-pmub"
 RESULTS_URL = "https://www.lonab.bf/fr/resultats-gains-ecd"
 
 # Number of archive pages to inspect.
-HISTORICAL_PAGES = 16
+HISTORICAL_PAGES = int(os.getenv("HISTORICAL_PAGES", "250"))
 
 HEADERS = {
     "User-Agent": (

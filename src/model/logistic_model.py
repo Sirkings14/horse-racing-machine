@@ -68,6 +68,7 @@ def _sigmoid(values: np.ndarray) -> np.ndarray:
 
 def fit_top3_model(
     rows: Sequence[Dict[str, Any]],
+    target_field: str = "top3",
     epochs: int = 1200,
     learning_rate: float = 0.04,
     l2: float = 1.0,
@@ -77,7 +78,7 @@ def fit_top3_model(
 
     matrix = build_matrix(rows)
     target = np.asarray(
-        [1.0 if int(row.get("top3", 0)) == 1 else 0.0 for row in rows],
+        [1.0 if int(row.get(target_field, 0)) == 1 else 0.0 for row in rows],
         dtype=float,
     )
 
