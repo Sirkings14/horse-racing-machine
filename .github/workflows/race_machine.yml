@@ -30,23 +30,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Horse Racing Machine
+      - name: Run Complete Horse Racing Machine
         run: python -m src.main
-
-      - name: Build Training Dataset
-        run: python -m src.dataset.build_dataset
-
-      - name: Validate Training Dataset
-        run: python src/dataset/dataset_validator.py
-
-      - name: Train Final Model
-        run: python -m src.model.train_model
-
-      - name: Run Walk-Forward Backtest
-        run: python -m src.model.backtest
-
-      - name: Generate Latest Prediction
-        run: python -m src.model.predict_latest
 
       - name: Show Dataset and Model Summary
         run: |
