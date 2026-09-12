@@ -25,13 +25,63 @@ def print_step(number, title):
     print("=" * 60)
 
 def assert_dataset_clean():
+    """Ensure validation produced usable clean data without blocking on isolated bad races.
+
+    The validator is expected to quarantine malformed or incomplete historical
+    races. A single rejected race should not stop the autonomous machine from
+    learning from the remaining verified races.
+    """
     with REVIEW_FILE.open("r", encoding="utf-8") as handle:
         review = json.load(handle)
+
     if not isinstance(review, list):
         raise RuntimeError("dataset_review.json must contain a list.")
+
+    clean_dataset_file = (
+        BASE_DIR / "data" / "dataset" / "training_dataset_clean.json"
+    )
+
+    if not clean_dataset_file.exists():
+        raise RuntimeError(
+            "Training dataset validation did not produce a clean dataset."
+        )
+
+    with clean_dataset_file.open("r", encoding="utf-8") as handle:
+        clean_rows = json.load(handle)
+
+    if not isinstance(clean_rows, list) or not clean_rows:
+        raise RuntimeError(
+            "Training dataset validation produced no usable clean horse rows."
+        )
+
+    clean_races = {
+        row.get("race_key")
+        for row in clean_rows
+        if isinstance(row, dict) and row.get("race_key")
+    }
+
+    if not clean_races:
+        raise RuntimeError(
+            "Training dataset validation produced no usable clean races."
+        )
+
     if review:
-        raise RuntimeError(f"Training dataset rejected {len(review)} race(s).")
-    print("Training dataset validation passed: 0 rejected races.")
+        print(
+            f"Training dataset validation quarantined "
+            f"{len(review)} malformed/incomplete race(s)."
+        )
+        for item in review:
+            print(
+                f"  Skipping {item.get('race_key', 'unknown race')}: "
+                + "; ".join(item.get("reasons", []))
+            )
+    else:
+        print("Training dataset validation passed: 0 rejected races.")
+
+    print(
+        f"Proceeding with {len(clean_races)} clean race(s) and "
+        f"{len(clean_rows)} clean horse rows."
+    )
 
 def rebuild_knowledge():
     print_step(1, "SCRAPING LONAB DATA")
