@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from datetime import date, datetime, timezone
+import re
 from pathlib import Path
 
 from src.model.logistic_model import LogisticModel
@@ -117,15 +118,29 @@ def program_to_rows(program):
     return rows
 
 
-def program_race_date(program):
-    value = race_metadata(program)["date"]
-    if not value:
+def normalize_race_date(value):
+    if value is None:
         return None
-    try:
-        return date.fromisoformat(str(value)[:10])
-    except ValueError:
+    text = str(value).strip()
+    if not text:
         return None
+    for candidate in (text[:10], text):
+        try:
+            return date.fromisoformat(candidate)
+        except ValueError:
+            pass
+    match = re.search(r"(\d{4})[/-](\d{1,2})[/-](\d{1,2})", text)
+    if match:
+        year, month, day = map(int, match.groups())
+        try:
+            return date(year, month, day)
+        except ValueError:
+            return None
+    return None
 
+
+def program_race_date(program):
+    return normalize_race_date(race_metadata(program)["date"])
 
 def today_utc():
     return datetime.now(timezone.utc).date()
@@ -187,12 +202,9 @@ def main():
             f"{len(skipped_invalid_metadata)} program(s) with incomplete race metadata."
         )
 
-    programs.sort(
-        key=lambda item: program_sort_key(item[1]),
-        reverse=True,
-    )
-
     today = today_utc()
+
+    # Predict the nearest eligible race first. Never select a stale program.
     eligible = [
         item
         for item in programs
@@ -200,6 +212,13 @@ def main():
         and program_race_date(item[1]) is not None
         and program_race_date(item[1]) >= today
     ]
+
+    eligible.sort(
+        key=lambda item: (
+            program_race_date(item[1]),
+            int(race_metadata(item[1])["race_number"]),
+        ),
+    )
 
     if not eligible:
         result = {
@@ -222,7 +241,7 @@ def main():
         return
 
     selected = eligible[0]
-    mode = "future_or_unmatched"
+    mode = "current_or_future_unmatched"
 
     path, program = selected
     key = race_key(program)
@@ -285,8 +304,9 @@ def main():
             adaptive = 4
 
     result = {
-        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "mode": mode,
+        "today": today.isoformat(),
         "source_program": path.name,
         "race_key": key,
         "race": race_metadata(program),
