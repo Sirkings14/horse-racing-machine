@@ -231,7 +231,12 @@ def get_pdf_links(page_url):
         if detail_url.lower().endswith(".pdf"):
             continue
 
-        if urlparse(detail_url).netloc != urlparse(page_url).netloc:
+        # LONAB serves the same site through both lonab.bf and www.lonab.bf.
+        # Treat those aliases as one source instead of rejecting a valid detail
+        # page just because the hostname spelling differs.
+        detail_host = urlparse(detail_url).netloc.lower().removeprefix("www.")
+        page_host = urlparse(page_url).netloc.lower().removeprefix("www.")
+        if detail_host != page_host:
             continue
 
         if detail_url not in detail_urls:
@@ -262,6 +267,17 @@ def get_pdf_links(page_url):
             print(
                 f"Detail page skipped: {detail_url} | {error}"
             )
+
+    # Drupal pages sometimes expose documents through embedded media attributes
+    # instead of a normal anchor. Scan the HTML for PDF paths as a final fallback.
+    for match in re.finditer(
+        r'''["']([^"'<>\s]+\.pdf(?:\?[^"'<>\s]*)?)["']''',
+        response.text,
+        re.IGNORECASE,
+    ):
+        pdf_url = normalize_url(urljoin(page_url, match.group(1)))
+        if pdf_url not in pdf_links:
+            pdf_links.append(pdf_url)
 
     return pdf_links
 
