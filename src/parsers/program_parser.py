@@ -22,55 +22,28 @@ def clean_text(text):
 
 
 def extract_date(text):
-    # Search the whole document, not only one exact newspaper headline format.
-    pattern = (
-        r"\b(?:LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)?\s*"
-        r"(\d{1,2})\s+"
-        r"(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|"
-        r"JUILLET|AOUT|AOÛT|SEPTEMBRE|OCTOBRE|NOVEMBRE|DECEMBRE|DÉCEMBRE)"
-        r"\s+(20\d{2})\b"
-    )
-    # Prefer the date announced by the current program headline. This avoids
-    # accidentally selecting a previous-arrival/result date printed later in
-    # the same newspaper.
-    headline_pattern = (
-        r'''(?:(?:"(?:4\+1|QUARTE|TIERCE)")?\s*DU\s+)?'''
-        r'''(?:LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)?\s*'''
-        r'''(\d{1,2})\s+'''
-        r'''(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|JUILLET|AOUT|AOÛT|'''
-        r'''SEPTEMBRE|OCTOBRE|NOVEMBRE|DECEMBRE|DÉCEMBRE)\s+'''
-        r'''(20\d{2})\b'''
-    )
-
-    candidates = []
-    search_text = text[:8000]
-    for match in re.finditer(headline_pattern, search_text, re.IGNORECASE):
-        day = int(match.group(1))
-        month_name = match.group(2).upper()
-        year = int(match.group(3))
-        month = MONTHS.get(month_name)
-        if not month:
-            continue
+    """Extract the current race date from the newspaper header before old results."""
+    header = text[:12000]
+    months = r"(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|JUILLET|AOUT|AOÛT|SEPTEMBRE|OCTOBRE|NOVEMBRE|DECEMBRE|DÉCEMBRE)"
+    patterns = [
+        r'(?:["“]?(?:4\+1|QUARTE|TIERCE)["”]?\s+DU\s+)(?:LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)\s+(\d{1,2})\s+' + months + r'\s+(20\d{2})\b',
+        r'(?:LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)\s+(\d{1,2})\s+' + months + r'\s+(20\d{2})\b',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, header, re.IGNORECASE)
+        if match:
+            try:
+                day, month_name, year = int(match.group(1)), match.group(2).upper(), int(match.group(3))
+                return datetime(year, MONTHS[month_name], day).date().isoformat()
+            except (KeyError, ValueError):
+                pass
+    fallback = re.search(r'(\d{1,2})\s+' + months + r'\s+(20\d{2})\b', header, re.IGNORECASE)
+    if fallback:
         try:
-            candidates.append(datetime(year, month, day).date())
-        except ValueError:
-            continue
-    if candidates:
-        return candidates[0].isoformat()
-
-    # Fallback to the complete document when extraction moved the headline.
-    for match in re.finditer(pattern, text, re.IGNORECASE):
-        day = int(match.group(1))
-        month_name = match.group(2).upper()
-        year = int(match.group(3))
-        month = MONTHS.get(month_name)
-        if not month:
-            continue
-        try:
-            return datetime(year, month, day).date().isoformat()
-        except ValueError:
-            continue
-
+            day, month_name, year = int(fallback.group(1)), fallback.group(2).upper(), int(fallback.group(3))
+            return datetime(year, MONTHS[month_name], day).date().isoformat()
+        except (KeyError, ValueError):
+            pass
     return None
 
 def extract_race_info(text):
