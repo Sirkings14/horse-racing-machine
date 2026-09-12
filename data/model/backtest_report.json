@@ -5,10 +5,10 @@
   "minimum_training_races": 5,
   "evaluated_races": 489,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1554,
+    "winner_hit_rate_at_1": 0.1595,
     "winner_hit_rate_at_3": 0.3845,
-    "average_actual_top3_covered_by_predicted_top3": 0.8998,
-    "average_actual_top3_covered_by_predicted_top5": 1.3599
+    "average_actual_top3_covered_by_predicted_top3": 0.8957,
+    "average_actual_top3_covered_by_predicted_top5": 1.3415
   },
   "race_results": [
     {
@@ -114,6 +114,32 @@
         8
       ],
       "race_key": "2023-06-19|SAINT-CLOUD|8"
+    },
+    {
+      "winner": 10,
+      "predicted_top1": 2,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        1,
+        7,
+        10
+      ],
+      "predicted_top3": [
+        2,
+        4,
+        7
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        2,
+        7,
+        4,
+        11,
+        6
+      ],
+      "race_key": "2023-06-20|NANTES|2"
     },
     {
       "winner": 10,
@@ -348,6 +374,32 @@
         7
       ],
       "race_key": "2023-07-31|DIEPPE|4"
+    },
+    {
+      "winner": 6,
+      "predicted_top1": 2,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        4,
+        6,
+        7
+      ],
+      "predicted_top3": [
+        2,
+        6,
+        8
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        2,
+        6,
+        8,
+        10,
+        3
+      ],
+      "race_key": "2023-08-01|DEAUVILLE|8"
     },
     {
       "winner": 4,
@@ -949,8 +1001,8 @@
     },
     {
       "winner": 10,
-      "predicted_top1": 13,
-      "winner_hit_at_1": false,
+      "predicted_top1": 10,
+      "winner_hit_at_1": true,
       "winner_hit_at_3": true,
       "actual_top3": [
         1,
@@ -960,15 +1012,15 @@
       "predicted_top3": [
         10,
         12,
-        13
+        16
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
-        13,
         10,
-        12,
         16,
+        12,
+        13,
         1
       ],
       "race_key": "2023-10-05|SAINT- CLOUD|1"
@@ -1402,16 +1454,16 @@
       "predicted_top3": [
         10,
         12,
-        15
+        14
       ],
       "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 0,
       "model_ranking": [
         10,
         12,
+        14,
         15,
-        1,
-        11
+        1
       ],
       "race_key": "2023-11-25|PARIS-VINCENNES|1"
     },
@@ -1634,18 +1686,18 @@
         9
       ],
       "predicted_top3": [
-        1,
         2,
-        3
+        3,
+        10
       ],
       "top3_coverage_by_top3": 0,
-      "top3_coverage_by_top5": 1,
+      "top3_coverage_by_top5": 0,
       "model_ranking": [
         3,
         2,
-        1,
         10,
-        8
+        1,
+        6
       ],
       "race_key": "2023-12-13|PARIS-VINCENNES|1"
     },
@@ -1670,8 +1722,8 @@
         16,
         15,
         10,
-        12,
-        4
+        4,
+        12
       ],
       "race_key": "2023-12-13|PARIS-VINCENNES NOCTURNE|8"
     },
@@ -1686,17 +1738,17 @@
         14
       ],
       "predicted_top3": [
-        2,
         9,
+        10,
         14
       ],
-      "top3_coverage_by_top3": 2,
+      "top3_coverage_by_top3": 3,
       "top3_coverage_by_top5": 3,
       "model_ranking": [
         14,
         9,
-        2,
         10,
+        2,
         8
       ],
       "race_key": "2023-12-17|PARIS-VINCENNES|4"
@@ -1928,8 +1980,8 @@
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         5,
-        2,
         7,
+        2,
         16,
         15
       ],
@@ -1954,8 +2006,8 @@
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         15,
-        4,
         8,
+        4,
         3,
         12
       ],
@@ -1963,7 +2015,7 @@
     },
     {
       "winner": 6,
-      "predicted_top1": 15,
+      "predicted_top1": 14,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -1972,25 +2024,25 @@
         12
       ],
       "predicted_top3": [
-        2,
+        5,
         14,
         15
       ],
-      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
-        15,
         14,
-        2,
+        15,
         5,
+        2,
         1
       ],
       "race_key": "2024-01-04|PARIS-VINCENNES|4"
     },
     {
       "winner": 12,
-      "predicted_top1": 3,
-      "winner_hit_at_1": false,
+      "predicted_top1": 12,
+      "winner_hit_at_1": true,
       "winner_hit_at_3": true,
       "actual_top3": [
         1,
@@ -2005,8 +2057,8 @@
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
-        3,
         12,
+        3,
         9,
         11,
         5
@@ -2269,7 +2321,7 @@
         7,
         6,
         8,
-        1
+        16
       ],
       "race_key": "2024-01-25|PARIS-VINCENNES|4"
     },
@@ -2284,8 +2336,8 @@
         17
       ],
       "predicted_top3": [
+        11,
         12,
-        14,
         18
       ],
       "top3_coverage_by_top3": 1,
@@ -2293,8 +2345,8 @@
       "model_ranking": [
         12,
         18,
-        14,
         11,
+        14,
         5
       ],
       "race_key": "2024-01-28|PARIS-VINCENNES|7"
@@ -2310,24 +2362,24 @@
         14
       ],
       "predicted_top3": [
+        2,
         4,
-        6,
-        12
+        6
       ],
-      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top3": 2,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         6,
         4,
-        12,
         2,
+        12,
         3
       ],
       "race_key": "2024-01-29|CAGNES-SUR-MER|2"
     },
     {
       "winner": 7,
-      "predicted_top1": 2,
+      "predicted_top1": 11,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -2343,8 +2395,8 @@
       "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 0,
       "model_ranking": [
-        2,
         11,
+        2,
         13,
         1,
         8
@@ -2700,7 +2752,7 @@
         12
       ],
       "predicted_top3": [
-        3,
+        7,
         11,
         15
       ],
@@ -2709,8 +2761,8 @@
       "model_ranking": [
         15,
         11,
-        3,
         7,
+        3,
         9
       ],
       "race_key": "2024-02-14|PARIS-VINCENNES NOCTURNE|8"
@@ -2726,8 +2778,8 @@
         16
       ],
       "predicted_top3": [
+        1,
         3,
-        15,
         16
       ],
       "top3_coverage_by_top3": 1,
@@ -2735,9 +2787,9 @@
       "model_ranking": [
         16,
         3,
-        15,
         1,
-        10
+        5,
+        15
       ],
       "race_key": "2024-02-18|PARIS-VINCENNES|1"
     },
@@ -3159,7 +3211,7 @@
     },
     {
       "winner": 2,
-      "predicted_top1": 5,
+      "predicted_top1": 1,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -3169,17 +3221,17 @@
       ],
       "predicted_top3": [
         1,
-        5,
-        16
+        4,
+        5
       ],
       "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 0,
       "model_ranking": [
-        5,
         1,
+        5,
+        4,
         16,
-        6,
-        4
+        6
       ],
       "race_key": "2024-03-18|CHANTILLY|1"
     },
@@ -3413,7 +3465,7 @@
         2,
         14,
         3,
-        13
+        1
       ],
       "race_key": "2024-03-28|CHANTILLY|5"
     },
@@ -3421,7 +3473,7 @@
       "winner": 8,
       "predicted_top1": 5,
       "winner_hit_at_1": false,
-      "winner_hit_at_3": true,
+      "winner_hit_at_3": false,
       "actual_top3": [
         4,
         8,
@@ -3429,17 +3481,17 @@
       ],
       "predicted_top3": [
         5,
-        8,
-        16
+        16,
+        18
       ],
-      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         5,
         16,
+        18,
         8,
-        15,
-        18
+        15
       ],
       "race_key": "2024-03-31|AUTEUIL|4"
     },
@@ -3481,17 +3533,17 @@
       ],
       "predicted_top3": [
         3,
-        6,
-        8
+        8,
+        10
       ],
       "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 0,
       "model_ranking": [
         8,
-        6,
         3,
         10,
-        2
+        6,
+        4
       ],
       "race_key": "2024-06-01|AUTEUIL|6"
     },
@@ -3655,7 +3707,7 @@
       "winner": 13,
       "predicted_top1": 3,
       "winner_hit_at_1": false,
-      "winner_hit_at_3": false,
+      "winner_hit_at_3": true,
       "actual_top3": [
         5,
         13,
@@ -3664,15 +3716,15 @@
       "predicted_top3": [
         3,
         5,
-        7
+        13
       ],
-      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top3": 2,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         3,
-        7,
-        5,
         13,
+        5,
+        7,
         4
       ],
       "race_key": "2024-06-22|COMPIEGNE|4"
@@ -3724,8 +3776,8 @@
         10,
         11,
         9,
-        4,
-        2
+        2,
+        4
       ],
       "race_key": "2024-06-24|LYON-PARILLY|1"
     },
@@ -3826,8 +3878,8 @@
       "top3_coverage_by_top5": 0,
       "model_ranking": [
         7,
-        10,
         1,
+        10,
         6,
         14
       ],
@@ -4303,7 +4355,7 @@
     },
     {
       "winner": 6,
-      "predicted_top1": 16,
+      "predicted_top1": 14,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -4312,17 +4364,17 @@
         14
       ],
       "predicted_top3": [
-        12,
+        13,
         14,
         16
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
-        16,
         14,
-        12,
+        16,
         13,
+        12,
         6
       ],
       "race_key": "2024-09-07|PARIS-VINCENNES|4"
@@ -4433,7 +4485,7 @@
     },
     {
       "winner": 16,
-      "predicted_top1": 11,
+      "predicted_top1": 6,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -4444,15 +4496,15 @@
       "predicted_top3": [
         1,
         6,
-        11
+        10
       ],
       "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
-        11,
         6,
         1,
         10,
+        11,
         2
       ],
       "race_key": "2024-10-08|AUTEUIL|1"
@@ -4733,13 +4785,13 @@
         14
       ],
       "top3_coverage_by_top3": 1,
-      "top3_coverage_by_top5": 2,
+      "top3_coverage_by_top5": 1,
       "model_ranking": [
         14,
         9,
         3,
-        7,
-        5
+        13,
+        7
       ],
       "race_key": "2024-10-27|SAINT-CLOUD|6"
     },
@@ -5014,8 +5066,8 @@
         18
       ],
       "predicted_top3": [
+        4,
         6,
-        9,
         11
       ],
       "top3_coverage_by_top3": 0,
@@ -5023,8 +5075,8 @@
       "model_ranking": [
         11,
         6,
-        9,
         4,
+        9,
         17
       ],
       "race_key": "2024-11-17|PARIS-VINCENNES|4"
@@ -5447,8 +5499,8 @@
     },
     {
       "winner": 2,
-      "predicted_top1": 2,
-      "winner_hit_at_1": true,
+      "predicted_top1": 3,
+      "winner_hit_at_1": false,
       "winner_hit_at_3": true,
       "actual_top3": [
         1,
@@ -5458,15 +5510,15 @@
       "predicted_top3": [
         2,
         3,
-        4
+        15
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
-        2,
         3,
-        4,
         15,
+        2,
+        4,
         14
       ],
       "race_key": "2024-12-23|DEAUVILLE|1"
@@ -5726,8 +5778,8 @@
         12,
         13,
         10,
-        11,
-        2
+        2,
+        11
       ],
       "race_key": "2025-01-22|CAGNES-SUR-MER|4"
     },
@@ -5753,7 +5805,7 @@
         18,
         15,
         11,
-        9
+        1
       ],
       "race_key": "2025-01-23|PARIS-VINCENNES|4"
     },
@@ -5872,17 +5924,17 @@
         8
       ],
       "predicted_top3": [
+        1,
         6,
-        8,
-        10
+        8
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         8,
         6,
-        10,
         1,
+        10,
         2
       ],
       "race_key": "2025-02-03|CAGNES-SUR-MER|2"
@@ -6163,13 +6215,13 @@
         11
       ],
       "top3_coverage_by_top3": 0,
-      "top3_coverage_by_top5": 1,
+      "top3_coverage_by_top5": 0,
       "model_ranking": [
         5,
         8,
         11,
-        13,
-        9
+        9,
+        10
       ],
       "race_key": "2025-03-02|AUTEUIL|3"
     },
@@ -6195,7 +6247,7 @@
         6,
         5,
         3,
-        10
+        8
       ],
       "race_key": "2025-03-03|CAEN|1"
     },
@@ -6470,17 +6522,17 @@
         12
       ],
       "predicted_top3": [
-        2,
         8,
-        12
+        12,
+        13
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         12,
         8,
-        2,
         13,
+        2,
         9
       ],
       "race_key": "2025-03-23|AUTEUIL|4"
@@ -6920,8 +6972,8 @@
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         7,
-        2,
         4,
+        2,
         15,
         9
       ],
@@ -6975,7 +7027,7 @@
         4,
         2,
         6,
-        11
+        8
       ],
       "race_key": "2025-05-12|VICHY|4"
     },
@@ -7007,8 +7059,8 @@
     },
     {
       "winner": 6,
-      "predicted_top1": 2,
-      "winner_hit_at_1": false,
+      "predicted_top1": 6,
+      "winner_hit_at_1": true,
       "winner_hit_at_3": true,
       "actual_top3": [
         4,
@@ -7023,8 +7075,8 @@
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
-        2,
         6,
+        2,
         8,
         11,
         13
@@ -7102,8 +7154,8 @@
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         11,
-        7,
         8,
+        7,
         4,
         10
       ],
@@ -7173,16 +7225,16 @@
       ],
       "predicted_top3": [
         4,
-        7,
+        6,
         12
       ],
-      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         4,
         12,
-        7,
         6,
+        7,
         5
       ],
       "race_key": "2025-06-09|COMPIEGNE|3"
@@ -7199,16 +7251,16 @@
       ],
       "predicted_top3": [
         1,
-        7,
-        9
+        9,
+        14
       ],
       "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 0,
       "model_ranking": [
         9,
         1,
-        7,
         14,
+        7,
         6
       ],
       "race_key": "2025-06-10|SAINT-CLOUD|7"
@@ -7345,7 +7397,7 @@
     },
     {
       "winner": 4,
-      "predicted_top1": 3,
+      "predicted_top1": 6,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -7361,8 +7413,8 @@
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
-        3,
         6,
+        3,
         8,
         7,
         10
@@ -7385,13 +7437,13 @@
         15
       ],
       "top3_coverage_by_top3": 2,
-      "top3_coverage_by_top5": 3,
+      "top3_coverage_by_top5": 2,
       "model_ranking": [
         15,
         13,
         6,
         14,
-        12
+        10
       ],
       "race_key": "2025-07-09|LES SABLES D'OLONNE|4"
     },
@@ -7570,8 +7622,8 @@
       "top3_coverage_by_top5": 0,
       "model_ranking": [
         1,
-        4,
         5,
+        4,
         7,
         14
       ],
@@ -7589,24 +7641,24 @@
       ],
       "predicted_top3": [
         3,
-        5,
-        6
+        6,
+        13
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         3,
         6,
-        5,
         13,
+        5,
         14
       ],
       "race_key": "2025-07-22|DIEPPE|7"
     },
     {
       "winner": 14,
-      "predicted_top1": 14,
-      "winner_hit_at_1": true,
+      "predicted_top1": 11,
+      "winner_hit_at_1": false,
       "winner_hit_at_3": true,
       "actual_top3": [
         1,
@@ -7621,8 +7673,8 @@
       "top3_coverage_by_top3": 2,
       "top3_coverage_by_top5": 3,
       "model_ranking": [
-        14,
         11,
+        14,
         13,
         6,
         1
@@ -7735,8 +7787,8 @@
     },
     {
       "winner": 1,
-      "predicted_top1": 2,
-      "winner_hit_at_1": false,
+      "predicted_top1": 1,
+      "winner_hit_at_1": true,
       "winner_hit_at_3": true,
       "actual_top3": [
         1,
@@ -7751,8 +7803,8 @@
       "top3_coverage_by_top3": 2,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
-        2,
         1,
+        2,
         9,
         3,
         7
@@ -7885,7 +7937,7 @@
         6,
         3,
         1,
-        9
+        4
       ],
       "race_key": "2025-08-18|CLAIREFONTAINE|7"
     },
@@ -7943,7 +7995,7 @@
     },
     {
       "winner": 8,
-      "predicted_top1": 4,
+      "predicted_top1": 12,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -7959,8 +8011,8 @@
       "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 0,
       "model_ranking": [
-        4,
         12,
+        4,
         14,
         11,
         16
@@ -8004,18 +8056,18 @@
         14
       ],
       "predicted_top3": [
+        3,
         4,
-        9,
-        10
+        9
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         4,
         9,
-        10,
         3,
-        8
+        10,
+        7
       ],
       "race_key": "2025-09-02|SAINT-CLOUD|1"
     },
@@ -8067,7 +8119,7 @@
         3,
         5,
         8,
-        13
+        1
       ],
       "race_key": "2025-09-04|PARISLONGCHAMP|5"
     },
@@ -8110,15 +8162,15 @@
       "predicted_top3": [
         2,
         10,
-        14
+        13
       ],
-      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         10,
         2,
-        14,
         13,
+        14,
         16
       ],
       "race_key": "2025-09-16|COMPIEGNE|1"
@@ -8359,7 +8411,7 @@
     },
     {
       "winner": 6,
-      "predicted_top1": 1,
+      "predicted_top1": 14,
       "winner_hit_at_1": false,
       "winner_hit_at_3": true,
       "actual_top3": [
@@ -8375,8 +8427,8 @@
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
-        1,
         14,
+        1,
         6,
         15,
         13
@@ -8420,8 +8472,8 @@
         14
       ],
       "predicted_top3": [
+        3,
         7,
-        12,
         13
       ],
       "top3_coverage_by_top3": 0,
@@ -8429,8 +8481,8 @@
       "model_ranking": [
         13,
         7,
-        12,
         3,
+        12,
         14
       ],
       "race_key": "2025-10-06|ENGHIEN|1"
@@ -8567,7 +8619,7 @@
     },
     {
       "winner": 13,
-      "predicted_top1": 2,
+      "predicted_top1": 8,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -8583,8 +8635,8 @@
       "top3_coverage_by_top3": 0,
       "top3_coverage_by_top5": 0,
       "model_ranking": [
-        2,
         8,
+        2,
         11,
         1,
         6
@@ -8610,8 +8662,8 @@
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         6,
-        11,
         4,
+        11,
         3,
         1
       ],
@@ -8639,7 +8691,7 @@
         1,
         11,
         15,
-        6
+        4
       ],
       "race_key": "2025-10-16|SAINT-CLOUD|1"
     },
@@ -8716,8 +8768,8 @@
         8,
         9,
         2,
-        16,
-        3
+        3,
+        16
       ],
       "race_key": "2025-10-20|DEAUVILLE|1"
     },
@@ -8853,7 +8905,7 @@
     },
     {
       "winner": 11,
-      "predicted_top1": 13,
+      "predicted_top1": 10,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -8869,8 +8921,8 @@
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
-        13,
         10,
+        13,
         16,
         3,
         12
@@ -8898,36 +8950,10 @@
         4,
         6,
         1,
-        7,
-        3
+        3,
+        7
       ],
       "race_key": "2025-10-29|AUTEUIL|3"
-    },
-    {
-      "winner": 3,
-      "predicted_top1": 3,
-      "winner_hit_at_1": true,
-      "winner_hit_at_3": true,
-      "actual_top3": [
-        3,
-        11,
-        14
-      ],
-      "predicted_top3": [
-        3,
-        8,
-        14
-      ],
-      "top3_coverage_by_top3": 2,
-      "top3_coverage_by_top5": 2,
-      "model_ranking": [
-        3,
-        14,
-        8,
-        13,
-        6
-      ],
-      "race_key": "2025-10-30|PARIS-VINCENNES|1"
     },
     {
       "winner": 14,
@@ -9006,32 +9032,6 @@
         6
       ],
       "race_key": "2025-11-03|FONTAINEBLEAU|4"
-    },
-    {
-      "winner": 16,
-      "predicted_top1": 10,
-      "winner_hit_at_1": false,
-      "winner_hit_at_3": false,
-      "actual_top3": [
-        7,
-        15,
-        16
-      ],
-      "predicted_top3": [
-        8,
-        10,
-        13
-      ],
-      "top3_coverage_by_top3": 0,
-      "top3_coverage_by_top5": 1,
-      "model_ranking": [
-        10,
-        13,
-        8,
-        16,
-        5
-      ],
-      "race_key": "2025-11-04|PARIS-VINCENNES|1"
     },
     {
       "winner": 3,
@@ -9263,7 +9263,7 @@
         14,
         2,
         10,
-        4
+        7
       ],
       "race_key": "2025-11-23|AUTEUIL|6"
     },
@@ -9315,7 +9315,7 @@
         4,
         13,
         6,
-        16
+        14
       ],
       "race_key": "2025-11-25|DEAUVILLE|1"
     },
@@ -9548,8 +9548,8 @@
         9,
         5,
         14,
-        4,
-        3
+        3,
+        4
       ],
       "race_key": "2025-12-09|CHANTILLY|5"
     },
@@ -9575,7 +9575,7 @@
         9,
         6,
         2,
-        1
+        3
       ],
       "race_key": "2025-12-11|CHANTILLY|4"
     },
@@ -9616,17 +9616,17 @@
         7
       ],
       "predicted_top3": [
-        1,
         7,
-        13
+        13,
+        15
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         7,
         13,
-        1,
         15,
+        1,
         12
       ],
       "race_key": "2025-12-13|PARIS-VINCENNES|4"
@@ -9650,8 +9650,8 @@
       "top3_coverage_by_top5": 0,
       "model_ranking": [
         7,
-        1,
         4,
+        1,
         14,
         12
       ],
@@ -9659,7 +9659,7 @@
     },
     {
       "winner": 1,
-      "predicted_top1": 7,
+      "predicted_top1": 3,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -9675,9 +9675,9 @@
       "top3_coverage_by_top3": 2,
       "top3_coverage_by_top5": 3,
       "model_ranking": [
-        7,
         3,
         2,
+        7,
         5,
         1
       ],
@@ -9756,8 +9756,8 @@
         12,
         17,
         15,
-        18,
-        11
+        11,
+        18
       ],
       "race_key": "2025-12-21|PARIS-VINCENNES|4"
     },
@@ -9835,7 +9835,7 @@
         16,
         15,
         2,
-        3
+        6
       ],
       "race_key": "2025-12-24|PARIS-VINCENNES|6"
     },
@@ -10118,10 +10118,10 @@
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         9,
-        1,
         2,
-        15,
-        4
+        1,
+        4,
+        15
       ],
       "race_key": "2026-01-12|CAGNES-SUR-MER|2"
     },
@@ -10204,6 +10204,32 @@
       "race_key": "2026-01-18|PARIS-VINCENNES|4"
     },
     {
+      "winner": 6,
+      "predicted_top1": 11,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        4,
+        6,
+        7
+      ],
+      "predicted_top3": [
+        11,
+        13,
+        14
+      ],
+      "top3_coverage_by_top3": 0,
+      "top3_coverage_by_top5": 0,
+      "model_ranking": [
+        11,
+        14,
+        13,
+        12,
+        9
+      ],
+      "race_key": "2026-01-19|CAGNES-SUR-MER|1"
+    },
+    {
       "winner": 3,
       "predicted_top1": 6,
       "winner_hit_at_1": false,
@@ -10222,38 +10248,12 @@
       "top3_coverage_by_top5": 0,
       "model_ranking": [
         6,
-        10,
         11,
+        10,
         1,
         7
       ],
       "race_key": "2026-01-19|CAGNES-SUR-MER|4"
-    },
-    {
-      "winner": 9,
-      "predicted_top1": 11,
-      "winner_hit_at_1": false,
-      "winner_hit_at_3": false,
-      "actual_top3": [
-        9,
-        12,
-        14
-      ],
-      "predicted_top3": [
-        11,
-        13,
-        14
-      ],
-      "top3_coverage_by_top3": 1,
-      "top3_coverage_by_top5": 3,
-      "model_ranking": [
-        11,
-        14,
-        13,
-        12,
-        9
-      ],
-      "race_key": "2026-01-21|CAGNES-SUR-MER|1"
     },
     {
       "winner": 6,
@@ -10326,8 +10326,8 @@
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         14,
-        13,
         12,
+        13,
         3,
         11
       ],
@@ -10595,8 +10595,8 @@
     },
     {
       "winner": 8,
-      "predicted_top1": 11,
-      "winner_hit_at_1": false,
+      "predicted_top1": 8,
+      "winner_hit_at_1": true,
       "winner_hit_at_3": true,
       "actual_top3": [
         8,
@@ -10611,8 +10611,8 @@
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
-        11,
         8,
+        11,
         6,
         5,
         15
@@ -10664,8 +10664,8 @@
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         14,
-        16,
         15,
+        16,
         4,
         6
       ],
@@ -10797,7 +10797,7 @@
         10,
         6,
         4,
-        7
+        8
       ],
       "race_key": "2026-02-25|PARIS-VINCENNES|1"
     },
@@ -10869,13 +10869,13 @@
         7
       ],
       "top3_coverage_by_top3": 1,
-      "top3_coverage_by_top5": 2,
+      "top3_coverage_by_top5": 1,
       "model_ranking": [
         7,
         4,
         2,
         13,
-        6
+        3
       ],
       "race_key": "2026-02-28|PARIS-VINCENNES|5"
     },
@@ -10924,8 +10924,8 @@
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         3,
-        6,
         10,
+        6,
         15,
         2
       ],
@@ -10976,8 +10976,8 @@
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         2,
-        6,
         10,
+        6,
         1,
         8
       ],
@@ -10995,16 +10995,16 @@
       ],
       "predicted_top3": [
         6,
-        8,
-        9
+        9,
+        11
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         6,
         9,
-        8,
         11,
+        8,
         2
       ],
       "race_key": "2026-03-12|CHANTILLY|1"
@@ -11106,8 +11106,8 @@
       "top3_coverage_by_top5": 0,
       "model_ranking": [
         4,
-        3,
         14,
+        3,
         11,
         15
       ],
@@ -11343,7 +11343,7 @@
         4,
         16,
         2,
-        11
+        3
       ],
       "race_key": "2026-03-29|SAINT-CLOUD|3"
     },
@@ -11498,8 +11498,8 @@
         14,
         10,
         16,
-        15,
-        12
+        12,
+        15
       ],
       "race_key": "2026-05-05|SAINT-CLOUD|1"
     },
@@ -12016,8 +12016,8 @@
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         8,
-        9,
         3,
+        9,
         2,
         6
       ],
@@ -12051,7 +12051,7 @@
     },
     {
       "winner": 10,
-      "predicted_top1": 1,
+      "predicted_top1": 3,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -12067,8 +12067,8 @@
       "top3_coverage_by_top3": 2,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
-        1,
         3,
+        1,
         2,
         9,
         14
@@ -12097,7 +12097,7 @@
         3,
         5,
         11,
-        6
+        4
       ],
       "race_key": "2026-06-09|COMPIEGNE|8"
     },
@@ -12269,17 +12269,17 @@
       ],
       "predicted_top3": [
         1,
-        8,
-        9
+        5,
+        8
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         8,
         1,
+        5,
         9,
-        3,
-        5
+        3
       ],
       "race_key": "2026-06-20|COMPIEGNE|3"
     },
@@ -12399,7 +12399,7 @@
       ],
       "predicted_top3": [
         1,
-        7,
+        8,
         11
       ],
       "top3_coverage_by_top3": 1,
@@ -12407,8 +12407,8 @@
       "model_ranking": [
         11,
         1,
-        7,
         8,
+        7,
         12
       ],
       "race_key": "2026-07-15|LISIEUX|8"
@@ -12451,7 +12451,7 @@
       ],
       "predicted_top3": [
         5,
-        7,
+        10,
         11
       ],
       "top3_coverage_by_top3": 0,
@@ -12459,9 +12459,9 @@
       "model_ranking": [
         11,
         5,
+        10,
         7,
-        2,
-        10
+        2
       ],
       "race_key": "2026-07-19|CHANTILLY|3"
     },
