@@ -9,25 +9,49 @@ from typing import Any, Dict, List, Optional, Tuple
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 
-MATCHED_FILE = BASE_DIR / "data" / "matched" / "matched_races.json"
-OUTPUT_DIR = BASE_DIR / "data" / "dataset"
+MATCHED_FILE = (
+    BASE_DIR
+    / "data"
+    / "matched"
+    / "matched_races.json"
+)
 
-DATASET_JSON = OUTPUT_DIR / "training_dataset.json"
-DATASET_CSV = OUTPUT_DIR / "training_dataset.csv"
+OUTPUT_DIR = (
+    BASE_DIR
+    / "data"
+    / "dataset"
+)
+
+DATASET_JSON = (
+    OUTPUT_DIR
+    / "training_dataset.json"
+)
+
+DATASET_CSV = (
+    OUTPUT_DIR
+    / "training_dataset.csv"
+)
 
 
 def normalize_text(value: Any) -> str:
     if value is None:
         return ""
 
-    return " ".join(str(value).strip().upper().split())
+    return " ".join(
+        str(value)
+        .strip()
+        .upper()
+        .split()
+    )
 
 
 def safe_int(value: Any) -> Optional[int]:
     try:
         if value is None or value == "":
             return None
+
         return int(value)
+
     except (TypeError, ValueError):
         return None
 
@@ -36,27 +60,71 @@ def safe_float(value: Any) -> Optional[float]:
     try:
         if value is None or value == "":
             return None
+
         return float(value)
+
     except (TypeError, ValueError):
         return None
+
+
+def is_non_runner(horse: Dict[str, Any]) -> bool:
+    """
+    Return True when the program identifies a horse
+    as a non-runner / withdrawn horse.
+    """
+
+    horse_name = normalize_text(
+        horse.get("horse")
+    )
+
+    description = normalize_text(
+        horse.get("description")
+    )
+
+    non_runner_markers = (
+        "NON PARTANT",
+        "NON-PARTANT",
+        "NON PARTANTE",
+        "NON-PARTANTE",
+        "NP",
+    )
+
+    for marker in non_runner_markers:
+        if marker in horse_name:
+            return True
+
+        if marker in description:
+            return True
+
+    return False
 
 
 def load_matched_races() -> List[Dict[str, Any]]:
     if not MATCHED_FILE.exists():
         raise FileNotFoundError(
-            f"Matched races file not found: {MATCHED_FILE}"
+            f"Matched races file not found: "
+            f"{MATCHED_FILE}"
         )
 
-    with MATCHED_FILE.open("r", encoding="utf-8") as f:
-        data = json.load(f)
+    with MATCHED_FILE.open(
+        "r",
+        encoding="utf-8",
+    ) as file:
+        data = json.load(file)
 
     if not isinstance(data, list):
-        raise ValueError("matched_races.json must contain a JSON list.")
+        raise ValueError(
+            "matched_races.json must contain "
+            "a JSON list."
+        )
 
     return data
 
 
-def get_program_section(record: Dict[str, Any]) -> Dict[str, Any]:
+def get_program_section(
+    record: Dict[str, Any]
+) -> Dict[str, Any]:
+
     program = record.get("program")
 
     if isinstance(program, dict):
@@ -65,7 +133,10 @@ def get_program_section(record: Dict[str, Any]) -> Dict[str, Any]:
     return record
 
 
-def get_result_section(record: Dict[str, Any]) -> Dict[str, Any]:
+def get_result_section(
+    record: Dict[str, Any]
+) -> Dict[str, Any]:
+
     result = record.get("result")
 
     if isinstance(result, dict):
@@ -74,7 +145,10 @@ def get_result_section(record: Dict[str, Any]) -> Dict[str, Any]:
     return {}
 
 
-def get_race_section(program: Dict[str, Any]) -> Dict[str, Any]:
+def get_race_section(
+    program: Dict[str, Any]
+) -> Dict[str, Any]:
+
     race = program.get("race")
 
     if isinstance(race, dict):
@@ -83,11 +157,17 @@ def get_race_section(program: Dict[str, Any]) -> Dict[str, Any]:
     return {}
 
 
-def is_verified_match(record: Dict[str, Any]) -> bool:
+def is_verified_match(
+    record: Dict[str, Any]
+) -> bool:
+
     match = record.get("match")
 
     if isinstance(match, dict):
-        status = normalize_text(match.get("status"))
+
+        status = normalize_text(
+            match.get("status")
+        )
 
         if status:
             return status in {
@@ -97,27 +177,46 @@ def is_verified_match(record: Dict[str, Any]) -> bool:
                 "CONFIRMED",
             }
 
-        confidence = safe_float(match.get("confidence"))
+        confidence = safe_float(
+            match.get("confidence")
+        )
 
         if confidence is not None:
             return confidence >= 100.0
 
     return (
-        isinstance(record.get("program"), dict)
-        and isinstance(record.get("result"), dict)
+        isinstance(
+            record.get("program"),
+            dict,
+        )
+        and isinstance(
+            record.get("result"),
+            dict,
+        )
     )
 
 
-def extract_arrival(result: Dict[str, Any]) -> List[int]:
-    arrival = result.get("arrival")
+def extract_arrival(
+    result: Dict[str, Any]
+) -> List[int]:
 
-    if not isinstance(arrival, list):
+    arrival = result.get(
+        "arrival"
+    )
+
+    if not isinstance(
+        arrival,
+        list,
+    ):
         return []
 
     output = []
 
     for value in arrival:
-        number = safe_int(value)
+
+        number = safe_int(
+            value
+        )
 
         if number is not None:
             output.append(number)
@@ -125,10 +224,17 @@ def extract_arrival(result: Dict[str, Any]) -> List[int]:
     return output
 
 
-def build_arrival_map(arrival: List[int]) -> Dict[int, int]:
+def build_arrival_map(
+    arrival: List[int]
+) -> Dict[int, int]:
+
     return {
         horse_number: position
-        for position, horse_number in enumerate(arrival, start=1)
+        for position, horse_number
+        in enumerate(
+            arrival,
+            start=1,
+        )
     }
 
 
@@ -136,10 +242,18 @@ def ranking_position(
     ranking_list: Any,
     horse_number: int,
 ) -> Optional[int]:
-    if not isinstance(ranking_list, list):
+
+    if not isinstance(
+        ranking_list,
+        list,
+    ):
         return None
 
-    for position, value in enumerate(ranking_list, start=1):
+    for position, value in enumerate(
+        ranking_list,
+        start=1,
+    ):
+
         if safe_int(value) == horse_number:
             return position
 
@@ -150,6 +264,7 @@ def ranking_average(
     rankings: Dict[str, Any],
     horse_number: int,
 ) -> Optional[float]:
+
     positions = []
 
     categories = (
@@ -161,6 +276,7 @@ def ranking_average(
     )
 
     for category in categories:
+
         position = ranking_position(
             rankings.get(category),
             horse_number,
@@ -172,13 +288,18 @@ def ranking_average(
     if not positions:
         return None
 
-    return round(sum(positions) / len(positions), 4)
+    return round(
+        sum(positions)
+        / len(positions),
+        4,
+    )
 
 
 def ranking_presence(
     rankings: Dict[str, Any],
     horse_number: int,
 ) -> int:
+
     count = 0
 
     categories = (
@@ -190,10 +311,12 @@ def ranking_presence(
     )
 
     for category in categories:
+
         if ranking_position(
             rankings.get(category),
             horse_number,
         ) is not None:
+
             count += 1
 
     return count
@@ -204,9 +327,18 @@ def build_race_key(
     track: Any,
     race_number: Any,
 ) -> Optional[str]:
-    normalized_date = normalize_text(date)
-    normalized_track = normalize_text(track)
-    number = safe_int(race_number)
+
+    normalized_date = normalize_text(
+        date
+    )
+
+    normalized_track = normalize_text(
+        track
+    )
+
+    number = safe_int(
+        race_number
+    )
 
     if not normalized_date:
         return None
@@ -217,24 +349,45 @@ def build_race_key(
     if number is None:
         return None
 
-    return f"{normalized_date}|{normalized_track}|{number}"
+    return (
+        f"{normalized_date}|"
+        f"{normalized_track}|"
+        f"{number}"
+    )
 
 
 def extract_race_rows(
     record: Dict[str, Any],
-) -> Tuple[Optional[str], List[Dict[str, Any]]]:
+) -> Tuple[
+    Optional[str],
+    List[Dict[str, Any]],
+    int,
+]:
 
-    if not is_verified_match(record):
-        return None, []
+    if not is_verified_match(
+        record
+    ):
+        return None, [], 0
 
-    program = get_program_section(record)
-    result = get_result_section(record)
-    race = get_race_section(program)
+    program = get_program_section(
+        record
+    )
+
+    result = get_result_section(
+        record
+    )
+
+    race = get_race_section(
+        program
+    )
 
     if not result:
-        return None, []
+        return None, [], 0
 
-    date = program.get("date") or record.get("date")
+    date = (
+        program.get("date")
+        or record.get("date")
+    )
 
     track = (
         race.get("track")
@@ -255,22 +408,37 @@ def extract_race_rows(
     )
 
     if race_key is None:
-        return None, []
+        return None, [], 0
 
-    horses = program.get("horses")
+    horses = program.get(
+        "horses"
+    )
 
-    if not isinstance(horses, list):
+    if not isinstance(
+        horses,
+        list,
+    ):
         horses = []
 
     if not horses:
-        return race_key, []
+        return race_key, [], 0
 
-    arrival = extract_arrival(result)
-    arrival_map = build_arrival_map(arrival)
+    arrival = extract_arrival(
+        result
+    )
 
-    rankings = program.get("rankings")
+    arrival_map = build_arrival_map(
+        arrival
+    )
 
-    if not isinstance(rankings, dict):
+    rankings = program.get(
+        "rankings"
+    )
+
+    if not isinstance(
+        rankings,
+        dict,
+    ):
         rankings = {}
 
     race_distance = safe_int(
@@ -310,27 +478,63 @@ def extract_race_rows(
         or result.get("source_file")
     )
 
-    rows: List[Dict[str, Any]] = []
+    rows: List[
+        Dict[str, Any]
+    ] = []
+
+    excluded_non_runners = 0
+
+    seen_horse_numbers = set()
 
     for horse in horses:
-        if not isinstance(horse, dict):
+
+        if not isinstance(
+            horse,
+            dict,
+        ):
             continue
 
-        horse_number = safe_int(horse.get("number"))
+        if is_non_runner(
+            horse
+        ):
+            excluded_non_runners += 1
+            continue
+
+        horse_number = safe_int(
+            horse.get("number")
+        )
 
         if horse_number is None:
             continue
 
-        finish_position = arrival_map.get(horse_number)
+        # Protect the dataset from duplicate horse
+        # numbers even if an older parsed JSON still
+        # contains duplicates.
+        if horse_number in seen_horse_numbers:
+            continue
+
+        seen_horse_numbers.add(
+            horse_number
+        )
+
+        finish_position = (
+            arrival_map.get(
+                horse_number
+            )
+        )
 
         if finish_position is not None:
-            won = int(finish_position == 1)
-            top3 = int(finish_position <= 3)
+
+            won = int(
+                finish_position == 1
+            )
+
+            top3 = int(
+                finish_position <= 3
+            )
+
         else:
-            # Current result parser only gives us the published arrival
-            # positions it extracted. Therefore we know this horse did not
-            # appear in the extracted top 3, but we do not know its exact
-            # finishing position.
+
             won = 0
             top3 = 0
 
@@ -373,46 +577,93 @@ def extract_race_rows(
             {
                 "race_key": race_key,
                 "date": date,
-                "track": normalize_text(track),
-                "race_number": safe_int(race_number),
+                "track": normalize_text(
+                    track
+                ),
+                "race_number": safe_int(
+                    race_number
+                ),
                 "race_name": race_name,
                 "race_type": race_type,
                 "distance": race_distance,
-                "runners_count": runners_count,
-                "prize_euros": prize_euros,
+                "runners_count": (
+                    runners_count
+                ),
+                "prize_euros": (
+                    prize_euros
+                ),
 
-                "horse_number": horse_number,
-                "horse_name": horse.get("horse"),
-                "horse_description": horse.get("description"),
+                "horse_number": (
+                    horse_number
+                ),
+                "horse_name": (
+                    horse.get("horse")
+                ),
+                "horse_description": (
+                    horse.get("description")
+                ),
 
-                "favorites_rank": favorites_rank,
-                "form_rank": form_rank,
-                "class_rank": class_rank,
-                "progress_rank": progress_rank,
-                "regularity_rank": regularity_rank,
+                "favorites_rank": (
+                    favorites_rank
+                ),
+                "form_rank": (
+                    form_rank
+                ),
+                "class_rank": (
+                    class_rank
+                ),
+                "progress_rank": (
+                    progress_rank
+                ),
+                "regularity_rank": (
+                    regularity_rank
+                ),
 
-                "ranking_average": avg_rank,
-                "ranking_presence": presence,
+                "ranking_average": (
+                    avg_rank
+                ),
+                "ranking_presence": (
+                    presence
+                ),
 
-                "finish_position": finish_position,
+                "finish_position": (
+                    finish_position
+                ),
                 "won": won,
                 "top3": top3,
 
-                "source_program": source_program,
-                "source_result": source_result,
+                "source_program": (
+                    source_program
+                ),
+                "source_result": (
+                    source_result
+                ),
             }
         )
 
-    return race_key, rows
+    return (
+        race_key,
+        rows,
+        excluded_non_runners,
+    )
 
 
 def deduplicate_records(
     records: List[Dict[str, Any]],
-) -> Dict[str, Dict[str, Any]]:
-    unique: Dict[str, Dict[str, Any]] = {}
+) -> Dict[
+    str,
+    Dict[str, Any],
+]:
+
+    unique = {}
 
     for record in records:
-        race_key, rows = extract_race_rows(record)
+
+        race_key, rows, _ = (
+            extract_race_rows(
+                record
+            )
+        )
 
         if race_key is None:
             continue
@@ -420,16 +671,26 @@ def deduplicate_records(
         if not rows:
             continue
 
-        existing = unique.get(race_key)
+        existing = unique.get(
+            race_key
+        )
 
         if existing is None:
+
             unique[race_key] = record
             continue
 
-        _, existing_rows = extract_race_rows(existing)
+        (
+            _,
+            existing_rows,
+            _,
+        ) = extract_race_rows(
+            existing
+        )
 
-        # Keep the record containing the most complete horse field.
-        if len(rows) > len(existing_rows):
+        if len(rows) > len(
+            existing_rows
+        ):
             unique[race_key] = record
 
     return unique
@@ -437,33 +698,71 @@ def deduplicate_records(
 
 def build_dataset(
     records: List[Dict[str, Any]],
-) -> List[Dict[str, Any]]:
+) -> Tuple[
+    List[Dict[str, Any]],
+    int,
+]:
 
-    unique_records = deduplicate_records(records)
+    unique_records = (
+        deduplicate_records(
+            records
+        )
+    )
 
-    dataset: List[Dict[str, Any]] = []
+    dataset = []
 
-    for record in unique_records.values():
-        _, rows = extract_race_rows(record)
+    excluded_non_runners = 0
+
+    for record in (
+        unique_records.values()
+    ):
+
+        (
+            _,
+            rows,
+            excluded,
+        ) = extract_race_rows(
+            record
+        )
+
+        excluded_non_runners += (
+            excluded
+        )
 
         if not rows:
             continue
 
-        dataset.extend(rows)
+        dataset.extend(
+            rows
+        )
 
     dataset.sort(
         key=lambda row: (
-            normalize_text(row.get("date")),
-            normalize_text(row.get("track")),
-            safe_int(row.get("race_number")) or 0,
-            safe_int(row.get("horse_number")) or 0,
+            normalize_text(
+                row.get("date")
+            ),
+            normalize_text(
+                row.get("track")
+            ),
+            safe_int(
+                row.get("race_number")
+            ) or 0,
+            safe_int(
+                row.get("horse_number")
+            ) or 0,
         )
     )
 
-    return dataset
+    return (
+        dataset,
+        excluded_non_runners,
+    )
 
 
-def save_json(dataset: List[Dict[str, Any]]) -> None:
+def save_json(
+    dataset: List[Dict[str, Any]]
+) -> None:
+
     OUTPUT_DIR.mkdir(
         parents=True,
         exist_ok=True,
@@ -472,16 +771,20 @@ def save_json(dataset: List[Dict[str, Any]]) -> None:
     with DATASET_JSON.open(
         "w",
         encoding="utf-8",
-    ) as f:
+    ) as file:
+
         json.dump(
             dataset,
-            f,
+            file,
             indent=4,
             ensure_ascii=False,
         )
 
 
-def save_csv(dataset: List[Dict[str, Any]]) -> None:
+def save_csv(
+    dataset: List[Dict[str, Any]]
+) -> None:
+
     OUTPUT_DIR.mkdir(
         parents=True,
         exist_ok=True,
@@ -490,26 +793,33 @@ def save_csv(dataset: List[Dict[str, Any]]) -> None:
     if not dataset:
         return
 
-    fieldnames = list(dataset[0].keys())
+    fieldnames = list(
+        dataset[0].keys()
+    )
 
     with DATASET_CSV.open(
         "w",
         encoding="utf-8",
         newline="",
-    ) as f:
+    ) as file:
+
         writer = csv.DictWriter(
-            f,
+            file,
             fieldnames=fieldnames,
             extrasaction="ignore",
         )
 
         writer.writeheader()
-        writer.writerows(dataset)
+
+        writer.writerows(
+            dataset
+        )
 
 
 def print_summary(
     raw_records: List[Dict[str, Any]],
     dataset: List[Dict[str, Any]],
+    excluded_non_runners: int,
 ) -> None:
 
     race_keys = {
@@ -528,73 +838,148 @@ def print_summary(
         for row in dataset
     )
 
-    races_with_full_fields = 0
-
-    for race_key in race_keys:
-        race_rows = [
-            row
-            for row in dataset
-            if row.get("race_key") == race_key
-        ]
-
-        if race_rows:
-            races_with_full_fields += 1
-
     tracks = Counter(
         row.get("track")
         for row in dataset
         if row.get("track")
     )
 
-    print("\n" + "=" * 60)
-    print("DATASET BUILD COMPLETE")
-    print("=" * 60)
+    print(
+        "\n"
+        + "=" * 60
+    )
 
-    print(f"Raw matched records: {len(raw_records)}")
-    print(f"Unique races: {len(race_keys)}")
-    print(f"Training rows: {len(dataset)}")
-    print(f"Winners: {winners}")
-    print(f"Top-3 rows: {top3}")
+    print(
+        "DATASET BUILD COMPLETE"
+    )
 
-    print("\nRows per race:")
+    print(
+        "=" * 60
+    )
 
-    for race_key in sorted(race_keys):
+    print(
+        f"Raw matched records: "
+        f"{len(raw_records)}"
+    )
+
+    print(
+        f"Unique races: "
+        f"{len(race_keys)}"
+    )
+
+    print(
+        f"Training rows: "
+        f"{len(dataset)}"
+    )
+
+    print(
+        f"Winners: "
+        f"{winners}"
+    )
+
+    print(
+        f"Top-3 rows: "
+        f"{top3}"
+    )
+
+    print(
+        f"Non-runners excluded: "
+        f"{excluded_non_runners}"
+    )
+
+    print(
+        "\nRows per race:"
+    )
+
+    for race_key in sorted(
+        race_keys
+    ):
+
         count = sum(
             1
             for row in dataset
-            if row.get("race_key") == race_key
+            if row.get(
+                "race_key"
+            ) == race_key
         )
 
-        print(f"  {race_key}: {count}")
+        print(
+            f"  {race_key}: "
+            f"{count}"
+        )
 
-    print("\nTracks:")
+    print(
+        "\nTracks:"
+    )
 
-    for track, count in tracks.most_common():
-        print(f"  {track}: {count} horse rows")
+    for track, count in (
+        tracks.most_common()
+    ):
 
-    print(f"\nSaved JSON: {DATASET_JSON}")
-    print(f"Saved CSV : {DATASET_CSV}")
+        print(
+            f"  {track}: "
+            f"{count} horse rows"
+        )
+
+    print(
+        f"\nSaved JSON: "
+        f"{DATASET_JSON}"
+    )
+
+    print(
+        f"Saved CSV : "
+        f"{DATASET_CSV}"
+    )
 
 
 def main() -> None:
-    print("\n" + "=" * 60)
-    print("BUILDING HORSE RACING TRAINING DATASET")
-    print("=" * 60)
+
+    print(
+        "\n"
+        + "=" * 60
+    )
+
+    print(
+        "BUILDING HORSE RACING "
+        "TRAINING DATASET"
+    )
+
+    print(
+        "=" * 60
+    )
 
     records = load_matched_races()
 
-    dataset = build_dataset(records)
+    (
+        dataset,
+        excluded_non_runners,
+    ) = build_dataset(
+        records
+    )
 
     if not dataset:
-        print("\nNo valid training rows were produced.")
+
+        print(
+            "\nNo valid training rows "
+            "were produced."
+        )
+
         return
 
-    save_json(dataset)
-    save_csv(dataset)
+    save_json(
+        dataset
+    )
+
+    save_csv(
+        dataset
+    )
 
     print_summary(
         raw_records=records,
         dataset=dataset,
+        excluded_non_runners=(
+            excluded_non_runners
+        ),
     )
 
 
