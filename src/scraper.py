@@ -422,55 +422,72 @@ def scrape_archive(
     return downloaded
 
 
+def scrape_sources(base_urls, folder, prefix, label):
+    """
+    Try all known LONAB endpoints and merge unique downloaded PDFs.
+
+    One endpoint may temporarily be empty or unavailable while another
+    canonical URL already exposes the current program/results PDF.
+    """
+    merged = []
+    seen = set()
+
+    for base_url in base_urls:
+        print("\n" + "-" * 60)
+        print(f"Trying {label} source: {base_url}")
+        print("-" * 60)
+
+        try:
+            paths = scrape_archive(base_url, folder, prefix)
+        except Exception as error:
+            print(f"{label.capitalize()} source failed: {base_url}")
+            print(f"Error: {error}")
+            continue
+
+        for path in paths:
+            if path and path not in seen:
+                seen.add(path)
+                merged.append(path)
+
+        if not paths:
+            print(
+                f"{label.capitalize()} source produced no PDFs; "
+                "continuing with fallback source."
+            )
+
+    return merged
+
+
 def scrape_programs():
-    print(
-        "\n"
-        "SCRAPING PROGRAM ARCHIVE"
-    )
+    print("\nSCRAPING PROGRAM ARCHIVE")
 
-    programs = scrape_archive(
-        PROGRAM_URL,
+    programs = scrape_sources(
+        PROGRAM_URLS,
         "data/raw/programs",
-        "program"
+        "program",
+        "program",
     )
 
-    print(
-        "\n"
-        "PROGRAM ARCHIVE COMPLETE"
-    )
-
-    print(
-        f"Program PDFs processed: "
-        f"{len(programs)}"
-    )
+    print("\nPROGRAM ARCHIVE COMPLETE")
+    print(f"Program PDFs processed: {len(programs)}")
 
     return programs
 
 
 def scrape_results():
-    print(
-        "\n"
-        "SCRAPING RESULT ARCHIVE"
-    )
+    print("\nSCRAPING RESULT ARCHIVE")
 
-    results = scrape_archive(
-        RESULTS_URL,
+    results = scrape_sources(
+        RESULTS_URLS,
         "data/raw/results",
-        "result"
+        "result",
+        "result",
     )
 
-    print(
-        "\n"
-        "RESULT ARCHIVE COMPLETE"
-    )
-
-    print(
-        f"Result PDFs processed: "
-        f"{len(results)}"
-    )
+    print("\nRESULT ARCHIVE COMPLETE")
+    print(f"Result PDFs processed: {len(results)}")
 
     return results
-
 
 def run_scraper():
     print("=" * 60)
