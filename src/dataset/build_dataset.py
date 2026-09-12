@@ -5,24 +5,13 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 
-MATCHED_FILE = (
-    BASE_DIR
-    / "data"
-    / "matched"
-    / "matched_races.json"
-)
-
-OUTPUT_DIR = (
-    BASE_DIR
-    / "data"
-    / "dataset"
-)
-
+MATCHED_FILE = BASE_DIR / "data" / "matched" / "matched_races.json"
+OUTPUT_DIR = BASE_DIR / "data" / "dataset"
 DATASET_JSON = OUTPUT_DIR / "training_dataset.json"
 DATASET_CSV = OUTPUT_DIR / "training_dataset.csv"
 
@@ -51,53 +40,35 @@ def safe_float(value: Any) -> Optional[float]:
         return None
 
 
-def contains_non_runner_marker(value: Any) -> bool:
+def is_non_runner(horse: Dict[str, Any]) -> bool:
     """
-    Detect explicit non-runner markers without treating ordinary
-    occurrences of the letters NP as a non-runner declaration.
-
-    Examples that count:
-        NON PARTANT
-        NON-PARTANT
-        NON PARTANTE
-        NON-PARTANTE
-        NP
-
-    An embedded substring such as the NP inside unrelated words
-    or a historical results block is not sufficient.
+    Detect a real non-runner without interpreting historical result text
+    appended to a horse description as a withdrawal marker.
     """
 
-    text = normalize_text(value)
+    horse_name = normalize_text(horse.get("horse"))
+    description = normalize_text(horse.get("description"))
 
-    if not text:
-        return False
-
-    if re.search(r"\bNON[\s-]+PARTANT(?:E)?\b", text):
+    # Strong markers in the horse-name field.
+    if horse_name in {"NP", "NON PARTANT", "NON-PARTANT", "NON PARTANTE", "NON-PARTANTE"}:
         return True
 
-    if re.search(r"\bNP\b", text):
+    # Explicit non-runner wording in the horse name.
+    if re.search(r"\bNON[\s-]+PARTANT(?:E)?\b", horse_name):
+        return True
+
+    # Only treat a description as a non-runner declaration when the
+    # declaration is at the beginning/end of the field. This avoids
+    # matching appended historical result blocks such as `... NP : 8`.
+    if re.search(r"^(?:NP|NON[\s-]+PARTANT(?:E)?)\b", description):
         return True
 
     return False
 
 
-def is_non_runner(horse: Dict[str, Any]) -> bool:
-    """
-    Return True only when the horse is explicitly identified as a
-    non-runner / withdrawn horse.
-    """
-
-    return (
-        contains_non_runner_marker(horse.get("horse"))
-        or contains_non_runner_marker(horse.get("description"))
-    )
-
-
 def load_matched_races() -> List[Dict[str, Any]]:
     if not MATCHED_FILE.exists():
-        raise FileNotFoundError(
-            f"Matched races file not found: {MATCHED_FILE}"
-        )
+        raise FileNotFoundError(f"Matched races file not found: {MATCHED_FILE}")
 
     with MATCHED_FILE.open("r", encoding="utf-8") as file:
         data = json.load(file)
@@ -187,11 +158,7 @@ def extract_horses(program: Dict[str, Any]) -> List[Dict[str, Any]]:
     return [horse for horse in horses if isinstance(horse, dict)]
 
 
-def build_race_key(
-    date: Any,
-    track: Any,
-    race_number: Any,
-) -> Optional[str]:
+def build_race_key(date: Any, track: Any, race_number: Any) -> Optional[str]:
     normalized_date = normalize_text(date)
     normalized_track = normalize_text(track)
     normalized_race_number = safe_int(race_number)
@@ -255,11 +222,7 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
         }
 
         ranking_numbers = [value for value in ranking_values.values() if value is not None]
-        ranking_average = (
-            round(sum(ranking_numbers) / len(ranking_numbers), 4)
-            if ranking_numbers
-            else None
-        )
+        ranking_average = round(sum(ranking_numbers) / len(ranking_numbers), 4) if ranking_numbers else None
 
         rows.append(
             {
@@ -313,9 +276,7 @@ def deduplicate_records(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     for records_for_race in grouped.values():
         best = max(
             records_for_race,
-            key=lambda record: len(
-                extract_horses(get_program_section(record))
-            ),
+            key=lambda record: len(extract_horses(get_program_section(record))),
         )
         output.append(best)
 
@@ -332,30 +293,11 @@ def write_csv(rows: List[Dict[str, Any]]) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     fieldnames = [
-        "race_key",
-        "date",
-        "track",
-        "race_number",
-        "race_name",
-        "race_type",
-        "distance",
-        "runners_count",
-        "prize_euros",
-        "horse_number",
-        "horse_name",
-        "horse_description",
-        "favorites_rank",
-        "form_rank",
-        "class_rank",
-        "progress_rank",
-        "regularity_rank",
-        "ranking_average",
-        "ranking_presence",
-        "finish_position",
-        "won",
-        "top3",
-        "source_program",
-        "source_result",
+        "race_key", "date", "track", "race_number", "race_name", "race_type",
+        "distance", "runners_count", "prize_euros", "horse_number", "horse_name",
+        "horse_description", "favorites_rank", "form_rank", "class_rank",
+        "progress_rank", "regularity_rank", "ranking_average", "ranking_presence",
+        "finish_position", "won", "top3", "source_program", "source_result",
     ]
 
     with DATASET_CSV.open("w", newline="", encoding="utf-8") as file:
@@ -376,12 +318,10 @@ def main() -> None:
     non_runner_count = 0
 
     for record in unique_records:
-        before = len(
-            extract_horses(get_program_section(record))
-        )
+        before = len(extract_horses(get_program_section(record)))
         rows = extract_race_rows(record)
         after = len(rows)
-        non_runner_count += max(before - after - 0, 0)
+        non_runner_count += max(before - after, 0)
         all_rows.extend(rows)
 
     write_json(all_rows)
