@@ -198,6 +198,7 @@ def get_pdf_links(page_url):
     detail_urls = []
 
     for link in soup.find_all("a", href=True):
+        href = link.get("href", "").strip()
         label = " ".join(
             filter(
                 None,
@@ -205,25 +206,32 @@ def get_pdf_links(page_url):
                     link.get_text(" ", strip=True),
                     link.get("title", ""),
                     link.get("aria-label", ""),
+                    href,
                 ],
             )
         ).upper()
 
+        # Newer LONAB listing cards sometimes keep the article title in a
+        # surrounding element while the anchor itself only contains an icon.
+        # Accept either recognizable label text OR a recognizable URL.
         if not any(
             token in label
             for token in (
                 "JOURNAL HIPPIQUE",
                 "PMU'B",
                 "PMU’B",
-                "RÉSULTAT",
+                "PMUB",
                 "RESULTAT",
-                "TÉLÉCHARGER",
+                "RÉSULTAT",
                 "TELECHARGER",
+                "TÉLÉCHARGER",
+                "PROGRAMME",
+                "PROGRAM",
             )
         ):
             continue
 
-        href = link.get("href", "").strip()
+        
         if not href or href.startswith("#"):
             continue
 
@@ -268,8 +276,21 @@ def get_pdf_links(page_url):
                 f"Detail page skipped: {detail_url} | {error}"
             )
 
-    # Drupal pages sometimes expose documents through embedded media attributes
-    # instead of a normal anchor. Scan the HTML for PDF paths as a final fallback.
+    # LONAB/Drupal pages sometimes expose documents through media attributes,
+    # buttons, iframes, or inline JSON instead of a normal anchor.
+    for tag in soup.find_all(True):
+        for attribute in ("href", "src", "data-href", "data-url", "data-file", "data-download"):
+            value = tag.get(attribute)
+            if not value:
+                continue
+            value = str(value).strip()
+            if ".pdf" not in value.lower():
+                continue
+            pdf_url = normalize_url(urljoin(page_url, value))
+            if pdf_url not in pdf_links:
+                pdf_links.append(pdf_url)
+
+    # Scan the HTML for PDF paths as a final fallback.
     for match in re.finditer(
         r'''["']([^"'<>\s]+\.pdf(?:\?[^"'<>\s]*)?)["']''',
         response.text,
@@ -340,6 +361,9 @@ def collect_historical_pdf_links(base_url):
                 f"Error: {error}"
             )
 
+    # The newest LONAB programs are often published before the race date.
+    # Never stop after one empty archive page because a temporary rendering
+    # issue can otherwise hide today's/tomorrow's program.
     print(
         f"Archive pages checked: "
         f"{pages_checked}"
