@@ -347,9 +347,9 @@ def collect_historical_pdf_links(base_url):
             if not links:
                 print(
                     "No PDFs found on this page. "
-                    "Stopping archive crawl."
+                    "Continuing archive crawl."
                 )
-                break
+                continue
 
         except Exception as error:
             print(
