@@ -30,8 +30,21 @@ def extract_date(text):
         r"JUILLET|AOUT|AOÛT|SEPTEMBRE|OCTOBRE|NOVEMBRE|DECEMBRE|DÉCEMBRE)"
         r"\s+(20\d{2})\b"
     )
+    # Prefer the date announced by the current program headline. This avoids
+    # accidentally selecting a previous-arrival/result date printed later in
+    # the same newspaper.
+    headline_pattern = (
+        r'''(?:(?:"(?:4\+1|QUARTE|TIERCE)")?\s*DU\s+)?'''
+        r'''(?:LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)?\s*'''
+        r'''(\d{1,2})\s+'''
+        r'''(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|JUILLET|AOUT|AOÛT|'''
+        r'''SEPTEMBRE|OCTOBRE|NOVEMBRE|DECEMBRE|DÉCEMBRE)\s+'''
+        r'''(20\d{2})\b'''
+    )
+
     candidates = []
-    for match in re.finditer(pattern, text, re.IGNORECASE):
+    search_text = text[:8000]
+    for match in re.finditer(headline_pattern, search_text, re.IGNORECASE):
         day = int(match.group(1))
         month_name = match.group(2).upper()
         year = int(match.group(3))
@@ -42,11 +55,23 @@ def extract_date(text):
             candidates.append(datetime(year, month, day).date())
         except ValueError:
             continue
-    if not candidates:
-        return None
-    # Program headers occur before historical result blocks, so the first valid
-    # full date is the best candidate.
-    return candidates[0].isoformat()
+    if candidates:
+        return candidates[0].isoformat()
+
+    # Fallback to the complete document when extraction moved the headline.
+    for match in re.finditer(pattern, text, re.IGNORECASE):
+        day = int(match.group(1))
+        month_name = match.group(2).upper()
+        year = int(match.group(3))
+        month = MONTHS.get(month_name)
+        if not month:
+            continue
+        try:
+            return datetime(year, month, day).date().isoformat()
+        except ValueError:
+            continue
+
+    return None
 
 def extract_race_info(text):
     race = {
@@ -59,22 +84,25 @@ def extract_race_info(text):
         "prize_euros": None,
     }
 
+    # Race headers can appear on one line or after extra spaces/line wrapping.
+    # Search the complete document for TRACK - PRIX NAME rather than requiring
+    # an exact line boundary.
     match = re.search(
-        r"(?:^|\n)([A-ZÀ-Ü0-9'\-\s]+?)\s*-\s*(PRIX\s+[A-ZÀ-Ü0-9'\-\s]+)(?:\n|$)",
+        r"([A-ZÀ-Ü][A-ZÀ-Ü0-9'\- ]{2,}?)\s*-\s*(PRIX\s+[A-ZÀ-Ü0-9'\- ]{2,})",
         text,
-        re.MULTILINE,
+        re.IGNORECASE,
     )
     if match:
-        race["track"] = match.group(1).strip()
-        race["race_name"] = match.group(2).strip()
+        race["track"] = re.sub(r"\s+", " ", match.group(1)).strip().upper()
+        race["race_name"] = re.sub(r"\s+", " ", match.group(2)).strip().upper()
 
     match = re.search(r"(\d+)\s+CONCURRENTS?", text, re.IGNORECASE)
     if match:
         race["runners_count"] = int(match.group(1))
 
     for pattern in (
-        r"(\d+)(?:ère|ere|ème|eme)\s+COURSE",
-        r"(\d+)(?:ER|E|EME|ÈME)\s+COURSE",
+        r"(\d+)\s*(?:ère|ere|ème|eme|ER|E|EME|ÈME)\s+COURSE",
+        r"(\d+)\s*COURSE",
     ):
         match = re.search(pattern, text, re.IGNORECASE)
         if match:
