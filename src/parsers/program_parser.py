@@ -22,23 +22,31 @@ def clean_text(text):
 
 
 def extract_date(text):
+    # Search the whole document, not only one exact newspaper headline format.
     pattern = (
-        r"DU\s+(?:LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)\s+"
-        r"(\d{1,2})\s+(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|"
-        r"JUILLET|AOUT|AOÛT|SEPTEMBRE|OCTOBRE|NOVEMBRE|DECEMBRE|DÉCEMBRE)\s+(\d{4})"
+        r"\b(?:LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)?\s*"
+        r"(\d{1,2})\s+"
+        r"(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|"
+        r"JUILLET|AOUT|AOÛT|SEPTEMBRE|OCTOBRE|NOVEMBRE|DECEMBRE|DÉCEMBRE)"
+        r"\s+(20\d{2})\b"
     )
-    match = re.search(pattern, text, re.IGNORECASE)
-    if not match:
+    candidates = []
+    for match in re.finditer(pattern, text, re.IGNORECASE):
+        day = int(match.group(1))
+        month_name = match.group(2).upper()
+        year = int(match.group(3))
+        month = MONTHS.get(month_name)
+        if not month:
+            continue
+        try:
+            candidates.append(datetime(year, month, day).date())
+        except ValueError:
+            continue
+    if not candidates:
         return None
-    day, month_name, year = int(match.group(1)), match.group(2).upper(), int(match.group(3))
-    month = MONTHS.get(month_name)
-    if not month:
-        return None
-    try:
-        return datetime(year, month, day).strftime("%Y-%m-%d")
-    except ValueError:
-        return None
-
+    # Program headers occur before historical result blocks, so the first valid
+    # full date is the best candidate.
+    return candidates[0].isoformat()
 
 def extract_race_info(text):
     race = {
