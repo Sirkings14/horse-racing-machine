@@ -23,7 +23,10 @@ def clean_text(text):
 
 def extract_date(text):
     """Extract the current race date from the newspaper header before old results."""
-    header = text[:12000]
+    # The current program headline is normally near the beginning, but PDF
+    # extraction order can place it later. Search the full document while
+    # requiring a program headline before falling back to generic dates.
+    header = text
     months = r"(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|JUILLET|AOUT|AOÛT|SEPTEMBRE|OCTOBRE|NOVEMBRE|DECEMBRE|DÉCEMBRE)"
     patterns = [
         r'(?:["“]?(?:4\+1|QUARTE|TIERCE)["”]?\s+DU\s+)(?:LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE)\s+(\d{1,2})\s+' + months + r'\s+(20\d{2})\b',
