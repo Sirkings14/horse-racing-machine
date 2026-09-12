@@ -143,6 +143,8 @@ def program_race_date(program):
     return normalize_race_date(race_metadata(program)["date"])
 
 def today_utc():
+    # LONAB/PMU-B operations follow Burkina Faso local time (UTC+0), so UTC is
+    # intentionally used as the operational date source.
     return datetime.now(timezone.utc).date()
 
 
