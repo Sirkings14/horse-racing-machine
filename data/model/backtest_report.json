@@ -1,0 +1,275 @@
+{
+  "method": "walk_forward_logistic_top3",
+  "dataset_races": 15,
+  "dataset_rows": 229,
+  "minimum_training_races": 5,
+  "evaluated_races": 10,
+  "metrics": {
+    "winner_hit_rate_at_1": 0.4,
+    "winner_hit_rate_at_3": 0.5,
+    "average_actual_top3_covered_by_predicted_top3": 1.0,
+    "average_actual_top3_covered_by_predicted_top5": 1.2
+  },
+  "race_results": [
+    {
+      "winner": 15,
+      "predicted_top1": 9,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        1,
+        11,
+        15
+      ],
+      "predicted_top3": [
+        7,
+        9,
+        11
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        9,
+        11,
+        7,
+        2,
+        3
+      ],
+      "race_key": "2026-07-20|VICHY|8"
+    },
+    {
+      "winner": 13,
+      "predicted_top1": 14,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        3,
+        13,
+        16
+      ],
+      "predicted_top3": [
+        8,
+        13,
+        14
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        14,
+        13,
+        8,
+        15,
+        12
+      ],
+      "race_key": "2026-08-24|PARIS-VINCENNES|8"
+    },
+    {
+      "winner": 1,
+      "predicted_top1": 11,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        1,
+        2,
+        15
+      ],
+      "predicted_top3": [
+        9,
+        11,
+        16
+      ],
+      "top3_coverage_by_top3": 0,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        11,
+        9,
+        16,
+        4,
+        2
+      ],
+      "race_key": "2026-08-31|SAINT-CLOUD|1"
+    },
+    {
+      "winner": 9,
+      "predicted_top1": 9,
+      "winner_hit_at_1": true,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        9,
+        10,
+        13
+      ],
+      "predicted_top3": [
+        2,
+        7,
+        9
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        9,
+        7,
+        2,
+        4,
+        1
+      ],
+      "race_key": "2026-09-02|LA CAPELLE|1"
+    },
+    {
+      "winner": 8,
+      "predicted_top1": 14,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        8,
+        11,
+        12
+      ],
+      "predicted_top3": [
+        6,
+        11,
+        14
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 2,
+      "model_ranking": [
+        14,
+        11,
+        6,
+        8,
+        13
+      ],
+      "race_key": "2026-09-04|PARIS-VINCENNES NOCTURNE|4"
+    },
+    {
+      "winner": 10,
+      "predicted_top1": 3,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        3,
+        10,
+        13
+      ],
+      "predicted_top3": [
+        3,
+        8,
+        12
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        3,
+        8,
+        12,
+        7,
+        11
+      ],
+      "race_key": "2026-09-05|PARIS-VINCENNES|4"
+    },
+    {
+      "winner": 13,
+      "predicted_top1": 13,
+      "winner_hit_at_1": true,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        7,
+        13,
+        16
+      ],
+      "predicted_top3": [
+        13,
+        14,
+        16
+      ],
+      "top3_coverage_by_top3": 2,
+      "top3_coverage_by_top5": 2,
+      "model_ranking": [
+        13,
+        16,
+        14,
+        3,
+        10
+      ],
+      "race_key": "2026-09-07|CRAON|1"
+    },
+    {
+      "winner": 8,
+      "predicted_top1": 5,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        8,
+        9,
+        14
+      ],
+      "predicted_top3": [
+        5,
+        10,
+        13
+      ],
+      "top3_coverage_by_top3": 0,
+      "top3_coverage_by_top5": 0,
+      "model_ranking": [
+        5,
+        13,
+        10,
+        4,
+        15
+      ],
+      "race_key": "2026-09-08|AUTEUIL|1"
+    },
+    {
+      "winner": 3,
+      "predicted_top1": 3,
+      "winner_hit_at_1": true,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        3,
+        9,
+        13
+      ],
+      "predicted_top3": [
+        2,
+        3,
+        10
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        3,
+        2,
+        10,
+        14,
+        7
+      ],
+      "race_key": "2026-09-10|PARISLONGCHAMP|1"
+    },
+    {
+      "winner": 5,
+      "predicted_top1": 5,
+      "winner_hit_at_1": true,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        5,
+        8,
+        14
+      ],
+      "predicted_top3": [
+        5,
+        13,
+        14
+      ],
+      "top3_coverage_by_top3": 2,
+      "top3_coverage_by_top5": 2,
+      "model_ranking": [
+        5,
+        13,
+        14,
+        11,
+        3
+      ],
+      "race_key": "2026-09-11|PARIS-VINCENNES NOCTURNE|4"
+    }
+  ]
+}
