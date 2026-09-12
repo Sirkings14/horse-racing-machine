@@ -8,11 +8,24 @@ import requests
 from bs4 import BeautifulSoup
 
 
-PROGRAM_URL = "https://www.lonab.bf/fr/programme-pmub"
-RESULTS_URL = "https://www.lonab.bf/fr/resultats-gains-ecd"
+# Canonical LONAB endpoints plus compatibility fallbacks. LONAB has exposed
+# both www and non-www URLs over time, and a failed/empty first endpoint must
+# never make the machine conclude that there is no race program.
+PROGRAM_URLS = (
+    "https://www.lonab.bf/programme-pmub",
+    "https://lonab.bf/fr/programme-pmub",
+    "https://www.lonab.bf/fr/programme-pmub",
+)
+RESULTS_URLS = (
+    "https://www.lonab.bf/resultats-gains-ecd",
+    "https://lonab.bf/fr/resultats-gains-ecd",
+    "https://www.lonab.bf/fr/resultats-gains-ecd",
+)
 
 # Number of archive pages to inspect.
-HISTORICAL_PAGES = int(os.getenv("HISTORICAL_PAGES", "250"))
+# Daily autonomous runs should stay fast and prioritize the newest pages.
+# Use HISTORICAL_PAGES=250 only for an intentional one-off historical backfill.
+HISTORICAL_PAGES = int(os.getenv("HISTORICAL_PAGES", "5"))
 
 HEADERS = {
     "User-Agent": (
