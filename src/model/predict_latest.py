@@ -5,10 +5,10 @@ from datetime import date, datetime, timezone
 import re
 from pathlib import Path
 
+from src.live.registry import eligible_races, mark_predicted, LIVE_DIR
 from src.model.logistic_model import LogisticModel
 
 BASE_DIR = Path(__file__).resolve().parents[2]
-PROGRAM_DIR = BASE_DIR / "data" / "structured" / "programs"
 DATASET_FILE = BASE_DIR / "data" / "dataset" / "training_dataset_clean.json"
 MODEL_DIR = BASE_DIR / "data" / "model"
 OUTPUT_FILE = MODEL_DIR / "latest_prediction.json"
@@ -37,37 +37,22 @@ def race_metadata(program):
 
 def race_key(program):
     meta = race_metadata(program)
-    date = meta["date"]
+    race_date = meta["date"]
     track = meta["track"]
     number = meta["race_number"]
-
-    if not date or not track or number is None:
+    if not race_date or not track or number is None:
         return None
-
     try:
         number = int(number)
     except (TypeError, ValueError):
         return None
-
-    return f"{str(date).strip()}|{str(track).strip().upper()}|{number}"
-
-
-def has_usable_race_metadata(program):
-    meta = race_metadata(program)
-    return (
-        bool(meta["date"])
-        and bool(meta["track"])
-        and meta["race_number"] is not None
-        and bool(program.get("horses"))
-        and race_key(program) is not None
-    )
+    return f"{str(race_date).strip()}|{str(track).strip().upper()}|{number}"
 
 
 def program_to_rows(program):
     meta = race_metadata(program)
     rankings = program.get("rankings") or {}
     positions = {}
-
     for name in ("favorites", "form", "class", "progress", "regularity"):
         positions[name] = {}
         for i, value in enumerate(rankings.get(name) or [], 1):
@@ -82,16 +67,11 @@ def program_to_rows(program):
             number = int(horse.get("number"))
         except (TypeError, ValueError):
             continue
-
         if number <= 0:
             continue
 
-        ranks = {
-            f"{name}_rank": positions[name].get(number)
-            for name in positions
-        }
+        ranks = {f"{name}_rank": positions[name].get(number) for name in positions}
         rank_values = [value for value in ranks.values() if value is not None]
-
         rows.append(
             {
                 "race_key": race_key(program),
@@ -106,15 +86,10 @@ def program_to_rows(program):
                 "horse_name": horse.get("horse"),
                 "horse_description": horse.get("description"),
                 **ranks,
-                "ranking_average": (
-                    sum(rank_values) / len(rank_values)
-                    if rank_values
-                    else None
-                ),
+                "ranking_average": (sum(rank_values) / len(rank_values) if rank_values else None),
                 "ranking_presence": len(rank_values),
             }
         )
-
     return rows
 
 
@@ -139,158 +114,74 @@ def normalize_race_date(value):
     return None
 
 
-def program_race_date(program):
-    return normalize_race_date(race_metadata(program)["date"])
-
 def today_utc():
-    # LONAB/PMU-B operations follow Burkina Faso local time (UTC+0), so UTC is
-    # intentionally used as the operational date source.
     return datetime.now(timezone.utc).date()
 
 
-def program_sort_key(program):
-    date = race_metadata(program)["date"]
-    if not date:
-        return ""
-
-    try:
-        return datetime.fromisoformat(str(date).replace("Z", "+00:00")).isoformat()
-    except ValueError:
-        return str(date)
+def no_prediction(reason: str, **extra):
+    result = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "mode": "prediction_unavailable",
+        "reason": reason,
+        "recommended_numbers": [],
+        "adaptive_top_count": 0,
+        "ranked_horses": [],
+        **extra,
+    }
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT_FILE.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Prediction unavailable: {reason}")
+    return result
 
 
 def main():
-    historical = {
-        str(row.get("race_key"))
-        for row in load_json(DATASET_FILE)
-        if row.get("race_key")
-    }
+    try:
+        load_json(DATASET_FILE)
+    except Exception as error:
+        return no_prediction(f"training_dataset_unavailable: {error}")
 
-    models = {
-        depth: LogisticModel.from_dict(
-            load_json(MODEL_DIR / f"top{depth}_model.json")
-        )
-        for depth in (3, 4, 5)
-    }
-
-    programs = []
-    skipped_invalid_metadata = []
-
-    for path in PROGRAM_DIR.glob("*.json"):
+    models = {}
+    for depth in (3, 4, 5):
+        model_path = MODEL_DIR / f"top{depth}_model.json"
         try:
-            payload = load_json(path)
+            models[depth] = LogisticModel.from_dict(load_json(model_path))
         except Exception as error:
-            print(f"Skipping unreadable program {path.name}: {error}")
-            continue
-
-        if not isinstance(payload, dict):
-            continue
-
-        if not has_usable_race_metadata(payload):
-            skipped_invalid_metadata.append(path.name)
-            continue
-
-        programs.append((path, payload))
-
-    if not programs:
-        raise ValueError(
-            "No structured program with usable date, track, race number, "
-            "and horses is available for prediction."
-        )
-
-    if skipped_invalid_metadata:
-        print(
-            "Skipped "
-            f"{len(skipped_invalid_metadata)} program(s) with incomplete race metadata."
-        )
-        print("Newest invalid program files:")
-        for name in sorted(skipped_invalid_metadata)[-10:]:
-            print(f"  - {name}")
+            return no_prediction(f"model_unavailable_top{depth}: {error}")
 
     today = today_utc()
-
-    # First prefer genuinely upcoming unmatched programs. Historical matching
-    # must not be allowed to hide a newly published program just because a
-    # malformed/old record produced the same key.
-    future = [
-        item for item in programs
-        if program_race_date(item[1]) is not None
-        and program_race_date(item[1]) >= today
-    ]
-    future_unmatched = [
-        item for item in future
-        if race_key(item[1]) not in historical
-    ]
-    eligible = future_unmatched or future
-
-    if future and not future_unmatched:
-        print(
-            "All current/future programs already exist in historical keys; "
-            "using the nearest current/future program instead of sending nothing."
+    races = eligible_races(today.isoformat())
+    if not races:
+        return no_prediction(
+            "no_validated_current_or_future_race",
+            today=today.isoformat(),
+            live_manifest=str(LIVE_DIR / "live_manifest.json"),
         )
 
-    eligible.sort(
-        key=lambda item: (
-            program_race_date(item[1]),
-            int(race_metadata(item[1])["race_number"]),
-        ),
-    )
-
-    if not eligible:
-        available_dates = sorted({
-            program_race_date(payload).isoformat()
-            for _, payload in programs
-            if program_race_date(payload) is not None
-        })
-        print(
-            "Available parsed program dates: "
-            + (", ".join(available_dates[-10:]) if available_dates else "none")
+    selected_entry = races[0]
+    structured_path = LIVE_DIR / str(selected_entry["structured_file"])
+    try:
+        program = load_json(structured_path)
+    except Exception as error:
+        return no_prediction(
+            f"live_program_unreadable: {error}",
+            race_key=selected_entry.get("race_key"),
         )
-        result = {
-            "generated_at": datetime.now(timezone.utc).isoformat(),
-            "mode": "no_eligible_future_race",
-            "today": today.isoformat(),
-            "recommended_numbers": [],
-            "adaptive_top_count": 0,
-            "ranked_horses": [],
-        }
-        OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-        OUTPUT_FILE.write_text(
-            json.dumps(result, indent=2, ensure_ascii=False),
-            encoding="utf-8",
-        )
-        print(
-            "No current or future unmatched race is available for prediction. "
-            "Stale programs were not predicted."
-        )
-        return
 
-    selected = eligible[0]
-    mode = "current_or_future_unmatched"
-
-    path, program = selected
-    key = race_key(program)
+    meta = race_metadata(program)
+    actual_date = normalize_race_date(meta["date"])
     rows = program_to_rows(program)
+    key = race_key(program)
 
+    if actual_date is None or actual_date < today:
+        return no_prediction("live_program_is_stale", race_key=key, today=today.isoformat())
     if not key or not rows:
-        raise ValueError(
-            f"Selected program {path.name} does not contain a usable race."
-        )
+        return no_prediction("live_program_missing_usable_race_data", race_key=key)
 
-    probabilities = {
-        depth: models[depth].predict_proba(rows)
-        for depth in (3, 4, 5)
-    }
-
+    probabilities = {depth: models[depth].predict_proba(rows) for depth in (3, 4, 5)}
     ranked = []
-
     for index, row in enumerate(rows):
-        p3, p4, p5 = (
-            float(probabilities[depth][index])
-            for depth in (3, 4, 5)
-        )
+        p3, p4, p5 = (float(probabilities[depth][index]) for depth in (3, 4, 5))
         score = 0.5 * p3 + 0.3 * p4 + 0.2 * p5
-
         ranked.append(
             {
                 "horse_number": int(row["horse_number"]),
@@ -302,59 +193,39 @@ def main():
             }
         )
 
-    ranked.sort(
-        key=lambda item: (
-            -item["ensemble_score"],
-            item["horse_number"],
-        )
-    )
-
+    ranked.sort(key=lambda item: (-item["ensemble_score"], item["horse_number"]))
     for index, item in enumerate(ranked, 1):
         item["predicted_rank"] = index
 
     adaptive = 5
-
     if len(ranked) >= 5:
-        if (
-            ranked[2]["probability_top3"]
-            - ranked[3]["probability_top3"]
-            >= 0.12
-        ):
+        if ranked[2]["probability_top3"] - ranked[3]["probability_top3"] >= 0.12:
             adaptive = 3
-        elif (
-            ranked[3]["probability_top4"]
-            - ranked[4]["probability_top4"]
-            >= 0.10
-        ):
+        elif ranked[3]["probability_top4"] - ranked[4]["probability_top4"] >= 0.10:
             adaptive = 4
 
     result = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "mode": mode,
+        "mode": "live_registry_prediction",
         "today": today.isoformat(),
-        "source_program": path.name,
+        "source_program": selected_entry.get("source_file"),
+        "source_url": selected_entry.get("source_url"),
         "race_key": key,
-        "race": race_metadata(program),
-        "recommended_numbers": [
-            item["horse_number"]
-            for item in ranked[:adaptive]
-        ],
+        "race": meta,
+        "recommended_numbers": [item["horse_number"] for item in ranked[:adaptive]],
         "adaptive_top_count": adaptive,
-        "top3_numbers": [
-            item["horse_number"]
-            for item in ranked[:3]
-        ],
+        "top3_numbers": [item["horse_number"] for item in ranked[:3]],
         "ranked_horses": ranked,
+        "live_manifest": str(LIVE_DIR / "live_manifest.json"),
     }
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(
-        json.dumps(result, indent=2, ensure_ascii=False),
-        encoding="utf-8",
-    )
+    OUTPUT_FILE.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    mark_predicted(key, str(OUTPUT_FILE.relative_to(BASE_DIR)))
 
-    print(f"Race: {result['race_key']}")
+    print(f"Live race: {result['race_key']}")
     print(f"Adaptive recommendation ({adaptive}): {result['recommended_numbers']}")
+    return result
 
 
 if __name__ == "__main__":
