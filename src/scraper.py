@@ -8,23 +8,19 @@ import requests
 from bs4 import BeautifulSoup
 
 
-# Canonical LONAB endpoints plus compatibility fallbacks. LONAB has exposed
-# both www and non-www URLs over time, and a failed/empty first endpoint must
-# never make the machine conclude that there is no race program.
+# Official LONAB listing pages. Keep the compatibility fallbacks because the
+# site has exposed both www and non-www routes.
 PROGRAM_URLS = (
     "https://www.lonab.bf/programme-pmub",
     "https://lonab.bf/fr/programme-pmub",
     "https://www.lonab.bf/fr/programme-pmub",
 )
 RESULTS_URLS = (
-    "https://www.lonab.bf/resultats-gains-ecd",
-    "https://lonab.bf/fr/resultats-gains-ecd",
+    "https://www.lonab.bf/resultats-gains-pmub",
+    "https://lonab.bf/fr/resultats-gains-pmub",
     "https://www.lonab.bf/fr/resultats-gains-ecd",
 )
 
-# Number of archive pages to inspect.
-# Daily autonomous runs should stay fast and prioritize the newest pages.
-# Use HISTORICAL_PAGES=250 only for an intentional one-off historical backfill.
 HISTORICAL_PAGES = int(os.getenv("HISTORICAL_PAGES", "5"))
 
 HEADERS = {
@@ -41,483 +37,256 @@ def ensure_directories():
 
 
 def normalize_url(url):
-    url = url.strip()
-    url = url.split("#")[0]
-    return unquote(url)
+    return unquote(str(url).strip().split("#")[0])
 
 
 def url_hash(url):
-    normalized = normalize_url(url)
-
-    return hashlib.md5(
-        normalized.encode("utf-8")
-    ).hexdigest()[:10]
+    return hashlib.md5(normalize_url(url).encode("utf-8")).hexdigest()[:10]
 
 
 def safe_original_filename(url):
-    parsed = urlparse(url)
-
-    original_name = os.path.basename(
-        parsed.path
-    )
-
-    if not original_name:
-        original_name = "document.pdf"
-
-    original_name = unquote(original_name)
-
-    if not original_name.lower().endswith(".pdf"):
-        original_name += ".pdf"
-
-    original_name = re.sub(
-        r"[^a-zA-Z0-9._-]",
-        "_",
-        original_name
-    )
-
-    if len(original_name) > 100:
-        original_name = original_name[:96] + ".pdf"
-
-    return original_name
+    name = unquote(os.path.basename(urlparse(url).path)) or "document.pdf"
+    if not name.lower().endswith(".pdf"):
+        name += ".pdf"
+    name = re.sub(r"[^a-zA-Z0-9._-]", "_", name)
+    return name[:100]
 
 
 def stable_filename(url, prefix):
-    original_name = safe_original_filename(url)
+    stem, _ = os.path.splitext(safe_original_filename(url))
+    return f"{prefix}_{stem}_{url_hash(url)}.pdf"
 
-    source_hash = url_hash(url)
 
-    stem, _ = os.path.splitext(
-        original_name
+def existing_file_for_url(url, folder, prefix):
+    exact = os.path.join(folder, stable_filename(url, prefix))
+    if os.path.isfile(exact):
+        return exact
+    matches = sorted(
+        path for path in glob.glob(
+            os.path.join(folder, f"{prefix}_*_{url_hash(url)}.pdf")
+        ) if os.path.isfile(path)
     )
-
-    return (
-        f"{prefix}_"
-        f"{stem}_"
-        f"{source_hash}.pdf"
-    )
-
-
-def existing_file_for_url(
-    url,
-    folder,
-    prefix
-):
-    source_hash = url_hash(url)
-
-    stable_name = stable_filename(
-        url,
-        prefix
-    )
-
-    stable_path = os.path.join(
-        folder,
-        stable_name
-    )
-
-    if os.path.exists(stable_path):
-        return stable_path
-
-    old_pattern = os.path.join(
-        folder,
-        f"{prefix}_*_{source_hash}.pdf"
-    )
-
-    matches = glob.glob(old_pattern)
-
-    matches = [
-        path
-        for path in matches
-        if os.path.isfile(path)
-    ]
-
-    matches.sort()
-
-    if matches:
-        return matches[0]
-
-    return None
+    return matches[0] if matches else None
 
 
 def build_archive_page_urls(base_url):
     urls = []
-
     for page in range(HISTORICAL_PAGES):
         if page == 0:
-            url = base_url
+            urls.append(base_url)
         else:
-            separator = (
-                "&"
-                if "?" in base_url
-                else "?"
-            )
+            separator = "&" if "?" in base_url else "?"
+            urls.append(f"{base_url}{separator}page={page}")
+    return urls
 
-            url = (
-                f"{base_url}"
-                f"{separator}page={page}"
-            )
 
-        urls.append(url)
+def _text(value):
+    return re.sub(r"\s+", " ", value or "").strip().lower()
+
+
+def _entry_context(link):
+    # The current LONAB "Télécharger" anchor can contain only an icon. Its
+    # article/card ancestor contains the real title, so classify the ancestor
+    # rather than the anchor text itself.
+    parts = []
+    node = link
+    for _ in range(7):
+        if node is None:
+            break
+        parts.append(node.get_text(" ", strip=True))
+        node = node.parent
+    return _text(" ".join(parts))
+
+
+def _matches_kind(context, kind):
+    if kind == "program":
+        return (
+            "journal hippique" in context
+            and "pmu" in context
+            and "résultat" not in context
+            and "resultat" not in context
+            and "arrivée" not in context
+            and "arrivee" not in context
+            and " ecd " not in f" {context} "
+        )
+    return (
+        ("résultat" in context or "resultat" in context or "arrivée" in context or "arrivee" in context)
+        and "pmu" in context
+    )
+
+
+def _is_same_site(url, page_url):
+    return (
+        urlparse(url).netloc.lower().removeprefix("www.")
+        == urlparse(page_url).netloc.lower().removeprefix("www.")
+    )
+
+
+def _pdf_urls_from_html(html, base_url):
+    soup = BeautifulSoup(html, "html.parser")
+    urls = []
+
+    for tag in soup.find_all(True):
+        for attribute in ("href", "src", "data-href", "data-url", "data-file", "data-download"):
+            value = tag.get(attribute)
+            if value and ".pdf" in str(value).lower():
+                url = normalize_url(urljoin(base_url, str(value).strip()))
+                if url not in urls:
+                    urls.append(url)
+
+    for match in re.finditer(
+        r'''["']([^"'<>\s]+\.pdf(?:\?[^"'<>\s]*)?)["']''',
+        html,
+        re.IGNORECASE,
+    ):
+        url = normalize_url(urljoin(base_url, match.group(1)))
+        if url not in urls:
+            urls.append(url)
 
     return urls
 
 
-def extract_pdf_links_from_soup(soup, page_url):
-    links = []
-
-    for link in soup.find_all("a", href=True):
-        href = link.get("href", "").strip()
-        if not href or href.startswith("#"):
-            continue
-
-        absolute_url = normalize_url(urljoin(page_url, href))
-        parsed = urlparse(absolute_url)
-
-        if parsed.path.lower().endswith(".pdf") and absolute_url not in links:
-            links.append(absolute_url)
-
-    return links
-
-
-def get_pdf_links(page_url):
-    print(f"Checking archive page: {page_url}")
-
+def _resolve_candidate(candidate_url):
     response = requests.get(
-        page_url,
+        candidate_url,
         headers=HEADERS,
         timeout=30,
+        allow_redirects=True,
     )
     response.raise_for_status()
 
-    soup = BeautifulSoup(response.text, "html.parser")
-    pdf_links = extract_pdf_links_from_soup(soup, page_url)
+    content_type = response.headers.get("Content-Type", "").lower()
+    content = response.content
 
-    # LONAB listing pages do not always expose the current PDF as a literal
-    # .pdf link. Some current entries are article/download routes whose anchor
-    # contains only an icon. The old code filtered those anchors by their own
-    # text, which could silently miss today's program. Follow same-site content
-    # links conservatively and accept either an HTML detail page containing a
-    # PDF link or a route that returns PDF bytes directly.
-    detail_urls = []
-    ignored_prefixes = ("javascript:", "mailto:", "tel:")
+    if "pdf" in content_type or content.startswith(b"%PDF"):
+        return [normalize_url(response.url)]
+
+    return _pdf_urls_from_html(response.text, response.url)
+
+
+def get_pdf_links(page_url, kind):
+    print(f"Checking {kind} archive page: {page_url}")
+
+    response = requests.get(page_url, headers=HEADERS, timeout=30)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    candidates = []
+    seen_candidates = set()
 
     for link in soup.find_all("a", href=True):
         href = str(link.get("href", "")).strip()
         if not href or href.startswith("#"):
             continue
-        if href.lower().startswith(ignored_prefixes):
+        if href.lower().startswith(("javascript:", "mailto:", "tel:")):
             continue
 
-        detail_url = normalize_url(urljoin(page_url, href))
-        if detail_url in detail_urls:
+        context = _entry_context(link)
+        if not _matches_kind(context, kind):
             continue
 
-        detail_host = urlparse(detail_url).netloc.lower().removeprefix("www.")
-        page_host = urlparse(page_url).netloc.lower().removeprefix("www.")
-        if detail_host != page_host:
+        absolute = normalize_url(urljoin(page_url, href))
+        if not _is_same_site(absolute, page_url):
             continue
 
-        path_lower = urlparse(detail_url).path.lower()
-        if any(token in path_lower for token in ("/css/", "/js/", "/images/", "/themes/")):
-            continue
+        if absolute not in seen_candidates:
+            seen_candidates.add(absolute)
+            candidates.append(absolute)
 
-        detail_urls.append(detail_url)
+    pdf_links = []
+    seen_pdfs = set()
 
-    for detail_url in detail_urls[:100]:
+    for candidate in candidates:
         try:
-            detail_response = requests.get(
-                detail_url,
-                headers=HEADERS,
-                timeout=30,
-                allow_redirects=True,
-            )
-            detail_response.raise_for_status()
+            if urlparse(candidate).path.lower().endswith(".pdf"):
+                resolved = [candidate]
+            else:
+                resolved = _resolve_candidate(candidate)
 
-            content_type = detail_response.headers.get("Content-Type", "").lower()
-            content = detail_response.content
-
-            # Download routes can return the PDF directly without a .pdf URL.
-            if "pdf" in content_type or content.startswith(b"%PDF"):
-                final_url = normalize_url(detail_response.url)
-                if final_url not in pdf_links:
-                    pdf_links.append(final_url)
-                continue
-
-            detail_soup = BeautifulSoup(
-                detail_response.text,
-                "html.parser",
-            )
-
-            for pdf_url in extract_pdf_links_from_soup(
-                detail_soup,
-                detail_response.url,
-            ):
-                if pdf_url not in pdf_links:
-                    pdf_links.append(pdf_url)
-
-            # Also inspect media attributes and inline HTML on the detail page.
-            for tag in detail_soup.find_all(True):
-                for attribute in (
-                    "href", "src", "data-href", "data-url",
-                    "data-file", "data-download",
-                ):
-                    value = tag.get(attribute)
-                    if not value or ".pdf" not in str(value).lower():
-                        continue
-                    pdf_url = normalize_url(
-                        urljoin(detail_response.url, str(value).strip())
-                    )
-                    if pdf_url not in pdf_links:
-                        pdf_links.append(pdf_url)
-
+            for url in resolved:
+                if url not in seen_pdfs:
+                    seen_pdfs.add(url)
+                    pdf_links.append(url)
         except Exception as error:
-            print(
-                f"Detail page skipped: {detail_url} | {error}"
-            )
-
-    # LONAB/Drupal pages sometimes expose documents through media attributes,
-    # buttons, iframes, or inline JSON instead of a normal anchor.
-    for tag in soup.find_all(True):
-        for attribute in ("href", "src", "data-href", "data-url", "data-file", "data-download"):
-            value = tag.get(attribute)
-            if not value:
-                continue
-            value = str(value).strip()
-            if ".pdf" not in value.lower():
-                continue
-            pdf_url = normalize_url(urljoin(page_url, value))
-            if pdf_url not in pdf_links:
-                pdf_links.append(pdf_url)
-
-    # Scan the HTML for PDF paths as a final fallback.
-    for match in re.finditer(
-        r'''["']([^"'<>\s]+\.pdf(?:\?[^"'<>\s]*)?)["']''',
-        response.text,
-        re.IGNORECASE,
-    ):
-        pdf_url = normalize_url(urljoin(page_url, match.group(1)))
-        if pdf_url not in pdf_links:
-            pdf_links.append(pdf_url)
+            print(f"Candidate skipped: {candidate} | {error}")
 
     return pdf_links
 
 
-def collect_historical_pdf_links(base_url):
+def collect_historical_pdf_links(base_url, kind):
     all_links = []
     seen = set()
-
     pages_checked = 0
 
-    for page_url in build_archive_page_urls(
-        base_url
-    ):
+    for page_url in build_archive_page_urls(base_url):
         try:
-            links = get_pdf_links(
-                page_url
-            )
-
+            links = get_pdf_links(page_url, kind)
             pages_checked += 1
-
-            print(
-                f"PDFs found on page: "
-                f"{len(links)}"
-            )
-
-            new_links = 0
+            print(f"Qualified {kind} PDFs found on page: {len(links)}")
 
             for link in links:
-                normalized = normalize_url(
-                    link
-                )
-
-                if normalized in seen:
-                    continue
-
-                seen.add(normalized)
-                all_links.append(normalized)
-
-                new_links += 1
-
-            print(
-                f"New unique PDFs: "
-                f"{new_links}"
-            )
-
-            if not links:
-                print(
-                    "No PDFs found on this page. "
-                    "Continuing archive crawl."
-                )
-                continue
-
+                if link not in seen:
+                    seen.add(link)
+                    all_links.append(link)
         except Exception as error:
-            print(
-                f"Archive page error: "
-                f"{page_url}"
-            )
+            print(f"Archive page error: {page_url}")
+            print(f"Error: {error}")
 
-            print(
-                f"Error: {error}"
-            )
-
-    # The newest LONAB programs are often published before the race date.
-    # Never stop after one empty archive page because a temporary rendering
-    # issue can otherwise hide today's/tomorrow's program.
-    print(
-        f"Archive pages checked: "
-        f"{pages_checked}"
-    )
-
-    print(
-        f"Unique historical PDFs found: "
-        f"{len(all_links)}"
-    )
-
+    print(f"Archive pages checked: {pages_checked}")
+    print(f"Unique qualified {kind} PDFs found: {len(all_links)}")
     return all_links
 
 
-def download_pdf(
-    url,
-    folder,
-    prefix
-):
+def download_pdf(url, folder, prefix):
     ensure_directories()
 
-    existing = existing_file_for_url(
-        url,
-        folder,
-        prefix
-    )
-
+    existing = existing_file_for_url(url, folder, prefix)
     if existing:
-        print(
-            f"Already downloaded: "
-            f"{existing}"
-        )
-
+        print(f"Already downloaded: {existing}")
         return existing
 
-    filename = stable_filename(
-        url,
-        prefix
-    )
-
-    filepath = os.path.join(
-        folder,
-        filename
-    )
-
-    print(
-        f"Downloading PDF: "
-        f"{url}"
-    )
-
+    print(f"Downloading PDF: {url}")
     response = requests.get(
         url,
         headers=HEADERS,
         timeout=60,
         allow_redirects=True,
     )
-
     response.raise_for_status()
 
-    content_type = (
-        response.headers
-        .get(
-            "Content-Type",
-            ""
-        )
-        .lower()
-    )
-
     content = response.content
-
-    # Some LONAB download routes redirect to a PDF URL that differs from the link URL.
-    final_url = normalize_url(response.url)
-    final_filename = stable_filename(final_url, prefix)
-    final_path = os.path.join(folder, final_filename)
-
-    if (
-        "pdf" not in content_type
-        and not content.startswith(b"%PDF")
-    ):
-        print(
-            f"Skipped non-PDF response: "
-            f"{url}"
-        )
-
+    content_type = response.headers.get("Content-Type", "").lower()
+    if "pdf" not in content_type and not content.startswith(b"%PDF"):
+        print(f"Skipped non-PDF response: {url}")
         return None
 
-    with open(
-        final_path,
-        "wb"
-    ) as file:
+    final_url = normalize_url(response.url)
+    path = os.path.join(folder, stable_filename(final_url, prefix))
+    with open(path, "wb") as file:
         file.write(content)
 
-    print(
-        f"Saved: {final_path}"
-    )
-
-    return final_path
+    print(f"Saved: {path}")
+    return path
 
 
-def scrape_archive(
-    base_url,
-    folder,
-    prefix
-):
+def scrape_archive(base_url, folder, prefix, kind):
     ensure_directories()
-
-    links = collect_historical_pdf_links(
-        base_url
-    )
-
+    links = collect_historical_pdf_links(base_url, kind)
     downloaded = []
 
-    for index, url in enumerate(
-        links,
-        start=1
-    ):
-        print(
-            "\n"
-            f"[{index}/{len(links)}]"
-        )
-
+    for index, url in enumerate(links, start=1):
+        print(f"\n[{index}/{len(links)}]")
         try:
-            filepath = download_pdf(
-                url,
-                folder,
-                prefix
-            )
-
-            if filepath:
-                downloaded.append(
-                    filepath
-                )
-
-        except requests.HTTPError as error:
-            print(
-                f"{prefix.capitalize()} "
-                f"download error: "
-                f"{error}"
-            )
-
+            path = download_pdf(url, folder, prefix)
+            if path:
+                downloaded.append(path)
         except Exception as error:
-            print(
-                f"{prefix.capitalize()} "
-                f"unexpected download error: "
-                f"{error}"
-            )
+            print(f"{prefix.capitalize()} download error: {error}")
 
     return downloaded
 
 
 def scrape_sources(base_urls, folder, prefix, label):
-    """
-    Try all known LONAB endpoints and merge unique downloaded PDFs.
-
-    One endpoint may temporarily be empty or unavailable while another
-    canonical URL already exposes the current program/results PDF.
-    """
     merged = []
     seen = set()
 
@@ -527,7 +296,7 @@ def scrape_sources(base_urls, folder, prefix, label):
         print("-" * 60)
 
         try:
-            paths = scrape_archive(base_url, folder, prefix)
+            paths = scrape_archive(base_url, folder, prefix, label)
         except Exception as error:
             print(f"{label.capitalize()} source failed: {base_url}")
             print(f"Error: {error}")
@@ -538,94 +307,53 @@ def scrape_sources(base_urls, folder, prefix, label):
                 seen.add(path)
                 merged.append(path)
 
-        if not paths:
-            print(
-                f"{label.capitalize()} source produced no PDFs; "
-                "continuing with fallback source."
-            )
-
     return merged
 
 
 def scrape_programs():
     print("\nSCRAPING PROGRAM ARCHIVE")
-
     programs = scrape_sources(
         PROGRAM_URLS,
         "data/raw/programs",
         "program",
         "program",
     )
-
     print("\nPROGRAM ARCHIVE COMPLETE")
     print(f"Program PDFs processed: {len(programs)}")
-
     return programs
 
 
 def scrape_results():
     print("\nSCRAPING RESULT ARCHIVE")
-
     results = scrape_sources(
         RESULTS_URLS,
         "data/raw/results",
         "result",
         "result",
     )
-
     print("\nRESULT ARCHIVE COMPLETE")
     print(f"Result PDFs processed: {len(results)}")
-
     return results
+
 
 def run_scraper():
     print("=" * 60)
-    print(
-        "LONAB HISTORICAL RACE MACHINE SCRAPER"
-    )
+    print("LONAB RACE MACHINE SCRAPER")
     print("=" * 60)
+    print(f"\nHistorical archive pages: {HISTORICAL_PAGES}")
 
-    print(
-        "\n"
-        f"Historical archive pages: "
-        f"{HISTORICAL_PAGES}"
-    )
-
-    print(
-        "\n"
-        "SCRAPING PROGRAMS"
-    )
-
+    print("\nSCRAPING PROGRAMS")
     programs = scrape_programs()
 
-    print(
-        "\n"
-        "SCRAPING RESULTS"
-    )
-
+    print("\nSCRAPING RESULTS")
     results = scrape_results()
 
-    print(
-        "\n"
-        + "=" * 60
-    )
-
-    print(
-        f"Program PDFs processed: "
-        f"{len(programs)}"
-    )
-
-    print(
-        f"Result PDFs processed: "
-        f"{len(results)}"
-    )
-
+    print("\n" + "=" * 60)
+    print(f"Program PDFs processed: {len(programs)}")
+    print(f"Result PDFs processed: {len(results)}")
     print("=" * 60)
 
-    return {
-        "programs": programs,
-        "results": results
-    }
+    return {"programs": programs, "results": results}
 
 
 if __name__ == "__main__":
