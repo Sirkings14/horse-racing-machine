@@ -11,6 +11,7 @@ from src.model.logistic_model import LogisticModel
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATASET_FILE = BASE_DIR / "data" / "dataset" / "training_dataset_clean.json"
 MODEL_DIR = BASE_DIR / "data" / "model"
+PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
 OUTPUT_FILE = MODEL_DIR / "latest_prediction.json"
 
 
@@ -118,6 +119,18 @@ def today_utc():
     return datetime.now(timezone.utc).date()
 
 
+def write_prediction(result):
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    PREDICTIONS_DIR.mkdir(parents=True, exist_ok=True)
+    OUTPUT_FILE.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    key = result.get("race_key")
+    if key:
+        safe_name = re.sub(r"[^A-Za-z0-9_.-]+", "_", str(key))
+        archive_path = PREDICTIONS_DIR / f"{safe_name}.json"
+        archive_path.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
 def no_prediction(reason: str, **extra):
     result = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -128,8 +141,7 @@ def no_prediction(reason: str, **extra):
         "ranked_horses": [],
         **extra,
     }
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    write_prediction(result)
     print(f"Prediction unavailable: {reason}")
     return result
 
@@ -204,8 +216,18 @@ def main():
         elif ranked[3]["probability_top4"] - ranked[4]["probability_top4"] >= 0.10:
             adaptive = 4
 
+    model_registry_path = MODEL_DIR / "model_registry.json"
+    model_version = "unknown"
+    try:
+        registry = load_json(model_registry_path)
+        model_version = registry.get("champion_version", "unknown")
+    except Exception:
+        pass
+
     result = {
+        "prediction_id": f"{key}|{datetime.now(timezone.utc).isoformat()}",
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "model_version": model_version,
         "mode": "live_registry_prediction",
         "today": today.isoformat(),
         "source_program": selected_entry.get("source_file"),
@@ -219,9 +241,8 @@ def main():
         "live_manifest": str(LIVE_DIR / "live_manifest.json"),
     }
 
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
-    mark_predicted(key, str(OUTPUT_FILE.relative_to(BASE_DIR)))
+    write_prediction(result)
+    mark_predicted(key, str((PREDICTIONS_DIR / f"{re.sub(r'[^A-Za-z0-9_.-]+', '_', str(key))}.json").relative_to(BASE_DIR)))
 
     print(f"Live race: {result['race_key']}")
     print(f"Adaptive recommendation ({adaptive}): {result['recommended_numbers']}")
