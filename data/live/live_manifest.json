@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-13T14:46:45.077400+00:00",
+  "races": [
+    {
+      "race_key": "2026-09-13|PARISLONGCHAMP|3",
+      "date": "2026-09-13",
+      "track": "PARISLONGCHAMP",
+      "race_number": 3,
+      "race_name": "SUPER HANDICAP DE LA RENTREE",
+      "race_type": "MONTE",
+      "distance": 2000,
+      "runners_count": 18,
+      "horse_count": 18,
+      "source_url": "https://lonab.bf/sites/default/files/2026-09/JH_PMUB_DU_13-09-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_13-09-2026_0b9dc05783.pdf",
+      "structured_file": "structured/2026-09-13_PARISLONGCHAMP_3.json",
+      "status": "validated",
+      "prediction_status": "predicted",
+      "discovered_at": "2026-09-13T14:46:41.009194+00:00",
+      "result_status": "pending",
+      "created_at": "2026-09-13T14:46:36.285691+00:00",
+      "updated_at": "2026-09-13T14:46:45.077398+00:00",
+      "prediction_file": "data/predictions/2026-09-13_PARISLONGCHAMP_3.json",
+      "predicted_at": "2026-09-13T14:46:45.077390+00:00"
+    },
+    {
+      "race_key": "2026-09-14|BEAUMONT|1",
+      "date": "2026-09-14",
+      "track": "BEAUMONT",
+      "race_number": 1,
+      "race_name": "DE-LOMAGNE - GRAND PRIX JEAN DUMOUCH",
+      "race_type": "ATTELE",
+      "distance": 550,
+      "runners_count": 14,
+      "horse_count": 14,
+      "source_url": "https://lonab.bf/sites/default/files/2026-09/JH_PMUB_DU_14-09-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_14-09-2026_5a034012d0.pdf",
+      "structured_file": "structured/2026-09-14_BEAUMONT_1.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-09-13T14:46:40.782203+00:00",
+      "result_status": "pending",
+      "created_at": "2026-09-13T14:46:36.047430+00:00",
+      "updated_at": "2026-09-13T14:46:40.782341+00:00"
+    }
+  ]
+}
