@@ -20,6 +20,7 @@ env/
 .DS_Store
 Thumbs.db
 
-# Keep generated race data in the repository
-# The machine needs historical programs and results
-# to build its long-term racing database.
+# Keep stable generated race data and the live registry in Git.
+# Raw live PDFs are disposable fetch artifacts and should not create
+# long-term repository churn or GitHub Actions push failures.
+data/live/raw/
