@@ -12,10 +12,12 @@ from src.dataset.build_dataset import main as build_dataset
 from src.dataset.dataset_validator import main as validate_dataset
 from src.model.train_model import main as train_model
 from src.model.backtest import main as run_backtest
+from src.model.promote_model import main as promote_model
 from src.model.predict_latest import main as generate_prediction
 from src.memory.update_memory import main as update_memory
 from src.notifications.telegram import send_latest_prediction
 from src.live.collector import collect_live_programs
+from src.learning.evaluate_predictions import main as evaluate_predictions
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 REVIEW_FILE = BASE_DIR / "data" / "dataset" / "dataset_review.json"
@@ -99,8 +101,6 @@ def rebuild_knowledge():
 
 
 def run_prediction_cycle():
-    # Prediction is intentionally independent from the historical rebuild.
-    # A live source failure must not destroy or rewrite the trained knowledge.
     print_step(1, "DISCOVERING LIVE PROGRAMS")
     collect_live_programs()
     print_step(2, "GENERATING PREDICTION FROM LIVE REGISTRY")
@@ -109,12 +109,23 @@ def run_prediction_cycle():
     send_latest_prediction()
 
 
+def run_results_cycle():
+    print_step(1, "REBUILDING VERIFIED RESULTS KNOWLEDGE")
+    rebuild_knowledge()
+    print_step(2, "VERIFYING STORED PREDICTIONS AGAINST RESULTS")
+    evaluate_predictions()
+
+
 def run_learning_cycle():
     rebuild_knowledge()
-    print_step(10, "TRAINING ADAPTIVE TOP-3 TOP-4 TOP-5 MODELS")
-    train_model()
+    print_step(10, "TRAINING ISOLATED CHALLENGER MODELS")
+    candidate_version = train_model()
     print_step(11, "RUNNING WALK-FORWARD BACKTEST")
     run_backtest()
+    print_step(12, "PROMOTING ONLY A MEASURED CHALLENGER")
+    promote_model(candidate_version)
+    print_step(13, "VERIFYING STORED PREDICTIONS AGAINST RESULTS")
+    evaluate_predictions()
 
 
 def main():
@@ -129,13 +140,13 @@ def main():
     if args.mode == "predict":
         run_prediction_cycle()
     elif args.mode == "results":
-        rebuild_knowledge()
+        run_results_cycle()
     else:
         run_learning_cycle()
-        print_step(12, "GENERATING LIVE PREDICTION")
+        print_step(14, "GENERATING LIVE PREDICTION")
         collect_live_programs()
         generate_prediction()
-        print_step(13, "SENDING TELEGRAM PREDICTION")
+        print_step(15, "SENDING TELEGRAM PREDICTION")
         send_latest_prediction()
 
     print("\n" + "=" * 60)
