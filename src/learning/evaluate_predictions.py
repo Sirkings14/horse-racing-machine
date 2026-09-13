@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from src.live.registry import mark_result_verified
+from src.matching.race_matcher import normalize_track
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
@@ -16,6 +17,17 @@ EVALUATION_FILE = EVALUATION_DIR / "prediction_evaluations.json"
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def canonical_key(value: str) -> str:
+    parts = str(value).split("|", 2)
+    if len(parts) != 3:
+        return str(value)
+    try:
+        number = int(parts[2])
+    except ValueError:
+        return str(value)
+    return f"{parts[0][:10]}|{normalize_track(parts[1])}|{number}"
 
 
 def result_records() -> dict[str, dict[str, Any]]:
@@ -30,7 +42,7 @@ def result_records() -> dict[str, dict[str, Any]]:
             continue
 
         race_date = str(payload.get("date") or "")[:10]
-        track = str(payload.get("track") or "").strip().upper()
+        track = normalize_track(payload.get("track"))
         for race in payload.get("races") or []:
             try:
                 number = int(race.get("race_number"))
@@ -69,7 +81,11 @@ def load_existing() -> dict[str, dict[str, Any]]:
         return {}
     if not isinstance(payload, list):
         return {}
-    return {str(item.get("race_key")): item for item in payload if isinstance(item, dict) and item.get("race_key")}
+    return {
+        canonical_key(str(item.get("race_key"))): item
+        for item in payload
+        if isinstance(item, dict) and item.get("race_key")
+    }
 
 
 def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, Any]:
@@ -124,15 +140,18 @@ def main() -> dict[str, Any]:
             continue
         if not isinstance(prediction, dict) or prediction.get("mode") != "live_registry_prediction":
             continue
-        key = prediction.get("race_key")
-        if not key or key in evaluations:
+        original_key = prediction.get("race_key")
+        if not original_key:
             continue
-        result = results.get(str(key))
+        key = canonical_key(str(original_key))
+        if key in evaluations:
+            continue
+        result = results.get(key)
         if not result:
             continue
         evaluation = evaluate(prediction, result)
-        evaluations[str(key)] = evaluation
-        mark_result_verified(str(key), str(EVALUATION_FILE.relative_to(BASE_DIR)))
+        evaluations[key] = evaluation
+        mark_result_verified(str(original_key), str(EVALUATION_FILE.relative_to(BASE_DIR)))
         processed += 1
 
     EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
