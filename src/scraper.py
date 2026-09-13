@@ -191,73 +191,56 @@ def get_pdf_links(page_url):
     soup = BeautifulSoup(response.text, "html.parser")
     pdf_links = extract_pdf_links_from_soup(soup, page_url)
 
-    # Some LONAB listing pages link first to an article/detail page rather than
-    # directly to the PDF. Follow likely journal/result detail links one level
-    # and extract the real PDF from there. This prevents a fresh daily program
-    # from being missed simply because the listing HTML changed shape.
+    # LONAB listing pages do not always expose the current PDF as a literal
+    # .pdf link. Some current entries are article/download routes whose anchor
+    # contains only an icon. The old code filtered those anchors by their own
+    # text, which could silently miss today's program. Follow same-site content
+    # links conservatively and accept either an HTML detail page containing a
+    # PDF link or a route that returns PDF bytes directly.
     detail_urls = []
+    ignored_prefixes = ("javascript:", "mailto:", "tel:")
 
     for link in soup.find_all("a", href=True):
-        href = link.get("href", "").strip()
-        label = " ".join(
-            filter(
-                None,
-                [
-                    link.get_text(" ", strip=True),
-                    link.get("title", ""),
-                    link.get("aria-label", ""),
-                    href,
-                ],
-            )
-        ).upper()
-
-        # Newer LONAB listing cards sometimes keep the article title in a
-        # surrounding element while the anchor itself only contains an icon.
-        # Accept either recognizable label text OR a recognizable URL.
-        if not any(
-            token in label
-            for token in (
-                "JOURNAL HIPPIQUE",
-                "PMU'B",
-                "PMU’B",
-                "PMUB",
-                "RESULTAT",
-                "RÉSULTAT",
-                "TELECHARGER",
-                "TÉLÉCHARGER",
-                "PROGRAMME",
-                "PROGRAM",
-            )
-        ):
-            continue
-
-        
+        href = str(link.get("href", "")).strip()
         if not href or href.startswith("#"):
+            continue
+        if href.lower().startswith(ignored_prefixes):
             continue
 
         detail_url = normalize_url(urljoin(page_url, href))
-        if detail_url.lower().endswith(".pdf"):
+        if detail_url in detail_urls:
             continue
 
-        # LONAB serves the same site through both lonab.bf and www.lonab.bf.
-        # Treat those aliases as one source instead of rejecting a valid detail
-        # page just because the hostname spelling differs.
         detail_host = urlparse(detail_url).netloc.lower().removeprefix("www.")
         page_host = urlparse(page_url).netloc.lower().removeprefix("www.")
         if detail_host != page_host:
             continue
 
-        if detail_url not in detail_urls:
-            detail_urls.append(detail_url)
+        path_lower = urlparse(detail_url).path.lower()
+        if any(token in path_lower for token in ("/css/", "/js/", "/images/", "/themes/")):
+            continue
 
-    for detail_url in detail_urls[:50]:
+        detail_urls.append(detail_url)
+
+    for detail_url in detail_urls[:100]:
         try:
             detail_response = requests.get(
                 detail_url,
                 headers=HEADERS,
                 timeout=30,
+                allow_redirects=True,
             )
             detail_response.raise_for_status()
+
+            content_type = detail_response.headers.get("Content-Type", "").lower()
+            content = detail_response.content
+
+            # Download routes can return the PDF directly without a .pdf URL.
+            if "pdf" in content_type or content.startswith(b"%PDF"):
+                final_url = normalize_url(detail_response.url)
+                if final_url not in pdf_links:
+                    pdf_links.append(final_url)
+                continue
 
             detail_soup = BeautifulSoup(
                 detail_response.text,
@@ -266,10 +249,25 @@ def get_pdf_links(page_url):
 
             for pdf_url in extract_pdf_links_from_soup(
                 detail_soup,
-                detail_url,
+                detail_response.url,
             ):
                 if pdf_url not in pdf_links:
                     pdf_links.append(pdf_url)
+
+            # Also inspect media attributes and inline HTML on the detail page.
+            for tag in detail_soup.find_all(True):
+                for attribute in (
+                    "href", "src", "data-href", "data-url",
+                    "data-file", "data-download",
+                ):
+                    value = tag.get(attribute)
+                    if not value or ".pdf" not in str(value).lower():
+                        continue
+                    pdf_url = normalize_url(
+                        urljoin(detail_response.url, str(value).strip())
+                    )
+                    if pdf_url not in pdf_links:
+                        pdf_links.append(pdf_url)
 
         except Exception as error:
             print(
