@@ -12,10 +12,17 @@ on:
           - predict
           - results
           - full
+  # Burkina Faso/LONAB operations are UTC+0. Build the schedule around the
+  # race day: fresh pre-race checks before the main ~10:00 starts, then
+  # repeated result checks so publication delays do not leave learning stuck.
   schedule:
-    - cron: "0 7 * * *"
-    - cron: "30 15 * * *"
-    - cron: "15 20 * * *"
+    - cron: "30 5 * * *"
+    - cron: "30 7 * * *"
+    - cron: "15 9 * * *"
+    - cron: "30 12 * * *"
+    - cron: "30 16 * * *"
+    - cron: "30 19 * * *"
+    - cron: "30 21 * * *"
 
 permissions:
   contents: write
@@ -50,16 +57,26 @@ jobs:
 
       - name: Decide mode
         id: mode
+        shell: bash
         run: |
+          set -euo pipefail
           MODE="${{ github.event.inputs.mode }}"
+
+          # Manual dispatch keeps the requested mode. Scheduled runs select
+          # their purpose from the schedule itself.
           if [ -z "$MODE" ]; then
-            if [ "${{ github.event.schedule }}" = "15 20 * * *" ]; then
-              MODE="results"
-            else
-              MODE="predict"
-            fi
+            case "${{ github.event.schedule }}" in
+              "30 19 * * *"|"30 21 * * *")
+                MODE="results"
+                ;;
+              *)
+                MODE="predict"
+                ;;
+            esac
           fi
+
           echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "Selected mode: $MODE"
 
       - name: Run autonomous machine
         run: python -m src.main --mode "${{ steps.mode.outputs.mode }}"
