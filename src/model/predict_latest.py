@@ -122,18 +122,21 @@ def today_utc():
 def write_prediction(result):
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     PREDICTIONS_DIR.mkdir(parents=True, exist_ok=True)
-    OUTPUT_FILE.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    serialized = json.dumps(result, indent=2, ensure_ascii=False)
+    OUTPUT_FILE.write_text(serialized, encoding="utf-8")
 
     key = result.get("race_key")
     if key:
         safe_name = re.sub(r"[^A-Za-z0-9_.-]+", "_", str(key))
         archive_path = PREDICTIONS_DIR / f"{safe_name}.json"
-        archive_path.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+        archive_path.write_text(serialized, encoding="utf-8")
 
 
 def no_prediction(reason: str, **extra):
     result = {
+        "prediction_id": None,
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "model_version": None,
         "mode": "prediction_unavailable",
         "reason": reason,
         "recommended_numbers": [],
@@ -144,6 +147,20 @@ def no_prediction(reason: str, **extra):
     write_prediction(result)
     print(f"Prediction unavailable: {reason}")
     return result
+
+
+def resolve_model_version() -> tuple[str, str]:
+    """Return a truthful production-model identity."""
+    model_registry_path = MODEL_DIR / "model_registry.json"
+    try:
+        registry = load_json(model_registry_path)
+        version = registry.get("champion_version")
+        if version:
+            return str(version), "registered_champion"
+    except Exception:
+        pass
+
+    return "legacy-production", "legacy_unregistered_models"
 
 
 def main():
@@ -216,18 +233,13 @@ def main():
         elif ranked[3]["probability_top4"] - ranked[4]["probability_top4"] >= 0.10:
             adaptive = 4
 
-    model_registry_path = MODEL_DIR / "model_registry.json"
-    model_version = "unknown"
-    try:
-        registry = load_json(model_registry_path)
-        model_version = registry.get("champion_version", "unknown")
-    except Exception:
-        pass
+    model_version, model_status = resolve_model_version()
 
     result = {
         "prediction_id": f"{key}|{datetime.now(timezone.utc).isoformat()}",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "model_version": model_version,
+        "model_status": model_status,
         "mode": "live_registry_prediction",
         "today": today.isoformat(),
         "source_program": selected_entry.get("source_file"),
@@ -242,9 +254,11 @@ def main():
     }
 
     write_prediction(result)
-    mark_predicted(key, str((PREDICTIONS_DIR / f"{re.sub(r'[^A-Za-z0-9_.-]+', '_', str(key))}.json").relative_to(BASE_DIR)))
+    safe_name = re.sub(r"[^A-Za-z0-9_.-]+", "_", str(key))
+    mark_predicted(key, str((PREDICTIONS_DIR / f"{safe_name}.json").relative_to(BASE_DIR)))
 
     print(f"Live race: {result['race_key']}")
+    print(f"Model: {model_version} ({model_status})")
     print(f"Adaptive recommendation ({adaptive}): {result['recommended_numbers']}")
     return result
 
