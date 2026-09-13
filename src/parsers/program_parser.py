@@ -9,8 +9,8 @@ OUTPUT_FOLDER = Path("data/structured/programs")
 MONTHS = {
     "JANVIER": 1, "FEVRIER": 2, "FÉVRIER": 2, "MARS": 3,
     "AVRIL": 4, "MAI": 5, "JUIN": 6, "JUILLET": 7,
-    "AOUT": 8, "AOÛT": 8, "SEPTEMBRE": 9, "OCTOBRE": 10,
-    "NOVEMBRE": 11, "DECEMBRE": 12, "DÉCEMBRE": 12,
+    "AOUT": 8, "AOÛT": 8, "SEPTEMBRE": 9, "OCTOBRE": 10, "NOVEMBRE": 11,
+    "DECEMBRE": 12, "DÉCEMBRE": 12,
 }
 
 
@@ -23,9 +23,6 @@ def clean_text(text):
 
 def extract_date(text):
     """Extract the current race date from the newspaper header before old results."""
-    # The current program headline is normally near the beginning, but PDF
-    # extraction order can place it later. Search the full document while
-    # requiring a program headline before falling back to generic dates.
     header = text
     months = r"(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|JUILLET|AOUT|AOÛT|SEPTEMBRE|OCTOBRE|NOVEMBRE|DECEMBRE|DÉCEMBRE)"
     patterns = [
@@ -49,6 +46,7 @@ def extract_date(text):
             pass
     return None
 
+
 def extract_race_info(text):
     race = {
         "race_name": None,
@@ -60,21 +58,33 @@ def extract_race_info(text):
         "prize_euros": None,
     }
 
-    # Race headers can appear on one line or after extra spaces/line wrapping.
-    # Search the complete document for TRACK - PRIX NAME rather than requiring
-    # an exact line boundary.
-    match = re.search(
-        r"([A-ZÀ-Ü][A-ZÀ-Ü0-9'\- ]{2,}?)\s*-\s*(PRIX\s+[A-ZÀ-Ü0-9'\- ]{2,})",
+    # LONAB/PMU-B uses more than one race-name convention, including
+    # CRITERIUM DES 5 ANS and SUPER HANDICAP DE LA RENTREE. Anchor the match
+    # to the runner-count line instead of requiring the literal word PRIX.
+    header_match = re.search(
+        r"(?m)^\s*(?P<track>[A-ZÀ-Ü][A-ZÀ-Ü0-9'’ .\-]{2,}?)\s*-\s*"
+        r"(?P<race_name>[A-ZÀ-Ü0-9'’ .\-]{2,}?)\s*\n\s*"
+        r"(?P<runners>\d+)\s+CONCURRENTS?\b",
         text,
         re.IGNORECASE,
     )
-    if match:
-        race["track"] = re.sub(r"\s+", " ", match.group(1)).strip().upper()
-        race["race_name"] = re.sub(r"\s+", " ", match.group(2)).strip().upper()
+    if header_match:
+        race["track"] = re.sub(r"\s+", " ", header_match.group("track")).strip().upper()
+        race["race_name"] = re.sub(r"\s+", " ", header_match.group("race_name")).strip().upper()
+        race["runners_count"] = int(header_match.group("runners"))
+    else:
+        match = re.search(
+            r"([A-ZÀ-Ü][A-ZÀ-Ü0-9'’ .\-]{2,}?)\s*-\s*(PRIX\s+[A-ZÀ-Ü0-9'’ .\-]{2,})",
+            text,
+            re.IGNORECASE,
+        )
+        if match:
+            race["track"] = re.sub(r"\s+", " ", match.group(1)).strip().upper()
+            race["race_name"] = re.sub(r"\s+", " ", match.group(2)).strip().upper()
 
-    match = re.search(r"(\d+)\s+CONCURRENTS?", text, re.IGNORECASE)
-    if match:
-        race["runners_count"] = int(match.group(1))
+        match = re.search(r"(\d+)\s+CONCURRENTS?", text, re.IGNORECASE)
+        if match:
+            race["runners_count"] = int(match.group(1))
 
     for pattern in (
         r"(\d+)\s*(?:ère|ere|ème|eme|ER|E|EME|ÈME)\s+COURSE",
@@ -116,14 +126,7 @@ def clean_description(description):
 
 
 def extract_horses(text, expected_runners=None):
-    """
-    Extract horse descriptions from the complete document.
-
-    Older LONAB programs place a previous-results/payment block before
-    the horse list. The previous parser stopped at that block, producing
-    horses=[]. We therefore search the full document and only trim the
-    trailing newspaper/ranking section from the final horse description.
-    """
+    """Extract horse descriptions from the complete program document."""
     horse_pattern = re.compile(
         r"(?m)^\s*(\d{1,2})\s*-\s*"
         r"([A-ZÀ-Ü0-9][A-ZÀ-Ü0-9'’\.\- ]+?)\s*:\s*"
@@ -137,14 +140,12 @@ def extract_horses(text, expected_runners=None):
         "PMU’B...",
         "PMU'B...",
     )
-
     tail_positions = [text.upper().find(marker.upper()) for marker in tail_markers]
     tail_positions = [p for p in tail_positions if p != -1]
     tail_end = min(tail_positions) if tail_positions else len(text)
 
     for index, match in enumerate(matches):
         number = int(match.group(1))
-
         if expected_runners is not None and not (1 <= number <= expected_runners):
             continue
 
@@ -159,19 +160,16 @@ def extract_horses(text, expected_runners=None):
             "horse": name,
             "description": description,
         }
-
         existing = horses_by_number.get(number)
         if existing is None or len(candidate["description"]) > len(existing["description"]):
             horses_by_number[number] = candidate
 
     horses = sorted(horses_by_number.values(), key=lambda item: item["number"])
-
     if expected_runners is not None and len(horses) != expected_runners:
         print(
             "WARNING: horse count mismatch: "
             f"expected {expected_runners}, extracted {len(horses)}"
         )
-
     return horses
 
 
@@ -199,13 +197,12 @@ def extract_published_arrival(text):
     return [int(value) for value in re.findall(r"\d+", match.group(1))]
 
 
-def parse_program_file(file_path):
-    raw_text = file_path.read_text(encoding="utf-8")
-    text = clean_text(raw_text)
+def parse_program_text(text, source_file="unknown.txt"):
+    text = clean_text(text)
     race_info = extract_race_info(text)
     return {
         "document_type": "program",
-        "source_file": file_path.name,
+        "source_file": source_file,
         "parsed_at": datetime.utcnow().isoformat() + "Z",
         "date": extract_date(text),
         "race": race_info,
@@ -213,6 +210,11 @@ def parse_program_file(file_path):
         "rankings": extract_rankings(text),
         "published_arrival": extract_published_arrival(text),
     }
+
+
+def parse_program_file(file_path):
+    raw_text = file_path.read_text(encoding="utf-8")
+    return parse_program_text(raw_text, file_path.name)
 
 
 def process_all_programs():
