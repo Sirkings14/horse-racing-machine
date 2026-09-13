@@ -6,9 +6,9 @@
   "evaluated_races": 489,
   "metrics": {
     "winner_hit_rate_at_1": 0.1595,
-    "winner_hit_rate_at_3": 0.3865,
-    "average_actual_top3_covered_by_predicted_top3": 0.8978,
-    "average_actual_top3_covered_by_predicted_top5": 1.3436
+    "winner_hit_rate_at_3": 0.3845,
+    "average_actual_top3_covered_by_predicted_top3": 0.8957,
+    "average_actual_top3_covered_by_predicted_top5": 1.3415
   },
   "race_results": [
     {
@@ -5967,27 +5967,27 @@
     },
     {
       "winner": 14,
-      "predicted_top1": 13,
+      "predicted_top1": 1,
       "winner_hit_at_1": false,
-      "winner_hit_at_3": true,
+      "winner_hit_at_3": false,
       "actual_top3": [
         9,
         11,
         14
       ],
       "predicted_top3": [
-        13,
-        14,
-        15
-      ],
-      "top3_coverage_by_top3": 1,
-      "top3_coverage_by_top5": 1,
-      "model_ranking": [
-        13,
-        14,
-        15,
         1,
-        2
+        2,
+        3
+      ],
+      "top3_coverage_by_top3": 0,
+      "top3_coverage_by_top5": 0,
+      "model_ranking": [
+        1,
+        2,
+        3,
+        4,
+        5
       ],
       "race_key": "2025-02-13|CAGNES-SUR-MER|4"
     },
