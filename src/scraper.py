@@ -414,7 +414,8 @@ def download_pdf(
     response = requests.get(
         url,
         headers=HEADERS,
-        timeout=60
+        timeout=60,
+        allow_redirects=True,
     )
 
     response.raise_for_status()
@@ -430,6 +431,11 @@ def download_pdf(
 
     content = response.content
 
+    # Some LONAB download routes redirect to a PDF URL that differs from the link URL.
+    final_url = normalize_url(response.url)
+    final_filename = stable_filename(final_url, prefix)
+    final_path = os.path.join(folder, final_filename)
+
     if (
         "pdf" not in content_type
         and not content.startswith(b"%PDF")
@@ -442,16 +448,16 @@ def download_pdf(
         return None
 
     with open(
-        filepath,
+        final_path,
         "wb"
     ) as file:
         file.write(content)
 
     print(
-        f"Saved: {filepath}"
+        f"Saved: {final_path}"
     )
 
-    return filepath
+    return final_path
 
 
 def scrape_archive(
