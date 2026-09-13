@@ -15,61 +15,46 @@ from src.model.backtest import main as run_backtest
 from src.model.predict_latest import main as generate_prediction
 from src.memory.update_memory import main as update_memory
 from src.notifications.telegram import send_latest_prediction
+from src.live.collector import collect_live_programs
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 REVIEW_FILE = BASE_DIR / "data" / "dataset" / "dataset_review.json"
+
 
 def print_step(number, title):
     print("\n" + "=" * 60)
     print(f"STEP {number}: {title}")
     print("=" * 60)
 
-def assert_dataset_clean():
-    """Ensure validation produced usable clean data without blocking on isolated bad races.
 
-    The validator is expected to quarantine malformed or incomplete historical
-    races. A single rejected race should not stop the autonomous machine from
-    learning from the remaining verified races.
-    """
+def assert_dataset_clean():
+    """Ensure validation produced usable clean data without blocking on isolated bad races."""
     with REVIEW_FILE.open("r", encoding="utf-8") as handle:
         review = json.load(handle)
 
     if not isinstance(review, list):
         raise RuntimeError("dataset_review.json must contain a list.")
 
-    clean_dataset_file = (
-        BASE_DIR / "data" / "dataset" / "training_dataset_clean.json"
-    )
-
+    clean_dataset_file = BASE_DIR / "data" / "dataset" / "training_dataset_clean.json"
     if not clean_dataset_file.exists():
-        raise RuntimeError(
-            "Training dataset validation did not produce a clean dataset."
-        )
+        raise RuntimeError("Training dataset validation did not produce a clean dataset.")
 
     with clean_dataset_file.open("r", encoding="utf-8") as handle:
         clean_rows = json.load(handle)
 
     if not isinstance(clean_rows, list) or not clean_rows:
-        raise RuntimeError(
-            "Training dataset validation produced no usable clean horse rows."
-        )
+        raise RuntimeError("Training dataset validation produced no usable clean horse rows.")
 
     clean_races = {
         row.get("race_key")
         for row in clean_rows
         if isinstance(row, dict) and row.get("race_key")
     }
-
     if not clean_races:
-        raise RuntimeError(
-            "Training dataset validation produced no usable clean races."
-        )
+        raise RuntimeError("Training dataset validation produced no usable clean races.")
 
     if review:
-        print(
-            f"Training dataset validation quarantined "
-            f"{len(review)} malformed/incomplete race(s)."
-        )
+        print(f"Training dataset validation quarantined {len(review)} malformed/incomplete race(s).")
         for item in review:
             print(
                 f"  Skipping {item.get('race_key', 'unknown race')}: "
@@ -78,10 +63,8 @@ def assert_dataset_clean():
     else:
         print("Training dataset validation passed: 0 rejected races.")
 
-    print(
-        f"Proceeding with {len(clean_races)} clean race(s) and "
-        f"{len(clean_rows)} clean horse rows."
-    )
+    print(f"Proceeding with {len(clean_races)} clean race(s) and {len(clean_rows)} clean horse rows.")
+
 
 def rebuild_knowledge():
     print_step(1, "SCRAPING LONAB DATA")
@@ -114,6 +97,26 @@ def rebuild_knowledge():
     print_step(9, "UPDATING VERIFIED RACE MEMORY")
     update_memory()
 
+
+def run_prediction_cycle():
+    # Prediction is intentionally independent from the historical rebuild.
+    # A live source failure must not destroy or rewrite the trained knowledge.
+    print_step(1, "DISCOVERING LIVE PROGRAMS")
+    collect_live_programs()
+    print_step(2, "GENERATING PREDICTION FROM LIVE REGISTRY")
+    generate_prediction()
+    print_step(3, "SENDING TELEGRAM PREDICTION")
+    send_latest_prediction()
+
+
+def run_learning_cycle():
+    rebuild_knowledge()
+    print_step(10, "TRAINING ADAPTIVE TOP-3 TOP-4 TOP-5 MODELS")
+    train_model()
+    print_step(11, "RUNNING WALK-FORWARD BACKTEST")
+    run_backtest()
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=["predict", "results", "full"], default="full")
@@ -123,14 +126,14 @@ def main():
     print(f"STARTING AUTONOMOUS HORSE RACING MACHINE: {args.mode}")
     print("=" * 60)
 
-    rebuild_knowledge()
-
-    if args.mode != "results":
-        print_step(10, "TRAINING ADAPTIVE TOP-3 TOP-4 TOP-5 MODELS")
-        train_model()
-        print_step(11, "RUNNING WALK-FORWARD BACKTEST")
-        run_backtest()
-        print_step(12, "GENERATING LATEST PREDICTION")
+    if args.mode == "predict":
+        run_prediction_cycle()
+    elif args.mode == "results":
+        rebuild_knowledge()
+    else:
+        run_learning_cycle()
+        print_step(12, "GENERATING LIVE PREDICTION")
+        collect_live_programs()
         generate_prediction()
         print_step(13, "SENDING TELEGRAM PREDICTION")
         send_latest_prediction()
@@ -138,6 +141,7 @@ def main():
     print("\n" + "=" * 60)
     print("AUTONOMOUS HORSE RACING MACHINE FINISHED SUCCESSFULLY")
     print("=" * 60)
+
 
 if __name__ == "__main__":
     main()
