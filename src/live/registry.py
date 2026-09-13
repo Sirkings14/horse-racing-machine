@@ -52,6 +52,7 @@ def upsert_race(race: dict[str, Any]) -> dict[str, Any]:
     if existing is None:
         race.setdefault("status", "validated")
         race.setdefault("prediction_status", "pending")
+        race.setdefault("result_status", "pending")
         race.setdefault("created_at", _now())
         race["updated_at"] = _now()
         races.append(race)
@@ -59,9 +60,11 @@ def upsert_race(race: dict[str, Any]) -> dict[str, Any]:
     else:
         previous_status = existing.get("status", "validated")
         previous_prediction_status = existing.get("prediction_status", "pending")
+        previous_result_status = existing.get("result_status", "pending")
         existing.update(race)
         existing["status"] = race.get("status", previous_status)
         existing["prediction_status"] = race.get("prediction_status", previous_prediction_status)
+        existing["result_status"] = race.get("result_status", previous_result_status)
         existing.setdefault("created_at", _now())
         existing["updated_at"] = _now()
         result = existing
@@ -82,6 +85,8 @@ def eligible_races(today_iso: str | None = None) -> list[dict[str, Any]]:
             continue
         if race.get("prediction_status") not in (None, "pending"):
             continue
+        if race.get("result_status") == "verified":
+            continue
         race_date = str(race.get("date") or "")[:10]
         if today_iso and race_date < today_iso:
             continue
@@ -97,6 +102,19 @@ def mark_predicted(race_key: str, prediction_file: str):
             race["prediction_status"] = "predicted"
             race["prediction_file"] = prediction_file
             race["predicted_at"] = _now()
+            race["updated_at"] = _now()
+            break
+    payload["updated_at"] = _now()
+    _atomic_write(payload)
+
+
+def mark_result_verified(race_key: str, evaluation_file: str):
+    payload = load_manifest()
+    for race in payload.get("races", []):
+        if race.get("race_key") == race_key:
+            race["result_status"] = "verified"
+            race["evaluation_file"] = evaluation_file
+            race["result_verified_at"] = _now()
             race["updated_at"] = _now()
             break
     payload["updated_at"] = _now()
