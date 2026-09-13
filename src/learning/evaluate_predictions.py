@@ -1,10 +1,11 @@
 from __future__ import annotations
 
 import json
-import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+from src.live.registry import mark_result_verified
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
@@ -28,16 +29,16 @@ def result_records() -> dict[str, dict[str, Any]]:
         if not isinstance(payload, dict) or payload.get("document_type") != "result":
             continue
 
-        date = str(payload.get("date") or "")[:10]
+        race_date = str(payload.get("date") or "")[:10]
         track = str(payload.get("track") or "").strip().upper()
         for race in payload.get("races") or []:
             try:
                 number = int(race.get("race_number"))
             except (TypeError, ValueError):
                 continue
-            if not date or not track:
+            if not race_date or not track:
                 continue
-            key = f"{date}|{track}|{number}"
+            key = f"{race_date}|{track}|{number}"
             arrival = []
             for value in race.get("arrival") or []:
                 try:
@@ -48,7 +49,7 @@ def result_records() -> dict[str, dict[str, Any]]:
                 continue
             records[key] = {
                 "race_key": key,
-                "date": date,
+                "date": race_date,
                 "track": track,
                 "race_number": number,
                 "arrival": arrival,
@@ -72,10 +73,14 @@ def load_existing() -> dict[str, dict[str, Any]]:
 
 
 def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, Any]:
-    actual = set(result["arrival"])
+    actual_top3 = set(result["arrival"][:3])
     predicted_top3 = [int(x) for x in prediction.get("top3_numbers") or []]
     predicted_recommended = [int(x) for x in prediction.get("recommended_numbers") or []]
-    top5 = [int(x.get("horse_number")) for x in (prediction.get("ranked_horses") or [])[:5] if x.get("horse_number") is not None]
+    ranked_top5 = [
+        int(x.get("horse_number"))
+        for x in (prediction.get("ranked_horses") or [])[:5]
+        if x.get("horse_number") is not None
+    ]
     predicted_winner = int(predicted_top3[0]) if predicted_top3 else None
 
     return {
@@ -88,15 +93,15 @@ def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, An
         "prediction": {
             "recommended_numbers": predicted_recommended,
             "top3_numbers": predicted_top3,
-            "ranked_top5": top5,
+            "ranked_top5": ranked_top5,
         },
         "metrics": {
             "winner_hit": predicted_winner == result.get("winner"),
             "winner_in_top3": result.get("winner") in predicted_top3,
-            "winner_in_top5": result.get("winner") in top5,
-            "actual_top3_covered_by_predicted_top3": len(set(predicted_top3) & actual),
-            "actual_top3_covered_by_predicted_top5": len(set(top5) & actual),
-            "recommended_hit_count": len(set(predicted_recommended) & actual),
+            "winner_in_top5": result.get("winner") in ranked_top5,
+            "actual_top3_covered_by_predicted_top3": len(actual_top3 & set(predicted_top3)),
+            "actual_top3_covered_by_predicted_top5": len(actual_top3 & set(ranked_top5)),
+            "recommended_hit_count": len(set(predicted_recommended) & set(result["arrival"])),
         },
         "status": "result_verified",
     }
@@ -125,7 +130,9 @@ def main() -> dict[str, Any]:
         result = results.get(str(key))
         if not result:
             continue
-        evaluations[str(key)] = evaluate(prediction, result)
+        evaluation = evaluate(prediction, result)
+        evaluations[str(key)] = evaluation
+        mark_result_verified(str(key), str(EVALUATION_FILE.relative_to(BASE_DIR)))
         processed += 1
 
     EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
