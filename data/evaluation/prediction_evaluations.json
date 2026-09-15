@@ -1,1 +1,59 @@
-[]
+[
+  {
+    "race_key": "2026-09-15|COMPIEGNE|1",
+    "prediction_id": "2026-09-15|COMPIEGNE|1|2026-09-15T19:47:34.198825+00:00",
+    "model_version": "legacy-production",
+    "predicted_at": "2026-09-15T19:47:34.198833+00:00",
+    "verified_at": "2026-09-15T22:27:39.998537+00:00",
+    "result": {
+      "race_key": "2026-09-15|COMPIEGNE|1",
+      "date": "2026-09-15",
+      "track": "COMPIEGNE",
+      "race_number": 1,
+      "arrival": [
+        7,
+        8,
+        6,
+        1,
+        900,
+        53,
+        4,
+        700,
+        2732
+      ],
+      "winner": 7,
+      "second": 8,
+      "third": 6
+    },
+    "prediction": {
+      "recommended_numbers": [
+        8,
+        7,
+        1,
+        6,
+        4
+      ],
+      "top3_numbers": [
+        8,
+        7,
+        1
+      ],
+      "ranked_top5": [
+        8,
+        7,
+        1,
+        6,
+        4
+      ]
+    },
+    "metrics": {
+      "winner_hit": false,
+      "winner_in_top3": true,
+      "winner_in_top5": true,
+      "actual_top3_covered_by_predicted_top3": 2,
+      "actual_top3_covered_by_predicted_top5": 3,
+      "recommended_hit_count": 5
+    },
+    "status": "result_verified"
+  }
+]
