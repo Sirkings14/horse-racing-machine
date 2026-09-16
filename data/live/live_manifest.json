@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-15T22:27:39.998650+00:00",
+  "updated_at": "2026-09-16T09:29:55.261684+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -84,11 +84,13 @@
       "source_file": "live_program_JH_PMUB_DU_16-09-2026_02df72b078.pdf",
       "structured_file": "structured/2026-09-16_FEURS_1.json",
       "status": "validated",
-      "prediction_status": "pending",
-      "discovered_at": "2026-09-15T19:47:25.203217+00:00",
+      "prediction_status": "predicted",
+      "discovered_at": "2026-09-16T09:29:37.475703+00:00",
       "result_status": "pending",
       "created_at": "2026-09-14T15:52:43.159543+00:00",
-      "updated_at": "2026-09-15T19:47:25.203323+00:00"
+      "updated_at": "2026-09-16T09:29:55.261682+00:00",
+      "prediction_file": "data/predictions/2026-09-16_FEURS_1.json",
+      "predicted_at": "2026-09-16T09:29:55.261676+00:00"
     },
     {
       "race_key": "2026-09-17|PARIS|1",
@@ -105,10 +107,10 @@
       "structured_file": "structured/2026-09-17_PARIS_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-09-15T19:47:24.914338+00:00",
+      "discovered_at": "2026-09-16T09:29:37.036902+00:00",
       "result_status": "pending",
       "created_at": "2026-09-15T19:46:50.177675+00:00",
-      "updated_at": "2026-09-15T19:47:24.914451+00:00"
+      "updated_at": "2026-09-16T09:29:37.037075+00:00"
     }
   ]
 }
