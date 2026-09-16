@@ -55,5 +55,61 @@
       "recommended_hit_count": 5
     },
     "status": "result_verified"
+  },
+  {
+    "race_key": "2026-09-16|FEURS|1",
+    "prediction_id": "2026-09-16|FEURS|1|2026-09-16T19:39:07.752712+00:00",
+    "model_version": "legacy-production",
+    "predicted_at": "2026-09-16T19:39:07.752719+00:00",
+    "verified_at": "2026-09-16T22:19:29.439359+00:00",
+    "result": {
+      "race_key": "2026-09-16|FEURS|1",
+      "date": "2026-09-16",
+      "track": "FEURS",
+      "race_number": 1,
+      "arrival": [
+        9,
+        7,
+        10,
+        650,
+        175,
+        2,
+        700,
+        3626
+      ],
+      "winner": 9,
+      "second": 7,
+      "third": 10
+    },
+    "prediction": {
+      "recommended_numbers": [
+        7,
+        14,
+        15,
+        10,
+        4
+      ],
+      "top3_numbers": [
+        7,
+        14,
+        15
+      ],
+      "ranked_top5": [
+        7,
+        14,
+        15,
+        10,
+        4
+      ]
+    },
+    "metrics": {
+      "winner_hit": false,
+      "winner_in_top3": false,
+      "winner_in_top5": false,
+      "actual_top3_covered_by_predicted_top3": 1,
+      "actual_top3_covered_by_predicted_top5": 2,
+      "recommended_hit_count": 2
+    },
+    "status": "result_verified"
   }
 ]
