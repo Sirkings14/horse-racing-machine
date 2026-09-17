@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any, Dict, List, Sequence, Tuple
+from typing import Any, Dict, List, Sequence
 
 import numpy as np
 
@@ -10,12 +10,7 @@ from src.model.feature_engineering import FEATURE_NAMES, build_matrix, standardi
 
 @dataclass
 class OrderModel:
-    """Pairwise finishing-order model.
-
-    The model learns which feature differences tend to separate an earlier
-    finisher from a later finisher. At inference time the learned horse scores
-    are converted into a Plackett-Luce-style sequential order distribution.
-    """
+    """Pairwise finishing-order model trained only on verified finish positions."""
 
     feature_names: List[str]
     mean: List[float]
@@ -28,34 +23,24 @@ class OrderModel:
         matrix = build_matrix(rows)
         if len(matrix) == 0:
             return np.empty(0, dtype=float)
-        x = standardize_apply(
-            matrix,
-            np.asarray(self.mean, dtype=float),
-            np.asarray(self.std, dtype=float),
-        )
+        x = standardize_apply(matrix, np.asarray(self.mean, dtype=float), np.asarray(self.std, dtype=float))
         return self.intercept + x @ np.asarray(self.coefficients, dtype=float)
 
     def predict_order(self, rows: Sequence[Dict[str, Any]]) -> List[Dict[str, Any]]:
         scores = self.score(rows)
         if len(scores) == 0:
             return []
-
-        # Numerical-safe softmax gives a race-relative probability-like weight.
         shifted = np.clip(scores - np.max(scores), -30.0, 30.0)
         weights = np.exp(shifted)
         probabilities = weights / max(float(weights.sum()), 1e-12)
-
-        items: List[Dict[str, Any]] = []
+        items = []
         for row, score, probability in zip(rows, scores, probabilities):
-            items.append(
-                {
-                    "horse_number": int(row["horse_number"]),
-                    "horse_name": row.get("horse_name"),
-                    "order_score": round(float(score), 6),
-                    "order_win_probability": round(float(probability), 6),
-                }
-            )
-
+            items.append({
+                "horse_number": int(row["horse_number"]),
+                "horse_name": row.get("horse_name"),
+                "order_score": round(float(score), 6),
+                "order_win_probability": round(float(probability), 6),
+            })
         items.sort(key=lambda item: (-item["order_score"], item["horse_number"]))
         for rank, item in enumerate(items, 1):
             item["predicted_finish_position"] = rank
@@ -91,8 +76,8 @@ def _sigmoid(values: np.ndarray) -> np.ndarray:
 
 def fit_order_model(
     rows: Sequence[Dict[str, Any]],
-    epochs: int = 900,
-    learning_rate: float = 0.035,
+    epochs: int = 250,
+    learning_rate: float = 0.06,
     l2: float = 1.0,
 ) -> OrderModel:
     """Fit a Bradley-Terry-style pairwise model from verified finish positions."""
@@ -108,8 +93,7 @@ def fit_order_model(
             continue
         grouped.setdefault(key, []).append(row)
 
-    pairwise: List[np.ndarray] = []
-    targets: List[float] = []
+    pairwise = []
     for race_rows in grouped.values():
         matrix = build_matrix(race_rows)
         positions = []
@@ -118,26 +102,18 @@ def fit_order_model(
                 positions.append(int(row["finish_position"]))
             except (TypeError, ValueError):
                 positions.append(10**9)
-
         for i in range(len(race_rows)):
             for j in range(i + 1, len(race_rows)):
-                if positions[i] == positions[j] or positions[i] >= 10**9 or positions[j] >= 10**9:
+                if positions[i] >= 10**9 or positions[j] >= 10**9 or positions[i] == positions[j]:
                     continue
-                diff = matrix[i] - matrix[j]
-                if positions[i] < positions[j]:
-                    pairwise.append(diff)
-                    targets.append(1.0)
-                else:
-                    pairwise.append(-diff)
-                    targets.append(1.0)
+                pairwise.append(matrix[i] - matrix[j] if positions[i] < positions[j] else matrix[j] - matrix[i])
 
     if not pairwise:
-        raise ValueError("Order model requires verified finish positions with at least one comparable pair.")
+        raise ValueError("Order model requires verified finish positions with comparable pairs.")
 
     x_raw = np.asarray(pairwise, dtype=float)
-    target = np.asarray(targets, dtype=float)
+    target = np.ones(len(x_raw), dtype=float)
     x, mean, std = standardize_fit(x_raw)
-
     coefficients = np.zeros(x.shape[1], dtype=float)
     intercept = 0.0
     sample_count = float(len(target))
@@ -145,17 +121,12 @@ def fit_order_model(
     for _ in range(epochs):
         probabilities = _sigmoid(intercept + x @ coefficients)
         error = probabilities - target
-        grad_intercept = float(error.sum() / sample_count)
-        grad_coefficients = (x.T @ error) / sample_count
-        grad_coefficients += l2 * coefficients / sample_count
+        grad_intercept = float(error.mean())
+        grad_coefficients = (x.T @ error) / sample_count + l2 * coefficients / sample_count
         intercept -= learning_rate * grad_intercept
         coefficients -= learning_rate * grad_coefficients
 
     return OrderModel(
-        feature_names=list(FEATURE_NAMES),
-        mean=mean.tolist(),
-        std=std.tolist(),
-        coefficients=coefficients.tolist(),
-        intercept=intercept,
-        l2=l2,
+        feature_names=list(FEATURE_NAMES), mean=mean.tolist(), std=std.tolist(),
+        coefficients=coefficients.tolist(), intercept=intercept, l2=l2,
     )
