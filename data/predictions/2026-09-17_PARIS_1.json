@@ -1,8 +1,9 @@
 {
-  "prediction_id": "2026-09-17|PARIS|1|2026-09-17T12:41:12.586435+00:00",
-  "generated_at": "2026-09-17T12:41:12.586443+00:00",
+  "prediction_id": "2026-09-17|PARIS|1|2026-09-17T14:17:03.153998+00:00",
+  "generated_at": "2026-09-17T14:17:03.154010+00:00",
   "model_version": "legacy-production",
   "model_status": "legacy_unregistered_models",
+  "order_engine_status": "runtime_verified_data_order_model",
   "mode": "live_registry_prediction",
   "today": "2026-09-17",
   "source_program": "live_program_JH_PMUB_DU_17-09-2026_cb5742bff9.pdf",
@@ -20,16 +21,72 @@
   "recommended_numbers": [
     1,
     7,
+    2,
     6,
-    5,
-    4
+    5
   ],
   "adaptive_top_count": 5,
   "top3_numbers": [
     1,
     7,
-    6
+    2
   ],
+  "predicted_finish_order": [
+    1,
+    7,
+    2,
+    6,
+    5,
+    4,
+    3,
+    11,
+    8,
+    14,
+    9,
+    10,
+    15,
+    12,
+    13
+  ],
+  "order_engine_top5": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "winner_engine_candidate": 1,
+  "order_engine_winner_candidate": 1,
+  "monitoring": {
+    "status": "monitoring_complete",
+    "strength_engine_top5": [
+      1,
+      7,
+      6,
+      5,
+      4
+    ],
+    "order_engine_top5": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "strength_engine_winner_candidate": 1,
+    "order_engine_winner_candidate": 1,
+    "common_top3": [
+      1
+    ],
+    "common_top5": [
+      1,
+      4,
+      5
+    ],
+    "agreement": "strong_agreement",
+    "agreement_score_top5": 0.6,
+    "warning": null
+  },
   "ranked_horses": [
     {
       "horse_number": 1,
@@ -38,7 +95,11 @@
       "probability_top4": 0.693444,
       "probability_top5": 0.691533,
       "ensemble_score": 0.71284,
-      "predicted_rank": 1
+      "predicted_rank": 1,
+      "order_rank": 1,
+      "order_win_probability": 0.066667,
+      "final_order_score": 1.0,
+      "final_predicted_position": 1
     },
     {
       "horse_number": 7,
@@ -47,52 +108,11 @@
       "probability_top4": 0.660701,
       "probability_top5": 0.658315,
       "ensemble_score": 0.682284,
-      "predicted_rank": 2
-    },
-    {
-      "horse_number": 6,
-      "horse_name": "LOVEBIRD",
-      "probability_top3": 0.65083,
-      "probability_top4": 0.618718,
-      "probability_top5": 0.616402,
-      "ensemble_score": 0.634311,
-      "predicted_rank": 3
-    },
-    {
-      "horse_number": 5,
-      "horse_name": "ALADIN",
-      "probability_top3": 0.6319,
-      "probability_top4": 0.618125,
-      "probability_top5": 0.616687,
-      "ensemble_score": 0.624725,
-      "predicted_rank": 4
-    },
-    {
-      "horse_number": 4,
-      "horse_name": "EMPIRE AS",
-      "probability_top3": 0.554723,
-      "probability_top4": 0.55466,
-      "probability_top5": 0.552732,
-      "ensemble_score": 0.554306,
-      "predicted_rank": 5
-    },
-    {
-      "horse_number": 11,
-      "horse_name": "TROGIR",
-      "probability_top3": 0.542906,
-      "probability_top4": 0.530093,
-      "probability_top5": 0.529062,
-      "ensemble_score": 0.536293,
-      "predicted_rank": 6
-    },
-    {
-      "horse_number": 8,
-      "horse_name": "PURE STEEL",
-      "probability_top3": 0.538704,
-      "probability_top4": 0.528103,
-      "probability_top5": 0.528777,
-      "ensemble_score": 0.533538,
-      "predicted_rank": 7
+      "predicted_rank": 2,
+      "order_rank": 7,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.357143,
+      "final_predicted_position": 2
     },
     {
       "horse_number": 2,
@@ -101,16 +121,50 @@
       "probability_top4": 0.474089,
       "probability_top5": 0.475445,
       "ensemble_score": 0.463299,
-      "predicted_rank": 8
+      "predicted_rank": 8,
+      "order_rank": 2,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.275,
+      "final_predicted_position": 3
     },
     {
-      "horse_number": 14,
-      "horse_name": "L'AMOUR MEARAS",
-      "probability_top3": 0.448479,
-      "probability_top4": 0.47024,
-      "probability_top5": 0.473404,
-      "ensemble_score": 0.459992,
-      "predicted_rank": 9
+      "horse_number": 6,
+      "horse_name": "LOVEBIRD",
+      "probability_top3": 0.65083,
+      "probability_top4": 0.618718,
+      "probability_top5": 0.616402,
+      "ensemble_score": 0.634311,
+      "predicted_rank": 3,
+      "order_rank": 6,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.266667,
+      "final_predicted_position": 4
+    },
+    {
+      "horse_number": 5,
+      "horse_name": "ALADIN",
+      "probability_top3": 0.6319,
+      "probability_top4": 0.618125,
+      "probability_top5": 0.616687,
+      "ensemble_score": 0.624725,
+      "predicted_rank": 4,
+      "order_rank": 5,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.23,
+      "final_predicted_position": 5
+    },
+    {
+      "horse_number": 4,
+      "horse_name": "EMPIRE AS",
+      "probability_top3": 0.554723,
+      "probability_top4": 0.55466,
+      "probability_top5": 0.552732,
+      "ensemble_score": 0.554306,
+      "predicted_rank": 5,
+      "order_rank": 4,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.22,
+      "final_predicted_position": 6
     },
     {
       "horse_number": 3,
@@ -119,16 +173,50 @@
       "probability_top4": 0.449757,
       "probability_top5": 0.453215,
       "ensemble_score": 0.438456,
-      "predicted_rank": 10
+      "predicted_rank": 10,
+      "order_rank": 3,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.193333,
+      "final_predicted_position": 7
     },
     {
-      "horse_number": 15,
-      "horse_name": "LE RETOUR VRIE",
-      "probability_top3": 0.421445,
-      "probability_top4": 0.449755,
-      "probability_top5": 0.453256,
-      "ensemble_score": 0.4363,
-      "predicted_rank": 11
+      "horse_number": 11,
+      "horse_name": "TROGIR",
+      "probability_top3": 0.542906,
+      "probability_top4": 0.530093,
+      "probability_top5": 0.529062,
+      "ensemble_score": 0.536293,
+      "predicted_rank": 6,
+      "order_rank": 11,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.136364,
+      "final_predicted_position": 8
+    },
+    {
+      "horse_number": 8,
+      "horse_name": "PURE STEEL",
+      "probability_top3": 0.538704,
+      "probability_top4": 0.528103,
+      "probability_top5": 0.528777,
+      "ensemble_score": 0.533538,
+      "predicted_rank": 7,
+      "order_rank": 8,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.135714,
+      "final_predicted_position": 9
+    },
+    {
+      "horse_number": 14,
+      "horse_name": "L'AMOUR MEARAS",
+      "probability_top3": 0.448479,
+      "probability_top4": 0.47024,
+      "probability_top5": 0.473404,
+      "ensemble_score": 0.459992,
+      "predicted_rank": 9,
+      "order_rank": 14,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.095238,
+      "final_predicted_position": 10
     },
     {
       "horse_number": 9,
@@ -137,7 +225,11 @@
       "probability_top4": 0.410754,
       "probability_top5": 0.408774,
       "ensemble_score": 0.400651,
-      "predicted_rank": 12
+      "predicted_rank": 12,
+      "order_rank": 9,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.094444,
+      "final_predicted_position": 11
     },
     {
       "horse_number": 10,
@@ -146,7 +238,24 @@
       "probability_top4": 0.410754,
       "probability_top5": 0.408774,
       "ensemble_score": 0.400651,
-      "predicted_rank": 13
+      "predicted_rank": 13,
+      "order_rank": 10,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.086154,
+      "final_predicted_position": 12
+    },
+    {
+      "horse_number": 15,
+      "horse_name": "LE RETOUR VRIE",
+      "probability_top3": 0.421445,
+      "probability_top4": 0.449755,
+      "probability_top5": 0.453256,
+      "ensemble_score": 0.4363,
+      "predicted_rank": 11,
+      "order_rank": 15,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.081212,
+      "final_predicted_position": 13
     },
     {
       "horse_number": 12,
@@ -155,7 +264,11 @@
       "probability_top4": 0.410754,
       "probability_top5": 0.408774,
       "ensemble_score": 0.400651,
-      "predicted_rank": 14
+      "predicted_rank": 14,
+      "order_rank": 12,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.07619,
+      "final_predicted_position": 14
     },
     {
       "horse_number": 13,
@@ -164,7 +277,11 @@
       "probability_top4": 0.410754,
       "probability_top5": 0.408774,
       "ensemble_score": 0.400651,
-      "predicted_rank": 15
+      "predicted_rank": 15,
+      "order_rank": 13,
+      "order_win_probability": 0.066667,
+      "final_order_score": 0.070769,
+      "final_predicted_position": 15
     }
   ],
   "live_manifest": "/home/runner/work/horse-racing-machine/horse-racing-machine/data/live/live_manifest.json"
