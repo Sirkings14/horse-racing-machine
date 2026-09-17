@@ -17,7 +17,6 @@ def send_latest_prediction() -> bool:
     if not token or not chat_id:
         print("Telegram skipped: secrets are not configured.")
         return False
-
     if not PREDICTION_FILE.exists():
         print("Telegram skipped: prediction file does not exist.")
         return False
@@ -29,9 +28,7 @@ def send_latest_prediction() -> bool:
         return False
 
     if payload.get("mode") != "live_registry_prediction":
-        print(
-            "Telegram skipped: latest prediction is not a validated live-registry prediction."
-        )
+        print("Telegram skipped: latest prediction is not a validated live-registry prediction.")
         return False
 
     race = payload.get("race") or {}
@@ -44,10 +41,7 @@ def send_latest_prediction() -> bool:
 
     today = datetime.now(timezone.utc).date()
     if parsed_race_date < today:
-        print(
-            f"Telegram skipped: stale prediction for {parsed_race_date.isoformat()} "
-            f"(today is {today.isoformat()})."
-        )
+        print(f"Telegram skipped: stale prediction for {parsed_race_date.isoformat()} (today is {today.isoformat()}).")
         return False
 
     numbers = payload.get("recommended_numbers") or []
@@ -56,6 +50,10 @@ def send_latest_prediction() -> bool:
         return False
 
     race_key = payload.get("race_key") or "unknown"
+    monitor = payload.get("monitoring") or {}
+    predicted_order = payload.get("predicted_finish_order") or []
+    order_top5 = payload.get("order_engine_top5") or []
+
     lines = [
         "🏇 HORSE RACING MACHINE",
         "",
@@ -64,23 +62,27 @@ def send_latest_prediction() -> bool:
         f"Race: {race.get('race_name') or 'N/A'}",
         f"Distance: {race.get('distance')}m",
         f"🎯 Recommended {len(numbers)}: {' - '.join(map(str, numbers))}",
+        f"🏆 Predicted order: {' - '.join(map(str, predicted_order[:5]))}",
+        f"🔎 Order engine: {' - '.join(map(str, order_top5[:5])) if order_top5 else 'unavailable'}",
+        f"🧠 Engine agreement: {monitor.get('agreement', 'unknown')}",
         f"Adaptive depth: {payload.get('adaptive_top_count', len(numbers))}",
         f"Model: {payload.get('model_version', 'unknown')}",
         "",
-        "Top ranked:",
+        "Race intelligence — Top 5:",
     ]
 
     for horse in (payload.get("ranked_horses") or [])[:5]:
         probability = float(horse.get("probability_top3", 0))
+        order_rank = horse.get("order_rank")
         lines.append(
-            f"{horse.get('predicted_rank')}. {horse.get('horse_number')} "
-            f"{horse.get('horse_name')} | {probability:.1%}"
+            f"{horse.get('final_predicted_position')}. {horse.get('horse_number')} "
+            f"{horse.get('horse_name')} | Top3 {probability:.1%} | Order #{order_rank}"
         )
 
-    lines += [
-        "",
-        "⚠️ Model output only. Horse racing remains uncertain.",
-    ]
+    if monitor.get("warning"):
+        lines += ["", f"⚠️ {monitor['warning']}"]
+
+    lines += ["", "⚠️ Model output only. Horse racing remains uncertain."]
 
     response = requests.post(
         f"https://api.telegram.org/bot{token}/sendMessage",
