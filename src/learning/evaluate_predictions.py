@@ -40,7 +40,6 @@ def result_records() -> dict[str, dict[str, Any]]:
             continue
         if not isinstance(payload, dict) or payload.get("document_type") != "result":
             continue
-
         race_date = str(payload.get("date") or "")[:10]
         track = normalize_track(payload.get("track"))
         for race in payload.get("races") or []:
@@ -57,18 +56,13 @@ def result_records() -> dict[str, dict[str, Any]]:
                     arrival.append(int(value))
                 except (TypeError, ValueError):
                     pass
-            if not arrival:
-                continue
-            records[key] = {
-                "race_key": key,
-                "date": race_date,
-                "track": track,
-                "race_number": number,
-                "arrival": arrival,
-                "winner": arrival[0],
-                "second": arrival[1] if len(arrival) > 1 else None,
-                "third": arrival[2] if len(arrival) > 2 else None,
-            }
+            if arrival:
+                records[key] = {
+                    "race_key": key, "date": race_date, "track": track, "race_number": number,
+                    "arrival": arrival, "winner": arrival[0],
+                    "second": arrival[1] if len(arrival) > 1 else None,
+                    "third": arrival[2] if len(arrival) > 2 else None,
+                }
     return records
 
 
@@ -81,23 +75,23 @@ def load_existing() -> dict[str, dict[str, Any]]:
         return {}
     if not isinstance(payload, list):
         return {}
-    return {
-        canonical_key(str(item.get("race_key"))): item
-        for item in payload
-        if isinstance(item, dict) and item.get("race_key")
-    }
+    return {canonical_key(str(item.get("race_key"))): item for item in payload if isinstance(item, dict) and item.get("race_key")}
 
 
 def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, Any]:
-    actual_top3 = set(result["arrival"][:3])
+    actual_top3 = result["arrival"][:3]
     predicted_top3 = [int(x) for x in prediction.get("top3_numbers") or []]
     predicted_recommended = [int(x) for x in prediction.get("recommended_numbers") or []]
-    ranked_top5 = [
-        int(x.get("horse_number"))
-        for x in (prediction.get("ranked_horses") or [])[:5]
-        if x.get("horse_number") is not None
-    ]
-    predicted_winner = int(predicted_top3[0]) if predicted_top3 else None
+    predicted_order = [int(x) for x in prediction.get("predicted_finish_order") or []]
+    order_top5 = [int(x) for x in prediction.get("order_engine_top5") or []]
+    ranked_top5 = [int(x.get("horse_number")) for x in (prediction.get("ranked_horses") or [])[:5] if x.get("horse_number") is not None]
+    predicted_winner = predicted_order[0] if predicted_order else (predicted_top3[0] if predicted_top3 else None)
+
+    actual_top5 = result["arrival"][:5]
+    position_hits_top5 = sum(
+        1 for position, horse in enumerate(predicted_order[:5])
+        if position < len(actual_top5) and horse == actual_top5[position]
+    )
 
     return {
         "race_key": prediction.get("race_key"),
@@ -110,14 +104,21 @@ def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, An
             "recommended_numbers": predicted_recommended,
             "top3_numbers": predicted_top3,
             "ranked_top5": ranked_top5,
+            "predicted_finish_order_top5": predicted_order[:5],
+            "order_engine_top5": order_top5[:5],
+            "monitoring": prediction.get("monitoring") or {},
         },
         "metrics": {
             "winner_hit": predicted_winner == result.get("winner"),
             "winner_in_top3": result.get("winner") in predicted_top3,
             "winner_in_top5": result.get("winner") in ranked_top5,
-            "actual_top3_covered_by_predicted_top3": len(actual_top3 & set(predicted_top3)),
-            "actual_top3_covered_by_predicted_top5": len(actual_top3 & set(ranked_top5)),
+            "order_engine_winner_hit": bool(order_top5) and order_top5[0] == result.get("winner"),
+            "actual_top3_covered_by_predicted_top3": len(set(actual_top3) & set(predicted_top3)),
+            "actual_top3_covered_by_predicted_top5": len(set(actual_top3) & set(ranked_top5)),
             "recommended_hit_count": len(set(predicted_recommended) & set(result["arrival"])),
+            "exact_top3_order": predicted_order[:3] == actual_top3,
+            "exact_top5_order": predicted_order[:5] == actual_top5,
+            "top5_position_hits": position_hits_top5,
         },
         "status": "result_verified",
     }
@@ -131,7 +132,6 @@ def main() -> dict[str, Any]:
     results = result_records()
     evaluations = load_existing()
     processed = 0
-
     for path in safe_prediction_files():
         try:
             prediction = load_json(path)
@@ -149,15 +149,13 @@ def main() -> dict[str, Any]:
         result = results.get(key)
         if not result:
             continue
-        evaluation = evaluate(prediction, result)
-        evaluations[key] = evaluation
+        evaluations[key] = evaluate(prediction, result)
         mark_result_verified(str(original_key), str(EVALUATION_FILE.relative_to(BASE_DIR)))
         processed += 1
 
     EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
     ordered = [evaluations[key] for key in sorted(evaluations)]
     EVALUATION_FILE.write_text(json.dumps(ordered, indent=2, ensure_ascii=False), encoding="utf-8")
-
     print(f"Verified prediction/result pairs added: {processed}")
     print(f"Total verified prediction/result pairs: {len(ordered)}")
     return {"processed": processed, "total": len(ordered), "path": str(EVALUATION_FILE)}
