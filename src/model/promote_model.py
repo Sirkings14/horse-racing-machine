@@ -73,6 +73,13 @@ def main(candidate_version: str | None = None) -> bool:
             return False
         shutil.copy2(source, target)
 
+    order_source = candidate_dir / "order_model.json"
+    if order_source.exists():
+        shutil.copy2(order_source, MODEL_DIR / "order_model.json")
+        print("Promoted finishing-order model with the champion package.")
+    else:
+        print("Warning: candidate has no finishing-order model; retaining existing order model.")
+
     promote_candidate(version, metrics)
     print(f"Promoted challenger {version} to champion.")
     return True
