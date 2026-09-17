@@ -69,11 +69,10 @@ def program_to_rows(program):
         ranks = {f"{name}_rank": positions[name].get(number) for name in positions}
         rank_values = [value for value in ranks.values() if value is not None]
         rows.append({
-            "race_key": race_key(program),
-            "date": meta["date"], "track": meta["track"], "race_number": meta["race_number"],
-            "race_name": meta["race_name"], "race_type": meta["race_type"], "distance": meta["distance"],
-            "runners_count": meta["runners_count"], "horse_number": number, "horse_name": horse.get("horse"),
-            "horse_description": horse.get("description"), **ranks,
+            "race_key": race_key(program), "date": meta["date"], "track": meta["track"],
+            "race_number": meta["race_number"], "race_name": meta["race_name"], "race_type": meta["race_type"],
+            "distance": meta["distance"], "runners_count": meta["runners_count"], "horse_number": number,
+            "horse_name": horse.get("horse"), "horse_description": horse.get("description"), **ranks,
             "ranking_average": (sum(rank_values) / len(rank_values) if rank_values else None),
             "ranking_presence": len(rank_values),
         })
@@ -147,7 +146,10 @@ def load_order_model(rows):
         except Exception as error:
             print(f"Production order model unavailable; rebuilding from verified data: {error}")
     try:
-        return fit_order_model(rows), "runtime_verified_data_order_model"
+        model = fit_order_model(rows)
+        MODEL_DIR.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(model.to_dict(), indent=2, ensure_ascii=False), encoding="utf-8")
+        return model, "runtime_verified_data_order_model"
     except Exception as error:
         print(f"Order engine unavailable: {error}")
         return None, "order_engine_unavailable"
@@ -185,7 +187,6 @@ def main():
     actual_date = normalize_race_date(meta["date"])
     rows = program_to_rows(program)
     key = race_key(program)
-
     if actual_date is None or actual_date < today:
         return no_prediction("live_program_is_stale", race_key=key, today=today.isoformat())
     if not key or not rows:
@@ -216,16 +217,12 @@ def main():
     order_ranking = order_model.predict_order(rows) if order_model else []
     order_map = {item["horse_number"]: item for item in order_ranking}
 
-    # Rank fusion: strength ensemble remains important, while the independent
-    # order engine contributes a separate view of the finishing sequence.
     for item in ranked:
         order_item = order_map.get(item["horse_number"])
         order_rank = order_item["predicted_finish_position"] if order_item else len(ranked) + 1
         item["order_rank"] = order_rank
         item["order_win_probability"] = order_item["order_win_probability"] if order_item else None
-        item["final_order_score"] = round(
-            0.6 * (1.0 / item["predicted_rank"]) + 0.4 * (1.0 / order_rank), 6
-        )
+        item["final_order_score"] = round(0.6 * (1.0 / item["predicted_rank"]) + 0.4 * (1.0 / order_rank), 6)
 
     final_order = sorted(ranked, key=lambda item: (-item["final_order_score"], item["horse_number"]))
     for index, item in enumerate(final_order, 1):
@@ -236,23 +233,17 @@ def main():
 
     result = {
         "prediction_id": f"{key}|{datetime.now(timezone.utc).isoformat()}",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "model_version": model_version,
-        "model_status": model_status,
-        "order_engine_status": order_status,
-        "mode": "live_registry_prediction",
-        "today": today.isoformat(),
-        "source_program": selected_entry.get("source_file"), "source_url": selected_entry.get("source_url"),
-        "race_key": key, "race": meta,
+        "generated_at": datetime.now(timezone.utc).isoformat(), "model_version": model_version,
+        "model_status": model_status, "order_engine_status": order_status, "mode": "live_registry_prediction",
+        "today": today.isoformat(), "source_program": selected_entry.get("source_file"),
+        "source_url": selected_entry.get("source_url"), "race_key": key, "race": meta,
         "recommended_numbers": [item["horse_number"] for item in final_order[:adaptive]],
-        "adaptive_top_count": adaptive,
-        "top3_numbers": [item["horse_number"] for item in final_order[:3]],
+        "adaptive_top_count": adaptive, "top3_numbers": [item["horse_number"] for item in final_order[:3]],
         "predicted_finish_order": [item["horse_number"] for item in final_order],
         "order_engine_top5": [item["horse_number"] for item in order_ranking[:5]],
         "winner_engine_candidate": ranked[0]["horse_number"],
         "order_engine_winner_candidate": order_ranking[0]["horse_number"] if order_ranking else None,
-        "monitoring": monitoring,
-        "ranked_horses": final_order,
+        "monitoring": monitoring, "ranked_horses": final_order,
         "live_manifest": str(LIVE_DIR / "live_manifest.json"),
     }
 
