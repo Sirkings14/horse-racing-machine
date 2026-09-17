@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from src.model.logistic_model import fit_top3_model
+from src.model.order_model import fit_order_model
 from src.model.model_registry import CHALLENGER_DIR, new_candidate_version, record_candidate
 
 BASE_DIR = Path(__file__).resolve().parents[2]
@@ -25,7 +26,21 @@ def main() -> str:
         )
         print(f"Saved challenger Top-{depth} model: {path}")
 
-    record_candidate(version, {"training_races": len({row.get('race_key') for row in rows if row.get('race_key')})})
+    order_model = fit_order_model(rows)
+    order_path = candidate_dir / "order_model.json"
+    order_path.write_text(
+        json.dumps(order_model.to_dict(), indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    print(f"Saved challenger finishing-order model: {order_path}")
+
+    record_candidate(
+        version,
+        {
+            "training_races": len({row.get('race_key') for row in rows if row.get('race_key')}),
+            "models": ["top3", "top4", "top5", "finishing_order"],
+        },
+    )
     print(f"Challenger version ready: {version}")
     return version
 
