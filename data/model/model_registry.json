@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "champion_version": "model-20260917T222433Z-a79f6e73",
+  "champion_promoted_at": "2026-09-17T22:24:57.669615+00:00",
+  "history": [
+    {
+      "version": "model-20260917T222433Z-a79f6e73",
+      "status": "champion",
+      "created_at": "2026-09-17T22:24:34.333564+00:00",
+      "metrics": {
+        "winner_hit_rate_at_1": 0.1459,
+        "winner_hit_rate_at_3": 0.3617,
+        "average_actual_top3_covered_by_predicted_top3": 0.8693,
+        "average_actual_top3_covered_by_predicted_top5": 1.304
+      },
+      "promoted_at": "2026-09-17T22:24:57.669598+00:00"
+    }
+  ],
+  "updated_at": "2026-09-17T22:24:57.669619+00:00"
+}

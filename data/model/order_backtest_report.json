@@ -1,0 +1,12 @@
+{
+  "method": "time_holdout_pairwise_finishing_order",
+  "dataset_races": 334,
+  "training_races": 267,
+  "holdout_races": 67,
+  "metrics": {
+    "pairwise_order_accuracy": 0.3527,
+    "top5_position_accuracy": 0.1538,
+    "exact_top3_order_rate": 0.0149,
+    "exact_top5_order_rate": 0.0149
+  }
+}
