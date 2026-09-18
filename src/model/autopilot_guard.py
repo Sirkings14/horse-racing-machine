@@ -6,6 +6,7 @@ from typing import Any
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 EVALUATION_FILE = BASE_DIR / "data" / "evaluation" / "prediction_evaluations.json"
+DRIFT_FILE = BASE_DIR / "data" / "model" / "feature_drift_report.json"
 ORDER_BACKTEST_FILE = BASE_DIR / "data" / "model" / "order_backtest_report.json"
 
 
@@ -30,6 +31,9 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
             return None
         return round(sum(bool(item.get("metrics", {}).get(metric)) for item in sample) / n, 4)
 
+    drift = _load(DRIFT_FILE, {})
+    drift_severity = drift.get("overall_severity") if isinstance(drift, dict) else None
+
     order_report = _load(ORDER_BACKTEST_FILE, {})
     order_metrics = order_report.get("metrics") if isinstance(order_report, dict) else {}
     pairwise = order_metrics.get("pairwise_order_accuracy")
@@ -41,6 +45,8 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         health = "degraded_winner_accuracy"
     if n >= 20 and pairwise is not None and float(pairwise) < 0.50:
         health = "degraded_order_engine"
+    if drift_severity == "severe":
+        health = "severe_feature_drift"
 
     confidence = "unrated"
     reasons: list[str] = []
@@ -74,12 +80,14 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
             sum(float(item.get("metrics", {}).get("recommended_hit_count", 0)) for item in sample) / n, 3
         ) if n else None,
         "order_walk_forward_pairwise_accuracy": pairwise,
+        "feature_drift_severity": drift_severity,
         "prediction_confidence": confidence,
         "confidence_reasons": reasons,
         "guard_policy": {
             "never_claim_certainty": True,
             "low_confidence_predictions_are_flagged": True,
             "order_engine_below_random_baseline_is_not_promoted": True,
+            "severe_feature_drift_is_flagged": True,
         },
     }
 
