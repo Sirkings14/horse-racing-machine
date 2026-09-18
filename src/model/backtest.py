@@ -38,6 +38,32 @@ def rank_rows(rows: Sequence[Dict[str, Any]], probabilities: Sequence[float]) ->
     )
 
 
+def binary_calibration_metrics(probabilities: Sequence[float], labels: Sequence[int], bins: int = 10) -> Dict[str, Any]:
+    """Measure whether model scores behave like probabilities; ranking is unaffected."""
+    import math
+    if not probabilities:
+        return {"brier_score": None, "log_loss": None, "ece": None, "calibration_bins": []}
+    p = [min(max(float(value), 1e-6), 1.0 - 1e-6) for value in probabilities]
+    y = [int(value) for value in labels]
+    brier = sum((prob - label) ** 2 for prob, label in zip(p, y)) / len(y)
+    log_loss = -sum(label * math.log(prob) + (1 - label) * math.log(1 - prob) for prob, label in zip(p, y)) / len(y)
+    calibration_bins = []
+    ece = 0.0
+    for index in range(bins):
+        lower, upper = index / bins, (index + 1) / bins
+        members = [i for i, prob in enumerate(p) if lower <= prob < upper or (index == bins - 1 and prob <= upper)]
+        if not members:
+            continue
+        mean_probability = sum(p[i] for i in members) / len(members)
+        observed_rate = sum(y[i] for i in members) / len(members)
+        ece += (len(members) / len(p)) * abs(mean_probability - observed_rate)
+        calibration_bins.append({
+            "lower": round(lower, 2), "upper": round(upper, 2), "count": len(members),
+            "mean_probability": round(mean_probability, 6), "observed_rate": round(observed_rate, 6),
+        })
+    return {"brier_score": round(brier, 6), "log_loss": round(log_loss, 6), "ece": round(ece, 6), "calibration_bins": calibration_bins}
+
+
 def evaluate_race(ranked: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
     actual_top3 = {
         int(row["horse_number"])
@@ -74,6 +100,8 @@ def run_backtest(rows: Sequence[Dict[str, Any]], min_train_races: int = 5) -> Di
 
     race_keys = sorted(groups, key=race_sort_key)
     predictions: List[Dict[str, Any]] = []
+    calibration_probabilities: List[float] = []
+    calibration_labels: List[int] = []
 
     for index, race_key in enumerate(race_keys):
         if index < min_train_races:
@@ -91,6 +119,8 @@ def run_backtest(rows: Sequence[Dict[str, Any]], min_train_races: int = 5) -> Di
         probabilities = model.predict_proba(test_rows)
         ranked = rank_rows(test_rows, probabilities)
         evaluation = evaluate_race(ranked)
+        calibration_probabilities.extend(float(row["predicted_probability"]) for row in ranked)
+        calibration_labels.extend(int(row.get("top3", 0)) for row in test_rows)
         evaluation["race_key"] = race_key
         predictions.append(evaluation)
 
@@ -103,6 +133,7 @@ def run_backtest(rows: Sequence[Dict[str, Any]], min_train_races: int = 5) -> Di
     coverage3 = sum(item["top3_coverage_by_top3"] for item in predictions)
     coverage5 = sum(item["top3_coverage_by_top5"] for item in predictions)
 
+    calibration = binary_calibration_metrics(calibration_probabilities, calibration_labels)
     report = {
         "method": "walk_forward_logistic_top3",
         "dataset_races": len(race_keys),
@@ -114,7 +145,11 @@ def run_backtest(rows: Sequence[Dict[str, Any]], min_train_races: int = 5) -> Di
             "winner_hit_rate_at_3": round(winner_hit_at_3 / evaluated, 4),
             "average_actual_top3_covered_by_predicted_top3": round(coverage3 / evaluated, 4),
             "average_actual_top3_covered_by_predicted_top5": round(coverage5 / evaluated, 4),
+            "brier_score_top3": calibration["brier_score"],
+            "log_loss_top3": calibration["log_loss"],
+            "expected_calibration_error_top3": calibration["ece"],
         },
+        "calibration": calibration,
         "race_results": predictions,
     }
 
