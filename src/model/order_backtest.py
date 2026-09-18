@@ -24,6 +24,17 @@ def load_rows() -> List[Dict[str, Any]]:
     return rows
 
 
+def score_predictions(predicted_order, actual_order):
+    pair_correct = pair_total = 0
+    for i in range(len(actual_order)):
+        for j in range(i + 1, len(actual_order)):
+            pair_total += 1
+            pair_correct += int(predicted_order.index(actual_order[i]) < predicted_order.index(actual_order[j]))
+    top_n = min(5, len(actual_order), len(predicted_order))
+    position_hits = sum(predicted_order[i] == actual_order[i] for i in range(top_n))
+    return pair_correct, pair_total, position_hits, top_n, predicted_order[:3] == actual_order[:3], predicted_order[:5] == actual_order[:5]
+
+
 def main() -> Dict[str, Any]:
     rows = load_rows()
     groups: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
@@ -35,58 +46,59 @@ def main() -> Dict[str, Any]:
     if len(race_keys) < 20:
         raise ValueError("Order backtest needs at least 20 verified races.")
 
-    split = max(10, int(len(race_keys) * 0.8))
-    train_keys = race_keys[:split]
-    test_keys = race_keys[split:]
-    train_rows = [row for key in train_keys for row in groups[key]]
-    model = fit_order_model(train_rows)
-
-    pair_correct = 0
-    pair_total = 0
-    position_hits = 0
-    position_total = 0
-    exact_top3 = 0
-    exact_top5 = 0
+    warmup = max(10, int(len(race_keys) * 0.5))
+    totals = {"pair_correct": 0, "pair_total": 0, "position_hits": 0, "position_total": 0, "exact_top3": 0, "exact_top5": 0}
     evaluated = 0
+    per_race = []
 
-    for race_key in test_keys:
-        test_rows = groups[race_key]
+    for index in range(warmup, len(race_keys)):
+        train_keys = race_keys[:index]
+        test_key = race_keys[index]
+        train_rows = [row for key in train_keys for row in groups[key]]
+        test_rows = groups[test_key]
+        model = fit_order_model(train_rows)
         predicted = model.predict_order(test_rows)
         predicted_order = [item["horse_number"] for item in predicted]
         actual_order = [int(row["horse_number"]) for row in sorted(test_rows, key=lambda r: int(r["finish_position"]))]
-
-        for i in range(len(actual_order)):
-            for j in range(i + 1, len(actual_order)):
-                pair_total += 1
-                pair_correct += int(predicted_order.index(actual_order[i]) < predicted_order.index(actual_order[j]))
-
-        top_n = min(5, len(actual_order), len(predicted_order))
-        position_hits += sum(predicted_order[i] == actual_order[i] for i in range(top_n))
-        position_total += top_n
-        exact_top3 += int(predicted_order[:3] == actual_order[:3])
-        exact_top5 += int(predicted_order[:5] == actual_order[:5])
+        pc, pt, ph, ptotal, e3, e5 = score_predictions(predicted_order, actual_order)
+        totals["pair_correct"] += pc
+        totals["pair_total"] += pt
+        totals["position_hits"] += ph
+        totals["position_total"] += ptotal
+        totals["exact_top3"] += int(e3)
+        totals["exact_top5"] += int(e5)
         evaluated += 1
+        per_race.append({
+            "race_key": test_key,
+            "pairwise_accuracy": round(pc / pt, 4) if pt else None,
+            "top5_position_accuracy": round(ph / ptotal, 4) if ptotal else None,
+            "exact_top3": e3,
+            "exact_top5": e5,
+        })
 
+    metrics = {
+        "pairwise_order_accuracy": round(totals["pair_correct"] / totals["pair_total"], 4),
+        "top5_position_accuracy": round(totals["position_hits"] / totals["position_total"], 4),
+        "exact_top3_order_rate": round(totals["exact_top3"] / evaluated, 4),
+        "exact_top5_order_rate": round(totals["exact_top5"] / evaluated, 4),
+    }
     report = {
-        "method": "time_holdout_pairwise_finishing_order",
+        "method": "walk_forward_pairwise_finishing_order",
         "dataset_races": len(race_keys),
-        "training_races": len(train_keys),
-        "holdout_races": len(test_keys),
-        "metrics": {
-            "pairwise_order_accuracy": round(pair_correct / pair_total, 4) if pair_total else None,
-            "top5_position_accuracy": round(position_hits / position_total, 4) if position_total else None,
-            "exact_top3_order_rate": round(exact_top3 / evaluated, 4) if evaluated else None,
-            "exact_top5_order_rate": round(exact_top5 / evaluated, 4) if evaluated else None,
-        },
+        "warmup_races": warmup,
+        "evaluated_races": evaluated,
+        "metrics": metrics,
+        "baseline": {"pairwise_random_accuracy": 0.5},
+        "per_race": per_race[-100:],
     }
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     print("\n" + "=" * 60)
-    print("FINISHING-ORDER HOLDOUT BACKTEST")
+    print("FINISHING-ORDER WALK-FORWARD BACKTEST")
     print("=" * 60)
-    print(f"Holdout races: {report['holdout_races']}")
-    for key, value in report["metrics"].items():
+    print(f"Evaluated races: {evaluated}")
+    for key, value in metrics.items():
         print(f"{key}: {value}")
     print(f"Saved report: {OUTPUT_FILE}")
     return report

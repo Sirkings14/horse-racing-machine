@@ -23,8 +23,8 @@ class OrderModel:
         matrix = build_matrix(rows)
         if len(matrix) == 0:
             return np.empty(0, dtype=float)
-        x = standardize_apply(matrix, np.asarray(self.mean, dtype=float), np.asarray(self.std, dtype=float))
-        return self.intercept + x @ np.asarray(self.coefficients, dtype=float)
+        x = standardize_apply(matrix, np.asarray(self.mean), np.asarray(self.std))
+        return self.intercept + x @ np.asarray(self.coefficients)
 
     def predict_order(self, rows: Sequence[Dict[str, Any]]) -> List[Dict[str, Any]]:
         scores = self.score(rows)
@@ -80,7 +80,7 @@ def fit_order_model(
     learning_rate: float = 0.06,
     l2: float = 1.0,
 ) -> OrderModel:
-    """Fit a Bradley-Terry-style pairwise model from verified finish positions."""
+    """Fit a Bradley-Terry-style pairwise model in a consistent standardized feature space."""
     grouped: Dict[str, List[Dict[str, Any]]] = {}
     for row in rows:
         key = str(row.get("race_key") or "")
@@ -93,9 +93,16 @@ def fit_order_model(
             continue
         grouped.setdefault(key, []).append(row)
 
+    if not grouped:
+        raise ValueError("Order model requires verified finish positions.")
+
+    all_rows = [row for race_rows in grouped.values() for row in race_rows]
+    raw_matrix = build_matrix(all_rows)
+    _, mean, std = standardize_fit(raw_matrix)
+
     pairwise = []
     for race_rows in grouped.values():
-        matrix = build_matrix(race_rows)
+        matrix = standardize_apply(build_matrix(race_rows), mean, std)
         positions = []
         for row in race_rows:
             try:
@@ -106,14 +113,16 @@ def fit_order_model(
             for j in range(i + 1, len(race_rows)):
                 if positions[i] >= 10**9 or positions[j] >= 10**9 or positions[i] == positions[j]:
                     continue
-                pairwise.append(matrix[i] - matrix[j] if positions[i] < positions[j] else matrix[j] - matrix[i])
+                if positions[i] < positions[j]:
+                    pairwise.append(matrix[i] - matrix[j])
+                else:
+                    pairwise.append(matrix[j] - matrix[i])
 
     if not pairwise:
-        raise ValueError("Order model requires verified finish positions with comparable pairs.")
+        raise ValueError("Order model requires comparable verified pairs.")
 
-    x_raw = np.asarray(pairwise, dtype=float)
-    target = np.ones(len(x_raw), dtype=float)
-    x, mean, std = standardize_fit(x_raw)
+    x = np.asarray(pairwise, dtype=float)
+    target = np.ones(len(x), dtype=float)
     coefficients = np.zeros(x.shape[1], dtype=float)
     intercept = 0.0
     sample_count = float(len(target))
@@ -127,6 +136,10 @@ def fit_order_model(
         coefficients -= learning_rate * grad_coefficients
 
     return OrderModel(
-        feature_names=list(FEATURE_NAMES), mean=mean.tolist(), std=std.tolist(),
-        coefficients=coefficients.tolist(), intercept=intercept, l2=l2,
+        feature_names=list(FEATURE_NAMES),
+        mean=mean.tolist(),
+        std=std.tolist(),
+        coefficients=coefficients.tolist(),
+        intercept=intercept,
+        l2=l2,
     )
