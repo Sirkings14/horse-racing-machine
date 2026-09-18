@@ -20,6 +20,7 @@ from src.notifications.telegram import send_latest_prediction
 from src.live.collector import collect_live_programs
 from src.learning.evaluate_predictions import main as evaluate_predictions
 from src.model.autopilot_guard import main as run_autopilot_guard
+from src.model.race_difficulty import main as run_race_difficulty
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 REVIEW_FILE = BASE_DIR / "data" / "dataset" / "dataset_review.json"
@@ -107,7 +108,9 @@ def run_results_cycle():
     run_order_backtest()
     print_step(6, "PROMOTING ONLY A MEASURED CHALLENGER")
     promote_model(candidate_version)
-    print_step(7, "UPDATING AUTOPILOT HEALTH GUARD")
+    print_step(7, "UPDATING RACE DIFFICULTY REPORT")
+    run_race_difficulty()
+    print_step(8, "UPDATING AUTOPILOT HEALTH GUARD")
     run_autopilot_guard()
 
 
@@ -123,7 +126,9 @@ def run_learning_cycle():
     promote_model(candidate_version)
     print_step(14, "VERIFYING STORED PREDICTIONS AGAINST RESULTS")
     evaluate_predictions()
-    print_step(15, "UPDATING AUTOPILOT HEALTH GUARD")
+    print_step(15, "UPDATING RACE DIFFICULTY REPORT")
+    run_race_difficulty()
+    print_step(16, "UPDATING AUTOPILOT HEALTH GUARD")
     run_autopilot_guard()
 
 

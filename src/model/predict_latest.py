@@ -10,6 +10,7 @@ from src.model.logistic_model import LogisticModel
 from src.model.order_model import OrderModel, fit_order_model
 from src.model.race_monitor import build_race_monitor
 from src.model.autopilot_guard import build_autopilot_guard
+from src.model.race_difficulty import classify_race
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATASET_FILE = BASE_DIR / "data" / "dataset" / "training_dataset_clean.json"
@@ -244,7 +245,9 @@ def main():
         "order_engine_top5": [item["horse_number"] for item in order_ranking[:5]],
         "winner_engine_candidate": ranked[0]["horse_number"],
         "order_engine_winner_candidate": order_ranking[0]["horse_number"] if order_ranking else None,
-        "monitoring": monitoring,\n        "autopilot_guard": build_autopilot_guard({"monitoring": monitoring, "ranked_horses": final_order}),\n        "ranked_horses": final_order,
+        "monitoring": monitoring,
+        "difficulty": classify_race(ranked, order_ranking, meta.get("runners_count")),
+        "autopilot_guard": build_autopilot_guard({"monitoring": monitoring, "ranked_horses": final_order}),\n        "ranked_horses": final_order,
         "live_manifest": str(LIVE_DIR / "live_manifest.json"),
     }
 

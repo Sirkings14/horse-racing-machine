@@ -107,6 +107,7 @@ def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, An
             "predicted_finish_order_top5": predicted_order[:5],
             "order_engine_top5": order_top5[:5],
             "monitoring": prediction.get("monitoring") or {},
+            "difficulty": prediction.get("difficulty") or {},
         },
         "metrics": {
             "winner_hit": predicted_winner == result.get("winner"),

@@ -73,7 +73,7 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         "recent_recommended_hit_average": round(
             sum(float(item.get("metrics", {}).get("recommended_hit_count", 0)) for item in sample) / n, 3
         ) if n else None,
-        "order_holdout_pairwise_accuracy": pairwise,
+        "order_walk_forward_pairwise_accuracy": pairwise,
         "prediction_confidence": confidence,
         "confidence_reasons": reasons,
         "guard_policy": {
@@ -93,7 +93,7 @@ def main() -> dict[str, Any]:
     print(f"Health: {report['health']}")
     print(f"Verified predictions: {report['recent_verified_predictions']}")
     print(f"Recent winner hit rate: {report['recent_winner_hit_rate']}")
-    print(f"Order holdout pairwise accuracy: {report['order_holdout_pairwise_accuracy']}")
+    print(f"Order holdout pairwise accuracy: {report['order_walk_forward_pairwise_accuracy']}")
     return report
 
 
