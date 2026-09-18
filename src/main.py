@@ -21,6 +21,7 @@ from src.live.collector import collect_live_programs
 from src.learning.evaluate_predictions import main as evaluate_predictions
 from src.model.autopilot_guard import main as run_autopilot_guard
 from src.model.race_difficulty import main as run_race_difficulty
+from src.model.model_evolution import main as record_model_evolution
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 REVIEW_FILE = BASE_DIR / "data" / "dataset" / "dataset_review.json"
@@ -106,11 +107,13 @@ def run_results_cycle():
     run_backtest()
     print_step(5, "RUNNING FINISHING-ORDER HOLDOUT BACKTEST")
     run_order_backtest()
-    print_step(6, "PROMOTING ONLY A MEASURED CHALLENGER")
+    print_step(6, "RECORDING MODEL EVOLUTION SNAPSHOT")
+    record_model_evolution(candidate_version)
+    print_step(7, "PROMOTING ONLY A MEASURED CHALLENGER")
     promote_model(candidate_version)
-    print_step(7, "UPDATING RACE DIFFICULTY REPORT")
+    print_step(8, "UPDATING RACE DIFFICULTY REPORT")
     run_race_difficulty()
-    print_step(8, "UPDATING AUTOPILOT HEALTH GUARD")
+    print_step(9, "UPDATING AUTOPILOT HEALTH GUARD")
     run_autopilot_guard()
 
 
@@ -122,13 +125,15 @@ def run_learning_cycle():
     run_backtest()
     print_step(12, "RUNNING FINISHING-ORDER HOLDOUT BACKTEST")
     run_order_backtest()
-    print_step(13, "PROMOTING ONLY A MEASURED CHALLENGER")
+    print_step(13, "RECORDING MODEL EVOLUTION SNAPSHOT")
+    record_model_evolution(candidate_version)
+    print_step(14, "PROMOTING ONLY A MEASURED CHALLENGER")
     promote_model(candidate_version)
-    print_step(14, "VERIFYING STORED PREDICTIONS AGAINST RESULTS")
+    print_step(15, "VERIFYING STORED PREDICTIONS AGAINST RESULTS")
     evaluate_predictions()
-    print_step(15, "UPDATING RACE DIFFICULTY REPORT")
+    print_step(16, "UPDATING RACE DIFFICULTY REPORT")
     run_race_difficulty()
-    print_step(16, "UPDATING AUTOPILOT HEALTH GUARD")
+    print_step(17, "UPDATING AUTOPILOT HEALTH GUARD")
     run_autopilot_guard()
 
 

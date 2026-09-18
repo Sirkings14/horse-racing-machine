@@ -114,6 +114,8 @@ def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, An
             "winner_in_top3": result.get("winner") in predicted_top3,
             "winner_in_top5": result.get("winner") in ranked_top5,
             "order_engine_winner_hit": bool(order_top5) and order_top5[0] == result.get("winner"),
+            "strength_engine_winner_hit": bool(ranked_top5) and ranked_top5[0] == result.get("winner"),
+            "fused_engine_winner_hit": predicted_winner == result.get("winner"),
             "actual_top3_covered_by_predicted_top3": len(set(actual_top3) & set(predicted_top3)),
             "actual_top3_covered_by_predicted_top5": len(set(actual_top3) & set(ranked_top5)),
             "recommended_hit_count": len(set(predicted_recommended) & set(result["arrival"])),
