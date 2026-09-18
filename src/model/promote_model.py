@@ -8,6 +8,18 @@ from src.model.model_registry import CHALLENGER_DIR, MODEL_DIR, load_registry, p
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 BACKTEST_FILE = MODEL_DIR / "backtest_report.json"
+ORDER_BACKTEST_FILE = MODEL_DIR / "order_backtest_report.json"
+
+
+def _order_engine_passes() -> bool:
+    """Only replace the production order engine after a genuine holdout signal."""
+    try:
+        report = json.loads(ORDER_BACKTEST_FILE.read_text(encoding="utf-8"))
+        metrics = report.get("metrics") or {}
+        pairwise = float(metrics["pairwise_order_accuracy"])
+        return pairwise > 0.50
+    except (OSError, ValueError, TypeError, KeyError):
+        return False
 
 
 def main(candidate_version: str | None = None) -> bool:
@@ -74,9 +86,11 @@ def main(candidate_version: str | None = None) -> bool:
         shutil.copy2(source, target)
 
     order_source = candidate_dir / "order_model.json"
-    if order_source.exists():
+    if order_source.exists() and _order_engine_passes():
         shutil.copy2(order_source, MODEL_DIR / "order_model.json")
-        print("Promoted finishing-order model with the champion package.")
+        print("Promoted finishing-order model: holdout pairwise accuracy > 0.50.")
+    elif order_source.exists():
+        print("Order engine kept in shadow: holdout pairwise accuracy did not clear 0.50.")
     else:
         print("Warning: candidate has no finishing-order model; retaining existing order model.")
 
