@@ -44,6 +44,7 @@ def main(candidate_version: str | None = None) -> bool:
         return False
 
     metrics = report.get("metrics") or {}
+    evaluated_races = int(report.get("evaluated_races", 0))
     required = (
         "winner_hit_rate_at_1",
         "winner_hit_rate_at_3",
@@ -51,6 +52,10 @@ def main(candidate_version: str | None = None) -> bool:
     )
     if any(key not in metrics for key in required):
         print("Backtest report is missing required promotion metrics.")
+        return False
+    if evaluated_races < 100:
+        print(f"Promotion blocked: only {evaluated_races} evaluated races; minimum is 100.")
+        record_promotion_decision(version, "rejected", "insufficient_backtest_sample", metrics)
         return False
 
     champion_metrics = {}
@@ -70,6 +75,20 @@ def main(candidate_version: str | None = None) -> bool:
             float(champion_metrics.get("average_actual_top3_covered_by_predicted_top3", -1)),
             float(champion_metrics.get("winner_hit_rate_at_1", -1)),
         )
+        calibration_ok = True
+        candidate_brier = metrics.get("brier_score_top3")
+        champion_brier = champion_metrics.get("brier_score_top3")
+        candidate_ece = metrics.get("expected_calibration_error_top3")
+        champion_ece = champion_metrics.get("expected_calibration_error_top3")
+        if candidate_brier is not None and champion_brier is not None and float(candidate_brier) > float(champion_brier) + 0.02:
+            calibration_ok = False
+        if candidate_ece is not None and champion_ece is not None and float(candidate_ece) > float(champion_ece) + 0.02:
+            calibration_ok = False
+
+        if not calibration_ok:
+            print(f"Challenger {version} rejected: calibration materially regressed.")
+            record_promotion_decision(version, "rejected", "calibration_regression", metrics)
+            return False
         if candidate_score < champion_score:
             print(f"Challenger {version} rejected: backtest metrics did not improve on champion.")
             record_promotion_decision(version, "rejected", "candidate_metrics_below_champion", metrics)
