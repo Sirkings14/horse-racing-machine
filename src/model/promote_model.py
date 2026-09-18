@@ -4,7 +4,7 @@ import json
 import shutil
 from pathlib import Path
 
-from src.model.model_registry import CHALLENGER_DIR, MODEL_DIR, load_registry, promote_candidate
+from src.model.model_registry import CHALLENGER_DIR, MODEL_DIR, load_registry, promote_candidate, record_promotion_decision
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 BACKTEST_FILE = MODEL_DIR / "backtest_report.json"
@@ -72,9 +72,11 @@ def main(candidate_version: str | None = None) -> bool:
         )
         if candidate_score < champion_score:
             print(f"Challenger {version} rejected: backtest metrics did not improve on champion.")
+            record_promotion_decision(version, "rejected", "candidate_metrics_below_champion", metrics)
             return False
         if candidate_score == champion_score:
             print(f"Challenger {version} kept in shadow: no measured improvement over champion.")
+            record_promotion_decision(version, "shadow", "candidate_metrics_equal_champion", metrics)
             return False
 
     for depth in (3, 4, 5):
@@ -95,6 +97,7 @@ def main(candidate_version: str | None = None) -> bool:
         print("Warning: candidate has no finishing-order model; retaining existing order model.")
 
     promote_candidate(version, metrics)
+    record_promotion_decision(version, "promoted", "candidate_metrics_exceeded_champion", metrics)
     print(f"Promoted challenger {version} to champion.")
     return True
 
