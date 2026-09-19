@@ -1,0 +1,90 @@
+{
+  "generated_at": "2026-09-19T07:05:43.124052+00:00",
+  "race_key": "2026-09-19|CHANTILLY|4",
+  "status": "measured",
+  "overall_severity": "moderate",
+  "reference_rows": 5280,
+  "current_rows": 16,
+  "severe_feature_count": 1,
+  "moderate_feature_count": 2,
+  "method": "two_sample_kolmogorov_smirnov_on_model_features",
+  "policy": {
+    "drift_is_observational": true,
+    "prediction_not_blocked_by_drift_alone": true,
+    "severe_drift_should_trigger_review": true
+  },
+  "features": {
+    "favorites_score": {
+      "ks_statistic": 0.112311,
+      "severity": "mild",
+      "reference_mean": 0.22786,
+      "current_mean": 0.30625,
+      "reference_std": 0.347238,
+      "current_std": 0.371599
+    },
+    "form_score": {
+      "ks_statistic": 0.157576,
+      "severity": "mild",
+      "reference_mean": 0.123977,
+      "current_mean": 0.25,
+      "reference_std": 0.294856,
+      "current_std": 0.379144
+    },
+    "class_score": {
+      "ks_statistic": 0.133333,
+      "severity": "mild",
+      "reference_mean": 0.143258,
+      "current_mean": 0.25,
+      "reference_std": 0.312426,
+      "current_std": 0.379144
+    },
+    "progress_score": {
+      "ks_statistic": 0.129356,
+      "severity": "mild",
+      "reference_mean": 0.147273,
+      "current_mean": 0.25,
+      "reference_std": 0.315616,
+      "current_std": 0.379144
+    },
+    "regularity_score": {
+      "ks_statistic": 0.132955,
+      "severity": "mild",
+      "reference_mean": 0.143617,
+      "current_mean": 0.25,
+      "reference_std": 0.312809,
+      "current_std": 0.379144
+    },
+    "ranking_average_score": {
+      "ks_statistic": 0.307765,
+      "severity": "moderate",
+      "reference_mean": 0.3592,
+      "current_mean": 0.581771,
+      "reference_std": 0.389793,
+      "current_std": 0.348212
+    },
+    "ranking_presence_score": {
+      "ks_statistic": 0.314962,
+      "severity": "moderate",
+      "reference_mean": 0.204886,
+      "current_mean": 0.3375,
+      "reference_std": 0.257138,
+      "current_std": 0.242061
+    },
+    "distance_score": {
+      "ks_statistic": 0.577083,
+      "severity": "severe",
+      "reference_mean": 0.440396,
+      "current_mean": 0.4,
+      "reference_std": 0.359138,
+      "current_std": 0.0
+    },
+    "field_size_score": {
+      "ks_statistic": 0.145265,
+      "severity": "mild",
+      "reference_mean": 0.79428,
+      "current_mean": 0.8,
+      "reference_std": 0.06705,
+      "current_std": 0.0
+    }
+  }
+}
