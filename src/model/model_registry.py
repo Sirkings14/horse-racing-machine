@@ -52,11 +52,14 @@ def record_candidate(version: str, metrics: dict | None = None) -> None:
 def record_promotion_decision(version: str, decision: str, reason: str, metrics: dict | None = None) -> None:
     payload = load_registry()
     payload.setdefault("promotion_ledger", []).append({
-        "version": version, "decision": decision, "reason": reason,
-        "metrics": metrics or {}, "timestamp": _now(),
+        "version": version,
+        "decision": decision,
+        "reason": reason,
+        "metrics": metrics or {},
+        "timestamp": _now(),
     })
     payload["updated_at"] = _now()
-    save_registry()
+    save_registry(payload)
 
 
 def promote_candidate(version: str, metrics: dict | None = None) -> None:
