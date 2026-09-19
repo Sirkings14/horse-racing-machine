@@ -58,6 +58,9 @@ jobs:
       - name: Syntax check
         run: python -m compileall -q src
 
+      - name: Regression tests
+        run: python -m unittest discover -s tests -v
+
       - name: Decide mode
         id: mode
         shell: bash
