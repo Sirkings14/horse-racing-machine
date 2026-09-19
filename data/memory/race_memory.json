@@ -1,7 +1,7 @@
 {
   "memory_version": 1,
-  "race_count": 334,
-  "horse_row_count": 5280,
+  "race_count": 335,
+  "horse_row_count": 5296,
   "races": [
     {
       "race_key": "2023-05-07|PARISLONGCHAMP|3",
@@ -6778,6 +6778,27 @@
         9,
         7,
         10
+      ]
+    },
+    {
+      "race_key": "2026-09-19|CHANTILLY|4",
+      "winner": 5,
+      "top3": [
+        5,
+        1,
+        12
+      ],
+      "top4": [
+        5,
+        1,
+        12,
+        2
+      ],
+      "top5": [
+        5,
+        1,
+        12,
+        2
       ]
     }
   ]

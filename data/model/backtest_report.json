@@ -1,14 +1,94 @@
 {
   "method": "walk_forward_logistic_top3",
-  "dataset_races": 334,
-  "dataset_rows": 5280,
+  "dataset_races": 335,
+  "dataset_rows": 5296,
   "minimum_training_races": 5,
-  "evaluated_races": 329,
+  "evaluated_races": 330,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1459,
-    "winner_hit_rate_at_3": 0.3617,
-    "average_actual_top3_covered_by_predicted_top3": 0.8693,
-    "average_actual_top3_covered_by_predicted_top5": 1.304
+    "winner_hit_rate_at_1": 0.1455,
+    "winner_hit_rate_at_3": 0.3606,
+    "average_actual_top3_covered_by_predicted_top3": 0.8697,
+    "average_actual_top3_covered_by_predicted_top5": 1.3061,
+    "brier_score_top3": 0.246708,
+    "log_loss_top3": 0.68904,
+    "expected_calibration_error_top3": 0.576593
+  },
+  "calibration": {
+    "brier_score": 0.246708,
+    "log_loss": 0.68904,
+    "ece": 0.576593,
+    "calibration_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "count": 4,
+        "mean_probability": 0.059995,
+        "observed_rate": 0.25
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "count": 1,
+        "mean_probability": 0.198505,
+        "observed_rate": 0.0
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "count": 44,
+        "mean_probability": 0.269992,
+        "observed_rate": 0.136364
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "count": 1214,
+        "mean_probability": 0.363448,
+        "observed_rate": 0.168863
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "count": 2274,
+        "mean_probability": 0.440357,
+        "observed_rate": 0.189534
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "count": 741,
+        "mean_probability": 0.550093,
+        "observed_rate": 0.205128
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "count": 705,
+        "mean_probability": 0.649455,
+        "observed_rate": 0.214184
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "count": 219,
+        "mean_probability": 0.733899,
+        "observed_rate": 0.182648
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "count": 13,
+        "mean_probability": 0.838082,
+        "observed_rate": 0.230769
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "count": 5216,
+        "mean_probability": 0.477947,
+        "observed_rate": 0.189801
+      }
+    ]
   },
   "race_results": [
     {
@@ -8564,6 +8644,32 @@
         4
       ],
       "race_key": "2026-09-16|FEURS|1"
+    },
+    {
+      "winner": 5,
+      "predicted_top1": 7,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        1,
+        5,
+        12
+      ],
+      "predicted_top3": [
+        7,
+        12,
+        13
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 2,
+      "model_ranking": [
+        7,
+        13,
+        12,
+        5,
+        2
+      ],
+      "race_key": "2026-09-19|CHANTILLY|4"
     }
   ]
 }

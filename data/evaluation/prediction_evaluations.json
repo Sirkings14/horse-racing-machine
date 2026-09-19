@@ -111,5 +111,161 @@
       "recommended_hit_count": 2
     },
     "status": "result_verified"
+  },
+  {
+    "race_key": "2026-09-19|CHANTILLY|4",
+    "prediction_id": "2026-09-19|CHANTILLY|4|2026-09-19T18:41:41.349155+00:00",
+    "model_version": "model-20260917T222433Z-a79f6e73",
+    "predicted_at": "2026-09-19T18:41:41.349160+00:00",
+    "verified_at": "2026-09-19T21:39:49.135729+00:00",
+    "result": {
+      "race_key": "2026-09-19|CHANTILLY|4",
+      "date": "2026-09-19",
+      "track": "CHANTILLY",
+      "race_number": 4,
+      "arrival": [
+        5,
+        1,
+        12,
+        2,
+        50,
+        53,
+        13,
+        300,
+        922
+      ],
+      "winner": 5,
+      "second": 1,
+      "third": 12
+    },
+    "prediction": {
+      "recommended_numbers": [
+        7,
+        1,
+        13,
+        2,
+        12
+      ],
+      "top3_numbers": [
+        7,
+        1,
+        13
+      ],
+      "ranked_top5": [
+        7,
+        1,
+        13,
+        2,
+        12
+      ],
+      "predicted_finish_order_top5": [
+        7,
+        1,
+        13,
+        2,
+        12
+      ],
+      "order_engine_top5": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "monitoring": {
+        "status": "monitoring_complete",
+        "strength_engine_top5": [
+          7,
+          13,
+          12,
+          5,
+          2
+        ],
+        "order_engine_top5": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "strength_engine_winner_candidate": 7,
+        "order_engine_winner_candidate": 1,
+        "common_top3": [],
+        "common_top5": [
+          2,
+          5
+        ],
+        "agreement": "meaningful_disagreement",
+        "agreement_score_top5": 0.4,
+        "warning": "Independent engines disagree; treat exact order as lower-confidence."
+      },
+      "difficulty": {
+        "bucket": "medium",
+        "difficulty_score": 46.96,
+        "field_size": 16,
+        "top1_top2_margin": 0.060075,
+        "top1_top3_spread": 0.084232,
+        "engine_top5_overlap": 0.4,
+        "signals": [
+          "large_field",
+          "engine_disagreement"
+        ]
+      }
+    },
+    "metrics": {
+      "winner_hit": false,
+      "winner_in_top3": false,
+      "winner_in_top5": false,
+      "order_engine_winner_hit": false,
+      "strength_engine_winner_hit": false,
+      "fused_engine_winner_hit": false,
+      "actual_top3_covered_by_predicted_top3": 1,
+      "actual_top3_covered_by_predicted_top5": 2,
+      "recommended_hit_count": 4,
+      "exact_top3_order": false,
+      "exact_top5_order": false,
+      "top5_position_hits": 2,
+      "engine_attribution": {
+        "strength": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 3,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 2
+        },
+        "order": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": true,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 3,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "fused": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 3,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 2
+        }
+      }
+    },
+    "status": "result_verified",
+    "result_validation": {
+      "accepted_for_learning": true,
+      "minimum_positions_required": 3,
+      "arrival_positions_available": 9
+    }
   }
 ]

@@ -1,0 +1,26 @@
+{
+  "method": "transparent_pre_race_difficulty_classifier",
+  "higher_score_means_more_difficult": true,
+  "bucket_thresholds": {
+    "low": "<40",
+    "medium": "40-64.99",
+    "high": ">=65"
+  },
+  "total_verified_predictions": 3,
+  "buckets": {
+    "low": {
+      "verified_races": 0
+    },
+    "medium": {
+      "verified_races": 1,
+      "winner_hit_rate": 0,
+      "winner_in_top3_rate": 0,
+      "exact_top3_order_rate": 0,
+      "exact_top5_order_rate": 0,
+      "average_recommended_hit_count": 4.0
+    },
+    "high": {
+      "verified_races": 0
+    }
+  }
+}
