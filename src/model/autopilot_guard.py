@@ -31,6 +31,49 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
             return None
         return round(sum(bool(item.get("metrics", {}).get(metric)) for item in sample) / n, 4)
 
+    def engine_rate(engine: str, metric: str) -> float | None:
+        if not n:
+            return None
+        hits = 0
+        counted = 0
+        for item in sample:
+            metrics = item.get("metrics", {})
+            attribution = metrics.get("engine_attribution", {})
+            engine_metrics = attribution.get(engine)
+            if isinstance(engine_metrics, dict) and metric in engine_metrics:
+                counted += 1
+                hits += bool(engine_metrics.get(metric))
+        return round(hits / counted, 4) if counted else None
+
+    def engine_average(engine: str, metric: str) -> float | None:
+        values: list[float] = []
+        for item in sample:
+            engine_metrics = (
+                item.get("metrics", {})
+                .get("engine_attribution", {})
+                .get(engine, {})
+            )
+            if metric in engine_metrics:
+                try:
+                    values.append(float(engine_metrics[metric]))
+                except (TypeError, ValueError):
+                    pass
+        return round(sum(values) / len(values), 3) if values else None
+
+    engine_metrics = {}
+    for engine in ("strength", "order", "fused"):
+        engine_metrics[engine] = {
+            "winner_hit_rate": engine_rate(engine, "winner_hit"),
+            "winner_in_top3_rate": engine_rate(engine, "winner_in_top3"),
+            "winner_in_top5_rate": engine_rate(engine, "winner_in_top5"),
+            "avg_actual_top3_covered_by_top3": engine_average(engine, "actual_top3_covered_by_top3"),
+            "avg_actual_top3_covered_by_top5": engine_average(engine, "actual_top3_covered_by_top5"),
+            "avg_actual_top5_covered_by_top5": engine_average(engine, "actual_top5_covered_by_top5"),
+            "exact_top3_order_rate": engine_rate(engine, "exact_top3_order"),
+            "exact_top5_order_rate": engine_rate(engine, "exact_top5_order"),
+            "avg_top5_position_hits": engine_average(engine, "top5_position_hits"),
+        }
+
     drift = _load(DRIFT_FILE, {})
     drift_severity = drift.get("overall_severity") if isinstance(drift, dict) else None
 
@@ -79,6 +122,7 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         "recent_recommended_hit_average": round(
             sum(float(item.get("metrics", {}).get("recommended_hit_count", 0)) for item in sample) / n, 3
         ) if n else None,
+        "engine_attribution": engine_metrics,
         "order_walk_forward_pairwise_accuracy": pairwise,
         "feature_drift_severity": drift_severity,
         "prediction_confidence": confidence,
@@ -102,6 +146,7 @@ def main() -> dict[str, Any]:
     print(f"Verified predictions: {report['recent_verified_predictions']}")
     print(f"Recent winner hit rate: {report['recent_winner_hit_rate']}")
     print(f"Order holdout pairwise accuracy: {report['order_walk_forward_pairwise_accuracy']}")
+    print(f"Engine attribution: {report['engine_attribution']}")
     return report
 
 
