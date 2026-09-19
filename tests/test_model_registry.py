@@ -31,5 +31,8 @@ class ModelRegistryPersistenceTests(unittest.TestCase):
                 self.assertIn("updated_at", payload)
 
 
+
+# CI trigger marker: registry persistence is covered by the workflow regression suite.
+
 if __name__ == "__main__":
     unittest.main()
