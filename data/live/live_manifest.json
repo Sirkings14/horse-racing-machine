@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-19T13:07:23.806273+00:00",
+  "updated_at": "2026-09-19T15:59:07.708123+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -153,12 +153,12 @@
       "structured_file": "structured/2026-09-19_CHANTILLY_4.json",
       "status": "validated",
       "prediction_status": "predicted",
-      "discovered_at": "2026-09-19T13:07:02.283431+00:00",
+      "discovered_at": "2026-09-19T15:59:03.983953+00:00",
       "result_status": "pending",
       "created_at": "2026-09-17T17:11:03.379971+00:00",
-      "updated_at": "2026-09-19T13:07:23.806271+00:00",
+      "updated_at": "2026-09-19T15:59:07.708121+00:00",
       "prediction_file": "data/predictions/2026-09-19_CHANTILLY_4.json",
-      "predicted_at": "2026-09-19T13:07:23.806266+00:00"
+      "predicted_at": "2026-09-19T15:59:07.708114+00:00"
     },
     {
       "race_key": "2026-09-20|PARIS|4",
@@ -175,10 +175,30 @@
       "structured_file": "structured/2026-09-20_PARIS_4.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-09-19T13:07:02.104831+00:00",
+      "discovered_at": "2026-09-19T15:59:03.794391+00:00",
       "result_status": "pending",
       "created_at": "2026-09-19T07:05:26.182140+00:00",
-      "updated_at": "2026-09-19T13:07:02.104927+00:00"
+      "updated_at": "2026-09-19T15:59:03.794490+00:00"
+    },
+    {
+      "race_key": "2026-09-21|LA CAPELLE|1",
+      "date": "2026-09-21",
+      "track": "LA CAPELLE",
+      "race_number": 1,
+      "race_name": "PRIX COM DE COM THIERACHE DU CENTRE",
+      "race_type": "ATTELE",
+      "distance": 2750,
+      "runners_count": 16,
+      "horse_count": 16,
+      "source_url": "https://lonab.bf/sites/default/files/2026-09/JH_PMUB_DU_21-09-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_21-09-2026_e5baa789a1.pdf",
+      "structured_file": "structured/2026-09-21_LA CAPELLE_1.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-09-19T15:59:03.574144+00:00",
+      "result_status": "pending",
+      "created_at": "2026-09-19T15:58:57.006715+00:00",
+      "updated_at": "2026-09-19T15:59:03.574247+00:00"
     }
   ]
 }
