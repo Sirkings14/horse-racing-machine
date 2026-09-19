@@ -78,20 +78,43 @@ def load_existing() -> dict[str, dict[str, Any]]:
     return {canonical_key(str(item.get("race_key"))): item for item in payload if isinstance(item, dict) and item.get("race_key")}
 
 
+def _engine_metrics(predicted: list[int], actual_top3: list[int], actual_top5: list[int]) -> dict[str, Any]:
+    top3 = predicted[:3]
+    top5 = predicted[:5]
+    return {
+        "winner_hit": bool(predicted) and predicted[0] == actual_top5[0],
+        "winner_in_top3": actual_top5[0] in top3,
+        "winner_in_top5": actual_top5[0] in top5,
+        "actual_top3_covered_by_top3": len(set(actual_top3) & set(top3)),
+        "actual_top3_covered_by_top5": len(set(actual_top3) & set(top5)),
+        "actual_top5_covered_by_top5": len(set(actual_top5) & set(top5)),
+        "exact_top3_order": top3 == actual_top3,
+        "exact_top5_order": top5 == actual_top5,
+        "top5_position_hits": sum(
+            1 for position, horse in enumerate(top5)
+            if position < len(actual_top5) and horse == actual_top5[position]
+        ),
+    }
+
+
 def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, Any]:
     actual_top3 = result["arrival"][:3]
+    actual_top5 = result["arrival"][:5]
     predicted_top3 = [int(x) for x in prediction.get("top3_numbers") or []]
     predicted_recommended = [int(x) for x in prediction.get("recommended_numbers") or []]
     predicted_order = [int(x) for x in prediction.get("predicted_finish_order") or []]
     order_top5 = [int(x) for x in prediction.get("order_engine_top5") or []]
-    ranked_top5 = [int(x.get("horse_number")) for x in (prediction.get("ranked_horses") or [])[:5] if x.get("horse_number") is not None]
+    ranked_top5 = [
+        int(x.get("horse_number"))
+        for x in (prediction.get("ranked_horses") or [])[:5]
+        if x.get("horse_number") is not None
+    ]
+    fused_top5 = predicted_order[:5] if predicted_order else predicted_top3[:5]
     predicted_winner = predicted_order[0] if predicted_order else (predicted_top3[0] if predicted_top3 else None)
 
-    actual_top5 = result["arrival"][:5]
-    position_hits_top5 = sum(
-        1 for position, horse in enumerate(predicted_order[:5])
-        if position < len(actual_top5) and horse == actual_top5[position]
-    )
+    strength_metrics = _engine_metrics(ranked_top5, actual_top3, actual_top5)
+    order_metrics = _engine_metrics(order_top5, actual_top3, actual_top5)
+    fused_metrics = _engine_metrics(fused_top5, actual_top3, actual_top5)
 
     return {
         "race_key": prediction.get("race_key"),
@@ -113,15 +136,20 @@ def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, An
             "winner_hit": predicted_winner == result.get("winner"),
             "winner_in_top3": result.get("winner") in predicted_top3,
             "winner_in_top5": result.get("winner") in ranked_top5,
-            "order_engine_winner_hit": bool(order_top5) and order_top5[0] == result.get("winner"),
-            "strength_engine_winner_hit": bool(ranked_top5) and ranked_top5[0] == result.get("winner"),
-            "fused_engine_winner_hit": predicted_winner == result.get("winner"),
+            "order_engine_winner_hit": order_metrics["winner_hit"],
+            "strength_engine_winner_hit": strength_metrics["winner_hit"],
+            "fused_engine_winner_hit": fused_metrics["winner_hit"],
             "actual_top3_covered_by_predicted_top3": len(set(actual_top3) & set(predicted_top3)),
             "actual_top3_covered_by_predicted_top5": len(set(actual_top3) & set(ranked_top5)),
             "recommended_hit_count": len(set(predicted_recommended) & set(result["arrival"])),
-            "exact_top3_order": predicted_order[:3] == actual_top3,
-            "exact_top5_order": predicted_order[:5] == actual_top5,
-            "top5_position_hits": position_hits_top5,
+            "exact_top3_order": fused_metrics["exact_top3_order"],
+            "exact_top5_order": fused_metrics["exact_top5_order"],
+            "top5_position_hits": fused_metrics["top5_position_hits"],
+            "engine_attribution": {
+                "strength": strength_metrics,
+                "order": order_metrics,
+                "fused": fused_metrics,
+            },
         },
         "status": "result_verified",
     }
