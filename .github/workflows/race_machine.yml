@@ -50,6 +50,17 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
+      # A queued push-triggered run can start from an older SHA after a
+      # previous machine run has already written data to main. Refresh to the
+      # current main tip before computing so the run never builds a stale data
+      # commit that conflicts with newer machine output.
+      - name: Sync to latest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
