@@ -56,13 +56,21 @@ def result_records() -> dict[str, dict[str, Any]]:
                     arrival.append(int(value))
                 except (TypeError, ValueError):
                     pass
-            if arrival:
-                records[key] = {
-                    "race_key": key, "date": race_date, "track": track, "race_number": number,
-                    "arrival": arrival, "winner": arrival[0],
-                    "second": arrival[1] if len(arrival) > 1 else None,
-                    "third": arrival[2] if len(arrival) > 2 else None,
-                }
+            # Learning truth requires a verified top-3. A result with only
+            # one or two arrival positions is retained as unusable evidence,
+            # but must never be allowed to train/evaluate a prediction.
+            if len(arrival) < 3 or len(set(arrival)) != len(arrival):
+                print(
+                    f"Skipping incomplete/ambiguous result {key}: "
+                    f"{len(arrival)} unique arrival position(s)."
+                )
+                continue
+            records[key] = {
+                "race_key": key, "date": race_date, "track": track, "race_number": number,
+                "arrival": arrival, "winner": arrival[0],
+                "second": arrival[1],
+                "third": arrival[2],
+            }
     return records
 
 
@@ -152,6 +160,11 @@ def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, An
             },
         },
         "status": "result_verified",
+        "result_validation": {
+            "accepted_for_learning": True,
+            "minimum_positions_required": 3,
+            "arrival_positions_available": len(result["arrival"]),
+        },
     }
 
 
