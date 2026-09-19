@@ -1,6 +1,10 @@
 name: Autonomous Horse Racing Machine
 
 on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "data/**"
   workflow_dispatch:
     inputs:
       mode:
