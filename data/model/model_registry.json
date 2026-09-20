@@ -70,9 +70,23 @@
           "finishing_order"
         ]
       }
+    },
+    {
+      "version": "model-20260920T232819Z-aa3c358a",
+      "status": "candidate",
+      "created_at": "2026-09-20T23:28:19.676142+00:00",
+      "metrics": {
+        "training_races": 335,
+        "models": [
+          "top3",
+          "top4",
+          "top5",
+          "finishing_order"
+        ]
+      }
     }
   ],
-  "updated_at": "2026-09-20T21:48:28.646971+00:00",
+  "updated_at": "2026-09-20T23:28:46.696031+00:00",
   "promotion_ledger": [
     {
       "version": "model-20260919T213949Z-ed5493bb",
@@ -118,6 +132,21 @@
         "expected_calibration_error_top3": 0.576593
       },
       "timestamp": "2026-09-20T21:48:28.646964+00:00"
+    },
+    {
+      "version": "model-20260920T232819Z-aa3c358a",
+      "decision": "rejected",
+      "reason": "candidate_metrics_below_champion",
+      "metrics": {
+        "winner_hit_rate_at_1": 0.1455,
+        "winner_hit_rate_at_3": 0.3606,
+        "average_actual_top3_covered_by_predicted_top3": 0.8697,
+        "average_actual_top3_covered_by_predicted_top5": 1.3061,
+        "brier_score_top3": 0.246708,
+        "log_loss_top3": 0.68904,
+        "expected_calibration_error_top3": 0.576593
+      },
+      "timestamp": "2026-09-20T23:28:46.696024+00:00"
     }
   ]
 }
