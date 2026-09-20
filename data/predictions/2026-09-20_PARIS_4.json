@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-09-20|PARIS|4|2026-09-20T13:34:48.920490+00:00",
-  "generated_at": "2026-09-20T13:34:48.920497+00:00",
+  "prediction_id": "2026-09-20|PARIS|4|2026-09-20T16:20:26.802487+00:00",
+  "generated_at": "2026-09-20T16:20:26.802494+00:00",
   "model_version": "model-20260917T222433Z-a79f6e73",
   "model_status": "registered_champion",
   "order_engine_status": "production_order_model",
@@ -321,7 +321,7 @@
     }
   ],
   "feature_drift": {
-    "generated_at": "2026-09-20T13:34:48.920161+00:00",
+    "generated_at": "2026-09-20T16:20:26.802184+00:00",
     "race_key": "2026-09-20|PARIS|4",
     "status": "measured",
     "overall_severity": "severe",
