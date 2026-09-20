@@ -1,5 +1,5 @@
 {
-  "health": "insufficient_history",
+  "health": "severe_feature_drift",
   "recent_verified_predictions": 3,
   "recent_winner_hit_rate": 0.0,
   "recent_winner_in_top3_rate": 0.3333,
@@ -43,7 +43,7 @@
     }
   },
   "order_walk_forward_pairwise_accuracy": 0.5874,
-  "feature_drift_severity": "moderate",
+  "feature_drift_severity": "severe",
   "prediction_confidence": "unrated",
   "confidence_reasons": [],
   "guard_policy": {
