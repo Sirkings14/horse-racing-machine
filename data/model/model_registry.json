@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "champion_version": "model-20260917T222433Z-a79f6e73",
-  "champion_promoted_at": "2026-09-17T22:24:57.669615+00:00",
+  "champion_version": "model-20260921T224640Z-dd03225d",
+  "champion_promoted_at": "2026-09-21T22:47:03.205950+00:00",
   "history": [
     {
       "version": "model-20260917T222433Z-a79f6e73",
-      "status": "champion",
+      "status": "retired",
       "created_at": "2026-09-17T22:24:34.333564+00:00",
       "metrics": {
         "winner_hit_rate_at_1": 0.1459,
@@ -84,9 +84,24 @@
           "finishing_order"
         ]
       }
+    },
+    {
+      "version": "model-20260921T224640Z-dd03225d",
+      "status": "champion",
+      "created_at": "2026-09-21T22:46:40.816630+00:00",
+      "metrics": {
+        "winner_hit_rate_at_1": 0.145,
+        "winner_hit_rate_at_3": 0.3625,
+        "average_actual_top3_covered_by_predicted_top3": 0.8731,
+        "average_actual_top3_covered_by_predicted_top5": 1.3082,
+        "brier_score_top3": 0.150688,
+        "log_loss_top3": 0.476585,
+        "expected_calibration_error_top3": 0.021105
+      },
+      "promoted_at": "2026-09-21T22:47:03.205928+00:00"
     }
   ],
-  "updated_at": "2026-09-20T23:28:46.696031+00:00",
+  "updated_at": "2026-09-21T22:47:03.206263+00:00",
   "promotion_ledger": [
     {
       "version": "model-20260919T213949Z-ed5493bb",
@@ -147,6 +162,21 @@
         "expected_calibration_error_top3": 0.576593
       },
       "timestamp": "2026-09-20T23:28:46.696024+00:00"
+    },
+    {
+      "version": "model-20260921T224640Z-dd03225d",
+      "decision": "promoted",
+      "reason": "candidate_metrics_exceeded_champion",
+      "metrics": {
+        "winner_hit_rate_at_1": 0.145,
+        "winner_hit_rate_at_3": 0.3625,
+        "average_actual_top3_covered_by_predicted_top3": 0.8731,
+        "average_actual_top3_covered_by_predicted_top5": 1.3082,
+        "brier_score_top3": 0.150688,
+        "log_loss_top3": 0.476585,
+        "expected_calibration_error_top3": 0.021105
+      },
+      "timestamp": "2026-09-21T22:47:03.206245+00:00"
     }
   ]
 }

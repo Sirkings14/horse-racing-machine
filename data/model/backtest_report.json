@@ -1,92 +1,99 @@
 {
   "method": "walk_forward_logistic_top3",
-  "dataset_races": 335,
-  "dataset_rows": 5296,
+  "dataset_races": 336,
+  "dataset_rows": 5312,
   "minimum_training_races": 5,
-  "evaluated_races": 330,
+  "evaluated_races": 331,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1455,
-    "winner_hit_rate_at_3": 0.3606,
-    "average_actual_top3_covered_by_predicted_top3": 0.8697,
-    "average_actual_top3_covered_by_predicted_top5": 1.3061,
-    "brier_score_top3": 0.246708,
-    "log_loss_top3": 0.68904,
-    "expected_calibration_error_top3": 0.576593
+    "winner_hit_rate_at_1": 0.145,
+    "winner_hit_rate_at_3": 0.3625,
+    "average_actual_top3_covered_by_predicted_top3": 0.8731,
+    "average_actual_top3_covered_by_predicted_top5": 1.3082,
+    "brier_score_top3": 0.150688,
+    "log_loss_top3": 0.476585,
+    "expected_calibration_error_top3": 0.021105
+  },
+  "baselines": {
+    "favorites": {
+      "winner_hit_rate_at_1": 0.1692,
+      "winner_hit_rate_at_3": 0.3746,
+      "average_actual_top3_covered_by_predicted_top3": 0.8792,
+      "average_actual_top3_covered_by_predicted_top5": 1.3263
+    },
+    "form": {
+      "winner_hit_rate_at_1": 0.1148,
+      "winner_hit_rate_at_3": 0.3082,
+      "average_actual_top3_covered_by_predicted_top3": 0.7644,
+      "average_actual_top3_covered_by_predicted_top5": 1.2205
+    }
   },
   "calibration": {
-    "brier_score": 0.246708,
-    "log_loss": 0.68904,
-    "ece": 0.576593,
+    "brier_score": 0.150688,
+    "log_loss": 0.476585,
+    "ece": 0.021105,
     "calibration_bins": [
       {
         "lower": 0.0,
         "upper": 0.1,
-        "count": 4,
-        "mean_probability": 0.059995,
-        "observed_rate": 0.25
+        "count": 114,
+        "mean_probability": 0.086522,
+        "observed_rate": 0.131579
       },
       {
         "lower": 0.1,
         "upper": 0.2,
-        "count": 1,
-        "mean_probability": 0.198505,
-        "observed_rate": 0.0
+        "count": 3563,
+        "mean_probability": 0.145082,
+        "observed_rate": 0.159136
       },
       {
         "lower": 0.2,
         "upper": 0.3,
-        "count": 44,
-        "mean_probability": 0.269992,
-        "observed_rate": 0.136364
+        "count": 947,
+        "mean_probability": 0.246674,
+        "observed_rate": 0.222809
       },
       {
         "lower": 0.3,
         "upper": 0.4,
-        "count": 1214,
-        "mean_probability": 0.363448,
-        "observed_rate": 0.168863
+        "count": 516,
+        "mean_probability": 0.338563,
+        "observed_rate": 0.327519
       },
       {
         "lower": 0.4,
         "upper": 0.5,
-        "count": 2274,
-        "mean_probability": 0.440357,
-        "observed_rate": 0.189534
+        "count": 81,
+        "mean_probability": 0.433073,
+        "observed_rate": 0.320988
       },
       {
         "lower": 0.5,
         "upper": 0.6,
-        "count": 741,
-        "mean_probability": 0.550093,
-        "observed_rate": 0.205128
+        "count": 8,
+        "mean_probability": 0.547534,
+        "observed_rate": 0.5
       },
       {
         "lower": 0.6,
         "upper": 0.7,
-        "count": 705,
-        "mean_probability": 0.649455,
-        "observed_rate": 0.214184
-      },
-      {
-        "lower": 0.7,
-        "upper": 0.8,
-        "count": 219,
-        "mean_probability": 0.733899,
-        "observed_rate": 0.182648
+        "count": 2,
+        "mean_probability": 0.634555,
+        "observed_rate": 0.5
       },
       {
         "lower": 0.8,
         "upper": 0.9,
-        "count": 13,
-        "mean_probability": 0.838082,
-        "observed_rate": 0.230769
+        "count": 1,
+        "mean_probability": 0.82341,
+        "observed_rate": 0.0
       },
       {
         "lower": 0.9,
         "upper": 1.0,
-        "count": 5216,
-        "mean_probability": 0.477947,
-        "observed_rate": 0.189801
+        "count": 5232,
+        "mean_probability": 0.186667,
+        "observed_rate": 0.189794
       }
     ]
   },
@@ -115,6 +122,20 @@
         13,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-06-15|PARISLONGCHAMP|2"
     },
     {
@@ -141,6 +162,20 @@
         10,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-06-18|CHANTILLY|5"
     },
     {
@@ -167,6 +202,20 @@
         4,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-06-20|NANTES|2"
     },
     {
@@ -193,6 +242,20 @@
         13,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-07-02|DEAUVILLE|4"
     },
     {
@@ -219,6 +282,20 @@
         10,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-07-03|CLAIREFONTAINE|4"
     },
     {
@@ -245,6 +322,20 @@
         15,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-07-04|VICHY|8"
     },
     {
@@ -271,6 +362,20 @@
         5,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-07-06|PARISLONGCHAMP|2"
     },
     {
@@ -297,6 +402,20 @@
         2,
         13
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-07-20|VICHY|8"
     },
     {
@@ -323,6 +442,20 @@
         3,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-07-24|COMPIEGNE|8"
     },
     {
@@ -349,6 +482,20 @@
         6,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-07-25|DIEPPE|8"
     },
     {
@@ -375,6 +522,20 @@
         5,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-07-27|CLAIREFONTAINE|4"
     },
     {
@@ -401,6 +562,20 @@
         12,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-07-31|DIEPPE|4"
     },
     {
@@ -427,6 +602,20 @@
         10,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-08-01|DEAUVILLE|8"
     },
     {
@@ -453,6 +642,20 @@
         1,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-08-12|DEAUVILLE|3"
     },
     {
@@ -479,6 +682,20 @@
         12,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-08-13|DEAUVILLE|3"
     },
     {
@@ -505,6 +722,20 @@
         7,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-08-14|CLAIREFONTAINE|8"
     },
     {
@@ -531,6 +762,20 @@
         13,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-08-17|DEAUVILLE|4"
     },
     {
@@ -557,6 +802,20 @@
         8,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-08-19|DEAUVILLE|3"
     },
     {
@@ -583,6 +842,20 @@
         2,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2023-08-20|DEAUVILLE|3"
     },
     {
@@ -609,6 +882,20 @@
         6,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2023-08-21|VICHY|1"
     },
     {
@@ -635,6 +922,20 @@
         3,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-08-22|DEAUVILLE|8"
     },
     {
@@ -661,6 +962,20 @@
         16,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-08-27|DEAUVILLE|3"
     },
     {
@@ -687,6 +1002,20 @@
         8,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-08-30|COMPIEGNE|8"
     },
     {
@@ -713,6 +1042,20 @@
         4,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2023-09-04|CRAON|1"
     },
     {
@@ -739,6 +1082,20 @@
         5,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-09-06|LA CAPELLE|1"
     },
     {
@@ -765,6 +1122,20 @@
         6,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-09-07|PARISLONGCHAMP|5"
     },
     {
@@ -791,6 +1162,20 @@
         13,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-09-10|PARISLONGCHAMP|4"
     },
     {
@@ -817,6 +1202,20 @@
         12,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-09-12|AUTEUIL|1"
     },
     {
@@ -843,6 +1242,20 @@
         15,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-09-14|FONTAINEBLEAU|5"
     },
     {
@@ -869,6 +1282,20 @@
         3,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-09-16|CHANTILLY|3"
     },
     {
@@ -895,6 +1322,20 @@
         9,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2023-09-20|FEURS|1"
     },
     {
@@ -921,6 +1362,20 @@
         1,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2023-09-25|LA CAPELLE|4"
     },
     {
@@ -947,6 +1402,20 @@
         11,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-09-28|CHANTILLY|1"
     },
     {
@@ -973,6 +1442,20 @@
         9,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-09-30|PARISLONGCHAMP|4"
     },
     {
@@ -999,6 +1482,20 @@
         12,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-10-02|ENGHIEN|1"
     },
     {
@@ -1025,6 +1522,20 @@
         1,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-10-12|CHANTILLY|1"
     },
     {
@@ -1051,6 +1562,20 @@
         7,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-10-19|DEAUVILLE|1"
     },
     {
@@ -1077,6 +1602,20 @@
         9,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-10-26|CHANTILLY|1"
     },
     {
@@ -1103,6 +1642,20 @@
         7,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-10-28|COMPIEGNE|3"
     },
     {
@@ -1129,6 +1682,20 @@
         11,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-11-01|LAVAL|3"
     },
     {
@@ -1155,6 +1722,20 @@
         6,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-11-05|DEAUVILLE|4"
     },
     {
@@ -1181,6 +1762,20 @@
         16,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-11-11|TOULOUSE|3"
     },
     {
@@ -1207,6 +1802,20 @@
         8,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-11-12|AUTEUIL|5"
     },
     {
@@ -1233,6 +1842,20 @@
         7,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-11-14|CHANTILLY|4"
     },
     {
@@ -1259,6 +1882,20 @@
         4,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-11-16|DEAUVILLE|1"
     },
     {
@@ -1285,6 +1922,20 @@
         9,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2023-11-21|CHANTILLY|4"
     },
     {
@@ -1311,6 +1962,20 @@
         1,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-11-29|DEAUVILLE|1"
     },
     {
@@ -1337,6 +2002,20 @@
         9,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-12-05|DEAUVILLE|1"
     },
     {
@@ -1363,6 +2042,20 @@
         5,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-12-12|CHANTILLY|4"
     },
     {
@@ -1389,6 +2082,20 @@
         14,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2023-12-21|DEAUVILLE|1"
     },
     {
@@ -1415,6 +2122,20 @@
         8,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-12-26|DEAUVILLE|1"
     },
     {
@@ -1441,6 +2162,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2023-12-31|PARIS-VINCENNES|6"
     },
     {
@@ -1467,6 +2202,20 @@
         5,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-01-02|PAU|3"
     },
     {
@@ -1493,6 +2242,20 @@
         10,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2024-01-10|PAU|2"
     },
     {
@@ -1519,6 +2282,20 @@
         10,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-01-14|PARIS-VINCENNES|4"
     },
     {
@@ -1545,6 +2322,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-01-22|PAU|2"
     },
     {
@@ -1571,6 +2362,20 @@
         4,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-01-28|PARIS-VINCENNES|7"
     },
     {
@@ -1597,6 +2402,20 @@
         2,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-01-31|PAU|3"
     },
     {
@@ -1623,6 +2442,20 @@
         6,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 3,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-02-03|DEAUVILLE|3"
     },
     {
@@ -1649,6 +2482,20 @@
         10,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-02-14|PARIS-VINCENNES NOCTURNE|8"
     },
     {
@@ -1675,6 +2522,20 @@
         10,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-02-24|AUTEUIL|4"
     },
     {
@@ -1701,6 +2562,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-03-03|AUTEUIL|3"
     },
     {
@@ -1727,6 +2602,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-03-04|CAEN|1"
     },
     {
@@ -1753,6 +2642,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-03-05|CHANTILLY|1"
     },
     {
@@ -1779,6 +2682,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-03-13|LAVAL|1"
     },
     {
@@ -1805,6 +2722,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-03-17|AUTEUIL|4"
     },
     {
@@ -1831,6 +2762,20 @@
         13,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-03-18|CHANTILLY|1"
     },
     {
@@ -1857,6 +2802,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-03-19|COMPIEGNE|1"
     },
     {
@@ -1883,6 +2842,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-03-20|LISIEUX|1"
     },
     {
@@ -1909,6 +2882,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-03-24|AUTEUIL|3"
     },
     {
@@ -1935,6 +2922,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-03-25|FONTAINEBLEAU|1"
     },
     {
@@ -1961,6 +2962,20 @@
         8,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-03-28|CHANTILLY|5"
     },
     {
@@ -1987,6 +3002,20 @@
         14,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-03-31|AUTEUIL|4"
     },
     {
@@ -2013,6 +3042,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-04-03|ANGERS|1"
     },
     {
@@ -2039,6 +3082,20 @@
         10,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-04-18|ENGHIEN|4"
     },
     {
@@ -2065,6 +3122,20 @@
         3,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-06-01|AUTEUIL|6"
     },
     {
@@ -2091,6 +3162,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-06-09|PARISLONGCHAMP|4"
     },
     {
@@ -2117,6 +3202,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-06-10|CAEN|1"
     },
     {
@@ -2143,6 +3242,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-06-12|COMPIEGNE|1"
     },
     {
@@ -2169,6 +3282,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-06-18|NANTES|5"
     },
     {
@@ -2195,6 +3322,20 @@
         15,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-06-22|COMPIEGNE|4"
     },
     {
@@ -2221,6 +3362,20 @@
         1,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-06-23|PARIS-VINCENNES|4"
     },
     {
@@ -2247,6 +3402,20 @@
         11,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-06-24|LYON-PARILLY|1"
     },
     {
@@ -2273,6 +3442,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-06-29|ENGHIEN|4"
     },
     {
@@ -2299,6 +3482,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-07-03|ENGHIEN|7"
     },
     {
@@ -2325,6 +3522,20 @@
         7,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-07-16|VICHY|4"
     },
     {
@@ -2351,6 +3562,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-07-21|LA TESTE DE BUCH|3"
     },
     {
@@ -2377,6 +3602,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-07-30|DEAUVILLE|7"
     },
     {
@@ -2403,6 +3642,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-08-03|DEAUVILLE|3"
     },
     {
@@ -2429,6 +3682,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-08-04|DEAUVILLE|3"
     },
     {
@@ -2455,6 +3722,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-08-05|CLAIREFONTAINE|4"
     },
     {
@@ -2481,6 +3762,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-08-06|DEAUVILLE|7"
     },
     {
@@ -2507,6 +3802,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-08-10|DEAUVILLE|4"
     },
     {
@@ -2533,6 +3842,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-08-11|DEAUVILLE|3"
     },
     {
@@ -2559,6 +3882,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-08-12|CLAIREFONTAINE|7"
     },
     {
@@ -2585,6 +3922,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-08-13|DEAUVILLE|7"
     },
     {
@@ -2611,6 +3962,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-08-14|ENGHIEN|7"
     },
     {
@@ -2637,6 +4002,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-08-15|DEAUVILLE|3"
     },
     {
@@ -2663,6 +4042,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-08-17|DEAUVILLE|3"
     },
     {
@@ -2689,6 +4082,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-08-18|DEAUVILLE|3"
     },
     {
@@ -2715,6 +4122,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-08-19|CLAIREFONTAINE|7"
     },
     {
@@ -2741,6 +4162,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-08-20|DEAUVILLE|7"
     },
     {
@@ -2767,6 +4202,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-08-25|DEAUVILLE|3"
     },
     {
@@ -2793,6 +4242,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-08-27|DIEPPE|7"
     },
     {
@@ -2819,6 +4282,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-09-01|PARISLONGCHAMP|3"
     },
     {
@@ -2845,6 +4322,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-09-02|CRAON|1"
     },
     {
@@ -2871,6 +4362,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-09-03|CHANTILLY|1"
     },
     {
@@ -2897,6 +4402,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-09-04|LA CAPELLE|1"
     },
     {
@@ -2923,6 +4442,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-09-05|PARISLONGCHAMP|5"
     },
     {
@@ -2949,6 +4482,20 @@
         14,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-09-07|PARIS-VINCENNES|4"
     },
     {
@@ -2975,6 +4522,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-09-17|COMPIEGNE|1"
     },
     {
@@ -3001,6 +4562,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-09-21|CHANTILLY|3"
     },
     {
@@ -3027,6 +4602,20 @@
         7,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2024-09-22|PARIS-VINCENNES|4"
     },
     {
@@ -3053,6 +4642,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-09-30|ENGHIEN|1"
     },
     {
@@ -3079,6 +4682,20 @@
         10,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-10-08|AUTEUIL|1"
     },
     {
@@ -3105,6 +4722,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-10-09|ENGHIEN|1"
     },
     {
@@ -3131,6 +4762,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-10-12|CAEN|4"
     },
     {
@@ -3157,6 +4802,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-10-13|AUTEUIL|3"
     },
     {
@@ -3183,6 +4842,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-10-15|CHANTILLY|2"
     },
     {
@@ -3209,6 +4882,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-10-19|AUTEUIL|3"
     },
     {
@@ -3235,6 +4922,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-10-21|DEAUVILLE|1"
     },
     {
@@ -3261,6 +4962,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-10-22|CLAIREFONTAINE|1"
     },
     {
@@ -3287,6 +5002,20 @@
         7,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-10-26|CHANTILLY|5"
     },
     {
@@ -3313,6 +5042,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-10-30|AUTEUIL|3"
     },
     {
@@ -3339,6 +5082,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-11-01|LAVAL|4"
     },
     {
@@ -3365,6 +5122,20 @@
         2,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-11-02|COMPIEGNE|6"
     },
     {
@@ -3391,6 +5162,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-11-03|DEAUVILLE|3"
     },
     {
@@ -3417,6 +5202,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-11-04|FONTAINEBLEAU|3"
     },
     {
@@ -3443,6 +5242,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-11-11|TOULOUSE|3"
     },
     {
@@ -3469,6 +5282,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-11-12|CHANTILLY|4"
     },
     {
@@ -3495,6 +5322,20 @@
         17,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-11-17|PARIS-VINCENNES|4"
     },
     {
@@ -3521,6 +5362,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-11-24|AUTEUIL|6"
     },
     {
@@ -3547,6 +5402,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-11-26|DEAUVILLE|2"
     },
     {
@@ -3573,6 +5442,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-12-10|CHANTILLY|4"
     },
     {
@@ -3599,6 +5482,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-12-12|CHANTILLY|5"
     },
     {
@@ -3625,6 +5522,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2024-12-17|PAU|4"
     },
     {
@@ -3651,6 +5562,20 @@
         12,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2024-12-23|DEAUVILLE|1"
     },
     {
@@ -3677,6 +5602,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2024-12-26|CHANTILLY|4"
     },
     {
@@ -3703,6 +5642,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-01-02|PAU|4"
     },
     {
@@ -3729,6 +5682,20 @@
         2,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-01-29|PAU|1"
     },
     {
@@ -3755,6 +5722,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-02-01|DEAUVILLE|3"
     },
     {
@@ -3781,6 +5762,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-02-15|AUTEUIL|4"
     },
     {
@@ -3807,6 +5802,20 @@
         2,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-03-02|AUTEUIL|3"
     },
     {
@@ -3833,6 +5842,20 @@
         10,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-03-03|CAEN|1"
     },
     {
@@ -3859,6 +5882,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-03-08|AUTEUIL|3"
     },
     {
@@ -3885,6 +5922,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-03-10|CAEN|1"
     },
     {
@@ -3911,6 +5962,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-03-12|LAVAL|1"
     },
     {
@@ -3937,6 +6002,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-03-13|CHANTILLY|1"
     },
     {
@@ -3963,6 +6042,20 @@
         4,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-03-15|AUTEUIL|4"
     },
     {
@@ -3989,6 +6082,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-03-17|CHANTILLY|1"
     },
     {
@@ -4015,6 +6122,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-03-18|FONTAINEBLEAU|1"
     },
     {
@@ -4041,6 +6162,20 @@
         3,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-03-23|AUTEUIL|4"
     },
     {
@@ -4067,6 +6202,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-03-30|AUTEUIL|3"
     },
     {
@@ -4093,6 +6242,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-03-31|CHANTILLY|1"
     },
     {
@@ -4119,6 +6282,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-04-01|FONTAINEBLEAU|1"
     },
     {
@@ -4145,6 +6322,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-04-03|CHANTILLY|1"
     },
     {
@@ -4171,6 +6362,20 @@
         4,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-04-07|COMPIEGNE|4"
     },
     {
@@ -4197,6 +6402,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-04-08|DEAUVILLE|1"
     },
     {
@@ -4223,6 +6442,20 @@
         12,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-04-13|PARISLONGCHAMP|3"
     },
     {
@@ -4249,6 +6482,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-04-17|PARISLONGCHAMP|1"
     },
     {
@@ -4275,6 +6522,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-04-19|ENGHIEN|4"
     },
     {
@@ -4301,6 +6562,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-04-20|AUTEUIL|3"
     },
     {
@@ -4327,6 +6602,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-04-21|FONTAINEBLEAU|3"
     },
     {
@@ -4353,6 +6642,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-04-22|COMPIEGNE|1"
     },
     {
@@ -4379,6 +6682,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-04-27|PARISLONGCHAMP|3"
     },
     {
@@ -4405,6 +6722,20 @@
         3,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-05-05|VICHY|4"
     },
     {
@@ -4431,6 +6762,20 @@
         9,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-05-06|CHANTILLY|1"
     },
     {
@@ -4457,6 +6802,20 @@
         15,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-05-10|CAEN|4"
     },
     {
@@ -4483,6 +6842,20 @@
         15,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-05-11|PARISLONGCHAMP|3"
     },
     {
@@ -4509,6 +6882,20 @@
         11,
         13
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-05-12|VICHY|4"
     },
     {
@@ -4535,6 +6922,20 @@
         6,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-05-24|ENGHIEN|5"
     },
     {
@@ -4561,6 +6962,20 @@
         3,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-05-25|PARISLONGCHAMP|4"
     },
     {
@@ -4587,6 +7002,20 @@
         8,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-05-27|AUTEUIL|1"
     },
     {
@@ -4613,6 +7042,20 @@
         5,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-06-08|PARISLONGCHAMP|4"
     },
     {
@@ -4639,6 +7082,20 @@
         6,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-06-09|COMPIEGNE|3"
     },
     {
@@ -4665,6 +7122,20 @@
         1,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-06-21|COMPIEGNE|4"
     },
     {
@@ -4691,6 +7162,20 @@
         2,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-06-24|CHANTILLY|7"
     },
     {
@@ -4717,6 +7202,20 @@
         15,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-06-25|VIRE|4"
     },
     {
@@ -4743,6 +7242,20 @@
         6,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-06-28|ENGHIEN|4"
     },
     {
@@ -4769,6 +7282,20 @@
         8,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-06-30|CLAIREFONTAINE|5"
     },
     {
@@ -4795,6 +7322,20 @@
         14,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-07-09|LES SABLES D'OLONNE|4"
     },
     {
@@ -4821,6 +7362,20 @@
         10,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-07-12|ENGHIEN|4"
     },
     {
@@ -4847,6 +7402,20 @@
         12,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-07-14|VICHY|3"
     },
     {
@@ -4873,6 +7442,20 @@
         11,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-07-15|VICHY|4"
     },
     {
@@ -4899,6 +7482,20 @@
         13,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-07-16|LE MONT SAINT MICHEL|7"
     },
     {
@@ -4925,6 +7522,20 @@
         3,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2025-07-19|ENGHIEN|4"
     },
     {
@@ -4951,6 +7562,20 @@
         4,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-07-20|CHANTILLY|3"
     },
     {
@@ -4977,6 +7602,20 @@
         7,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-07-21|COMPIEGNE|7"
     },
     {
@@ -5003,6 +7642,20 @@
         13,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-07-22|DIEPPE|7"
     },
     {
@@ -5029,6 +7682,20 @@
         1,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2025-07-30|ENGHIEN|7"
     },
     {
@@ -5055,6 +7722,20 @@
         4,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-08-02|CLAIREFONTAINE|3"
     },
     {
@@ -5081,6 +7762,20 @@
         4,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-08-03|DEAUVILLE|3"
     },
     {
@@ -5107,6 +7802,20 @@
         15,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-08-04|DIEPPE|7"
     },
     {
@@ -5133,6 +7842,20 @@
         3,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-08-05|DEAUVILLE|7"
     },
     {
@@ -5159,6 +7882,20 @@
         3,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-08-09|DEAUVILLE|3"
     },
     {
@@ -5185,6 +7922,20 @@
         6,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-08-10|DEAUVILLE|3"
     },
     {
@@ -5211,6 +7962,20 @@
         13,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-08-11|CLAIREFONTAINE|4"
     },
     {
@@ -5237,6 +8002,20 @@
         1,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-08-12|DEAUVILLE|7"
     },
     {
@@ -5263,6 +8042,20 @@
         3,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-08-13|ENGHIEN|7"
     },
     {
@@ -5289,6 +8082,20 @@
         13,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-08-15|CLAIREFONTAINE|3"
     },
     {
@@ -5315,6 +8122,20 @@
         6,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-08-16|DEAUVILLE|4"
     },
     {
@@ -5341,6 +8162,20 @@
         1,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-08-17|DEAUVILLE|3"
     },
     {
@@ -5367,6 +8202,20 @@
         9,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-08-18|CLAIREFONTAINE|7"
     },
     {
@@ -5393,6 +8242,20 @@
         8,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 3,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2025-08-19|DEAUVILLE|8"
     },
     {
@@ -5419,6 +8282,20 @@
         5,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2025-08-23|DEAUVILLE|3"
     },
     {
@@ -5445,6 +8322,20 @@
         9,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2025-08-24|DEAUVILLE|3"
     },
     {
@@ -5471,6 +8362,20 @@
         3,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-08-26|DEAUVILLE|7"
     },
     {
@@ -5497,6 +8402,20 @@
         4,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-08-27|CLAIREFONTAINE|7"
     },
     {
@@ -5523,6 +8442,20 @@
         11,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-08-31|PARISLONGCHAMP|3"
     },
     {
@@ -5549,6 +8482,20 @@
         13,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-09-01|CHANTILLY|1"
     },
     {
@@ -5575,6 +8522,20 @@
         5,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-09-03|LA CAPELLE|1"
     },
     {
@@ -5601,6 +8562,20 @@
         8,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-09-04|PARISLONGCHAMP|5"
     },
     {
@@ -5627,6 +8602,20 @@
         10,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-09-08|CRAON|1"
     },
     {
@@ -5653,6 +8642,20 @@
         10,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-09-14|PARISLONGCHAMP|3"
     },
     {
@@ -5679,6 +8682,20 @@
         11,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2025-09-15|AGEN LA GARENNE|4"
     },
     {
@@ -5705,6 +8722,20 @@
         13,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-09-16|COMPIEGNE|1"
     },
     {
@@ -5731,6 +8762,20 @@
         11,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-09-20|CHANTILLY|4"
     },
     {
@@ -5757,6 +8802,20 @@
         13,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 3,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2025-09-22|LA CAPELLE|1"
     },
     {
@@ -5783,6 +8842,20 @@
         5,
         13
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-09-23|AUTEUIL|4"
     },
     {
@@ -5809,6 +8882,20 @@
         12,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-09-25|CHANTILLY|1"
     },
     {
@@ -5835,6 +8922,20 @@
         3,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-09-27|AUTEUIL|3"
     },
     {
@@ -5861,6 +8962,20 @@
         5,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-09-29|ENGHIEN|1"
     },
     {
@@ -5887,6 +9002,20 @@
         15,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-09-30|CHANTILLY|1"
     },
     {
@@ -5913,6 +9042,20 @@
         15,
         13
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-10-02|COMPIEGNE|1"
     },
     {
@@ -5939,6 +9082,20 @@
         12,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-10-06|ENGHIEN|1"
     },
     {
@@ -5965,6 +9122,20 @@
         13,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-10-07|AUTEUIL|1"
     },
     {
@@ -5991,6 +9162,20 @@
         4,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-10-08|ENGHIEN|1"
     },
     {
@@ -6017,6 +9202,20 @@
         10,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-10-11|CAEN|4"
     },
     {
@@ -6043,6 +9242,20 @@
         14,
         17
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-10-12|AUTEUIL|3"
     },
     {
@@ -6069,6 +9282,20 @@
         1,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-10-13|MARSEILLE-BORELY|1"
     },
     {
@@ -6095,6 +9322,20 @@
         3,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-10-14|CHANTILLY|1"
     },
     {
@@ -6121,6 +9362,20 @@
         11,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-10-18|AUTEUIL|4"
     },
     {
@@ -6147,6 +9402,20 @@
         3,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-10-20|DEAUVILLE|1"
     },
     {
@@ -6173,6 +9442,20 @@
         15,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-10-21|CLAIREFONTAINE|1"
     },
     {
@@ -6199,6 +9482,20 @@
         6,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-10-23|AUTEUIL|1"
     },
     {
@@ -6225,6 +9522,20 @@
         3,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-10-25|COMPIEGNE|3"
     },
     {
@@ -6251,6 +9562,20 @@
         7,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-10-27|CHANTILLY|4"
     },
     {
@@ -6277,6 +9602,20 @@
         3,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-10-28|CHANTILLY|3"
     },
     {
@@ -6303,6 +9642,20 @@
         7,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-10-29|AUTEUIL|3"
     },
     {
@@ -6329,6 +9682,20 @@
         7,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-11-02|DEAUVILLE|3"
     },
     {
@@ -6355,6 +9722,20 @@
         12,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-11-03|FONTAINEBLEAU|4"
     },
     {
@@ -6381,6 +9762,20 @@
         14,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-11-10|CHANTILLY|3"
     },
     {
@@ -6407,6 +9802,20 @@
         15,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-11-11|TOULOUSE|3"
     },
     {
@@ -6433,6 +9842,20 @@
         13,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2025-11-13|FONTAINEBLEAU|4"
     },
     {
@@ -6459,6 +9882,20 @@
         4,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-11-15|AUTEUIL|7"
     },
     {
@@ -6485,6 +9922,20 @@
         4,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-11-18|CHANTILLY|5"
     },
     {
@@ -6511,6 +9962,20 @@
         10,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-11-23|AUTEUIL|6"
     },
     {
@@ -6537,6 +10002,20 @@
         6,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-11-25|DEAUVILLE|1"
     },
     {
@@ -6563,6 +10042,20 @@
         3,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2025-11-26|DEAUVILLE|1"
     },
     {
@@ -6589,6 +10082,20 @@
         11,
         13
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-12-02|DEAUVILLE|1"
     },
     {
@@ -6615,6 +10122,20 @@
         3,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-12-09|CHANTILLY|5"
     },
     {
@@ -6641,6 +10162,20 @@
         2,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2025-12-11|CHANTILLY|4"
     },
     {
@@ -6667,6 +10202,20 @@
         5,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 3,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2025-12-16|PAU|4"
     },
     {
@@ -6693,6 +10242,20 @@
         11,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-12-18|DEAUVILLE|1"
     },
     {
@@ -6719,6 +10282,20 @@
         10,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-12-22|DEAUVILLE|1"
     },
     {
@@ -6745,6 +10322,20 @@
         8,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2025-12-23|DEAUVILLE|1"
     },
     {
@@ -6771,6 +10362,20 @@
         13,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2025-12-30|DEAUVILLE|1"
     },
     {
@@ -6797,6 +10402,20 @@
         4,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-01-07|PAU|2"
     },
     {
@@ -6823,6 +10442,20 @@
         1,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-01-12|CAGNES-SUR-MER|2"
     },
     {
@@ -6849,6 +10482,20 @@
         12,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-01-28|PAU|1"
     },
     {
@@ -6875,6 +10522,20 @@
         8,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2026-02-14|AUTEUIL|4"
     },
     {
@@ -6901,6 +10562,20 @@
         5,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-02-15|PARIS-VINCENNES|5"
     },
     {
@@ -6927,6 +10602,20 @@
         13,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2026-02-23|AUTEUIL|1"
     },
     {
@@ -6953,6 +10642,20 @@
         12,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-03-03|CHANTILLY|2"
     },
     {
@@ -6979,6 +10682,20 @@
         6,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 3,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2026-03-09|CAEN|4"
     },
     {
@@ -7005,6 +10722,20 @@
         11,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-03-12|CHANTILLY|1"
     },
     {
@@ -7031,6 +10762,20 @@
         2,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-03-14|AUTEUIL|3"
     },
     {
@@ -7057,6 +10802,20 @@
         9,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-03-16|CHANTILLY|1"
     },
     {
@@ -7083,6 +10842,20 @@
         11,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2026-03-17|FONTAINEBLEAU|1"
     },
     {
@@ -7109,6 +10882,20 @@
         12,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-03-18|VIRE|1"
     },
     {
@@ -7135,6 +10922,20 @@
         8,
         13
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-03-22|AUTEUIL|3"
     },
     {
@@ -7161,6 +10962,20 @@
         8,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-03-23|CHANTILLY|1"
     },
     {
@@ -7187,6 +11002,20 @@
         6,
         13
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-03-26|CHANTILLY|1"
     },
     {
@@ -7213,6 +11042,20 @@
         8,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-03-28|AUTEUIL|3"
     },
     {
@@ -7239,6 +11082,20 @@
         9,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-03-30|CHANTILLY|1"
     },
     {
@@ -7265,6 +11122,20 @@
         16,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 3,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2026-03-31|FONTAINEBLEAU|1"
     },
     {
@@ -7291,6 +11162,20 @@
         15,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-05-04|VICHY|4"
     },
     {
@@ -7317,6 +11202,20 @@
         2,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-05-09|CAEN|4"
     },
     {
@@ -7343,6 +11242,20 @@
         2,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-05-10|PARISLONGCHAMP|5"
     },
     {
@@ -7369,6 +11282,20 @@
         12,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-05-11|VICHY|4"
     },
     {
@@ -7395,6 +11322,20 @@
         12,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2026-05-12|CHANTILLY|1"
     },
     {
@@ -7421,6 +11362,20 @@
         5,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2026-05-16|AUTEUIL|4"
     },
     {
@@ -7447,6 +11402,20 @@
         5,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-05-17|AUTEUIL|5"
     },
     {
@@ -7473,6 +11442,20 @@
         13,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-05-19|CHANTILLY|1"
     },
     {
@@ -7499,6 +11482,20 @@
         10,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-05-23|ENGHIEN|4"
     },
     {
@@ -7525,6 +11522,20 @@
         11,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2026-05-24|PARISLONGCHAMP|3"
     },
     {
@@ -7551,6 +11562,20 @@
         2,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-05-25|COMPIEGNE|3"
     },
     {
@@ -7577,6 +11602,20 @@
         5,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-05-27|STRASBOURG|4"
     },
     {
@@ -7603,6 +11642,20 @@
         12,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-05-30|AUTEUIL|9"
     },
     {
@@ -7629,6 +11682,20 @@
         12,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-05-31|CHANTILLY|7"
     },
     {
@@ -7655,6 +11722,20 @@
         13,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-06-01|VICHY|4"
     },
     {
@@ -7681,6 +11762,20 @@
         9,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-06-07|PARISLONGCHAMP|3"
     },
     {
@@ -7707,6 +11802,20 @@
         15,
         9
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-06-08|ANGERS EVENTARD|8"
     },
     {
@@ -7733,6 +11842,20 @@
         11,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-06-09|COMPIEGNE|8"
     },
     {
@@ -7759,6 +11882,20 @@
         5,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-06-10|CAEN|6"
     },
     {
@@ -7785,6 +11922,20 @@
         8,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-06-13|ENGHIEN|4"
     },
     {
@@ -7811,6 +11962,20 @@
         12,
         17
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2026-06-14|CHANTILLY|4"
     },
     {
@@ -7837,6 +12002,20 @@
         9,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-06-16|NANTES|2"
     },
     {
@@ -7863,6 +12042,20 @@
         9,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 3,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2026-06-17|AGEN LA GARENNE|3"
     },
     {
@@ -7889,6 +12082,20 @@
         9,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-06-20|COMPIEGNE|3"
     },
     {
@@ -7915,6 +12122,20 @@
         3,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-06-23|DIEPPE|8"
     },
     {
@@ -7941,6 +12162,20 @@
         4,
         14
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-06-24|CHERBOURG|3"
     },
     {
@@ -7967,6 +12202,20 @@
         8,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-06-27|ENGHIEN|2"
     },
     {
@@ -7993,6 +12242,20 @@
         6,
         11
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-06-30|VICHY|5"
     },
     {
@@ -8019,6 +12282,20 @@
         12,
         7
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-07-15|LISIEUX|8"
     },
     {
@@ -8045,6 +12322,20 @@
         13,
         1
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-07-18|ENGHIEN|4"
     },
     {
@@ -8071,6 +12362,20 @@
         10,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2026-07-19|CHANTILLY|3"
     },
     {
@@ -8097,6 +12402,20 @@
         16,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-07-20|VICHY|8"
     },
     {
@@ -8123,6 +12442,20 @@
         14,
         5
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-08-05|SAINT MALO|5"
     },
     {
@@ -8149,6 +12482,20 @@
         5,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-08-08|DEAUVILLE|3"
     },
     {
@@ -8175,6 +12522,20 @@
         11,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-08-09|DEAUVILLE|3"
     },
     {
@@ -8201,6 +12562,20 @@
         4,
         6
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-08-11|DEAUVILLE|8"
     },
     {
@@ -8227,6 +12602,20 @@
         9,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-08-15|DEAUVILLE|3"
     },
     {
@@ -8253,6 +12642,20 @@
         8,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-08-16|DEAUVILLE|3"
     },
     {
@@ -8279,6 +12682,20 @@
         12,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-08-18|DEAUVILLE|8"
     },
     {
@@ -8305,6 +12722,20 @@
         9,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2026-08-20|DEAUVILLE|8"
     },
     {
@@ -8331,6 +12762,20 @@
         3,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-08-22|DEAUVILLE|3"
     },
     {
@@ -8357,6 +12802,20 @@
         13,
         3
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-08-23|DEAUVILLE|3"
     },
     {
@@ -8383,6 +12842,20 @@
         9,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-08-25|DEAUVILLE|8"
     },
     {
@@ -8409,6 +12882,20 @@
         14,
         12
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-08-27|DEAUVILLE|8"
     },
     {
@@ -8435,6 +12922,20 @@
         11,
         16
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-08-30|DEAUVILLE|3"
     },
     {
@@ -8461,6 +12962,20 @@
         16,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-09-01|DEAUVILLE|1"
     },
     {
@@ -8487,6 +13002,20 @@
         14,
         10
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-09-02|LA CAPELLE|1"
     },
     {
@@ -8513,6 +13042,20 @@
         4,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2026-09-06|PARISLONGCHAMP|3"
     },
     {
@@ -8539,6 +13082,20 @@
         3,
         8
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-09-07|CRAON|1"
     },
     {
@@ -8565,6 +13122,20 @@
         5,
         13
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 0,
+          "top3_coverage_by_top5": 0
+        }
+      },
       "race_key": "2026-09-08|AUTEUIL|1"
     },
     {
@@ -8591,6 +13162,20 @@
         2,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
       "race_key": "2026-09-10|PARISLONGCHAMP|1"
     },
     {
@@ -8617,6 +13202,20 @@
         6,
         15
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2026-09-15|COMPIEGNE|1"
     },
     {
@@ -8643,6 +13242,20 @@
         10,
         4
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
       "race_key": "2026-09-16|FEURS|1"
     },
     {
@@ -8669,7 +13282,61 @@
         5,
         2
       ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
       "race_key": "2026-09-19|CHANTILLY|4"
+    },
+    {
+      "winner": 13,
+      "predicted_top1": 16,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        3,
+        13,
+        16
+      ],
+      "predicted_top3": [
+        7,
+        13,
+        16
+      ],
+      "top3_coverage_by_top3": 2,
+      "top3_coverage_by_top5": 2,
+      "model_ranking": [
+        16,
+        13,
+        7,
+        9,
+        8
+      ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
+      "race_key": "2026-09-21|LA CAPELLE|1"
     }
   ]
 }
