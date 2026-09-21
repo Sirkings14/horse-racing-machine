@@ -15,6 +15,12 @@ FEATURE_NAMES = [
     "ranking_presence_score",
     "distance_score",
     "field_size_score",
+    "commentary_positive_score",
+    "commentary_negative_score",
+    "commentary_balance_score",
+    "commentary_confidence_score",
+    "commentary_recentness_score",
+    "race_prize_per_runner_score",
 ]
 
 
