@@ -12,12 +12,13 @@ ORDER_BACKTEST_FILE = MODEL_DIR / "order_backtest_report.json"
 
 
 def _order_engine_passes() -> bool:
-    """Only replace the production order engine after a genuine holdout signal."""
+    """Only replace production order model when it clears the random baseline."""
     try:
         report = json.loads(ORDER_BACKTEST_FILE.read_text(encoding="utf-8"))
         metrics = report.get("metrics") or {}
         pairwise = float(metrics["pairwise_order_accuracy"])
-        return pairwise > 0.50
+        baseline = float((report.get("baseline") or {}).get("pairwise_random_accuracy", 0.50))
+        return pairwise > baseline
     except (OSError, ValueError, TypeError, KeyError):
         return False
 
