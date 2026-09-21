@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-09-21|LA CAPELLE|1|2026-09-21T19:19:29.185355+00:00",
-  "generated_at": "2026-09-21T19:19:29.185363+00:00",
+  "prediction_id": "2026-09-21|LA CAPELLE|1|2026-09-21T19:36:29.474402+00:00",
+  "generated_at": "2026-09-21T19:36:29.474411+00:00",
   "model_version": "model-20260917T222433Z-a79f6e73",
   "model_status": "registered_champion",
   "order_engine_status": "production_order_model",
@@ -96,6 +96,11 @@
   },
   "autopilot_guard": {
     "health": "insufficient_history",
+    "decision": "PASS",
+    "gate_reasons": [
+      "engine_disagreement_or_unavailable",
+      "low_model_confidence"
+    ],
     "recent_verified_predictions": 3,
     "recent_winner_hit_rate": 0.0,
     "recent_winner_in_top3_rate": 0.3333,
@@ -144,11 +149,27 @@
     "confidence_reasons": [
       "independent engines disagree"
     ],
-    "guard_policy": {
-      "never_claim_certainty": true,
-      "low_confidence_predictions_are_flagged": true,
-      "order_engine_below_random_baseline_is_not_promoted": true,
-      "severe_feature_drift_is_flagged": true
+    "difficulty": {
+      "bucket": "medium",
+      "difficulty_score": 59.93,
+      "field_size": 16,
+      "top1_top2_margin": 0.028967,
+      "top1_top3_spread": 0.127886,
+      "engine_top5_overlap": 0.0,
+      "signals": [
+        "large_field",
+        "engine_disagreement"
+      ]
+    },
+    "gate_policy": {
+      "PASS_means_insufficient_or_unstable_evidence": true,
+      "PLAY_CANDIDATE_is_not_a_guarantee_of_outcome_or_profit": true,
+      "severe_feature_drift_blocks": true,
+      "low_confidence_blocks": true,
+      "engine_disagreement_blocks": true,
+      "high_difficulty_blocks": true,
+      "degraded_recent_winner_accuracy_blocks": true,
+      "order_engine_below_random_baseline_blocks": true
     }
   },
   "ranked_horses": [
@@ -362,7 +383,7 @@
     }
   ],
   "feature_drift": {
-    "generated_at": "2026-09-21T19:19:29.185116+00:00",
+    "generated_at": "2026-09-21T19:36:29.474124+00:00",
     "race_key": "2026-09-21|LA CAPELLE|1",
     "status": "insufficient_current_sample",
     "overall_severity": "unrated",
