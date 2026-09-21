@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-09-21|LA CAPELLE|1|2026-09-21T19:39:33.538914+00:00",
-  "generated_at": "2026-09-21T19:39:33.538922+00:00",
+  "prediction_id": "2026-09-21|LA CAPELLE|1|2026-09-21T19:52:23.617210+00:00",
+  "generated_at": "2026-09-21T19:52:23.617218+00:00",
   "model_version": "model-20260917T222433Z-a79f6e73",
   "model_status": "registered_champion",
   "order_engine_status": "production_order_model",
@@ -20,32 +20,33 @@
   },
   "recommended_numbers": [
     16,
-    1,
     13,
     7,
-    2
+    8,
+    9
   ],
+  "recommendation_basis": "primary_strength_ensemble",
   "adaptive_top_count": 5,
   "top3_numbers": [
     16,
-    1,
-    13
+    13,
+    7
   ],
   "predicted_finish_order": [
     16,
-    1,
     13,
     7,
-    2,
     8,
-    3,
-    4,
     9,
     15,
     10,
-    5,
-    6,
+    4,
     12,
+    3,
+    6,
+    1,
+    2,
+    5,
     11,
     14
   ],
@@ -98,9 +99,7 @@
     "health": "insufficient_history",
     "decision": "PASS",
     "gate_reasons": [
-      "insufficient_verified_history",
-      "engine_disagreement_or_unavailable",
-      "low_model_confidence"
+      "insufficient_verified_history"
     ],
     "recent_verified_predictions": 3,
     "recent_winner_hit_rate": 0.0,
@@ -146,10 +145,8 @@
     },
     "order_walk_forward_pairwise_accuracy": 0.5874,
     "feature_drift_severity": "unrated",
-    "prediction_confidence": "low",
-    "confidence_reasons": [
-      "independent engines disagree"
-    ],
+    "prediction_confidence": "medium",
+    "confidence_reasons": [],
     "difficulty": {
       "bucket": "medium",
       "difficulty_score": 59.93,
@@ -168,7 +165,7 @@
       "insufficient_verified_history_blocks": true,
       "severe_feature_drift_blocks": true,
       "low_confidence_blocks": true,
-      "engine_disagreement_blocks": true,
+      "engine_disagreement_blocks": false,
       "high_difficulty_blocks": true,
       "degraded_recent_winner_accuracy_blocks": true,
       "order_engine_below_random_baseline_blocks": true
@@ -185,21 +182,8 @@
       "predicted_rank": 1,
       "order_rank": 16,
       "order_selection_weight": 0.0625,
-      "final_order_score": 0.625,
+      "final_order_score": 0.370802,
       "final_predicted_position": 1
-    },
-    {
-      "horse_number": 1,
-      "horse_name": "IGGY DES RIOULTS",
-      "probability_top3": 0.124284,
-      "probability_top4": 0.159029,
-      "probability_top5": 0.159042,
-      "ensemble_score": 0.141659,
-      "predicted_rank": 12,
-      "order_rank": 1,
-      "order_selection_weight": 0.0625,
-      "final_order_score": 0.45,
-      "final_predicted_position": 2
     },
     {
       "horse_number": 13,
@@ -211,8 +195,8 @@
       "predicted_rank": 2,
       "order_rank": 13,
       "order_selection_weight": 0.0625,
-      "final_order_score": 0.330769,
-      "final_predicted_position": 3
+      "final_order_score": 0.338485,
+      "final_predicted_position": 2
     },
     {
       "horse_number": 7,
@@ -224,21 +208,8 @@
       "predicted_rank": 3,
       "order_rank": 7,
       "order_selection_weight": 0.0625,
-      "final_order_score": 0.257143,
-      "final_predicted_position": 4
-    },
-    {
-      "horse_number": 2,
-      "horse_name": "GALON D'AMIRAL",
-      "probability_top3": 0.124284,
-      "probability_top4": 0.159029,
-      "probability_top5": 0.159042,
-      "ensemble_score": 0.141659,
-      "predicted_rank": 13,
-      "order_rank": 2,
-      "order_selection_weight": 0.0625,
-      "final_order_score": 0.246154,
-      "final_predicted_position": 5
+      "final_order_score": 0.247169,
+      "final_predicted_position": 3
     },
     {
       "horse_number": 8,
@@ -250,20 +221,46 @@
       "predicted_rank": 4,
       "order_rank": 8,
       "order_selection_weight": 0.0625,
-      "final_order_score": 0.2,
+      "final_order_score": 0.236641,
+      "final_predicted_position": 4
+    },
+    {
+      "horse_number": 9,
+      "horse_name": "JAPAROV LIRE",
+      "probability_top3": 0.214492,
+      "probability_top4": 0.254304,
+      "probability_top5": 0.253755,
+      "ensemble_score": 0.234288,
+      "predicted_rank": 5,
+      "order_rank": 9,
+      "order_selection_weight": 0.0625,
+      "final_order_score": 0.234288,
+      "final_predicted_position": 5
+    },
+    {
+      "horse_number": 15,
+      "horse_name": "INHERIT",
+      "probability_top3": 0.200977,
+      "probability_top4": 0.240002,
+      "probability_top5": 0.239164,
+      "ensemble_score": 0.220322,
+      "predicted_rank": 6,
+      "order_rank": 15,
+      "order_selection_weight": 0.0625,
+      "final_order_score": 0.220322,
       "final_predicted_position": 6
     },
     {
-      "horse_number": 3,
-      "horse_name": "HEAVEN D'ECAJEUL",
-      "probability_top3": 0.17136,
-      "probability_top4": 0.208578,
-      "probability_top5": 0.210846,
-      "ensemble_score": 0.190423,
-      "predicted_rank": 10,
-      "order_rank": 3,
+      "horse_number": 10,
+      "horse_name": "IF I TELL YOU",
+      "probability_top3": 0.203357,
+      "probability_top4": 0.237364,
+      "probability_top5": 0.237061,
+      "ensemble_score": 0.2203,
+      "predicted_rank": 7,
+      "order_rank": 10,
       "order_selection_weight": 0.0625,
-      "final_order_score": 0.193333,
+      "final_order_score": 0.2203,
       "final_predicted_position": 7
     },
     {
@@ -276,73 +273,8 @@
       "predicted_rank": 8,
       "order_rank": 4,
       "order_selection_weight": 0.0625,
-      "final_order_score": 0.175,
+      "final_order_score": 0.200057,
       "final_predicted_position": 8
-    },
-    {
-      "horse_number": 9,
-      "horse_name": "JAPAROV LIRE",
-      "probability_top3": 0.214492,
-      "probability_top4": 0.254304,
-      "probability_top5": 0.253755,
-      "ensemble_score": 0.234288,
-      "predicted_rank": 5,
-      "order_rank": 9,
-      "order_selection_weight": 0.0625,
-      "final_order_score": 0.164444,
-      "final_predicted_position": 9
-    },
-    {
-      "horse_number": 15,
-      "horse_name": "INHERIT",
-      "probability_top3": 0.200977,
-      "probability_top4": 0.240002,
-      "probability_top5": 0.239164,
-      "ensemble_score": 0.220322,
-      "predicted_rank": 6,
-      "order_rank": 15,
-      "order_selection_weight": 0.0625,
-      "final_order_score": 0.126667,
-      "final_predicted_position": 10
-    },
-    {
-      "horse_number": 10,
-      "horse_name": "IF I TELL YOU",
-      "probability_top3": 0.203357,
-      "probability_top4": 0.237364,
-      "probability_top5": 0.237061,
-      "ensemble_score": 0.2203,
-      "predicted_rank": 7,
-      "order_rank": 10,
-      "order_selection_weight": 0.0625,
-      "final_order_score": 0.125714,
-      "final_predicted_position": 11
-    },
-    {
-      "horse_number": 5,
-      "horse_name": "HEIDI DU BISET",
-      "probability_top3": 0.124284,
-      "probability_top4": 0.159029,
-      "probability_top5": 0.159042,
-      "ensemble_score": 0.141659,
-      "predicted_rank": 14,
-      "order_rank": 5,
-      "order_selection_weight": 0.0625,
-      "final_order_score": 0.122857,
-      "final_predicted_position": 12
-    },
-    {
-      "horse_number": 6,
-      "horse_name": "JADE DE NAVARY",
-      "probability_top3": 0.142021,
-      "probability_top4": 0.176849,
-      "probability_top5": 0.176588,
-      "ensemble_score": 0.159383,
-      "predicted_rank": 11,
-      "order_rank": 6,
-      "order_selection_weight": 0.0625,
-      "final_order_score": 0.121212,
-      "final_predicted_position": 13
     },
     {
       "horse_number": 12,
@@ -354,7 +286,72 @@
       "predicted_rank": 9,
       "order_rank": 12,
       "order_selection_weight": 0.0625,
-      "final_order_score": 0.1,
+      "final_order_score": 0.194226,
+      "final_predicted_position": 9
+    },
+    {
+      "horse_number": 3,
+      "horse_name": "HEAVEN D'ECAJEUL",
+      "probability_top3": 0.17136,
+      "probability_top4": 0.208578,
+      "probability_top5": 0.210846,
+      "ensemble_score": 0.190423,
+      "predicted_rank": 10,
+      "order_rank": 3,
+      "order_selection_weight": 0.0625,
+      "final_order_score": 0.190423,
+      "final_predicted_position": 10
+    },
+    {
+      "horse_number": 6,
+      "horse_name": "JADE DE NAVARY",
+      "probability_top3": 0.142021,
+      "probability_top4": 0.176849,
+      "probability_top5": 0.176588,
+      "ensemble_score": 0.159383,
+      "predicted_rank": 11,
+      "order_rank": 6,
+      "order_selection_weight": 0.0625,
+      "final_order_score": 0.159383,
+      "final_predicted_position": 11
+    },
+    {
+      "horse_number": 1,
+      "horse_name": "IGGY DES RIOULTS",
+      "probability_top3": 0.124284,
+      "probability_top4": 0.159029,
+      "probability_top5": 0.159042,
+      "ensemble_score": 0.141659,
+      "predicted_rank": 12,
+      "order_rank": 1,
+      "order_selection_weight": 0.0625,
+      "final_order_score": 0.141659,
+      "final_predicted_position": 12
+    },
+    {
+      "horse_number": 2,
+      "horse_name": "GALON D'AMIRAL",
+      "probability_top3": 0.124284,
+      "probability_top4": 0.159029,
+      "probability_top5": 0.159042,
+      "ensemble_score": 0.141659,
+      "predicted_rank": 13,
+      "order_rank": 2,
+      "order_selection_weight": 0.0625,
+      "final_order_score": 0.141659,
+      "final_predicted_position": 13
+    },
+    {
+      "horse_number": 5,
+      "horse_name": "HEIDI DU BISET",
+      "probability_top3": 0.124284,
+      "probability_top4": 0.159029,
+      "probability_top5": 0.159042,
+      "ensemble_score": 0.141659,
+      "predicted_rank": 14,
+      "order_rank": 5,
+      "order_selection_weight": 0.0625,
+      "final_order_score": 0.141659,
       "final_predicted_position": 14
     },
     {
@@ -367,7 +364,7 @@
       "predicted_rank": 15,
       "order_rank": 11,
       "order_selection_weight": 0.0625,
-      "final_order_score": 0.076364,
+      "final_order_score": 0.141659,
       "final_predicted_position": 15
     },
     {
@@ -380,12 +377,12 @@
       "predicted_rank": 16,
       "order_rank": 14,
       "order_selection_weight": 0.0625,
-      "final_order_score": 0.066071,
+      "final_order_score": 0.141659,
       "final_predicted_position": 16
     }
   ],
   "feature_drift": {
-    "generated_at": "2026-09-21T19:39:33.538696+00:00",
+    "generated_at": "2026-09-21T19:52:23.616950+00:00",
     "race_key": "2026-09-21|LA CAPELLE|1",
     "status": "insufficient_current_sample",
     "overall_severity": "unrated",
