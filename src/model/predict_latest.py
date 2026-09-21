@@ -7,7 +7,7 @@ from pathlib import Path
 
 from src.live.registry import eligible_races, mark_predicted, LIVE_DIR
 from src.model.logistic_model import LogisticModel
-from src.model.order_model import OrderModel, fit_order_model
+from src.model.order_model import OrderModel
 from src.model.race_monitor import build_race_monitor
 from src.model.autopilot_guard import build_autopilot_guard
 from src.model.race_difficulty import classify_race
@@ -141,23 +141,17 @@ def resolve_model_version() -> tuple[str, str]:
     return "legacy-production", "legacy_unregistered_models"
 
 
-def load_order_model(rows):
+def load_order_model(rows=None):
+    """Load only the validated production order artifact; never retrain live."""
     path = MODEL_DIR / "order_model.json"
-    if path.exists():
-        try:
-            return OrderModel.from_dict(load_json(path)), "production_order_model"
-        except Exception as error:
-            print(f"Production order model unavailable; rebuilding from verified data: {error}")
-    try:
-        model = fit_order_model(rows)
-        MODEL_DIR.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(model.to_dict(), indent=2, ensure_ascii=False), encoding="utf-8")
-        return model, "runtime_verified_data_order_model"
-    except Exception as error:
-        print(f"Order engine unavailable: {error}")
+    if not path.exists():
+        print("Production order model unavailable: artifact missing")
         return None, "order_engine_unavailable"
-
-
+    try:
+        return OrderModel.from_dict(load_json(path)), "production_order_model"
+    except Exception as error:
+        print(f"Production order model unavailable: {error}")
+        return None, "order_engine_unavailable"
 def main():
     try:
         training_rows = load_json(DATASET_FILE)
@@ -220,14 +214,15 @@ def main():
     order_ranking = order_model.predict_order(rows) if order_model else []
     order_map = {item["horse_number"]: item for item in order_ranking}
 
+    # The primary strength model remains the production ranking. The order engine
+    # is monitored independently and must not silently rewrite the primary signal.
     for item in ranked:
         order_item = order_map.get(item["horse_number"])
-        order_rank = order_item["predicted_finish_position"] if order_item else len(ranked) + 1
-        item["order_rank"] = order_rank
+        item["order_rank"] = order_item["predicted_finish_position"] if order_item else None
         item["order_selection_weight"] = order_item["order_selection_weight"] if order_item else None
-        item["final_order_score"] = round(0.6 * (1.0 / item["predicted_rank"]) + 0.4 * (1.0 / order_rank), 6)
+        item["final_order_score"] = item["ensemble_score"]
 
-    final_order = sorted(ranked, key=lambda item: (-item["final_order_score"], item["horse_number"]))
+    final_order = list(ranked)
     for index, item in enumerate(final_order, 1):
         item["final_predicted_position"] = index
 
@@ -243,6 +238,7 @@ def main():
         "today": today.isoformat(), "source_program": selected_entry.get("source_file"),
         "source_url": selected_entry.get("source_url"), "race_key": key, "race": meta,
         "recommended_numbers": [item["horse_number"] for item in final_order[:adaptive]],
+        "recommendation_basis": "primary_strength_ensemble",
         "adaptive_top_count": adaptive, "top3_numbers": [item["horse_number"] for item in final_order[:3]],
         "predicted_finish_order": [item["horse_number"] for item in final_order],
         "order_engine_top5": [item["horse_number"] for item in order_ranking[:5]],
