@@ -21,6 +21,12 @@ FEATURE_NAMES = [
     "form_class_gap",
     "class_progress_gap",
     "distance_field_interaction",
+    "favorite_top3_flag",
+    "form_top3_flag",
+    "class_top3_flag",
+    "core_consensus_squared",
+    "disagreement_squared",
+    "market_form_product",
 ]
 
 
@@ -71,6 +77,12 @@ def row_to_features(row: Dict[str, Any]) -> List[float]:
         form - class_score,
         class_score - progress,
         min(distance / 3000.0, 2.0) * min(runners / 20.0, 2.0),
+        float(safe_float(row.get("favorites_rank")) <= 3),
+        float(safe_float(row.get("form_rank")) <= 3),
+        float(safe_float(row.get("class_rank")) <= 3),
+        consensus * consensus,
+        disagreement * disagreement,
+        favorites * form,
     ]
 
 
