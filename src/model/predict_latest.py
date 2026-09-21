@@ -214,14 +214,15 @@ def main():
     order_ranking = order_model.predict_order(rows) if order_model else []
     order_map = {item["horse_number"]: item for item in order_ranking}
 
+    # The primary strength model remains the production ranking. The order engine
+    # is monitored independently and must not silently rewrite the primary signal.
     for item in ranked:
         order_item = order_map.get(item["horse_number"])
-        order_rank = order_item["predicted_finish_position"] if order_item else len(ranked) + 1
-        item["order_rank"] = order_rank
+        item["order_rank"] = order_item["predicted_finish_position"] if order_item else None
         item["order_selection_weight"] = order_item["order_selection_weight"] if order_item else None
-        item["final_order_score"] = round(0.6 * (1.0 / item["predicted_rank"]) + 0.4 * (1.0 / order_rank), 6)
+        item["final_order_score"] = item["ensemble_score"]
 
-    final_order = sorted(ranked, key=lambda item: (-item["final_order_score"], item["horse_number"]))
+    final_order = list(ranked)
     for index, item in enumerate(final_order, 1):
         item["final_predicted_position"] = index
 
