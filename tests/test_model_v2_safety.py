@@ -45,7 +45,8 @@ class ModelV2SafetyTests(unittest.TestCase):
             ],
             "difficulty": {"bucket": "low"},
         })
-        self.assertEqual(result["decision"], "PLAY_CANDIDATE")
+        self.assertEqual(result["decision"], "PASS")
+        self.assertIn("insufficient_verified_history", result["gate_reasons"])
 
     def test_single_race_drift_is_not_classified_as_severe(self):
         reference = [{"favorites_rank": 1, "form_rank": 1} for _ in range(100)]
