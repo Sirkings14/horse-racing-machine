@@ -64,6 +64,18 @@ def binary_calibration_metrics(probabilities: Sequence[float], labels: Sequence[
     return {"brier_score": round(brier, 6), "log_loss": round(log_loss, 6), "ece": round(ece, 6), "calibration_bins": calibration_bins}
 
 
+def baseline_rank(rows: Sequence[Dict[str, Any]], field: str) -> List[Dict[str, Any]]:
+    """Rank a race using one pre-race published ranking as a transparent baseline."""
+    def key(row: Dict[str, Any]) -> tuple:
+        value = row.get(field)
+        try:
+            rank = int(value)
+        except (TypeError, ValueError):
+            rank = 10**6
+        return rank, int(row.get("horse_number", 9999))
+    return sorted((dict(row) for row in rows), key=key)
+
+
 def evaluate_race(ranked: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
     actual_top3 = {
         int(row["horse_number"])
@@ -119,6 +131,17 @@ def run_backtest(rows: Sequence[Dict[str, Any]], min_train_races: int = 5) -> Di
         probabilities = model.predict_proba(test_rows)
         ranked = rank_rows(test_rows, probabilities)
         evaluation = evaluate_race(ranked)
+        baseline_metrics = {}
+        for field, name in (("favorites_rank", "favorites"), ("form_rank", "form")):
+            baseline = baseline_rank(test_rows, field)
+            baseline_eval = evaluate_race(baseline)
+            baseline_metrics[name] = {
+                "winner_hit_at_1": baseline_eval["winner_hit_at_1"],
+                "winner_hit_at_3": baseline_eval["winner_hit_at_3"],
+                "top3_coverage_by_top3": baseline_eval["top3_coverage_by_top3"],
+                "top3_coverage_by_top5": baseline_eval["top3_coverage_by_top5"],
+            }
+        evaluation["baselines"] = baseline_metrics
         calibration_probabilities.extend(float(row["predicted_probability"]) for row in ranked)
         calibration_labels.extend(int(row.get("top3", 0)) for row in test_rows)
         evaluation["race_key"] = race_key
@@ -132,6 +155,16 @@ def run_backtest(rows: Sequence[Dict[str, Any]], min_train_races: int = 5) -> Di
     winner_hit_at_3 = sum(1 for item in predictions if item["winner_hit_at_3"])
     coverage3 = sum(item["top3_coverage_by_top3"] for item in predictions)
     coverage5 = sum(item["top3_coverage_by_top5"] for item in predictions)
+
+    baseline_summary = {}
+    for name in ("favorites", "form"):
+        values = [item["baselines"][name] for item in predictions]
+        baseline_summary[name] = {
+            "winner_hit_rate_at_1": round(sum(v["winner_hit_at_1"] for v in values) / evaluated, 4),
+            "winner_hit_rate_at_3": round(sum(v["winner_hit_at_3"] for v in values) / evaluated, 4),
+            "average_actual_top3_covered_by_predicted_top3": round(sum(v["top3_coverage_by_top3"] for v in values) / evaluated, 4),
+            "average_actual_top3_covered_by_predicted_top5": round(sum(v["top3_coverage_by_top5"] for v in values) / evaluated, 4),
+        }
 
     calibration = binary_calibration_metrics(calibration_probabilities, calibration_labels)
     report = {
@@ -149,6 +182,7 @@ def run_backtest(rows: Sequence[Dict[str, Any]], min_train_races: int = 5) -> Di
             "log_loss_top3": calibration["log_loss"],
             "expected_calibration_error_top3": calibration["ece"],
         },
+        "baselines": baseline_summary,
         "calibration": calibration,
         "race_results": predictions,
     }
