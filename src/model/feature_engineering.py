@@ -15,6 +15,18 @@ FEATURE_NAMES = [
     "ranking_presence_score",
     "distance_score",
     "field_size_score",
+    "core_consensus_score",
+    "rank_disagreement_score",
+    "market_form_gap",
+    "form_class_gap",
+    "class_progress_gap",
+    "distance_field_interaction",
+    "favorite_top3_flag",
+    "form_top3_flag",
+    "class_top3_flag",
+    "core_consensus_squared",
+    "disagreement_squared",
+    "market_form_product",
 ]
 
 
@@ -40,16 +52,37 @@ def row_to_features(row: Dict[str, Any]) -> List[float]:
     ranking_average = safe_float(row.get("ranking_average"))
     presence = safe_float(row.get("ranking_presence"))
 
+    favorites = inverse_rank(row.get("favorites_rank"))
+    form = inverse_rank(row.get("form_rank"))
+    class_score = inverse_rank(row.get("class_rank"))
+    progress = inverse_rank(row.get("progress_rank"))
+    regularity = inverse_rank(row.get("regularity_rank"))
+    core = np.asarray([favorites, form, class_score, progress, regularity], dtype=float)
+    consensus = float(np.mean(core))
+    disagreement = float(np.std(core))
+
     return [
-        inverse_rank(row.get("favorites_rank")),
-        inverse_rank(row.get("form_rank")),
-        inverse_rank(row.get("class_rank")),
-        inverse_rank(row.get("progress_rank")),
-        inverse_rank(row.get("regularity_rank")),
+        favorites,
+        form,
+        class_score,
+        progress,
+        regularity,
         inverse_rank(ranking_average, max_rank=10.0),
         min(presence / 5.0, 1.0),
         min(distance / 3000.0, 2.0),
         min(runners / 20.0, 2.0),
+        consensus,
+        disagreement,
+        favorites - form,
+        form - class_score,
+        class_score - progress,
+        min(distance / 3000.0, 2.0) * min(runners / 20.0, 2.0),
+        float(safe_float(row.get("favorites_rank")) <= 3),
+        float(safe_float(row.get("form_rank")) <= 3),
+        float(safe_float(row.get("class_rank")) <= 3),
+        consensus * consensus,
+        disagreement * disagreement,
+        favorites * form,
     ]
 
 
