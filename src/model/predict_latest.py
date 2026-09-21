@@ -250,7 +250,7 @@ def main():
         "order_engine_winner_candidate": order_ranking[0]["horse_number"] if order_ranking else None,
         "monitoring": monitoring,
         "difficulty": classify_race(ranked, order_ranking, meta.get("runners_count")),
-        "autopilot_guard": build_autopilot_guard({"monitoring": monitoring, "ranked_horses": final_order, "drift": drift}),
+        "autopilot_guard": build_autopilot_guard({"monitoring": monitoring, "ranked_horses": final_order, "drift": drift, "difficulty": classify_race(ranked, order_ranking, meta.get("runners_count"))}),
         "ranked_horses": final_order,
         "feature_drift": drift,
         "live_manifest": str(LIVE_DIR / "live_manifest.json"),
