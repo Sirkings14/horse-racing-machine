@@ -238,6 +238,7 @@ def main():
         "today": today.isoformat(), "source_program": selected_entry.get("source_file"),
         "source_url": selected_entry.get("source_url"), "race_key": key, "race": meta,
         "recommended_numbers": [item["horse_number"] for item in final_order[:adaptive]],
+        "recommendation_basis": "primary_strength_ensemble",
         "adaptive_top_count": adaptive, "top3_numbers": [item["horse_number"] for item in final_order[:3]],
         "predicted_finish_order": [item["horse_number"] for item in final_order],
         "order_engine_top5": [item["horse_number"] for item in order_ranking[:5]],
