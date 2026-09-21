@@ -103,12 +103,9 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
             margin = float(ranked[0].get("probability_top3", 0.0)) - float(ranked[1].get("probability_top3", 0.0))
         if agreement == "strong_agreement" and margin >= 0.05:
             confidence = "high"
-        elif agreement == "meaningful_disagreement" or margin < 0.02:
+        elif margin < 0.02:
             confidence = "low"
-            if agreement == "meaningful_disagreement":
-                reasons.append("independent engines disagree")
-            if margin < 0.02:
-                reasons.append("top candidates are tightly separated")
+            reasons.append("top candidates are tightly separated")
         else:
             confidence = "medium"
 
@@ -158,7 +155,7 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
             "insufficient_verified_history_blocks": True,
             "severe_feature_drift_blocks": True,
             "low_confidence_blocks": True,
-            "engine_disagreement_blocks": True,
+            "engine_disagreement_blocks": False,
             "high_difficulty_blocks": True,
             "degraded_recent_winner_accuracy_blocks": True,
             "order_engine_below_random_baseline_blocks": True,
