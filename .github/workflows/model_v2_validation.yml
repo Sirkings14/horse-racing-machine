@@ -28,6 +28,23 @@ jobs:
         run: python -m compileall -q src
       - name: Regression tests
         run: python -m unittest discover -s tests -v
+      - name: Walk-forward model backtest
+        run: python -m src.model.backtest
+      - name: Walk-forward order backtest
+        run: python -m src.model.order_backtest
+      - name: Verify baseline report
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path("data/model/backtest_report.json").read_text())
+          assert report["evaluated_races"] > 0
+          assert "baselines" in report
+          order = json.loads(Path("data/model/order_backtest_report.json").read_text())
+          assert order["evaluated_races"] > 0
+          assert "pairwise_random_accuracy" in order["baseline"]
+          print("Walk-forward reports validated")
+          PY
       - name: Validate probability correction
         run: |
           python - <<'PY'
