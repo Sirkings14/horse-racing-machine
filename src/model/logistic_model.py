@@ -23,11 +23,10 @@ class LogisticModel:
     positive_weight: float
     l2: float = 1.0
 
-    def predict_proba(self, rows: Sequence[Dict[str, Any]]) -> np.ndarray:
+    def predict_weighted_proba(self, rows: Sequence[Dict[str, Any]]) -> np.ndarray:
         matrix = build_matrix(rows)
         if len(matrix) == 0:
             return np.empty(0, dtype=float)
-
         x = standardize_apply(
             matrix,
             np.asarray(self.mean, dtype=float),
@@ -36,6 +35,15 @@ class LogisticModel:
         logits = self.intercept + x @ np.asarray(self.coefficients, dtype=float)
         logits = np.clip(logits, -30.0, 30.0)
         return 1.0 / (1.0 + np.exp(-logits))
+
+    def predict_proba(self, rows: Sequence[Dict[str, Any]]) -> np.ndarray:
+        # Positive examples are up-weighted during training. Correct the
+        # posterior back to the observed class prior before using it as a
+        # probability.
+        weighted = self.predict_weighted_proba(rows)
+        weight = max(float(self.positive_weight), 1e-12)
+        denominator = weight * (1.0 - weighted) + weighted
+        return np.clip(weighted / np.maximum(denominator, 1e-12), 0.0, 1.0)
 
     def to_dict(self) -> Dict[str, Any]:
         return {

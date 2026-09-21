@@ -42,6 +42,29 @@ def compare_feature_distributions(
     reference = build_matrix(training_rows)
     current = build_matrix(current_rows)
     features: dict[str, Any] = {}
+
+    # A live race is too small a sample for a two-sample KS drift diagnosis.
+    # Report it as unrated rather than manufacturing a severe alert.
+    if len(current) < 30:
+        return {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "race_key": race_key,
+            "status": "insufficient_current_sample",
+            "overall_severity": "unrated",
+            "reference_rows": int(len(reference)),
+            "current_rows": int(len(current)),
+            "severe_feature_count": 0,
+            "moderate_feature_count": 0,
+            "method": "two_sample_kolmogorov_smirnov_on_model_features",
+            "policy": {
+                "drift_is_observational": True,
+                "prediction_not_blocked_by_drift_alone": True,
+                "severe_drift_should_trigger_review": True,
+            },
+            "reason": "Current sample is too small for a reliable KS drift classification.",
+            "features": {},
+        }
+
     severe = 0
     moderate = 0
 
