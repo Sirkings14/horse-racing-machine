@@ -15,6 +15,12 @@ FEATURE_NAMES = [
     "ranking_presence_score",
     "distance_score",
     "field_size_score",
+    "commentary_positive_score",
+    "commentary_negative_score",
+    "commentary_balance_score",
+    "commentary_confidence_score",
+    "commentary_recentness_score",
+    "race_prize_per_runner_score",
 ]
 
 
@@ -34,11 +40,49 @@ def inverse_rank(value: Any, max_rank: float = 10.0) -> float:
     return max(0.0, (max_rank + 1.0 - min(rank, max_rank)) / max_rank)
 
 
+POSITIVE_TERMS = (
+    "excellent", "succès", "victoire", "podium", "forme", "incontournable",
+    "base solide", "première chance", "bon rôle", "mérite", "crédit",
+    "déclassé", "idéalement engagé", "tout semble réuni", "au top",
+)
+NEGATIVE_TERMS = (
+    "échec", "échoué", "déception", "doute", "sans marge", "moins à l'aise",
+    "nettement moins", "aucune marge", "outsider", "reste barré", "limites",
+    "difficile", "devra sortir le grand jeu", "ton en dessous",
+)
+CONFIDENCE_TERMS = (
+    "incontournable", "base solide", "première chance", "choix", "mérite",
+    "tout semble réuni", "déclassé", "idéalement engagé",
+)
+RECENCY_TERMS = (
+    "vient de", "récemment", "récent", "dernière", "dernier", "cet été",
+    "cette saison", "actuellement", "en dernier",
+)
+
+
+def _text_score(text: Any, terms: Sequence[str]) -> float:
+    normalized = str(text or "").lower()
+    if not normalized:
+        return 0.0
+    hits = sum(normalized.count(term) for term in terms)
+    return min(hits / 3.0, 1.0)
+
+
 def row_to_features(row: Dict[str, Any]) -> List[float]:
     distance = safe_float(row.get("distance"))
     runners = safe_float(row.get("runners_count"))
     ranking_average = safe_float(row.get("ranking_average"))
     presence = safe_float(row.get("ranking_presence"))
+    prize = safe_float(row.get("prize_euros"))
+    runners_safe = max(runners, 1.0)
+    description = row.get("horse_description")
+
+    commentary_positive = _text_score(description, POSITIVE_TERMS)
+    commentary_negative = _text_score(description, NEGATIVE_TERMS)
+    commentary_balance = commentary_positive - commentary_negative
+    commentary_confidence = _text_score(description, CONFIDENCE_TERMS)
+    commentary_recentness = _text_score(description, RECENCY_TERMS)
+    prize_per_runner = min((prize / runners_safe) / 10000.0, 2.0)
 
     return [
         inverse_rank(row.get("favorites_rank")),
@@ -50,6 +94,12 @@ def row_to_features(row: Dict[str, Any]) -> List[float]:
         min(presence / 5.0, 1.0),
         min(distance / 3000.0, 2.0),
         min(runners / 20.0, 2.0),
+        commentary_positive,
+        commentary_negative,
+        commentary_balance,
+        commentary_confidence,
+        commentary_recentness,
+        prize_per_runner,
     ]
 
 

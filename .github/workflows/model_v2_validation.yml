@@ -52,8 +52,8 @@ jobs:
           import numpy as np
           from src.model.logistic_model import LogisticModel
           m = LogisticModel(
-              feature_names=[], mean=[0.0]*9, std=[1.0]*9,
-              intercept=0.0, coefficients=[0.0]*9,
+              feature_names=[], mean=[0.0]*len(__import__("src.model.feature_engineering", fromlist=["FEATURE_NAMES"]).FEATURE_NAMES), std=[1.0]*len(__import__("src.model.feature_engineering", fromlist=["FEATURE_NAMES"]).FEATURE_NAMES),
+              intercept=0.0, coefficients=[0.0]*len(__import__("src.model.feature_engineering", fromlist=["FEATURE_NAMES"]).FEATURE_NAMES),
               positive_weight=2.0
           )
           raw = m.predict_weighted_proba([{}])[0]
