@@ -143,7 +143,8 @@ def run_backtest(rows: Sequence[Dict[str, Any]], min_train_races: int = 5) -> Di
             }
         evaluation["baselines"] = baseline_metrics
         calibration_probabilities.extend(float(row["predicted_probability"]) for row in ranked)
-        calibration_labels.extend(int(row.get("top3", 0)) for row in test_rows)
+        # Keep labels aligned with the same horse ordering as the predicted probabilities.
+        calibration_labels.extend(int(row.get("top3", 0)) for row in ranked)
         evaluation["race_key"] = race_key
         predictions.append(evaluation)
 
