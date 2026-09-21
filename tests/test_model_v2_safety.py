@@ -37,7 +37,7 @@ class TestOrderProbabilitySemantics(unittest.TestCase):
     def test_order_output_does_not_claim_calibrated_win_probability(self):
         from src.model.order_model import OrderModel
         model = OrderModel(
-            feature_names=["x"], mean=[0.0] * len(FEATURE_NAMES), std=[1.0] * len(FEATURE_NAMES), coefficients=[1.0] * len(FEATURE_NAMES)
+            feature_names=list(FEATURE_NAMES), mean=[0.0] * len(FEATURE_NAMES), std=[1.0] * len(FEATURE_NAMES), coefficients=[1.0] * len(FEATURE_NAMES)
         )
         result = model.predict_order([
             {"horse_number": 1, "x": 1.0},
