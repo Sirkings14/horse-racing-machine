@@ -118,7 +118,7 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         gate_reasons.append("insufficient_verified_history")
     if drift_severity == "severe":
         gate_reasons.append("severe_feature_drift")
-    if prediction and agreement in ("meaningful_disagreement", "order_engine_unavailable"):
+    if prediction and agreement == "order_engine_unavailable":
         gate_reasons.append("engine_disagreement_or_unavailable")
     if prediction and confidence == "low":
         gate_reasons.append("low_model_confidence")
