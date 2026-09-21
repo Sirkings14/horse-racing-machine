@@ -18,7 +18,11 @@ def _load(path: Path, default: Any) -> Any:
 
 
 def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str, Any]:
-    """Operational health layer: measure live confidence, recent outcomes and model risk."""
+    """Operational health and pre-race PASS/PLAY_CANDIDATE gate.
+
+    The gate is deliberately conservative. It never claims certainty and
+    returns PASS when the live evidence is too weak or internally unstable.
+    """
     evaluations = _load(EVALUATION_FILE, [])
     if not isinstance(evaluations, list):
         evaluations = []
@@ -34,12 +38,9 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
     def engine_rate(engine: str, metric: str) -> float | None:
         if not n:
             return None
-        hits = 0
-        counted = 0
+        hits = counted = 0
         for item in sample:
-            metrics = item.get("metrics", {})
-            attribution = metrics.get("engine_attribution", {})
-            engine_metrics = attribution.get(engine)
+            engine_metrics = (item.get("metrics", {}).get("engine_attribution", {}).get(engine))
             if isinstance(engine_metrics, dict) and metric in engine_metrics:
                 counted += 1
                 hits += bool(engine_metrics.get(metric))
@@ -48,11 +49,7 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
     def engine_average(engine: str, metric: str) -> float | None:
         values: list[float] = []
         for item in sample:
-            engine_metrics = (
-                item.get("metrics", {})
-                .get("engine_attribution", {})
-                .get(engine, {})
-            )
+            engine_metrics = item.get("metrics", {}).get("engine_attribution", {}).get(engine, {})
             if metric in engine_metrics:
                 try:
                     values.append(float(engine_metrics[metric]))
@@ -60,9 +57,8 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
                     pass
         return round(sum(values) / len(values), 3) if values else None
 
-    engine_metrics = {}
-    for engine in ("strength", "order", "fused"):
-        engine_metrics[engine] = {
+    engine_metrics = {
+        engine: {
             "winner_hit_rate": engine_rate(engine, "winner_hit"),
             "winner_in_top3_rate": engine_rate(engine, "winner_in_top3"),
             "winner_in_top5_rate": engine_rate(engine, "winner_in_top5"),
@@ -73,6 +69,8 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
             "exact_top5_order_rate": engine_rate(engine, "exact_top5_order"),
             "avg_top5_position_hits": engine_average(engine, "top5_position_hits"),
         }
+        for engine in ("strength", "order", "fused")
+    }
 
     drift = _load(DRIFT_FILE, {})
     drift_severity = drift.get("overall_severity") if isinstance(drift, dict) else None
@@ -93,11 +91,14 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
 
     confidence = "unrated"
     reasons: list[str] = []
+    margin = 0.0
+    agreement = None
+    difficulty = {}
     if prediction:
         monitor = prediction.get("monitoring") or {}
         agreement = monitor.get("agreement")
+        difficulty = prediction.get("difficulty") or {}
         ranked = prediction.get("ranked_horses") or []
-        margin = 0.0
         if len(ranked) >= 2:
             margin = float(ranked[0].get("probability_top3", 0.0)) - float(ranked[1].get("probability_top3", 0.0))
         if agreement == "strong_agreement" and margin >= 0.05:
@@ -111,8 +112,29 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         else:
             confidence = "medium"
 
+    gate_reasons: list[str] = []
+    # These are safety/data-quality gates, not claims about race outcome.
+    if drift_severity == "severe":
+        gate_reasons.append("severe_feature_drift")
+    if prediction and agreement in ("meaningful_disagreement", "order_engine_unavailable"):
+        gate_reasons.append("engine_disagreement_or_unavailable")
+    if prediction and confidence == "low":
+        gate_reasons.append("low_model_confidence")
+    if prediction and difficulty.get("bucket") == "high":
+        gate_reasons.append("high_race_difficulty")
+    if prediction and len((prediction.get("ranked_horses") or [])) < 5:
+        gate_reasons.append("insufficient_race_field_data")
+    if n >= 20 and rate("winner_hit") is not None and rate("winner_hit") < 0.10:
+        gate_reasons.append("recent_winner_accuracy_degraded")
+    if n >= 20 and pairwise is not None and float(pairwise) < 0.50:
+        gate_reasons.append("order_engine_below_random_baseline")
+
+    decision = "PASS" if gate_reasons else "PLAY_CANDIDATE"
+
     return {
         "health": health,
+        "decision": decision,
+        "gate_reasons": gate_reasons,
         "recent_verified_predictions": n,
         "recent_winner_hit_rate": rate("winner_hit"),
         "recent_winner_in_top3_rate": rate("winner_in_top3"),
@@ -127,11 +149,16 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         "feature_drift_severity": drift_severity,
         "prediction_confidence": confidence,
         "confidence_reasons": reasons,
-        "guard_policy": {
-            "never_claim_certainty": True,
-            "low_confidence_predictions_are_flagged": True,
-            "order_engine_below_random_baseline_is_not_promoted": True,
-            "severe_feature_drift_is_flagged": True,
+        "difficulty": difficulty,
+        "gate_policy": {
+            "PASS_means_insufficient_or_unstable_evidence": True,
+            "PLAY_CANDIDATE_is_not_a_guarantee_of_outcome_or_profit": True,
+            "severe_feature_drift_blocks": True,
+            "low_confidence_blocks": True,
+            "engine_disagreement_blocks": True,
+            "high_difficulty_blocks": True,
+            "degraded_recent_winner_accuracy_blocks": True,
+            "order_engine_below_random_baseline_blocks": True,
         },
     }
 
@@ -142,11 +169,12 @@ def main() -> dict[str, Any]:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     print("AUTOPILOT GUARD")
+    print(f"Decision: {report['decision']}")
     print(f"Health: {report['health']}")
     print(f"Verified predictions: {report['recent_verified_predictions']}")
     print(f"Recent winner hit rate: {report['recent_winner_hit_rate']}")
     print(f"Order holdout pairwise accuracy: {report['order_walk_forward_pairwise_accuracy']}")
-    print(f"Engine attribution: {report['engine_attribution']}")
+    print(f"Gate reasons: {report['gate_reasons']}")
     return report
 
 
