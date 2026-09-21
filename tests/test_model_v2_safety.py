@@ -19,7 +19,7 @@ class ModelV2SafetyTests(unittest.TestCase):
         self.assertAlmostEqual(float(model.predict_weighted_proba([{}])[0]), 0.5)
         self.assertAlmostEqual(float(model.predict_proba([{}])[0]), 1.0 / 3.0)
 
-    def test_pass_gate_blocks_disagreement(self):
+    def test_pass_gate_blocks_low_confidence_without_engine_disagreement_gate(self):
         from src.model.autopilot_guard import build_autopilot_guard
         result = build_autopilot_guard({
             "monitoring": {"agreement": "meaningful_disagreement"},
@@ -30,7 +30,8 @@ class ModelV2SafetyTests(unittest.TestCase):
             "difficulty": {"bucket": "medium"},
         })
         self.assertEqual(result["decision"], "PASS")
-        self.assertIn("engine_disagreement_or_unavailable", result["gate_reasons"])
+        self.assertIn("low_model_confidence", result["gate_reasons"])
+        self.assertNotIn("engine_disagreement_or_unavailable", result["gate_reasons"])
 
     def test_play_candidate_requires_clean_evidence(self):
         from src.model.autopilot_guard import build_autopilot_guard
