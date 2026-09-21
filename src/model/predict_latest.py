@@ -141,23 +141,17 @@ def resolve_model_version() -> tuple[str, str]:
     return "legacy-production", "legacy_unregistered_models"
 
 
-def load_order_model(rows):
+def load_order_model(rows=None):
+    """Load only the validated production order artifact; never retrain live."""
     path = MODEL_DIR / "order_model.json"
-    if path.exists():
-        try:
-            return OrderModel.from_dict(load_json(path)), "production_order_model"
-        except Exception as error:
-            print(f"Production order model unavailable; rebuilding from verified data: {error}")
-    try:
-        model = fit_order_model(rows)
-        MODEL_DIR.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(model.to_dict(), indent=2, ensure_ascii=False), encoding="utf-8")
-        return model, "runtime_verified_data_order_model"
-    except Exception as error:
-        print(f"Order engine unavailable: {error}")
+    if not path.exists():
+        print("Production order model unavailable: artifact missing")
         return None, "order_engine_unavailable"
-
-
+    try:
+        return OrderModel.from_dict(load_json(path)), "production_order_model"
+    except Exception as error:
+        print(f"Production order model unavailable: {error}")
+        return None, "order_engine_unavailable"
 def main():
     try:
         training_rows = load_json(DATASET_FILE)
