@@ -4,16 +4,17 @@ import unittest
 
 from src.model.feature_drift import compare_feature_distributions
 from src.model.logistic_model import LogisticModel
+from src.model.feature_engineering import FEATURE_NAMES
 
 
 class ModelV2SafetyTests(unittest.TestCase):
     def test_cost_sensitive_probability_prior_correction(self):
         model = LogisticModel(
             feature_names=[],
-            mean=[0.0] * 9,
-            std=[1.0] * 9,
+            mean=[0.0] * len(FEATURE_NAMES),
+            std=[1.0] * len(FEATURE_NAMES),
             intercept=0.0,
-            coefficients=[0.0] * 9,
+            coefficients=[0.0] * len(FEATURE_NAMES),
             positive_weight=2.0,
         )
         self.assertAlmostEqual(float(model.predict_weighted_proba([{}])[0]), 0.5)
