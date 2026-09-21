@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-09-21|LA CAPELLE|1|2026-09-21T19:36:29.474402+00:00",
-  "generated_at": "2026-09-21T19:36:29.474411+00:00",
+  "prediction_id": "2026-09-21|LA CAPELLE|1|2026-09-21T19:37:50.343871+00:00",
+  "generated_at": "2026-09-21T19:37:50.343878+00:00",
   "model_version": "model-20260917T222433Z-a79f6e73",
   "model_status": "registered_champion",
   "order_engine_status": "production_order_model",
@@ -98,6 +98,7 @@
     "health": "insufficient_history",
     "decision": "PASS",
     "gate_reasons": [
+      "insufficient_verified_history",
       "engine_disagreement_or_unavailable",
       "low_model_confidence"
     ],
@@ -164,6 +165,7 @@
     "gate_policy": {
       "PASS_means_insufficient_or_unstable_evidence": true,
       "PLAY_CANDIDATE_is_not_a_guarantee_of_outcome_or_profit": true,
+      "insufficient_verified_history_blocks": true,
       "severe_feature_drift_blocks": true,
       "low_confidence_blocks": true,
       "engine_disagreement_blocks": true,
@@ -383,7 +385,7 @@
     }
   ],
   "feature_drift": {
-    "generated_at": "2026-09-21T19:36:29.474124+00:00",
+    "generated_at": "2026-09-21T19:37:50.343547+00:00",
     "race_key": "2026-09-21|LA CAPELLE|1",
     "status": "insufficient_current_sample",
     "overall_severity": "unrated",
