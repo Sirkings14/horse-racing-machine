@@ -40,7 +40,7 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
             return None
         hits = counted = 0
         for item in sample:
-            engine_metrics = (item.get("metrics", {}).get("engine_attribution", {}).get(engine))
+            engine_metrics = item.get("metrics", {}).get("engine_attribution", {}).get(engine)
             if isinstance(engine_metrics, dict) and metric in engine_metrics:
                 counted += 1
                 hits += bool(engine_metrics.get(metric))
@@ -114,6 +114,8 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
 
     gate_reasons: list[str] = []
     # These are safety/data-quality gates, not claims about race outcome.
+    if n < 20:
+        gate_reasons.append("insufficient_verified_history")
     if drift_severity == "severe":
         gate_reasons.append("severe_feature_drift")
     if prediction and agreement in ("meaningful_disagreement", "order_engine_unavailable"):
@@ -153,6 +155,7 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         "gate_policy": {
             "PASS_means_insufficient_or_unstable_evidence": True,
             "PLAY_CANDIDATE_is_not_a_guarantee_of_outcome_or_profit": True,
+            "insufficient_verified_history_blocks": True,
             "severe_feature_drift_blocks": True,
             "low_confidence_blocks": True,
             "engine_disagreement_blocks": True,
