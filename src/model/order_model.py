@@ -39,7 +39,7 @@ class OrderModel:
                 "horse_number": int(row["horse_number"]),
                 "horse_name": row.get("horse_name"),
                 "order_score": round(float(score), 6),
-                "order_win_probability": round(float(probability), 6),
+                "order_selection_weight": round(float(probability), 6),
             })
         items.sort(key=lambda item: (-item["order_score"], item["horse_number"]))
         for rank, item in enumerate(items, 1):
