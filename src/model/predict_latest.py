@@ -7,7 +7,7 @@ from pathlib import Path
 
 from src.live.registry import eligible_races, mark_predicted, LIVE_DIR
 from src.model.logistic_model import LogisticModel
-from src.model.order_model import OrderModel, fit_order_model
+from src.model.order_model import OrderModel
 from src.model.race_monitor import build_race_monitor
 from src.model.autopilot_guard import build_autopilot_guard
 from src.model.race_difficulty import classify_race
