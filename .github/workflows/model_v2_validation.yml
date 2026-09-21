@@ -49,16 +49,20 @@ jobs:
       - name: Validate probability correction
         run: |
           python - <<'PY'
-          import numpy as np
+          from src.model.feature_engineering import FEATURE_NAMES
           from src.model.logistic_model import LogisticModel
+          n = len(FEATURE_NAMES)
           m = LogisticModel(
-              feature_names=[], mean=[0.0]*9, std=[1.0]*9,
-              intercept=0.0, coefficients=[0.0]*9,
-              positive_weight=2.0
+              feature_names=[],
+              mean=[0.0] * n,
+              std=[1.0] * n,
+              intercept=0.0,
+              coefficients=[0.0] * n,
+              positive_weight=2.0,
           )
           raw = m.predict_weighted_proba([{}])[0]
           corrected = m.predict_proba([{}])[0]
           assert abs(raw - 0.5) < 1e-9
-          assert abs(corrected - (1/3)) < 1e-9
-          print("Probability prior correction passed")
+          assert abs(corrected - (1 / 3)) < 1e-9
+          print(f"Probability prior correction passed for {n} features")
           PY
