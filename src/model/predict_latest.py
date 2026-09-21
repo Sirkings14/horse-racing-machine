@@ -224,7 +224,7 @@ def main():
         order_item = order_map.get(item["horse_number"])
         order_rank = order_item["predicted_finish_position"] if order_item else len(ranked) + 1
         item["order_rank"] = order_rank
-        item["order_win_probability"] = order_item["order_win_probability"] if order_item else None
+        item["order_selection_weight"] = order_item["order_selection_weight"] if order_item else None
         item["final_order_score"] = round(0.6 * (1.0 / item["predicted_rank"]) + 0.4 * (1.0 / order_rank), 6)
 
     final_order = sorted(ranked, key=lambda item: (-item["final_order_score"], item["horse_number"]))
