@@ -4,49 +4,49 @@
   "gate_reasons": [
     "insufficient_verified_history"
   ],
-  "recent_verified_predictions": 4,
+  "recent_verified_predictions": 5,
   "recent_winner_hit_rate": 0.0,
-  "recent_winner_in_top3_rate": 0.5,
+  "recent_winner_in_top3_rate": 0.4,
   "recent_order_engine_winner_hit_rate": 0.0,
   "recent_exact_top3_order_rate": 0.0,
   "recent_exact_top5_order_rate": 0.0,
-  "recent_recommended_hit_average": 3.25,
+  "recent_recommended_hit_average": 3.2,
   "engine_attribution": {
     "strength": {
       "winner_hit_rate": 0.0,
-      "winner_in_top3_rate": 0.5,
-      "winner_in_top5_rate": 0.5,
-      "avg_actual_top3_covered_by_top3": 1.5,
+      "winner_in_top3_rate": 0.3333,
+      "winner_in_top5_rate": 0.6667,
+      "avg_actual_top3_covered_by_top3": 1.333,
       "avg_actual_top3_covered_by_top5": 2.0,
-      "avg_actual_top5_covered_by_top5": 2.5,
+      "avg_actual_top5_covered_by_top5": 2.333,
       "exact_top3_order_rate": 0.0,
       "exact_top5_order_rate": 0.0,
-      "avg_top5_position_hits": 1.0
+      "avg_top5_position_hits": 0.667
     },
     "order": {
       "winner_hit_rate": 0.0,
       "winner_in_top3_rate": 0.0,
-      "winner_in_top5_rate": 0.5,
+      "winner_in_top5_rate": 0.3333,
       "avg_actual_top3_covered_by_top3": 1.0,
-      "avg_actual_top3_covered_by_top5": 1.5,
-      "avg_actual_top5_covered_by_top5": 2.0,
+      "avg_actual_top3_covered_by_top5": 1.333,
+      "avg_actual_top5_covered_by_top5": 1.667,
       "exact_top3_order_rate": 0.0,
       "exact_top5_order_rate": 0.0,
       "avg_top5_position_hits": 0.0
     },
     "fused": {
       "winner_hit_rate": 0.0,
-      "winner_in_top3_rate": 0.5,
-      "winner_in_top5_rate": 0.5,
-      "avg_actual_top3_covered_by_top3": 1.5,
+      "winner_in_top3_rate": 0.3333,
+      "winner_in_top5_rate": 0.6667,
+      "avg_actual_top3_covered_by_top3": 1.333,
       "avg_actual_top3_covered_by_top5": 2.0,
-      "avg_actual_top5_covered_by_top5": 2.5,
+      "avg_actual_top5_covered_by_top5": 2.333,
       "exact_top3_order_rate": 0.0,
       "exact_top5_order_rate": 0.0,
-      "avg_top5_position_hits": 1.0
+      "avg_top5_position_hits": 0.667
     }
   },
-  "order_walk_forward_pairwise_accuracy": 0.591,
+  "order_walk_forward_pairwise_accuracy": 0.5897,
   "feature_drift_severity": "unrated",
   "prediction_confidence": "unrated",
   "confidence_reasons": [],

@@ -1,36 +1,36 @@
 {
   "method": "walk_forward_logistic_top3",
-  "dataset_races": 336,
-  "dataset_rows": 5312,
+  "dataset_races": 337,
+  "dataset_rows": 5328,
   "minimum_training_races": 5,
-  "evaluated_races": 331,
+  "evaluated_races": 332,
   "metrics": {
-    "winner_hit_rate_at_1": 0.145,
-    "winner_hit_rate_at_3": 0.3625,
-    "average_actual_top3_covered_by_predicted_top3": 0.8731,
-    "average_actual_top3_covered_by_predicted_top5": 1.3082,
-    "brier_score_top3": 0.150688,
-    "log_loss_top3": 0.476585,
-    "expected_calibration_error_top3": 0.021105
+    "winner_hit_rate_at_1": 0.1446,
+    "winner_hit_rate_at_3": 0.3614,
+    "average_actual_top3_covered_by_predicted_top3": 0.8735,
+    "average_actual_top3_covered_by_predicted_top5": 1.3102,
+    "brier_score_top3": 0.150661,
+    "log_loss_top3": 0.476497,
+    "expected_calibration_error_top3": 0.021176
   },
   "baselines": {
     "favorites": {
-      "winner_hit_rate_at_1": 0.1692,
-      "winner_hit_rate_at_3": 0.3746,
-      "average_actual_top3_covered_by_predicted_top3": 0.8792,
-      "average_actual_top3_covered_by_predicted_top5": 1.3263
+      "winner_hit_rate_at_1": 0.1687,
+      "winner_hit_rate_at_3": 0.3735,
+      "average_actual_top3_covered_by_predicted_top3": 0.8795,
+      "average_actual_top3_covered_by_predicted_top5": 1.3283
     },
     "form": {
-      "winner_hit_rate_at_1": 0.1148,
-      "winner_hit_rate_at_3": 0.3082,
-      "average_actual_top3_covered_by_predicted_top3": 0.7644,
-      "average_actual_top3_covered_by_predicted_top5": 1.2205
+      "winner_hit_rate_at_1": 0.1145,
+      "winner_hit_rate_at_3": 0.3072,
+      "average_actual_top3_covered_by_predicted_top3": 0.7651,
+      "average_actual_top3_covered_by_predicted_top5": 1.2229
     }
   },
   "calibration": {
-    "brier_score": 0.150688,
-    "log_loss": 0.476585,
-    "ece": 0.021105,
+    "brier_score": 0.150661,
+    "log_loss": 0.476497,
+    "ece": 0.021176,
     "calibration_bins": [
       {
         "lower": 0.0,
@@ -42,16 +42,16 @@
       {
         "lower": 0.1,
         "upper": 0.2,
-        "count": 3563,
-        "mean_probability": 0.145082,
-        "observed_rate": 0.159136
+        "count": 3575,
+        "mean_probability": 0.145055,
+        "observed_rate": 0.159161
       },
       {
         "lower": 0.2,
         "upper": 0.3,
-        "count": 947,
-        "mean_probability": 0.246674,
-        "observed_rate": 0.222809
+        "count": 951,
+        "mean_probability": 0.246748,
+        "observed_rate": 0.222923
       },
       {
         "lower": 0.3,
@@ -91,9 +91,9 @@
       {
         "lower": 0.9,
         "upper": 1.0,
-        "count": 5232,
-        "mean_probability": 0.186667,
-        "observed_rate": 0.189794
+        "count": 5248,
+        "mean_probability": 0.186613,
+        "observed_rate": 0.189787
       }
     ]
   },
@@ -13337,6 +13337,46 @@
         }
       },
       "race_key": "2026-09-21|LA CAPELLE|1"
+    },
+    {
+      "winner": 1,
+      "predicted_top1": 3,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        1,
+        3,
+        4
+      ],
+      "predicted_top3": [
+        3,
+        5,
+        12
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 2,
+      "model_ranking": [
+        3,
+        5,
+        12,
+        10,
+        1
+      ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
+      "race_key": "2026-09-22|AUTEUIL|4"
     }
   ]
 }
