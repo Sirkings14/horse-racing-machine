@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-09-24|COMPIEGNE|1|2026-09-23T14:13:52.541190+00:00",
-  "generated_at": "2026-09-23T14:13:52.541196+00:00",
+  "prediction_id": "2026-09-24|COMPIEGNE|1|2026-09-23T17:20:34.108489+00:00",
+  "generated_at": "2026-09-23T17:20:34.108497+00:00",
   "model_version": "model-20260921T224640Z-dd03225d",
   "model_status": "registered_champion",
   "order_engine_status": "production_order_model",
@@ -395,7 +395,7 @@
     }
   ],
   "feature_drift": {
-    "generated_at": "2026-09-23T14:13:52.540753+00:00",
+    "generated_at": "2026-09-23T17:20:34.108239+00:00",
     "race_key": "2026-09-24|COMPIEGNE|1",
     "status": "insufficient_current_sample",
     "overall_severity": "unrated",
