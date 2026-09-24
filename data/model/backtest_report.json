@@ -1,36 +1,36 @@
 {
   "method": "walk_forward_logistic_top3",
-  "dataset_races": 337,
-  "dataset_rows": 5328,
+  "dataset_races": 338,
+  "dataset_rows": 5343,
   "minimum_training_races": 5,
-  "evaluated_races": 332,
+  "evaluated_races": 333,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1446,
-    "winner_hit_rate_at_3": 0.3614,
-    "average_actual_top3_covered_by_predicted_top3": 0.8735,
-    "average_actual_top3_covered_by_predicted_top5": 1.3102,
-    "brier_score_top3": 0.150661,
-    "log_loss_top3": 0.476497,
-    "expected_calibration_error_top3": 0.021176
+    "winner_hit_rate_at_1": 0.1441,
+    "winner_hit_rate_at_3": 0.3604,
+    "average_actual_top3_covered_by_predicted_top3": 0.8769,
+    "average_actual_top3_covered_by_predicted_top5": 1.3123,
+    "brier_score_top3": 0.150638,
+    "log_loss_top3": 0.47643,
+    "expected_calibration_error_top3": 0.021021
   },
   "baselines": {
     "favorites": {
-      "winner_hit_rate_at_1": 0.1687,
-      "winner_hit_rate_at_3": 0.3735,
-      "average_actual_top3_covered_by_predicted_top3": 0.8795,
-      "average_actual_top3_covered_by_predicted_top5": 1.3283
+      "winner_hit_rate_at_1": 0.1682,
+      "winner_hit_rate_at_3": 0.3724,
+      "average_actual_top3_covered_by_predicted_top3": 0.8829,
+      "average_actual_top3_covered_by_predicted_top5": 1.3303
     },
     "form": {
-      "winner_hit_rate_at_1": 0.1145,
-      "winner_hit_rate_at_3": 0.3072,
-      "average_actual_top3_covered_by_predicted_top3": 0.7651,
-      "average_actual_top3_covered_by_predicted_top5": 1.2229
+      "winner_hit_rate_at_1": 0.1141,
+      "winner_hit_rate_at_3": 0.3063,
+      "average_actual_top3_covered_by_predicted_top3": 0.7688,
+      "average_actual_top3_covered_by_predicted_top5": 1.2252
     }
   },
   "calibration": {
-    "brier_score": 0.150661,
-    "log_loss": 0.476497,
-    "ece": 0.021176,
+    "brier_score": 0.150638,
+    "log_loss": 0.47643,
+    "ece": 0.021021,
     "calibration_bins": [
       {
         "lower": 0.0,
@@ -42,23 +42,23 @@
       {
         "lower": 0.1,
         "upper": 0.2,
-        "count": 3575,
-        "mean_probability": 0.145055,
-        "observed_rate": 0.159161
+        "count": 3583,
+        "mean_probability": 0.14508,
+        "observed_rate": 0.159085
       },
       {
         "lower": 0.2,
         "upper": 0.3,
-        "count": 951,
-        "mean_probability": 0.246748,
-        "observed_rate": 0.222923
+        "count": 956,
+        "mean_probability": 0.246712,
+        "observed_rate": 0.222803
       },
       {
         "lower": 0.3,
         "upper": 0.4,
-        "count": 516,
-        "mean_probability": 0.338563,
-        "observed_rate": 0.327519
+        "count": 518,
+        "mean_probability": 0.338635,
+        "observed_rate": 0.328185
       },
       {
         "lower": 0.4,
@@ -91,9 +91,9 @@
       {
         "lower": 0.9,
         "upper": 1.0,
-        "count": 5248,
-        "mean_probability": 0.186613,
-        "observed_rate": 0.189787
+        "count": 5263,
+        "mean_probability": 0.186682,
+        "observed_rate": 0.189816
       }
     ]
   },
@@ -13377,6 +13377,46 @@
         }
       },
       "race_key": "2026-09-22|AUTEUIL|4"
+    },
+    {
+      "winner": 13,
+      "predicted_top1": 8,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        8,
+        10,
+        13
+      ],
+      "predicted_top3": [
+        8,
+        10,
+        16
+      ],
+      "top3_coverage_by_top3": 2,
+      "top3_coverage_by_top5": 2,
+      "model_ranking": [
+        8,
+        16,
+        10,
+        12,
+        7
+      ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
+      "race_key": "2026-09-24|COMPIEGNE|1"
     }
   ]
 }

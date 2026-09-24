@@ -1,7 +1,7 @@
 {
   "memory_version": 1,
-  "race_count": 337,
-  "horse_row_count": 5328,
+  "race_count": 338,
+  "horse_row_count": 5343,
   "races": [
     {
       "race_key": "2023-05-07|PARISLONGCHAMP|3",
@@ -6837,6 +6837,27 @@
         1,
         4,
         3
+      ]
+    },
+    {
+      "race_key": "2026-09-24|COMPIEGNE|1",
+      "winner": 13,
+      "top3": [
+        13,
+        8,
+        10
+      ],
+      "top4": [
+        13,
+        8,
+        10,
+        1
+      ],
+      "top5": [
+        13,
+        8,
+        10,
+        1
       ]
     }
   ]
