@@ -1,11 +1,11 @@
 {
-  "prediction_id": "2026-09-24|COMPIEGNE|1|2026-09-23T19:45:07.369600+00:00",
-  "generated_at": "2026-09-23T19:45:07.369605+00:00",
+  "prediction_id": "2026-09-24|COMPIEGNE|1|2026-09-24T10:18:27.725036+00:00",
+  "generated_at": "2026-09-24T10:18:27.725039+00:00",
   "model_version": "model-20260921T224640Z-dd03225d",
   "model_status": "registered_champion",
   "order_engine_status": "production_order_model",
   "mode": "live_registry_prediction",
-  "today": "2026-09-23",
+  "today": "2026-09-24",
   "source_program": "live_program_JH_PMUB_DU_24-09-2026_ff4934ae29.pdf",
   "source_url": "https://lonab.bf/sites/default/files/2026-09/JH_PMUB_DU_24-09-2026.pdf",
   "race_key": "2026-09-24|COMPIEGNE|1",
@@ -395,7 +395,7 @@
     }
   ],
   "feature_drift": {
-    "generated_at": "2026-09-23T19:45:07.369376+00:00",
+    "generated_at": "2026-09-24T10:18:27.724830+00:00",
     "race_key": "2026-09-24|COMPIEGNE|1",
     "status": "insufficient_current_sample",
     "overall_severity": "unrated",
