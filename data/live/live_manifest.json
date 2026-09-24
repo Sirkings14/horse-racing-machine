@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-09-24T14:12:17.021656+00:00",
+  "updated_at": "2026-09-24T17:25:16.196644+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -247,12 +247,12 @@
       "structured_file": "structured/2026-09-24_COMPIEGNE_1.json",
       "status": "validated",
       "prediction_status": "predicted",
-      "discovered_at": "2026-09-24T14:12:13.112786+00:00",
+      "discovered_at": "2026-09-24T17:25:04.089739+00:00",
       "result_status": "pending",
       "created_at": "2026-09-22T17:06:57.688650+00:00",
-      "updated_at": "2026-09-24T14:12:17.021653+00:00",
+      "updated_at": "2026-09-24T17:25:16.196641+00:00",
       "prediction_file": "data/predictions/2026-09-24_COMPIEGNE_1.json",
-      "predicted_at": "2026-09-24T14:12:17.021647+00:00"
+      "predicted_at": "2026-09-24T17:25:16.196635+00:00"
     },
     {
       "race_key": "2026-09-25|PARIS|4",
@@ -269,10 +269,30 @@
       "structured_file": "structured/2026-09-25_PARIS_4.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-09-24T14:12:12.932892+00:00",
+      "discovered_at": "2026-09-24T17:25:03.861630+00:00",
       "result_status": "pending",
       "created_at": "2026-09-23T17:19:52.165637+00:00",
-      "updated_at": "2026-09-24T14:12:12.933056+00:00"
+      "updated_at": "2026-09-24T17:25:03.861771+00:00"
+    },
+    {
+      "race_key": "2026-09-26|AUTEUIL|3",
+      "date": "2026-09-26",
+      "track": "AUTEUIL",
+      "race_number": 3,
+      "race_name": "PRIX GRANDLIEU - HAIES",
+      "race_type": "PLAT",
+      "distance": 3900,
+      "runners_count": 16,
+      "horse_count": 16,
+      "source_url": "https://lonab.bf/sites/default/files/2026-09/JH_PMUB_DU_26-09-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_26-09-2026_e366ad41c8.pdf",
+      "structured_file": "structured/2026-09-26_AUTEUIL_3.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-09-24T17:25:03.617989+00:00",
+      "result_status": "pending",
+      "created_at": "2026-09-24T17:24:49.743132+00:00",
+      "updated_at": "2026-09-24T17:25:03.618106+00:00"
     }
   ]
 }
