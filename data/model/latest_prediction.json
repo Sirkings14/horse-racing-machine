@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-09-28|ENGHIEN|1|2026-09-27T14:41:37.573562+00:00",
-  "generated_at": "2026-09-27T14:41:37.573568+00:00",
+  "prediction_id": "2026-09-28|ENGHIEN|1|2026-09-27T17:07:57.700682+00:00",
+  "generated_at": "2026-09-27T17:07:57.700692+00:00",
   "model_version": "model-20260921T224640Z-dd03225d",
   "model_status": "registered_champion",
   "order_engine_status": "production_order_model",
@@ -378,7 +378,7 @@
     }
   ],
   "feature_drift": {
-    "generated_at": "2026-09-27T14:41:37.573149+00:00",
+    "generated_at": "2026-09-27T17:07:57.700227+00:00",
     "race_key": "2026-09-28|ENGHIEN|1",
     "status": "insufficient_current_sample",
     "overall_severity": "unrated",
