@@ -1,11 +1,11 @@
 {
   "method": "walk_forward_pairwise_finishing_order",
-  "dataset_races": 339,
-  "warmup_races": 169,
+  "dataset_races": 340,
+  "warmup_races": 170,
   "evaluated_races": 170,
   "metrics": {
-    "pairwise_order_accuracy": 0.589,
-    "top5_position_accuracy": 0.2745,
+    "pairwise_order_accuracy": 0.5926,
+    "top5_position_accuracy": 0.2776,
     "exact_top3_order_rate": 0.0706,
     "exact_top5_order_rate": 0.0647
   },
@@ -13,13 +13,6 @@
     "pairwise_random_accuracy": 0.5
   },
   "per_race": [
-    {
-      "race_key": "2025-10-23|AUTEUIL|1",
-      "pairwise_accuracy": 0.7,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
     {
       "race_key": "2025-10-25|COMPIEGNE|3",
       "pairwise_accuracy": 0.0,
@@ -710,6 +703,13 @@
       "race_key": "2026-09-26|AUTEUIL|3",
       "pairwise_accuracy": 0.6,
       "top5_position_accuracy": 0.0,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-09-28|ENGHIEN|1",
+      "pairwise_accuracy": 0.8333,
+      "top5_position_accuracy": 0.5,
       "exact_top3": false,
       "exact_top5": false
     }
