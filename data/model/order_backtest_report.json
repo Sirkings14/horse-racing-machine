@@ -1,25 +1,18 @@
 {
   "method": "walk_forward_pairwise_finishing_order",
-  "dataset_races": 340,
+  "dataset_races": 341,
   "warmup_races": 170,
-  "evaluated_races": 170,
+  "evaluated_races": 171,
   "metrics": {
-    "pairwise_order_accuracy": 0.5926,
-    "top5_position_accuracy": 0.2776,
-    "exact_top3_order_rate": 0.0706,
-    "exact_top5_order_rate": 0.0647
+    "pairwise_order_accuracy": 0.5928,
+    "top5_position_accuracy": 0.2779,
+    "exact_top3_order_rate": 0.0702,
+    "exact_top5_order_rate": 0.0643
   },
   "baseline": {
     "pairwise_random_accuracy": 0.5
   },
   "per_race": [
-    {
-      "race_key": "2025-10-25|COMPIEGNE|3",
-      "pairwise_accuracy": 0.0,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
     {
       "race_key": "2025-10-27|CHANTILLY|4",
       "pairwise_accuracy": 0.6667,
@@ -710,6 +703,13 @@
       "race_key": "2026-09-28|ENGHIEN|1",
       "pairwise_accuracy": 0.8333,
       "top5_position_accuracy": 0.5,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-09-29|CHANTILLY|1",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.3333,
       "exact_top3": false,
       "exact_top5": false
     }

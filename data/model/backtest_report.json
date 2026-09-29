@@ -1,36 +1,36 @@
 {
   "method": "walk_forward_logistic_top3",
-  "dataset_races": 340,
-  "dataset_rows": 5374,
+  "dataset_races": 341,
+  "dataset_rows": 5390,
   "minimum_training_races": 5,
-  "evaluated_races": 335,
+  "evaluated_races": 336,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1433,
-    "winner_hit_rate_at_3": 0.3612,
-    "average_actual_top3_covered_by_predicted_top3": 0.8776,
-    "average_actual_top3_covered_by_predicted_top5": 1.3194,
-    "brier_score_top3": 0.150556,
-    "log_loss_top3": 0.476192,
-    "expected_calibration_error_top3": 0.020515
+    "winner_hit_rate_at_1": 0.1429,
+    "winner_hit_rate_at_3": 0.3631,
+    "average_actual_top3_covered_by_predicted_top3": 0.881,
+    "average_actual_top3_covered_by_predicted_top5": 1.3214,
+    "brier_score_top3": 0.15049,
+    "log_loss_top3": 0.476021,
+    "expected_calibration_error_top3": 0.020232
   },
   "baselines": {
     "favorites": {
-      "winner_hit_rate_at_1": 0.1672,
-      "winner_hit_rate_at_3": 0.3731,
-      "average_actual_top3_covered_by_predicted_top3": 0.8866,
-      "average_actual_top3_covered_by_predicted_top5": 1.3373
+      "winner_hit_rate_at_1": 0.1667,
+      "winner_hit_rate_at_3": 0.372,
+      "average_actual_top3_covered_by_predicted_top3": 0.8869,
+      "average_actual_top3_covered_by_predicted_top5": 1.3393
     },
     "form": {
-      "winner_hit_rate_at_1": 0.1134,
-      "winner_hit_rate_at_3": 0.3075,
-      "average_actual_top3_covered_by_predicted_top3": 0.7701,
-      "average_actual_top3_covered_by_predicted_top5": 1.2299
+      "winner_hit_rate_at_1": 0.1161,
+      "winner_hit_rate_at_3": 0.3095,
+      "average_actual_top3_covered_by_predicted_top3": 0.7738,
+      "average_actual_top3_covered_by_predicted_top5": 1.2321
     }
   },
   "calibration": {
-    "brier_score": 0.150556,
-    "log_loss": 0.476192,
-    "ece": 0.020515,
+    "brier_score": 0.15049,
+    "log_loss": 0.476021,
+    "ece": 0.020232,
     "calibration_bins": [
       {
         "lower": 0.0,
@@ -42,23 +42,23 @@
       {
         "lower": 0.1,
         "upper": 0.2,
-        "count": 3604,
-        "mean_probability": 0.14507,
-        "observed_rate": 0.158713
+        "count": 3615,
+        "mean_probability": 0.145068,
+        "observed_rate": 0.158506
       },
       {
         "lower": 0.2,
         "upper": 0.3,
-        "count": 962,
-        "mean_probability": 0.246752,
-        "observed_rate": 0.223493
+        "count": 964,
+        "mean_probability": 0.246791,
+        "observed_rate": 0.223029
       },
       {
         "lower": 0.3,
         "upper": 0.4,
-        "count": 522,
-        "mean_probability": 0.338677,
-        "observed_rate": 0.329502
+        "count": 525,
+        "mean_probability": 0.338659,
+        "observed_rate": 0.331429
       },
       {
         "lower": 0.4,
@@ -91,9 +91,9 @@
       {
         "lower": 0.9,
         "upper": 1.0,
-        "count": 5294,
-        "mean_probability": 0.186705,
-        "observed_rate": 0.189838
+        "count": 5310,
+        "mean_probability": 0.18673,
+        "observed_rate": 0.189831
       }
     ]
   },
@@ -13497,6 +13497,46 @@
         }
       },
       "race_key": "2026-09-28|ENGHIEN|1"
+    },
+    {
+      "winner": 1,
+      "predicted_top1": 9,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        1,
+        9,
+        15
+      ],
+      "predicted_top3": [
+        1,
+        9,
+        12
+      ],
+      "top3_coverage_by_top3": 2,
+      "top3_coverage_by_top5": 2,
+      "model_ranking": [
+        9,
+        1,
+        12,
+        2,
+        7
+      ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 2
+        }
+      },
+      "race_key": "2026-09-29|CHANTILLY|1"
     }
   ]
 }

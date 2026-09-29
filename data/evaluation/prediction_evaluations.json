@@ -1065,5 +1065,167 @@
       "minimum_positions_required": 3,
       "arrival_positions_available": 8
     }
+  },
+  {
+    "race_key": "2026-09-29|CHANTILLY|1",
+    "prediction_id": "2026-09-29|CHANTILLY|1|2026-09-29T20:57:18.537153+00:00",
+    "model_version": "model-20260921T224640Z-dd03225d",
+    "predicted_at": "2026-09-29T20:57:18.537160+00:00",
+    "verified_at": "2026-09-29T23:08:45.106476+00:00",
+    "result": {
+      "race_key": "2026-09-29|CHANTILLY|1",
+      "date": "2026-09-29",
+      "track": "CHANTILLY",
+      "race_number": 1,
+      "arrival": [
+        1,
+        9,
+        15,
+        250,
+        118,
+        20,
+        750,
+        659
+      ],
+      "winner": 1,
+      "second": 9,
+      "third": 15
+    },
+    "prediction": {
+      "recommended_numbers": [
+        9,
+        1,
+        12,
+        2,
+        7
+      ],
+      "top3_numbers": [
+        9,
+        1,
+        12
+      ],
+      "ranked_top5": [
+        9,
+        1,
+        12,
+        2,
+        7
+      ],
+      "predicted_finish_order_top5": [
+        9,
+        1,
+        12,
+        2,
+        7
+      ],
+      "order_engine_top5": [
+        9,
+        1,
+        12,
+        7,
+        2
+      ],
+      "monitoring": {
+        "status": "monitoring_complete",
+        "strength_engine_top5": [
+          9,
+          1,
+          12,
+          2,
+          7
+        ],
+        "order_engine_top5": [
+          9,
+          1,
+          12,
+          7,
+          2
+        ],
+        "strength_engine_winner_candidate": 9,
+        "order_engine_winner_candidate": 9,
+        "common_top3": [
+          1,
+          9,
+          12
+        ],
+        "common_top5": [
+          1,
+          2,
+          7,
+          9,
+          12
+        ],
+        "agreement": "strong_agreement",
+        "agreement_score_top5": 1.0,
+        "warning": null
+      },
+      "difficulty": {
+        "bucket": "medium",
+        "difficulty_score": 54.65,
+        "field_size": 16,
+        "top1_top2_margin": 0.034507,
+        "top1_top3_spread": 0.047854,
+        "engine_top5_overlap": 1.0,
+        "signals": [
+          "tight_top1_top3_spread",
+          "large_field"
+        ]
+      }
+    },
+    "metrics": {
+      "winner_hit": false,
+      "winner_in_top3": true,
+      "winner_in_top5": true,
+      "order_engine_winner_hit": false,
+      "strength_engine_winner_hit": false,
+      "fused_engine_winner_hit": false,
+      "actual_top3_covered_by_predicted_top3": 2,
+      "actual_top3_covered_by_predicted_top5": 2,
+      "recommended_hit_count": 2,
+      "exact_top3_order": false,
+      "exact_top5_order": false,
+      "top5_position_hits": 0,
+      "engine_attribution": {
+        "strength": {
+          "winner_hit": false,
+          "winner_in_top3": true,
+          "winner_in_top5": true,
+          "actual_top3_covered_by_top3": 2,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "order": {
+          "winner_hit": false,
+          "winner_in_top3": true,
+          "winner_in_top5": true,
+          "actual_top3_covered_by_top3": 2,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "fused": {
+          "winner_hit": false,
+          "winner_in_top3": true,
+          "winner_in_top5": true,
+          "actual_top3_covered_by_top3": 2,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        }
+      }
+    },
+    "status": "result_verified",
+    "result_validation": {
+      "accepted_for_learning": true,
+      "minimum_positions_required": 3,
+      "arrival_positions_available": 8
+    }
   }
 ]
