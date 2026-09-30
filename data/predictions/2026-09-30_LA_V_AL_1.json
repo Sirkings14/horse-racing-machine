@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-09-30|LA V AL|1|2026-09-30T13:59:09.790803+00:00",
-  "generated_at": "2026-09-30T13:59:09.790811+00:00",
+  "prediction_id": "2026-09-30|LA V AL|1|2026-09-30T15:54:36.384097+00:00",
+  "generated_at": "2026-09-30T15:54:36.384105+00:00",
   "model_version": "model-20260929T230845Z-26bd42f1",
   "model_status": "registered_champion",
   "order_engine_status": "production_order_model",
@@ -376,7 +376,7 @@
     }
   ],
   "feature_drift": {
-    "generated_at": "2026-09-30T13:59:09.790421+00:00",
+    "generated_at": "2026-09-30T15:54:36.383716+00:00",
     "race_key": "2026-09-30|LA V AL|1",
     "status": "insufficient_current_sample",
     "overall_severity": "unrated",
