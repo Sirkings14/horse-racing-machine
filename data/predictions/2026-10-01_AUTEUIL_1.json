@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-10-01|AUTEUIL|1|2026-10-01T16:24:23.611936+00:00",
-  "generated_at": "2026-10-01T16:24:23.611944+00:00",
+  "prediction_id": "2026-10-01|AUTEUIL|1|2026-10-01T18:30:07.620259+00:00",
+  "generated_at": "2026-10-01T18:30:07.620267+00:00",
   "model_version": "model-20260929T230845Z-26bd42f1",
   "model_status": "registered_champion",
   "order_engine_status": "production_order_model",
@@ -384,7 +384,7 @@
     }
   ],
   "feature_drift": {
-    "generated_at": "2026-10-01T16:24:23.611579+00:00",
+    "generated_at": "2026-10-01T18:30:07.619885+00:00",
     "race_key": "2026-10-01|AUTEUIL|1",
     "status": "insufficient_current_sample",
     "overall_severity": "unrated",
