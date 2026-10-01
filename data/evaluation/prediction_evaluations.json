@@ -1227,5 +1227,168 @@
       "minimum_positions_required": 3,
       "arrival_positions_available": 8
     }
+  },
+  {
+    "race_key": "2026-10-01|AUTEUIL|1",
+    "prediction_id": "2026-10-01|AUTEUIL|1|2026-10-01T21:10:41.457092+00:00",
+    "model_version": "model-20260929T230845Z-26bd42f1",
+    "predicted_at": "2026-10-01T21:10:41.457101+00:00",
+    "verified_at": "2026-10-01T23:23:20.801232+00:00",
+    "result": {
+      "race_key": "2026-10-01|AUTEUIL|1",
+      "date": "2026-10-01",
+      "track": "AUTEUIL",
+      "race_number": 1,
+      "arrival": [
+        15,
+        3,
+        14,
+        750,
+        238,
+        18,
+        550,
+        720
+      ],
+      "winner": 15,
+      "second": 3,
+      "third": 14
+    },
+    "prediction": {
+      "recommended_numbers": [
+        1,
+        3,
+        12,
+        14,
+        9
+      ],
+      "top3_numbers": [
+        1,
+        3,
+        12
+      ],
+      "ranked_top5": [
+        1,
+        3,
+        12,
+        14,
+        9
+      ],
+      "predicted_finish_order_top5": [
+        1,
+        3,
+        12,
+        14,
+        9
+      ],
+      "order_engine_top5": [
+        1,
+        12,
+        3,
+        9,
+        14
+      ],
+      "monitoring": {
+        "status": "monitoring_complete",
+        "strength_engine_top5": [
+          1,
+          3,
+          12,
+          14,
+          9
+        ],
+        "order_engine_top5": [
+          1,
+          12,
+          3,
+          9,
+          14
+        ],
+        "strength_engine_winner_candidate": 1,
+        "order_engine_winner_candidate": 1,
+        "common_top3": [
+          1,
+          3,
+          12
+        ],
+        "common_top5": [
+          1,
+          3,
+          9,
+          12,
+          14
+        ],
+        "agreement": "strong_agreement",
+        "agreement_score_top5": 1.0,
+        "warning": null
+      },
+      "difficulty": {
+        "bucket": "high",
+        "difficulty_score": 67.4,
+        "field_size": 15,
+        "top1_top2_margin": 0.000276,
+        "top1_top3_spread": 0.044913,
+        "engine_top5_overlap": 1.0,
+        "signals": [
+          "tight_top1_top2_margin",
+          "tight_top1_top3_spread",
+          "large_field"
+        ]
+      }
+    },
+    "metrics": {
+      "winner_hit": false,
+      "winner_in_top3": false,
+      "winner_in_top5": false,
+      "order_engine_winner_hit": false,
+      "strength_engine_winner_hit": false,
+      "fused_engine_winner_hit": false,
+      "actual_top3_covered_by_predicted_top3": 1,
+      "actual_top3_covered_by_predicted_top5": 2,
+      "recommended_hit_count": 2,
+      "exact_top3_order": false,
+      "exact_top5_order": false,
+      "top5_position_hits": 1,
+      "engine_attribution": {
+        "strength": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 1
+        },
+        "order": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "fused": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 1
+        }
+      }
+    },
+    "status": "result_verified",
+    "result_validation": {
+      "accepted_for_learning": true,
+      "minimum_positions_required": 3,
+      "arrival_positions_available": 8
+    }
   }
 ]

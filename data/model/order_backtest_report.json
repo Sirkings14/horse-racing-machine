@@ -1,11 +1,11 @@
 {
   "method": "walk_forward_pairwise_finishing_order",
-  "dataset_races": 341,
-  "warmup_races": 170,
+  "dataset_races": 342,
+  "warmup_races": 171,
   "evaluated_races": 171,
   "metrics": {
-    "pairwise_order_accuracy": 0.5928,
-    "top5_position_accuracy": 0.2779,
+    "pairwise_order_accuracy": 0.5929,
+    "top5_position_accuracy": 0.2772,
     "exact_top3_order_rate": 0.0702,
     "exact_top5_order_rate": 0.0643
   },
@@ -13,13 +13,6 @@
     "pairwise_random_accuracy": 0.5
   },
   "per_race": [
-    {
-      "race_key": "2025-10-27|CHANTILLY|4",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
     {
       "race_key": "2025-10-28|CHANTILLY|3",
       "pairwise_accuracy": 0.3,
@@ -710,6 +703,13 @@
       "race_key": "2026-09-29|CHANTILLY|1",
       "pairwise_accuracy": 0.6667,
       "top5_position_accuracy": 0.3333,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-10-01|AUTEUIL|1",
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.0,
       "exact_top3": false,
       "exact_top5": false
     }
