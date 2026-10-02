@@ -83,6 +83,9 @@ def extract_track(text: str) -> Optional[str]:
     return track
 
 
+MAX_REASONABLE_HORSE_NUMBER = 20
+
+
 def clean_number_sequence(
     values: List[str],
 ) -> List[int]:
@@ -102,6 +105,12 @@ def clean_number_sequence(
 
         if number <= 0:
             continue
+
+        # Result documents can place payout/money figures after the arrival.
+        # Supported PMU/LONAB race fields use small horse numbers. Once a
+        # larger token appears, stop instead of treating money as a horse.
+        if number > MAX_REASONABLE_HORSE_NUMBER:
+            break
 
         if number in seen:
             continue
