@@ -74,15 +74,15 @@ def result_records(program_index: dict[str, dict[str, Any]]) -> tuple[dict[str, 
     return records, audit
 
 
-def load_existing(program_index: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]]:
+def load_existing(program_index: dict[str, dict[str, Any]]) -> tuple[dict[str, dict[str, Any]], int]:
     if not EVALUATION_FILE.exists():
-        return {}
+        return {}, 0
     try:
         payload = load_json(EVALUATION_FILE)
     except Exception:
-        return {}
+        return {}, 0
     if not isinstance(payload, list):
-        return {}
+        return {}, 0
 
     cleaned: dict[str, dict[str, Any]] = {}
     quarantined = 0
@@ -104,7 +104,7 @@ def load_existing(program_index: dict[str, dict[str, Any]]) -> dict[str, dict[st
 
     if quarantined:
         print(f"Quarantined {quarantined} previously stored evaluation(s) failing result-truth validation.")
-    return cleaned
+    return cleaned, quarantined
 
 
 def _engine_metrics(predicted: list[int], actual_top3: list[int], actual_top5: list[int]) -> dict[str, Any]:
@@ -196,7 +196,7 @@ def safe_prediction_files() -> list[Path]:
 def main() -> dict[str, Any]:
     program_index = build_program_runner_index()
     results, truth_audit = result_records(program_index)
-    evaluations = load_existing(program_index)
+    evaluations, quarantined_evaluations = load_existing(program_index)
     processed = 0
 
     for path in safe_prediction_files():
@@ -221,7 +221,7 @@ def main() -> dict[str, Any]:
         processed += 1
 
     EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
-    truth_audit["stored_evaluations_quarantined"] = 0
+    truth_audit["stored_evaluations_quarantined"] = quarantined_evaluations
     ordered = [evaluations[key] for key in sorted(evaluations)]
     audit_path = EVALUATION_DIR / "result_truth_audit.json"
     audit_path.write_text(
