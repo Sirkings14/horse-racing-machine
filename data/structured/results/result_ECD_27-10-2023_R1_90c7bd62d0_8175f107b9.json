@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_27-10-2023_R1_90c7bd62d0_8175f107b9.txt",
-    "parsed_at": "2026-10-02T09:35:02.139943Z",
+    "parsed_at": "2026-10-02T23:10:18.380972Z",
     "date": "2023-10-27",
     "meeting": 1,
     "track": "VINCENNES",
@@ -12,18 +12,12 @@
                 14,
                 3,
                 16,
-                5,
-                250,
-                1,
-                4,
-                700,
-                164
+                5
             ],
             "winner": 14,
             "second": 3,
             "third": 16,
-            "fourth": 5,
-            "fifth": 250
+            "fourth": 5
         },
         {
             "race_number": 2,
@@ -31,17 +25,12 @@
                 12,
                 4,
                 14,
-                1,
-                700,
-                2,
-                800,
-                392
+                1
             ],
             "winner": 12,
             "second": 4,
             "third": 14,
-            "fourth": 1,
-            "fifth": 700
+            "fourth": 1
         },
         {
             "race_number": 3,
@@ -49,50 +38,34 @@
                 15,
                 9,
                 5,
-                2,
-                600,
-                45,
-                500,
-                2804
+                2
             ],
             "winner": 15,
             "second": 9,
             "third": 5,
-            "fourth": 2,
-            "fifth": 600
+            "fourth": 2
         },
         {
             "race_number": 4,
             "arrival": [
                 7,
                 9,
-                2,
-                650,
-                11,
-                1,
-                593
+                2
             ],
             "winner": 7,
             "second": 9,
-            "third": 2,
-            "fourth": 650,
-            "fifth": 11
+            "third": 2
         },
         {
             "race_number": 5,
             "arrival": [
                 11,
                 9,
-                7,
-                600,
-                1,
-                464
+                7
             ],
             "winner": 11,
             "second": 9,
-            "third": 7,
-            "fourth": 600,
-            "fifth": 1
+            "third": 7
         },
         {
             "race_number": 6,
@@ -100,18 +73,12 @@
                 4,
                 13,
                 5,
-                1,
-                50,
-                10,
-                16,
-                250,
-                55
+                1
             ],
             "winner": 4,
             "second": 13,
             "third": 5,
-            "fourth": 1,
-            "fifth": 50
+            "fourth": 1
         },
         {
             "race_number": 7,
@@ -119,17 +86,12 @@
                 7,
                 12,
                 10,
-                1,
-                350,
-                3,
-                750,
-                248
+                1
             ],
             "winner": 7,
             "second": 12,
             "third": 10,
-            "fourth": 1,
-            "fifth": 350
+            "fourth": 1
         }
     ]
 }

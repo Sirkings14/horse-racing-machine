@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "champion_version": "model-20260929T230845Z-26bd42f1",
-  "champion_promoted_at": "2026-09-29T23:08:56.761480+00:00",
+  "champion_version": "model-20261002T231223Z-b11dba7d",
+  "champion_promoted_at": "2026-10-02T23:12:41.784947+00:00",
   "history": [
     {
       "version": "model-20260917T222433Z-a79f6e73",
@@ -312,7 +312,7 @@
     },
     {
       "version": "model-20260929T230845Z-26bd42f1",
-      "status": "champion",
+      "status": "retired",
       "created_at": "2026-09-29T23:08:45.298572+00:00",
       "metrics": {
         "winner_hit_rate_at_1": 0.1429,
@@ -422,9 +422,24 @@
           "finishing_order"
         ]
       }
+    },
+    {
+      "version": "model-20261002T231223Z-b11dba7d",
+      "status": "champion",
+      "created_at": "2026-10-02T23:12:24.150770+00:00",
+      "metrics": {
+        "winner_hit_rate_at_1": 0.1458,
+        "winner_hit_rate_at_3": 0.3631,
+        "average_actual_top3_covered_by_predicted_top3": 0.881,
+        "average_actual_top3_covered_by_predicted_top5": 1.3274,
+        "brier_score_top3": 0.150382,
+        "log_loss_top3": 0.475744,
+        "expected_calibration_error_top3": 0.01921
+      },
+      "promoted_at": "2026-10-02T23:12:41.784937+00:00"
     }
   ],
-  "updated_at": "2026-10-02T09:36:41.416093+00:00",
+  "updated_at": "2026-10-02T23:12:41.786319+00:00",
   "promotion_ledger": [
     {
       "version": "model-20260919T213949Z-ed5493bb",
@@ -845,6 +860,21 @@
         "expected_calibration_error_top3": 0.01994
       },
       "timestamp": "2026-10-02T09:36:41.416082+00:00"
+    },
+    {
+      "version": "model-20261002T231223Z-b11dba7d",
+      "decision": "promoted",
+      "reason": "candidate_metrics_exceeded_champion",
+      "metrics": {
+        "winner_hit_rate_at_1": 0.1458,
+        "winner_hit_rate_at_3": 0.3631,
+        "average_actual_top3_covered_by_predicted_top3": 0.881,
+        "average_actual_top3_covered_by_predicted_top5": 1.3274,
+        "brier_score_top3": 0.150382,
+        "log_loss_top3": 0.475744,
+        "expected_calibration_error_top3": 0.01921
+      },
+      "timestamp": "2026-10-02T23:12:41.786312+00:00"
     }
   ]
 }

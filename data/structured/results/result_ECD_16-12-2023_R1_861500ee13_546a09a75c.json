@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_16-12-2023_R1_861500ee13_546a09a75c.txt",
-    "parsed_at": "2026-10-02T09:35:01.838041Z",
+    "parsed_at": "2026-10-02T23:10:18.003865Z",
     "date": "2023-12-16",
     "meeting": 1,
     "track": "PARIS-VINCENNES",
@@ -11,34 +11,22 @@
             "arrival": [
                 18,
                 2,
-                16,
-                950,
-                4,
-                350,
-                356
+                16
             ],
             "winner": 18,
             "second": 2,
-            "third": 16,
-            "fourth": 950,
-            "fifth": 4
+            "third": 16
         },
         {
             "race_number": 2,
             "arrival": [
                 3,
                 8,
-                5,
-                550,
-                16,
-                4,
-                98
+                5
             ],
             "winner": 3,
             "second": 8,
-            "third": 5,
-            "fourth": 550,
-            "fifth": 16
+            "third": 5
         },
         {
             "race_number": 3,
@@ -46,50 +34,34 @@
                 5,
                 3,
                 9,
-                2,
-                200,
-                136
+                2
             ],
             "winner": 5,
             "second": 3,
             "third": 9,
-            "fourth": 2,
-            "fifth": 200
+            "fourth": 2
         },
         {
             "race_number": 4,
             "arrival": [
                 15,
                 12,
-                1,
-                650,
-                71,
-                750,
-                817
+                1
             ],
             "winner": 15,
             "second": 12,
-            "third": 1,
-            "fourth": 650,
-            "fifth": 71
+            "third": 1
         },
         {
             "race_number": 5,
             "arrival": [
                 4,
                 9,
-                7,
-                750,
-                8,
-                2,
-                300,
-                318
+                7
             ],
             "winner": 4,
             "second": 9,
-            "third": 7,
-            "fourth": 750,
-            "fifth": 8
+            "third": 7
         },
         {
             "race_number": 6,
@@ -97,36 +69,23 @@
                 6,
                 2,
                 14,
-                1,
-                450,
-                7,
-                4,
-                100,
-                242
+                1
             ],
             "winner": 6,
             "second": 2,
             "third": 14,
-            "fourth": 1,
-            "fifth": 450
+            "fourth": 1
         },
         {
             "race_number": 7,
             "arrival": [
                 10,
                 12,
-                8,
-                900,
-                7,
-                3,
-                200,
-                265
+                8
             ],
             "winner": 10,
             "second": 12,
-            "third": 8,
-            "fourth": 900,
-            "fifth": 7
+            "third": 8
         },
         {
             "race_number": 8,
@@ -134,18 +93,12 @@
                 6,
                 10,
                 1,
-                3,
-                550,
-                2,
-                8,
-                250,
-                86
+                3
             ],
             "winner": 6,
             "second": 10,
             "third": 1,
-            "fourth": 3,
-            "fifth": 550
+            "fourth": 3
         },
         {
             "race_number": 9,
@@ -153,18 +106,12 @@
                 9,
                 7,
                 6,
-                2,
-                100,
-                3,
-                12,
-                400,
-                43
+                2
             ],
             "winner": 9,
             "second": 7,
             "third": 6,
-            "fourth": 2,
-            "fifth": 100
+            "fourth": 2
         }
     ]
 }

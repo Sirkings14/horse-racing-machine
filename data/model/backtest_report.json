@@ -1,71 +1,71 @@
 {
   "method": "walk_forward_logistic_top3",
-  "dataset_races": 342,
-  "dataset_rows": 5405,
+  "dataset_races": 341,
+  "dataset_rows": 5390,
   "minimum_training_races": 5,
-  "evaluated_races": 337,
+  "evaluated_races": 336,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1424,
-    "winner_hit_rate_at_3": 0.362,
-    "average_actual_top3_covered_by_predicted_top3": 0.8813,
-    "average_actual_top3_covered_by_predicted_top5": 1.3234,
-    "brier_score_top3": 0.150489,
-    "log_loss_top3": 0.476007,
-    "expected_calibration_error_top3": 0.01994
+    "winner_hit_rate_at_1": 0.1458,
+    "winner_hit_rate_at_3": 0.3631,
+    "average_actual_top3_covered_by_predicted_top3": 0.881,
+    "average_actual_top3_covered_by_predicted_top5": 1.3274,
+    "brier_score_top3": 0.150382,
+    "log_loss_top3": 0.475744,
+    "expected_calibration_error_top3": 0.01921
   },
   "baselines": {
     "favorites": {
-      "winner_hit_rate_at_1": 0.1662,
-      "winner_hit_rate_at_3": 0.3709,
-      "average_actual_top3_covered_by_predicted_top3": 0.8872,
-      "average_actual_top3_covered_by_predicted_top5": 1.3383
+      "winner_hit_rate_at_1": 0.1667,
+      "winner_hit_rate_at_3": 0.372,
+      "average_actual_top3_covered_by_predicted_top3": 0.8899,
+      "average_actual_top3_covered_by_predicted_top5": 1.3423
     },
     "form": {
-      "winner_hit_rate_at_1": 0.1157,
-      "winner_hit_rate_at_3": 0.3086,
-      "average_actual_top3_covered_by_predicted_top3": 0.7715,
-      "average_actual_top3_covered_by_predicted_top5": 1.2344
+      "winner_hit_rate_at_1": 0.1161,
+      "winner_hit_rate_at_3": 0.3095,
+      "average_actual_top3_covered_by_predicted_top3": 0.7738,
+      "average_actual_top3_covered_by_predicted_top5": 1.2381
     }
   },
   "calibration": {
-    "brier_score": 0.150489,
-    "log_loss": 0.476007,
-    "ece": 0.01994,
+    "brier_score": 0.150382,
+    "log_loss": 0.475744,
+    "ece": 0.01921,
     "calibration_bins": [
       {
         "lower": 0.0,
         "upper": 0.1,
         "count": 114,
-        "mean_probability": 0.086522,
+        "mean_probability": 0.086474,
         "observed_rate": 0.131579
       },
       {
         "lower": 0.1,
         "upper": 0.2,
-        "count": 3626,
-        "mean_probability": 0.145076,
-        "observed_rate": 0.158301
+        "count": 3618,
+        "mean_probability": 0.14487,
+        "observed_rate": 0.157546
       },
       {
         "lower": 0.2,
         "upper": 0.3,
-        "count": 966,
-        "mean_probability": 0.246787,
-        "observed_rate": 0.223602
+        "count": 953,
+        "mean_probability": 0.246627,
+        "observed_rate": 0.221406
       },
       {
         "lower": 0.3,
         "upper": 0.4,
         "count": 527,
-        "mean_probability": 0.338582,
-        "observed_rate": 0.332068
+        "mean_probability": 0.338493,
+        "observed_rate": 0.337761
       },
       {
         "lower": 0.4,
         "upper": 0.5,
-        "count": 81,
-        "mean_probability": 0.433073,
-        "observed_rate": 0.320988
+        "count": 87,
+        "mean_probability": 0.431342,
+        "observed_rate": 0.333333
       },
       {
         "lower": 0.5,
@@ -91,9 +91,9 @@
       {
         "lower": 0.9,
         "upper": 1.0,
-        "count": 5325,
-        "mean_probability": 0.186721,
-        "observed_rate": 0.189859
+        "count": 5310,
+        "mean_probability": 0.186708,
+        "observed_rate": 0.189831
       }
     ]
   },
@@ -9099,46 +9099,6 @@
       "race_key": "2025-10-06|ENGHIEN|1"
     },
     {
-      "winner": 6,
-      "predicted_top1": 14,
-      "winner_hit_at_1": false,
-      "winner_hit_at_3": false,
-      "actual_top3": [
-        6,
-        8,
-        16
-      ],
-      "predicted_top3": [
-        3,
-        9,
-        14
-      ],
-      "top3_coverage_by_top3": 0,
-      "top3_coverage_by_top5": 0,
-      "model_ranking": [
-        14,
-        3,
-        9,
-        13,
-        4
-      ],
-      "baselines": {
-        "favorites": {
-          "winner_hit_at_1": false,
-          "winner_hit_at_3": false,
-          "top3_coverage_by_top3": 0,
-          "top3_coverage_by_top5": 0
-        },
-        "form": {
-          "winner_hit_at_1": false,
-          "winner_hit_at_3": false,
-          "top3_coverage_by_top3": 0,
-          "top3_coverage_by_top5": 0
-        }
-      },
-      "race_key": "2025-10-07|AUTEUIL|1"
-    },
-    {
       "winner": 14,
       "predicted_top1": 14,
       "winner_hit_at_1": true,
@@ -9149,7 +9109,7 @@
         16
       ],
       "predicted_top3": [
-        5,
+        4,
         14,
         16
       ],
@@ -9158,8 +9118,8 @@
       "model_ranking": [
         14,
         16,
-        5,
         4,
+        5,
         9
       ],
       "baselines": {
@@ -9317,8 +9277,8 @@
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         6,
-        11,
         4,
+        11,
         3,
         1
       ],
@@ -9629,17 +9589,17 @@
         15
       ],
       "predicted_top3": [
-        1,
         4,
-        6
+        6,
+        7
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         4,
         6,
-        1,
         7,
+        1,
         3
       ],
       "baselines": {
@@ -9710,17 +9670,17 @@
       ],
       "predicted_top3": [
         4,
-        5,
+        9,
         11
       ],
-      "top3_coverage_by_top3": 2,
+      "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
         11,
         4,
+        9,
         5,
-        12,
-        9
+        12
       ],
       "baselines": {
         "favorites": {
@@ -9919,8 +9879,8 @@
         5,
         1,
         16,
-        4,
-        6
+        6,
+        4
       ],
       "baselines": {
         "favorites": {
@@ -10119,8 +10079,8 @@
         9,
         5,
         14,
-        3,
-        16
+        16,
+        3
       ],
       "baselines": {
         "favorites": {
@@ -10180,7 +10140,7 @@
     },
     {
       "winner": 1,
-      "predicted_top1": 3,
+      "predicted_top1": 2,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -10196,8 +10156,8 @@
       "top3_coverage_by_top3": 2,
       "top3_coverage_by_top5": 3,
       "model_ranking": [
-        3,
         2,
+        3,
         7,
         5,
         1
@@ -10280,7 +10240,7 @@
         1,
         7,
         10,
-        2
+        16
       ],
       "baselines": {
         "favorites": {
@@ -10479,8 +10439,8 @@
         16,
         2,
         15,
-        12,
-        6
+        6,
+        12
       ],
       "baselines": {
         "favorites": {
@@ -10631,16 +10591,16 @@
       "predicted_top3": [
         1,
         2,
-        7
+        12
       ],
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
         1,
         2,
-        7,
         12,
-        10
+        7,
+        4
       ],
       "baselines": {
         "favorites": {
@@ -10800,7 +10760,7 @@
         3,
         7,
         9,
-        12
+        10
       ],
       "baselines": {
         "favorites": {
@@ -11420,8 +11380,8 @@
     },
     {
       "winner": 1,
-      "predicted_top1": 2,
-      "winner_hit_at_1": false,
+      "predicted_top1": 1,
+      "winner_hit_at_1": true,
       "winner_hit_at_3": true,
       "actual_top3": [
         1,
@@ -11436,8 +11396,8 @@
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
-        2,
         1,
+        2,
         5,
         13,
         10
@@ -11840,7 +11800,7 @@
         3,
         5,
         11,
-        4
+        6
       ],
       "baselines": {
         "favorites": {
@@ -11960,7 +11920,7 @@
         7,
         3,
         12,
-        17
+        15
       ],
       "baselines": {
         "favorites": {
@@ -12080,7 +12040,7 @@
         8,
         3,
         9,
-        5
+        10
       ],
       "baselines": {
         "favorites": {
@@ -12620,7 +12580,7 @@
     },
     {
       "winner": 8,
-      "predicted_top1": 15,
+      "predicted_top1": 11,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -12636,8 +12596,8 @@
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 2,
       "model_ranking": [
-        15,
         11,
+        15,
         6,
         8,
         4
@@ -12660,7 +12620,7 @@
     },
     {
       "winner": 2,
-      "predicted_top1": 5,
+      "predicted_top1": 16,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -12676,8 +12636,8 @@
       "top3_coverage_by_top3": 1,
       "top3_coverage_by_top5": 1,
       "model_ranking": [
-        5,
         16,
+        5,
         9,
         12,
         10
@@ -13519,8 +13479,8 @@
         9,
         1,
         12,
-        2,
-        7
+        7,
+        2
       ],
       "baselines": {
         "favorites": {
@@ -13560,7 +13520,7 @@
         3,
         12,
         14,
-        4
+        9
       ],
       "baselines": {
         "favorites": {

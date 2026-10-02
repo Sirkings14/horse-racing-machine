@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_14-04-2025_R1_d9e17a9858_606d4c548c.txt",
-    "parsed_at": "2026-10-02T09:35:01.764968Z",
+    "parsed_at": "2026-10-02T23:10:17.914092Z",
     "date": "2025-04-14",
     "meeting": 1,
     "track": "CHANTILLY",
@@ -12,49 +12,33 @@
                 12,
                 3,
                 4,
-                2,
-                50,
-                71,
-                57,
-                700,
-                215
+                2
             ],
             "winner": 12,
             "second": 3,
             "third": 4,
-            "fourth": 2,
-            "fifth": 50
+            "fourth": 2
         },
         {
             "race_number": 2,
             "arrival": [
                 7,
                 6,
-                3,
-                900,
-                2,
-                1,
-                550,
-                298
+                3
             ],
             "winner": 7,
             "second": 6,
-            "third": 3,
-            "fourth": 900,
-            "fifth": 2
+            "third": 3
         },
         {
             "race_number": 3,
             "arrival": [
                 1,
-                4,
-                700,
-                30
+                4
             ],
             "winner": 1,
             "second": 4,
-            "third": 700,
-            "fourth": 30
+            "third": null
         },
         {
             "race_number": 4,
@@ -62,34 +46,23 @@
                 2,
                 8,
                 10,
-                1,
-                350,
-                4,
-                11,
-                750,
-                46
+                1
             ],
             "winner": 2,
             "second": 8,
             "third": 10,
-            "fourth": 1,
-            "fifth": 350
+            "fourth": 1
         },
         {
             "race_number": 5,
             "arrival": [
                 1,
                 2,
-                10,
-                950,
-                550,
-                342
+                10
             ],
             "winner": 1,
             "second": 2,
-            "third": 10,
-            "fourth": 950,
-            "fifth": 550
+            "third": 10
         },
         {
             "race_number": 6,
@@ -97,18 +70,12 @@
                 7,
                 2,
                 3,
-                9,
-                750,
-                1,
-                22,
-                700,
-                26
+                9
             ],
             "winner": 7,
             "second": 2,
             "third": 3,
-            "fourth": 9,
-            "fifth": 750
+            "fourth": 9
         },
         {
             "race_number": 7,
@@ -116,36 +83,23 @@
                 9,
                 2,
                 10,
-                1,
-                850,
-                7,
-                8,
-                100,
-                81
+                1
             ],
             "winner": 9,
             "second": 2,
             "third": 10,
-            "fourth": 1,
-            "fifth": 850
+            "fourth": 1
         },
         {
             "race_number": 8,
             "arrival": [
                 8,
                 9,
-                10,
-                850,
-                13,
-                17,
-                150,
-                29
+                10
             ],
             "winner": 8,
             "second": 9,
-            "third": 10,
-            "fourth": 850,
-            "fifth": 13
+            "third": 10
         },
         {
             "race_number": 9,
@@ -153,18 +107,12 @@
                 13,
                 11,
                 8,
-                1,
-                100,
-                5,
-                9,
-                450,
-                61
+                1
             ],
             "winner": 13,
             "second": 11,
             "third": 8,
-            "fourth": 1,
-            "fifth": 100
+            "fourth": 1
         }
     ]
 }

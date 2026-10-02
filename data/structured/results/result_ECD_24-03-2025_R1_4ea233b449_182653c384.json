@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_24-03-2025_R1_4ea233b449_182653c384.txt",
-    "parsed_at": "2026-10-02T09:35:02.033460Z",
+    "parsed_at": "2026-10-02T23:10:18.257627Z",
     "date": "2025-03-24",
     "meeting": 1,
     "track": "CHANTILLY",
@@ -12,31 +12,22 @@
                 4,
                 9,
                 1,
-                2,
-                700,
-                53,
-                15,
-                350,
-                882
+                2
             ],
             "winner": 4,
             "second": 9,
             "third": 1,
-            "fourth": 2,
-            "fifth": 700
+            "fourth": 2
         },
         {
             "race_number": 2,
             "arrival": [
                 1,
-                5,
-                850,
-                32
+                5
             ],
             "winner": 1,
             "second": 5,
-            "third": 850,
-            "fourth": 32
+            "third": null
         },
         {
             "race_number": 3,
@@ -45,9 +36,7 @@
                 2,
                 3,
                 1,
-                4,
-                600,
-                137
+                4
             ],
             "winner": 8,
             "second": 2,
@@ -60,18 +49,11 @@
             "arrival": [
                 1,
                 11,
-                5,
-                400,
-                2,
-                3,
-                450,
-                125
+                5
             ],
             "winner": 1,
             "second": 11,
-            "third": 5,
-            "fourth": 400,
-            "fifth": 2
+            "third": 5
         },
         {
             "race_number": 5,
@@ -79,18 +61,12 @@
                 4,
                 6,
                 2,
-                1,
-                450,
-                3,
-                11,
-                50,
-                34
+                1
             ],
             "winner": 4,
             "second": 6,
             "third": 2,
-            "fourth": 1,
-            "fifth": 450
+            "fourth": 1
         },
         {
             "race_number": 6,
@@ -98,18 +74,12 @@
                 15,
                 4,
                 8,
-                1,
-                200,
-                5,
-                3,
-                450,
-                175
+                1
             ],
             "winner": 15,
             "second": 4,
             "third": 8,
-            "fourth": 1,
-            "fifth": 200
+            "fourth": 1
         },
         {
             "race_number": 7,
@@ -117,15 +87,12 @@
                 5,
                 14,
                 9,
-                1,
-                600,
-                334
+                1
             ],
             "winner": 5,
             "second": 14,
             "third": 9,
-            "fourth": 1,
-            "fifth": 600
+            "fourth": 1
         },
         {
             "race_number": 8,
@@ -133,17 +100,12 @@
                 7,
                 6,
                 10,
-                1,
-                250,
-                5,
-                50,
-                91
+                1
             ],
             "winner": 7,
             "second": 6,
             "third": 10,
-            "fourth": 1,
-            "fifth": 250
+            "fourth": 1
         }
     ]
 }

@@ -4,7 +4,7 @@
     "prediction_id": "2026-09-15|COMPIEGNE|1|2026-09-15T19:47:34.198825+00:00",
     "model_version": "legacy-production",
     "predicted_at": "2026-09-15T19:47:34.198833+00:00",
-    "verified_at": "2026-09-15T22:27:39.998537+00:00",
+    "verified_at": "2026-10-02T23:12:23.663401+00:00",
     "result": {
       "race_key": "2026-09-15|COMPIEGNE|1",
       "date": "2026-09-15",
@@ -14,16 +14,21 @@
         7,
         8,
         6,
-        1,
-        900,
-        53,
-        4,
-        700,
-        2732
+        1
       ],
       "winner": 7,
       "second": 8,
-      "third": 6
+      "third": 6,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-09-15|COMPIEGNE|1",
+        "arrival_positions_available": 4,
+        "declared_runner_count": 16,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMUB_DU_15-09-2026_4ddce79efc_56b66a8126.json"
+      }
     },
     "prediction": {
       "recommended_numbers": [
@@ -44,24 +49,79 @@
         1,
         6,
         4
-      ]
+      ],
+      "predicted_finish_order_top5": [],
+      "order_engine_top5": [],
+      "monitoring": {},
+      "difficulty": {}
     },
     "metrics": {
       "winner_hit": false,
       "winner_in_top3": true,
       "winner_in_top5": true,
+      "order_engine_winner_hit": false,
+      "strength_engine_winner_hit": false,
+      "fused_engine_winner_hit": false,
       "actual_top3_covered_by_predicted_top3": 2,
       "actual_top3_covered_by_predicted_top5": 3,
-      "recommended_hit_count": 5
+      "recommended_hit_count": 4,
+      "exact_top3_order": false,
+      "exact_top5_order": false,
+      "top5_position_hits": 0,
+      "engine_attribution": {
+        "strength": {
+          "winner_hit": false,
+          "winner_in_top3": true,
+          "winner_in_top5": true,
+          "actual_top3_covered_by_top3": 2,
+          "actual_top3_covered_by_top5": 3,
+          "actual_top5_covered_by_top5": 4,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "order": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 0,
+          "actual_top3_covered_by_top5": 0,
+          "actual_top5_covered_by_top5": 0,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "fused": {
+          "winner_hit": false,
+          "winner_in_top3": true,
+          "winner_in_top5": true,
+          "actual_top3_covered_by_top3": 2,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 3,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        }
+      }
     },
-    "status": "result_verified"
+    "status": "result_verified",
+    "result_validation": {
+      "accepted_for_learning": true,
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-09-15|COMPIEGNE|1",
+      "arrival_positions_available": 4,
+      "declared_runner_count": 16,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMUB_DU_15-09-2026_4ddce79efc_56b66a8126.json"
+    }
   },
   {
     "race_key": "2026-09-16|FEURS|1",
     "prediction_id": "2026-09-16|FEURS|1|2026-09-16T19:39:07.752712+00:00",
     "model_version": "legacy-production",
     "predicted_at": "2026-09-16T19:39:07.752719+00:00",
-    "verified_at": "2026-09-16T22:19:29.439359+00:00",
+    "verified_at": "2026-10-02T23:12:23.664775+00:00",
     "result": {
       "race_key": "2026-09-16|FEURS|1",
       "date": "2026-09-16",
@@ -70,16 +130,21 @@
       "arrival": [
         9,
         7,
-        10,
-        650,
-        175,
-        2,
-        700,
-        3626
+        10
       ],
       "winner": 9,
       "second": 7,
-      "third": 10
+      "third": 10,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-09-16|FEURS|1",
+        "arrival_positions_available": 3,
+        "declared_runner_count": 15,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMUB_DU_16-09-2026_02df72b078_d743c09eb8.json"
+      }
     },
     "prediction": {
       "recommended_numbers": [
@@ -100,24 +165,79 @@
         15,
         10,
         4
-      ]
+      ],
+      "predicted_finish_order_top5": [],
+      "order_engine_top5": [],
+      "monitoring": {},
+      "difficulty": {}
     },
     "metrics": {
       "winner_hit": false,
       "winner_in_top3": false,
       "winner_in_top5": false,
+      "order_engine_winner_hit": false,
+      "strength_engine_winner_hit": false,
+      "fused_engine_winner_hit": false,
       "actual_top3_covered_by_predicted_top3": 1,
       "actual_top3_covered_by_predicted_top5": 2,
-      "recommended_hit_count": 2
+      "recommended_hit_count": 2,
+      "exact_top3_order": false,
+      "exact_top5_order": false,
+      "top5_position_hits": 0,
+      "engine_attribution": {
+        "strength": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "order": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 0,
+          "actual_top3_covered_by_top5": 0,
+          "actual_top5_covered_by_top5": 0,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "fused": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 1,
+          "actual_top5_covered_by_top5": 1,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        }
+      }
     },
-    "status": "result_verified"
+    "status": "result_verified",
+    "result_validation": {
+      "accepted_for_learning": true,
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-09-16|FEURS|1",
+      "arrival_positions_available": 3,
+      "declared_runner_count": 15,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMUB_DU_16-09-2026_02df72b078_d743c09eb8.json"
+    }
   },
   {
     "race_key": "2026-09-19|CHANTILLY|4",
     "prediction_id": "2026-09-19|CHANTILLY|4|2026-09-19T18:41:41.349155+00:00",
     "model_version": "model-20260917T222433Z-a79f6e73",
     "predicted_at": "2026-09-19T18:41:41.349160+00:00",
-    "verified_at": "2026-09-19T21:39:49.135729+00:00",
+    "verified_at": "2026-10-02T23:12:23.666201+00:00",
     "result": {
       "race_key": "2026-09-19|CHANTILLY|4",
       "date": "2026-09-19",
@@ -127,16 +247,21 @@
         5,
         1,
         12,
-        2,
-        50,
-        53,
-        13,
-        300,
-        922
+        2
       ],
       "winner": 5,
       "second": 1,
-      "third": 12
+      "third": 12,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-09-19|CHANTILLY|4",
+        "arrival_positions_available": 4,
+        "declared_runner_count": 16,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMUB_DU_19-09-2026_c781c80e9e_2debdad17b.json"
+      }
     },
     "prediction": {
       "recommended_numbers": [
@@ -221,7 +346,7 @@
       "fused_engine_winner_hit": false,
       "actual_top3_covered_by_predicted_top3": 1,
       "actual_top3_covered_by_predicted_top5": 2,
-      "recommended_hit_count": 4,
+      "recommended_hit_count": 3,
       "exact_top3_order": false,
       "exact_top5_order": false,
       "top5_position_hits": 2,
@@ -264,8 +389,13 @@
     "status": "result_verified",
     "result_validation": {
       "accepted_for_learning": true,
-      "minimum_positions_required": 3,
-      "arrival_positions_available": 9
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-09-19|CHANTILLY|4",
+      "arrival_positions_available": 4,
+      "declared_runner_count": 16,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMUB_DU_19-09-2026_c781c80e9e_2debdad17b.json"
     }
   },
   {
@@ -273,7 +403,7 @@
     "prediction_id": "2026-09-21|LA CAPELLE|1|2026-09-21T20:30:05.291621+00:00",
     "model_version": "model-20260917T222433Z-a79f6e73",
     "predicted_at": "2026-09-21T20:30:05.291626+00:00",
-    "verified_at": "2026-09-21T22:46:40.477557+00:00",
+    "verified_at": "2026-10-02T23:12:23.667509+00:00",
     "result": {
       "race_key": "2026-09-21|LA CAPELLE|1",
       "date": "2026-09-21",
@@ -282,16 +412,21 @@
       "arrival": [
         13,
         3,
-        16,
-        850,
-        70,
-        1,
-        600,
-        7772
+        16
       ],
       "winner": 13,
       "second": 3,
-      "third": 16
+      "third": 16,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-09-21|LA CAPELLE|1",
+        "arrival_positions_available": 3,
+        "declared_runner_count": 16,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMUB_DU_21-09-2026_718eed09dd_49b217f3ec.json"
+      }
     },
     "prediction": {
       "recommended_numbers": [
@@ -416,8 +551,13 @@
     "status": "result_verified",
     "result_validation": {
       "accepted_for_learning": true,
-      "minimum_positions_required": 3,
-      "arrival_positions_available": 8
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-09-21|LA CAPELLE|1",
+      "arrival_positions_available": 3,
+      "declared_runner_count": 16,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMUB_DU_21-09-2026_718eed09dd_49b217f3ec.json"
     }
   },
   {
@@ -425,7 +565,7 @@
     "prediction_id": "2026-09-22|AUTEUIL|4|2026-09-22T19:49:12.017772+00:00",
     "model_version": "model-20260921T224640Z-dd03225d",
     "predicted_at": "2026-09-22T19:49:12.017779+00:00",
-    "verified_at": "2026-09-22T22:25:16.604235+00:00",
+    "verified_at": "2026-10-02T23:12:23.668695+00:00",
     "result": {
       "race_key": "2026-09-22|AUTEUIL|4",
       "date": "2026-09-22",
@@ -434,16 +574,21 @@
       "arrival": [
         1,
         4,
-        3,
-        700,
-        64,
-        5,
-        650,
-        2328
+        3
       ],
       "winner": 1,
       "second": 4,
-      "third": 3
+      "third": 3,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-09-22|AUTEUIL|4",
+        "arrival_positions_available": 3,
+        "declared_runner_count": 16,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMUB_DU_22-09-2026_59ae3d80eb_b99fd7695d.json"
+      }
     },
     "prediction": {
       "recommended_numbers": [
@@ -534,7 +679,7 @@
       "fused_engine_winner_hit": false,
       "actual_top3_covered_by_predicted_top3": 1,
       "actual_top3_covered_by_predicted_top5": 2,
-      "recommended_hit_count": 3,
+      "recommended_hit_count": 2,
       "exact_top3_order": false,
       "exact_top5_order": false,
       "top5_position_hits": 0,
@@ -577,8 +722,13 @@
     "status": "result_verified",
     "result_validation": {
       "accepted_for_learning": true,
-      "minimum_positions_required": 3,
-      "arrival_positions_available": 8
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-09-22|AUTEUIL|4",
+      "arrival_positions_available": 3,
+      "declared_runner_count": 16,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMUB_DU_22-09-2026_59ae3d80eb_b99fd7695d.json"
     }
   },
   {
@@ -586,7 +736,7 @@
     "prediction_id": "2026-09-24|COMPIEGNE|1|2026-09-24T20:03:40.502456+00:00",
     "model_version": "model-20260921T224640Z-dd03225d",
     "predicted_at": "2026-09-24T20:03:40.502461+00:00",
-    "verified_at": "2026-09-24T22:41:40.522123+00:00",
+    "verified_at": "2026-10-02T23:12:23.669952+00:00",
     "result": {
       "race_key": "2026-09-24|COMPIEGNE|1",
       "date": "2026-09-24",
@@ -596,15 +746,21 @@
         13,
         8,
         10,
-        1,
-        100,
-        125,
-        350,
-        1270
+        1
       ],
       "winner": 13,
       "second": 8,
-      "third": 10
+      "third": 10,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-09-24|COMPIEGNE|1",
+        "arrival_positions_available": 4,
+        "declared_runner_count": 16,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMUB_DU_24-09-2026_b8e36c78ba_1ebb248100.json"
+      }
     },
     "prediction": {
       "recommended_numbers": [
@@ -739,8 +895,13 @@
     "status": "result_verified",
     "result_validation": {
       "accepted_for_learning": true,
-      "minimum_positions_required": 3,
-      "arrival_positions_available": 8
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-09-24|COMPIEGNE|1",
+      "arrival_positions_available": 4,
+      "declared_runner_count": 16,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMUB_DU_24-09-2026_b8e36c78ba_1ebb248100.json"
     }
   },
   {
@@ -748,7 +909,7 @@
     "prediction_id": "2026-09-26|AUTEUIL|3|2026-09-26T19:18:10.203349+00:00",
     "model_version": "model-20260921T224640Z-dd03225d",
     "predicted_at": "2026-09-26T19:18:10.203359+00:00",
-    "verified_at": "2026-09-26T22:08:19.425562+00:00",
+    "verified_at": "2026-10-02T23:12:23.671282+00:00",
     "result": {
       "race_key": "2026-09-26|AUTEUIL|3",
       "date": "2026-09-26",
@@ -758,16 +919,21 @@
         6,
         5,
         12,
-        2,
-        700,
-        38,
-        9,
-        900,
-        1212
+        2
       ],
       "winner": 6,
       "second": 5,
-      "third": 12
+      "third": 12,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-09-26|AUTEUIL|3",
+        "arrival_positions_available": 4,
+        "declared_runner_count": 16,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMUB_DU_26-09-2026_e366ad41c8_2917428aed.json"
+      }
     },
     "prediction": {
       "recommended_numbers": [
@@ -900,8 +1066,13 @@
     "status": "result_verified",
     "result_validation": {
       "accepted_for_learning": true,
-      "minimum_positions_required": 3,
-      "arrival_positions_available": 9
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-09-26|AUTEUIL|3",
+      "arrival_positions_available": 4,
+      "declared_runner_count": 16,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMUB_DU_26-09-2026_e366ad41c8_2917428aed.json"
     }
   },
   {
@@ -909,7 +1080,7 @@
     "prediction_id": "2026-09-28|ENGHIEN|1|2026-09-28T22:12:33.292994+00:00",
     "model_version": "model-20260921T224640Z-dd03225d",
     "predicted_at": "2026-09-28T22:12:33.293003+00:00",
-    "verified_at": "2026-09-28T23:56:34.767891+00:00",
+    "verified_at": "2026-10-02T23:12:23.764371+00:00",
     "result": {
       "race_key": "2026-09-28|ENGHIEN|1",
       "date": "2026-09-28",
@@ -918,16 +1089,21 @@
       "arrival": [
         15,
         4,
-        14,
-        650,
-        139,
-        2,
-        700,
-        3591
+        14
       ],
       "winner": 15,
       "second": 4,
-      "third": 14
+      "third": 14,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-09-28|ENGHIEN|1",
+        "arrival_positions_available": 3,
+        "declared_runner_count": 15,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMUB_DU_28-09-2026_92a26ec9f0_31be330399.json"
+      }
     },
     "prediction": {
       "recommended_numbers": [
@@ -1062,8 +1238,13 @@
     "status": "result_verified",
     "result_validation": {
       "accepted_for_learning": true,
-      "minimum_positions_required": 3,
-      "arrival_positions_available": 8
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-09-28|ENGHIEN|1",
+      "arrival_positions_available": 3,
+      "declared_runner_count": 15,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMUB_DU_28-09-2026_92a26ec9f0_31be330399.json"
     }
   },
   {
@@ -1071,7 +1252,7 @@
     "prediction_id": "2026-09-29|CHANTILLY|1|2026-09-29T20:57:18.537153+00:00",
     "model_version": "model-20260921T224640Z-dd03225d",
     "predicted_at": "2026-09-29T20:57:18.537160+00:00",
-    "verified_at": "2026-09-29T23:08:45.106476+00:00",
+    "verified_at": "2026-10-02T23:12:23.765746+00:00",
     "result": {
       "race_key": "2026-09-29|CHANTILLY|1",
       "date": "2026-09-29",
@@ -1080,16 +1261,21 @@
       "arrival": [
         1,
         9,
-        15,
-        250,
-        118,
-        20,
-        750,
-        659
+        15
       ],
       "winner": 1,
       "second": 9,
-      "third": 15
+      "third": 15,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-09-29|CHANTILLY|1",
+        "arrival_positions_available": 3,
+        "declared_runner_count": 16,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMUB_DU_29-09-2026_0258c2846e_d615bfb8aa.json"
+      }
     },
     "prediction": {
       "recommended_numbers": [
@@ -1224,8 +1410,13 @@
     "status": "result_verified",
     "result_validation": {
       "accepted_for_learning": true,
-      "minimum_positions_required": 3,
-      "arrival_positions_available": 8
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-09-29|CHANTILLY|1",
+      "arrival_positions_available": 3,
+      "declared_runner_count": 16,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMUB_DU_29-09-2026_0258c2846e_d615bfb8aa.json"
     }
   },
   {
@@ -1233,7 +1424,7 @@
     "prediction_id": "2026-10-01|AUTEUIL|1|2026-10-01T21:10:41.457092+00:00",
     "model_version": "model-20260929T230845Z-26bd42f1",
     "predicted_at": "2026-10-01T21:10:41.457101+00:00",
-    "verified_at": "2026-10-01T23:23:20.801232+00:00",
+    "verified_at": "2026-10-02T23:12:23.767047+00:00",
     "result": {
       "race_key": "2026-10-01|AUTEUIL|1",
       "date": "2026-10-01",
@@ -1242,16 +1433,21 @@
       "arrival": [
         15,
         3,
-        14,
-        750,
-        238,
-        18,
-        550,
-        720
+        14
       ],
       "winner": 15,
       "second": 3,
-      "third": 14
+      "third": 14,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-10-01|AUTEUIL|1",
+        "arrival_positions_available": 3,
+        "declared_runner_count": 15,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMU_DU_01-10-2026_78f862f066_908349a438.json"
+      }
     },
     "prediction": {
       "recommended_numbers": [
@@ -1387,8 +1583,13 @@
     "status": "result_verified",
     "result_validation": {
       "accepted_for_learning": true,
-      "minimum_positions_required": 3,
-      "arrival_positions_available": 8
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-10-01|AUTEUIL|1",
+      "arrival_positions_available": 3,
+      "declared_runner_count": 15,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMU_DU_01-10-2026_78f862f066_908349a438.json"
     }
   }
 ]

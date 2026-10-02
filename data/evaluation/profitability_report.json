@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-10-02T23:12:23.772401+00:00",
+  "status": "awaiting_market_odds",
+  "total_verified_predictions": 10,
+  "predictions_with_observed_market_odds": 0,
+  "pricing_coverage": 0.0,
+  "paper_accounting": {
+    "stake_per_selection": 1.0,
+    "total_stake": 0,
+    "total_return": 0,
+    "total_profit": 0,
+    "roi": null
+  },
+  "rows": [],
+  "requirements_for_real_edge_measurement": [
+    "capture market odds at prediction time",
+    "store the bet type and exact stake rule",
+    "store official payout/dividend for the same bet type",
+    "calculate ROI and maximum drawdown on chronological out-of-sample predictions",
+    "compare model implied probability with independently observed market price"
+  ],
+  "policy": {
+    "never_invent_odds": true,
+    "no_profitability_claim_without_observed_prices": true,
+    "paper_results_are_not_live_betting_results": true
+  }
+}

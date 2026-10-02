@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-10-02T23:12:23.768224+00:00",
+  "result_races_seen": 21638,
+  "accepted": 374,
+  "rejected": 20220,
+  "stored_evaluations_quarantined": 10,
+  "stored_verified_evaluations_after_quarantine": 10,
+  "policy": {
+    "unknown_result_numbers_never_train": true,
+    "duplicate_arrival_numbers_never_train": true,
+    "fewer_than_three_positions_never_train": true,
+    "program_roster_is_authoritative": true
+  }
+}

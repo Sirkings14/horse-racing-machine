@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_06-09-2025_R1_796ac3429b_714012ab4d.txt",
-    "parsed_at": "2026-10-02T09:35:01.574859Z",
+    "parsed_at": "2026-10-02T23:10:17.660848Z",
     "date": "2025-09-06",
     "meeting": 1,
     "track": "VINCENNES",
@@ -11,88 +11,55 @@
             "arrival": [
                 5,
                 9,
-                7,
-                850,
-                2,
-                1,
-                600,
-                220
+                7
             ],
             "winner": 5,
             "second": 9,
-            "third": 7,
-            "fourth": 850,
-            "fifth": 2
+            "third": 7
         },
         {
             "race_number": 2,
             "arrival": [
                 5,
                 6,
-                9,
-                550,
-                13,
-                15,
-                950,
-                24
+                9
             ],
             "winner": 5,
             "second": 6,
-            "third": 9,
-            "fourth": 550,
-            "fifth": 13
+            "third": 9
         },
         {
             "race_number": 3,
             "arrival": [
                 9,
                 2,
-                7,
-                550,
-                13,
-                4,
-                92
+                7
             ],
             "winner": 9,
             "second": 2,
-            "third": 7,
-            "fourth": 550,
-            "fifth": 13
+            "third": 7
         },
         {
             "race_number": 4,
             "arrival": [
                 14,
                 5,
-                15,
-                700,
-                121,
-                2,
-                150,
-                4350
+                15
             ],
             "winner": 14,
             "second": 5,
-            "third": 15,
-            "fourth": 700,
-            "fifth": 121
+            "third": 15
         },
         {
             "race_number": 5,
             "arrival": [
                 7,
                 3,
-                4,
-                700,
-                2,
-                600,
-                285
+                4
             ],
             "winner": 7,
             "second": 3,
-            "third": 4,
-            "fourth": 700,
-            "fifth": 2
+            "third": 4
         },
         {
             "race_number": 6,
@@ -100,17 +67,12 @@
                 4,
                 15,
                 9,
-                1,
-                700,
-                3,
-                500,
-                226
+                1
             ],
             "winner": 4,
             "second": 15,
             "third": 9,
-            "fourth": 1,
-            "fifth": 700
+            "fourth": 1
         },
         {
             "race_number": 7,
@@ -118,51 +80,34 @@
                 8,
                 1,
                 12,
-                5,
-                550,
-                112
+                5
             ],
             "winner": 8,
             "second": 1,
             "third": 12,
-            "fourth": 5,
-            "fifth": 550
+            "fourth": 5
         },
         {
             "race_number": 8,
             "arrival": [
                 9,
                 7,
-                2,
-                750,
-                5,
-                4,
-                100,
-                109
+                2
             ],
             "winner": 9,
             "second": 7,
-            "third": 2,
-            "fourth": 750,
-            "fifth": 5
+            "third": 2
         },
         {
             "race_number": 9,
             "arrival": [
                 10,
                 7,
-                3,
-                750,
-                4,
-                2,
-                900,
-                147
+                3
             ],
             "winner": 10,
             "second": 7,
-            "third": 3,
-            "fourth": 750,
-            "fifth": 4
+            "third": 3
         }
     ]
 }

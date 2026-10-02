@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_18-01-2024_R1_57fc7921ea_1471524b4b.txt",
-    "parsed_at": "2026-10-02T09:35:01.865564Z",
+    "parsed_at": "2026-10-02T23:10:18.041191Z",
     "date": "2024-01-18",
     "meeting": 1,
     "track": "PARIS-VINCENNES",
@@ -11,18 +11,11 @@
             "arrival": [
                 15,
                 16,
-                5,
-                600,
-                221,
-                29,
-                850,
-                282
+                5
             ],
             "winner": 15,
             "second": 16,
-            "third": 5,
-            "fourth": 600,
-            "fifth": 221
+            "third": 5
         },
         {
             "race_number": 2,
@@ -30,72 +23,45 @@
                 2,
                 6,
                 10,
-                1,
-                100,
-                11,
-                7,
-                650,
-                120
+                1
             ],
             "winner": 2,
             "second": 6,
             "third": 10,
-            "fourth": 1,
-            "fifth": 100
+            "fourth": 1
         },
         {
             "race_number": 3,
             "arrival": [
                 4,
                 8,
-                7,
-                850,
-                5,
-                2,
-                700,
-                188
+                7
             ],
             "winner": 4,
             "second": 8,
-            "third": 7,
-            "fourth": 850,
-            "fifth": 5
+            "third": 7
         },
         {
             "race_number": 4,
             "arrival": [
                 7,
                 5,
-                1,
-                800,
-                3,
-                6,
-                700,
-                73
+                1
             ],
             "winner": 7,
             "second": 5,
-            "third": 1,
-            "fourth": 800,
-            "fifth": 3
+            "third": 1
         },
         {
             "race_number": 5,
             "arrival": [
                 6,
                 9,
-                5,
-                650,
-                7,
-                8,
-                700,
-                54
+                5
             ],
             "winner": 6,
             "second": 9,
-            "third": 5,
-            "fourth": 650,
-            "fifth": 7
+            "third": 5
         },
         {
             "race_number": 6,
@@ -103,52 +69,34 @@
                 6,
                 7,
                 5,
-                3,
-                450,
-                1,
-                8,
-                64
+                3
             ],
             "winner": 6,
             "second": 7,
             "third": 5,
-            "fourth": 3,
-            "fifth": 450
+            "fourth": 3
         },
         {
             "race_number": 7,
             "arrival": [
                 2,
                 3,
-                10,
-                950,
-                6,
-                5,
-                350,
-                92
+                10
             ],
             "winner": 2,
             "second": 3,
-            "third": 10,
-            "fourth": 950,
-            "fifth": 6
+            "third": 10
         },
         {
             "race_number": 8,
             "arrival": [
                 9,
                 15,
-                3,
-                800,
-                8,
-                24,
-                850
+                3
             ],
             "winner": 9,
             "second": 15,
-            "third": 3,
-            "fourth": 800,
-            "fifth": 8
+            "third": 3
         }
     ]
 }
