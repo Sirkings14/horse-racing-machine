@@ -22,6 +22,7 @@ from src.learning.evaluate_predictions import main as evaluate_predictions
 from src.model.autopilot_guard import main as run_autopilot_guard
 from src.model.race_difficulty import main as run_race_difficulty
 from src.model.model_evolution import main as record_model_evolution
+from src.model.profitability import main as run_profitability_report
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 REVIEW_FILE = BASE_DIR / "data" / "dataset" / "dataset_review.json"
@@ -101,7 +102,9 @@ def run_results_cycle():
     rebuild_knowledge()
     print_step(2, "VERIFYING STORED PREDICTIONS AGAINST RESULTS")
     evaluate_predictions()
-    print_step(3, "TRAINING UPDATED CHALLENGER + ORDER ENGINE")
+    print_step(3, "MEASURING PAPER PROFITABILITY / MARKET-PRICE COVERAGE")
+    run_profitability_report()
+    print_step(4, "TRAINING UPDATED CHALLENGER + ORDER ENGINE")
     candidate_version = train_model()
     print_step(4, "RUNNING WALK-FORWARD TOP-3/4/5 BACKTEST")
     run_backtest()
