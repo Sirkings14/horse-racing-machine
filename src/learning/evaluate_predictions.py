@@ -7,6 +7,7 @@ from typing import Any
 
 from src.live.registry import mark_result_verified
 from src.matching.race_matcher import normalize_track
+from src.learning.result_truth import build_program_runner_index, validate_arrival
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
@@ -30,7 +31,7 @@ def canonical_key(value: str) -> str:
     return f"{parts[0][:10]}|{normalize_track(parts[1])}|{number}"
 
 
-def result_records() -> dict[str, dict[str, Any]]:
+def result_records(program_index: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]]:
     records: dict[str, dict[str, Any]] = {}
     for path in sorted(RESULTS_DIR.glob("*.json")):
         try:
@@ -56,25 +57,20 @@ def result_records() -> dict[str, dict[str, Any]]:
                     arrival.append(int(value))
                 except (TypeError, ValueError):
                     pass
-            # Learning truth requires a verified top-3. A result with only
-            # one or two arrival positions is retained as unusable evidence,
-            # but must never be allowed to train/evaluate a prediction.
-            if len(arrival) < 3 or len(set(arrival)) != len(arrival):
-                print(
-                    f"Skipping incomplete/ambiguous result {key}: "
-                    f"{len(arrival)} unique arrival position(s)."
-                )
+            truth = validate_arrival(key, arrival, program_index)
+            if not truth["accepted_for_learning"]:
+                print(f"Skipping untrusted result {key}: {truth['reason']}")
                 continue
             records[key] = {
                 "race_key": key, "date": race_date, "track": track, "race_number": number,
                 "arrival": arrival, "winner": arrival[0],
-                "second": arrival[1],
-                "third": arrival[2],
+                "second": arrival[1], "third": arrival[2],
+                "truth_validation": truth,
             }
     return records
 
 
-def load_existing() -> dict[str, dict[str, Any]]:
+def load_existing(program_index: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]]:
     if not EVALUATION_FILE.exists():
         return {}
     try:
@@ -83,7 +79,28 @@ def load_existing() -> dict[str, dict[str, Any]]:
         return {}
     if not isinstance(payload, list):
         return {}
-    return {canonical_key(str(item.get("race_key"))): item for item in payload if isinstance(item, dict) and item.get("race_key")}
+
+    cleaned: dict[str, dict[str, Any]] = {}
+    quarantined = 0
+    for item in payload:
+        if not isinstance(item, dict) or not item.get("race_key"):
+            continue
+        key = canonical_key(str(item.get("race_key")))
+        arrival = []
+        for value in ((item.get("result") or {}).get("arrival") or []):
+            try:
+                arrival.append(int(value))
+            except (TypeError, ValueError):
+                pass
+        truth = validate_arrival(key, arrival, program_index)
+        if not truth["accepted_for_learning"]:
+            quarantined += 1
+            continue
+        cleaned[key] = item
+
+    if quarantined:
+        print(f"Quarantined {quarantined} previously stored evaluation(s) failing result-truth validation.")
+    return cleaned
 
 
 def _engine_metrics(predicted: list[int], actual_top3: list[int], actual_top5: list[int]) -> dict[str, Any]:
@@ -160,7 +177,7 @@ def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, An
             },
         },
         "status": "result_verified",
-        "result_validation": {
+        "result_validation": result.get("truth_validation") or {
             "accepted_for_learning": True,
             "minimum_positions_required": 3,
             "arrival_positions_available": len(result["arrival"]),
@@ -173,9 +190,11 @@ def safe_prediction_files() -> list[Path]:
 
 
 def main() -> dict[str, Any]:
-    results = result_records()
-    evaluations = load_existing()
+    program_index = build_program_runner_index()
+    results = result_records(program_index)
+    evaluations = load_existing(program_index)
     processed = 0
+
     for path in safe_prediction_files():
         try:
             prediction = load_json(path)
