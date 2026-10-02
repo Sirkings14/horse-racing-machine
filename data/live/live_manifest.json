@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-02T13:59:16.497691+00:00",
+  "updated_at": "2026-10-02T15:45:49.348253+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -411,12 +411,12 @@
       "structured_file": "structured/2026-10-02_PARIS_4.json",
       "status": "validated",
       "prediction_status": "predicted",
-      "discovered_at": "2026-10-02T13:59:12.448559+00:00",
+      "discovered_at": "2026-10-02T15:45:45.572086+00:00",
       "result_status": "pending",
       "created_at": "2026-09-30T15:54:05.150148+00:00",
-      "updated_at": "2026-10-02T13:59:16.497688+00:00",
+      "updated_at": "2026-10-02T15:45:49.348250+00:00",
       "prediction_file": "data/predictions/2026-10-02_PARIS_4.json",
-      "predicted_at": "2026-10-02T13:59:16.497680+00:00"
+      "predicted_at": "2026-10-02T15:45:49.348243+00:00"
     },
     {
       "race_key": "2026-10-03|PARISLONGCHAMP|4",
@@ -433,10 +433,30 @@
       "structured_file": "structured/2026-10-03_PARISLONGCHAMP_4.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-02T13:59:12.223672+00:00",
+      "discovered_at": "2026-10-02T15:45:45.385962+00:00",
       "result_status": "pending",
       "created_at": "2026-10-01T16:23:57.317760+00:00",
-      "updated_at": "2026-10-02T13:59:12.223831+00:00"
+      "updated_at": "2026-10-02T15:45:45.386170+00:00"
+    },
+    {
+      "race_key": "2026-10-04|PARISLONGCHAMP|5",
+      "date": "2026-10-04",
+      "track": "PARISLONGCHAMP",
+      "race_number": 5,
+      "race_name": "QATAR PRIX DE L'ARC DE TRIOMPHE",
+      "race_type": "MONTE",
+      "distance": 2400,
+      "runners_count": 16,
+      "horse_count": 16,
+      "source_url": "https://lonab.bf/sites/default/files/2026-10/JH_PMU_DU_04-10-2026_0.pdf",
+      "source_file": "live_program_JH_PMU_DU_04-10-2026_0_2b438df25a.pdf",
+      "structured_file": "structured/2026-10-04_PARISLONGCHAMP_5.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-10-02T15:45:45.171039+00:00",
+      "result_status": "pending",
+      "created_at": "2026-10-02T15:45:41.091227+00:00",
+      "updated_at": "2026-10-02T15:45:45.171233+00:00"
     }
   ]
 }
