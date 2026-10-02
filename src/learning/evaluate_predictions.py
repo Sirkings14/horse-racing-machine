@@ -31,8 +31,9 @@ def canonical_key(value: str) -> str:
     return f"{parts[0][:10]}|{normalize_track(parts[1])}|{number}"
 
 
-def result_records(program_index: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]]:
+def result_records(program_index: dict[str, dict[str, Any]]) -> tuple[dict[str, dict[str, Any]], dict[str, int]]:
     records: dict[str, dict[str, Any]] = {}
+    audit = {"result_races_seen": 0, "accepted": 0, "rejected": 0}
     for path in sorted(RESULTS_DIR.glob("*.json")):
         try:
             payload = load_json(path)
@@ -44,6 +45,7 @@ def result_records(program_index: dict[str, dict[str, Any]]) -> dict[str, dict[s
         race_date = str(payload.get("date") or "")[:10]
         track = normalize_track(payload.get("track"))
         for race in payload.get("races") or []:
+            audit["result_races_seen"] += 1
             try:
                 number = int(race.get("race_number"))
             except (TypeError, ValueError):
@@ -59,15 +61,17 @@ def result_records(program_index: dict[str, dict[str, Any]]) -> dict[str, dict[s
                     pass
             truth = validate_arrival(key, arrival, program_index)
             if not truth["accepted_for_learning"]:
+                audit["rejected"] += 1
                 print(f"Skipping untrusted result {key}: {truth['reason']}")
                 continue
+            audit["accepted"] += 1
             records[key] = {
                 "race_key": key, "date": race_date, "track": track, "race_number": number,
                 "arrival": arrival, "winner": arrival[0],
                 "second": arrival[1], "third": arrival[2],
                 "truth_validation": truth,
             }
-    return records
+    return records, audit
 
 
 def load_existing(program_index: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]]:
@@ -191,7 +195,7 @@ def safe_prediction_files() -> list[Path]:
 
 def main() -> dict[str, Any]:
     program_index = build_program_runner_index()
-    results = result_records(program_index)
+    results, truth_audit = result_records(program_index)
     evaluations = load_existing(program_index)
     processed = 0
 
@@ -217,10 +221,35 @@ def main() -> dict[str, Any]:
         processed += 1
 
     EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
+    truth_audit["stored_evaluations_quarantined"] = 0
     ordered = [evaluations[key] for key in sorted(evaluations)]
+    audit_path = EVALUATION_DIR / "result_truth_audit.json"
+    audit_path.write_text(
+        json.dumps(
+            {
+                "generated_at": datetime.now(timezone.utc).isoformat(),
+                **truth_audit,
+                "stored_verified_evaluations_after_quarantine": len(ordered),
+                "policy": {
+                    "unknown_result_numbers_never_train": True,
+                    "duplicate_arrival_numbers_never_train": True,
+                    "fewer_than_three_positions_never_train": True,
+                    "program_roster_is_authoritative": True,
+                },
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
     EVALUATION_FILE.write_text(json.dumps(ordered, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Verified prediction/result pairs added: {processed}")
     print(f"Total verified prediction/result pairs: {len(ordered)}")
+    print(
+        "Result truth audit: "
+        f"{truth_audit['accepted']} accepted / "
+        f"{truth_audit['rejected']} rejected."
+    )
     return {"processed": processed, "total": len(ordered), "path": str(EVALUATION_FILE)}
 
 
