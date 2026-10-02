@@ -574,6 +574,29 @@ def find_best_candidate(
 # STRICT MATCHING
 # ============================================================
 
+def result_is_valid_for_program(program, result):
+    """Reject result truth that contains values not present in the declared field."""
+    horses = {
+        safe_int(horse.get("number"))
+        for horse in (program.get("horses") or [])
+        if safe_int(horse.get("number")) is not None
+    }
+    arrival = []
+    for value in result.get("arrival") or []:
+        number = safe_int(value)
+        if number is not None:
+            arrival.append(number)
+    if len(arrival) < 3:
+        return False
+    if len(arrival) != len(set(arrival)):
+        return False
+    if not horses or any(number not in horses for number in arrival):
+        return False
+    if len(arrival) > len(horses):
+        return False
+    return True
+
+
 def find_exact_match(
     program,
     results,
@@ -646,6 +669,14 @@ def find_exact_match(
             != program_race_number
         ):
 
+            continue
+
+        if not result_is_valid_for_program(program, result):
+            print(
+                "REJECTED RESULT TRUTH: "
+                f"{program_id['date']} | {program_id['track']} | "
+                f"Race {program_id['race_number']}"
+            )
             continue
 
         return result
