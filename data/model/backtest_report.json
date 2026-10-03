@@ -1,36 +1,36 @@
 {
   "method": "walk_forward_logistic_top3",
-  "dataset_races": 341,
-  "dataset_rows": 5390,
+  "dataset_races": 342,
+  "dataset_rows": 5408,
   "minimum_training_races": 5,
-  "evaluated_races": 336,
+  "evaluated_races": 337,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1458,
-    "winner_hit_rate_at_3": 0.3631,
-    "average_actual_top3_covered_by_predicted_top3": 0.881,
-    "average_actual_top3_covered_by_predicted_top5": 1.3274,
-    "brier_score_top3": 0.150382,
-    "log_loss_top3": 0.475744,
-    "expected_calibration_error_top3": 0.01921
+    "winner_hit_rate_at_1": 0.1484,
+    "winner_hit_rate_at_3": 0.365,
+    "average_actual_top3_covered_by_predicted_top3": 0.8813,
+    "average_actual_top3_covered_by_predicted_top5": 1.3294,
+    "brier_score_top3": 0.150289,
+    "log_loss_top3": 0.475504,
+    "expected_calibration_error_top3": 0.018966
   },
   "baselines": {
     "favorites": {
-      "winner_hit_rate_at_1": 0.1667,
-      "winner_hit_rate_at_3": 0.372,
-      "average_actual_top3_covered_by_predicted_top3": 0.8899,
-      "average_actual_top3_covered_by_predicted_top5": 1.3423
+      "winner_hit_rate_at_1": 0.1691,
+      "winner_hit_rate_at_3": 0.3739,
+      "average_actual_top3_covered_by_predicted_top3": 0.8902,
+      "average_actual_top3_covered_by_predicted_top5": 1.3442
     },
     "form": {
-      "winner_hit_rate_at_1": 0.1161,
-      "winner_hit_rate_at_3": 0.3095,
-      "average_actual_top3_covered_by_predicted_top3": 0.7738,
-      "average_actual_top3_covered_by_predicted_top5": 1.2381
+      "winner_hit_rate_at_1": 0.1187,
+      "winner_hit_rate_at_3": 0.3116,
+      "average_actual_top3_covered_by_predicted_top3": 0.7745,
+      "average_actual_top3_covered_by_predicted_top5": 1.2404
     }
   },
   "calibration": {
-    "brier_score": 0.150382,
-    "log_loss": 0.475744,
-    "ece": 0.01921,
+    "brier_score": 0.150289,
+    "log_loss": 0.475504,
+    "ece": 0.018966,
     "calibration_bins": [
       {
         "lower": 0.0,
@@ -42,23 +42,23 @@
       {
         "lower": 0.1,
         "upper": 0.2,
-        "count": 3618,
-        "mean_probability": 0.14487,
-        "observed_rate": 0.157546
+        "count": 3631,
+        "mean_probability": 0.14483,
+        "observed_rate": 0.157257
       },
       {
         "lower": 0.2,
         "upper": 0.3,
-        "count": 953,
-        "mean_probability": 0.246627,
-        "observed_rate": 0.221406
+        "count": 957,
+        "mean_probability": 0.246699,
+        "observed_rate": 0.221526
       },
       {
         "lower": 0.3,
         "upper": 0.4,
-        "count": 527,
-        "mean_probability": 0.338493,
-        "observed_rate": 0.337761
+        "count": 528,
+        "mean_probability": 0.338517,
+        "observed_rate": 0.339015
       },
       {
         "lower": 0.4,
@@ -91,9 +91,9 @@
       {
         "lower": 0.9,
         "upper": 1.0,
-        "count": 5310,
-        "mean_probability": 0.186708,
-        "observed_rate": 0.189831
+        "count": 5328,
+        "mean_probability": 0.186668,
+        "observed_rate": 0.189752
       }
     ]
   },
@@ -13537,6 +13537,46 @@
         }
       },
       "race_key": "2026-10-01|AUTEUIL|1"
+    },
+    {
+      "winner": 4,
+      "predicted_top1": 4,
+      "winner_hit_at_1": true,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        4,
+        5,
+        8
+      ],
+      "predicted_top3": [
+        4,
+        11,
+        13
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 2,
+      "model_ranking": [
+        4,
+        11,
+        13,
+        5,
+        9
+      ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 2
+        }
+      },
+      "race_key": "2026-10-03|PARISLONGCHAMP|4"
     }
   ]
 }

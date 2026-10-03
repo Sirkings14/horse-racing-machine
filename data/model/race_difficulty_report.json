@@ -6,18 +6,18 @@
     "medium": "40-64.99",
     "high": ">=65"
   },
-  "total_verified_predictions": 10,
+  "total_verified_predictions": 11,
   "buckets": {
     "low": {
       "verified_races": 0
     },
     "medium": {
-      "verified_races": 6,
-      "winner_hit_rate": 0,
-      "winner_in_top3_rate": 0.5,
+      "verified_races": 7,
+      "winner_hit_rate": 0.1429,
+      "winner_in_top3_rate": 0.5714,
       "exact_top3_order_rate": 0,
       "exact_top5_order_rate": 0,
-      "average_recommended_hit_count": 2.5
+      "average_recommended_hit_count": 2.429
     },
     "high": {
       "verified_races": 2,

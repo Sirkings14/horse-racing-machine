@@ -1591,5 +1591,176 @@
       "duplicate_numbers": [],
       "program_source": "program_JH_PMU_DU_01-10-2026_78f862f066_908349a438.json"
     }
+  },
+  {
+    "race_key": "2026-10-03|PARISLONGCHAMP|4",
+    "prediction_id": "2026-10-03|PARISLONGCHAMP|4|2026-10-03T19:20:47.485932+00:00",
+    "model_version": "model-20261002T231223Z-b11dba7d",
+    "predicted_at": "2026-10-03T19:20:47.485941+00:00",
+    "verified_at": "2026-10-03T22:20:17.060303+00:00",
+    "result": {
+      "race_key": "2026-10-03|PARISLONGCHAMP|4",
+      "date": "2026-10-03",
+      "track": "PARISLONGCHAMP",
+      "race_number": 4,
+      "arrival": [
+        4,
+        5,
+        8,
+        1
+      ],
+      "winner": 4,
+      "second": 5,
+      "third": 8,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-10-03|PARISLONGCHAMP|4",
+        "arrival_positions_available": 4,
+        "declared_runner_count": 18,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMU_DU_03-10-2026_03bf90098d_8fa3b2fc48.json"
+      }
+    },
+    "prediction": {
+      "recommended_numbers": [
+        4,
+        11,
+        13,
+        5,
+        9
+      ],
+      "top3_numbers": [
+        4,
+        11,
+        13
+      ],
+      "ranked_top5": [
+        4,
+        11,
+        13,
+        5,
+        9
+      ],
+      "predicted_finish_order_top5": [
+        4,
+        11,
+        13,
+        5,
+        9
+      ],
+      "order_engine_top5": [
+        4,
+        11,
+        5,
+        13,
+        9
+      ],
+      "monitoring": {
+        "status": "monitoring_complete",
+        "strength_engine_top5": [
+          4,
+          11,
+          13,
+          5,
+          9
+        ],
+        "order_engine_top5": [
+          4,
+          11,
+          5,
+          13,
+          9
+        ],
+        "strength_engine_winner_candidate": 4,
+        "order_engine_winner_candidate": 4,
+        "common_top3": [
+          4,
+          11
+        ],
+        "common_top5": [
+          4,
+          5,
+          9,
+          11,
+          13
+        ],
+        "agreement": "strong_agreement",
+        "agreement_score_top5": 1.0,
+        "warning": null
+      },
+      "difficulty": {
+        "bucket": "medium",
+        "difficulty_score": 42.22,
+        "field_size": 18,
+        "top1_top2_margin": 0.063912,
+        "top1_top3_spread": 0.082696,
+        "engine_top5_overlap": 1.0,
+        "signals": [
+          "large_field"
+        ]
+      }
+    },
+    "metrics": {
+      "winner_hit": true,
+      "winner_in_top3": true,
+      "winner_in_top5": true,
+      "order_engine_winner_hit": true,
+      "strength_engine_winner_hit": true,
+      "fused_engine_winner_hit": true,
+      "actual_top3_covered_by_predicted_top3": 1,
+      "actual_top3_covered_by_predicted_top5": 2,
+      "recommended_hit_count": 2,
+      "exact_top3_order": false,
+      "exact_top5_order": false,
+      "top5_position_hits": 1,
+      "engine_attribution": {
+        "strength": {
+          "winner_hit": true,
+          "winner_in_top3": true,
+          "winner_in_top5": true,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 1
+        },
+        "order": {
+          "winner_hit": true,
+          "winner_in_top3": true,
+          "winner_in_top5": true,
+          "actual_top3_covered_by_top3": 2,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 1
+        },
+        "fused": {
+          "winner_hit": true,
+          "winner_in_top3": true,
+          "winner_in_top5": true,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 2,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 1
+        }
+      }
+    },
+    "status": "result_verified",
+    "result_validation": {
+      "accepted_for_learning": true,
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-10-03|PARISLONGCHAMP|4",
+      "arrival_positions_available": 4,
+      "declared_runner_count": 18,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMU_DU_03-10-2026_03bf90098d_8fa3b2fc48.json"
+    }
   }
 ]
