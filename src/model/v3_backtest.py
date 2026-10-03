@@ -60,6 +60,12 @@ def run(rows:list[dict[str,Any]],min_train_races:int=50)->dict[str,Any]:
         ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1,p3,p5)]
         ranked=sorted((dict(r,ensemble_score=float(s),p_winner=float(a),p_top3=float(b),p_top5=float(c)) for r,a,b,c,s in zip(test,p1,p3,p5,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
         ev=_evaluate(ranked); ev["race_key"]=key; ev["field_size"]=len(ranked)
+        ev["top5_candidates"]=[{
+            "horse_number":int(r["horse_number"]),
+            "ensemble_score":float(r["ensemble_score"]),
+            "won":int(r.get("won",0)),
+            **{k:r.get(k) for k in ("win_odds_decimal","decimal_odds","starting_price_decimal","starting_price","win_odds","odds")}
+        } for r in ranked[:5]]
         predictions.append(ev)
         probabilities.extend(float(x) for x in p3); labels.extend(int(r.get("top3",0)) for r in test)
 
