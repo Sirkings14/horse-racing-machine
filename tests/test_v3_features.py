@@ -16,4 +16,4 @@ def test_profiles_are_prior_only_on_same_date():
 def test_v3_matrix_shape():
     rows=[{"horse_name":"X","horse_description":"good form","distance":2400,"runners_count":16}]
     matrix=build_v3_matrix(rows)
-    assert matrix.shape==(1,21)
+    assert matrix.shape==(1,20)
