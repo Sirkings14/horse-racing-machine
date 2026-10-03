@@ -107,12 +107,21 @@ def extract_race_info(text):
         except ValueError:
             pass
 
-    match = re.search(r"(\d[\d\s]*)\s+METRES?", text, re.IGNORECASE)
-    if match:
+    # Prefer the distance nearest the structured race header. Commentary can
+    # contain unrelated "METRES" values, so never trust the first occurrence.
+    header_end = header_match.end() if header_match else 0
+    distance_matches = list(re.finditer(r"(\d[\d\s]*)\s+METRES?", text, re.IGNORECASE))
+    candidates = []
+    for match in distance_matches:
         try:
-            race["distance"] = int(re.sub(r"\s+", "", match.group(1)))
+            value = int(re.sub(r"\s+", "", match.group(1)))
         except ValueError:
-            pass
+            continue
+        if 800 <= value <= 7000:
+            candidates.append((abs(match.start()-header_end), value))
+    if candidates:
+        candidates.sort(key=lambda item:item[0])
+        race["distance"] = candidates[0][1]
 
     return race
 
@@ -139,6 +148,10 @@ def extract_horses(text, expected_runners=None):
         "LES MEILLEURS DE LA SEMAINE",
         "PMU’B...",
         "PMU'B...",
+        "RESULTATS DES COURSES",
+        "RÉSULTATS DES COURSES",
+        "ARRIVEE DU",
+        "ARRIVÉE DU",
     )
     tail_positions = [text.upper().find(marker.upper()) for marker in tail_markers]
     tail_positions = [p for p in tail_positions if p != -1]
