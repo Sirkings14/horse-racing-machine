@@ -71,6 +71,9 @@ def run(rows:list[dict[str,Any]],min_train_races:int=50)->dict[str,Any]:
     cov5=[float(x["top3_coverage_by_top5"]) for x in predictions]
     random_cov=[float(x["random_expected_top3_coverage"]) for x in predictions]
     cal=calibration_metrics(probabilities,labels)
+    prevalence=(sum(labels)/len(labels)) if labels else 0.0
+    brier_baseline=prevalence*(1.0-prevalence)
+    logloss_baseline=-(prevalence*math.log(max(prevalence,1e-6))+(1-prevalence)*math.log(max(1-prevalence,1e-6)))
 
     # Time stability: divide the holdout sequence into up to four chronological blocks.
     block_metrics=[]
@@ -101,6 +104,8 @@ def run(rows:list[dict[str,Any]],min_train_races:int=50)->dict[str,Any]:
             "average_actual_top3_covered_by_predicted_top5":round(sum(cov5)/n,4),
             "random_baseline_top3_coverage":round(sum(random_cov)/n,4),
             **{f"{k}_top3":v for k,v in cal.items()},
+            "brier_baseline_top3":round(brier_baseline,6),
+            "log_loss_baseline_top3":round(logloss_baseline,6),
             "coverage3_lift_vs_random":round((sum(cov3)/n)/(sum(random_cov)/n)-1.0,4) if sum(random_cov)>0 else None,
         },
         "confidence_intervals":{
