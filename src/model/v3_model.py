@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from typing import Any, Sequence
 import numpy as np
 from src.model.v3_features import FEATURE_NAMES, build_v3_matrix
+from src.model.calibration import apply_sigmoid_calibrator
 
 @dataclass
 class V3LogisticModel:
@@ -12,6 +13,7 @@ class V3LogisticModel:
     intercept: float
     coefficients: list[float]
     positive_weight: float
+    calibration: dict | None = None
 
     def predict_proba(self, rows: Sequence[dict[str, Any]]) -> np.ndarray:
         x = build_v3_matrix(rows)
@@ -23,14 +25,15 @@ class V3LogisticModel:
         logits = np.clip(self.intercept + z @ np.asarray(self.coefficients, dtype=float), -30.0, 30.0)
         weighted = 1.0 / (1.0 + np.exp(-logits))
         denominator = self.positive_weight * (1.0 - weighted) + weighted
-        return np.clip(weighted / np.maximum(denominator, 1e-12), 0.0, 1.0)
+        raw = np.clip(weighted / np.maximum(denominator, 1e-12), 0.0, 1.0)
+        return np.asarray([apply_sigmoid_calibrator(v, self.calibration) for v in raw], dtype=float)
 
     def to_dict(self) -> dict[str, Any]:
-        return {"model_type":"v3_evidence_logistic","feature_names":self.feature_names,"mean":self.mean,"std":self.std,"intercept":self.intercept,"coefficients":self.coefficients,"positive_weight":self.positive_weight}
+        return {"model_type":"v3_evidence_logistic","feature_names":self.feature_names,"mean":self.mean,"std":self.std,"intercept":self.intercept,"coefficients":self.coefficients,"positive_weight":self.positive_weight,"calibration":self.calibration}
 
     @classmethod
     def from_dict(cls, payload: dict[str, Any]) -> "V3LogisticModel":
-        return cls(list(payload["feature_names"]), list(payload["mean"]), list(payload["std"]), float(payload["intercept"]), list(payload["coefficients"]), float(payload.get("positive_weight",1.0)))
+        return cls(list(payload["feature_names"]), list(payload["mean"]), list(payload["std"]), float(payload["intercept"]), list(payload["coefficients"]), float(payload.get("positive_weight",1.0)),payload.get("calibration"))
 
 def fit_v3_model(rows: Sequence[dict[str, Any]], target_field: str="top3", epochs: int=900, learning_rate: float=0.03, l2: float=1.5) -> V3LogisticModel:
     if not rows: raise ValueError("Cannot train V3 on empty rows.")
