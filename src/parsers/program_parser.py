@@ -62,7 +62,7 @@ def extract_race_info(text):
     # CRITERIUM DES 5 ANS and SUPER HANDICAP DE LA RENTREE. Anchor the match
     # to the runner-count line instead of requiring the literal word PRIX.
     header_match = re.search(
-        r"(?m)^\s*(?P<track>[A-ZÀ-Ü][A-ZÀ-Ü0-9'’ .\-]{2,}?)\s*-\s*"
+        r"(?m)^\s*(?P<track>[A-ZÀ-Ü][A-ZÀ-Ü0-9'’ .\-]{2,})\s+-\s+"
         r"(?P<race_name>[A-ZÀ-Ü0-9'’ .\-]{2,}?)\s*\n\s*"
         r"(?P<runners>\d+)\s+CONCURRENTS?\b",
         text,
