@@ -107,16 +107,21 @@ def extract_race_info(text):
         except ValueError:
             pass
 
-    # Prefer a plausible distance declaration and reject stray numeric text.
-    distance_matches = re.findall(r"(\d[\d\s]*)\s+METRES?", text, re.IGNORECASE)
-    for raw_distance in distance_matches:
+    # Prefer the distance nearest the structured race header. Commentary can
+    # contain unrelated "METRES" values, so never trust the first occurrence.
+    header_end = header_match.end() if header_match else 0
+    distance_matches = list(re.finditer(r"(\d[\d\s]*)\s+METRES?", text, re.IGNORECASE))
+    candidates = []
+    for match in distance_matches:
         try:
-            value = int(re.sub(r"\s+", "", raw_distance))
+            value = int(re.sub(r"\s+", "", match.group(1)))
         except ValueError:
             continue
         if 800 <= value <= 7000:
-            race["distance"] = value
-            break
+            candidates.append((abs(match.start()-header_end), value))
+    if candidates:
+        candidates.sort(key=lambda item:item[0])
+        race["distance"] = candidates[0][1]
 
     return race
 
