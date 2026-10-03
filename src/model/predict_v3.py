@@ -75,9 +75,13 @@ def main():
     p5=models["top5"].predict_proba(current_profile)
     ranked=[]
     for row,a,b,c in zip(current_profile,p1,p3,p5):
-        completeness=float(row.get("description") is not None or bool(row.get("horse_description"))) 
-        score=0.25*float(a)+0.50*float(b)+0.25*float(c)
+        completeness=float(row.get("data_completeness") or 0.0)
+        raw_score=0.25*float(a)+0.50*float(b)+0.25*float(c)
         disagreement=float(np.std([a,b,c]))
+        # Penalise internal model disagreement slightly. This does not reward
+        # certainty; it prevents an unstable consensus from outranking a
+        # similarly strong but more coherent candidate.
+        score=max(0.0, raw_score-0.15*disagreement)
         ranked.append({"horse_number":int(row["horse_number"]),"horse_name":row.get("horse_name"),"probability_winner":round(float(a),6),"probability_top3":round(float(b),6),"probability_top5":round(float(c),6),"ensemble_score":round(score,6),"model_disagreement":round(disagreement,6),"data_completeness":round(completeness,3)})
     ranked.sort(key=lambda x:(-x["ensemble_score"],-x["probability_top3"],x["horse_number"]))
     for i,item in enumerate(ranked,1): item["predicted_rank"]=i
@@ -86,7 +90,7 @@ def main():
     margin=(top_scores[0]-top_scores[1]) if len(top_scores)>1 else 0.0
     disagreement=float(np.mean([x["model_disagreement"] for x in ranked[:5]])) if ranked else 1.0
     confidence="high" if margin>=0.08 and disagreement<0.06 else "medium" if margin>=0.03 and disagreement<0.10 else "low"
-    result={"prediction_id":f"{key}|{datetime.now(timezone.utc).isoformat()}","generated_at":datetime.now(timezone.utc).isoformat(),"model_version":bundle.get("model_version"),"mode":"v3_evidence_no_press","race_key":key,"race":_meta(program),"truth_gate":gate,"press_dependency":False,"post_race_feature_policy":"hard_exclusion","confidence":confidence,"model_agreement":"high" if disagreement<0.06 else "medium" if disagreement<0.10 else "low","recommended_numbers":[x["horse_number"] for x in ranked[:5]],"final_five":[x["horse_number"] for x in ranked[:5]],"ranked_horses":ranked,"selection_policy":"independent_evidence_ensemble"}
+    result={"prediction_id":f"{key}|{datetime.now(timezone.utc).isoformat()}","generated_at":datetime.now(timezone.utc).isoformat(),"model_version":bundle.get("model_version"),"mode":"v3_evidence_no_press","race_key":key,"race":_meta(program),"truth_gate":gate,"press_dependency":False,"post_race_feature_policy":"hard_exclusion","confidence":confidence,"model_agreement":"high" if disagreement<0.06 else "medium" if disagreement<0.10 else "low","recommended_numbers":[x["horse_number"] for x in ranked[:5]],"final_five":[x["horse_number"] for x in ranked[:5]],"ranked_horses":ranked,"selection_policy":"independent_evidence_ensemble_with_disagreement_penalty"}
     _save(result)
     print("V3 FINAL 5:",result["final_five"])
     return result
