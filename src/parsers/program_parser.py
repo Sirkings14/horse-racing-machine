@@ -107,12 +107,16 @@ def extract_race_info(text):
         except ValueError:
             pass
 
-    match = re.search(r"(\d[\d\s]*)\s+METRES?", text, re.IGNORECASE)
-    if match:
+    # Prefer a plausible distance declaration and reject stray numeric text.
+    distance_matches = re.findall(r"(\d[\d\s]*)\s+METRES?", text, re.IGNORECASE)
+    for raw_distance in distance_matches:
         try:
-            race["distance"] = int(re.sub(r"\s+", "", match.group(1)))
+            value = int(re.sub(r"\s+", "", raw_distance))
         except ValueError:
-            pass
+            continue
+        if 800 <= value <= 7000:
+            race["distance"] = value
+            break
 
     return race
 
@@ -139,6 +143,10 @@ def extract_horses(text, expected_runners=None):
         "LES MEILLEURS DE LA SEMAINE",
         "PMU’B...",
         "PMU'B...",
+        "RESULTATS DES COURSES",
+        "RÉSULTATS DES COURSES",
+        "ARRIVEE DU",
+        "ARRIVÉE DU",
     )
     tail_positions = [text.upper().find(marker.upper()) for marker in tail_markers]
     tail_positions = [p for p in tail_positions if p != -1]
