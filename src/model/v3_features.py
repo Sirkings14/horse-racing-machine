@@ -15,7 +15,7 @@ FEATURE_NAMES=[
 "weight_norm","draw_norm","history_win_relative","history_top3_relative",
 "history_top5_relative","recent_top3_relative","recent_top5_relative",
 "recent_finish_relative","course_top3_relative","distance_top3_relative",
-"experience_relative"
+"weight_relative","experience_relative"
 ]
 
 def _float(value:Any,default:float=0.0)->float:
