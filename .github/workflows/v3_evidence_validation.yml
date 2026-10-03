@@ -2,7 +2,7 @@ name: V3 evidence brain validation
 
 on:
   push:
-    branches: [main, v3-evidence-brain]
+    branches: [main, v3-evidence-brain, v4-production-edge]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -29,6 +29,17 @@ jobs:
         run: python -m src.model.v3_backtest
       - name: Train V3 model bundle
         run: python -m src.model.v3_train
+      - name: Verify economic safety gate
+        run: |
+          python -m src.model.autopilot_guard
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/model/economic_validation_report.json').read_text())
+          if p.get('status') == 'available' and float(p.get('roi', 0)) <= 0:
+              raise SystemExit('Economic validation FAILED: non-positive ROI')
+          print('Economic safety gate passed; live stakes remain blocked when price evidence is insufficient.')
+          PY
       - name: Verify V3 promotion gate
         run: |
           python - <<'PY'
