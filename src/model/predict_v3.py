@@ -6,7 +6,7 @@ from typing import Any
 import numpy as np
 from src.live.registry import eligible_races, LIVE_DIR
 from src.model.historical_profile import build_walk_forward_profiles
-from src.model.truth_gate import validate_program, prerace_only
+from src.model.truth_gate import validate_program
 from src.model.v3_model import V3LogisticModel
 
 BASE_DIR=Path(__file__).resolve().parents[2]
@@ -31,7 +31,7 @@ def _live_rows(program):
     for horse in program.get("horses") or []:
         try: number=int(horse.get("number"))
         except (TypeError,ValueError): continue
-        rows.append({"race_key":key,"date":m["date"],"track":m["track"],"race_number":m["race_number"],"race_name":m["race_name"],"race_type":m["race_type"],"distance":m["distance"],"runners_count":m["runners_count"],"horse_number":number,"horse_name":horse.get("horse"),"horse_description":prerace_only(horse.get("description") or "")})
+        rows.append({"race_key":key,"date":m["date"],"track":m["track"],"race_number":m["race_number"],"race_name":m["race_name"],"race_type":m["race_type"],"distance":m["distance"],"runners_count":m["runners_count"],"horse_number":number,"horse_name":horse.get("horse")})
     return rows
 
 def _save(result):
