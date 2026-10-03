@@ -30,3 +30,13 @@ def test_commentary_cannot_change_v3_features():
     base={"horse_name":"X","horse_description":"strong favourite, excellent chance","distance":2400,"runners_count":16}
     changed={**base,"horse_description":"RESULTATS DES COURSES Arrivée 1-2-3"}
     assert (build_v3_matrix([base]) == build_v3_matrix([changed])).all()
+
+
+def test_race_relative_features_change_only_from_pre_race_batch():
+    rows=[
+      {"horse_name":"A","history_win_rate":0.8,"history_top3_rate":0.8,"history_top5_rate":0.9,"history_recent_top3_rate":0.8,"history_recent_top5_rate":0.9,"history_recent_avg_finish":2,"course_top3_rate":0.8,"distance_top3_rate":0.8,"history_starts":10,"distance":2400,"runners_count":10},
+      {"horse_name":"B","history_win_rate":0.2,"history_top3_rate":0.2,"history_top5_rate":0.3,"history_recent_top3_rate":0.2,"history_recent_top5_rate":0.3,"history_recent_avg_finish":7,"course_top3_rate":0.2,"distance_top3_rate":0.2,"history_starts":2,"distance":2400,"runners_count":10},
+    ]
+    matrix=build_v3_matrix(rows)
+    assert matrix.shape==(2,len(FEATURE_NAMES))
+    assert matrix[0,-1] > matrix[1,-1]
