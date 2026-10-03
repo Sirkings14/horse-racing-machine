@@ -127,6 +127,12 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         gate_reasons.append("high_race_difficulty")
     if prediction and len((prediction.get("ranked_horses") or [])) < 5:
         gate_reasons.append("insufficient_race_field_data")
+    # Never allow live PLAY_CANDIDATE status when the economic validation layer
+    # has no explicit historical prices or has demonstrated non-positive ROI.
+    if economic_status != "available":
+        gate_reasons.append("economic_validation_unavailable")
+    elif economic_roi is None or float(economic_roi) <= 0.0:
+        gate_reasons.append("economic_validation_non_positive_roi")
     if n >= 20 and rate("winner_hit") is not None and rate("winner_hit") < 0.10:
         gate_reasons.append("recent_winner_accuracy_degraded")
     if n >= 20 and pairwise is not None and float(pairwise) < 0.50:
