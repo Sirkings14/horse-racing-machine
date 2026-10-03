@@ -17,3 +17,9 @@ def test_v3_matrix_shape():
     rows=[{"horse_name":"X","horse_description":"good form","distance":2400,"runners_count":16}]
     matrix=build_v3_matrix(rows)
     assert matrix.shape==(1,20)
+
+
+def test_commentary_cannot_change_v3_features():
+    base={"horse_name":"X","horse_description":"strong favourite, excellent chance","distance":2400,"runners_count":16}
+    changed={**base,"horse_description":"RESULTATS DES COURSES Arrivée 1-2-3"}
+    assert (build_v3_matrix([base]) == build_v3_matrix([changed])).all()
