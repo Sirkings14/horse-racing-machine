@@ -50,6 +50,7 @@ def main():
         bundle=_json(MODEL_FILE)
         if not isinstance(history,list) or not history: return no_prediction("verified_training_dataset_unavailable")
         if bundle.get("press_dependency") is not False or bundle.get("post_race_feature_policy")!="hard_exclusion": return no_prediction("v3_artifact_policy_invalid")
+        if bundle.get("production_approved") is not True: return no_prediction("v3_challenger_not_production_approved", promotion_gate=bundle.get("promotion_gate"))
         models={k:V3LogisticModel.from_dict(v) for k,v in (bundle.get("models") or {}).items()}
         if set(models)!= {"winner","top3","top5"}: return no_prediction("v3_model_bundle_incomplete")
     except Exception as error:
