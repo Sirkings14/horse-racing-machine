@@ -7,6 +7,7 @@ from src.model.v3_model import fit_v3_model
 from src.model.calibration import fit_sigmoid_calibrator, calibration_metrics
 from src.model.v3_backtest import run as run_v3_backtest
 from src.model.backtest import run_backtest as run_legacy_backtest
+from src.model.economic_validation import evaluate_value_strategy
 
 BASE_DIR=Path(__file__).resolve().parents[2]
 DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
@@ -52,6 +53,9 @@ def main():
         models[name]=final.to_dict()
         calibration_reports[name]=calibration_metrics(raw,labels)
     v3_report=run_v3_backtest(rows,min_train_races=max(50,split//2))
+    economic_races=[x.get("top5_candidates",[]) for x in (v3_report.get("race_results") or [])]
+    economic_report=evaluate_value_strategy(economic_races,edge_threshold=0.08)
+    (BASE_DIR/"data/model/economic_validation_report.json").write_text(json.dumps(economic_report,indent=2),encoding="utf-8")
     legacy_report=run_legacy_backtest(rows,min_train_races=max(50,split//2))
     v3m=v3_report["metrics"]; lm=legacy_report["metrics"]
     approved,reasons=_promotion_decision(v3m,len(v3_report.get("race_results") or []))
@@ -64,7 +68,8 @@ def main():
         "calibration_method":"out_of_sample_sigmoid",
         "calibration_races":len(keys)-split,
         "production_approved":approved,
-        "economic_validation_status":"required_before_real_stakes",
+        "economic_validation_status":economic_report.get("status"),
+        "economic_validation_report":economic_report,
         "promotion_gate":{
             "approved":approved,
             "reasons":reasons,
