@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-02T23:12:23.767224+00:00",
+  "updated_at": "2026-10-03T10:31:23.476179+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -432,11 +432,13 @@
       "source_file": "live_program_JH_PMU_DU_03-10-2026_651e3a2bf1.pdf",
       "structured_file": "structured/2026-10-03_PARISLONGCHAMP_4.json",
       "status": "validated",
-      "prediction_status": "pending",
-      "discovered_at": "2026-10-02T20:51:52.838796+00:00",
+      "prediction_status": "predicted",
+      "discovered_at": "2026-10-03T10:31:18.680217+00:00",
       "result_status": "pending",
       "created_at": "2026-10-01T16:23:57.317760+00:00",
-      "updated_at": "2026-10-02T20:51:52.839011+00:00"
+      "updated_at": "2026-10-03T10:31:23.476177+00:00",
+      "prediction_file": "data/predictions/2026-10-03_PARISLONGCHAMP_4.json",
+      "predicted_at": "2026-10-03T10:31:23.476171+00:00"
     },
     {
       "race_key": "2026-10-04|PARISLONGCHAMP|5",
@@ -453,10 +455,10 @@
       "structured_file": "structured/2026-10-04_PARISLONGCHAMP_5.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-02T20:51:52.633962+00:00",
+      "discovered_at": "2026-10-03T10:31:18.453274+00:00",
       "result_status": "pending",
       "created_at": "2026-10-02T15:45:41.091227+00:00",
-      "updated_at": "2026-10-02T20:51:52.634182+00:00"
+      "updated_at": "2026-10-03T10:31:18.453416+00:00"
     }
   ]
 }
