@@ -1,6 +1,9 @@
 from __future__ import annotations
 from collections import defaultdict
 from typing import Any
+import math
+import random
+
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_model import fit_v3_model
 from src.model.calibration import calibration_metrics
@@ -9,7 +12,6 @@ def _key(row): return str(row.get("race_key") or "")
 def _sort(row): return (str(row.get("date") or "")[:10],_key(row))
 
 def _valid_rows(rows):
-    # Invalid/missing distances are retained as unknown context, never treated as real distances.
     return [r for r in rows if _key(r) and r.get("finish_position") is not None]
 
 def _evaluate(ranked):
@@ -17,16 +19,31 @@ def _evaluate(ranked):
     actual={int(r["horse_number"]) for r in ranked if int(r.get("top3",0))==1}
     top3={int(r["horse_number"]) for r in ranked[:3]}
     top5={int(r["horse_number"]) for r in ranked[:5]}
+    field=max(len(ranked),1)
+    # Expected random Top-3 coverage is 9/field for a 3-runner prediction
+    # under a simple uniform benchmark.
+    random_top3_coverage=min(3.0,3.0*len(actual)/field)
     return {
         "winner_hit_at_1":bool(ranked and winner==int(ranked[0]["horse_number"])),
-        "winner_hit_at_3":bool(winner in top3),
+        "winner_hit_at_3":bool(winner in top3) if winner is not None else False,
         "top3_coverage_by_top3":len(actual&top3),
         "top3_coverage_by_top5":len(actual&top5),
+        "random_expected_top3_coverage":random_top3_coverage,
     }
+
+def _bootstrap_mean(values,seed=17,iterations=1000):
+    if not values:return {"mean":None,"lower":None,"upper":None}
+    rng=random.Random(seed); n=len(values); means=[]
+    for _ in range(iterations):
+        sample=[values[rng.randrange(n)] for _ in range(n)]
+        means.append(sum(sample)/n)
+    means.sort()
+    return {"mean":round(sum(values)/n,6),"lower":round(means[int(0.025*iterations)],6),"upper":round(means[int(0.975*iterations)-1],6)}
 
 def run(rows:list[dict[str,Any]],min_train_races:int=50)->dict[str,Any]:
     rows=_valid_rows(rows)
-    profiled=build_walk_forward_profiles(rows); groups=defaultdict(list)
+    profiled=build_walk_forward_profiles(rows)
+    groups=defaultdict(list)
     for row in profiled: groups[_key(row)].append(row)
     keys=sorted(groups,key=lambda k:min(_sort(r) for r in groups[k]))
     predictions=[]; probabilities=[]; labels=[]
@@ -41,19 +58,60 @@ def run(rows:list[dict[str,Any]],min_train_races:int=50)->dict[str,Any]:
         except ValueError:continue
         p1=models["winner"].predict_proba(test); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
         ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1,p3,p5)]
-        ranked=sorted((dict(r,ensemble_score=float(s)) for r,s in zip(test,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
-        ev=_evaluate(ranked); ev["race_key"]=key; predictions.append(ev)
+        ranked=sorted((dict(r,ensemble_score=float(s),p_winner=float(a),p_top3=float(b),p_top5=float(c)) for r,a,b,c,s in zip(test,p1,p3,p5,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
+        ev=_evaluate(ranked); ev["race_key"]=key; ev["field_size"]=len(ranked)
+        predictions.append(ev)
         probabilities.extend(float(x) for x in p3); labels.extend(int(r.get("top3",0)) for r in test)
+
     n=len(predictions)
     if not n:raise ValueError("V3 backtest produced no evaluable races.")
+    winner1=[float(x["winner_hit_at_1"]) for x in predictions]
+    winner3=[float(x["winner_hit_at_3"]) for x in predictions]
+    cov3=[float(x["top3_coverage_by_top3"]) for x in predictions]
+    cov5=[float(x["top3_coverage_by_top5"]) for x in predictions]
+    random_cov=[float(x["random_expected_top3_coverage"]) for x in predictions]
     cal=calibration_metrics(probabilities,labels)
-    return {"method":"walk_forward_v3_evidence_no_press","dataset_races":len(keys),"evaluated_races":n,"press_dependency":False,"post_race_feature_policy":"hard_exclusion","metrics":{
-        "winner_hit_rate_at_1":round(sum(x["winner_hit_at_1"] for x in predictions)/n,4),
-        "winner_hit_rate_at_3":round(sum(x["winner_hit_at_3"] for x in predictions)/n,4),
-        "average_actual_top3_covered_by_predicted_top3":round(sum(x["top3_coverage_by_top3"] for x in predictions)/n,4),
-        "average_actual_top3_covered_by_predicted_top5":round(sum(x["top3_coverage_by_top5"] for x in predictions)/n,4),
-        **{f"{k}_top3":v for k,v in cal.items()}
-    },"race_results":predictions}
+
+    # Time stability: divide the holdout sequence into up to four chronological blocks.
+    block_metrics=[]
+    block_count=min(4,max(1,n//25))
+    if block_count:
+        for b in range(block_count):
+            lo=(n*b)//block_count; hi=(n*(b+1))//block_count
+            chunk=predictions[lo:hi]
+            if not chunk:continue
+            block_metrics.append({
+                "block":b+1,
+                "races":len(chunk),
+                "winner_hit_rate_at_1":round(sum(x["winner_hit_at_1"] for x in chunk)/len(chunk),4),
+                "winner_hit_rate_at_3":round(sum(x["winner_hit_at_3"] for x in chunk)/len(chunk),4),
+                "top3_coverage":round(sum(x["top3_coverage_by_top3"] for x in chunk)/len(chunk),4),
+            })
+
+    report={
+        "method":"walk_forward_v4_race_relative_no_press",
+        "dataset_races":len(keys),
+        "evaluated_races":n,
+        "press_dependency":False,
+        "post_race_feature_policy":"hard_exclusion",
+        "metrics":{
+            "winner_hit_rate_at_1":round(sum(winner1)/n,4),
+            "winner_hit_rate_at_3":round(sum(winner3)/n,4),
+            "average_actual_top3_covered_by_predicted_top3":round(sum(cov3)/n,4),
+            "average_actual_top3_covered_by_predicted_top5":round(sum(cov5)/n,4),
+            "random_baseline_top3_coverage":round(sum(random_cov)/n,4),
+            **{f"{k}_top3":v for k,v in cal.items()},
+            "coverage3_lift_vs_random":round((sum(cov3)/n)/(sum(random_cov)/n)-1.0,4) if sum(random_cov)>0 else None,
+        },
+        "confidence_intervals":{
+            "winner_hit_rate_at_1":_bootstrap_mean(winner1),
+            "winner_hit_rate_at_3":_bootstrap_mean(winner3),
+            "top3_coverage":_bootstrap_mean(cov3),
+        },
+        "time_stability":block_metrics,
+        "race_results":predictions,
+    }
+    return report
 
 def main():
     import json
