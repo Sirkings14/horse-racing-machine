@@ -44,14 +44,24 @@ def _stats(history:HorseHistory,track:str|None,distance:int|None):
     course=history.course_stats.get(str(track or "").upper(),[0,0,0])
     ds=dt=dt5=0
     if distance is not None:
-        for bucket,(starts,top3,top5) in history.distance_stats.items():
-            if abs(bucket-distance)<=250:
+        center=_bucket(distance)
+        for delta in (-200,-100,0,100,200):
+            stats=history.distance_stats.get(center+delta)
+            if stats:
+                starts,top3,top5=stats
                 ds+=starts; dt+=top3; dt5+=top5
     return course,ds,dt,dt5
 
 def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any]]:
     """Build only information that existed before each race; same-date races cannot teach one another."""
-    ordered=sorted(enumerate(rows),key=lambda item:(_date_key(item[1]),str(item[1].get("race_key") or ""),item[0]))
+    rows_list=list(rows)
+    ordered=list(enumerate(rows_list))
+    if any(
+        (_date_key(ordered[i][1]),str(ordered[i][1].get("race_key") or ""),ordered[i][0])
+        > (_date_key(ordered[i+1][1]),str(ordered[i+1][1].get("race_key") or ""),ordered[i+1][0])
+        for i in range(len(ordered)-1)
+    ):
+        ordered.sort(key=lambda item:(_date_key(item[1]),str(item[1].get("race_key") or ""),item[0]))
     histories:dict[str,HorseHistory]=defaultdict(HorseHistory)
     output=[]; index=0
     while index<len(ordered):
