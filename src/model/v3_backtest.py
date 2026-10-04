@@ -12,7 +12,10 @@ def _key(row): return str(row.get("race_key") or "")
 def _sort(row): return (str(row.get("date") or "")[:10],_key(row))
 
 def _valid_rows(rows):
-    return [r for r in rows if _key(r) and r.get("finish_position") is not None]
+    # Keep the complete race field. Unfinished/non-starter rows are still
+    # valid pre-race candidates; only races without a verified outcome are
+    # excluded from evaluation later.
+    return [r for r in rows if _key(r)]
 
 def _evaluate(ranked):
     winner=next((int(r["horse_number"]) for r in ranked if int(r.get("won",0))==1),None)
@@ -40,7 +43,7 @@ def _bootstrap_mean(values,seed=17,iterations=1000):
     means.sort()
     return {"mean":round(sum(values)/n,6),"lower":round(means[int(0.025*iterations)],6),"upper":round(means[int(0.975*iterations)-1],6)}
 
-def run(rows:list[dict[str,Any]],min_train_races:int=50)->dict[str,Any]:
+def run(rows:list[dict[str,Any]],min_train_races:int=5)->dict[str,Any]:
     rows=_valid_rows(rows)
     profiled=build_walk_forward_profiles(rows)
     groups=defaultdict(list)
