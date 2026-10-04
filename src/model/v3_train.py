@@ -48,15 +48,15 @@ def main():
         raw=base.predict_proba(cal_rows)
         labels=[int(r.get(target,0)) for r in cal_rows]
         calibration=fit_sigmoid_calibrator(raw,labels)
-        final=fit_v3_model(profiled,target_field=target)
+        final=fit_v3_model(profiled,target_field=target,epochs=120)
         final.calibration=calibration
         models[name]=final.to_dict()
         calibration_reports[name]=calibration_metrics(raw,labels)
-    v3_report=run_v3_backtest(rows,min_train_races=max(5,split//2))
+    v3_report=run_v3_backtest(rows,min_train_races=5,refit_every_days=365)
     economic_races=[x.get("top5_candidates",[]) for x in (v3_report.get("race_results") or [])]
     economic_report=evaluate_value_strategy(economic_races,edge_threshold=0.08)
     (BASE_DIR/"data/model/economic_validation_report.json").write_text(json.dumps(economic_report,indent=2),encoding="utf-8")
-    legacy_report=run_legacy_backtest(rows,min_train_races=max(5,split//2))
+    legacy_report=run_legacy_backtest(rows,min_train_races=5)
     v3m=v3_report["metrics"]; lm=legacy_report["metrics"]
     approved,reasons=_promotion_decision(v3m,len(v3_report.get("race_results") or []))
     # Economic validation is intentionally separate. Predictive accuracy is not
