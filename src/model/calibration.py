@@ -28,7 +28,7 @@ def apply_sigmoid_calibrator(probability, calibration):
     return 1.0 / (1.0 + math.exp(-z))
 
 def calibration_metrics(probabilities, labels, bins=10):
-    if not probabilities:
+    if len(probabilities) == 0:
         return {"brier": None, "log_loss": None, "ece": None}
     p = [min(max(float(v), 1e-6), 1 - 1e-6) for v in probabilities]
     y = [int(v) for v in labels]
