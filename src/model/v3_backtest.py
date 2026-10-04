@@ -61,7 +61,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=5,refit_every_days:int=90)-
     for di,date in enumerate(dates):
         if di < min_train_races: continue
         if models is None or (di - min_train_races) % max(refit_every_days,1) == 0:
-        prior_keys=[k for d in dates[:di] for k in date_to_keys[d]]
+            prior_keys=[k for d in dates[:di] for k in date_to_keys[d]]
         train=[r for k in prior_keys for r in groups[k]]
         models={}
         try:
