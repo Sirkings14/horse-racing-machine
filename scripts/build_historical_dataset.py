@@ -119,12 +119,13 @@ def main():
             continue
         matched_number += 1
         horse_name = str(_pick(p, ["cheval", "nomCheval", "horse", "horse_name", "nom"], f"HORSE_{horse_number}") or f"HORSE_{horse_number}").strip()
+        horse_id = _pick(p, ["horse_id", "horseId", "horse_uid", "horseUid", "idCheval", "id_cheval", "identifiantCheval", "identifiant_cheval"])
         rows.append({
             "race_key": key, "date": meta["date"], "track": meta["track"],
             "race_number": meta["race_number"], "distance": meta["distance"],
             "runners_count": meta["runners_count"], "prize_euros": meta["prize_euros"],
             "race_type": meta["race_type"], "horse_number": horse_number,
-            "horse_name": horse_name, "finish_position": pos, "won": int(pos == 1),
+            "horse_name": horse_name, "horse_id": horse_id, "finish_position": pos, "won": int(pos == 1),
             "top3": int(pos <= 3), "top5": int(pos <= 5),
             "weight": _num(_pick(p, ["poids", "weight", "carried_weight", "poidsporte"])),
             "draw": _num(_pick(p, ["corde", "draw", "stall", "numCorde", "placeCorde"])),
@@ -154,6 +155,7 @@ def main():
         "rows": len(rows), "races": len({r["race_key"] for r in rows}),
         "first_date": rows[0]["date"], "last_date": rows[-1]["date"],
         "explicit_win_odds_rows": odds, "explicit_win_odds_rate": round(odds / len(rows), 4),
+        "horse_identity_source": ("stable_id" if any(r.get("horse_id") not in (None, "") for r in rows) else "normalized_name"),
     }, indent=2))
 
 if __name__ == "__main__":
