@@ -2,6 +2,8 @@ from __future__ import annotations
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import date
+import re
+import unicodedata
 from typing import Any, Iterable
 
 @dataclass
@@ -21,7 +23,26 @@ def _date_value(row:dict[str,Any])->date|None:
     except ValueError:return None
 
 def _date_key(row): return str(row.get("date") or "")[:10]
-def _horse_key(row): return str(row.get("horse_name") or row.get("horse") or "").strip().upper()
+
+_ID_FIELDS=("horse_id","horseId","horse_uid","horseUid","idCheval","id_cheval","identifiantCheval","identifiant_cheval")
+
+def _clean_name(value:Any)->str:
+    text=unicodedata.normalize("NFKD",str(value or ""))
+    text="".join(ch for ch in text if not unicodedata.combining(ch))
+    text=text.upper().replace("’","'").replace("–","-").replace("—","-")
+    text=re.sub(r"[^A-Z0-9]+"," ",text)
+    return re.sub(r"\s+"," ",text).strip()
+
+def _horse_key(row:dict[str,Any])->str:
+    for field_name in _ID_FIELDS:
+        value=row.get(field_name)
+        if value not in (None,""):
+            return "ID:"+str(value).strip()
+    name=_clean_name(row.get("horse_name") or row.get("horse"))
+    return "NAME:"+name if name else ""
+
+def horse_identity_source(row:dict[str,Any])->str:
+    return "stable_id" if any(row.get(k) not in (None,"") for k in _ID_FIELDS) else "normalized_name"
 
 def _distance(row):
     try:
@@ -68,10 +89,12 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
         current_date=_date_key(ordered[index][1]); end=index
         while end<len(ordered) and _date_key(ordered[end][1])==current_date:end+=1
         for _,row in ordered[index:end]:
-            h=histories[_horse_key(row)]; recent=h.recent_finishes[-5:]
+            key=_horse_key(row)
+            h=histories[key]; recent=h.recent_finishes[-5:]
             course,ds,dt,dt5=_stats(h,row.get("track"),_distance(row))
             recent_avg=sum(recent)/len(recent) if recent else None
             output.append({**row,
+                "horse_identity_source":horse_identity_source(row),
                 "history_starts":h.starts,
                 "history_win_rate":h.wins/h.starts if h.starts else 0.0,
                 "history_top3_rate":h.top3/h.starts if h.starts else 0.0,
