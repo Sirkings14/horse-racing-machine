@@ -69,7 +69,7 @@ def main():
         key = str(_pick(p, ["raceKey", "race_key"], ""))
         meta = race_meta.get(key)
         if not meta or not meta["date"] or not meta["arrival"]: continue
-        horse_number = _num(_pick(p, ["numero", "num", "numeroPmu", "horse_number", "program_number"]))
+        horse_number = _num(_pick(p, ["numero", "num", "numeroPmu", "numPmu", "horse_number", "program_number"]))
         if horse_number is None: continue
         horse_number = int(horse_number)
         try: pos = meta["arrival"].index(horse_number) + 1
