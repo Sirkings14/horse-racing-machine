@@ -45,7 +45,7 @@ def _bootstrap_mean(values,seed=17,iterations=1000):
 
 def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=365,max_train_rows:int=25000,epochs:int=20)->dict[str,Any]:
     rows=_valid_rows(rows)
-    profiled=build_walk_forward_profiles(rows)
+    profiled = rows if rows and "history_starts" in rows[0] else build_walk_forward_profiles(rows)
     groups=defaultdict(list)
     for row in profiled: groups[_key(row)].append(row)
     keys=sorted(groups,key=lambda k:min(_sort(r) for r in groups[k]))
