@@ -41,14 +41,17 @@ def main():
     split=max(1,int(len(keys)*0.8))
     train_rows=[r for k in keys[:split] for r in groups[k]]
     cal_rows=[r for k in keys[split:] for r in groups[k]]
+    # Keep final fitting bounded; validation remains full walk-forward and unchanged.
+    fit_rows=train_rows[-25000:]
+    final_rows=profiled[-25000:]
     models={}
     calibration_reports={}
     for name,target in (("winner","won"),("top3","top3"),("top5","top5")):
-        base=fit_v3_model(train_rows,target_field=target)
+        base=fit_v3_model(fit_rows,target_field=target,epochs=20)
         raw=base.predict_proba(cal_rows)
         labels=[int(r.get(target,0)) for r in cal_rows]
         calibration=fit_sigmoid_calibrator(raw,labels)
-        final=fit_v3_model(profiled,target_field=target,epochs=120)
+        final=fit_v3_model(final_rows,target_field=target,epochs=20)
         final.calibration=calibration
         models[name]=final.to_dict()
         calibration_reports[name]=calibration_metrics(raw,labels)
