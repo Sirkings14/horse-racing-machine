@@ -2,21 +2,21 @@ name: V3 evidence brain validation
 
 on:
   push:
-    branches: [main, v3-evidence-brain, v4-production-edge]
+    branches: [main, v3-evidence-brain]
   pull_request:
     branches: [main]
   workflow_dispatch:
 
 concurrency:
-  group: v3-evidence-validation
-  cancel-in-progress: true
+  group: v3-evidence-validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v5
