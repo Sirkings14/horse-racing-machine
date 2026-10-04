@@ -43,7 +43,7 @@ def _bootstrap_mean(values,seed=17,iterations=1000):
     means.sort()
     return {"mean":round(sum(values)/n,6),"lower":round(means[int(0.025*iterations)],6),"upper":round(means[int(0.975*iterations)-1],6)}
 
-def run(rows:list[dict[str,Any]],min_train_races:int=30,refit_every_days:int=180,max_train_rows:int=100000,epochs:int=30)->dict[str,Any]:
+def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=365,max_train_rows:int=25000,epochs:int=20)->dict[str,Any]:
     rows=_valid_rows(rows)
     profiled=build_walk_forward_profiles(rows)
     groups=defaultdict(list)
