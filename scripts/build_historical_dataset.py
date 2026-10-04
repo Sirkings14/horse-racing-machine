@@ -7,8 +7,11 @@ from pathlib import Path
 from typing import Any
 
 from datasets import load_dataset
+import sys
 
 BASE = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(BASE))
+from src.model.historical_profile import build_walk_forward_profiles
 OUT = BASE / "data" / "dataset" / "training_dataset_clean.json"
 SOURCE = "annaelmoussa/horse-racing-france"
 
