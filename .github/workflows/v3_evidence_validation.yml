@@ -26,7 +26,14 @@ jobs:
       - name: Run V3 tests
         run: python -m pytest -q
       - name: Run V3 walk-forward backtest
-        run: python -m src.model.v3_backtest
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/dataset/training_dataset_clean.json").read_text())
+          print(f"Dataset rows={len(d)} races={len({r.get('race_key') for r in d})}")
+          PY
+          python -m src.model.v3_backtest
       - name: Train V3 model bundle
         run: python -m src.model.v3_train
       - name: Verify economic safety gate
