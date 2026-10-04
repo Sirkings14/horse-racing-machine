@@ -7,7 +7,6 @@ from pathlib import Path
 from typing import Any
 
 from datasets import load_dataset
-from src.model.historical_profile import build_walk_forward_profiles
 
 BASE = Path(__file__).resolve().parents[1]
 OUT = BASE / "data" / "dataset" / "training_dataset_clean.json"
