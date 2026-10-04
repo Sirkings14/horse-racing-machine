@@ -63,7 +63,8 @@ def main():
 
     print("Race metadata:", len(race_meta))
     participants = load_dataset(SOURCE, "participants", split="train", streaming=True)
-    rows, columns_seen = [], set()\n    matched_meta = matched_arrival = matched_number = 0
+    rows, columns_seen = [], set()
+    matched_meta = matched_arrival = matched_number = 0
     for i, p in enumerate(participants):
         columns_seen.update(p.keys())
         key = str(_pick(p, ["raceKey", "race_key"], ""))
