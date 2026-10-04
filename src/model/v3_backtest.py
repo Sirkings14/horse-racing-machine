@@ -43,7 +43,7 @@ def _bootstrap_mean(values,seed=17,iterations=1000):
     means.sort()
     return {"mean":round(sum(values)/n,6),"lower":round(means[int(0.025*iterations)],6),"upper":round(means[int(0.975*iterations)-1],6)}
 
-def run(rows:list[dict[str,Any]],min_train_races:int=5,refit_every_days:int=90)->dict[str,Any]:
+def run(rows:list[dict[str,Any]],min_train_races:int=30,refit_every_days:int=180,max_train_rows:int=100000,epochs:int=30)->dict[str,Any]:
     rows=_valid_rows(rows)
     profiled=build_walk_forward_profiles(rows)
     groups=defaultdict(list)
@@ -63,11 +63,13 @@ def run(rows:list[dict[str,Any]],min_train_races:int=5,refit_every_days:int=90)-
         if models is None or (di - min_train_races) % max(refit_every_days,1) == 0:
             prior_keys=[k for d in dates[:di] for k in date_to_keys[d]]
             train=[r for k in prior_keys for r in groups[k]]
+            if len(train) > max_train_rows:
+                train = train[-max_train_rows:]
             models={}
             try:
-                models["winner"]=fit_v3_model(train,target_field="won",epochs=120)
-                models["top3"]=fit_v3_model(train,target_field="top3",epochs=120)
-                models["top5"]=fit_v3_model(train,target_field="top5",epochs=120)
+                models["winner"]=fit_v3_model(train,target_field="won",epochs=epochs)
+                models["top3"]=fit_v3_model(train,target_field="top3",epochs=epochs)
+                models["top5"]=fit_v3_model(train,target_field="top5",epochs=epochs)
             except ValueError:
                 continue
         for key in date_to_keys[date]:
