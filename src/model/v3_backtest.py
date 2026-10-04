@@ -62,14 +62,14 @@ def run(rows:list[dict[str,Any]],min_train_races:int=5,refit_every_days:int=90)-
         if di < min_train_races: continue
         if models is None or (di - min_train_races) % max(refit_every_days,1) == 0:
             prior_keys=[k for d in dates[:di] for k in date_to_keys[d]]
-        train=[r for k in prior_keys for r in groups[k]]
-        models={}
-        try:
-            models["winner"]=fit_v3_model(train,target_field="won",epochs=120)
-            models["top3"]=fit_v3_model(train,target_field="top3",epochs=120)
-            models["top5"]=fit_v3_model(train,target_field="top5",epochs=120)
-        except ValueError:
-            continue
+            train=[r for k in prior_keys for r in groups[k]]
+            models={}
+            try:
+                models["winner"]=fit_v3_model(train,target_field="won",epochs=120)
+                models["top3"]=fit_v3_model(train,target_field="top3",epochs=120)
+                models["top5"]=fit_v3_model(train,target_field="top5",epochs=120)
+            except ValueError:
+                continue
         for key in date_to_keys[date]:
             test=groups[key]
             p1=models["winner"].predict_proba(test); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
