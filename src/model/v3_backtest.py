@@ -50,27 +50,38 @@ def run(rows:list[dict[str,Any]],min_train_races:int=5)->dict[str,Any]:
     for row in profiled: groups[_key(row)].append(row)
     keys=sorted(groups,key=lambda k:min(_sort(r) for r in groups[k]))
     predictions=[]; probabilities=[]; labels=[]
-    for i,key in enumerate(keys):
-        if i<min_train_races:continue
-        train=[r for k in keys[:i] for r in groups[k]]; test=groups[key]
+    # Refit once per calendar date, preserving the rule that same-day races
+    # cannot teach one another while making large walk-forward validation viable.
+    date_to_keys=defaultdict(list)
+    for key in keys:
+        row=min(groups[key], key=lambda r: _sort(r))
+        date_to_keys[str(row.get("date") or "")[:10]].append(key)
+    dates=sorted(date_to_keys)
+    for di,date in enumerate(dates):
+        if di < min_train_races: continue
+        prior_keys=[k for d in dates[:di] for k in date_to_keys[d]]
+        train=[r for k in prior_keys for r in groups[k]]
         models={}
         try:
             models["winner"]=fit_v3_model(train,target_field="won")
             models["top3"]=fit_v3_model(train,target_field="top3")
             models["top5"]=fit_v3_model(train,target_field="top5")
-        except ValueError:continue
-        p1=models["winner"].predict_proba(test); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
-        ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1,p3,p5)]
-        ranked=sorted((dict(r,ensemble_score=float(s),p_winner=float(a),p_top3=float(b),p_top5=float(c)) for r,a,b,c,s in zip(test,p1,p3,p5,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
-        ev=_evaluate(ranked); ev["race_key"]=key; ev["field_size"]=len(ranked)
-        ev["top5_candidates"]=[{
-            "horse_number":int(r["horse_number"]),
-            "ensemble_score":float(r["ensemble_score"]),
-            "won":int(r.get("won",0)),
-            **{k:r.get(k) for k in ("win_odds_decimal","decimal_odds","starting_price_decimal","starting_price","win_odds","odds")}
-        } for r in ranked[:5]]
-        predictions.append(ev)
-        probabilities.extend(float(x) for x in p3); labels.extend(int(r.get("top3",0)) for r in test)
+        except ValueError:
+            continue
+        for key in date_to_keys[date]:
+            test=groups[key]
+            p1=models["winner"].predict_proba(test); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
+            ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1,p3,p5)]
+            ranked=sorted((dict(r,ensemble_score=float(s),p_winner=float(a),p_top3=float(b),p_top5=float(c)) for r,a,b,c,s in zip(test,p1,p3,p5,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
+            ev=_evaluate(ranked); ev["race_key"]=key; ev["field_size"]=len(ranked)
+            ev["top5_candidates"]=[{
+                "horse_number":int(r["horse_number"]),
+                "ensemble_score":float(r["ensemble_score"]),
+                "won":int(r.get("won",0)),
+                **{k:r.get(k) for k in ("win_odds_decimal","decimal_odds","starting_price_decimal","starting_price","win_odds","odds")}
+            } for r in ranked[:5]]
+            predictions.append(ev)
+            probabilities.extend(float(x) for x in p3); labels.extend(int(r.get("top3",0)) for r in test)
 
     n=len(predictions)
     if not n:raise ValueError("V3 backtest produced no evaluable races.")
