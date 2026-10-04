@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from datasets import load_dataset
+from src.model.historical_profile import build_walk_forward_profiles
 
 BASE = Path(__file__).resolve().parents[1]
 OUT = BASE / "data" / "dataset" / "training_dataset_clean.json"
@@ -143,6 +144,7 @@ def main():
     if not rows:
         raise RuntimeError("No rows built after participant/race join")
     rows.sort(key=lambda x: (x["date"], x["race_key"], x["horse_number"]))
+    rows = build_walk_forward_profiles(rows)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
     odds = sum(r.get("win_odds_decimal") is not None for r in rows)
