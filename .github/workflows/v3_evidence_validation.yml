@@ -23,6 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest
+      - name: Build verified historical dataset
+        run: python scripts/build_historical_dataset.py
+
       - name: Run V3 tests
         run: python -m pytest -q
       - name: Run V3 walk-forward backtest
