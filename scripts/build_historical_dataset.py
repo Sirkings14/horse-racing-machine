@@ -31,7 +31,7 @@ def _key(v):
     return str(v or "").strip()
 
 def _participant_key(p: dict[str, Any]) -> str:
-    direct = _key(_pick(p, ["raceKey", "race_key", "race"]))
+    direct = _key(_pick(p, ["raceKey", "race_key"]))
     if direct:
         return direct
     date = str(_pick(p, ["date", "date_course"], "") or "")[:10]
