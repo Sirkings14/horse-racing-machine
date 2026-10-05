@@ -43,12 +43,15 @@ def _bootstrap_mean(values,seed=17,iterations=1000):
     means.sort()
     return {"mean":round(sum(values)/n,6),"lower":round(means[int(0.025*iterations)],6),"upper":round(means[int(0.975*iterations)-1],6)}
 
-def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=365,max_train_rows:int=25000,epochs:int=20)->dict[str,Any]:
+def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=365,max_train_rows:int=25000,epochs:int=20,max_eval_races:int=3000)->dict[str,Any]:
     rows=_valid_rows(rows)
     profiled = rows if rows and "history_starts" in rows[0] else build_walk_forward_profiles(rows)
     groups=defaultdict(list)
     for row in profiled: groups[_key(row)].append(row)
     keys=sorted(groups,key=lambda k:min(_sort(r) for r in groups[k]))
+    # Keep validation chronological but bounded. All earlier races remain
+    # available for training; only the final holdout window is scored.
+    evaluation_keys=set(keys[-max_eval_races:]) if max_eval_races and len(keys)>max_eval_races else set(keys)
     predictions=[]; probabilities=[]; labels=[]
     # Refit once per calendar date, preserving the rule that same-day races
     # cannot teach one another while making large walk-forward validation viable.
@@ -73,6 +76,8 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
             except ValueError:
                 continue
         for key in date_to_keys[date]:
+            if key not in evaluation_keys:
+                continue
             test=groups[key]
             p1=models["winner"].predict_proba(test); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
             ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1,p3,p5)]
