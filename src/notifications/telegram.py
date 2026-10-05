@@ -8,27 +8,19 @@ from pathlib import Path
 import requests
 
 BASE_DIR = Path(__file__).resolve().parents[2]
-LEGACY_PREDICTION_FILE = BASE_DIR / "data" / "model" / "latest_prediction.json"
 V3_PREDICTION_FILE = BASE_DIR / "data" / "model" / "latest_v3_prediction.json"
 
 
-def _load_prediction() -> tuple[dict | None, bool]:
-    """Prefer the V3 evidence artifact; never silently fall back to stale V2 data."""
-    if V3_PREDICTION_FILE.exists():
-        try:
-            return json.loads(V3_PREDICTION_FILE.read_text(encoding="utf-8")), True
-        except (OSError, json.JSONDecodeError) as error:
-            print(f"Telegram skipped: unreadable V3 prediction: {error}")
-            return None, True
-
-    if LEGACY_PREDICTION_FILE.exists():
-        try:
-            return json.loads(LEGACY_PREDICTION_FILE.read_text(encoding="utf-8")), False
-        except (OSError, json.JSONDecodeError) as error:
-            print(f"Telegram skipped: unreadable legacy prediction: {error}")
-            return None, False
-
-    return None, False
+def _load_prediction() -> dict | None:
+    """Load only the V4 evidence artifact; never fall back to legacy output."""
+    if not V3_PREDICTION_FILE.exists():
+        print("Telegram skipped: V4 evidence prediction artifact does not exist.")
+        return None
+    try:
+        return json.loads(V3_PREDICTION_FILE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        print(f"Telegram skipped: unreadable V4 prediction: {error}")
+        return None
 
 
 def send_latest_prediction() -> bool:
@@ -38,17 +30,12 @@ def send_latest_prediction() -> bool:
         print("Telegram skipped: secrets are not configured.")
         return False
 
-    payload, is_v3 = _load_prediction()
+    payload = _load_prediction()
     if payload is None:
-        print("Telegram skipped: no usable prediction artifact exists.")
         return False
 
-    if is_v3:
-        if payload.get("mode") != "v3_evidence_no_press":
-            print("Telegram skipped: V3 artifact has an unexpected mode.")
-            return False
-    elif payload.get("mode") != "live_registry_prediction":
-        print("Telegram skipped: legacy prediction is not a validated live-registry prediction.")
+    if payload.get("mode") != "v3_evidence_no_press":
+        print("Telegram skipped: V4 artifact has an unexpected mode.")
         return False
 
     race = payload.get("race") or {}
@@ -71,18 +58,17 @@ def send_latest_prediction() -> bool:
 
     guard = payload.get("autopilot_guard") or {}
     decision = payload.get("live_decision")
-    if is_v3 and not decision:
+    if not decision:
         decision = "NO_BET" if guard.get("decision") == "PASS" else "PLAY_CANDIDATE"
 
     race_key = payload.get("race_key") or "unknown"
     monitor = payload.get("monitoring") or {}
     agreement = monitor.get("agreement") or payload.get("model_agreement", "unknown")
 
-    if is_v3:
-        predicted_order = candidates
-        order_top5 = []
-        adaptive_depth = len(candidates)
-        model_label = payload.get("model_version", "unknown")
+    predicted_order = candidates
+    order_top5 = []
+    adaptive_depth = len(candidates)
+    model_label = payload.get("model_version", "unknown")
         if decision == "NO_BET":
             reasons = guard.get("gate_reasons") or payload.get("no_bet_reason") or ["autopilot guard blocked live play"]
             lines = [
@@ -119,31 +105,6 @@ def send_latest_prediction() -> bool:
                 "",
                 "Race intelligence — Top 5:",
             ]
-    else:
-        numbers = payload.get("recommended_numbers") or []
-        if not numbers:
-            print("Telegram skipped: legacy prediction contains no recommended numbers.")
-            return False
-        predicted_order = payload.get("predicted_finish_order") or []
-        order_top5 = payload.get("order_engine_top5") or []
-        adaptive_depth = payload.get("adaptive_top_count", len(numbers))
-        model_label = payload.get("model_version", "unknown")
-        lines = [
-            "🏇 HORSE RACING MACHINE",
-            "",
-            f"Race: {race_key}",
-            f"Track: {race.get('track')}",
-            f"Race: {race.get('race_name') or 'N/A'}",
-            f"Distance: {race.get('distance')}m",
-            f"🎯 Recommended {len(numbers)}: {' - '.join(map(str, numbers))}",
-            f"🏆 Predicted order: {' - '.join(map(str, predicted_order[:5]))}",
-            f"🔎 Order engine: {' - '.join(map(str, order_top5[:5])) if order_top5 else 'unavailable'}",
-            f"🧠 Engine agreement: {agreement}",
-            f"Adaptive depth: {adaptive_depth}",
-            f"Model: {model_label}",
-            "",
-            "Race intelligence — Top 5:",
-        ]
 
     for horse in ranked[:5]:
         probability = float(horse.get("probability_top3", 0))
@@ -155,7 +116,7 @@ def send_latest_prediction() -> bool:
             f"| Top3 {probability:.1%}{order_text}"
         )
 
-    if not (is_v3 and decision == "NO_BET") and (monitor.get("warning") or payload.get("warning")):
+    if decision != "NO_BET" and (monitor.get("warning") or payload.get("warning")):
         lines += ["", f"⚠️ {monitor.get('warning') or payload.get('warning')}"]
 
     lines += ["", "⚠️ Model output only. Horse racing remains uncertain."]
