@@ -2,14 +2,12 @@ name: V3 evidence brain validation
 
 on:
   push:
-    branches: [main, v3-evidence-brain]
-  pull_request:
-    branches: [main]
+    branches: [main, v3-evidence-brain, v4-production-edge]
   workflow_dispatch:
 
 concurrency:
-  group: v3-evidence-validation-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: false
+  group: v3-evidence-validation-\${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -29,7 +27,6 @@ jobs:
           pip install pytest
       - name: Build verified historical dataset
         run: python scripts/build_historical_dataset.py
-
       - name: Run V3 tests
         run: python -m pytest -q
       - name: Run V3 walk-forward backtest
