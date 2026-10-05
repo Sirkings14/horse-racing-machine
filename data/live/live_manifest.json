@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-05T18:23:17.225350+00:00",
+  "updated_at": "2026-10-05T18:33:15.699396+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -480,11 +480,11 @@
       "source_file": "live_program_JH_PMU_DU_05-10-2026_054f075f33.pdf",
       "structured_file": "structured/2026-10-05_ENGHIEN_1.json",
       "status": "validated",
-      "prediction_status": "predicted",
-      "discovered_at": "2026-10-05T18:23:07.447681+00:00",
+      "prediction_status": "pending",
+      "discovered_at": "2026-10-05T18:33:15.699191+00:00",
       "result_status": "pending",
       "created_at": "2026-10-03T16:33:50.429405+00:00",
-      "updated_at": "2026-10-05T18:23:17.225346+00:00",
+      "updated_at": "2026-10-05T18:33:15.699386+00:00",
       "prediction_file": "data/predictions/2026-10-05_ENGHIEN_1.json",
       "predicted_at": "2026-10-05T18:23:17.225339+00:00"
     },
@@ -503,10 +503,10 @@
       "structured_file": "structured/2026-10-06_AUTEUIL_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-05T18:23:06.803664+00:00",
+      "discovered_at": "2026-10-05T18:33:14.084544+00:00",
       "result_status": "pending",
       "created_at": "2026-10-05T09:38:08.289897+00:00",
-      "updated_at": "2026-10-05T18:23:06.803860+00:00"
+      "updated_at": "2026-10-05T18:33:14.084736+00:00"
     },
     {
       "race_key": "2026-10-07|ENGHIEN|1",
@@ -523,10 +523,10 @@
       "structured_file": "structured/2026-10-07_ENGHIEN_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-05T18:23:06.148845+00:00",
+      "discovered_at": "2026-10-05T18:33:12.468749+00:00",
       "result_status": "pending",
       "created_at": "2026-10-05T16:14:29.054195+00:00",
-      "updated_at": "2026-10-05T18:23:06.149043+00:00"
+      "updated_at": "2026-10-05T18:33:12.468932+00:00"
     }
   ]
 }
