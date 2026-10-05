@@ -25,7 +25,8 @@ def evaluate_value_strategy(races:Iterable[list[dict[str,Any]]], edge_threshold:
     for ranked in races:
         for row in ranked[:5]:
             odds=_decimal_odds(row)
-            p=row.get("ensemble_score")
+            # Value is defined from win probability, never from the ensemble ranking score.
+            p=row.get("probability_winner", row.get("p_winner"))
             if odds is None or p is None:
                 missing+=1; continue
             p=float(p); implied=1.0/odds; edge=p-implied
