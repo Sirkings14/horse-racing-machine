@@ -81,6 +81,9 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
             ev["top5_candidates"]=[{
                 "horse_number":int(r["horse_number"]),
                 "ensemble_score":float(r["ensemble_score"]),
+                "probability_winner":float(r.get("p_winner",0.0)),
+                "probability_top3":float(r.get("p_top3",0.0)),
+                "probability_top5":float(r.get("p_top5",0.0)),
                 "won":int(r.get("won",0)),
                 **{k:r.get(k) for k in ("win_odds_decimal","decimal_odds","starting_price_decimal","starting_price","win_odds","odds")}
             } for r in ranked[:5]]
