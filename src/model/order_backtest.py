@@ -44,7 +44,22 @@ def main() -> Dict[str, Any]:
 
     race_keys = sorted(groups, key=race_sort_key)
     if len(race_keys) < 20:
-        raise ValueError("Order backtest needs at least 20 verified races.")
+        report = {
+            "method": "walk_forward_pairwise_finishing_order",
+            "status": "insufficient_data",
+            "reason": "fewer_than_20_verified_races",
+            "dataset_races": len(race_keys),
+            "warmup_races": None,
+            "evaluated_races": 0,
+            "metrics": None,
+            "baseline": {"pairwise_random_accuracy": 0.5},
+            "per_race": [],
+        }
+        OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+        OUTPUT_FILE.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"Order backtest skipped honestly: only {len(race_keys)} verified races are available; 20 are required.")
+        print(f"Saved report: {OUTPUT_FILE}")
+        return report
 
     warmup = max(10, int(len(race_keys) * 0.5))
     totals = {"pair_correct": 0, "pair_total": 0, "position_hits": 0, "position_total": 0, "exact_top3": 0, "exact_top5": 0}
