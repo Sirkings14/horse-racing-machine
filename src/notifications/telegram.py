@@ -69,42 +69,43 @@ def send_latest_prediction() -> bool:
     order_top5 = []
     adaptive_depth = len(candidates)
     model_label = payload.get("model_version", "unknown")
-        if decision == "NO_BET":
-            reasons = guard.get("gate_reasons") or payload.get("no_bet_reason") or ["autopilot guard blocked live play"]
-            lines = [
-                "🏇 HORSE RACING MACHINE",
-                "",
-                f"Race: {race_key}",
-                f"Track: {race.get('track')}",
-                f"Race: {race.get('race_name') or 'N/A'}",
-                f"Distance: {race.get('distance')}m",
-                "🛑 NO BET — V4 evidence gate blocked live play",
-                f"🧪 Model candidates (NOT CLEARED): {' - '.join(map(str, candidates))}",
-                f"🧠 Model agreement: {agreement}",
-                f"Model: {model_label}",
-                "",
-                "Gate reasons:",
-                *[f"• {reason}" for reason in reasons],
-                "",
-                "⚠️ Candidates are model output only; they are not cleared betting recommendations.",
-            ]
-        else:
-            lines = [
-                "🏇 HORSE RACING MACHINE",
-                "",
-                f"Race: {race_key}",
-                f"Track: {race.get('track')}",
-                f"Race: {race.get('race_name') or 'N/A'}",
-                f"Distance: {race.get('distance')}m",
-                f"🎯 Recommended {len(candidates)}: {' - '.join(map(str, candidates))}",
-                f"🏆 Predicted order: {' - '.join(map(str, predicted_order))}",
-                "🔎 Order engine: unavailable in V4 evidence predictor",
-                f"🧠 Model agreement: {agreement}",
-                f"Adaptive depth: {adaptive_depth}",
-                f"Model: {model_label}",
-                "",
-                "Race intelligence — Top 5:",
-            ]
+
+    if decision == "NO_BET":
+        reasons = guard.get("gate_reasons") or payload.get("no_bet_reason") or ["autopilot guard blocked live play"]
+        lines = [
+            "🏇 HORSE RACING MACHINE",
+            "",
+            f"Race: {race_key}",
+            f"Track: {race.get('track')}",
+            f"Race: {race.get('race_name') or 'N/A'}",
+            f"Distance: {race.get('distance')}m",
+            "🛑 NO BET — V4 evidence gate blocked live play",
+            f"🧪 Model candidates (NOT CLEARED): {' - '.join(map(str, candidates))}",
+            f"🧠 Model agreement: {agreement}",
+            f"Model: {model_label}",
+            "",
+            "Gate reasons:",
+            *[f"• {reason}" for reason in reasons],
+            "",
+            "⚠️ Candidates are model output only; they are not cleared betting recommendations.",
+        ]
+    else:
+        lines = [
+            "🏇 HORSE RACING MACHINE",
+            "",
+            f"Race: {race_key}",
+            f"Track: {race.get('track')}",
+            f"Race: {race.get('race_name') or 'N/A'}",
+            f"Distance: {race.get('distance')}m",
+            f"🎯 Recommended {len(candidates)}: {' - '.join(map(str, candidates))}",
+            f"🏆 Predicted order: {' - '.join(map(str, predicted_order))}",
+            "🔎 Order engine: unavailable in V4 evidence predictor",
+            f"🧠 Model agreement: {agreement}",
+            f"Adaptive depth: {adaptive_depth}",
+            f"Model: {model_label}",
+            "",
+            "Race intelligence — Top 5:",
+        ]
 
     for horse in ranked[:5]:
         probability = float(horse.get("probability_top3", 0))
