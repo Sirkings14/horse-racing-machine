@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: v3-evidence-validation-\${{ github.ref }}
+  group: v3-evidence-validation-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -17,6 +17,14 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            .github
+            data/model
+            requirements.txt
+            scripts
+            src
+            tests
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
