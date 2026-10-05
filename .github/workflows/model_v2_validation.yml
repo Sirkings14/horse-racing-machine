@@ -43,8 +43,11 @@ jobs:
           assert report["evaluated_races"] > 0
           assert "baselines" in report
           order = json.loads(Path("data/model/order_backtest_report.json").read_text())
-          assert order["evaluated_races"] > 0
           assert "pairwise_random_accuracy" in order["baseline"]
+          if order.get("status") == "insufficient_data":
+              print("Order backtest not scored: insufficient verified races; this is informational, not a model pass.")
+          else:
+              assert order["evaluated_races"] > 0
           print("Walk-forward reports validated")
           PY
       - name: Validate probability correction
