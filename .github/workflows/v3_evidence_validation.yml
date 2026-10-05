@@ -16,6 +16,7 @@ jobs:
   validate:
     runs-on: ubuntu-22.04
     steps:
+      # Source-only checkout: the generated training dataset is rebuilt by this workflow.
       - uses: actions/checkout@v6
         with:
           sparse-checkout: |
