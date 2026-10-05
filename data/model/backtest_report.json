@@ -1,36 +1,36 @@
 {
   "method": "walk_forward_logistic_top3",
-  "dataset_races": 342,
-  "dataset_rows": 5408,
+  "dataset_races": 343,
+  "dataset_rows": 5424,
   "minimum_training_races": 5,
-  "evaluated_races": 337,
+  "evaluated_races": 338,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1484,
-    "winner_hit_rate_at_3": 0.365,
-    "average_actual_top3_covered_by_predicted_top3": 0.8813,
-    "average_actual_top3_covered_by_predicted_top5": 1.3294,
-    "brier_score_top3": 0.150289,
-    "log_loss_top3": 0.475504,
-    "expected_calibration_error_top3": 0.018966
+    "winner_hit_rate_at_1": 0.1509,
+    "winner_hit_rate_at_3": 0.3669,
+    "average_actual_top3_covered_by_predicted_top3": 0.8817,
+    "average_actual_top3_covered_by_predicted_top5": 1.3284,
+    "brier_score_top3": 0.150241,
+    "log_loss_top3": 0.475361,
+    "expected_calibration_error_top3": 0.018657
   },
   "baselines": {
     "favorites": {
-      "winner_hit_rate_at_1": 0.1691,
-      "winner_hit_rate_at_3": 0.3739,
-      "average_actual_top3_covered_by_predicted_top3": 0.8902,
-      "average_actual_top3_covered_by_predicted_top5": 1.3442
+      "winner_hit_rate_at_1": 0.1716,
+      "winner_hit_rate_at_3": 0.3757,
+      "average_actual_top3_covered_by_predicted_top3": 0.8905,
+      "average_actual_top3_covered_by_predicted_top5": 1.3432
     },
     "form": {
-      "winner_hit_rate_at_1": 0.1187,
-      "winner_hit_rate_at_3": 0.3116,
-      "average_actual_top3_covered_by_predicted_top3": 0.7745,
-      "average_actual_top3_covered_by_predicted_top5": 1.2404
+      "winner_hit_rate_at_1": 0.1213,
+      "winner_hit_rate_at_3": 0.3136,
+      "average_actual_top3_covered_by_predicted_top3": 0.7751,
+      "average_actual_top3_covered_by_predicted_top5": 1.2396
     }
   },
   "calibration": {
-    "brier_score": 0.150289,
-    "log_loss": 0.475504,
-    "ece": 0.018966,
+    "brier_score": 0.150241,
+    "log_loss": 0.475361,
+    "ece": 0.018657,
     "calibration_bins": [
       {
         "lower": 0.0,
@@ -42,23 +42,23 @@
       {
         "lower": 0.1,
         "upper": 0.2,
-        "count": 3631,
-        "mean_probability": 0.14483,
-        "observed_rate": 0.157257
+        "count": 3640,
+        "mean_probability": 0.144835,
+        "observed_rate": 0.156868
       },
       {
         "lower": 0.2,
         "upper": 0.3,
-        "count": 957,
-        "mean_probability": 0.246699,
-        "observed_rate": 0.221526
+        "count": 963,
+        "mean_probability": 0.246684,
+        "observed_rate": 0.222222
       },
       {
         "lower": 0.3,
         "upper": 0.4,
-        "count": 528,
-        "mean_probability": 0.338517,
-        "observed_rate": 0.339015
+        "count": 529,
+        "mean_probability": 0.338547,
+        "observed_rate": 0.340265
       },
       {
         "lower": 0.4,
@@ -91,9 +91,9 @@
       {
         "lower": 0.9,
         "upper": 1.0,
-        "count": 5328,
-        "mean_probability": 0.186668,
-        "observed_rate": 0.189752
+        "count": 5344,
+        "mean_probability": 0.186696,
+        "observed_rate": 0.189746
       }
     ]
   },
@@ -13577,6 +13577,46 @@
         }
       },
       "race_key": "2026-10-03|PARISLONGCHAMP|4"
+    },
+    {
+      "winner": 1,
+      "predicted_top1": 1,
+      "winner_hit_at_1": true,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        1,
+        7,
+        16
+      ],
+      "predicted_top3": [
+        1,
+        12,
+        14
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        1,
+        12,
+        14,
+        9,
+        11
+      ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        },
+        "form": {
+          "winner_hit_at_1": true,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
+      "race_key": "2026-10-04|PARISLONGCHAMP|5"
     }
   ]
 }

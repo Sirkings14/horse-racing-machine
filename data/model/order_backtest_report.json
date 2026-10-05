@@ -1,25 +1,18 @@
 {
   "method": "walk_forward_pairwise_finishing_order",
-  "dataset_races": 342,
+  "dataset_races": 343,
   "warmup_races": 171,
-  "evaluated_races": 171,
+  "evaluated_races": 172,
   "metrics": {
-    "pairwise_order_accuracy": 0.59,
-    "top5_position_accuracy": 0.3295,
-    "exact_top3_order_rate": 0.1404,
-    "exact_top5_order_rate": 0.1404
+    "pairwise_order_accuracy": 0.5903,
+    "top5_position_accuracy": 0.3296,
+    "exact_top3_order_rate": 0.1395,
+    "exact_top5_order_rate": 0.1395
   },
   "baseline": {
     "pairwise_random_accuracy": 0.5
   },
   "per_race": [
-    {
-      "race_key": "2025-10-29|AUTEUIL|3",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.3333,
-      "exact_top3": false,
-      "exact_top5": false
-    },
     {
       "race_key": "2025-11-02|DEAUVILLE|3",
       "pairwise_accuracy": 0.3333,
@@ -710,6 +703,13 @@
       "race_key": "2026-10-03|PARISLONGCHAMP|4",
       "pairwise_accuracy": 0.8333,
       "top5_position_accuracy": 0.5,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-10-04|PARISLONGCHAMP|5",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.3333,
       "exact_top3": false,
       "exact_top5": false
     }
