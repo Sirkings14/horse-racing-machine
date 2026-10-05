@@ -1,0 +1,71 @@
+name: V3 evidence brain validation
+
+on:
+  push:
+    branches: [main, v3-evidence-brain, v4-production-edge]
+  workflow_dispatch:
+
+concurrency:
+  group: v3-evidence-validation-\${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+      - name: Build verified historical dataset
+        run: python scripts/build_historical_dataset.py
+      - name: Run V3 tests
+        run: python -m pytest -q
+      - name: Run V3 walk-forward backtest
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("data/dataset/training_dataset_clean.json").read_text())
+          print(f"Dataset rows={len(d)} races={len({r.get('race_key') for r in d})}")
+          PY
+          python -m src.model.v3_backtest
+      - name: Train V3 model bundle
+        run: python -m src.model.v3_train
+      - name: Verify economic safety gate
+        run: |
+          python -m src.model.autopilot_guard
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/model/economic_validation_report.json').read_text())
+          if p.get('status') == 'available' and float(p.get('roi', 0)) <= 0:
+              raise SystemExit('Economic validation FAILED: non-positive ROI')
+          print('Economic safety gate passed; live stakes remain blocked when price evidence is insufficient.')
+          PY
+      - name: Verify V3 promotion gate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          payload=json.loads(Path('data/model/v3_models.json').read_text())
+          if payload.get('production_approved') is not True:
+              raise SystemExit('V3 promotion gate FAILED: challenger is not approved for production')
+          print('V3 promotion gate PASSED')
+          PY
+      - name: Commit V3 model artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/model/v3_models.json data/model/v3_backtest_report.json
+          git diff --cached --quiet || git commit -m "Update V3 evidence model artifact"
+          git push

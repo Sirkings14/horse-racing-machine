@@ -8,6 +8,7 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 EVALUATION_FILE = BASE_DIR / "data" / "evaluation" / "prediction_evaluations.json"
 DRIFT_FILE = BASE_DIR / "data" / "model" / "feature_drift_report.json"
 ORDER_BACKTEST_FILE = BASE_DIR / "data" / "model" / "order_backtest_report.json"
+ECONOMIC_FILE = BASE_DIR / "data" / "model" / "economic_validation_report.json"
 
 
 def _load(path: Path, default: Any) -> Any:
@@ -75,9 +76,12 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
     drift = _load(DRIFT_FILE, {})
     drift_severity = drift.get("overall_severity") if isinstance(drift, dict) else None
 
+    economic_report = _load(ECONOMIC_FILE, {})
     order_report = _load(ORDER_BACKTEST_FILE, {})
     order_metrics = order_report.get("metrics") if isinstance(order_report, dict) else {}
     pairwise = order_metrics.get("pairwise_order_accuracy")
+    economic_status = economic_report.get("status") if isinstance(economic_report, dict) else None
+    economic_roi = economic_report.get("roi") if isinstance(economic_report, dict) else None
 
     health = "insufficient_history"
     if n >= 10:
@@ -123,6 +127,12 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         gate_reasons.append("high_race_difficulty")
     if prediction and len((prediction.get("ranked_horses") or [])) < 5:
         gate_reasons.append("insufficient_race_field_data")
+    # Never allow live PLAY_CANDIDATE status when the economic validation layer
+    # has no explicit historical prices or has demonstrated non-positive ROI.
+    if economic_status != "available":
+        gate_reasons.append("economic_validation_unavailable")
+    elif economic_roi is None or float(economic_roi) <= 0.0:
+        gate_reasons.append("economic_validation_non_positive_roi")
     if n >= 20 and rate("winner_hit") is not None and rate("winner_hit") < 0.10:
         gate_reasons.append("recent_winner_accuracy_degraded")
     if n >= 20 and pairwise is not None and float(pairwise) < 0.50:
@@ -146,6 +156,8 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         "engine_attribution": engine_metrics,
         "order_walk_forward_pairwise_accuracy": pairwise,
         "feature_drift_severity": drift_severity,
+        "economic_validation_status": economic_status,
+        "economic_validation_roi": economic_roi,
         "prediction_confidence": confidence,
         "confidence_reasons": reasons,
         "difficulty": difficulty,
@@ -159,6 +171,7 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
             "high_difficulty_blocks": True,
             "degraded_recent_winner_accuracy_blocks": True,
             "order_engine_below_random_baseline_blocks": True,
+            "missing_or_negative_economic_validation_blocks": True,
         },
     }
 

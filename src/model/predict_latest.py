@@ -266,5 +266,9 @@ def main():
     return result
 
 
+# Production entry point: V3 is press-independent and refuses legacy fallback.
+legacy_main = main
+from src.model.predict_v3 import main
+
 if __name__ == "__main__":
     main()
