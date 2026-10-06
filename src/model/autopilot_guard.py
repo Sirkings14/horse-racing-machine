@@ -9,6 +9,7 @@ EVALUATION_FILE = BASE_DIR / "data" / "evaluation" / "prediction_evaluations.jso
 DRIFT_FILE = BASE_DIR / "data" / "model" / "feature_drift_report.json"
 ORDER_BACKTEST_FILE = BASE_DIR / "data" / "model" / "order_backtest_report.json"
 ECONOMIC_FILE = BASE_DIR / "data" / "model" / "economic_validation_report.json"
+PROFITABILITY_FILE = BASE_DIR / "data" / "evaluation" / "profitability_report.json"
 
 
 def _load(path: Path, default: Any) -> Any:
@@ -77,11 +78,18 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
     drift_severity = drift.get("overall_severity") if isinstance(drift, dict) else None
 
     economic_report = _load(ECONOMIC_FILE, {})
+    # Prefer the live market-evidence profitability report when available.
+    # Training-time economic diagnostics must not override observed price evidence.
+    profitability_report = _load(PROFITABILITY_FILE, {})
+    if isinstance(profitability_report, dict) and profitability_report.get("status"):
+        economic_report = profitability_report
     order_report = _load(ORDER_BACKTEST_FILE, {})
     order_metrics = order_report.get("metrics") if isinstance(order_report, dict) else {}
     pairwise = order_metrics.get("pairwise_order_accuracy")
     economic_status = economic_report.get("status") if isinstance(economic_report, dict) else None
     economic_roi = economic_report.get("roi") if isinstance(economic_report, dict) else None
+    if economic_roi is None and isinstance(economic_report, dict):
+        economic_roi = (economic_report.get("paper_accounting") or {}).get("roi")
 
     health = "insufficient_history"
     if n >= 10:
