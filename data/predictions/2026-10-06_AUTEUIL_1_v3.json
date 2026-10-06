@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-10-06|AUTEUIL|1|2026-10-06T17:03:57.570668+00:00",
-  "generated_at": "2026-10-06T17:03:57.570679+00:00",
+  "prediction_id": "2026-10-06|AUTEUIL|1|2026-10-06T17:19:02.035932+00:00",
+  "generated_at": "2026-10-06T17:19:02.035943+00:00",
   "model_version": "v4-evidence-no-press",
   "mode": "v3_evidence_no_press",
   "race_key": "2026-10-06|AUTEUIL|1",
@@ -259,7 +259,7 @@
     },
     "order_walk_forward_pairwise_accuracy": 0.5992,
     "feature_drift_severity": "unrated",
-    "economic_validation_status": null,
+    "economic_validation_status": "awaiting_market_odds",
     "economic_validation_roi": null,
     "prediction_confidence": "low",
     "confidence_reasons": [
