@@ -256,7 +256,7 @@ def extract_press_odds(text, expected_runners=None):
     )
     tierce_magazine = _extract_press_odds_series(
         text,
-        r"\\bTIERCE\\s*MAGAZINE\\b",
+        r"\bTIERCE\s*MAGAZINE\b",
         r"\bTURF[- ]FR\.COM\b|\bAPTITUDES\b|\bCLASSEMENT\b",
         expected,
     )
