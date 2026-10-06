@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-10-07|ENGHIEN|1|2026-10-06T20:18:26.301529+00:00",
-  "generated_at": "2026-10-06T20:18:26.301540+00:00",
+  "prediction_id": "2026-10-07|ENGHIEN|1|2026-10-06T20:30:22.567516+00:00",
+  "generated_at": "2026-10-06T20:30:22.567526+00:00",
   "model_version": "v4-evidence-no-press",
   "mode": "v3_evidence_no_press",
   "race_key": "2026-10-07|ENGHIEN|1",
@@ -37,7 +37,7 @@
       "probability_top5": 0.724134,
       "ensemble_score": 0.483993,
       "model_disagreement": 0.165847,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 1
     },
     {
@@ -48,7 +48,7 @@
       "probability_top5": 0.659348,
       "ensemble_score": 0.393906,
       "model_disagreement": 0.188382,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 2
     },
     {
@@ -59,7 +59,7 @@
       "probability_top5": 0.659348,
       "ensemble_score": 0.393906,
       "model_disagreement": 0.188382,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 3
     },
     {
@@ -70,7 +70,7 @@
       "probability_top5": 0.657638,
       "ensemble_score": 0.392664,
       "model_disagreement": 0.188191,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 4
     },
     {
@@ -81,7 +81,7 @@
       "probability_top5": 0.610314,
       "ensemble_score": 0.351028,
       "model_disagreement": 0.184087,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 5
     },
     {
@@ -92,7 +92,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 6
     },
     {
@@ -103,7 +103,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 7
     },
     {
@@ -114,7 +114,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 8
     },
     {
@@ -125,7 +125,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 9
     },
     {
@@ -136,7 +136,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 10
     },
     {
@@ -147,7 +147,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 11
     },
     {
@@ -158,7 +158,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 12
     },
     {
@@ -169,7 +169,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 13
     },
     {
@@ -180,7 +180,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 14
     },
     {
@@ -191,7 +191,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 15
     },
     {
@@ -202,7 +202,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 16
     },
     {
@@ -213,7 +213,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 17
     },
     {
@@ -224,7 +224,7 @@
       "probability_top5": 0.394444,
       "ensemble_score": 0.207768,
       "model_disagreement": 0.138046,
-      "data_completeness": 0.0,
+      "data_completeness": 1.0,
       "predicted_rank": 18
     }
   ],
