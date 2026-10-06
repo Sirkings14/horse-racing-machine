@@ -40,3 +40,12 @@ def test_race_relative_features_change_only_from_pre_race_batch():
     matrix=build_v3_matrix(rows)
     assert matrix.shape==(2,len(FEATURE_NAMES))
     assert matrix[0,-1] > matrix[1,-1]
+
+
+def test_walk_forward_profiles_expose_live_data_completeness():
+    rows=[{
+        "date":"2026-10-07","race_key":"2026-10-07|ENGHIEN|1","track":"ENGHIEN",
+        "distance":2875,"runners_count":18,"horse_number":15,"horse_name":"IXELLE BLEUE"
+    }]
+    out=build_walk_forward_profiles(rows)
+    assert out[0]["data_completeness"]==1.0
