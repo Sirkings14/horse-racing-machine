@@ -110,6 +110,7 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
                 "distance_top3_rate":dt/ds if ds else 0.0,
                 "distance_top5_rate":dt5/ds if ds else 0.0,
                 "days_since_last_run":((_date_value(row)-h.last_date).days if _date_value(row) and h.last_date else None),
+                "data_completeness": sum(row.get(k) not in (None, "") for k in ("date", "track", "distance", "runners_count", "horse_number", "horse_name")) / 6.0,
             })
         for _,row in ordered[index:end]:
             key=_horse_key(row); finish=_finish(row)
