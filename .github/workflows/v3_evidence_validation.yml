@@ -2,7 +2,7 @@ name: V3 evidence brain validation
 
 on:
   push:
-    branches: [main, v3-evidence-brain, v4-production-edge]
+    branches: [main, v3-evidence-brain, v4-production-edge, v4-press-odds-benchmark]
   workflow_dispatch:
 
 concurrency:
