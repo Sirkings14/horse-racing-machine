@@ -1,171 +1,66 @@
 {
   "method": "walk_forward_pairwise_finishing_order",
-  "dataset_races": 343,
-  "warmup_races": 171,
-  "evaluated_races": 172,
+  "dataset_races": 430,
+  "warmup_races": 215,
+  "evaluated_races": 215,
   "metrics": {
-    "pairwise_order_accuracy": 0.5903,
-    "top5_position_accuracy": 0.3296,
-    "exact_top3_order_rate": 0.1395,
-    "exact_top5_order_rate": 0.1395
+    "pairwise_order_accuracy": 0.5992,
+    "top5_position_accuracy": 0.3476,
+    "exact_top3_order_rate": 0.1256,
+    "exact_top5_order_rate": 0.1256
   },
   "baseline": {
     "pairwise_random_accuracy": 0.5
   },
   "per_race": [
     {
-      "race_key": "2025-11-02|DEAUVILLE|3",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-11-03|FONTAINEBLEAU|4",
+      "race_key": "2026-01-28|PAU|1",
       "pairwise_accuracy": 0.6667,
       "top5_position_accuracy": 0.25,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2025-11-10|CHANTILLY|3",
-      "pairwise_accuracy": 0.8333,
-      "top5_position_accuracy": 0.5,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-11-11|TOULOUSE|3",
+      "race_key": "2026-02-01|PARIS-VINCENNES|4",
       "pairwise_accuracy": 0.5,
       "top5_position_accuracy": 0.0,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2025-11-13|FONTAINEBLEAU|4",
-      "pairwise_accuracy": 0.8333,
-      "top5_position_accuracy": 0.5,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-11-15|AUTEUIL|7",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-11-18|CHANTILLY|5",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.3333,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-11-23|AUTEUIL|6",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.3333,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-11-25|DEAUVILLE|1",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-11-26|DEAUVILLE|1",
+      "race_key": "2026-02-02|CAGNES-SUR-MER|2",
       "pairwise_accuracy": 0.3333,
       "top5_position_accuracy": 0.0,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2025-12-02|DEAUVILLE|1",
-      "pairwise_accuracy": 0.8333,
-      "top5_position_accuracy": 0.5,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-12-09|CHANTILLY|5",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-12-11|CHANTILLY|4",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-12-16|PAU|4",
-      "pairwise_accuracy": 0.0,
-      "top5_position_accuracy": 0.3333,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-12-18|DEAUVILLE|1",
-      "pairwise_accuracy": 0.5,
-      "top5_position_accuracy": 0.5,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2025-12-22|DEAUVILLE|1",
+      "race_key": "2026-02-04|CAGNES-SUR-MER|2",
       "pairwise_accuracy": 0.6667,
       "top5_position_accuracy": 0.25,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2025-12-23|DEAUVILLE|1",
+      "race_key": "2026-02-06|PARIS-VINCENNES NOCTURNE|8",
       "pairwise_accuracy": 0.3333,
       "top5_position_accuracy": 0.0,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2025-12-30|DEAUVILLE|1",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.3333,
+      "race_key": "2026-02-10|PARIS-VINCENNES|1",
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.25,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2026-01-07|PAU|2",
+      "race_key": "2026-02-11|PARIS-VINCENNES|1",
       "pairwise_accuracy": 1.0,
       "top5_position_accuracy": 1.0,
       "exact_top3": true,
       "exact_top5": true
-    },
-    {
-      "race_key": "2026-01-12|CAGNES-SUR-MER|2",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-01-28|PAU|1",
-      "pairwise_accuracy": 0.8333,
-      "top5_position_accuracy": 0.5,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-02-14|AUTEUIL|4",
-      "pairwise_accuracy": 0.0,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
     },
     {
       "race_key": "2026-02-15|PARIS-VINCENNES|5",
@@ -175,8 +70,57 @@
       "exact_top5": false
     },
     {
+      "race_key": "2026-02-16|PARIS-VINCENNES|1",
+      "pairwise_accuracy": 1.0,
+      "top5_position_accuracy": 1.0,
+      "exact_top3": true,
+      "exact_top5": true
+    },
+    {
+      "race_key": "2026-02-19|PARIS-VINCENNES|1",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.25,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-02-21|CAGNES-SUR-MER|4",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.0,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
       "race_key": "2026-02-23|AUTEUIL|1",
       "pairwise_accuracy": 0.0,
+      "top5_position_accuracy": 0.3333,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-02-24|CAGNES-SUR-MER|4",
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.25,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-02-26|CAGNES-SUR-MER|1",
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.0,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-02-27|PARIS-VINCENNES NOCTURNE|9",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.3333,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-02-28|PARIS-VINCENNES|5",
+      "pairwise_accuracy": 0.6667,
       "top5_position_accuracy": 0.3333,
       "exact_top3": false,
       "exact_top5": false
@@ -189,9 +133,16 @@
       "exact_top5": false
     },
     {
-      "race_key": "2026-03-09|CAEN|4",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.25,
+      "race_key": "2026-03-05|SAINT-CLOUD|1",
+      "pairwise_accuracy": 0.5,
+      "top5_position_accuracy": 0.5,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-03-10|SAINT-CLOUD|1",
+      "pairwise_accuracy": 0.1667,
+      "top5_position_accuracy": 0.5,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -204,8 +155,15 @@
     },
     {
       "race_key": "2026-03-14|AUTEUIL|3",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.25,
+      "pairwise_accuracy": 0.8333,
+      "top5_position_accuracy": 0.5,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-03-15|SAINT-CLOUD|3",
+      "pairwise_accuracy": 0.8333,
+      "top5_position_accuracy": 0.5,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -224,16 +182,9 @@
       "exact_top5": false
     },
     {
-      "race_key": "2026-03-18|VIRE|1",
+      "race_key": "2026-03-21|PARIS-VINCENNES|5",
       "pairwise_accuracy": 0.6667,
       "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-03-22|AUTEUIL|3",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.0,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -245,6 +196,13 @@
       "exact_top5": false
     },
     {
+      "race_key": "2026-03-24|SAINT-CLOUD|1",
+      "pairwise_accuracy": 0.8333,
+      "top5_position_accuracy": 0.5,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
       "race_key": "2026-03-26|CHANTILLY|1",
       "pairwise_accuracy": 0.6667,
       "top5_position_accuracy": 0.25,
@@ -252,9 +210,16 @@
       "exact_top5": false
     },
     {
-      "race_key": "2026-03-28|AUTEUIL|3",
-      "pairwise_accuracy": 0.1667,
-      "top5_position_accuracy": 0.0,
+      "race_key": "2026-03-27|PARIS-VINCENNES NOCTURNE|8",
+      "pairwise_accuracy": 1.0,
+      "top5_position_accuracy": 1.0,
+      "exact_top3": true,
+      "exact_top5": true
+    },
+    {
+      "race_key": "2026-03-29|SAINT-CLOUD|3",
+      "pairwise_accuracy": 0.8333,
+      "top5_position_accuracy": 0.5,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -267,6 +232,13 @@
     },
     {
       "race_key": "2026-03-31|FONTAINEBLEAU|1",
+      "pairwise_accuracy": 0.0,
+      "top5_position_accuracy": 0.3333,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-05-01|SAINT-CLOUD|4",
       "pairwise_accuracy": 0.3333,
       "top5_position_accuracy": 0.0,
       "exact_top3": false,
@@ -278,6 +250,27 @@
       "top5_position_accuracy": 1.0,
       "exact_top3": true,
       "exact_top5": true
+    },
+    {
+      "race_key": "2026-05-05|SAINT-CLOUD|1",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.25,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-05-06|PARIS-VINCENNES|1",
+      "pairwise_accuracy": 1.0,
+      "top5_position_accuracy": 1.0,
+      "exact_top3": true,
+      "exact_top5": true
+    },
+    {
+      "race_key": "2026-05-08|LYON-PARILLY|3",
+      "pairwise_accuracy": 0.1667,
+      "top5_position_accuracy": 0.5,
+      "exact_top3": false,
+      "exact_top5": false
     },
     {
       "race_key": "2026-05-09|CAEN|4",
@@ -294,16 +287,23 @@
       "exact_top5": false
     },
     {
-      "race_key": "2026-05-11|VICHY|4",
+      "race_key": "2026-05-12|CHANTILLY|1",
+      "pairwise_accuracy": 0.0,
+      "top5_position_accuracy": 0.3333,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-05-13|PARIS-VINCENNES|1",
       "pairwise_accuracy": 0.6667,
       "top5_position_accuracy": 0.25,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2026-05-12|CHANTILLY|1",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.0,
+      "race_key": "2026-05-15|PARIS-VINCENNES NOCTURNE|4",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.3333,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -315,9 +315,9 @@
       "exact_top5": false
     },
     {
-      "race_key": "2026-05-17|AUTEUIL|5",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.0,
+      "race_key": "2026-05-18|MARSEILLE-BORELY|4",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.25,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -329,11 +329,18 @@
       "exact_top5": false
     },
     {
-      "race_key": "2026-05-23|ENGHIEN|4",
-      "pairwise_accuracy": 0.8333,
-      "top5_position_accuracy": 0.5,
+      "race_key": "2026-05-22|PARIS-VINCENNES NOCTURNE|4",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.25,
       "exact_top3": false,
       "exact_top5": false
+    },
+    {
+      "race_key": "2026-05-23|ENGHIEN|4",
+      "pairwise_accuracy": 1.0,
+      "top5_position_accuracy": 1.0,
+      "exact_top3": true,
+      "exact_top5": true
     },
     {
       "race_key": "2026-05-24|PARISLONGCHAMP|3",
@@ -350,8 +357,22 @@
       "exact_top5": false
     },
     {
-      "race_key": "2026-05-27|STRASBOURG|4",
+      "race_key": "2026-05-26|PARIS-VINCENNES|5",
       "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.25,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-05-27|STRASBOURG|4",
+      "pairwise_accuracy": 0.8333,
+      "top5_position_accuracy": 0.5,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-05-29|PARIS-VINCENNES NOCTURNE|4",
+      "pairwise_accuracy": 0.5,
       "top5_position_accuracy": 0.0,
       "exact_top3": false,
       "exact_top5": false
@@ -365,8 +386,8 @@
     },
     {
       "race_key": "2026-05-31|CHANTILLY|7",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.25,
+      "pairwise_accuracy": 0.8333,
+      "top5_position_accuracy": 0.5,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -374,6 +395,20 @@
       "race_key": "2026-06-01|VICHY|4",
       "pairwise_accuracy": 0.6667,
       "top5_position_accuracy": 0.25,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-06-02|SAINT-CLOUD|1",
+      "pairwise_accuracy": 0.8333,
+      "top5_position_accuracy": 0.5,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-06-06|PARIS-VINCENNES|4",
+      "pairwise_accuracy": 0.0,
+      "top5_position_accuracy": 0.3333,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -393,7 +428,7 @@
     },
     {
       "race_key": "2026-06-09|COMPIEGNE|8",
-      "pairwise_accuracy": 0.3333,
+      "pairwise_accuracy": 0.5,
       "top5_position_accuracy": 0.0,
       "exact_top3": false,
       "exact_top5": false
@@ -406,16 +441,16 @@
       "exact_top5": false
     },
     {
-      "race_key": "2026-06-13|ENGHIEN|4",
-      "pairwise_accuracy": 0.8333,
-      "top5_position_accuracy": 0.5,
-      "exact_top3": false,
-      "exact_top5": false
+      "race_key": "2026-06-12|PARIS-VINCENNES NOCTURNE|4",
+      "pairwise_accuracy": 1.0,
+      "top5_position_accuracy": 1.0,
+      "exact_top3": true,
+      "exact_top5": true
     },
     {
       "race_key": "2026-06-14|CHANTILLY|4",
-      "pairwise_accuracy": 0.5,
-      "top5_position_accuracy": 0.0,
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.25,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -428,8 +463,15 @@
     },
     {
       "race_key": "2026-06-17|AGEN LA GARENNE|3",
+      "pairwise_accuracy": 0.0,
+      "top5_position_accuracy": 0.3333,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-06-19|PARIS-VINCENNES NOCTURNE|4",
       "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.0,
+      "top5_position_accuracy": 0.25,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -441,6 +483,20 @@
       "exact_top5": false
     },
     {
+      "race_key": "2026-06-21|PARIS-VINCENNES|9",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.3333,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-06-22|LYON-PARILLY|2",
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.0,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
       "race_key": "2026-06-23|DIEPPE|8",
       "pairwise_accuracy": 0.5,
       "top5_position_accuracy": 0.5,
@@ -448,14 +504,14 @@
       "exact_top5": false
     },
     {
-      "race_key": "2026-06-24|CHERBOURG|3",
-      "pairwise_accuracy": 0.8333,
+      "race_key": "2026-06-27|ENGHIEN|2",
+      "pairwise_accuracy": 0.5,
       "top5_position_accuracy": 0.5,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2026-06-27|ENGHIEN|2",
+      "race_key": "2026-06-28|SAINT-CLOUD|3",
       "pairwise_accuracy": 0.5,
       "top5_position_accuracy": 0.0,
       "exact_top3": false,
@@ -465,20 +521,6 @@
       "race_key": "2026-06-30|VICHY|5",
       "pairwise_accuracy": 0.3333,
       "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-07-15|LISIEUX|8",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-07-18|ENGHIEN|4",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.3333,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -504,119 +546,42 @@
       "exact_top5": false
     },
     {
-      "race_key": "2026-08-08|DEAUVILLE|3",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-08-09|DEAUVILLE|3",
-      "pairwise_accuracy": 0.5,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-08-11|DEAUVILLE|8",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-08-15|DEAUVILLE|3",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-08-16|DEAUVILLE|3",
-      "pairwise_accuracy": 0.5,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-08-18|DEAUVILLE|8",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.3333,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-08-20|DEAUVILLE|8",
-      "pairwise_accuracy": 0.5,
-      "top5_position_accuracy": 0.5,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-08-22|DEAUVILLE|3",
-      "pairwise_accuracy": 0.0,
-      "top5_position_accuracy": 0.3333,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-08-23|DEAUVILLE|3",
-      "pairwise_accuracy": 0.5,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-08-25|DEAUVILLE|8",
-      "pairwise_accuracy": 1.0,
-      "top5_position_accuracy": 1.0,
-      "exact_top3": true,
-      "exact_top5": true
-    },
-    {
-      "race_key": "2026-08-27|DEAUVILLE|8",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-08-30|DEAUVILLE|3",
-      "pairwise_accuracy": 1.0,
-      "top5_position_accuracy": 1.0,
-      "exact_top3": true,
-      "exact_top5": true
-    },
-    {
-      "race_key": "2026-09-01|DEAUVILLE|1",
-      "pairwise_accuracy": 1.0,
-      "top5_position_accuracy": 1.0,
-      "exact_top3": true,
-      "exact_top5": true
-    },
-    {
-      "race_key": "2026-09-02|LA CAPELLE|1",
+      "race_key": "2026-08-24|PARIS-VINCENNES|8",
       "pairwise_accuracy": 0.8333,
       "top5_position_accuracy": 0.5,
       "exact_top3": false,
       "exact_top5": false
+    },
+    {
+      "race_key": "2026-08-29|PARIS-VINCENNES|4",
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.0,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-08-31|SAINT-CLOUD|1",
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.0,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-09-04|PARIS-VINCENNES NOCTURNE|4",
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.0,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-09-05|PARIS-VINCENNES|4",
+      "pairwise_accuracy": 1.0,
+      "top5_position_accuracy": 1.0,
+      "exact_top3": true,
+      "exact_top5": true
     },
     {
       "race_key": "2026-09-06|PARISLONGCHAMP|3",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.25,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-09-07|CRAON|1",
-      "pairwise_accuracy": 0.8333,
-      "top5_position_accuracy": 0.5,
-      "exact_top3": false,
-      "exact_top5": false
-    },
-    {
-      "race_key": "2026-09-08|AUTEUIL|1",
       "pairwise_accuracy": 0.3333,
       "top5_position_accuracy": 0.25,
       "exact_top3": false,
@@ -628,6 +593,27 @@
       "top5_position_accuracy": 1.0,
       "exact_top3": true,
       "exact_top5": true
+    },
+    {
+      "race_key": "2026-09-11|PARIS-VINCENNES NOCTURNE|4",
+      "pairwise_accuracy": 0.0,
+      "top5_position_accuracy": 0.3333,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-09-12|PARIS-VINCENNES|4",
+      "pairwise_accuracy": 0.5,
+      "top5_position_accuracy": 0.0,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-09-14|BEAUMONT-DE-LOMAGNE|1",
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.0,
+      "exact_top3": false,
+      "exact_top5": false
     },
     {
       "race_key": "2026-09-15|COMPIEGNE|1",
@@ -645,8 +631,15 @@
     },
     {
       "race_key": "2026-09-19|CHANTILLY|4",
-      "pairwise_accuracy": 0.6667,
+      "pairwise_accuracy": 0.3333,
       "top5_position_accuracy": 0.25,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-09-20|PARIS-VINCENNES|4",
+      "pairwise_accuracy": 0.8333,
+      "top5_position_accuracy": 0.5,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -666,36 +659,36 @@
     },
     {
       "race_key": "2026-09-24|COMPIEGNE|1",
-      "pairwise_accuracy": 0.5,
-      "top5_position_accuracy": 0.0,
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.25,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2026-09-26|AUTEUIL|3",
-      "pairwise_accuracy": 0.5,
-      "top5_position_accuracy": 0.0,
+      "race_key": "2026-09-25|PARIS-VINCENNES NOCTURNE|4",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.25,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2026-09-28|ENGHIEN|1",
+      "race_key": "2026-09-29|CHANTILLY|1",
       "pairwise_accuracy": 0.6667,
       "top5_position_accuracy": 0.3333,
       "exact_top3": false,
       "exact_top5": false
     },
     {
-      "race_key": "2026-09-29|CHANTILLY|1",
-      "pairwise_accuracy": 1.0,
-      "top5_position_accuracy": 1.0,
-      "exact_top3": true,
-      "exact_top5": true
-    },
-    {
       "race_key": "2026-10-01|AUTEUIL|1",
       "pairwise_accuracy": 0.3333,
       "top5_position_accuracy": 0.0,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-10-02|PARIS-VINCENNES NOCTURNE|4",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.3333,
       "exact_top3": false,
       "exact_top5": false
     },
@@ -708,8 +701,15 @@
     },
     {
       "race_key": "2026-10-04|PARISLONGCHAMP|5",
-      "pairwise_accuracy": 0.6667,
-      "top5_position_accuracy": 0.3333,
+      "pairwise_accuracy": 1.0,
+      "top5_position_accuracy": 1.0,
+      "exact_top3": true,
+      "exact_top5": true
+    },
+    {
+      "race_key": "2026-10-05|ENGHIEN|1",
+      "pairwise_accuracy": 0.3333,
+      "top5_position_accuracy": 0.0,
       "exact_top3": false,
       "exact_top5": false
     }

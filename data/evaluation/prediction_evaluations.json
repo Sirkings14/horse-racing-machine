@@ -905,349 +905,6 @@
     }
   },
   {
-    "race_key": "2026-09-26|AUTEUIL|3",
-    "prediction_id": "2026-09-26|AUTEUIL|3|2026-09-26T19:18:10.203349+00:00",
-    "model_version": "model-20260921T224640Z-dd03225d",
-    "predicted_at": "2026-09-26T19:18:10.203359+00:00",
-    "verified_at": "2026-10-02T23:12:23.671282+00:00",
-    "result": {
-      "race_key": "2026-09-26|AUTEUIL|3",
-      "date": "2026-09-26",
-      "track": "AUTEUIL",
-      "race_number": 3,
-      "arrival": [
-        6,
-        5,
-        12,
-        2
-      ],
-      "winner": 6,
-      "second": 5,
-      "third": 12,
-      "truth_validation": {
-        "accepted_for_learning": true,
-        "reason": "validated_against_program_roster",
-        "race_key": "2026-09-26|AUTEUIL|3",
-        "arrival_positions_available": 4,
-        "declared_runner_count": 16,
-        "unknown_numbers": [],
-        "duplicate_numbers": [],
-        "program_source": "program_JH_PMUB_DU_26-09-2026_e366ad41c8_2917428aed.json"
-      }
-    },
-    "prediction": {
-      "recommended_numbers": [
-        4,
-        2,
-        1,
-        6,
-        5
-      ],
-      "top3_numbers": [
-        4,
-        2,
-        1
-      ],
-      "ranked_top5": [
-        4,
-        2,
-        1,
-        6,
-        5
-      ],
-      "predicted_finish_order_top5": [
-        4,
-        2,
-        1,
-        6,
-        5
-      ],
-      "order_engine_top5": [
-        4,
-        2,
-        1,
-        6,
-        3
-      ],
-      "monitoring": {
-        "status": "monitoring_complete",
-        "strength_engine_top5": [
-          4,
-          2,
-          1,
-          6,
-          5
-        ],
-        "order_engine_top5": [
-          4,
-          2,
-          1,
-          6,
-          3
-        ],
-        "strength_engine_winner_candidate": 4,
-        "order_engine_winner_candidate": 4,
-        "common_top3": [
-          1,
-          2,
-          4
-        ],
-        "common_top5": [
-          1,
-          2,
-          4,
-          6
-        ],
-        "agreement": "strong_agreement",
-        "agreement_score_top5": 0.8,
-        "warning": null
-      },
-      "difficulty": {
-        "bucket": "medium",
-        "difficulty_score": 46.05,
-        "field_size": 16,
-        "top1_top2_margin": 0.051762,
-        "top1_top3_spread": 0.074273,
-        "engine_top5_overlap": 0.8,
-        "signals": [
-          "large_field"
-        ]
-      }
-    },
-    "metrics": {
-      "winner_hit": false,
-      "winner_in_top3": false,
-      "winner_in_top5": true,
-      "order_engine_winner_hit": false,
-      "strength_engine_winner_hit": false,
-      "fused_engine_winner_hit": false,
-      "actual_top3_covered_by_predicted_top3": 0,
-      "actual_top3_covered_by_predicted_top5": 2,
-      "recommended_hit_count": 3,
-      "exact_top3_order": false,
-      "exact_top5_order": false,
-      "top5_position_hits": 0,
-      "engine_attribution": {
-        "strength": {
-          "winner_hit": false,
-          "winner_in_top3": false,
-          "winner_in_top5": true,
-          "actual_top3_covered_by_top3": 0,
-          "actual_top3_covered_by_top5": 2,
-          "actual_top5_covered_by_top5": 3,
-          "exact_top3_order": false,
-          "exact_top5_order": false,
-          "top5_position_hits": 0
-        },
-        "order": {
-          "winner_hit": false,
-          "winner_in_top3": false,
-          "winner_in_top5": true,
-          "actual_top3_covered_by_top3": 0,
-          "actual_top3_covered_by_top5": 1,
-          "actual_top5_covered_by_top5": 2,
-          "exact_top3_order": false,
-          "exact_top5_order": false,
-          "top5_position_hits": 0
-        },
-        "fused": {
-          "winner_hit": false,
-          "winner_in_top3": false,
-          "winner_in_top5": true,
-          "actual_top3_covered_by_top3": 0,
-          "actual_top3_covered_by_top5": 2,
-          "actual_top5_covered_by_top5": 3,
-          "exact_top3_order": false,
-          "exact_top5_order": false,
-          "top5_position_hits": 0
-        }
-      }
-    },
-    "status": "result_verified",
-    "result_validation": {
-      "accepted_for_learning": true,
-      "reason": "validated_against_program_roster",
-      "race_key": "2026-09-26|AUTEUIL|3",
-      "arrival_positions_available": 4,
-      "declared_runner_count": 16,
-      "unknown_numbers": [],
-      "duplicate_numbers": [],
-      "program_source": "program_JH_PMUB_DU_26-09-2026_e366ad41c8_2917428aed.json"
-    }
-  },
-  {
-    "race_key": "2026-09-28|ENGHIEN|1",
-    "prediction_id": "2026-09-28|ENGHIEN|1|2026-09-28T22:12:33.292994+00:00",
-    "model_version": "model-20260921T224640Z-dd03225d",
-    "predicted_at": "2026-09-28T22:12:33.293003+00:00",
-    "verified_at": "2026-10-02T23:12:23.764371+00:00",
-    "result": {
-      "race_key": "2026-09-28|ENGHIEN|1",
-      "date": "2026-09-28",
-      "track": "ENGHIEN",
-      "race_number": 1,
-      "arrival": [
-        15,
-        4,
-        14
-      ],
-      "winner": 15,
-      "second": 4,
-      "third": 14,
-      "truth_validation": {
-        "accepted_for_learning": true,
-        "reason": "validated_against_program_roster",
-        "race_key": "2026-09-28|ENGHIEN|1",
-        "arrival_positions_available": 3,
-        "declared_runner_count": 15,
-        "unknown_numbers": [],
-        "duplicate_numbers": [],
-        "program_source": "program_JH_PMUB_DU_28-09-2026_92a26ec9f0_31be330399.json"
-      }
-    },
-    "prediction": {
-      "recommended_numbers": [
-        4,
-        15,
-        10,
-        14,
-        11
-      ],
-      "top3_numbers": [
-        4,
-        15,
-        10
-      ],
-      "ranked_top5": [
-        4,
-        15,
-        10,
-        14,
-        11
-      ],
-      "predicted_finish_order_top5": [
-        4,
-        15,
-        10,
-        14,
-        11
-      ],
-      "order_engine_top5": [
-        4,
-        15,
-        10,
-        14,
-        11
-      ],
-      "monitoring": {
-        "status": "monitoring_complete",
-        "strength_engine_top5": [
-          4,
-          15,
-          10,
-          14,
-          11
-        ],
-        "order_engine_top5": [
-          4,
-          15,
-          10,
-          14,
-          11
-        ],
-        "strength_engine_winner_candidate": 4,
-        "order_engine_winner_candidate": 4,
-        "common_top3": [
-          4,
-          10,
-          15
-        ],
-        "common_top5": [
-          4,
-          10,
-          11,
-          14,
-          15
-        ],
-        "agreement": "strong_agreement",
-        "agreement_score_top5": 1.0,
-        "warning": null
-      },
-      "difficulty": {
-        "bucket": "medium",
-        "difficulty_score": 51.65,
-        "field_size": 15,
-        "top1_top2_margin": 0.036495,
-        "top1_top3_spread": 0.048835,
-        "engine_top5_overlap": 1.0,
-        "signals": [
-          "tight_top1_top3_spread",
-          "large_field"
-        ]
-      }
-    },
-    "metrics": {
-      "winner_hit": false,
-      "winner_in_top3": true,
-      "winner_in_top5": true,
-      "order_engine_winner_hit": false,
-      "strength_engine_winner_hit": false,
-      "fused_engine_winner_hit": false,
-      "actual_top3_covered_by_predicted_top3": 2,
-      "actual_top3_covered_by_predicted_top5": 3,
-      "recommended_hit_count": 3,
-      "exact_top3_order": false,
-      "exact_top5_order": false,
-      "top5_position_hits": 0,
-      "engine_attribution": {
-        "strength": {
-          "winner_hit": false,
-          "winner_in_top3": true,
-          "winner_in_top5": true,
-          "actual_top3_covered_by_top3": 2,
-          "actual_top3_covered_by_top5": 3,
-          "actual_top5_covered_by_top5": 3,
-          "exact_top3_order": false,
-          "exact_top5_order": false,
-          "top5_position_hits": 0
-        },
-        "order": {
-          "winner_hit": false,
-          "winner_in_top3": true,
-          "winner_in_top5": true,
-          "actual_top3_covered_by_top3": 2,
-          "actual_top3_covered_by_top5": 3,
-          "actual_top5_covered_by_top5": 3,
-          "exact_top3_order": false,
-          "exact_top5_order": false,
-          "top5_position_hits": 0
-        },
-        "fused": {
-          "winner_hit": false,
-          "winner_in_top3": true,
-          "winner_in_top5": true,
-          "actual_top3_covered_by_top3": 2,
-          "actual_top3_covered_by_top5": 3,
-          "actual_top5_covered_by_top5": 3,
-          "exact_top3_order": false,
-          "exact_top5_order": false,
-          "top5_position_hits": 0
-        }
-      }
-    },
-    "status": "result_verified",
-    "result_validation": {
-      "accepted_for_learning": true,
-      "reason": "validated_against_program_roster",
-      "race_key": "2026-09-28|ENGHIEN|1",
-      "arrival_positions_available": 3,
-      "declared_runner_count": 15,
-      "unknown_numbers": [],
-      "duplicate_numbers": [],
-      "program_source": "program_JH_PMUB_DU_28-09-2026_92a26ec9f0_31be330399.json"
-    }
-  },
-  {
     "race_key": "2026-09-29|CHANTILLY|1",
     "prediction_id": "2026-09-29|CHANTILLY|1|2026-09-29T20:57:18.537153+00:00",
     "model_version": "model-20260921T224640Z-dd03225d",
@@ -1931,6 +1588,176 @@
       "unknown_numbers": [],
       "duplicate_numbers": [],
       "program_source": "program_JH_PMU_DU_04-10-2026_0_31e2a33736_b1fbac0355.json"
+    }
+  },
+  {
+    "race_key": "2026-10-05|ENGHIEN|1",
+    "prediction_id": "2026-10-05|ENGHIEN|1|2026-10-05T18:23:17.223678+00:00",
+    "model_version": "model-20261005T093748Z-55c1e99f",
+    "predicted_at": "2026-10-05T18:23:17.223687+00:00",
+    "verified_at": "2026-10-06T00:59:04.110196+00:00",
+    "result": {
+      "race_key": "2026-10-05|ENGHIEN|1",
+      "date": "2026-10-05",
+      "track": "ENGHIEN",
+      "race_number": 1,
+      "arrival": [
+        3,
+        7,
+        9,
+        1
+      ],
+      "winner": 3,
+      "second": 7,
+      "third": 9,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-10-05|ENGHIEN|1",
+        "arrival_positions_available": 4,
+        "declared_runner_count": 14,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMU_DU_05-10-2026_bdb58e8757_435a65b941.json"
+      }
+    },
+    "prediction": {
+      "recommended_numbers": [
+        8,
+        9,
+        5,
+        13,
+        12
+      ],
+      "top3_numbers": [
+        8,
+        9,
+        5
+      ],
+      "ranked_top5": [
+        8,
+        9,
+        5,
+        13,
+        12
+      ],
+      "predicted_finish_order_top5": [
+        8,
+        9,
+        5,
+        13,
+        12
+      ],
+      "order_engine_top5": [
+        8,
+        9,
+        5,
+        13,
+        12
+      ],
+      "monitoring": {
+        "status": "monitoring_complete",
+        "strength_engine_top5": [
+          8,
+          9,
+          5,
+          13,
+          12
+        ],
+        "order_engine_top5": [
+          8,
+          9,
+          5,
+          13,
+          12
+        ],
+        "strength_engine_winner_candidate": 8,
+        "order_engine_winner_candidate": 8,
+        "common_top3": [
+          5,
+          8,
+          9
+        ],
+        "common_top5": [
+          5,
+          8,
+          9,
+          12,
+          13
+        ],
+        "agreement": "strong_agreement",
+        "agreement_score_top5": 1.0,
+        "warning": null
+      },
+      "difficulty": {
+        "bucket": "medium",
+        "difficulty_score": 45.01,
+        "field_size": 14,
+        "top1_top2_margin": 0.042864,
+        "top1_top3_spread": 0.060798,
+        "engine_top5_overlap": 1.0,
+        "signals": []
+      }
+    },
+    "metrics": {
+      "winner_hit": false,
+      "winner_in_top3": false,
+      "winner_in_top5": false,
+      "order_engine_winner_hit": false,
+      "strength_engine_winner_hit": false,
+      "fused_engine_winner_hit": false,
+      "actual_top3_covered_by_predicted_top3": 1,
+      "actual_top3_covered_by_predicted_top5": 1,
+      "recommended_hit_count": 1,
+      "exact_top3_order": false,
+      "exact_top5_order": false,
+      "top5_position_hits": 0,
+      "engine_attribution": {
+        "strength": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 1,
+          "actual_top5_covered_by_top5": 1,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "order": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 1,
+          "actual_top5_covered_by_top5": 1,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "fused": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 1,
+          "actual_top3_covered_by_top5": 1,
+          "actual_top5_covered_by_top5": 1,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        }
+      }
+    },
+    "status": "result_verified",
+    "result_validation": {
+      "accepted_for_learning": true,
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-10-05|ENGHIEN|1",
+      "arrival_positions_available": 4,
+      "declared_runner_count": 14,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMU_DU_05-10-2026_bdb58e8757_435a65b941.json"
     }
   }
 ]
