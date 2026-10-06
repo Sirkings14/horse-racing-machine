@@ -4,7 +4,7 @@ from collections import defaultdict
 from pathlib import Path
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_model import fit_v3_model
-from src.model.calibration import fit_sigmoid_calibrator, calibration_metrics
+from src.model.calibration import fit_sigmoid_calibrator, apply_sigmoid_calibrator, calibration_metrics
 from src.model.v3_backtest import run as run_v3_backtest
 from src.model.backtest import run_backtest as run_legacy_backtest  # legacy benchmark is informational
 from src.model.economic_validation import evaluate_value_strategy
@@ -13,14 +13,15 @@ BASE_DIR=Path(__file__).resolve().parents[2]
 DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
 OUTPUT_FILE=BASE_DIR/"data/model/v3_models.json"
 
-def _promotion_decision(v3m:dict, n_races:int)->tuple[bool,list[str]]:
+def _promotion_decision(v3m:dict, n_races:int, calibration_gate:dict|None=None)->tuple[bool,list[str]]:
     reasons=[]
     if n_races<100: reasons.append("too_few_walk_forward_races")
     if v3m.get("winner_hit_rate_at_3",0.0)<0.25: reasons.append("winner_top3_below_minimum")
     if v3m.get("coverage3_lift_vs_random",-1.0)<0.10: reasons.append("top3_coverage_lift_vs_random_too_small")
-    if v3m.get("brier_top3") is None or v3m.get("brier_top3") >= v3m.get("brier_baseline_top3",1.0)*0.98:
+    gate=calibration_gate or v3m
+    if gate.get("brier") is None or gate.get("brier") >= gate.get("brier_baseline",1.0)*0.98:
         reasons.append("top3_probability_model_does_not_beat_constant_baseline")
-    if v3m.get("ece_top3") is None or v3m.get("ece_top3")>0.10:
+    if gate.get("ece") is None or gate.get("ece")>0.10:
         reasons.append("probability_calibration_too_weak")
     blocks=v3m.get("time_stability") or []
     if len(blocks)>=3:
@@ -46,15 +47,28 @@ def main():
     final_rows=profiled[-25000:]
     models={}
     calibration_reports={}
+    calibration_validation_reports={}
+    # Evaluate calibration on a chronological sample that was not used to fit
+    # the calibrator. Bound the calibration samples to keep CI practical.
+    cal_split=max(30,int(len(cal_rows)*0.70))
+    cal_fit_rows=cal_rows[:cal_split][-60000:]
+    cal_eval_rows=cal_rows[cal_split:][-60000:]
     for name,target in (("winner","won"),("top3","top3"),("top5","top5")):
         base=fit_v3_model(fit_rows,target_field=target,epochs=20)
-        raw=base.predict_proba(cal_rows)
-        labels=[int(r.get(target,0)) for r in cal_rows]
-        calibration=fit_sigmoid_calibrator(raw,labels)
+        raw_fit=base.predict_proba(cal_fit_rows)
+        labels_fit=[int(r.get(target,0)) for r in cal_fit_rows]
+        calibration=fit_sigmoid_calibrator(raw_fit,labels_fit)
+        raw_eval=base.predict_proba(cal_eval_rows)
+        labels_eval=[int(r.get(target,0)) for r in cal_eval_rows]
+        calibrated_eval=[apply_sigmoid_calibrator(v,calibration) for v in raw_eval]
+        validation=calibration_metrics(calibrated_eval,labels_eval)
+        prevalence=(sum(labels_eval)/len(labels_eval)) if labels_eval else 0.0
+        validation["brier_baseline"]=round(prevalence*(1.0-prevalence),6)
         final=fit_v3_model(final_rows,target_field=target,epochs=20)
         final.calibration=calibration
         models[name]=final.to_dict()
-        calibration_reports[name]=calibration_metrics(raw,labels)
+        calibration_reports[name]=calibration_metrics(raw_fit,labels_fit)
+        calibration_validation_reports[name]=validation
     # Reuse the walk-forward report produced by the validation workflow. Re-running
     # the full backtest here duplicated the most expensive CI stage and could exhaust
     # the GitHub Actions job limit without changing the promotion decision.
@@ -75,7 +89,8 @@ def main():
     else:
         legacy_report={"metrics":{}, "status":"not_recomputed_in_v4_validation"}
     v3m=v3_report["metrics"]; lm=legacy_report["metrics"]
-    approved,reasons=_promotion_decision(v3m,len(v3_report.get("race_results") or []))
+    calibration_gate=calibration_validation_reports.get("top3") or {}
+    approved,reasons=_promotion_decision(v3m,len(v3_report.get("race_results") or []),calibration_gate=calibration_gate)
     # Economic validation is intentionally separate. Predictive accuracy is not
     # treated as proof of betting profitability without historical prices/dividends.
     payload={
@@ -94,6 +109,8 @@ def main():
             "v4_metrics":v3m,
             "legacy_benchmark":lm,
             "calibration_reports":calibration_reports,
+            "calibration_validation_reports":calibration_validation_reports,
+            "calibration_gate":calibration_gate,
             "required":["minimum_100_holdout_races","winner_top3_minimum","top3_lift_vs_random","brier_beats_constant_baseline","ece_under_0.10","temporal_stability"]
         },
         "models":models

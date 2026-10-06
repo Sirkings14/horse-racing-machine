@@ -77,16 +77,11 @@ def _relative(rows:Sequence[dict[str,Any]])->np.ndarray:
     # is not treated as weak: its raw prior-history values remain zero while
     # these relative features expose only observed differences.
     cols=[1,2,3,4,5,6,8,11,24,0]
-    rel=[]
-    for i in range(len(base)):
-        vals=[]
-        for c in cols:
-            col=base[:,c]
-            mean=float(col.mean())
-            std=float(col.std())
-            vals.append((float(base[i,c])-mean)/std if std>1e-9 else 0.0)
-        rel.append(vals)
-    return np.asarray(rel,dtype=float)
+    selected=base[:,cols]
+    means=selected.mean(axis=0)
+    stds=selected.std(axis=0)
+    safe_stds=np.where(stds>1e-9,stds,1.0)
+    return (selected-means)/safe_stds
 
 def row_to_v3_features(row:dict[str,Any])->list[float]:
     base=_base_features(row)
