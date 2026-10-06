@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-06T01:54:37.991523+00:00",
+  "generated_at": "2026-10-06T23:14:52.602124+00:00",
   "status": "awaiting_market_odds",
-  "total_verified_predictions": 11,
+  "total_verified_predictions": 12,
   "predictions_with_observed_market_odds": 0,
   "pricing_coverage": 0.0,
   "paper_accounting": {
@@ -12,6 +12,11 @@
     "roi": null
   },
   "rows": [],
+  "market_evidence": {
+    "ledger_path": "/home/runner/work/horse-racing-machine/horse-racing-machine/data/evaluation/market_evidence.json",
+    "observed_snapshot_count": 0,
+    "source_attributed_prices_only": true
+  },
   "requirements_for_real_edge_measurement": [
     "capture market odds at prediction time",
     "store the bet type and exact stake rule",

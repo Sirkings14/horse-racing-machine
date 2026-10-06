@@ -898,5 +898,30 @@
       "order_backtest_method": "walk_forward_pairwise_finishing_order"
     },
     "decision": "pending_promotion"
+  },
+  {
+    "timestamp": "2026-10-06T23:15:33.540260+00:00",
+    "candidate_version": "model-20261006T231452Z-5c4a8df0",
+    "champion_version": "model-20261006T005904Z-1d94cb9c",
+    "candidate": {
+      "standard_metrics": {
+        "winner_hit_rate_at_1": 0.1479,
+        "winner_hit_rate_at_3": 0.3685,
+        "average_actual_top3_covered_by_predicted_top3": 0.8756,
+        "average_actual_top3_covered_by_predicted_top5": 1.3662,
+        "brier_score_top3": 0.150002,
+        "log_loss_top3": 0.474557,
+        "expected_calibration_error_top3": 0.011912
+      },
+      "order_metrics": {
+        "pairwise_order_accuracy": 0.6006,
+        "top5_position_accuracy": 0.3484,
+        "exact_top3_order_rate": 0.125,
+        "exact_top5_order_rate": 0.125
+      },
+      "backtest_method": "walk_forward_logistic_top3",
+      "order_backtest_method": "walk_forward_pairwise_finishing_order"
+    },
+    "decision": "pending_promotion"
   }
 ]
