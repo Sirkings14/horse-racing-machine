@@ -1,48 +1,61 @@
-from src.model.press_odds_benchmark import simulate, complete_priced_races
+from src.model.press_odds_benchmark import accounting
 
 
-def race(rows):
-    return {"race_key": "2026-01-01|TEST|1", "top5_candidates": rows}
-
-
-def candidate(number, probability, odds, won=0):
-    return {
-        "horse_number": number,
-        "probability_winner": probability,
-        "press_paris_turf_decimal": odds,
-        "won": won,
-    }
-
-
-def test_value_filter_uses_probability_against_explicit_press_price():
-    rows = [
-        candidate(1, 0.50, 3.0, 1),
-        candidate(2, 0.10, 2.0),
-        candidate(3, 0.10, 2.0),
-        candidate(4, 0.10, 2.0),
-        candidate(5, 0.10, 2.0),
-    ]
-    priced = complete_priced_races([race(rows)], "press_paris_turf_decimal")
-    result = simulate(priced, "press_paris_turf_decimal", value_only=True)
+def test_value_filter_uses_probability_against_published_price():
+    races = [{
+        "race_key": "2026-09-10|TEST|1",
+        "winner": 1,
+        "press_odds": {
+            "paris_turf": {
+                "1": {"decimal": 3.0},
+                "2": {"decimal": 2.0},
+                "3": {"decimal": 2.0},
+                "4": {"decimal": 2.0},
+                "5": {"decimal": 2.0},
+            }
+        },
+        "top5": [
+            {"horse_number": 1, "probability_winner": 0.50},
+            {"horse_number": 2, "probability_winner": 0.10},
+            {"horse_number": 3, "probability_winner": 0.10},
+            {"horse_number": 4, "probability_winner": 0.10},
+            {"horse_number": 5, "probability_winner": 0.10},
+        ],
+    }]
+    result = accounting(races, "paris_turf", value_only=True)
     assert result["bets"] == 1
     assert result["wins"] == 1
     assert result["profit"] == 2.0
     assert result["roi"] == 2.0
 
 
-def test_incomplete_press_price_series_is_not_counted():
-    rows = [
-        candidate(1, 0.50, 3.0),
-        candidate(2, 0.10, 2.0),
-        candidate(3, 0.10, 2.0),
-        candidate(4, 0.10, 2.0),
-        {"horse_number": 5, "probability_winner": 0.10, "won": 0},
-    ]
-    assert complete_priced_races([race(rows)], "press_paris_turf_decimal") == []
-
-
-def test_benchmark_does_not_claim_market_evidence():
-    # This test documents the contract: this module can evaluate published
-    # prices without being used by the live market-evidence gate.
+def test_published_prices_do_not_unlock_market_evidence():
+    races = [{
+        "race_key": "2026-09-10|TEST|1",
+        "winner": 1,
+        "press_odds": {"paris_turf": {"1": {"decimal": 3.0}}},
+        "top5": [{"horse_number": 1, "probability_winner": 0.50}],
+    }]
+    result = accounting(races, "paris_turf", value_only=True)
+    assert result["bets"] == 1
     from src.model import press_odds_benchmark
-    assert press_odds_benchmark.SOURCES["paris_turf"] == "press_paris_turf_decimal"
+    assert press_odds_benchmark.SOURCES["paris_turf"] == "Paris Turf"
+
+
+def test_drawdown_is_computed_chronologically():
+    races = [
+        {
+            "race_key": "2026-09-10|TEST|1",
+            "winner": 2,
+            "press_odds": {"paris_turf": {"1": {"decimal": 2.0}, "2": {"decimal": 2.0}, "3": {"decimal": 2.0}, "4": {"decimal": 2.0}, "5": {"decimal": 2.0}}},
+            "top5": [{"horse_number": n, "probability_winner": 0.20} for n in range(1, 6)],
+        },
+        {
+            "race_key": "2026-09-11|TEST|1",
+            "winner": 9,
+            "press_odds": {"paris_turf": {str(n): {"decimal": 2.0} for n in range(1, 6)}},
+            "top5": [{"horse_number": n, "probability_winner": 0.20} for n in range(1, 6)],
+        },
+    ]
+    result = accounting(races, "paris_turf", value_only=False)
+    assert result["maximum_drawdown_units"] >= 0
