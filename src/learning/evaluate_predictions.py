@@ -14,6 +14,10 @@ PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
 RESULTS_DIR = BASE_DIR / "data" / "structured" / "results"
 EVALUATION_DIR = BASE_DIR / "data" / "evaluation"
 EVALUATION_FILE = EVALUATION_DIR / "prediction_evaluations.json"
+V4_PERFORMANCE_FILE = EVALUATION_DIR / "v4_live_performance.json"
+
+V4_MODES = {"v3_evidence_no_press", "v4_evidence_no_press"}
+LEGACY_MODES = {"live_registry_prediction"}
 
 
 def load_json(path: Path) -> Any:
@@ -66,9 +70,14 @@ def result_records(program_index: dict[str, dict[str, Any]]) -> tuple[dict[str, 
                 continue
             audit["accepted"] += 1
             records[key] = {
-                "race_key": key, "date": race_date, "track": track, "race_number": number,
-                "arrival": arrival, "winner": arrival[0],
-                "second": arrival[1], "third": arrival[2],
+                "race_key": key,
+                "date": race_date,
+                "track": track,
+                "race_number": number,
+                "arrival": arrival,
+                "winner": arrival[0],
+                "second": arrival[1],
+                "third": arrival[2],
                 "truth_validation": truth,
             }
     return records, audit
@@ -110,10 +119,11 @@ def load_existing(program_index: dict[str, dict[str, Any]]) -> tuple[dict[str, d
 def _engine_metrics(predicted: list[int], actual_top3: list[int], actual_top5: list[int]) -> dict[str, Any]:
     top3 = predicted[:3]
     top5 = predicted[:5]
+    winner = actual_top5[0] if actual_top5 else None
     return {
-        "winner_hit": bool(predicted) and predicted[0] == actual_top5[0],
-        "winner_in_top3": actual_top5[0] in top3,
-        "winner_in_top5": actual_top5[0] in top5,
+        "winner_hit": bool(predicted) and predicted[0] == winner,
+        "winner_in_top3": winner in top3,
+        "winner_in_top5": winner in top5,
         "actual_top3_covered_by_top3": len(set(actual_top3) & set(top3)),
         "actual_top3_covered_by_top5": len(set(actual_top3) & set(top5)),
         "actual_top5_covered_by_top5": len(set(actual_top5) & set(top5)),
@@ -126,40 +136,69 @@ def _engine_metrics(predicted: list[int], actual_top3: list[int], actual_top5: l
     }
 
 
+def _ranked_numbers(prediction: dict[str, Any]) -> list[int]:
+    return [
+        int(item["horse_number"])
+        for item in (prediction.get("ranked_horses") or [])
+        if isinstance(item, dict) and item.get("horse_number") is not None
+    ][:5]
+
+
 def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, Any]:
     actual_top3 = result["arrival"][:3]
     actual_top5 = result["arrival"][:5]
-    predicted_top3 = [int(x) for x in prediction.get("top3_numbers") or []]
-    predicted_recommended = [int(x) for x in prediction.get("recommended_numbers") or []]
-    predicted_order = [int(x) for x in prediction.get("predicted_finish_order") or []]
+    ranked_top5 = _ranked_numbers(prediction)
+
+    # V4 deliberately clears final_five/recommended_numbers when NO_BET is
+    # enforced. Preserve the model's ranked candidates separately so the
+    # observation phase can still measure predictive quality without turning
+    # them into betting recommendations.
+    v4_mode = prediction.get("mode") in V4_MODES
+    model_candidates = (
+        ranked_top5 if v4_mode else
+        [int(x) for x in prediction.get("recommended_numbers") or []]
+    )
+    predicted_top3 = (
+        ranked_top5[:3] if v4_mode else
+        [int(x) for x in prediction.get("top3_numbers") or []]
+    )
+    predicted_order = (
+        [int(x) for x in prediction.get("predicted_finish_order") or []]
+        if not v4_mode else ranked_top5
+    )
     order_top5 = [int(x) for x in prediction.get("order_engine_top5") or []]
-    ranked_top5 = [
-        int(x.get("horse_number"))
-        for x in (prediction.get("ranked_horses") or [])[:5]
-        if x.get("horse_number") is not None
-    ]
     fused_top5 = predicted_order[:5] if predicted_order else predicted_top3[:5]
-    predicted_winner = predicted_order[0] if predicted_order else (predicted_top3[0] if predicted_top3 else None)
+    predicted_winner = fused_top5[0] if fused_top5 else None
 
     strength_metrics = _engine_metrics(ranked_top5, actual_top3, actual_top5)
     order_metrics = _engine_metrics(order_top5, actual_top3, actual_top5)
     fused_metrics = _engine_metrics(fused_top5, actual_top3, actual_top5)
 
+    guard = prediction.get("autopilot_guard") or {}
+    live_decision = prediction.get("live_decision")
+    gate_reasons = guard.get("gate_reasons") or prediction.get("no_bet_reason") or []
+
     return {
         "race_key": prediction.get("race_key"),
         "prediction_id": prediction.get("prediction_id"),
         "model_version": prediction.get("model_version", "unknown"),
+        "mode": prediction.get("mode"),
         "predicted_at": prediction.get("generated_at"),
         "verified_at": datetime.now(timezone.utc).isoformat(),
         "result": result,
         "prediction": {
-            "recommended_numbers": predicted_recommended,
+            "recommended_numbers": [int(x) for x in prediction.get("recommended_numbers") or []],
+            "model_candidates": model_candidates,
             "top3_numbers": predicted_top3,
             "ranked_top5": ranked_top5,
             "predicted_finish_order_top5": predicted_order[:5],
             "order_engine_top5": order_top5[:5],
+            "confidence": prediction.get("confidence"),
+            "model_agreement": prediction.get("model_agreement"),
             "monitoring": prediction.get("monitoring") or {},
             "difficulty": prediction.get("difficulty") or {},
+            "live_decision": live_decision,
+            "gate_reasons": gate_reasons,
         },
         "metrics": {
             "winner_hit": predicted_winner == result.get("winner"),
@@ -170,7 +209,8 @@ def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, An
             "fused_engine_winner_hit": fused_metrics["winner_hit"],
             "actual_top3_covered_by_predicted_top3": len(set(actual_top3) & set(predicted_top3)),
             "actual_top3_covered_by_predicted_top5": len(set(actual_top3) & set(ranked_top5)),
-            "recommended_hit_count": len(set(predicted_recommended) & set(result["arrival"])),
+            "recommended_hit_count": len(set(prediction.get("recommended_numbers") or []) & set(result["arrival"])),
+            "model_candidate_hit_count": len(set(model_candidates) & set(result["arrival"])),
             "exact_top3_order": fused_metrics["exact_top3_order"],
             "exact_top5_order": fused_metrics["exact_top5_order"],
             "top5_position_hits": fused_metrics["top5_position_hits"],
@@ -185,6 +225,61 @@ def evaluate(prediction: dict[str, Any], result: dict[str, Any]) -> dict[str, An
             "accepted_for_learning": True,
             "minimum_positions_required": 3,
             "arrival_positions_available": len(result["arrival"]),
+        },
+    }
+
+
+def _build_v4_performance(evaluations: list[dict[str, Any]]) -> dict[str, Any]:
+    rows = [
+        item for item in evaluations
+        if isinstance(item, dict) and item.get("mode") in V4_MODES
+        and item.get("status") == "result_verified"
+    ]
+    total = len(rows)
+    if not total:
+        return {
+            "status": "awaiting_verified_v4_results",
+            "model": "v4-evidence-no-press",
+            "verified_races": 0,
+            "betting_clear_races": 0,
+            "no_bet_races": 0,
+            "predictive_metrics": {},
+            "policy": {
+                "predictive_validation_is_not_profitability_validation": True,
+                "no_bet_remains_default_without_economic_validation": True,
+            },
+        }
+
+    def avg(key: str) -> float:
+        return round(sum(float(item["metrics"].get(key, 0)) for item in rows) / total, 4)
+
+    no_bet = sum(1 for item in rows if (item.get("prediction") or {}).get("live_decision") == "NO_BET")
+    return {
+        "status": "observation",
+        "model": "v4-evidence-no-press",
+        "verified_races": total,
+        "betting_clear_races": total - no_bet,
+        "no_bet_races": no_bet,
+        "predictive_metrics": {
+            "winner_hit_rate": avg("winner_hit"),
+            "winner_in_top3_rate": avg("winner_in_top3"),
+            "winner_in_top5_rate": avg("winner_in_top5"),
+            "average_actual_top3_covered_by_predicted_top3": avg("actual_top3_covered_by_predicted_top3"),
+            "average_actual_top3_covered_by_predicted_top5": avg("actual_top3_covered_by_predicted_top5"),
+            "average_model_candidate_hit_count": avg("model_candidate_hit_count"),
+        },
+        "confidence_breakdown": {
+            level: sum(1 for item in rows if (item.get("prediction") or {}).get("confidence") == level)
+            for level in ("high", "medium", "low")
+        },
+        "agreement_breakdown": {
+            level: sum(1 for item in rows if (item.get("prediction") or {}).get("model_agreement") == level)
+            for level in ("high", "medium", "low")
+        },
+        "policy": {
+            "predictive_validation_is_not_profitability_validation": True,
+            "no_bet_remains_default_without_economic_validation": True,
+            "observed_market_prices_required_for_economic_claims": True,
         },
     }
 
@@ -205,7 +300,8 @@ def main() -> dict[str, Any]:
         except Exception as error:
             print(f"Skipping unreadable prediction {path.name}: {error}")
             continue
-        if not isinstance(prediction, dict) or prediction.get("mode") != "live_registry_prediction":
+        mode = prediction.get("mode")
+        if mode not in (LEGACY_MODES | V4_MODES):
             continue
         original_key = prediction.get("race_key")
         if not original_key:
@@ -223,13 +319,13 @@ def main() -> dict[str, Any]:
     EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
     truth_audit["stored_evaluations_quarantined"] = quarantined_evaluations
     ordered = [evaluations[key] for key in sorted(evaluations)]
-    audit_path = EVALUATION_DIR / "result_truth_audit.json"
-    audit_path.write_text(
+    (EVALUATION_DIR / "result_truth_audit.json").write_text(
         json.dumps(
             {
                 "generated_at": datetime.now(timezone.utc).isoformat(),
                 **truth_audit,
                 "stored_verified_evaluations_after_quarantine": len(ordered),
+                "v4_verified_races": sum(1 for item in ordered if item.get("mode") in V4_MODES),
                 "policy": {
                     "unknown_result_numbers_never_train": True,
                     "duplicate_arrival_numbers_never_train": True,
@@ -243,14 +339,15 @@ def main() -> dict[str, Any]:
         encoding="utf-8",
     )
     EVALUATION_FILE.write_text(json.dumps(ordered, indent=2, ensure_ascii=False), encoding="utf-8")
+    v4_report = _build_v4_performance(ordered)
+    v4_report["generated_at"] = datetime.now(timezone.utc).isoformat()
+    V4_PERFORMANCE_FILE.write_text(json.dumps(v4_report, indent=2, ensure_ascii=False), encoding="utf-8")
+
     print(f"Verified prediction/result pairs added: {processed}")
     print(f"Total verified prediction/result pairs: {len(ordered)}")
-    print(
-        "Result truth audit: "
-        f"{truth_audit['accepted']} accepted / "
-        f"{truth_audit['rejected']} rejected."
-    )
-    return {"processed": processed, "total": len(ordered), "path": str(EVALUATION_FILE)}
+    print(f"Verified V4 observation races: {v4_report['verified_races']}")
+    print(f"Result truth audit: {truth_audit['accepted']} accepted / {truth_audit['rejected']} rejected.")
+    return {"processed": processed, "total": len(ordered), "v4_report": v4_report, "path": str(EVALUATION_FILE)}
 
 
 if __name__ == "__main__":
