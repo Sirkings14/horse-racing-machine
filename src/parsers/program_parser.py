@@ -193,7 +193,7 @@ def extract_number_list(text, label):
     return [int(value) for value in re.findall(r"\b\d{1,2}\b", match.group(1))]
 
 
-FRACTIONAL_ODDS_RE = re.compile(r"\\b(\\d+(?:[.,]\\d+)?)/(\\d+(?:[.,]\\d+)?)\\b")
+FRACTIONAL_ODDS_RE = re.compile(r"\b(\d+(?:[.,]\d+)?)/(\d+(?:[.,]\d+)?)\b")
 
 
 def _parse_fractional_odds(token: str):
@@ -250,14 +250,14 @@ def extract_press_odds(text, expected_runners=None):
 
     paris_turf = _extract_press_odds_series(
         text,
-        r"\\bPARIS\\s*TURF\\b",
-        r"\\bTIERCE\\s*MAGAZINE\\b",
+        r"\bPARIS\s*TURF\b",
+        r"\bTIERCE\s*MAGAZINE\b",
         expected,
     )
     tierce_magazine = _extract_press_odds_series(
         text,
         r"\\bTIERCE\\s*MAGAZINE\\b",
-        r"\\bTURF[- ]FR\\.COM\\b|\\bAPTITUDES\\b|\\bCLASSEMENT\\b",
+        r"\bTURF[- ]FR\.COM\b|\bAPTITUDES\b|\bCLASSEMENT\b",
         expected,
     )
 
