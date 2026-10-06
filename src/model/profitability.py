@@ -10,7 +10,8 @@ from src.model.market_evidence import load_ledger
 BASE_DIR = Path(__file__).resolve().parents[2]
 PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
 EVALUATION_FILE = BASE_DIR / "data" / "evaluation" / "prediction_evaluations.json"
-OUTPUT_FILE = BASE_DIR / "data" / "evaluation" / "profitability_report.json"\nLEDGER_FILE = BASE_DIR / "data" / "evaluation" / "market_evidence.json"
+OUTPUT_FILE = BASE_DIR / "data" / "evaluation" / "profitability_report.json"
+LEDGER_FILE = BASE_DIR / "data" / "evaluation" / "market_evidence.json"
 
 
 def load_json(path: Path, default: Any) -> Any:
