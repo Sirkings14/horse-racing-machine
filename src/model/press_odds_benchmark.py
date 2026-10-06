@@ -167,9 +167,8 @@ def main():
     current = [row for p in programs for row in rows_from_program(p)]
     profiled = build_walk_forward_profiles(history + current)
     by_key = {}
-    current_ids = {(id(r), r.get("race_key")) for r in current}
     for r in profiled:
-        if r.get("race_key") in records and any(r is x for x in current):
+        if r.get("race_key") in records:
             by_key.setdefault(r["race_key"], []).append(r)
 
     races = []
