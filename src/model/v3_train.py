@@ -55,11 +55,25 @@ def main():
         final.calibration=calibration
         models[name]=final.to_dict()
         calibration_reports[name]=calibration_metrics(raw,labels)
-    v3_report=run_v3_backtest(rows,min_train_races=5,refit_every_days=365)
+    # Reuse the walk-forward report produced by the validation workflow. Re-running
+    # the full backtest here duplicated the most expensive CI stage and could exhaust
+    # the GitHub Actions job limit without changing the promotion decision.
+    report_file=BASE_DIR/"data/model/v3_backtest_report.json"
+    if report_file.exists():
+        v3_report=json.loads(report_file.read_text(encoding="utf-8"))
+    else:
+        v3_report=run_v3_backtest(rows,min_train_races=5,refit_every_days=365)
     economic_races=[x.get("top5_candidates",[]) for x in (v3_report.get("race_results") or [])]
     economic_report=evaluate_value_strategy(economic_races,edge_threshold=0.08)
     (BASE_DIR/"data/model/economic_validation_report.json").write_text(json.dumps(economic_report,indent=2),encoding="utf-8")
-    legacy_report=run_legacy_backtest(rows,min_train_races=5)
+    # The legacy walk-forward benchmark is informational only and is quadratic in
+    # race count. Reuse the checked-in benchmark when available instead of blocking
+    # V4 promotion on an unrelated legacy computation.
+    legacy_file=BASE_DIR/"data/model/backtest_report.json"
+    if legacy_file.exists():
+        legacy_report=json.loads(legacy_file.read_text(encoding="utf-8"))
+    else:
+        legacy_report={"metrics":{}, "status":"not_recomputed_in_v4_validation"}
     v3m=v3_report["metrics"]; lm=legacy_report["metrics"]
     approved,reasons=_promotion_decision(v3m,len(v3_report.get("race_results") or []))
     # Economic validation is intentionally separate. Predictive accuracy is not
