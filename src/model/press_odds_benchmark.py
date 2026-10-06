@@ -163,7 +163,9 @@ def main():
             records[k] = program
             winners[k] = int(winner)
 
-    programs = sorted(records.values(), key=lambda p: (str(p.get("date") or ""), key(p) or ""))
+    cutoff = max(str(r.get("date") or "")[:10] for r in history)
+    all_programs = sorted(records.values(), key=lambda p: (str(p.get("date") or ""), key(p) or ""))
+    programs = [p for p in all_programs if str(p.get("date") or "")[:10] > cutoff]
     current = [row for p in programs for row in rows_from_program(p)]
     profiled = build_walk_forward_profiles(history + current)
     by_key = {}
@@ -200,7 +202,8 @@ def main():
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "status": "benchmark_available" if races else "no_benchmark_races",
         "method": "out_of_sample_v4_scoring_on_stored_lonab_programs_vs_published_press_prices",
-        "training_history_end_date": max(str(r.get("date") or "")[:10] for r in history),
+        "training_history_end_date": cutoff,
+        "programs_found_before_cutoff": len(all_programs) - len(programs),
         "benchmark_races": len(races),
         "market_evidence_gate_unlocked": False,
         "press_prices_are_market_evidence": False,
@@ -209,6 +212,7 @@ def main():
             "exact_prediction_time_price_timestamp_available": False,
             "operator_or_tote_prices_required_for_live_economic_validation": True,
             "never_invent_market_odds": True,
+            "accepted_fractional_price_format": "N/1 only",
         },
         "sources": {},
         "races": races,
