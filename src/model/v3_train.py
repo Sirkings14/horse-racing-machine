@@ -6,7 +6,7 @@ from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_model import fit_v3_model
 from src.model.calibration import fit_sigmoid_calibrator, calibration_metrics
 from src.model.v3_backtest import run as run_v3_backtest
-from src.model.backtest import run_backtest as run_legacy_backtest
+from src.model.backtest import run_backtest as run_legacy_backtest  # legacy benchmark is informational
 from src.model.economic_validation import evaluate_value_strategy
 
 BASE_DIR=Path(__file__).resolve().parents[2]
