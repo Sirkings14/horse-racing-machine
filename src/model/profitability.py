@@ -5,10 +5,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from src.model.market_evidence import load_ledger
+
 BASE_DIR = Path(__file__).resolve().parents[2]
 PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
 EVALUATION_FILE = BASE_DIR / "data" / "evaluation" / "prediction_evaluations.json"
-OUTPUT_FILE = BASE_DIR / "data" / "evaluation" / "profitability_report.json"
+OUTPUT_FILE = BASE_DIR / "data" / "evaluation" / "profitability_report.json"\nLEDGER_FILE = BASE_DIR / "data" / "evaluation" / "market_evidence.json"
 
 
 def load_json(path: Path, default: Any) -> Any:
@@ -89,6 +91,13 @@ def main() -> dict[str, Any]:
     total_predictions = len(evaluations)
     priced_predictions = 0
     paper_rows = []
+    ledger = load_ledger()
+    ledger_by_race = {}
+    for row in ledger:
+        if not isinstance(row, dict) or row.get("observed") is not True:
+            continue
+        key = (row.get("race_key"), row.get("market_type", "winner"))
+        ledger_by_race[key] = row
 
     for item in evaluations:
         if not isinstance(item, dict):
@@ -105,6 +114,10 @@ def main() -> dict[str, Any]:
             if isinstance(archived, dict):
                 odds = extract_market_odds(archived) or odds
 
+        # Prefer a separately captured, source-attributed market snapshot.
+        snapshot = ledger_by_race.get((race_key, "winner"))
+        if snapshot:
+            odds = {int(k): float(v) for k, v in (snapshot.get("odds") or {}).items()}
         if not odds:
             continue
 
@@ -134,6 +147,11 @@ def main() -> dict[str, Any]:
             "roi": (total_profit / total_stake if total_stake else None),
         },
         "rows": paper_rows,
+        "market_evidence": {
+            "ledger_path": str(LEDGER_FILE),
+            "observed_snapshot_count": sum(1 for row in ledger if isinstance(row, dict) and row.get("observed") is True),
+            "source_attributed_prices_only": True,
+        },
         "requirements_for_real_edge_measurement": [
             "capture market odds at prediction time",
             "store the bet type and exact stake rule",
