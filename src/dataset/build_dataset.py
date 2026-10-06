@@ -151,6 +151,19 @@ def extract_rankings(program: Dict[str, Any]) -> Dict[str, Any]:
     return rankings if isinstance(rankings, dict) else {}
 
 
+def press_odds_value(program: Dict[str, Any], source: str, horse_number: int, field: str):
+    press_odds = program.get("press_odds")
+    if not isinstance(press_odds, dict):
+        return None
+    source_values = press_odds.get(source)
+    if not isinstance(source_values, dict):
+        return None
+    value = source_values.get(str(horse_number))
+    if not isinstance(value, dict):
+        return None
+    return value.get(field)
+
+
 def extract_horses(program: Dict[str, Any]) -> List[Dict[str, Any]]:
     horses = program.get("horses")
     if not isinstance(horses, list):
@@ -226,6 +239,11 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
         ranking_numbers = [value for value in ranking_values.values() if value is not None]
         ranking_average = round(sum(ranking_numbers) / len(ranking_numbers), 4) if ranking_numbers else None
 
+        press_paris_turf_fractional = press_odds_value(program, "paris_turf", horse_number, "fractional")
+        press_paris_turf_decimal = safe_float(press_odds_value(program, "paris_turf", horse_number, "decimal"))
+        press_tierce_magazine_fractional = press_odds_value(program, "tierce_magazine", horse_number, "fractional")
+        press_tierce_magazine_decimal = safe_float(press_odds_value(program, "tierce_magazine", horse_number, "decimal"))
+
         rows.append(
             {
                 "race_key": race_key,
@@ -243,6 +261,13 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
                 **ranking_values,
                 "ranking_average": ranking_average,
                 "ranking_presence": len(ranking_numbers),
+                # Press publications are kept as a separate benchmark and are
+                # intentionally not named as market odds.
+                "press_paris_turf_fractional": press_paris_turf_fractional,
+                "press_paris_turf_decimal": press_paris_turf_decimal,
+                "press_tierce_magazine_fractional": press_tierce_magazine_fractional,
+                "press_tierce_magazine_decimal": press_tierce_magazine_decimal,
+                "press_odds_status": program.get("press_odds_status", "unavailable"),
                 "finish_position": finish_position,
                 "won": won,
                 "top3": top3,
@@ -301,6 +326,8 @@ def write_csv(rows: List[Dict[str, Any]]) -> None:
         "distance", "runners_count", "prize_euros", "horse_number", "horse_name",
         "horse_description", "favorites_rank", "form_rank", "class_rank",
         "progress_rank", "regularity_rank", "ranking_average", "ranking_presence",
+        "press_paris_turf_fractional", "press_paris_turf_decimal",
+        "press_tierce_magazine_fractional", "press_tierce_magazine_decimal", "press_odds_status",
         "finish_position", "won", "top3", "top4", "top5", "source_program", "source_result",
     ]
 

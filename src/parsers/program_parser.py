@@ -193,6 +193,82 @@ def extract_number_list(text, label):
     return [int(value) for value in re.findall(r"\b\d{1,2}\b", match.group(1))]
 
 
+FRACTIONAL_ODDS_RE = re.compile(r"\b(\d+(?:[.,]\d+)?)/(\d+(?:[.,]\d+)?)\b")
+
+
+def _parse_fractional_odds(token: str):
+    try:
+        numerator, denominator = token.split("/", 1)
+        value_num = float(numerator.replace(",", "."))
+        value_den = float(denominator.replace(",", "."))
+        if value_den <= 0:
+            return None
+        decimal = 1.0 + (value_num / value_den)
+        if decimal <= 1.0:
+            return None
+        return round(decimal, 6)
+    except (TypeError, ValueError):
+        return None
+
+
+def _extract_press_odds_series(text, start_pattern, stop_pattern, expected_runners):
+    """Extract explicit fractional press odds from a program table.
+
+    These are published press prices (Paris Turf / Tierce Magazine), not
+    operator/tote odds. They are retained separately so the economic gate
+    cannot mistake them for independent market-price evidence.
+    """
+    if not expected_runners or expected_runners <= 0:
+        return {}
+    start = re.search(start_pattern, text, re.IGNORECASE)
+    if not start:
+        return {}
+    tail = text[start.end():]
+    stop = re.search(stop_pattern, tail, re.IGNORECASE)
+    segment = tail[:stop.start()] if stop else tail
+
+    values = []
+    for match in FRACTIONAL_ODDS_RE.finditer(segment):
+        token = match.group(0)
+        decimal = _parse_fractional_odds(token)
+        if decimal is None:
+            continue
+        values.append({"fractional": token, "decimal": decimal})
+        if len(values) >= expected_runners:
+            break
+
+    if len(values) != expected_runners:
+        return {}
+    return {str(number): value for number, value in enumerate(values, start=1)}
+
+
+def extract_press_odds(text, expected_runners=None):
+    """Extract the two published press-odds columns when present."""
+    expected = int(expected_runners or 0)
+    if expected <= 0:
+        return {}
+
+    paris_turf = _extract_press_odds_series(
+        text,
+        r"\bPARIS\s*TURF\b",
+        r"\bTIERCE\s*MAGAZINE\b",
+        expected,
+    )
+    tierce_magazine = _extract_press_odds_series(
+        text,
+        r"\bTIERCE\s*MAGAZINE\b",
+        r"\bTURF[- ]FR\.COM\b|\bAPTITUDES\b|\bCLASSEMENT\b",
+        expected,
+    )
+
+    result = {}
+    if paris_turf:
+        result["paris_turf"] = paris_turf
+    if tierce_magazine:
+        result["tierce_magazine"] = tierce_magazine
+    return result
+
+
 def extract_rankings(text):
     return {
         "favorites": extract_number_list(text, "FAVORIS"),
@@ -221,6 +297,8 @@ def parse_program_text(text, source_file="unknown.txt"):
         "race": race_info,
         "horses": extract_horses(text, expected_runners=race_info.get("runners_count")),
         "rankings": extract_rankings(text),
+        "press_odds": extract_press_odds(text, race_info.get("runners_count")),
+        "press_odds_status": "observed_in_program" if extract_press_odds(text, race_info.get("runners_count")) else "unavailable",
         "published_arrival": extract_published_arrival(text),
     }
 

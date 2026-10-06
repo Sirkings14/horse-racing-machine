@@ -90,7 +90,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
                 "probability_top3":float(r.get("p_top3",0.0)),
                 "probability_top5":float(r.get("p_top5",0.0)),
                 "won":int(r.get("won",0)),
-                **{k:r.get(k) for k in ("win_odds_decimal","decimal_odds","starting_price_decimal","starting_price","win_odds","odds")}
+                **{k:r.get(k) for k in ("win_odds_decimal","decimal_odds","starting_price_decimal","starting_price","win_odds","odds","press_paris_turf_fractional","press_paris_turf_decimal","press_tierce_magazine_fractional","press_tierce_magazine_decimal","press_odds_status")}
             } for r in ranked[:5]]
             predictions.append(ev)
             probabilities.extend(float(x) for x in p3); labels.extend(int(r.get("top3",0)) for r in test)
