@@ -22,12 +22,20 @@ def load_json(path: Path, default: Any = None) -> Any:
         return default
 
 
-def safe_float(value: Any) -> float | None:
+def safe_odds(value: Any) -> float | None:
     try:
         number = float(value)
     except (TypeError, ValueError):
         return None
     return number if number > 1.0 else None
+
+
+def safe_probability(value: Any) -> float | None:
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    return number if 0.0 <= number <= 1.0 else None
 
 
 def race_rows(report: dict[str, Any]) -> list[dict[str, Any]]:
@@ -46,7 +54,7 @@ def complete_priced_races(races: list[dict[str, Any]], field: str) -> list[dict[
         candidates = candidate_rows(race)
         if len(candidates) < 5:
             continue
-        if all(safe_float(row.get(field)) is not None for row in candidates[:5]):
+        if all(safe_odds(row.get(field)) is not None for row in candidates[:5]):
             priced.append(race)
     return priced
 
@@ -69,7 +77,7 @@ def simulate(races: list[dict[str, Any]], field: str, value_only: bool) -> dict[
 
         for row in candidates:
             odds = safe_float(row.get(field))
-            probability = safe_float(row.get("probability_winner"))
+            probability = safe_probability(row.get("probability_winner"))
             if odds is None or probability is None:
                 continue
             probability_edge = probability - (1.0 / odds)
