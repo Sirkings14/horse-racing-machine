@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_03-04-2026_95c4395c10_2077e159ae.txt",
-    "parsed_at": "2026-10-06T01:51:52.839157Z",
+    "parsed_at": "2026-10-06T19:39:26.927557Z",
     "date": "2026-04-01",
     "race": {
         "race_name": "PRIX GRATIA",
@@ -118,6 +118,63 @@
             11
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "32/1",
+                "decimal": 33.0
+            },
+            "2": {
+                "fractional": "82/1",
+                "decimal": 83.0
+            },
+            "3": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "4": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "5": {
+                "fractional": "5/1",
+                "decimal": 6.0
+            },
+            "6": {
+                "fractional": "4/1",
+                "decimal": 5.0
+            },
+            "7": {
+                "fractional": "17/1",
+                "decimal": 18.0
+            },
+            "8": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "9": {
+                "fractional": "39/1",
+                "decimal": 40.0
+            },
+            "10": {
+                "fractional": "8/126",
+                "decimal": 1.063492
+            },
+            "11": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "12": {
+                "fractional": "40/1",
+                "decimal": 41.0
+            },
+            "13": {
+                "fractional": "33/1",
+                "decimal": 34.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": [
         1,
         5,

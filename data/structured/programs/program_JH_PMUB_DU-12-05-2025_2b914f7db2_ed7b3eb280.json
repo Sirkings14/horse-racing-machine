@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-12-05-2025_2b914f7db2_ed7b3eb280.txt",
-    "parsed_at": "2026-10-06T01:51:50.943102Z",
+    "parsed_at": "2026-10-06T19:39:24.764957Z",
     "date": "2025-05-12",
     "race": {
         "race_name": "ATTELE",
@@ -123,6 +123,67 @@
             4
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "2": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "3": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            },
+            "4": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "5": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "6": {
+                "fractional": "30/1",
+                "decimal": 31.0
+            },
+            "7": {
+                "fractional": "23/1",
+                "decimal": 24.0
+            },
+            "8": {
+                "fractional": "21/1",
+                "decimal": 22.0
+            },
+            "9": {
+                "fractional": "63/1",
+                "decimal": 64.0
+            },
+            "10": {
+                "fractional": "25/1",
+                "decimal": 26.0
+            },
+            "11": {
+                "fractional": "35/16",
+                "decimal": 3.1875
+            },
+            "12": {
+                "fractional": "27/1",
+                "decimal": 28.0
+            },
+            "13": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "14": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": [
         4,
         15,

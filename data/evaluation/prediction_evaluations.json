@@ -1759,5 +1759,139 @@
       "duplicate_numbers": [],
       "program_source": "program_JH_PMU_DU_05-10-2026_bdb58e8757_435a65b941.json"
     }
+  },
+  {
+    "race_key": "2026-10-06|AUTEUIL|1",
+    "prediction_id": "2026-10-06|AUTEUIL|1|2026-10-06T19:16:04.759292+00:00",
+    "model_version": "v4-evidence-no-press",
+    "mode": "v3_evidence_no_press",
+    "predicted_at": "2026-10-06T19:16:04.759304+00:00",
+    "verified_at": "2026-10-06T19:42:52.807812+00:00",
+    "result": {
+      "race_key": "2026-10-06|AUTEUIL|1",
+      "date": "2026-10-06",
+      "track": "AUTEUIL",
+      "race_number": 1,
+      "arrival": [
+        8,
+        2,
+        7,
+        1
+      ],
+      "winner": 8,
+      "second": 2,
+      "third": 7,
+      "truth_validation": {
+        "accepted_for_learning": true,
+        "reason": "validated_against_program_roster",
+        "race_key": "2026-10-06|AUTEUIL|1",
+        "arrival_positions_available": 4,
+        "declared_runner_count": 16,
+        "unknown_numbers": [],
+        "duplicate_numbers": [],
+        "program_source": "program_JH_PMU_DU_06-10-2026_c1fb863584_433bdb6bfb.json"
+      }
+    },
+    "prediction": {
+      "recommended_numbers": [],
+      "model_candidates": [
+        3,
+        4,
+        1,
+        2,
+        5
+      ],
+      "top3_numbers": [
+        3,
+        4,
+        1
+      ],
+      "ranked_top5": [
+        3,
+        4,
+        1,
+        2,
+        5
+      ],
+      "predicted_finish_order_top5": [
+        3,
+        4,
+        1,
+        2,
+        5
+      ],
+      "order_engine_top5": [],
+      "confidence": "low",
+      "model_agreement": "low",
+      "monitoring": {},
+      "difficulty": {},
+      "live_decision": "NO_BET",
+      "gate_reasons": [
+        "insufficient_verified_history",
+        "low_model_confidence",
+        "economic_validation_unavailable"
+      ]
+    },
+    "metrics": {
+      "winner_hit": false,
+      "winner_in_top3": false,
+      "winner_in_top5": false,
+      "order_engine_winner_hit": false,
+      "strength_engine_winner_hit": false,
+      "fused_engine_winner_hit": false,
+      "actual_top3_covered_by_predicted_top3": 0,
+      "actual_top3_covered_by_predicted_top5": 1,
+      "recommended_hit_count": 0,
+      "model_candidate_hit_count": 2,
+      "exact_top3_order": false,
+      "exact_top5_order": false,
+      "top5_position_hits": 0,
+      "engine_attribution": {
+        "strength": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 0,
+          "actual_top3_covered_by_top5": 1,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "order": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 0,
+          "actual_top3_covered_by_top5": 0,
+          "actual_top5_covered_by_top5": 0,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        },
+        "fused": {
+          "winner_hit": false,
+          "winner_in_top3": false,
+          "winner_in_top5": false,
+          "actual_top3_covered_by_top3": 0,
+          "actual_top3_covered_by_top5": 1,
+          "actual_top5_covered_by_top5": 2,
+          "exact_top3_order": false,
+          "exact_top5_order": false,
+          "top5_position_hits": 0
+        }
+      }
+    },
+    "status": "result_verified",
+    "result_validation": {
+      "accepted_for_learning": true,
+      "reason": "validated_against_program_roster",
+      "race_key": "2026-10-06|AUTEUIL|1",
+      "arrival_positions_available": 4,
+      "declared_runner_count": 16,
+      "unknown_numbers": [],
+      "duplicate_numbers": [],
+      "program_source": "program_JH_PMU_DU_06-10-2026_c1fb863584_433bdb6bfb.json"
+    }
   }
 ]

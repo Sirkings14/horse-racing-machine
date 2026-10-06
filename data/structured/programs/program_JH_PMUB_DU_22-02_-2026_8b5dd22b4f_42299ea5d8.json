@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_22-02_-2026_8b5dd22b4f_42299ea5d8.txt",
-    "parsed_at": "2026-10-06T01:51:54.893474Z",
+    "parsed_at": "2026-10-06T19:39:29.419841Z",
     "date": "2026-02-22",
     "race": {
         "race_name": "AMERIQUE RACES",
@@ -123,5 +123,66 @@
             5
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "20/1",
+                "decimal": 21.0
+            },
+            "2": {
+                "fractional": "17/1",
+                "decimal": 18.0
+            },
+            "3": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "4": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "5": {
+                "fractional": "22/1",
+                "decimal": 23.0
+            },
+            "6": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "7": {
+                "fractional": "28/1",
+                "decimal": 29.0
+            },
+            "8": {
+                "fractional": "5/1",
+                "decimal": 6.0
+            },
+            "9": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "10": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "11": {
+                "fractional": "7/153",
+                "decimal": 1.045752
+            },
+            "12": {
+                "fractional": "67/1",
+                "decimal": 68.0
+            },
+            "13": {
+                "fractional": "27/1",
+                "decimal": 28.0
+            },
+            "14": {
+                "fractional": "17/1",
+                "decimal": 18.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": []
 }

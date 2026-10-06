@@ -1,0 +1,31 @@
+{
+  "status": "observation",
+  "model": "v4-evidence-no-press",
+  "verified_races": 1,
+  "betting_clear_races": 0,
+  "no_bet_races": 1,
+  "predictive_metrics": {
+    "winner_hit_rate": 0.0,
+    "winner_in_top3_rate": 0.0,
+    "winner_in_top5_rate": 0.0,
+    "average_actual_top3_covered_by_predicted_top3": 0.0,
+    "average_actual_top3_covered_by_predicted_top5": 1.0,
+    "average_model_candidate_hit_count": 2.0
+  },
+  "confidence_breakdown": {
+    "high": 0,
+    "medium": 0,
+    "low": 1
+  },
+  "agreement_breakdown": {
+    "high": 0,
+    "medium": 0,
+    "low": 1
+  },
+  "policy": {
+    "predictive_validation_is_not_profitability_validation": true,
+    "no_bet_remains_default_without_economic_validation": true,
+    "observed_market_prices_required_for_economic_claims": true
+  },
+  "generated_at": "2026-10-06T19:42:52.811005+00:00"
+}

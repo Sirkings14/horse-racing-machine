@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_29-08-2026_e2732f543d_a6c9211dc5.txt",
-    "parsed_at": "2026-10-06T01:51:55.774790Z",
+    "parsed_at": "2026-10-06T19:39:30.480344Z",
     "date": "2026-08-29",
     "race": {
         "race_name": "PRIX G. DE WAZIERES-CRITERIUM 4 ANS Q4",
@@ -118,5 +118,62 @@
             10
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "32/1",
+                "decimal": 33.0
+            },
+            "2": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            },
+            "3": {
+                "fractional": "24/1",
+                "decimal": 25.0
+            },
+            "4": {
+                "fractional": "17/1",
+                "decimal": 18.0
+            },
+            "5": {
+                "fractional": "29/1",
+                "decimal": 30.0
+            },
+            "6": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "7": {
+                "fractional": "26/1",
+                "decimal": 27.0
+            },
+            "8": {
+                "fractional": "97/1",
+                "decimal": 98.0
+            },
+            "9": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "10": {
+                "fractional": "5/116",
+                "decimal": 1.043103
+            },
+            "11": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "12": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "13": {
+                "fractional": "35/1",
+                "decimal": 36.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": []
 }

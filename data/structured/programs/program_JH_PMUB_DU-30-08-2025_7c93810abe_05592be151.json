@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-30-08-2025_7c93810abe_05592be151.txt",
-    "parsed_at": "2026-10-06T01:51:52.531059Z",
+    "parsed_at": "2026-10-06T19:39:26.562142Z",
     "date": "2025-08-30",
     "race": {
         "race_name": "PRIX ANNICK DREUX-CRITERIUM 3 ANS Q4",
@@ -123,5 +123,66 @@
             4
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "43/1",
+                "decimal": 44.0
+            },
+            "2": {
+                "fractional": "35/1",
+                "decimal": 36.0
+            },
+            "3": {
+                "fractional": "68/1",
+                "decimal": 69.0
+            },
+            "4": {
+                "fractional": "14/1",
+                "decimal": 15.0
+            },
+            "5": {
+                "fractional": "26/1",
+                "decimal": 27.0
+            },
+            "6": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "7": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "8": {
+                "fractional": "99/1",
+                "decimal": 100.0
+            },
+            "9": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            },
+            "10": {
+                "fractional": "6/1",
+                "decimal": 7.0
+            },
+            "11": {
+                "fractional": "3/132",
+                "decimal": 1.022727
+            },
+            "12": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "13": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "14": {
+                "fractional": "40/1",
+                "decimal": 41.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": []
 }

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-24-05-2025_8f814e3d3b_79271c72ed.txt",
-    "parsed_at": "2026-10-06T01:51:51.886116Z",
+    "parsed_at": "2026-10-06T19:39:25.841595Z",
     "date": "2025-05-24",
     "race": {
         "race_name": "ATTELE",
@@ -123,5 +123,70 @@
             11
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "36/1",
+                "decimal": 37.0
+            },
+            "2": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            },
+            "3": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "4": {
+                "fractional": "29/1",
+                "decimal": 30.0
+            },
+            "5": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "6": {
+                "fractional": "25/1",
+                "decimal": 26.0
+            },
+            "7": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "8": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "9": {
+                "fractional": "32/1",
+                "decimal": 33.0
+            },
+            "10": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "11": {
+                "fractional": "20/1",
+                "decimal": 21.0
+            },
+            "12": {
+                "fractional": "50/14",
+                "decimal": 4.571429
+            },
+            "13": {
+                "fractional": "62/1",
+                "decimal": 63.0
+            },
+            "14": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "15": {
+                "fractional": "34/1",
+                "decimal": 35.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": []
 }

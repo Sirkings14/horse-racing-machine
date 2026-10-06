@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_27-07-2025_002439fb6a_d486ff6707.txt",
-    "parsed_at": "2026-10-06T01:51:55.545507Z",
+    "parsed_at": "2026-10-06T19:39:30.204322Z",
     "date": "2025-07-27",
     "race": {
         "race_name": null,
@@ -133,6 +133,75 @@
             15
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "42/1",
+                "decimal": 43.0
+            },
+            "2": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "3": {
+                "fractional": "48/1",
+                "decimal": 49.0
+            },
+            "4": {
+                "fractional": "22/1",
+                "decimal": 23.0
+            },
+            "5": {
+                "fractional": "16/1",
+                "decimal": 17.0
+            },
+            "6": {
+                "fractional": "34/1",
+                "decimal": 35.0
+            },
+            "7": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            },
+            "8": {
+                "fractional": "5/1",
+                "decimal": 6.0
+            },
+            "9": {
+                "fractional": "37/1",
+                "decimal": 38.0
+            },
+            "10": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "11": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "12": {
+                "fractional": "10/124",
+                "decimal": 1.080645
+            },
+            "13": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "14": {
+                "fractional": "29/1",
+                "decimal": 30.0
+            },
+            "15": {
+                "fractional": "41/1",
+                "decimal": 42.0
+            },
+            "16": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": [
         9,
         2,

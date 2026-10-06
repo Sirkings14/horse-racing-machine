@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_PMU_DU_10-10-2025_c8aba94701_e6996f2b58.txt",
-    "parsed_at": "2026-10-06T01:51:56.441489Z",
+    "parsed_at": "2026-10-06T19:39:31.289376Z",
     "date": "2025-10-10",
     "race": {
         "race_name": "PRIX HERA",
@@ -123,6 +123,67 @@
             10
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "23/1",
+                "decimal": 24.0
+            },
+            "2": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "3": {
+                "fractional": "99/1",
+                "decimal": 100.0
+            },
+            "4": {
+                "fractional": "28/1",
+                "decimal": 29.0
+            },
+            "5": {
+                "fractional": "31/1",
+                "decimal": 32.0
+            },
+            "6": {
+                "fractional": "5/1",
+                "decimal": 6.0
+            },
+            "7": {
+                "fractional": "14/1",
+                "decimal": 15.0
+            },
+            "8": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "9": {
+                "fractional": "6/1",
+                "decimal": 7.0
+            },
+            "10": {
+                "fractional": "27/1",
+                "decimal": 28.0
+            },
+            "11": {
+                "fractional": "18/159",
+                "decimal": 1.113208
+            },
+            "12": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "13": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "14": {
+                "fractional": "20/1",
+                "decimal": 21.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": [
         14,
         16,

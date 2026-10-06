@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-05-05-2023_d8486fd3ce_ac2b5e9da9.txt",
-    "parsed_at": "2026-10-06T01:51:50.285347Z",
+    "parsed_at": "2026-10-06T19:39:23.968455Z",
     "date": "2023-05-05",
     "race": {
         "race_name": null,
@@ -109,5 +109,140 @@
         "progress": [],
         "regularity": []
     },
+    "press_odds": {
+        "paris_turf": {
+            "1": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "2": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "3": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "4": {
+                "fractional": "33/1",
+                "decimal": 34.0
+            },
+            "5": {
+                "fractional": "31/1",
+                "decimal": 32.0
+            },
+            "6": {
+                "fractional": "66/1",
+                "decimal": 67.0
+            },
+            "7": {
+                "fractional": "80/1",
+                "decimal": 81.0
+            },
+            "8": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "9": {
+                "fractional": "35/1",
+                "decimal": 36.0
+            },
+            "10": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "11": {
+                "fractional": "23/1",
+                "decimal": 24.0
+            },
+            "12": {
+                "fractional": "21/1",
+                "decimal": 22.0
+            },
+            "13": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            },
+            "14": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "15": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "16": {
+                "fractional": "54/1",
+                "decimal": 55.0
+            }
+        },
+        "tierce_magazine": {
+            "1": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "2": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "3": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "4": {
+                "fractional": "33/1",
+                "decimal": 34.0
+            },
+            "5": {
+                "fractional": "31/1",
+                "decimal": 32.0
+            },
+            "6": {
+                "fractional": "66/1",
+                "decimal": 67.0
+            },
+            "7": {
+                "fractional": "80/1",
+                "decimal": 81.0
+            },
+            "8": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "9": {
+                "fractional": "35/1",
+                "decimal": 36.0
+            },
+            "10": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "11": {
+                "fractional": "23/1",
+                "decimal": 24.0
+            },
+            "12": {
+                "fractional": "21/1",
+                "decimal": 22.0
+            },
+            "13": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            },
+            "14": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "15": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "16": {
+                "fractional": "54/1",
+                "decimal": 55.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": []
 }

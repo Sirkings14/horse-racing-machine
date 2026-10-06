@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_18-09-2025_dbdb59fa6b_2f99624fd6.txt",
-    "parsed_at": "2026-10-06T01:51:56.214647Z",
+    "parsed_at": "2026-10-06T19:39:31.019604Z",
     "date": "2025-09-18",
     "race": {
         "race_name": "PRIX BERNARD LE QUELLEC",
@@ -128,6 +128,71 @@
             12
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "65/1",
+                "decimal": 66.0
+            },
+            "2": {
+                "fractional": "47/1",
+                "decimal": 48.0
+            },
+            "3": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "4": {
+                "fractional": "53/1",
+                "decimal": 54.0
+            },
+            "5": {
+                "fractional": "17/1",
+                "decimal": 18.0
+            },
+            "6": {
+                "fractional": "4/1",
+                "decimal": 5.0
+            },
+            "7": {
+                "fractional": "21/1",
+                "decimal": 22.0
+            },
+            "8": {
+                "fractional": "35/1",
+                "decimal": 36.0
+            },
+            "9": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "10": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "11": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            },
+            "12": {
+                "fractional": "6/115",
+                "decimal": 1.052174
+            },
+            "13": {
+                "fractional": "5/1",
+                "decimal": 6.0
+            },
+            "14": {
+                "fractional": "61/1",
+                "decimal": 62.0
+            },
+            "15": {
+                "fractional": "67/1",
+                "decimal": 68.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": [
         15,
         14,

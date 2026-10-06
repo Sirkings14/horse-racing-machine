@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-06T19:16:00.081584+00:00",
+  "updated_at": "2026-10-06T19:42:59.967201+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -505,10 +505,12 @@
       "structured_file": "structured/2026-10-06_AUTEUIL_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-06T19:16:00.081376+00:00",
-      "result_status": "pending",
+      "discovered_at": "2026-10-06T19:42:59.967000+00:00",
+      "result_status": "verified",
       "created_at": "2026-10-05T09:38:08.289897+00:00",
-      "updated_at": "2026-10-06T19:16:00.081573+00:00"
+      "updated_at": "2026-10-06T19:42:59.967190+00:00",
+      "evaluation_file": "data/evaluation/prediction_evaluations.json",
+      "result_verified_at": "2026-10-06T19:42:52.807999+00:00"
     },
     {
       "race_key": "2026-10-07|ENGHIEN|1",
@@ -525,10 +527,10 @@
       "structured_file": "structured/2026-10-07_ENGHIEN_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-06T19:15:59.832205+00:00",
+      "discovered_at": "2026-10-06T19:42:59.790393+00:00",
       "result_status": "pending",
       "created_at": "2026-10-05T16:14:29.054195+00:00",
-      "updated_at": "2026-10-06T19:15:59.832438+00:00"
+      "updated_at": "2026-10-06T19:42:59.790615+00:00"
     },
     {
       "race_key": "2026-10-08|SAINT-CLOUD|1",
@@ -545,10 +547,10 @@
       "structured_file": "structured/2026-10-08_SAINT-CLOUD_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-06T19:15:59.607078+00:00",
+      "discovered_at": "2026-10-06T19:42:59.547327+00:00",
       "result_status": "pending",
       "created_at": "2026-10-06T15:54:47.995412+00:00",
-      "updated_at": "2026-10-06T19:15:59.607257+00:00"
+      "updated_at": "2026-10-06T19:42:59.547518+00:00"
     }
   ]
 }

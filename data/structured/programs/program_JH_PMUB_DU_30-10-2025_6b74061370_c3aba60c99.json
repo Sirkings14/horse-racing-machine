@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_30-10-2025_6b74061370_c3aba60c99.txt",
-    "parsed_at": "2026-10-06T01:51:55.877665Z",
+    "parsed_at": "2026-10-06T19:39:30.612613Z",
     "date": "2025-10-28",
     "race": {
         "race_name": "PRIX DE SOULAC",
@@ -128,6 +128,71 @@
             3
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "26/1",
+                "decimal": 27.0
+            },
+            "2": {
+                "fractional": "5/1",
+                "decimal": 6.0
+            },
+            "3": {
+                "fractional": "73/1",
+                "decimal": 74.0
+            },
+            "4": {
+                "fractional": "32/1",
+                "decimal": 33.0
+            },
+            "5": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "6": {
+                "fractional": "30/1",
+                "decimal": 31.0
+            },
+            "7": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            },
+            "8": {
+                "fractional": "197/1",
+                "decimal": 198.0
+            },
+            "9": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "10": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "11": {
+                "fractional": "13/120",
+                "decimal": 1.108333
+            },
+            "12": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "13": {
+                "fractional": "4/1",
+                "decimal": 5.0
+            },
+            "14": {
+                "fractional": "25/1",
+                "decimal": 26.0
+            },
+            "15": {
+                "fractional": "4/1",
+                "decimal": 5.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": [
         0
     ]

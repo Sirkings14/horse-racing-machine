@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-10-06T01:54:37.986217+00:00",
-  "result_races_seen": 21740,
-  "accepted": 460,
-  "rejected": 20236,
+  "generated_at": "2026-10-06T19:42:52.809002+00:00",
+  "result_races_seen": 21772,
+  "accepted": 462,
+  "rejected": 20266,
   "stored_evaluations_quarantined": 0,
-  "stored_verified_evaluations_after_quarantine": 11,
+  "stored_verified_evaluations_after_quarantine": 12,
+  "v4_verified_races": 1,
   "policy": {
     "unknown_result_numbers_never_train": true,
     "duplicate_arrival_numbers_never_train": true,

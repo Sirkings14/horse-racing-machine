@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_24-07-2025_39546b18a9_c92f30d9fd.txt",
-    "parsed_at": "2026-10-06T01:51:55.198726Z",
+    "parsed_at": "2026-10-06T19:39:29.786865Z",
     "date": "2025-07-24",
     "race": {
         "race_name": null,
@@ -128,6 +128,71 @@
             4
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "2": {
+                "fractional": "20/1",
+                "decimal": 21.0
+            },
+            "3": {
+                "fractional": "27/1",
+                "decimal": 28.0
+            },
+            "4": {
+                "fractional": "6/1",
+                "decimal": 7.0
+            },
+            "5": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "6": {
+                "fractional": "23/1",
+                "decimal": 24.0
+            },
+            "7": {
+                "fractional": "53/1",
+                "decimal": 54.0
+            },
+            "8": {
+                "fractional": "28/1",
+                "decimal": 29.0
+            },
+            "9": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "10": {
+                "fractional": "18/1",
+                "decimal": 19.0
+            },
+            "11": {
+                "fractional": "33/1",
+                "decimal": 34.0
+            },
+            "12": {
+                "fractional": "38/18",
+                "decimal": 3.111111
+            },
+            "13": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "14": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "15": {
+                "fractional": "6/1",
+                "decimal": 7.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": [
         14,
         10,

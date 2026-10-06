@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_11-10-2025_1f0fb9e9cc_49cdace486.txt",
-    "parsed_at": "2026-10-06T01:51:53.665192Z",
+    "parsed_at": "2026-10-06T19:39:27.918701Z",
     "date": "2025-10-11",
     "race": {
         "race_name": "PRIX DE LA VILLE DE CAEN",
@@ -125,6 +125,75 @@
             11
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "77/1",
+                "decimal": 78.0
+            },
+            "2": {
+                "fractional": "28/1",
+                "decimal": 29.0
+            },
+            "3": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            },
+            "4": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "5": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "6": {
+                "fractional": "5/1",
+                "decimal": 6.0
+            },
+            "7": {
+                "fractional": "27/1",
+                "decimal": 28.0
+            },
+            "8": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            },
+            "9": {
+                "fractional": "87/1",
+                "decimal": 88.0
+            },
+            "10": {
+                "fractional": "41/1",
+                "decimal": 42.0
+            },
+            "11": {
+                "fractional": "35/1",
+                "decimal": 36.0
+            },
+            "12": {
+                "fractional": "97/1",
+                "decimal": 98.0
+            },
+            "13": {
+                "fractional": "22/17",
+                "decimal": 2.294118
+            },
+            "14": {
+                "fractional": "31/1",
+                "decimal": 32.0
+            },
+            "15": {
+                "fractional": "17/1",
+                "decimal": 18.0
+            },
+            "16": {
+                "fractional": "76/1",
+                "decimal": 77.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": [
         9,
         11,

@@ -1,0 +1,211 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMUB_DU_08-10_2026_3d9837d7cf_e11cb9ace1.txt",
+    "parsed_at": "2026-10-06T19:39:27.620338Z",
+    "date": "2026-10-08",
+    "race": {
+        "race_name": "PRIX DE VERSAILLES",
+        "track": "SAINT-CLOUD",
+        "race_number": 1,
+        "race_type": "MONTE",
+        "runners_count": 16,
+        "distance": 2000,
+        "prize_euros": 52800
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "DARZAKIR",
+            "description": ""
+        },
+        {
+            "number": 2,
+            "horse": "CHILL Y FLAMA",
+            "description": ""
+        },
+        {
+            "number": 3,
+            "horse": "LAPENTY",
+            "description": ""
+        },
+        {
+            "number": 4,
+            "horse": "FRENCH COLORADO",
+            "description": ""
+        },
+        {
+            "number": 5,
+            "horse": "VICTORY PACE",
+            "description": ""
+        },
+        {
+            "number": 6,
+            "horse": "SAGARMATHA",
+            "description": ""
+        },
+        {
+            "number": 7,
+            "horse": "LE FUTUR",
+            "description": ""
+        },
+        {
+            "number": 8,
+            "horse": "MISTER BLACK",
+            "description": ""
+        },
+        {
+            "number": 9,
+            "horse": "FAOLIO",
+            "description": ""
+        },
+        {
+            "number": 10,
+            "horse": "MY HABITUDE",
+            "description": ""
+        },
+        {
+            "number": 11,
+            "horse": "ARANYANI",
+            "description": ""
+        },
+        {
+            "number": 12,
+            "horse": "DERAWAR",
+            "description": ""
+        },
+        {
+            "number": 13,
+            "horse": "STARGATOR",
+            "description": ""
+        },
+        {
+            "number": 14,
+            "horse": "IKOTOFETSY",
+            "description": ""
+        },
+        {
+            "number": 15,
+            "horse": "ENTLEBUCH",
+            "description": ""
+        },
+        {
+            "number": 16,
+            "horse": "STAN LE GRAND",
+            "description": ""
+        }
+    ],
+    "rankings": {
+        "favorites": [
+            15,
+            3,
+            1,
+            8,
+            5,
+            16,
+            9
+        ],
+        "form": [
+            5,
+            8,
+            9,
+            1,
+            15
+        ],
+        "class": [
+            16,
+            3,
+            4,
+            10,
+            11
+        ],
+        "progress": [
+            3,
+            4,
+            6,
+            12,
+            8
+        ],
+        "regularity": [
+            9,
+            10,
+            11,
+            15,
+            5
+        ]
+    },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "2": {
+                "fractional": "33/1",
+                "decimal": 34.0
+            },
+            "3": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            },
+            "4": {
+                "fractional": "21/1",
+                "decimal": 22.0
+            },
+            "5": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            },
+            "6": {
+                "fractional": "14/1",
+                "decimal": 15.0
+            },
+            "7": {
+                "fractional": "33/1",
+                "decimal": 34.0
+            },
+            "8": {
+                "fractional": "18/1",
+                "decimal": 19.0
+            },
+            "9": {
+                "fractional": "28/1",
+                "decimal": 29.0
+            },
+            "10": {
+                "fractional": "48/1",
+                "decimal": 49.0
+            },
+            "11": {
+                "fractional": "29/1",
+                "decimal": 30.0
+            },
+            "12": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "13": {
+                "fractional": "16/120",
+                "decimal": 1.133333
+            },
+            "14": {
+                "fractional": "37/1",
+                "decimal": 38.0
+            },
+            "15": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "16": {
+                "fractional": "5/1",
+                "decimal": 6.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
+    "published_arrival": [
+        8,
+        2,
+        7,
+        3
+    ]
+}

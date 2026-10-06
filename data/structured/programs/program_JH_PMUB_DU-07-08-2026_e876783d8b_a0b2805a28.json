@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-07-08-2026_e876783d8b_a0b2805a28.txt",
-    "parsed_at": "2026-10-06T01:51:50.500848Z",
+    "parsed_at": "2026-10-06T19:39:24.250080Z",
     "date": "2026-08-07",
     "race": {
         "race_name": "PRIX BRUNO COQUATRIX",
@@ -133,6 +133,75 @@
             7
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "16/1",
+                "decimal": 17.0
+            },
+            "2": {
+                "fractional": "32/1",
+                "decimal": 33.0
+            },
+            "3": {
+                "fractional": "30/1",
+                "decimal": 31.0
+            },
+            "4": {
+                "fractional": "23/1",
+                "decimal": 24.0
+            },
+            "5": {
+                "fractional": "44/1",
+                "decimal": 45.0
+            },
+            "6": {
+                "fractional": "4/1",
+                "decimal": 5.0
+            },
+            "7": {
+                "fractional": "118/1",
+                "decimal": 119.0
+            },
+            "8": {
+                "fractional": "107/1",
+                "decimal": 108.0
+            },
+            "9": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "10": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "11": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "12": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "13": {
+                "fractional": "58/19",
+                "decimal": 4.052632
+            },
+            "14": {
+                "fractional": "21/1",
+                "decimal": 22.0
+            },
+            "15": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "16": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": [
         11,
         3,

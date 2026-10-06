@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_17-09-2025_59d2f46a91_e50d498ae9.txt",
-    "parsed_at": "2026-10-06T01:51:56.205135Z",
+    "parsed_at": "2026-10-06T19:39:31.007746Z",
     "date": "2025-09-17",
     "race": {
         "race_name": "PRIX DE VINCENNES",
@@ -123,6 +123,67 @@
             12
         ]
     },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "79/1",
+                "decimal": 80.0
+            },
+            "2": {
+                "fractional": "3/1",
+                "decimal": 4.0
+            },
+            "3": {
+                "fractional": "51/1",
+                "decimal": 52.0
+            },
+            "4": {
+                "fractional": "6/1",
+                "decimal": 7.0
+            },
+            "5": {
+                "fractional": "41/1",
+                "decimal": 42.0
+            },
+            "6": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "7": {
+                "fractional": "39/1",
+                "decimal": 40.0
+            },
+            "8": {
+                "fractional": "5/1",
+                "decimal": 6.0
+            },
+            "9": {
+                "fractional": "31/1",
+                "decimal": 32.0
+            },
+            "10": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "11": {
+                "fractional": "26/174",
+                "decimal": 1.149425
+            },
+            "12": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "13": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            },
+            "14": {
+                "fractional": "80/1",
+                "decimal": 81.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
     "published_arrival": [
         3,
         5,
