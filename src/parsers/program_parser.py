@@ -201,9 +201,12 @@ def _parse_fractional_odds(token: str):
         numerator, denominator = token.split("/", 1)
         value_num = float(numerator.replace(",", "."))
         value_den = float(denominator.replace(",", "."))
-        if value_den <= 0:
+        # LONAB program tables observed in the source PDFs use whole-number
+        # fractional prices in N/1 form. Other denominators can be produced by
+        # PDF column concatenation (for example 5/116) and are rejected.
+        if value_den != 1.0 or value_num < 1.0 or value_num > 200.0:
             return None
-        decimal = 1.0 + (value_num / value_den)
+        decimal = 1.0 + value_num
         if decimal <= 1.0:
             return None
         return round(decimal, 6)

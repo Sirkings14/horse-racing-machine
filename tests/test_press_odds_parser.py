@@ -28,6 +28,14 @@ def test_extracts_published_press_odds_without_confusing_them_with_market_odds()
     assert result["status"] == "insufficient_price_data"
 
 
+def test_press_odds_reject_layout_artifact_ratios():
+    text = """
+    PARIS TURF 5/116 15/1 24/1 17/1 29/1
+    1 2 3 4 5
+    """
+    assert extract_press_odds(text, 5) == {}
+
+
 def test_press_odds_require_a_complete_expected_runner_series():
     text = """
     PARIS TURF 32/1 15/1 24/1
