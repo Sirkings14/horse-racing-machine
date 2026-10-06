@@ -1,148 +1,147 @@
 {
   "document_type": "program",
-  "source_file": "live_program_JH_PMU_DU_06-10-2026_c1fb863584.pdf",
-  "parsed_at": "2026-10-06T15:55:16.009810Z",
-  "date": "2026-10-06",
+  "source_file": "live_program_JH_PMUB_DU_08-10_2026_3d9837d7cf.pdf",
+  "parsed_at": "2026-10-06T15:55:15.297686Z",
+  "date": "2026-10-08",
   "race": {
-    "race_name": "PRIX GUILLAUME DE PRACOMTAL",
-    "track": "AUTEUIL",
+    "race_name": "PRIX DE VERSAILLES",
+    "track": "SAINT-CLOUD",
     "race_number": 1,
-    "race_type": "PLAT",
+    "race_type": "MONTE",
     "runners_count": 16,
-    "distance": 3600,
-    "prize_euros": 98000
+    "distance": 2000,
+    "prize_euros": 52800
   },
   "horses": [
     {
       "number": 1,
-      "horse": "LOUMINOS",
+      "horse": "DARZAKIR",
       "description": ""
     },
     {
       "number": 2,
-      "horse": "DINADAME",
+      "horse": "CHILL Y FLAMA",
       "description": ""
     },
     {
       "number": 3,
-      "horse": "MASKINA",
+      "horse": "LAPENTY",
       "description": ""
     },
     {
       "number": 4,
-      "horse": "GABISON",
+      "horse": "FRENCH COLORADO",
       "description": ""
     },
     {
       "number": 5,
-      "horse": "RAFFLES PRINCESS",
+      "horse": "VICTORY PACE",
       "description": ""
     },
     {
       "number": 6,
-      "horse": "MEMERHON",
+      "horse": "SAGARMATHA",
       "description": ""
     },
     {
       "number": 7,
-      "horse": "ROMAN SKIES",
+      "horse": "LE FUTUR",
       "description": ""
     },
     {
       "number": 8,
-      "horse": "FALCON JET",
+      "horse": "MISTER BLACK",
       "description": ""
     },
     {
       "number": 9,
-      "horse": "PASCIALELLA",
+      "horse": "FAOLIO",
       "description": ""
     },
     {
       "number": 10,
-      "horse": "LE PROFESSIONNEL",
+      "horse": "MY HABITUDE",
       "description": ""
     },
     {
       "number": 11,
-      "horse": "CHATEAU ESQUIULE",
+      "horse": "ARANYANI",
       "description": ""
     },
     {
       "number": 12,
-      "horse": "EMSILORD",
+      "horse": "DERAWAR",
       "description": ""
     },
     {
       "number": 13,
-      "horse": "DEHADAME",
+      "horse": "STARGATOR",
       "description": ""
     },
     {
       "number": 14,
-      "horse": "OPTIMUS",
+      "horse": "IKOTOFETSY",
       "description": ""
     },
     {
       "number": 15,
-      "horse": "OVALIE",
+      "horse": "ENTLEBUCH",
       "description": ""
     },
     {
       "number": 16,
-      "horse": "LE TREZY",
+      "horse": "STAN LE GRAND",
       "description": ""
     }
   ],
   "rankings": {
     "favorites": [
-      3,
-      9,
       15,
-      2,
-      12,
+      3,
+      1,
       8,
-      4
+      5,
+      16,
+      9
     ],
     "form": [
+      5,
+      8,
       9,
-      4,
-      15,
-      3,
-      14
-    ],
-    "class": [
-      4,
-      12,
-      3,
-      9,
+      1,
       15
     ],
+    "class": [
+      16,
+      3,
+      4,
+      10,
+      11
+    ],
     "progress": [
-      14,
+      3,
+      4,
       6,
-      1,
-      7,
-      2
+      12,
+      8
     ],
     "regularity": [
-      7,
+      9,
       10,
-      1,
-      14,
-      6
+      11,
+      15,
+      5
     ]
   },
   "published_arrival": [
-    1,
+    8,
+    2,
     7,
-    16,
-    10,
-    9
+    3
   ],
-  "source_url": "https://lonab.bf/sites/default/files/2026-10/JH_PMU_DU_06-10-2026.pdf",
+  "source_url": "https://lonab.bf/sites/default/files/2026-10/JH_PMUB_DU_08-10_2026.pdf",
   "source_domain": "lonab.bf",
-  "source_sha256": "9b0a391dc7391255746672f380b0272c225dcd5bd2caaac4840c15c37cb281b0",
+  "source_sha256": "2d6f9dfdff5a3aa1eeb7f5146c1a5e6ca3693501580c7841b2597ac82c5d4870",
   "validation_status": "validated",
   "validation_reason": "validated"
 }
