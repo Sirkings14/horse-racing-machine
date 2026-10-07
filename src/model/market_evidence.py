@@ -55,6 +55,23 @@ def normalize_snapshot(snapshot: dict[str, Any]) -> dict[str, Any] | None:
     }
 
 
+def observed_snapshots_for_race(race_key: str, market_type: str = "winner") -> list[dict[str, Any]]:
+    """Return explicitly observed snapshots for one race, newest first."""
+    rows = [
+        row for row in load_ledger()
+        if isinstance(row, dict)
+        and row.get("observed") is True
+        and row.get("race_key") == race_key
+        and row.get("market_type", "winner") == market_type
+    ]
+    return sorted(rows, key=lambda row: str(row.get("captured_at", "")), reverse=True)
+
+
+def latest_observed_snapshot(race_key: str, market_type: str = "winner") -> dict[str, Any] | None:
+    rows = observed_snapshots_for_race(race_key, market_type)
+    return rows[0] if rows else None
+
+
 def load_ledger() -> list[dict[str, Any]]:
     try:
         payload = json.loads(LEDGER_FILE.read_text(encoding="utf-8"))
