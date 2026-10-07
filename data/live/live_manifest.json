@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-07T14:38:09.026709+00:00",
+  "updated_at": "2026-10-07T16:24:50.235006+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -527,10 +527,10 @@
       "structured_file": "structured/2026-10-07_ENGHIEN_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-07T14:38:09.026532+00:00",
+      "discovered_at": "2026-10-07T16:24:50.234777+00:00",
       "result_status": "pending",
       "created_at": "2026-10-05T16:14:29.054195+00:00",
-      "updated_at": "2026-10-07T14:38:09.026698+00:00"
+      "updated_at": "2026-10-07T16:24:50.234994+00:00"
     },
     {
       "race_key": "2026-10-08|SAINT-CLOUD|1",
@@ -547,10 +547,30 @@
       "structured_file": "structured/2026-10-08_SAINT-CLOUD_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-07T14:38:08.727389+00:00",
+      "discovered_at": "2026-10-07T16:24:50.010022+00:00",
       "result_status": "pending",
       "created_at": "2026-10-06T15:54:47.995412+00:00",
-      "updated_at": "2026-10-07T14:38:08.727591+00:00"
+      "updated_at": "2026-10-07T16:24:50.010238+00:00"
+    },
+    {
+      "race_key": "2026-10-09|PARIS-VINCENNES NOCTURNE|4",
+      "date": "2026-10-09",
+      "track": "PARIS-VINCENNES NOCTURNE",
+      "race_number": 4,
+      "race_name": "PRIX HERA",
+      "race_type": "ATTELE",
+      "distance": 2850,
+      "runners_count": 15,
+      "horse_count": 15,
+      "source_url": "https://lonab.bf/sites/default/files/2026-10/JH_PMUB_DU_09-10-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_09-10-2026_b274803212.pdf",
+      "structured_file": "structured/2026-10-09_PARIS-VINCENNES NOCTURNE_4.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-10-07T16:24:49.795892+00:00",
+      "result_status": "pending",
+      "created_at": "2026-10-07T16:24:45.048400+00:00",
+      "updated_at": "2026-10-07T16:24:49.796101+00:00"
     }
   ]
 }
