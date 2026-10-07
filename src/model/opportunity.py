@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
+from src.model.market_evidence import latest_observed_snapshot
+
 
 def _mean(values: list[float]) -> float:
     return sum(values) / len(values) if values else 0.0
@@ -43,6 +45,14 @@ def score_race_opportunity(
     )
 
     values: list[dict[str, Any]] = []
+    evidence_source = None
+    evidence_captured_at = None
+    if market_odds is None and ranked_horses and ranked_horses[0].get("race_key"):
+        snapshot = latest_observed_snapshot(str(ranked_horses[0]["race_key"]), "winner")
+        if snapshot:
+            market_odds = snapshot.get("odds") or {}
+            evidence_source = snapshot.get("source")
+            evidence_captured_at = snapshot.get("captured_at")
     if isinstance(market_odds, dict):
         for horse in ranked_horses[:5]:
             number = int(horse["horse_number"])
@@ -97,6 +107,8 @@ def score_race_opportunity(
         "tier": tier,
         "model_quality_score": round(quality, 2),
         "market_edge_available": bool(values),
+        "market_evidence_source": evidence_source,
+        "market_evidence_captured_at": evidence_captured_at,
         "value_candidates": values,
         "top_candidate_margin": round(margin, 6),
         "top5_mean_top3_probability": round(top3, 6),
