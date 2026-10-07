@@ -1,8 +1,8 @@
 {
-  "prediction_id": "2026-10-07|ENGHIEN|1|2026-10-07T19:00:52.562539+00:00",
-  "generated_at": "2026-10-07T19:00:52.562552+00:00",
+  "prediction_id": "2026-10-07|ENGHIEN|1|2026-10-07T20:24:41.397316+00:00",
+  "generated_at": "2026-10-07T20:24:41.397327+00:00",
   "model_version": "v4-evidence-no-press",
-  "mode": "v3_evidence_no_press",
+  "mode": "v5_market_opportunity_layer",
   "race_key": "2026-10-07|ENGHIEN|1",
   "race": {
     "date": "2026-10-07",
@@ -30,6 +30,7 @@
   "final_five": [],
   "ranked_horses": [
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 15,
       "horse_name": "IXELLE BLEUE",
       "probability_winner": 0.318949,
@@ -41,6 +42,7 @@
       "predicted_rank": 1
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 10,
       "horse_name": "JUSTICIA SMART",
       "probability_winner": 0.19816,
@@ -52,6 +54,7 @@
       "predicted_rank": 2
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 17,
       "horse_name": "IMAGE D'ATALANTE",
       "probability_winner": 0.19816,
@@ -63,6 +66,7 @@
       "predicted_rank": 3
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 13,
       "horse_name": "IDOLE ELDE",
       "probability_winner": 0.196902,
@@ -74,6 +78,7 @@
       "predicted_rank": 4
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 12,
       "horse_name": "JUNON DE LOU",
       "probability_winner": 0.159633,
@@ -85,6 +90,7 @@
       "predicted_rank": 5
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 1,
       "horse_name": "JONQUILLETE CREPIN",
       "probability_winner": 0.056376,
@@ -96,6 +102,7 @@
       "predicted_rank": 6
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 2,
       "horse_name": "JOYCE PILE",
       "probability_winner": 0.056376,
@@ -107,6 +114,7 @@
       "predicted_rank": 7
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 3,
       "horse_name": "JURELLA DE PALM",
       "probability_winner": 0.056376,
@@ -118,6 +126,7 @@
       "predicted_rank": 8
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 4,
       "horse_name": "JAHIA DU TRIO",
       "probability_winner": 0.056376,
@@ -129,6 +138,7 @@
       "predicted_rank": 9
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 5,
       "horse_name": "JEUNE ORANGE COTON",
       "probability_winner": 0.056376,
@@ -140,6 +150,7 @@
       "predicted_rank": 10
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 6,
       "horse_name": "JULIE DU CLOS",
       "probability_winner": 0.056376,
@@ -151,6 +162,7 @@
       "predicted_rank": 11
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 7,
       "horse_name": "JET GIRL",
       "probability_winner": 0.056376,
@@ -162,6 +174,7 @@
       "predicted_rank": 12
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 8,
       "horse_name": "JAMAICA D'OYSE",
       "probability_winner": 0.056376,
@@ -173,6 +186,7 @@
       "predicted_rank": 13
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 9,
       "horse_name": "ICONE PONT VAUTIER",
       "probability_winner": 0.056376,
@@ -184,6 +198,7 @@
       "predicted_rank": 14
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 11,
       "horse_name": "JALOUZ D'OLIVERIE",
       "probability_winner": 0.056376,
@@ -195,6 +210,7 @@
       "predicted_rank": 15
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 14,
       "horse_name": "INES DE LA ROUVRE",
       "probability_winner": 0.056376,
@@ -206,6 +222,7 @@
       "predicted_rank": 16
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 16,
       "horse_name": "JAIN MAB",
       "probability_winner": 0.056376,
@@ -217,6 +234,7 @@
       "predicted_rank": 17
     },
     {
+      "race_key": "2026-10-07|ENGHIEN|1",
       "horse_number": 18,
       "horse_name": "JOIE DE LA COTE",
       "probability_winner": 0.056376,
@@ -228,7 +246,30 @@
       "predicted_rank": 18
     }
   ],
-  "selection_policy": "independent_evidence_ensemble_with_disagreement_penalty",
+  "race_opportunity": {
+    "tier": "B",
+    "model_quality_score": 65.92,
+    "market_edge_available": false,
+    "market_evidence_source": null,
+    "market_evidence_captured_at": null,
+    "value_candidates": [],
+    "top_candidate_margin": 0.090087,
+    "top5_mean_top3_probability": 0.422834,
+    "top5_mean_top5_probability": 0.662156,
+    "top5_mean_model_agreement": 0.817022,
+    "top5_mean_data_completeness": 1.0,
+    "reasons": [
+      "clear_top_candidate",
+      "elevated_model_disagreement",
+      "complete_pre_race_data"
+    ],
+    "policy": {
+      "race_quality_is_not_profitability": true,
+      "market_prices_must_be_observed": true,
+      "probabilities_are_not_prices": true
+    }
+  },
+  "selection_policy": "independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity",
   "autopilot_guard": {
     "health": "stable_observation",
     "decision": "PASS",
