@@ -9,6 +9,7 @@ from src.model.historical_profile import build_walk_forward_profiles
 from src.model.truth_gate import validate_program
 from src.model.v3_model import V3LogisticModel
 from src.model.autopilot_guard import build_autopilot_guard
+from src.model.opportunity import score_race_opportunity
 
 BASE_DIR=Path(__file__).resolve().parents[2]
 DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
@@ -88,7 +89,7 @@ def main():
     margin=(top_scores[0]-top_scores[1]) if len(top_scores)>1 else 0.0
     disagreement=float(np.mean([x["model_disagreement"] for x in ranked[:5]])) if ranked else 1.0
     confidence="high" if margin>=0.08 and disagreement<0.06 else "medium" if margin>=0.03 and disagreement<0.10 else "low"
-    result={"prediction_id":f"{key}|{datetime.now(timezone.utc).isoformat()}","generated_at":datetime.now(timezone.utc).isoformat(),"model_version":bundle.get("model_version"),"mode":"v3_evidence_no_press","race_key":key,"race":_meta(program),"truth_gate":gate,"press_dependency":False,"post_race_feature_policy":"hard_exclusion","confidence":confidence,"model_agreement":"high" if disagreement<0.06 else "medium" if disagreement<0.10 else "low","recommended_numbers":[x["horse_number"] for x in ranked[:5]],"final_five":[x["horse_number"] for x in ranked[:5]],"ranked_horses":ranked,"selection_policy":"independent_evidence_ensemble_with_disagreement_penalty"}
+    opportunity=score_race_opportunity(ranked)\n    result={"prediction_id":f"{key}|{datetime.now(timezone.utc).isoformat()}","generated_at":datetime.now(timezone.utc).isoformat(),"model_version":bundle.get("model_version"),"mode":"v5_market_opportunity_layer","race_key":key,"race":_meta(program),"truth_gate":gate,"press_dependency":False,"post_race_feature_policy":"hard_exclusion","confidence":confidence,"model_agreement":"high" if disagreement<0.06 else "medium" if disagreement<0.10 else "low","recommended_numbers":[x["horse_number"] for x in ranked[:5]],"final_five":[x["horse_number"] for x in ranked[:5]],"ranked_horses":ranked,"race_opportunity":opportunity,"selection_policy":"independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity"}
     guard=build_autopilot_guard({"ranked_horses":ranked,"monitoring":{"agreement":result["model_agreement"]},"difficulty":{}})
     result["autopilot_guard"]=guard
     if guard.get("decision")=="PASS":
