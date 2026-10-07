@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-07T20:29:18.547719+00:00",
+  "generated_at": "2026-10-07T20:44:54.030120+00:00",
   "status": "benchmark_available",
   "method": "out_of_sample_v4_scoring_on_stored_lonab_programs_vs_published_press_prices",
   "training_history_end_date": "2026-05-05",
   "programs_found_before_cutoff": 155,
-  "benchmark_races": 22,
+  "benchmark_races": 23,
   "market_evidence_gate_unlocked": false,
   "press_prices_are_market_evidence": false,
   "policy": {
@@ -46,17 +46,17 @@
     },
     "tierce_magazine": {
       "label": "Tierce Magazine",
-      "priced_races": 22,
+      "priced_races": 23,
       "priced_race_coverage": 1.0,
       "all_top5_accounting": {
-        "bets": 110,
+        "bets": 115,
         "wins": 14,
-        "win_rate": 0.1273,
-        "total_stake": 110.0,
+        "win_rate": 0.1217,
+        "total_stake": 115.0,
         "total_return": 464.0,
-        "profit": 354.0,
-        "roi": 3.2182,
-        "average_probability_edge": 0.0801,
+        "profit": 349.0,
+        "roi": 3.0348,
+        "average_probability_edge": 0.0807,
         "maximum_drawdown_units": 15.0,
         "chronological": [
           {
@@ -300,18 +300,29 @@
               9
             ],
             "profit": 11.0
+          },
+          {
+            "race_key": "2026-10-07|ENGHIEN|1",
+            "selected": [
+              4,
+              5,
+              15,
+              12,
+              18
+            ],
+            "profit": -5.0
           }
         ]
       },
       "value_filtered_accounting": {
-        "bets": 62,
+        "bets": 65,
         "wins": 9,
-        "win_rate": 0.1452,
-        "total_stake": 62.0,
+        "win_rate": 0.1385,
+        "total_stake": 65.0,
         "total_return": 393.0,
-        "profit": 331.0,
-        "roi": 5.3387,
-        "average_probability_edge": 0.1199,
+        "profit": 328.0,
+        "roi": 5.0462,
+        "average_probability_edge": 0.1207,
         "maximum_drawdown_units": 20.0,
         "chronological": [
           {
@@ -507,6 +518,15 @@
               9
             ],
             "profit": 11.0
+          },
+          {
+            "race_key": "2026-10-07|ENGHIEN|1",
+            "selected": [
+              4,
+              5,
+              15
+            ],
+            "profit": -3.0
           }
         ]
       }
@@ -3072,6 +3092,133 @@
           "probability_top3": 0.327875,
           "probability_top5": 0.545363,
           "ensemble_score": 0.298787
+        }
+      ]
+    },
+    {
+      "race_key": "2026-10-07|ENGHIEN|1",
+      "date": "2026-10-07",
+      "winner": 16,
+      "press_odds": {
+        "tierce_magazine": {
+          "1": {
+            "fractional": "98/1",
+            "decimal": 99.0
+          },
+          "2": {
+            "fractional": "50/1",
+            "decimal": 51.0
+          },
+          "3": {
+            "fractional": "30/1",
+            "decimal": 31.0
+          },
+          "4": {
+            "fractional": "54/1",
+            "decimal": 55.0
+          },
+          "5": {
+            "fractional": "20/1",
+            "decimal": 21.0
+          },
+          "6": {
+            "fractional": "62/1",
+            "decimal": 63.0
+          },
+          "7": {
+            "fractional": "24/1",
+            "decimal": 25.0
+          },
+          "8": {
+            "fractional": "17/1",
+            "decimal": 18.0
+          },
+          "9": {
+            "fractional": "15/1",
+            "decimal": 16.0
+          },
+          "10": {
+            "fractional": "13/1",
+            "decimal": 14.0
+          },
+          "11": {
+            "fractional": "22/1",
+            "decimal": 23.0
+          },
+          "12": {
+            "fractional": "10/1",
+            "decimal": 11.0
+          },
+          "13": {
+            "fractional": "9/1",
+            "decimal": 10.0
+          },
+          "14": {
+            "fractional": "83/1",
+            "decimal": 84.0
+          },
+          "15": {
+            "fractional": "38/1",
+            "decimal": 39.0
+          },
+          "16": {
+            "fractional": "58/1",
+            "decimal": 59.0
+          },
+          "17": {
+            "fractional": "7/1",
+            "decimal": 8.0
+          },
+          "18": {
+            "fractional": "14/1",
+            "decimal": 15.0
+          }
+        }
+      },
+      "complete_top5_prices": {
+        "paris_turf": false,
+        "tierce_magazine": true
+      },
+      "top5": [
+        {
+          "horse_number": 4,
+          "horse_name": "JAHIA DU TRIO",
+          "probability_winner": 0.200438,
+          "probability_top3": 0.418796,
+          "probability_top5": 0.664682,
+          "ensemble_score": 0.390859
+        },
+        {
+          "horse_number": 5,
+          "horse_name": "JEUNE ORANGE COTON",
+          "probability_winner": 0.181571,
+          "probability_top3": 0.390349,
+          "probability_top5": 0.626728,
+          "ensemble_score": 0.363862
+        },
+        {
+          "horse_number": 15,
+          "horse_name": "IXELLE BLEUE",
+          "probability_winner": 0.121257,
+          "probability_top3": 0.323659,
+          "probability_top5": 0.541616,
+          "ensemble_score": 0.296021
+        },
+        {
+          "horse_number": 12,
+          "horse_name": "JUNON DE LOU",
+          "probability_winner": 0.114493,
+          "probability_top3": 0.313801,
+          "probability_top5": 0.53213,
+          "ensemble_score": 0.287233
+        },
+        {
+          "horse_number": 18,
+          "horse_name": "JOIE DE LA COTE",
+          "probability_winner": 0.109115,
+          "probability_top3": 0.309009,
+          "probability_top5": 0.525273,
+          "ensemble_score": 0.28189
         }
       ]
     }

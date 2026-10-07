@@ -29,13 +29,13 @@
       "coverage3_lift_vs_random": 0.3305
     },
     "legacy_benchmark": {
-      "winner_hit_rate_at_1": 0.1479,
-      "winner_hit_rate_at_3": 0.3685,
-      "average_actual_top3_covered_by_predicted_top3": 0.8756,
-      "average_actual_top3_covered_by_predicted_top5": 1.3662,
-      "brier_score_top3": 0.150002,
-      "log_loss_top3": 0.474557,
-      "expected_calibration_error_top3": 0.011912
+      "winner_hit_rate_at_1": 0.1475,
+      "winner_hit_rate_at_3": 0.37,
+      "average_actual_top3_covered_by_predicted_top3": 0.8759,
+      "average_actual_top3_covered_by_predicted_top5": 1.3653,
+      "brier_score_top3": 0.149985,
+      "log_loss_top3": 0.474532,
+      "expected_calibration_error_top3": 0.011953
     },
     "calibration_reports": {
       "winner": {
