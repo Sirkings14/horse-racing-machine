@@ -1,5 +1,6 @@
 import json
 import re
+import unicodedata
 from datetime import datetime
 from pathlib import Path
 
@@ -193,6 +194,13 @@ def _clean_table_line(line):
     return line
 
 
+def _horse_key(value):
+    value = unicodedata.normalize("NFKD", value or "")
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    value = value.upper().replace("’", "'")
+    return re.sub(r"[^A-Z0-9]+", "", value)
+
+
 def _is_sex_age_block(lines, expected):
     return len(lines) == expected and all(
         re.fullmatch(r"[HFM]\.?\d{1,2}", line, re.IGNORECASE) for line in lines
@@ -290,13 +298,15 @@ def extract_program_table_fields(text, horses, expected_runners=None):
     names = [_clean_table_line(h.get("horse", "")) for h in horses]
     if any(not name for name in names):
         return {"status": "unmapped", "fields": {}}
+    name_keys = [_horse_key(name) for name in names]
 
     lines = [_clean_table_line(line) for line in text.splitlines()]
     lines = [line for line in lines if line]
+    line_keys = [_horse_key(line) for line in lines]
 
     horse_start = None
-    for idx in range(len(lines) - expected + 1):
-        if lines[idx:idx + expected] == names:
+    for idx in range(len(line_keys) - expected + 1):
+        if line_keys[idx:idx + expected] == name_keys:
             horse_start = idx
             break
     if horse_start is None:
