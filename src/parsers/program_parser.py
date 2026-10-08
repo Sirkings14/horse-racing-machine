@@ -186,6 +186,199 @@ def extract_horses(text, expected_runners=None):
     return horses
 
 
+
+def _clean_table_line(line):
+    line = line.replace("\u202f", " ").replace("\xa0", " ")
+    line = re.sub(r"\s+", " ", line).strip()
+    return line
+
+
+def _is_sex_age_block(lines, expected):
+    return len(lines) == expected and all(
+        re.fullmatch(r"[HFM]\\.?\d{1,2}", line, re.IGNORECASE) for line in lines
+    )
+
+
+def _is_integer_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    values = []
+    for line in lines:
+        if not re.fullmatch(r"\d{1,3}", line):
+            return False
+        values.append(int(line))
+    return all(1 <= value <= expected for value in values)
+
+
+def _is_weight_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    return all(
+        re.fullmatch(r"\d+(?:[.,]\d+)?\s*\.?\s*KG", line, re.IGNORECASE)
+        for line in lines
+    )
+
+
+def _is_distance_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    return all(
+        re.fullmatch(r"\d+(?:\s+\d+)*\.?[A-Z]?", line, re.IGNORECASE)
+        and "." in line
+        for line in lines
+    )
+
+
+def _is_chrono_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    return all(re.fullmatch(r"\d+(?:\.\d+){2,3}", line) for line in lines)
+
+
+def _is_performance_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    return all(
+        re.fullmatch(r"[0-9DAA]+(?:\.[0-9DAA]+){2,6}", line, re.IGNORECASE)
+        for line in lines
+    )
+
+
+def _is_gains_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    return all(re.fullmatch(r"\d[\d ]*", line) for line in lines)
+
+
+def _split_sex_age(value):
+    match = re.fullmatch(r"([HFM])\.?([0-9]{1,2})", value or "", re.IGNORECASE)
+    if not match:
+        return None, None
+    return match.group(1).upper(), int(match.group(2))
+
+
+def _parse_weight(value):
+    match = re.search(r"(\d+(?:[.,]\d+)?)", value or "")
+    if not match:
+        return None
+    try:
+        return float(match.group(1).replace(",", "."))
+    except ValueError:
+        return None
+
+
+def _parse_numeric_gain(value):
+    try:
+        return int(re.sub(r"\s+", "", value))
+    except (TypeError, ValueError):
+        return None
+
+
+def extract_program_table_fields(text, horses, expected_runners=None):
+    """Extract pre-race runner fields from the LONAB table only.
+
+    The PDF text extractor emits the table as aligned column blocks. We first
+    anchor on the exact ordered horse-name block already recovered from the
+    runner descriptions, then map surrounding fixed-width blocks. A field is
+    promoted only when its full runner-length block matches the expected
+    grammar.
+    """
+    expected = int(expected_runners or len(horses) or 0)
+    if expected <= 0 or len(horses) != expected:
+        return {"status": "unmapped", "fields": {}}
+
+    names = [_clean_table_line(h.get("horse", "")) for h in horses]
+    if any(not name for name in names):
+        return {"status": "unmapped", "fields": {}}
+
+    lines = [_clean_table_line(line) for line in text.splitlines()]
+    lines = [line for line in lines if line]
+
+    horse_start = None
+    for idx in range(len(lines) - expected + 1):
+        if lines[idx:idx + expected] == names:
+            horse_start = idx
+            break
+    if horse_start is None:
+        return {"status": "unmapped", "fields": {}}
+
+    before = lines[:horse_start]
+    after = lines[horse_start + expected:]
+
+    def take_before(cursor, predicate):
+        start = cursor - expected
+        if start < 0:
+            return None, cursor
+        block = before[start:cursor]
+        if predicate(block, expected):
+            return block, start
+        return None, cursor
+
+    cursor = len(before)
+    gains, cursor = take_before(cursor, _is_gains_block)
+    if gains is None:
+        return {"status": "unmapped", "fields": {}}
+
+    performance, cursor = take_before(cursor, _is_performance_block)
+    if performance is None:
+        return {"status": "unmapped", "fields": {}}
+
+    optional = {}
+    for label, predicate in (
+        ("weight", _is_weight_block),
+        ("draw", _is_integer_block),
+        ("chrono", _is_chrono_block),
+        ("distance_listed", _is_distance_block),
+    ):
+        block, next_cursor = take_before(cursor, predicate)
+        if block is not None:
+            optional[label] = block
+            cursor = next_cursor
+
+    sex_age, next_cursor = take_before(cursor, _is_sex_age_block)
+    if sex_age is None:
+        return {"status": "unmapped", "fields": {}}
+    cursor = next_cursor
+
+    number_block = before[max(0, cursor - expected):cursor]
+    if number_block != [str(n) for n in range(1, expected + 1)] and number_block != [f"{n:02d}" for n in range(1, expected + 1)]:
+        return {"status": "unmapped", "fields": {}}
+
+    if len(after) < expected * 3:
+        return {"status": "unmapped", "fields": {}}
+    trainer = after[:expected]
+    driver = after[expected:expected * 2]
+    owner = after[expected * 2:expected * 3]
+
+    if any(not value or value in {"CHEVAUX", "DRIVERS", "ENTRAINEURS", "PROPRIETAIRES"} for value in trainer + driver + owner):
+        return {"status": "unmapped", "fields": {}}
+
+    fields = {}
+    for idx, horse in enumerate(horses):
+        number = int(horse["number"])
+        sex, age = _split_sex_age(sex_age[idx])
+        row = {
+            "sex": sex,
+            "age": age,
+            "performance": performance[idx],
+            "gains": _parse_numeric_gain(gains[idx]),
+            "trainer": trainer[idx],
+            "jockey": driver[idx],
+            "driver": driver[idx],
+            "owner": owner[idx],
+        }
+        if "weight" in optional:
+            row["weight"] = _parse_weight(optional["weight"][idx])
+        if "draw" in optional:
+            row["draw"] = int(optional["draw"][idx])
+        if "chrono" in optional:
+            row["listed_chrono"] = optional["chrono"][idx]
+        if "distance_listed" in optional:
+            row["listed_distance"] = optional["distance_listed"][idx]
+        fields[number] = row
+
+    return {"status": "mapped", "fields": fields}
+
 def extract_number_list(text, label):
     match = re.search(rf"{re.escape(label)}\s*:\s*([^\n\r]+)", text, re.IGNORECASE)
     if not match:
@@ -292,13 +485,22 @@ def extract_published_arrival(text):
 def parse_program_text(text, source_file="unknown.txt"):
     text = clean_text(text)
     race_info = extract_race_info(text)
+    horses = extract_horses(text, expected_runners=race_info.get("runners_count"))
+    table = extract_program_table_fields(
+        text,
+        horses,
+        expected_runners=race_info.get("runners_count"),
+    )
+    for horse in horses:
+        horse.update(table["fields"].get(int(horse["number"]), {}))
     return {
         "document_type": "program",
         "source_file": source_file,
         "parsed_at": datetime.utcnow().isoformat() + "Z",
         "date": extract_date(text),
         "race": race_info,
-        "horses": extract_horses(text, expected_runners=race_info.get("runners_count")),
+        "horses": horses,
+        "program_table_mapping_status": table["status"],
         "rankings": extract_rankings(text),
         "press_odds": extract_press_odds(text, race_info.get("runners_count")),
         "press_odds_status": "observed_in_program" if extract_press_odds(text, race_info.get("runners_count")) else "unavailable",
