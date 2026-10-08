@@ -46,7 +46,7 @@ def main():
     cal_rows=[r for k in keys[split:] for r in groups[k]]
     # Keep final fitting bounded; validation remains full walk-forward and unchanged.
     fit_rows=train_rows[-25000:]
-    final_rows=final_rows = [r for r in profiled if not r.get("_program_only_history")][-25000:]
+    final_rows=[r for r in profiled if not r.get("_program_only_history")][-25000:]
     models={}
     calibration_reports={}
     calibration_validation_reports={}
