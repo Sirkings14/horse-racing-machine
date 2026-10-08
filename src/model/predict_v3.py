@@ -10,6 +10,7 @@ from src.model.truth_gate import validate_program
 from src.model.v3_model import V3LogisticModel
 from src.model.autopilot_guard import build_autopilot_guard
 from src.model.opportunity import score_race_opportunity
+from src.dataset.program_history import load_program_history
 
 BASE_DIR=Path(__file__).resolve().parents[2]
 DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
@@ -91,7 +92,8 @@ def main():
     current=_live_rows(program); key=_key(program)
     if not key or len(current)!=int((_meta(program)["runners_count"] or 0)): return no_prediction("live_program_runner_data_incomplete",race_key=key,truth_gate=gate)
 
-    profiled=build_walk_forward_profiles(history+current)
+    prior_programs=load_program_history(exclude_on_or_after=str(_meta(program).get("date") or "")[:10])
+    profiled=build_walk_forward_profiles(history+prior_programs+current)
     current_profile=[r for r in profiled if r.get("race_key")==key]
     if len(current_profile)!=len(current): return no_prediction("current_profile_incomplete",race_key=key)
 
