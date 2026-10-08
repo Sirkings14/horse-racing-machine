@@ -1,5 +1,5 @@
 name: Program field audit
-# Parser-mapping validation run (core-field mapping)
+# Parser-mapping validation run (core-field mapping, normalized horse keys)
 
 on:
   push:
