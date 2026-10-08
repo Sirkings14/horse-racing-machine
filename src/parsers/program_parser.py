@@ -1,5 +1,6 @@
 import json
 import re
+import unicodedata
 from datetime import datetime
 from pathlib import Path
 
@@ -186,6 +187,321 @@ def extract_horses(text, expected_runners=None):
     return horses
 
 
+
+def _clean_table_line(line):
+    line = line.replace("\u202f", " ").replace("\xa0", " ")
+    line = re.sub(r"\s+", " ", line).strip()
+    return line
+
+
+def _horse_key(value):
+    value = unicodedata.normalize("NFKD", value or "")
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    value = value.upper().replace("’", "'")
+    return re.sub(r"[^A-Z0-9]+", "", value)
+
+
+def _is_sex_age_block(lines, expected):
+    return len(lines) == expected and all(
+        re.fullmatch(r"[HFM]\.?\d{1,2}", line, re.IGNORECASE) for line in lines
+    )
+
+
+def _is_integer_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    values = []
+    for line in lines:
+        if not re.fullmatch(r"\d{1,3}", line):
+            return False
+        values.append(int(line))
+    return all(1 <= value <= 99 for value in values)
+
+
+def _is_weight_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    return all(
+        re.fullmatch(r"\d+(?:[.,]\d+)?\s*\.?\s*KG", line, re.IGNORECASE)
+        for line in lines
+    )
+
+
+def _is_distance_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    return all(
+        re.fullmatch(r"\d+(?:\s+\d+)*\.[A-Z]", line, re.IGNORECASE)
+        for line in lines
+    )
+
+
+def _is_chrono_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    return all(re.fullmatch(r"\d+(?:\.\d+){2,3}", line) for line in lines)
+
+
+def _is_performance_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    return all(
+        re.fullmatch(r"[0-9A-Z]+(?:\.[0-9A-Z]+){2,6}", line, re.IGNORECASE)
+        for line in lines
+    )
+
+
+def _is_gains_block(lines, expected):
+    if len(lines) != expected:
+        return False
+    return all(re.fullmatch(r"\d[\d ]*", line) for line in lines)
+
+
+def _split_sex_age(value):
+    match = re.fullmatch(r"([HFM])\.?([0-9]{1,2})", value or "", re.IGNORECASE)
+    if not match:
+        return None, None
+    return match.group(1).upper(), int(match.group(2))
+
+
+def _parse_weight(value):
+    match = re.search(r"(\d+(?:[.,]\d+)?)", value or "")
+    if not match:
+        return None
+    try:
+        return float(match.group(1).replace(",", "."))
+    except ValueError:
+        return None
+
+
+def _parse_numeric_gain(value):
+    try:
+        return int(re.sub(r"\s+", "", value))
+    except (TypeError, ValueError):
+        return None
+
+
+
+def _forward_program_table_fields(after, horses, expected):
+    if len(after) < expected * 4:
+        return None
+
+    trainer = after[:expected]
+    driver = after[expected:expected * 2]
+    owner = after[expected * 2:expected * 3]
+    if any(
+        not value or value in {"CHEVAUX", "DRIVERS", "ENTRAINEURS", "PROPRIETAIRES"}
+        for value in trainer + driver + owner
+    ):
+        return None
+
+    tail = after[expected * 3:]
+    if len(tail) < expected:
+        return None
+    sex_age = tail[:expected]
+    if not _is_sex_age_block(sex_age, expected):
+        return None
+    cursor = expected
+    optional = {}
+
+    block = tail[cursor:cursor + expected]
+    if _is_weight_block(block, expected):
+        optional["weight"] = block
+        cursor += expected
+        block = tail[cursor:cursor + expected]
+        if _is_integer_block(block, expected):
+            optional["draw"] = block
+            cursor += expected
+    elif _is_integer_block(block, expected):
+        optional["draw"] = block
+        cursor += expected
+        block = tail[cursor:cursor + expected]
+        if _is_weight_block(block, expected):
+            optional["weight"] = block
+            cursor += expected
+    elif _is_distance_block(block, expected):
+        optional["distance_listed"] = block
+        cursor += expected
+        block = tail[cursor:cursor + expected]
+        if _is_chrono_block(block, expected):
+            optional["chrono"] = block
+            cursor += expected
+    elif _is_chrono_block(block, expected):
+        optional["chrono"] = block
+        cursor += expected
+        block = tail[cursor:cursor + expected]
+        if _is_distance_block(block, expected):
+            optional["distance_listed"] = block
+            cursor += expected
+
+    performance = tail[cursor:cursor + expected]
+    if not _is_performance_block(performance, expected):
+        return None
+    cursor += expected
+
+    gains = tail[cursor:cursor + expected]
+    if not _is_gains_block(gains, expected):
+        return None
+
+    fields = {}
+    for idx, horse in enumerate(horses):
+        row = {
+            "performance": performance[idx],
+            "gains": _parse_numeric_gain(gains[idx]),
+            "sex": _split_sex_age(sex_age[idx])[0],
+            "age": _split_sex_age(sex_age[idx])[1],
+            "trainer": trainer[idx],
+            "jockey": driver[idx],
+            "driver": driver[idx],
+            "owner": owner[idx],
+        }
+        if "weight" in optional:
+            row["weight"] = _parse_weight(optional["weight"][idx])
+        if "draw" in optional:
+            row["draw"] = int(optional["draw"][idx])
+        if "chrono" in optional:
+            row["listed_chrono"] = optional["chrono"][idx]
+        if "distance_listed" in optional:
+            row["listed_distance"] = optional["distance_listed"][idx]
+        fields[int(horse["number"])] = row
+
+    return {"status": "mapped", "fields": fields}
+
+
+def extract_program_table_fields(text, horses, expected_runners=None):
+    """Extract pre-race runner fields from the LONAB table only.
+
+    The PDF text extractor emits the table as aligned column blocks. We first
+    anchor on the exact ordered horse-name block already recovered from the
+    runner descriptions, then map surrounding fixed-width blocks. A field is
+    promoted only when its full runner-length block matches the expected
+    grammar.
+    """
+    expected = int(expected_runners or len(horses) or 0)
+    if expected <= 0 or len(horses) != expected:
+        return {"status": "unmapped", "fields": {}}
+
+    names = [_clean_table_line(h.get("horse", "")) for h in horses]
+    if any(not name for name in names):
+        return {"status": "unmapped", "fields": {}}
+    name_keys = [_horse_key(name) for name in names]
+
+    lines = [_clean_table_line(line) for line in text.splitlines()]
+    lines = [line for line in lines if line]
+    line_keys = [_horse_key(line) for line in lines]
+
+    horse_start = None
+    for idx in range(len(line_keys) - expected + 1):
+        if line_keys[idx:idx + expected] == name_keys:
+            horse_start = idx
+            break
+    if horse_start is None:
+        return {"status": "unmapped", "fields": {}}
+
+    before = lines[:horse_start]
+    after = lines[horse_start + expected:]
+
+    forward = _forward_program_table_fields(after, horses, expected)
+    if forward is not None:
+        return forward
+
+    def take_before(cursor, predicate):
+        start = cursor - expected
+        if start < 0:
+            return None, cursor
+        block = before[start:cursor]
+        if predicate(block, expected):
+            return block, start
+        return None, cursor
+
+    cursor = len(before)
+    gains, cursor = take_before(cursor, _is_gains_block)
+    if gains is None:
+        return {"status": "unmapped", "fields": {}}
+
+    performance, cursor = take_before(cursor, _is_performance_block)
+    if performance is None:
+        return {"status": "unmapped", "fields": {}}
+
+    optional = {}
+    block, next_cursor = take_before(cursor, _is_weight_block)
+    if block is not None:
+        optional["weight"] = block
+        cursor = next_cursor
+        block, next_cursor = take_before(cursor, _is_integer_block)
+        if block is not None:
+            optional["draw"] = block
+            cursor = next_cursor
+    else:
+        block, next_cursor = take_before(cursor, _is_integer_block)
+        if block is not None:
+            optional["draw"] = block
+            cursor = next_cursor
+            block, next_cursor = take_before(cursor, _is_weight_block)
+            if block is not None:
+                optional["weight"] = block
+                cursor = next_cursor
+
+    block, next_cursor = take_before(cursor, _is_chrono_block)
+    if block is not None:
+        optional["chrono"] = block
+        cursor = next_cursor
+    else:
+        block, next_cursor = take_before(cursor, _is_distance_block)
+        if block is not None:
+            optional["distance_listed"] = block
+            cursor = next_cursor
+
+    sex_age, next_cursor = take_before(cursor, _is_sex_age_block)
+    if sex_age is not None:
+        cursor = next_cursor
+
+    people_mapped = False
+    trainer = driver = owner = None
+    if len(after) >= expected * 3:
+        candidate_trainer = after[:expected]
+        candidate_driver = after[expected:expected * 2]
+        candidate_owner = after[expected * 2:expected * 3]
+        if not any(
+            not value or value in {"CHEVAUX", "DRIVERS", "ENTRAINEURS", "PROPRIETAIRES"}
+            for value in candidate_trainer + candidate_driver + candidate_owner
+        ):
+            trainer, driver, owner = candidate_trainer, candidate_driver, candidate_owner
+            people_mapped = True
+
+    fields = {}
+    for idx, horse in enumerate(horses):
+        number = int(horse["number"])
+        row = {
+            "performance": performance[idx],
+            "gains": _parse_numeric_gain(gains[idx]),
+        }
+        if sex_age is not None:
+            sex, age = _split_sex_age(sex_age[idx])
+            row["sex"] = sex
+            row["age"] = age
+        if people_mapped:
+            row.update({
+                "trainer": trainer[idx],
+                "jockey": driver[idx],
+                "driver": driver[idx],
+                "owner": owner[idx],
+            })
+        if "weight" in optional:
+            row["weight"] = _parse_weight(optional["weight"][idx])
+        if "draw" in optional:
+            row["draw"] = int(optional["draw"][idx])
+        if "chrono" in optional:
+            row["listed_chrono"] = optional["chrono"][idx]
+        if "distance_listed" in optional:
+            row["listed_distance"] = optional["distance_listed"][idx]
+        fields[number] = row
+
+    return {
+        "status": "mapped" if people_mapped else "core_mapped",
+        "fields": fields,
+    }
+
 def extract_number_list(text, label):
     match = re.search(rf"{re.escape(label)}\s*:\s*([^\n\r]+)", text, re.IGNORECASE)
     if not match:
@@ -292,13 +608,22 @@ def extract_published_arrival(text):
 def parse_program_text(text, source_file="unknown.txt"):
     text = clean_text(text)
     race_info = extract_race_info(text)
+    horses = extract_horses(text, expected_runners=race_info.get("runners_count"))
+    table = extract_program_table_fields(
+        text,
+        horses,
+        expected_runners=race_info.get("runners_count"),
+    )
+    for horse in horses:
+        horse.update(table["fields"].get(int(horse["number"]), {}))
     return {
         "document_type": "program",
         "source_file": source_file,
         "parsed_at": datetime.utcnow().isoformat() + "Z",
         "date": extract_date(text),
         "race": race_info,
-        "horses": extract_horses(text, expected_runners=race_info.get("runners_count")),
+        "horses": horses,
+        "program_table_mapping_status": table["status"],
         "rankings": extract_rankings(text),
         "press_odds": extract_press_odds(text, race_info.get("runners_count")),
         "press_odds_status": "observed_in_program" if extract_press_odds(text, race_info.get("runners_count")) else "unavailable",

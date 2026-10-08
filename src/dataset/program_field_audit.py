@@ -83,6 +83,7 @@ def audit() -> dict[str, Any]:
             "race_type": race.get("race_type"),
             "runners": expected,
             "horses": len(horses),
+            "program_table_mapping_status": program.get("program_table_mapping_status", "unmapped"),
             "horse_description_nonempty": sum(
                 bool(isinstance(h, dict) and str(h.get("description") or "").strip())
                 for h in horses
@@ -105,6 +106,9 @@ def audit() -> dict[str, Any]:
         "program_files": n,
         "structured_nonempty_keys": dict(structured_key_counts),
         "race_level_coverage": {
+            "program_table_mapped": round(
+                sum(r.get("program_table_mapping_status") in {"mapped", "core_mapped"} for r in reports) / n, 4
+            ) if n else 0.0,
             "sex_age_exact": race_rate("sex_age_exact"),
             "performance_exact_or_more": race_rate("performance_exact_or_more"),
             "weight_marker": race_rate("weight_marker"),
