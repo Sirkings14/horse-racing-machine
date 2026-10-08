@@ -287,6 +287,71 @@ def build_horse_row(
             ]
         ),
 
+        "driver": get_value(
+            horse,
+            [
+                "driver",
+                "jockey",
+            ]
+        ),
+
+        "owner": get_value(
+            horse,
+            [
+                "owner",
+                "proprietaire",
+                "proprietaire_nom",
+            ]
+        ),
+
+        "sex": get_value(
+            horse,
+            [
+                "sex",
+                "sexe",
+            ]
+        ),
+
+        "age": get_value(
+            horse,
+            [
+                "age",
+            ]
+        ),
+
+        "performance": get_value(
+            horse,
+            [
+                "performance",
+                "perf",
+                "recent_performance",
+            ]
+        ),
+
+        "gains": get_value(
+            horse,
+            [
+                "gains",
+                "earnings",
+            ]
+        ),
+
+        "listed_chrono": get_value(
+            horse,
+            [
+                "listed_chrono",
+                "chrono",
+            ]
+        ),
+
+        "listed_distance": get_value(
+            horse,
+            [
+                "listed_distance",
+                "distance_listed",
+            ]
+        ),
+
         "weight": get_value(
             horse,
             [
