@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-10-08|SAINT-CLOUD|1|2026-10-08T16:26:52.986358+00:00",
-  "generated_at": "2026-10-08T16:26:52.986370+00:00",
+  "prediction_id": "2026-10-08|SAINT-CLOUD|1|2026-10-08T17:50:29.525061+00:00",
+  "generated_at": "2026-10-08T17:50:29.525072+00:00",
   "model_version": "v4-evidence-no-press",
   "mode": "v5_market_opportunity_layer",
   "race_key": "2026-10-08|SAINT-CLOUD|1",
@@ -29,7 +29,46 @@
     "history_coverage": 0.375,
     "course_coverage": 0.312,
     "distance_coverage": 0.125,
-    "complete_rows": 1.0
+    "complete_rows": 1.0,
+    "identity_sources": {
+      "normalized_name": 16
+    },
+    "history_starts_sorted": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      3
+    ],
+    "distance_starts_sorted": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ]
   },
   "confidence": "low",
   "model_agreement": "low",
