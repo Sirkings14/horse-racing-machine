@@ -81,3 +81,47 @@ def test_program_history_loader_excludes_cutoff_and_has_no_targets(tmp_path, mon
     assert all(r["_program_only_history"] is True for r in rows)
     assert all("won" not in r and "finish_position" not in r for r in rows)
     assert program_history.load_program_history("2026-01-01")==[]
+
+
+def test_trainer_and_driver_profiles_are_prior_only():
+    rows=[
+      {"date":"2026-01-01","race_key":"2026-01-01|A|1","horse_name":"X","horse_number":1,"track":"A","distance":2000,
+       "trainer":"T.ONE","driver":"D.ONE","finish_position":1},
+      {"date":"2026-01-01","race_key":"2026-01-01|A|2","horse_name":"Y","horse_number":1,"track":"A","distance":2000,
+       "trainer":"T.ONE","driver":"D.ONE","finish_position":5},
+      {"date":"2026-01-02","race_key":"2026-01-02|A|1","horse_name":"Z","horse_number":1,"track":"A","distance":2000,
+       "trainer":"T.ONE","driver":"D.ONE","finish_position":3},
+    ]
+    out=build_walk_forward_profiles(rows)
+    assert out[0]["trainer_starts"]==0
+    assert out[0]["driver_starts"]==0
+    assert out[1]["trainer_starts"]==0
+    assert out[2]["trainer_starts"]==2
+    assert out[2]["trainer_win_rate"]==0.5
+    assert out[2]["trainer_top3_rate"]==1.0
+    assert out[2]["trainer_course_win_rate"]==0.5
+    assert out[2]["driver_starts"]==2
+    assert out[2]["driver_top3_rate"]==0.5
+    assert out[2]["driver_course_top3_rate"]==1.0
+
+
+def test_participant_features_expand_v3_matrix():
+    rows=[{
+        "date":"2026-01-03","race_key":"2026-01-03|A|1","horse_name":"X","horse_number":1,
+        "track":"A","distance":2400,"runners_count":10,
+        "trainer_starts":10,"trainer_win_rate":0.2,"trainer_top3_rate":0.5,
+        "trainer_top5_rate":0.7,"trainer_course_win_rate":0.25,"trainer_course_top3_rate":0.6,
+        "driver_starts":20,"driver_win_rate":0.3,"driver_top3_rate":0.6,
+        "driver_top5_rate":0.8,"driver_course_win_rate":0.35,"driver_course_top3_rate":0.7,
+    },{
+        "date":"2026-01-03","race_key":"2026-01-03|A|1","horse_name":"Y","horse_number":2,
+        "track":"A","distance":2400,"runners_count":10,
+        "trainer_starts":2,"trainer_win_rate":0.05,"trainer_top3_rate":0.1,
+        "trainer_top5_rate":0.2,"trainer_course_win_rate":0.0,"trainer_course_top3_rate":0.1,
+        "driver_starts":3,"driver_win_rate":0.0,"driver_top3_rate":0.1,
+        "driver_top5_rate":0.2,"driver_course_win_rate":0.0,"driver_course_top3_rate":0.1,
+    }]
+    matrix=build_v3_matrix(rows)
+    assert matrix.shape==(2,len(FEATURE_NAMES))
+    assert len(FEATURE_NAMES)==54
+    assert matrix[0,-6] > matrix[1,-6]
