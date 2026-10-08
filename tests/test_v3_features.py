@@ -49,3 +49,17 @@ def test_walk_forward_profiles_expose_live_data_completeness():
     }]
     out=build_walk_forward_profiles(rows)
     assert out[0]["data_completeness"]==1.0
+
+def test_program_only_start_counts_as_experience_without_fake_result():
+    rows=[
+      {"date":"2026-01-01","race_key":"2026-01-01|A|1","horse_name":"X","finish_position":None,"track":"A","distance":2000},
+      {"date":"2026-01-02","race_key":"2026-01-02|A|1","horse_name":"X","finish_position":2,"track":"A","distance":2000},
+    ]
+    out=build_walk_forward_profiles(rows)
+    assert out[1]["history_starts"]==1
+    assert out[1]["history_top3_rate"]==0.0
+    assert out[1]["course_starts"]==1
+    assert out[1]["course_top3_rate"]==0.0
+    assert out[1]["distance_starts"]==1
+    assert out[1]["distance_top3_rate"]==0.0
+    assert out[1]["days_since_last_run"]==1
