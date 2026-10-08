@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_13-08-2024_a318f41d0f_24cbdfaf80.txt",
-    "parsed_at": "2026-10-08T10:35:44.067792Z",
+    "parsed_at": "2026-10-08T23:52:17.234369Z",
     "date": "2024-08-13",
     "race": {
         "race_name": "CATEGORIE PERSONNEL DE SOINS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "SALVA MEA",
-            "description": ""
+            "description": "",
+            "performance": "4.8.3.2.2",
+            "gains": 32450,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "HARAS VOLTAIRE",
+            "weight": 59.0,
+            "draw": 6
         },
         {
             "number": 2,
             "horse": "CABERNET FRANC",
-            "description": ""
+            "description": "",
+            "performance": "6.2.7.6.3",
+            "gains": 34500,
+            "sex": "M",
+            "age": 3,
+            "trainer": "G.TROLLEY DE PREVAUX",
+            "jockey": "TIM.DONWORTH",
+            "driver": "TIM.DONWORTH",
+            "owner": "C.STEDMAN",
+            "weight": 58.5,
+            "draw": 2
         },
         {
             "number": 3,
             "horse": "LANZELOT GOLD",
-            "description": ""
+            "description": "",
+            "performance": "1.4.5.2.4",
+            "gains": 20650,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "JP.CARVALHO",
+            "driver": "JP.CARVALHO",
+            "owner": "GER. RACING CLUB",
+            "weight": 58.5,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "UM WADI",
-            "description": ""
+            "description": "",
+            "performance": "5.3.1",
+            "gains": 13400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "AL SHAQAB RACING",
+            "weight": 58.5,
+            "draw": 16
         },
         {
             "number": 5,
             "horse": "SIYOUKING",
-            "description": ""
+            "description": "",
+            "performance": "6.5.7.6.1",
+            "gains": 30350,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "F.ROHAUT",
+            "driver": "F.ROHAUT",
+            "owner": "S.BOUCHERON",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 6,
             "horse": "SERQUIGNY",
-            "description": ""
+            "description": "",
+            "performance": "9.7.4.1.6",
+            "gains": 27400,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "G.AU.NORMAND",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 7,
             "horse": "AQUILA VOLANTE",
-            "description": ""
+            "description": "",
+            "performance": "0.8.4.3.1",
+            "gains": 57850,
+            "sex": "M",
+            "age": 3,
+            "trainer": "R.MANGIONE",
+            "jockey": "G.PANNIER",
+            "driver": "G.PANNIER",
+            "owner": "J.MAHIQUES",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 8,
             "horse": "OLYMPE MANCINI",
-            "description": ""
+            "description": "",
+            "performance": "2.2.3.4.1",
+            "gains": 49500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "S.RICHTER",
+            "driver": "S.RICHTER",
+            "owner": "T.JANDER",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "HUNGRY HEART",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.5.0",
+            "gains": 17700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "M.DEL.SANCHEZ",
+            "driver": "M.DEL.SANCHEZ",
+            "owner": "CUA. MEDITERRANEO",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "GILDED DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "0.3.3.1.2",
+            "gains": 34000,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "AL ASAYL FRANCE",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 11,
             "horse": "GUALDA",
-            "description": ""
+            "description": "",
+            "performance": "6.4.5.1.2",
+            "gains": 25800,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "M.BARATTI",
+            "driver": "M.BARATTI",
+            "owner": "NE.PRODUCCIONES",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "NOBLEMAN",
-            "description": ""
+            "description": "",
+            "performance": "3.2.9.3.3",
+            "gains": 19350,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "J.ROMEL",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "MA MOME",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.9.0",
+            "gains": 120050,
+            "sex": "F",
+            "age": 3,
+            "trainer": "D.SANTIAGO",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "JP.VAN. HEEDE",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 14,
             "horse": "QUEEN SINGER",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.2.8",
+            "gains": 51050,
+            "sex": "F",
+            "age": 3,
+            "trainer": "B.MARIE",
+            "jockey": "R.PHILIPPON",
+            "driver": "R.PHILIPPON",
+            "owner": "MME K.SCHANZ",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 15,
             "horse": "GREY FIGHTER",
-            "description": ""
+            "description": "",
+            "performance": "9.0.0.3.0",
+            "gains": 27600,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "C.FEY",
+            "driver": "C.FEY",
+            "owner": "E.SAUREN",
+            "weight": 55.0,
+            "draw": 9
         },
         {
             "number": 16,
             "horse": "BLUE BROTHER",
-            "description": ""
+            "description": "",
+            "performance": "5.2.2.2.7",
+            "gains": 20320,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "GEMINI STUD",
+            "weight": 54.5,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

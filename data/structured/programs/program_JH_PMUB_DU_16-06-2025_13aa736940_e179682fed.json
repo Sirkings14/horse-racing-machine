@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_16-06-2025_13aa736940_e179682fed.txt",
-    "parsed_at": "2026-10-08T10:35:44.485921Z",
+    "parsed_at": "2026-10-08T23:52:17.827553Z",
     "date": "2025-06-16",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "HIGHBARI",
-            "description": ""
+            "description": "",
+            "performance": "1.9.3.3.4",
+            "gains": 172395,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.BRASME",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "G.D' AREXY",
+            "weight": 60.0,
+            "draw": 2
         },
         {
             "number": 2,
             "horse": "TROPHANE",
-            "description": ""
+            "description": "",
+            "performance": "2.5.5.6.2",
+            "gains": 39680,
+            "sex": "F",
+            "age": 4,
+            "trainer": "E. LIBAUD",
+            "jockey": "A. POUCHIN",
+            "driver": "A. POUCHIN",
+            "owner": "HS DE CLAIREFONTAINE",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "AL KHAMSIN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.7.0",
+            "gains": 173433,
+            "sex": "H",
+            "age": 8,
+            "trainer": "H. MENNE.MARTINEZ",
+            "jockey": "R. MANGIONE",
+            "driver": "R. MANGIONE",
+            "owner": "H. MENNE. MARTINEZ",
+            "weight": 59.5,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "CUBANISTO",
-            "description": ""
+            "description": "",
+            "performance": "1.4.2.0.5",
+            "gains": 32850,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A. BOTTI",
+            "jockey": "T. BACHELOT",
+            "driver": "T. BACHELOT",
+            "owner": "EC ELAG/JJ RAHIER",
+            "weight": 59.5,
+            "draw": 14
         },
         {
             "number": 5,
             "horse": "VERNIX",
-            "description": ""
+            "description": "",
+            "performance": "6.7.7.1.0",
+            "gains": 20780,
+            "sex": "H",
+            "age": 5,
+            "trainer": "J. SOUDAN",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "G.AU. NORMAND",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "ROI DE L'AIR",
-            "description": ""
+            "description": "",
+            "performance": "8.5.5.1.2",
+            "gains": 69030,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.BOUTIN",
+            "jockey": "H. BOUTIN",
+            "driver": "H. BOUTIN",
+            "owner": "G.BEN LASSIN",
+            "weight": 59.0,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "PINGO",
-            "description": ""
+            "description": "",
+            "performance": "6.1.8.3.3",
+            "gains": 129430,
+            "sex": "F",
+            "age": 7,
+            "trainer": "C.BOUTIN",
+            "jockey": "A. MADAMET",
+            "driver": "A. MADAMET",
+            "owner": "J. COELHO",
+            "weight": 59.0,
+            "draw": 3
         },
         {
             "number": 8,
             "horse": "WIT PERD",
-            "description": ""
+            "description": "",
+            "performance": "0.0.7.0.2",
+            "gains": 35800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "N. CAULLERY",
+            "jockey": "S. PASQUIER",
+            "driver": "S. PASQUIER",
+            "owner": "EC. TREIZE HEUREUX",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "AIGUIERE D'ARGENT",
-            "description": ""
+            "description": "",
+            "performance": "1.9.9.4.0",
+            "gains": 156360,
+            "sex": "H",
+            "age": 8,
+            "trainer": "MF. WEISSMEIER",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "GAL-CLUB RHEIN-MAIN",
+            "weight": 58.5,
+            "draw": 5
         },
         {
             "number": 10,
             "horse": "EXCITING",
-            "description": ""
+            "description": "",
+            "performance": "3.2.0.0.0",
+            "gains": 108010,
+            "sex": "M",
+            "age": 7,
+            "trainer": "D.SMAGA",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "WOOD. BLOODSTOCK",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "HOLLYHOCK",
-            "description": ""
+            "description": "",
+            "performance": "1.8.9.0.9",
+            "gains": 122130,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.NIGGE",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "M. NIGGE",
+            "weight": 58.0,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "INDIAN SUNSET",
-            "description": ""
+            "description": "",
+            "performance": "4.0.0.0.6",
+            "gains": 40130,
+            "sex": "F",
+            "age": 6,
+            "trainer": "C.WHITFIELD",
+            "jockey": "G. SIAS",
+            "driver": "G. SIAS",
+            "owner": "S. SUAREZ",
+            "weight": 57.5,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "DARNETAL",
-            "description": ""
+            "description": "",
+            "performance": "0.9.8.4.6",
+            "gains": 18140,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A. WATTEL",
+            "jockey": "A. CRASTUS",
+            "driver": "A. CRASTUS",
+            "owner": "G.AU. NORMAND",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "HARTWOOD MAN",
-            "description": ""
+            "description": "",
+            "performance": "8.8.7.4.0",
+            "gains": 94810,
+            "sex": "H",
+            "age": 6,
+            "trainer": "V.DISSAUX",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "M.HOVELACQUE",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "ELUSIVE GLORY",
-            "description": ""
+            "description": "",
+            "performance": "9.4.4.8.6",
+            "gains": 30640,
+            "sex": "M",
+            "age": 4,
+            "trainer": "LL. ROHN-PELVIN",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "LL. ROHN-PELVIN",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 16,
             "horse": "TOLLEVAST",
-            "description": ""
+            "description": "",
+            "performance": "7.9.2.4.7",
+            "gains": 75670,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A. FOUASSIER",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "A. FOUASSIER",
+            "weight": 57.0,
+            "draw": 16
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             1,

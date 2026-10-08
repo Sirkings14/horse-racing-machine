@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-21-12-2023_6a1ef8386d_711fa14a06.txt",
-    "parsed_at": "2026-10-08T10:35:41.487942Z",
+    "parsed_at": "2026-10-08T23:52:13.603618Z",
     "date": "2023-12-21",
     "race": {
         "race_name": "PRIX DE GIVERNY",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "SAINT HELLIER",
-            "description": ""
+            "description": "",
+            "performance": "2.7.5.0.1",
+            "gains": 117870,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "M.NIKITAS",
+            "weight": 61.0,
+            "draw": 5
         },
         {
             "number": 2,
             "horse": "CELESTIN",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.0.6",
+            "gains": 243593,
+            "sex": "H",
+            "age": 6,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "J.RESIMONT",
+            "driver": "J.RESIMONT",
+            "owner": "J.PEARSON-STUTTARD",
+            "weight": 61.0,
+            "draw": 6
         },
         {
             "number": 3,
             "horse": "CICCIO BOY",
-            "description": ""
+            "description": "",
+            "performance": "8.6.1.6.0",
+            "gains": 204090,
+            "sex": "M",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "I.ENDALTSEV",
+            "driver": "I.ENDALTSEV",
+            "owner": "A.SALIKBAYEV",
+            "weight": 60.0,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "AMI SOLEDAD",
-            "description": ""
+            "description": "",
+            "performance": "7.1.1.0.1",
+            "gains": 83850,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.BESNIER",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "STALL BURG NANSTEIN",
+            "weight": 60.0,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "VENTS CONTRAIRES",
-            "description": ""
+            "description": "",
+            "performance": "9.6.5.7.4",
+            "gains": 146206,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.FOREST",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "GALOPP. IFFEZHEIM E.V.",
+            "weight": 59.5,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "GAYLOR SENORA",
-            "description": ""
+            "description": "",
+            "performance": "1.6.0.4.3",
+            "gains": 55520,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "EC. HS DES SENORA",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "GIVE ME GOLD",
-            "description": ""
+            "description": "",
+            "performance": "6.5.1.1.4",
+            "gains": 66590,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.PACAUT",
+            "jockey": "G.DOLEUZE",
+            "driver": "G.DOLEUZE",
+            "owner": "G.DOLEUZE",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "PINGO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.0.5",
+            "gains": 81680,
+            "sex": "F",
+            "age": 5,
+            "trainer": "T.BACHELOT",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "G.AU.NORMAND",
+            "weight": 56.0,
+            "draw": 3
         },
         {
             "number": 9,
             "horse": "AMBOISE",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.0.5",
+            "gains": 66600,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.RUIS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "R.RABA",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "LOFSONGUR ISLANDE",
-            "description": ""
+            "description": "",
+            "performance": "7.9.4.4.0",
+            "gains": 26460,
+            "sex": "F",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "B.VAN DALFSEN",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "TRUE TEDESCO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.3.0.0",
+            "gains": 53070,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.VOGT",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "STALL MYDLINGHOVEN",
+            "weight": 55.5,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "OLYMPIC DREAM",
-            "description": ""
+            "description": "",
+            "performance": "9.1.3.5.9",
+            "gains": 70140,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D.SANTIAGO",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "C.BOURDIER",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "AL KHAMSIN",
-            "description": ""
+            "description": "",
+            "performance": "8.4.0.9.0",
+            "gains": 140283,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.MANGIONE",
+            "jockey": "H. MENNE. MARTINEZ",
+            "driver": "H. MENNE. MARTINEZ",
+            "owner": "H. MENNE. MARTINEZ",
+            "weight": 54.5,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "LETTY'S MARVEL",
-            "description": ""
+            "description": "",
+            "performance": "2.1.3.3.1",
+            "gains": 211817,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "G.BARBARIN",
+            "weight": 54.5,
+            "draw": 11
         },
         {
             "number": 15,
             "horse": "YOUNG MAN",
-            "description": ""
+            "description": "",
+            "performance": "5.0.1.3.6",
+            "gains": 139195,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.BARON",
+            "jockey": "A.BARON",
+            "driver": "A.BARON",
+            "owner": "M.BARON",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 16,
             "horse": "KHOCHENKO",
-            "description": ""
+            "description": "",
+            "performance": "4.8.7.0.0",
+            "gains": 263090,
+            "sex": "H",
+            "age": 8,
+            "trainer": "T.PICCONE",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "JL.BOUYENVAL",
+            "weight": 54.0,
+            "draw": 14
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             11,

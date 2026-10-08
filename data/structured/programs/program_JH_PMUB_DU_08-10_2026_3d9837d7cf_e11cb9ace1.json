@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_08-10_2026_3d9837d7cf_e11cb9ace1.txt",
-    "parsed_at": "2026-10-08T10:35:43.525483Z",
+    "parsed_at": "2026-10-08T23:52:16.429024Z",
     "date": "2026-10-08",
     "race": {
         "race_name": "PRIX DE VERSAILLES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DARZAKIR",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0",
+            "gains": 12824,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.DELZANGLES",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "AGA KHAN STUDS SC",
+            "weight": 60.0,
+            "draw": 10
         },
         {
             "number": 2,
             "horse": "CHILL Y FLAMA",
-            "description": ""
+            "description": "",
+            "performance": "0.5.4.6.2",
+            "gains": 48420,
+            "sex": "F",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "S. EGLOFF",
+            "weight": 59.5,
+            "draw": 8
         },
         {
             "number": 3,
             "horse": "LAPENTY",
-            "description": ""
+            "description": "",
+            "performance": "8.2.4.7.4",
+            "gains": 14103,
+            "sex": "M",
+            "age": 3,
+            "trainer": "L.GADBIN",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "G. AU.NORMAND",
+            "weight": 59.0,
+            "draw": 3
         },
         {
             "number": 4,
             "horse": "FRENCH COLORADO",
-            "description": ""
+            "description": "",
+            "performance": "5.4.6.3.7",
+            "gains": 37739,
+            "sex": "M",
+            "age": 3,
+            "trainer": "N.PERRET",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "R. BONAVENTURE",
+            "weight": 58.5,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "VICTORY PACE",
-            "description": ""
+            "description": "",
+            "performance": "2.4.1.5.2",
+            "gains": 36768,
+            "sex": "F",
+            "age": 3,
+            "trainer": "G.MOSSE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "GEMINI STUD",
+            "weight": 58.5,
+            "draw": 14
         },
         {
             "number": 6,
             "horse": "SAGARMATHA",
-            "description": ""
+            "description": "",
+            "performance": "6.1.3.0.7",
+            "gains": 34941,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.FERLAND",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "EVEREST RACING",
+            "weight": 58.5,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "LE FUTUR",
-            "description": ""
+            "description": "",
+            "performance": "9.8.3.0.9",
+            "gains": 21924,
+            "sex": "M",
+            "age": 3,
+            "trainer": "Y.BARBEROT",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "PH. LASSEN",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "MISTER BLACK",
-            "description": ""
+            "description": "",
+            "performance": "5.1.7.2.4",
+            "gains": 47832,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "O. GHRGHAR",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "FAOLIO",
-            "description": ""
+            "description": "",
+            "performance": "5.4.3.2.1",
+            "gains": 37643,
+            "sex": "H",
+            "age": 3,
+            "trainer": "D&P.PROD'HOMME",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "A. KRAULIGER",
+            "weight": 57.5,
+            "draw": 16
         },
         {
             "number": 10,
             "horse": "MY HABITUDE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.1.3",
+            "gains": 31344,
+            "sex": "H",
+            "age": 3,
+            "trainer": "ROB.COLLET",
+            "jockey": "C.COLLET-VIDAL",
+            "driver": "C.COLLET-VIDAL",
+            "owner": "C. DUBUQUOI",
+            "weight": 57.5,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "ARANYANI",
-            "description": ""
+            "description": "",
+            "performance": "1.5.3.2",
+            "gains": 22406,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.FEY",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "N. STEINMANN",
+            "weight": 57.5,
+            "draw": 5
         },
         {
             "number": 12,
             "horse": "DERAWAR",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.7.1",
+            "gains": 15377,
+            "sex": "M",
+            "age": 3,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "EC. LENGLET",
+            "weight": 57.0,
+            "draw": 6
         },
         {
             "number": 13,
             "horse": "STARGATOR",
-            "description": ""
+            "description": "",
+            "performance": "7.7.1.6.9",
+            "gains": 11051,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.KARKOSA",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "F. KAHRAMAN",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "IKOTOFETSY",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.9.8",
+            "gains": 51840,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.ANDRIA. RATSIMIHAH",
+            "jockey": "C.BELMONT",
+            "driver": "C.BELMONT",
+            "owner": "M. ANDRIA. RATSIMIHAH",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 15,
             "horse": "ENTLEBUCH",
-            "description": ""
+            "description": "",
+            "performance": "5.0.4.4.2",
+            "gains": 24851,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H.SAUER",
+            "jockey": "T. TRULLIER",
+            "driver": "T. TRULLIER",
+            "owner": "STALL LAURUS",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 16,
             "horse": "STAN LE GRAND",
-            "description": ""
+            "description": "",
+            "performance": "4.1.7.2.8",
+            "gains": 16651,
+            "sex": "H",
+            "age": 3,
+            "trainer": "D&P.PROD'HOMME",
+            "jockey": "PC.BOUDOT",
+            "driver": "PC.BOUDOT",
+            "owner": "B. GIRAUDON",
+            "weight": 56.0,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             15,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_03-08-2024_3cdb50bd87_e509502aee.txt",
-    "parsed_at": "2026-10-08T10:35:42.884954Z",
+    "parsed_at": "2026-10-08T23:52:15.545236Z",
     "date": "2024-08-03",
     "race": {
         "race_name": "PRIX DU CHAMP DURAND",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "AGAT",
-            "description": ""
+            "description": "",
+            "performance": "8.4.1.1.5",
+            "gains": 33750,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "CHR.HEAD",
+            "driver": "CHR.HEAD",
+            "owner": "N.BIZAKOV",
+            "weight": 60.0,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "VERCORS",
-            "description": ""
+            "description": "",
+            "performance": "0.1.8.2.1",
+            "gains": 39600,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "STONESTREET STABLES",
+            "weight": 59.5,
+            "draw": 6
         },
         {
             "number": 3,
             "horse": "LA BELLE POETE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.9.1.6",
+            "gains": 64800,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "L.BAUDRON",
+            "driver": "L.BAUDRON",
+            "owner": "L.BAUDRON",
+            "weight": 58.5,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "DANCE SIOUX",
-            "description": ""
+            "description": "",
+            "performance": "3.0.6.2.1",
+            "gains": 67350,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "P.BARY",
+            "driver": "P.BARY",
+            "owner": "LAGHI FRANCE",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 5,
             "horse": "MCTENETT",
-            "description": ""
+            "description": "",
+            "performance": "6.6.2.7.7",
+            "gains": 33465,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "H.NICOLAY DE",
+            "driver": "H.NICOLAY DE",
+            "owner": "M.JOSIPOVIC",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "SILVER FEATHER",
-            "description": ""
+            "description": "",
+            "performance": "8.4.1.6.9",
+            "gains": 16500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 7,
             "horse": "LA MANDALA",
-            "description": ""
+            "description": "",
+            "performance": "5.5.7.1",
+            "gains": 16150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.BOISSEAU",
+            "jockey": "V.HEAD",
+            "driver": "V.HEAD",
+            "owner": "F.HEAD",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "KOSLOVKA",
-            "description": ""
+            "description": "",
+            "performance": "9.3.1.8.2",
+            "gains": 58750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "A.JATHIERE",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "PRETTY BERRY",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.8.5",
+            "gains": 47325,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "G.AU.NORMAND",
+            "weight": 56.0,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "CALADBOLG",
-            "description": ""
+            "description": "",
+            "performance": "0.5.1.4.3",
+            "gains": 22150,
+            "sex": "H",
+            "age": 3,
+            "trainer": "P.BAZIRE",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "M.BEKHTI",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 11,
             "horse": "ZEOLAKIS",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2",
+            "gains": 21800,
+            "sex": "H",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "H.BLUME",
+            "driver": "H.BLUME",
+            "owner": "C. HOLSCHBACH",
+            "weight": 55.5,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "TOKYO DREAMER",
-            "description": ""
+            "description": "",
+            "performance": "8.6.6.3.5",
+            "gains": 19002,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 13,
             "horse": "ASTRA DREAM",
-            "description": ""
+            "description": "",
+            "performance": "4.4.2.1.6",
+            "gains": 54560,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.PACAUT",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.BANZ/C.ESCUDER",
+            "weight": 54.5,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "FOU FURIEUX",
-            "description": ""
+            "description": "",
+            "performance": "1.5.0.6.6",
+            "gains": 48870,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "D.R.LODGE/B.L.JONES",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 15,
             "horse": "BROTHERS OF LILY'S",
-            "description": ""
+            "description": "",
+            "performance": "9.7.1.7.7",
+            "gains": 46000,
+            "sex": "H",
+            "age": 3,
+            "trainer": "H.JOURNIAC",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "EC. NORMANDY SPIRIT",
+            "weight": 54.5,
+            "draw": 16
         },
         {
             "number": 16,
             "horse": "SPEZIAL",
-            "description": ""
+            "description": "",
+            "performance": "6.6.1.3.3",
+            "gains": 29300,
+            "sex": "F",
+            "age": 3,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "STARS OF FORTUNE",
+            "weight": 54.5,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

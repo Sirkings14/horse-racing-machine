@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_30-08-2026_2c62eb3ed1_4589a14c17.txt",
-    "parsed_at": "2026-10-08T10:35:46.466802Z",
+    "parsed_at": "2026-10-08T23:52:20.700285Z",
     "date": "2026-08-30",
     "race": {
         "race_name": "PRIX HOTEL BARRIERE LE NORMANDY",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "WEEKEN",
-            "description": ""
+            "description": "",
+            "performance": "3.6.9.5.1",
+            "gains": 19628,
+            "sex": "H",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "J.POIROUX",
+            "weight": 60.0,
+            "draw": 15
         },
         {
             "number": 2,
             "horse": "MACKAYA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.7.5.5",
+            "gains": 19945,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUARNIERI",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "EC. MEIOHAS",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 3,
             "horse": "ALEXANDER MAXIMUS",
-            "description": ""
+            "description": "",
+            "performance": "1.6.1.1.4",
+            "gains": 39430,
+            "sex": "M",
+            "age": 3,
+            "trainer": "J.REYNIER",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "I.RICCI",
+            "weight": 57.5,
+            "draw": 11
         },
         {
             "number": 4,
             "horse": "FREERIDER",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.9",
+            "gains": 24776,
+            "sex": "H",
+            "age": 3,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "PC.BOUDOT",
+            "driver": "PC.BOUDOT",
+            "owner": "EC. DE MONTLAHUC",
+            "weight": 57.5,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "INSIDIA",
-            "description": ""
+            "description": "",
+            "performance": "8.4.8.1.3",
+            "gains": 23735,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUARNIERI",
+            "jockey": "T.MARQUAND",
+            "driver": "T.MARQUAND",
+            "owner": "F.GIACOBBE",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "HENDRIXX",
-            "description": ""
+            "description": "",
+            "performance": "0.1.8.6.6",
+            "gains": 14684,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "STARS OF FORTUNE",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "FRENCH COLORADO",
-            "description": ""
+            "description": "",
+            "performance": "4.6.3.7.5",
+            "gains": 36023,
+            "sex": "M",
+            "age": 3,
+            "trainer": "N.PERRET",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "R.BONAVENTURE",
+            "weight": 57.0,
+            "draw": 16
         },
         {
             "number": 8,
             "horse": "VANVITELLI",
-            "description": ""
+            "description": "",
+            "performance": "5.7.1.3.6",
+            "gains": 22527,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.KOBAYASHI",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "Y.INUTSUKA",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "VICTORY PACE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.2.7",
+            "gains": 21984,
+            "sex": "F",
+            "age": 3,
+            "trainer": "G.MOSSE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "GEMINI STUD",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 10,
             "horse": "CITY SOLACE",
-            "description": ""
+            "description": "",
+            "performance": "3.1.4.2.6",
+            "gains": 28210,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.MURPHY",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "W.O'LEARY",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "MUENCHEN",
-            "description": ""
+            "description": "",
+            "performance": "6.3.7.1.2",
+            "gains": 29851,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.ESCUDER",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "B.GIRAUDON",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "NIEDERBRONN",
-            "description": ""
+            "description": "",
+            "performance": "3.5.0.4",
+            "gains": 11406,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.RULEC",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "C.FOELLER",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "HOWITZER",
-            "description": ""
+            "description": "",
+            "performance": "8.0.4.6.1",
+            "gains": 23243,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H.GHABRI",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "H.ARIBI",
+            "weight": 55.0,
+            "draw": 6
         },
         {
             "number": 14,
             "horse": "SQUARE D'ANVERS",
-            "description": ""
+            "description": "",
+            "performance": "0.8.1.7.9",
+            "gains": 10470,
+            "sex": "H",
+            "age": 3,
+            "trainer": "V.DISSAUX",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "EC. SERGE STEMPNIAK",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 15,
             "horse": "SAYVILLE",
-            "description": ""
+            "description": "",
+            "performance": "3.5.7.3.4",
+            "gains": 9669,
+            "sex": "M",
+            "age": 3,
+            "trainer": "V.DISSAUX",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "M.HOVELACQUE",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "WOOD MING",
-            "description": ""
+            "description": "",
+            "performance": "1.1.7.0.0",
+            "gains": 24419,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.BARANDE BARBE",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "C.BARANDE BARBE",
+            "weight": 54.5,
+            "draw": 8
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             12,

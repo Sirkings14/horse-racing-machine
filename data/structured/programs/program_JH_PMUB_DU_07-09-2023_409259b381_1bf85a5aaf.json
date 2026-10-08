@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_07-09-2023_409259b381_1bf85a5aaf.txt",
-    "parsed_at": "2026-10-08T10:35:43.390499Z",
+    "parsed_at": "2026-10-08T23:52:16.238466Z",
     "date": "2023-09-07",
     "race": {
         "race_name": "PRIX DE LA GALERIE DES VARIETES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DEEP HOPE",
-            "description": ""
+            "description": "",
+            "performance": "6.6.6.0.3",
+            "gains": 84100,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "A.FRASSETTO",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "SIMPLY STRIKING",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.0.1",
+            "gains": 308137,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.SOUMILLON",
+            "jockey": "M.DEL.SANCHEZ",
+            "driver": "M.DEL.SANCHEZ",
+            "owner": "CUA.MEDITERRANEO",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "SUN FLARE",
-            "description": ""
+            "description": "",
+            "performance": "2.7.5.6.0",
+            "gains": 50670,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "GODOLPHIN SNC",
+            "weight": 59.5,
+            "draw": 5
         },
         {
             "number": 4,
             "horse": "TORPEN",
-            "description": ""
+            "description": "",
+            "performance": "1.0.6.0.7",
+            "gains": 243170,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "R.SCHOOF",
+            "driver": "R.SCHOOF",
+            "owner": "R.SCHOOF",
+            "weight": 59.0,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "GALIK",
-            "description": ""
+            "description": "",
+            "performance": "4.5.7.1.9",
+            "gains": 87100,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "P.SOGORB",
+            "driver": "P.SOGORB",
+            "owner": "GUY PAR.HOLDING",
+            "weight": 57.5,
+            "draw": 8
         },
         {
             "number": 6,
             "horse": "CICCIO BOY",
-            "description": ""
+            "description": "",
+            "performance": "3.7.3.4.2",
+            "gains": 175490,
+            "sex": "M",
+            "age": 5,
+            "trainer": "B.MURZABAYEV",
+            "jockey": "I.ENDALTSEV",
+            "driver": "I.ENDALTSEV",
+            "owner": "A.SALIKBAYEV",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "INDYCO",
-            "description": ""
+            "description": "",
+            "performance": "6.0.5.5.9",
+            "gains": 222488,
+            "sex": "M",
+            "age": 8,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "B.GIRAUDON",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 8,
             "horse": "PEDRITO",
-            "description": ""
+            "description": "",
+            "performance": "6.2.6.4.9",
+            "gains": 108570,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HA.PANTALL",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 9,
             "horse": "HOLLYHOCK",
-            "description": ""
+            "description": "",
+            "performance": "0.0.3.1.0",
+            "gains": 73970,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "M.NIGGE",
+            "driver": "M.NIGGE",
+            "owner": "EC. M. TSCHOPP",
+            "weight": 55.5,
+            "draw": 1
         },
         {
             "number": 10,
             "horse": "CENTENARIO",
-            "description": ""
+            "description": "",
+            "performance": "0.4.7.6.4",
+            "gains": 66910,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "S.CASTANHEIRA",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "TOIJK",
-            "description": ""
+            "description": "",
+            "performance": "5.7.5.0.0",
+            "gains": 152251,
+            "sex": "H",
+            "age": 7,
+            "trainer": "S.PASQUIER",
+            "jockey": "H.SAUER",
+            "driver": "H.SAUER",
+            "owner": "STALL LAURUS",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "LIGHT WAKEUP",
-            "description": ""
+            "description": "",
+            "performance": "0.6.1.1.9",
+            "gains": 109327,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.BOISSEAU",
+            "jockey": "H.BOUJARDINE",
+            "driver": "H.BOUJARDINE",
+            "owner": "H.BOUJARDINE",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 13,
             "horse": "WHITE PLATIN",
-            "description": ""
+            "description": "",
+            "performance": "3.0.5.8.0",
+            "gains": 102628,
+            "sex": "H",
+            "age": 5,
+            "trainer": "R.THOMAS",
+            "jockey": "C.B. BARBE",
+            "driver": "C.B. BARBE",
+            "owner": "D.SIEGENTHALER",
+            "weight": 54.5,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "SCOTTISH SAINT",
-            "description": ""
+            "description": "",
+            "performance": "8.8.8.9.4",
+            "gains": 25700,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "I.CORBANI",
+            "weight": 53.5,
+            "draw": 11
         },
         {
             "number": 15,
             "horse": "ESSAI TRANSFORME",
-            "description": ""
+            "description": "",
+            "performance": "3.7.6.1.0",
+            "gains": 71470,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "RACING STARS",
+            "weight": 53.0,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "WOFF",
-            "description": ""
+            "description": "",
+            "performance": "4.0.0.5.1",
+            "gains": 62970,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.VERON",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "H.BOUTIN",
+            "weight": 52.5,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

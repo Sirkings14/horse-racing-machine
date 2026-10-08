@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-23-05-2024_eeb47db69a_9916d7e999.txt",
-    "parsed_at": "2026-10-08T10:35:41.621449Z",
+    "parsed_at": "2026-10-08T23:52:13.798123Z",
     "date": "2024-05-23",
     "race": {
         "race_name": "PRIX DES EPINETTES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LOVERS DAY",
-            "description": ""
+            "description": "",
+            "performance": "0.1.4.2.1",
+            "gains": 64650,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DRIDRI/EC.J.PIASCO",
+            "weight": 60.0,
+            "draw": 15
         },
         {
             "number": 2,
             "horse": "GET TOGETHER",
-            "description": ""
+            "description": "",
+            "performance": "5.2.1.5.1",
+            "gains": 40450,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. MG",
+            "weight": 57.0,
+            "draw": 6
         },
         {
             "number": 3,
             "horse": "GOWAY",
-            "description": ""
+            "description": "",
+            "performance": "8.0.3.1.3",
+            "gains": 62950,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "GUY PARIENTE HOLDING",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 4,
             "horse": "NATURAL GIFT",
-            "description": ""
+            "description": "",
+            "performance": "4.1.2.4.3",
+            "gains": 22650,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "VAZIRHAN",
-            "description": ""
+            "description": "",
+            "performance": "1.3.7.9",
+            "gains": 11650,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "H.H. AGA KHAN",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "AMALYA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.7.7",
+            "gains": 32500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "V.SEGUY",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "EC.EDGAR MESSAOUD",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "DEMPY",
-            "description": ""
+            "description": "",
+            "performance": "7.1.5.5.4",
+            "gains": 19350,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "V.HEAD",
+            "driver": "V.HEAD",
+            "owner": "P.WATTANAVRANGKUL",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "LALA LIGHT",
-            "description": ""
+            "description": "",
+            "performance": "5.6.6.1",
+            "gains": 16150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "F.BLICHFELDT",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "KING TREZY",
-            "description": ""
+            "description": "",
+            "performance": "3.4.3.5",
+            "gains": 10650,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "E.FEURTET",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 10,
             "horse": "DYMKA",
-            "description": ""
+            "description": "",
+            "performance": "6.8.3.3",
+            "gains": 7500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "H.BOUTIN",
+            "jockey": "G.ALIMPINISIS",
+            "driver": "G.ALIMPINISIS",
+            "owner": "A.DIMITROPOULOS",
+            "weight": 55.0,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "BAD BOY",
-            "description": ""
+            "description": "",
+            "performance": "2.2.7.2.2",
+            "gains": 51450,
+            "sex": "H",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. FRIEDRIDER",
+            "weight": 54.5,
+            "draw": 2
         },
         {
             "number": 12,
             "horse": "FASHION GREY",
-            "description": ""
+            "description": "",
+            "performance": "4.6.2.1.2",
+            "gains": 34150,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HA.PANTALL",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "STAR OF THE NIGHT",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.7.4",
+            "gains": 23800,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "P. DE CHEVIGNY",
+            "driver": "P. DE CHEVIGNY",
+            "owner": "I.CORBANI",
+            "weight": 54.5,
+            "draw": 13
         },
         {
             "number": 14,
             "horse": "ZVIKOVA",
-            "description": ""
+            "description": "",
+            "performance": "7.5.1.3.7",
+            "gains": 20200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "A.JATHIERE",
+            "weight": 54.5,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "AGORIA",
-            "description": ""
+            "description": "",
+            "performance": "6.1.9.2",
+            "gains": 17550,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "HOLLYMOUNT STUD",
+            "weight": 54.5,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "MEISHO VELITE",
-            "description": ""
+            "description": "",
+            "performance": "6.9.6.3.1",
+            "gains": 17550,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.GROSSO",
+            "jockey": "S.KOBAYASHI",
+            "driver": "S.KOBAYASHI",
+            "owner": "Y.MATSUMOTO",
+            "weight": 54.5,
+            "draw": 12
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

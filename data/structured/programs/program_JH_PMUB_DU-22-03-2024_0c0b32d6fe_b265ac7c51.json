@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-22-03-2024_0c0b32d6fe_b265ac7c51.txt",
-    "parsed_at": "2026-10-08T10:35:41.506744Z",
+    "parsed_at": "2026-10-08T23:52:13.630862Z",
     "date": "2024-03-22",
     "race": {
         "race_name": "ATTELE",
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "HIPSTER",
-            "description": ""
+            "description": "",
+            "performance": "4.9.7.0.0",
+            "gains": 103530,
+            "sex": "M",
+            "age": 7,
+            "trainer": "J. GUELPA",
+            "jockey": "J. GUELPA",
+            "driver": "J. GUELPA",
+            "owner": "JACKY MIGNON",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "FICIMER",
-            "description": ""
+            "description": "",
+            "performance": "1.1.D.0.7",
+            "gains": 125015,
+            "sex": "H",
+            "age": 9,
+            "trainer": "E. RAFFIN",
+            "jockey": "D. ALEXANDRE",
+            "driver": "D. ALEXANDRE",
+            "owner": "L.J. MARTIN",
+            "listed_chrono": "1.13.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "HETRE D'OURVILLE",
-            "description": ""
+            "description": "",
+            "performance": "D.2.3.2.6",
+            "gains": 125205,
+            "sex": "H",
+            "age": 7,
+            "trainer": "P. HOUEL",
+            "jockey": "V. MOQUET",
+            "driver": "V. MOQUET",
+            "owner": "D. MARCON",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "GAMIN BAZOQUAIN",
-            "description": ""
+            "description": "",
+            "performance": "3.2.1.1.D",
+            "gains": 186540,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. COLLETTE",
+            "jockey": "D. LECROQ",
+            "driver": "D. LECROQ",
+            "owner": "EC. DES CHARMES",
+            "listed_chrono": "1.14.00",
+            "listed_distance": "2875.M"
         },
         {
             "number": 5,
             "horse": "GUERRIER CASTELETS",
-            "description": ""
+            "description": "",
+            "performance": "D.1.3.3.D",
+            "gains": 194380,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. ABRIVARD",
+            "jockey": "BARBARA GUENET",
+            "driver": "BARBARA GUENET",
+            "owner": "BARBARA GUENET",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2875.M"
         },
         {
             "number": 6,
             "horse": "FELLI ELEVEN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.9.R",
+            "gains": 206430,
+            "sex": "M",
+            "age": 9,
+            "trainer": "F. GUERINEAU",
+            "jockey": "A. RIPOLL RIGO",
+            "driver": "A. RIPOLL RIGO",
+            "owner": "CU. HERM. INIGUEZ",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2875.M"
         },
         {
             "number": 7,
             "horse": "GOAL STAR",
-            "description": ""
+            "description": "",
+            "performance": "5.3.5.1.9",
+            "gains": 207400,
+            "sex": "H",
+            "age": 8,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "D. LOCQUENEUX",
+            "driver": "D. LOCQUENEUX",
+            "owner": "EC. LUCKY 8 RACING",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 8,
             "horse": "HORATIUS D'ELA",
-            "description": ""
+            "description": "",
+            "performance": "5.1.7.1.3",
+            "gains": 211395,
+            "sex": "M",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "M. SASSIER",
+            "driver": "M. SASSIER",
+            "owner": "E. PIERRE",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2875.M"
         },
         {
             "number": 9,
             "horse": "GARDE A VOUS",
-            "description": ""
+            "description": "",
+            "performance": "7.D.6.4.6",
+            "gains": 213135,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. REBECHE",
+            "jockey": "V. LEBARQUE",
+            "driver": "V. LEBARQUE",
+            "owner": "EC.CTE P. DE MONTESSON",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 10,
             "horse": "EXTREME DESBOIS",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.6.D",
+            "gains": 221470,
+            "sex": "H",
+            "age": 10,
+            "trainer": "B. GOETZ",
+            "jockey": "B. GOETZ",
+            "driver": "B. GOETZ",
+            "owner": "B. GOETZ",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2875.M"
         },
         {
             "number": 11,
             "horse": "HAUTBRION COLMI",
-            "description": ""
+            "description": "",
+            "performance": "1.1.3.D.D",
+            "gains": 222480,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. LAGADEUC",
+            "jockey": "CH.A. MARY",
+            "driver": "CH.A. MARY",
+            "owner": "B. GUIGNARD",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2875.M"
         },
         {
             "number": 12,
             "horse": "GINO VIVA",
-            "description": ""
+            "description": "",
+            "performance": "1.9.5.4.7",
+            "gains": 231490,
+            "sex": "H",
+            "age": 8,
+            "trainer": "G. GELORMINI",
+            "jockey": "D. LOCQUENEUX",
+            "driver": "D. LOCQUENEUX",
+            "owner": "ANNA KARLSSON",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2875.M"
         },
         {
             "number": 13,
             "horse": "HOVE PONT VAUTIER",
-            "description": ""
+            "description": "",
+            "performance": "6.6.3.3.3",
+            "gains": 234260,
+            "sex": "M",
+            "age": 7,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "EC. LE TREMONT",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2875.M"
         },
         {
             "number": 14,
             "horse": "FLYING BRICKELL",
-            "description": ""
+            "description": "",
+            "performance": "2.6.0.D.D",
+            "gains": 235870,
+            "sex": "H",
+            "age": 9,
+            "trainer": "S. ERNAULT",
+            "jockey": "S. ERNAULT",
+            "driver": "S. ERNAULT",
+            "owner": "X. SIWA",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2875.M"
         },
         {
             "number": 15,
             "horse": "GIMS DU PLESSIS",
-            "description": ""
+            "description": "",
+            "performance": "0.2.1.2.1",
+            "gains": 237830,
+            "sex": "H",
+            "age": 8,
+            "trainer": "PH. BOUTIN",
+            "jockey": "PH. BOUTIN",
+            "driver": "PH. BOUTIN",
+            "owner": "PH. ROULIERE",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2875.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

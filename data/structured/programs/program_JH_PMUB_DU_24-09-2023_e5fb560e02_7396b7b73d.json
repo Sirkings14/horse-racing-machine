@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_24-09-2023_e5fb560e02_7396b7b73d.txt",
-    "parsed_at": "2026-10-08T10:35:45.696490Z",
+    "parsed_at": "2026-10-08T23:52:19.568395Z",
     "date": "2023-09-24",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "FOREVER JIEL",
-            "description": ""
+            "description": "",
+            "performance": "6.D.D.7.3",
+            "gains": 205490,
+            "sex": "H",
+            "age": 8,
+            "trainer": "GUILLAUME MARTIN",
+            "jockey": "J.L. DERSOIR",
+            "driver": "J.L. DERSOIR",
+            "owner": "Ec. LUCK",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "GABY DES VALS",
-            "description": ""
+            "description": "",
+            "performance": "2.D.2.0.1",
+            "gains": 211730,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "C. VALENCE",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "EQUEJUELO",
-            "description": ""
+            "description": "",
+            "performance": "0.8.6.D.2",
+            "gains": 215860,
+            "sex": "M",
+            "age": 9,
+            "trainer": "D. BONNE",
+            "jockey": "F. LERCIER",
+            "driver": "F. LERCIER",
+            "owner": "J.M. SOUICI",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "GARDNER SHAW",
-            "description": ""
+            "description": "",
+            "performance": "5.1.1.5.1",
+            "gains": 217079,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N. HENRY",
+            "jockey": "Y. HENRY",
+            "driver": "Y. HENRY",
+            "owner": "Jérôme LARQUET",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "DIWI D'OCCAGNES",
-            "description": ""
+            "description": "",
+            "performance": "2.A.6.D.D",
+            "gains": 222230,
+            "sex": "H",
+            "age": 10,
+            "trainer": "D. BROHIER",
+            "jockey": "D. BROHIER",
+            "driver": "D. BROHIER",
+            "owner": "D. BROHIER",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "GRIZZLY BEAR",
-            "description": ""
+            "description": "",
+            "performance": "4.1.2.6.1",
+            "gains": 227710,
+            "sex": "M",
+            "age": 7,
+            "trainer": "E. RAFFIN",
+            "jockey": "J.PH. MONCLIN",
+            "driver": "J.PH. MONCLIN",
+            "owner": "Scu. TWISTER",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "GAZ D'OCCAGNES",
-            "description": ""
+            "description": "",
+            "performance": "A.1.1.1.4",
+            "gains": 232830,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. BARRIER",
+            "jockey": "G. CURENS",
+            "driver": "G. CURENS",
+            "owner": "Ec. J. KONJOVIC",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 8,
             "horse": "GRAAL DU TRESOR",
-            "description": ""
+            "description": "",
+            "performance": "2.D.2.1.4",
+            "gains": 237380,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M. MOTTIER",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "C. BEILEARD MOTTIER",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 9,
             "horse": "GILMOUR",
-            "description": ""
+            "description": "",
+            "performance": "5.6.3.2.3",
+            "gains": 240570,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. LAGADEUC",
+            "jockey": "D. DELAROCHE",
+            "driver": "D. DELAROCHE",
+            "owner": "D. DELAROCHE",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 10,
             "horse": "FILOU DE CHARDET",
-            "description": ""
+            "description": "",
+            "performance": "4.3.3.9.0",
+            "gains": 242120,
+            "sex": "H",
+            "age": 8,
+            "trainer": "S. OLIVIER",
+            "jockey": "PH. DAUGEARD",
+            "driver": "PH. DAUGEARD",
+            "owner": "Ec. Ph. DAUGEARD",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 11,
             "horse": "GRANDE DE RANCHY",
-            "description": ""
+            "description": "",
+            "performance": "0.5.7.8.6",
+            "gains": 242270,
+            "sex": "F",
+            "age": 7,
+            "trainer": "F. NIVARD",
+            "jockey": "E. VARIN",
+            "driver": "E. VARIN",
+            "owner": "Ec. E. VARIN",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 12,
             "horse": "GAZOLINE DU SEUX",
-            "description": ""
+            "description": "",
+            "performance": "0.6.D.8.0",
+            "gains": 242410,
+            "sex": "F",
+            "age": 7,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "C. TRAVERT",
+            "driver": "C. TRAVERT",
+            "owner": "C. TRAVERT",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 13,
             "horse": "EMBLEME ORANGE",
-            "description": ""
+            "description": "",
+            "performance": "2.3.8.0.D",
+            "gains": 244595,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J. GUELPA",
+            "jockey": "J. GUELPA",
+            "driver": "J. GUELPA",
+            "owner": "Ec. Y.J. LE BEZVOET",
+            "listed_chrono": "1.12.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 14,
             "horse": "ZELOV",
-            "description": ""
+            "description": "",
+            "performance": "0.D.9.D.D",
+            "gains": 247279,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A. MARIE",
+            "jockey": "A. MARIE",
+            "driver": "A. MARIE",
+            "owner": "Ec. INITIAL",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 15,
             "horse": "EVEIL DU LUPIN",
-            "description": ""
+            "description": "",
+            "performance": "5.2.D.4.D",
+            "gains": 248980,
+            "sex": "H",
+            "age": 9,
+            "trainer": "D. THOMAIN",
+            "jockey": "F. TERRY",
+            "driver": "F. TERRY",
+            "owner": "Ec.WATCH BUY WIN",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 16,
             "horse": "GIMY DU POMMEREUX",
-            "description": ""
+            "description": "",
+            "performance": "D.2.0.8.1",
+            "gains": 249890,
+            "sex": "M",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "D. CINIER",
+            "driver": "D. CINIER",
+            "owner": "G. LHERPINIERE",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2850.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

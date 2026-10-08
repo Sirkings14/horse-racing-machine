@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_19-10-2023_55a66b62cd_79f3864173.txt",
-    "parsed_at": "2026-10-08T10:35:45.010257Z",
+    "parsed_at": "2026-10-08T23:52:18.587747Z",
     "date": "2023-10-19",
     "race": {
         "race_name": "PRIX DE LA FORET DE LYONS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "WONNEMOND",
-            "description": ""
+            "description": "",
+            "performance": "9.5.8.0.6",
+            "gains": 686505,
+            "sex": "H",
+            "age": 10,
+            "trainer": "A.MADAMET",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "STALL FROHNBACH",
+            "weight": 62.0,
+            "draw": 15
         },
         {
             "number": 2,
             "horse": "MR COALVILLE",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.1.1",
+            "gains": 94224,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "R.NG",
+            "weight": 58.5,
+            "draw": 5
         },
         {
             "number": 3,
             "horse": "CICCIO BOY",
-            "description": ""
+            "description": "",
+            "performance": "6.0.3.7.3",
+            "gains": 175490,
+            "sex": "M",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "I.ENDALTSEV",
+            "driver": "I.ENDALTSEV",
+            "owner": "A.SALIKBAYEV",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "UZEL",
-            "description": ""
+            "description": "",
+            "performance": "2.9.5.1.0",
+            "gains": 126290,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "S.AKNIN",
+            "weight": 58.0,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "SKY POWER",
-            "description": ""
+            "description": "",
+            "performance": "8.4.3.0.5",
+            "gains": 182036,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.GUYON",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "ROY RACING LTD",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "KHOCHENKO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.0.0",
+            "gains": 259870,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.BARZALONA",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "JL.BOUYENVAL",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "THE LAUREATE",
-            "description": ""
+            "description": "",
+            "performance": "3.2.0.1.6",
+            "gains": 76580,
+            "sex": "M",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "I.CORBANI",
+            "weight": 56.5,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "EXCITING",
-            "description": ""
+            "description": "",
+            "performance": "0.5.0.9.4",
+            "gains": 69680,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "WOOD. BLOOD. LTD",
+            "weight": 56.0,
+            "draw": 1
         },
         {
             "number": 9,
             "horse": "DRAGONET",
-            "description": ""
+            "description": "",
+            "performance": "5.8.2.0.0",
+            "gains": 165962,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.CRASTUS",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 10,
             "horse": "PORTALIS",
-            "description": ""
+            "description": "",
+            "performance": "6.0.2.3.1",
+            "gains": 75470,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.BACHELOT",
+            "jockey": "JP.GAUVIN",
+            "driver": "JP.GAUVIN",
+            "owner": "SARL EC. BORGEL",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "VIS LE REVE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.7.1",
+            "gains": 50800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "S.BROGI",
+            "driver": "S.BROGI",
+            "owner": "J.ANXO",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "PUMP PUMP JUNIOR",
-            "description": ""
+            "description": "",
+            "performance": "5.2.6.3.1",
+            "gains": 60930,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "JP.GAUVIN",
+            "driver": "JP.GAUVIN",
+            "owner": "JC.BOURET",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "GRAND BALCON",
-            "description": ""
+            "description": "",
+            "performance": "9.0.8.4.3",
+            "gains": 59680,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D.SALMON",
+            "jockey": "J.MERIENNE",
+            "driver": "J.MERIENNE",
+            "owner": "A.GALLO",
+            "weight": 54.5,
+            "draw": 9
         },
         {
             "number": 14,
             "horse": "CHANCE",
-            "description": ""
+            "description": "",
+            "performance": "4.5.5.1.2",
+            "gains": 67157,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D.PROVOST",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "EC. M. OFFENSTADT",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "LOOKING AT ME",
-            "description": ""
+            "description": "",
+            "performance": "4.3.2.3.3",
+            "gains": 52200,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.ROUSSEL",
+            "jockey": "P.DE CHEVIGNY",
+            "driver": "P.DE CHEVIGNY",
+            "owner": "EC. LE CERCLE",
+            "weight": 54.0,
+            "draw": 11
         },
         {
             "number": 16,
             "horse": "RESTLESS SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "0.5.0.5.3",
+            "gains": 48040,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "P&F.ADDA & RENAUT",
+            "driver": "P&F.ADDA & RENAUT",
+            "owner": "EC. CLUB DES ETOILES",
+            "weight": 53.0,
+            "draw": 8
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

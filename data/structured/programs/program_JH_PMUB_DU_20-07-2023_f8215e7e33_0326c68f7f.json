@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_20-07-2023_f8215e7e33_0326c68f7f.txt",
-    "parsed_at": "2026-10-08T10:35:45.111385Z",
+    "parsed_at": "2026-10-08T23:52:18.732030Z",
     "date": "2023-07-20",
     "race": {
         "race_name": "PRIX VICHY COMMUNAUTE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "BELGIAN PRINCE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.1.3.0",
+            "gains": 188087,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "EC. GRIBOMONT",
+            "weight": 61.0,
+            "draw": 1
         },
         {
             "number": 2,
             "horse": "MY CHARMING PRINCE",
-            "description": ""
+            "description": "",
+            "performance": "3.2.0.3.1",
+            "gains": 177020,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M.GUYON",
+            "jockey": "J.ANDREU",
+            "driver": "J.ANDREU",
+            "owner": "LH",
+            "weight": 59.5,
+            "draw": 5
         },
         {
             "number": 3,
             "horse": "SIR GEORGE",
-            "description": ""
+            "description": "",
+            "performance": "3.0.3.1.0",
+            "gains": 137954,
+            "sex": "M",
+            "age": 7,
+            "trainer": "A.POUCHIN",
+            "jockey": "N.PAYSAN",
+            "driver": "N.PAYSAN",
+            "owner": "R.GROSBOIS",
+            "weight": 59.5,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "MYKISS",
-            "description": ""
+            "description": "",
+            "performance": "1.2.9.5.4",
+            "gains": 164009,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "G.BATISTIC",
+            "driver": "G.BATISTIC",
+            "owner": "STALL BRASILIEN",
+            "weight": 59.0,
+            "draw": 16
         },
         {
             "number": 5,
             "horse": "ROCK JOYEUX",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.9.0",
+            "gains": 88530,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.RUIS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N.TEMAM",
+            "weight": 58.5,
+            "draw": 14
         },
         {
             "number": 6,
             "horse": "UTAMARO",
-            "description": ""
+            "description": "",
+            "performance": "2.3.6.6.3",
+            "gains": 142890,
+            "sex": "M",
+            "age": 5,
+            "trainer": "M.FOREST",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "STALL CIMBA",
+            "weight": 58.0,
+            "draw": 7
         },
         {
             "number": 7,
             "horse": "MATAURI GOLD",
-            "description": ""
+            "description": "",
+            "performance": "6.4.1.9.3",
+            "gains": 35350,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F.VERON",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "EC. TYGALY",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "GALEGO STAR",
-            "description": ""
+            "description": "",
+            "performance": "7.1.1.A.8",
+            "gains": 33060,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.JOURNIAC",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "M.ARIAS",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "EDWINA",
-            "description": ""
+            "description": "",
+            "performance": "4.A.3.A.6",
+            "gains": 8600,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "J.PH .DUBOIS",
+            "driver": "J.PH .DUBOIS",
+            "owner": "EC. VICT.DREAMS",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "KINTANA BLUE",
-            "description": ""
+            "description": "",
+            "performance": "3.8.1.8.5",
+            "gains": 33750,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "EC. QUADRABLUE",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "LA TEMPLIERE",
-            "description": ""
+            "description": "",
+            "performance": "1.3.3.5.2",
+            "gains": 82070,
+            "sex": "F",
+            "age": 5,
+            "trainer": "G.MOSSE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "F.PERREE",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "COTE JARDIN",
-            "description": ""
+            "description": "",
+            "performance": "6.8.6.7.0",
+            "gains": 50241,
+            "sex": "M",
+            "age": 6,
+            "trainer": "B.MURZABAYEV",
+            "jockey": "J.CHALOUPKA",
+            "driver": "J.CHALOUPKA",
+            "owner": "CAJDASROT S.R.O.",
+            "weight": 54.5,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "SHAMSABAD",
-            "description": ""
+            "description": "",
+            "performance": "3.4.1.4.2",
+            "gains": 250055,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.BARZALONA",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "B.LYNAM",
+            "weight": 54.0,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "SUPER QUARTZ",
-            "description": ""
+            "description": "",
+            "performance": "2.6.3.6.7",
+            "gains": 58840,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "M.SCANDELLA-LACAILLE",
+            "driver": "M.SCANDELLA-LACAILLE",
+            "owner": "R.CAPOZZI",
+            "weight": 54.0,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "THAT'S MY POWER",
-            "description": ""
+            "description": "",
+            "performance": "2.2.7.2.4",
+            "gains": 35285,
+            "sex": "M",
+            "age": 4,
+            "trainer": "B.MARIE",
+            "jockey": "D.DE WAELE",
+            "driver": "D.DE WAELE",
+            "owner": "H.DE WAELE",
+            "weight": 53.5,
+            "draw": 6
         },
         {
             "number": 16,
             "horse": "KAPANI",
-            "description": ""
+            "description": "",
+            "performance": "2.2.4.7.9",
+            "gains": 68850,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.NICCO",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "H.MERAUD",
+            "weight": 53.0,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

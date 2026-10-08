@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_30-10-2023_64646f90ab_ad84b1907b.txt",
-    "parsed_at": "2026-10-08T10:35:46.479785Z",
+    "parsed_at": "2026-10-08T23:52:20.720938Z",
     "date": "2023-10-30",
     "race": {
         "race_name": "PRIX DE SAINT-PAIR-DU-MONT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "TOLLEVAST",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.2.4",
+            "gains": 55370,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "FA.MC NULTY",
+            "weight": 62.5,
+            "draw": 16
         },
         {
             "number": 2,
             "horse": "ZAUR",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.1.1",
+            "gains": 42080,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "B.LONG",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "PLAIN BEAU",
-            "description": ""
+            "description": "",
+            "performance": "6.1.2.2.2",
+            "gains": 172505,
+            "sex": "H",
+            "age": 8,
+            "trainer": "S.PLANQUE",
+            "jockey": "JUL .PHELIPPON",
+            "driver": "JUL .PHELIPPON",
+            "owner": "G.CAGGIULA",
+            "weight": 58.5,
+            "draw": 7
         },
         {
             "number": 4,
             "horse": "MONEYMAN",
-            "description": ""
+            "description": "",
+            "performance": "2.3.4.9.2",
+            "gains": 69500,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "WERTH.& FRERE",
+            "weight": 58.0,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "FLATTEN THE CURVE",
-            "description": ""
+            "description": "",
+            "performance": "0.2.8.4.0",
+            "gains": 93050,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "C.FEY",
+            "driver": "C.FEY",
+            "owner": "E.SAUREN",
+            "weight": 56.5,
+            "draw": 5
         },
         {
             "number": 6,
             "horse": "NORTH HUNTER",
-            "description": ""
+            "description": "",
+            "performance": "3.9.2.3.1",
+            "gains": 125310,
+            "sex": "H",
+            "age": 8,
+            "trainer": "H.BESNIER",
+            "jockey": "E.MADER",
+            "driver": "E.MADER",
+            "owner": "STALL RAMON",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "DREAMS",
-            "description": ""
+            "description": "",
+            "performance": "8.0.8.7.7",
+            "gains": 76640,
+            "sex": "M",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "S.PECORARO",
+            "driver": "S.PECORARO",
+            "owner": "P.FLORE",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "SUNFAST",
-            "description": ""
+            "description": "",
+            "performance": "1.0.0.7.3",
+            "gains": 61710,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "ARGELLA RACING",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "SHAMSABAD",
-            "description": ""
+            "description": "",
+            "performance": "5.8.0.3.4",
+            "gains": 251135,
+            "sex": "H",
+            "age": 8,
+            "trainer": "T.PICCONE",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "B.LYNAM",
+            "weight": 54.0,
+            "draw": 4
         },
         {
             "number": 10,
             "horse": "QUELLO",
-            "description": ""
+            "description": "",
+            "performance": "1.8.3.4.0",
+            "gains": 96360,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "P.DECOUZ",
+            "driver": "P.DECOUZ",
+            "owner": "GOUSSERIE RACING",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 11,
             "horse": "YOU ROCK",
-            "description": ""
+            "description": "",
+            "performance": "6.1.6.5.2",
+            "gains": 85868,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.TRULLIER",
+            "jockey": "J.CARAYON",
+            "driver": "J.CARAYON",
+            "owner": "J.CARAYON",
+            "weight": 53.5,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "ZULU NYALA",
-            "description": ""
+            "description": "",
+            "performance": "7.3.2.7.6",
+            "gains": 37420,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D.SANTIAGO",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "U.KLEIN",
+            "weight": 53.5,
+            "draw": 1
         },
         {
             "number": 13,
             "horse": "LUNA THE GREAT",
-            "description": ""
+            "description": "",
+            "performance": "7.6.A.4.A",
+            "gains": 35350,
+            "sex": "F",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "S.DEHEZ",
+            "driver": "S.DEHEZ",
+            "owner": "L.ALARD",
+            "weight": 53.5,
+            "draw": 2
         },
         {
             "number": 14,
             "horse": "HOOTTON",
-            "description": ""
+            "description": "",
+            "performance": "7.4.5.3.0",
+            "gains": 113215,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.MANGIONE",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "EC. ROGIER",
+            "weight": 52.5,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "MORSAN",
-            "description": ""
+            "description": "",
+            "performance": "2.6.9.9.1",
+            "gains": 147221,
+            "sex": "H",
+            "age": 7,
+            "trainer": "S.RUIS",
+            "jockey": "C.BOUTIN",
+            "driver": "C.BOUTIN",
+            "owner": "D.DUGLAS",
+            "weight": 52.0,
+            "draw": 15
         },
         {
             "number": 16,
             "horse": "SNUGGLES",
-            "description": ""
+            "description": "",
+            "performance": "0.1.2.1.0",
+            "gains": 23500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "H.LEBOUC",
+            "jockey": "M.ANDRIA.RATSIMIHAH",
+            "driver": "M.ANDRIA.RATSIMIHAH",
+            "owner": "M.ANDRIA.RATSIMIHAH",
+            "weight": 52.0,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-04-02-2023_5e79d60422_95178ad6d5.txt",
-    "parsed_at": "2026-10-08T10:35:39.718651Z",
+    "parsed_at": "2026-10-08T23:52:11.066425Z",
     "date": "2023-02-02",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "PONT MIRABEAU",
-            "description": ""
+            "description": "",
+            "performance": "3.6.3.0.1",
+            "gains": 75490,
+            "sex": "H",
+            "age": 5,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "D.GUILLEMIN",
+            "driver": "D.GUILLEMIN",
+            "owner": "G.AU.NORMAND",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "EXCITING",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.0.4",
+            "gains": 49420,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "H.DE WAELE",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "BAIKAL",
-            "description": ""
+            "description": "",
+            "performance": "0.2.1.6.0",
+            "gains": 82585,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.DUPORTE",
+            "jockey": "D.DE WAELE",
+            "driver": "D.DE WAELE",
+            "owner": "J.N..TEMAM",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "BOSIOH",
-            "description": ""
+            "description": "",
+            "performance": "6.8.6.1.3",
+            "gains": 143080,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A.CRASTUS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "E.SAUREN",
+            "weight": 59.0,
+            "draw": 6
         },
         {
             "number": 5,
             "horse": "GREAT ROTATION",
-            "description": ""
+            "description": "",
+            "performance": "4.3.2.0.4",
+            "gains": 64500,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.PLANQUE",
+            "jockey": "H.GREWE",
+            "driver": "H.GREWE",
+            "owner": "P.FELLOUS",
+            "weight": 58.5,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "MORCOTE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.0.3",
+            "gains": 101100,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A.MOLINS",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "SARL EC. BORGEL",
+            "weight": 58.5,
+            "draw": 14
         },
         {
             "number": 7,
             "horse": "BOUGAINVILLIER",
-            "description": ""
+            "description": "",
+            "performance": "2.5.6.4.3",
+            "gains": 37400,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "A.SCHUTZ",
+            "driver": "A.SCHUTZ",
+            "owner": "M.BARON",
+            "weight": 58.5,
+            "draw": 3
         },
         {
             "number": 8,
             "horse": "PORTALIS",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.5.1",
+            "gains": 58400,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.LEMAITRE",
+            "jockey": "JP.GAUVIN",
+            "driver": "JP.GAUVIN",
+            "owner": "J.N.TEMAM",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 9,
             "horse": "YOUNG MAN",
-            "description": ""
+            "description": "",
+            "performance": "2.8.6.1.1",
+            "gains": 120915,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.SOUMILLON",
+            "jockey": "A.BARON",
+            "driver": "A.BARON",
+            "owner": "I.CORBANI",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "MISTER GRENADINE",
-            "description": ""
+            "description": "",
+            "performance": "1.0.0.0.1",
+            "gains": 64250,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "LORD CLINTON",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 11,
             "horse": "THE LAUREATE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.0.0.3",
+            "gains": 46710,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "A.WATTEL",
+            "driver": "A.WATTEL",
+            "owner": "MC.ELAERTS",
+            "weight": 56.5,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "SUPER SUPER SONIC",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.2.6",
+            "gains": 65395,
+            "sex": "M",
+            "age": 5,
+            "trainer": "M.GUYON",
+            "jockey": "AS.CROMBEZ",
+            "driver": "AS.CROMBEZ",
+            "owner": "EC. WALDECK",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "STORMY",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.4.6",
+            "gains": 135843,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A.POUCHIN",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "D.SMAGA",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 14,
             "horse": "CREATIVE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.0",
+            "gains": 144134,
+            "sex": "F",
+            "age": 7,
+            "trainer": "R.MANGIONE",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "WOOD.BLOODSTOCK",
+            "weight": 53.0,
+            "draw": 11
         },
         {
             "number": 15,
             "horse": "CIRCO MASSIMO",
-            "description": ""
+            "description": "",
+            "performance": "6.3.3.1.0",
+            "gains": 37150,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "H.MENNE.MARTINEZ",
+            "driver": "H.MENNE.MARTINEZ",
+            "owner": "STALL JOINT VENTURE",
+            "weight": 53.0,
+            "draw": 9
         },
         {
             "number": 16,
             "horse": "MAKTAVA",
-            "description": ""
+            "description": "",
+            "performance": "3.3.0.0.0",
+            "gains": 125030,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.PESLIER",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "H. MENNE. MARTINEZ",
+            "weight": 52.5,
+            "draw": 8
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

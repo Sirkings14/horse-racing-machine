@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-27-04-2024_8cd85dec08_efa9fa2bd0.txt",
-    "parsed_at": "2026-10-08T10:35:42.095062Z",
+    "parsed_at": "2026-10-08T23:52:14.461813Z",
     "date": "2024-04-27",
     "race": {
         "race_name": null,
@@ -16,94 +16,257 @@
         {
             "number": 1,
             "horse": "IRISH VOCATION",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.1.1",
+            "gains": 94195,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.ANDRIEUX",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "BIVANS SRL",
+            "weight": 71.0
         },
         {
             "number": 2,
             "horse": "HAUT LES COEURS",
-            "description": ""
+            "description": "",
+            "performance": "2.5.1.3.5",
+            "gains": 172130,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "N.DE LAGENESTE",
+            "driver": "N.DE LAGENESTE",
+            "owner": "HS DE SAINT-VOIR",
+            "weight": 69.0
         },
         {
             "number": 3,
             "horse": "LA MANIGANCE",
-            "description": ""
+            "description": "",
+            "performance": "5.4.1.2.4",
+            "gains": 460210,
+            "sex": "F",
+            "age": 6,
+            "trainer": "A.ZULIANI",
+            "jockey": "F.NICOLLE",
+            "driver": "F.NICOLLE",
+            "owner": "SARL CARION E.M.M.",
+            "weight": 69.0
         },
         {
             "number": 4,
             "horse": "ALENTEJO",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.1.3",
+            "gains": 118895,
+            "sex": "H",
+            "age": 5,
+            "trainer": "B.LE CLERC",
+            "jockey": "LAGENESTE & MACAIRE",
+            "driver": "LAGENESTE & MACAIRE",
+            "owner": "JD.COTTON",
+            "weight": 67.0
         },
         {
             "number": 5,
             "horse": "HO LA LA FOREZ",
-            "description": ""
+            "description": "",
+            "performance": "4.A.J.3.7",
+            "gains": 202435,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G.MASURE",
+            "jockey": "A.CHAILLE-CHAILLE",
+            "driver": "A.CHAILLE-CHAILLE",
+            "owner": "HS DE SAINT-VOIR",
+            "weight": 67.0
         },
         {
             "number": 6,
             "horse": "AIR COMMODORE",
-            "description": ""
+            "description": "",
+            "performance": "7.2.1.1.7",
+            "gains": 183725,
+            "sex": "H",
+            "age": 7,
+            "trainer": "J.REVELEY",
+            "jockey": "D.MELE",
+            "driver": "D.MELE",
+            "owner": "A.PEAKE",
+            "weight": 67.0
         },
         {
             "number": 7,
             "horse": "SIX ONE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.6.4.6",
+            "gains": 330155,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.PRICHARD",
+            "jockey": "F.NICOLLE",
+            "driver": "F.NICOLLE",
+            "owner": "C.ANDRE/ F.THOMAS",
+            "weight": 66.5
         },
         {
             "number": 8,
             "horse": "SAINT LOUIS BLUES",
-            "description": ""
+            "description": "",
+            "performance": "2.1.3.2.3",
+            "gains": 113690,
+            "sex": "H",
+            "age": 5,
+            "trainer": "J.CHARRON",
+            "jockey": "J.BOISNARD",
+            "driver": "J.BOISNARD",
+            "owner": "G.SAMAMA",
+            "weight": 66.5
         },
         {
             "number": 9,
             "horse": "VISION DU RHEU",
-            "description": ""
+            "description": "",
+            "performance": "8.7.2.3.5",
+            "gains": 175825,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.GILES",
+            "jockey": "J.DELAUNAY",
+            "driver": "J.DELAUNAY",
+            "owner": "J.DETRE/P.DETRE",
+            "weight": 66.0
         },
         {
             "number": 10,
             "horse": "LOU FAST",
-            "description": ""
+            "description": "",
+            "performance": "5.2.6.7.A",
+            "gains": 246265,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.PHILIPPERON",
+            "jockey": "ROB.COLLET",
+            "driver": "ROB.COLLET",
+            "owner": "EC. CMV DARBY STABLE",
+            "weight": 65.5
         },
         {
             "number": 11,
             "horse": "ILTONE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.1.8",
+            "gains": 87920,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.BEAURAIN",
+            "jockey": "N. GEORGE & A. ZETTERHOLM",
+            "driver": "N. GEORGE & A. ZETTERHOLM",
+            "owner": "THE FRANG. PARTNERSHIP",
+            "weight": 65.5
         },
         {
             "number": 12,
             "horse": "JASMINE DE CORTON",
-            "description": ""
+            "description": "",
+            "performance": "7.7.1.0.1",
+            "gains": 92475,
+            "sex": "F",
+            "age": 5,
+            "trainer": "R.MAYEUR",
+            "jockey": "E.GRALL",
+            "driver": "E.GRALL",
+            "owner": "D.GUYON",
+            "weight": 65.0
         },
         {
             "number": 13,
             "horse": "LE ROI DAVID",
-            "description": ""
+            "description": "",
+            "performance": "1.A.3.1.4",
+            "gains": 187570,
+            "sex": "H",
+            "age": 5,
+            "trainer": "K.NABET",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "D.DAHAN",
+            "weight": 64.5
         },
         {
             "number": 14,
             "horse": "GIACOSA",
-            "description": ""
+            "description": "",
+            "performance": "4.4.3.A.1",
+            "gains": 20757,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.LEFEBVRE",
+            "jockey": "S.LEECH",
+            "driver": "S.LEECH",
+            "owner": "B.HALSALL",
+            "weight": 63.0
         },
         {
             "number": 15,
             "horse": "FIRST DREAM",
-            "description": ""
+            "description": "",
+            "performance": "A.2.2.A.1",
+            "gains": 75000,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.ZULIANI",
+            "jockey": "H.MERIENNE",
+            "driver": "H.MERIENNE",
+            "owner": "PY.MERIENNE",
+            "weight": 62.5
         },
         {
             "number": 16,
             "horse": "MAMIX'S PASSION",
-            "description": ""
+            "description": "",
+            "performance": "3.2.2.2.2",
+            "gains": 201120,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.MEUNIER",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "EC.THOMAS SIVADIER",
+            "weight": 62.0
         },
         {
             "number": 17,
             "horse": "ONE STORY",
-            "description": ""
+            "description": "",
+            "performance": "5.2.1.3.3",
+            "gains": 104265,
+            "sex": "F",
+            "age": 7,
+            "trainer": "T.CHEVILLARD",
+            "jockey": "AS.PACAULT",
+            "driver": "AS.PACAULT",
+            "owner": "EC.PERFORMER'S & AS",
+            "weight": 62.0
         },
         {
             "number": 18,
             "horse": "REVE DE PRINCE",
-            "description": ""
+            "description": "",
+            "performance": "1.3.2.1.2",
+            "gains": 184440,
+            "sex": "H",
+            "age": 7,
+            "trainer": "JB.BRETON",
+            "jockey": "JR.BRETON",
+            "driver": "JR.BRETON",
+            "owner": "JP.DUGUEY/JR.BRETON",
+            "weight": 62.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_19-07-2024_9183544b63_59b4f8a46d.txt",
-    "parsed_at": "2026-10-08T10:35:44.965032Z",
+    "parsed_at": "2026-10-08T23:52:18.512037Z",
     "date": "2024-07-19",
     "race": {
         "race_name": "GRAND PRIX DE LA VILLE DE CABOURG",
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "FELICITA D'ECOUVES",
-            "description": ""
+            "description": "",
+            "performance": "5.3.9.3.2",
+            "gains": 211620,
+            "sex": "F",
+            "age": 9,
+            "trainer": "A. COLLETTE",
+            "jockey": "J. VILAULT",
+            "driver": "J. VILAULT",
+            "owner": "J. VILAULT",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2750.M"
         },
         {
             "number": 2,
             "horse": "FALCON D'OURVILLE",
-            "description": ""
+            "description": "",
+            "performance": "9.6.0.4.8",
+            "gains": 216220,
+            "sex": "H",
+            "age": 9,
+            "trainer": "L. BAUDOUIN",
+            "jockey": "E. VARIN",
+            "driver": "E. VARIN",
+            "owner": "EC. E. VARIN",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2750.M"
         },
         {
             "number": 3,
             "horse": "INSTINCT D'AM",
-            "description": ""
+            "description": "",
+            "performance": "5.8.7.7.4",
+            "gains": 227640,
+            "sex": "M",
+            "age": 6,
+            "trainer": "G. GELORMINI",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "SCU. A. E C. BORSANI",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2750.M"
         },
         {
             "number": 4,
             "horse": "FOLLOW ME FLASH",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.1",
+            "gains": 230945,
+            "sex": "H",
+            "age": 9,
+            "trainer": "ET. LEFRANC",
+            "jockey": "ET. LEFRANC",
+            "driver": "ET. LEFRANC",
+            "owner": "EC. ETIENNE LEFRANC",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2750.M"
         },
         {
             "number": 5,
             "horse": "FEE DU VERNAY",
-            "description": ""
+            "description": "",
+            "performance": "4.6.3.8.2",
+            "gains": 233190,
+            "sex": "F",
+            "age": 9,
+            "trainer": "D. THOMAIN",
+            "jockey": "V. SEGUIN",
+            "driver": "V. SEGUIN",
+            "owner": "EC. FOIRET",
+            "listed_chrono": "1.13.30",
+            "listed_distance": "2750.M"
         },
         {
             "number": 6,
             "horse": "INFANT PERRINE",
-            "description": ""
+            "description": "",
+            "performance": "8.D.4.3.4",
+            "gains": 238480,
+            "sex": "M",
+            "age": 6,
+            "trainer": "S. ERNAULT",
+            "jockey": "CH.A. MARY",
+            "driver": "CH.A. MARY",
+            "owner": "J.F. MARY",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2750.M"
         },
         {
             "number": 7,
             "horse": "ROCKY TILLY",
-            "description": ""
+            "description": "",
+            "performance": "8.0.D.4.7",
+            "gains": 239257,
+            "sex": "H",
+            "age": 10,
+            "trainer": "P.Y. VERVA",
+            "jockey": "J. WESTHOLM",
+            "driver": "J. WESTHOLM",
+            "owner": "STALL SLUGAS",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2750.M"
         },
         {
             "number": 8,
             "horse": "FILOU DE CHARDET",
-            "description": ""
+            "description": "",
+            "performance": "D.8.0.6.D",
+            "gains": 252340,
+            "sex": "H",
+            "age": 9,
+            "trainer": "S. OLIVIER",
+            "jockey": "PH. DAUGEARD",
+            "driver": "PH. DAUGEARD",
+            "owner": "EC. PH. DAUGEARD",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2750.M"
         },
         {
             "number": 9,
             "horse": "FOREVER JIEL",
-            "description": ""
+            "description": "",
+            "performance": "0.9.7.2.0",
+            "gains": 252575,
+            "sex": "H",
+            "age": 9,
+            "trainer": "B. ROCHARD",
+            "jockey": "J.L. DERSOIR",
+            "driver": "J.L. DERSOIR",
+            "owner": "EC. LUCK",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2750.M"
         },
         {
             "number": 10,
             "horse": "EXTRA DU CHATELET",
-            "description": ""
+            "description": "",
+            "performance": "4.1.9.0.0",
+            "gains": 253875,
+            "sex": "H",
+            "age": 10,
+            "trainer": "F. LAGADEUC",
+            "jockey": "F. TERRY",
+            "driver": "F. TERRY",
+            "owner": "A.TROMMENSCHLAGER",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2750.M"
         },
         {
             "number": 11,
             "horse": "FALCO DU DOUET",
-            "description": ""
+            "description": "",
+            "performance": "D.D.6.7.3",
+            "gains": 255190,
+            "sex": "M",
+            "age": 9,
+            "trainer": "F. NIVARD",
+            "jockey": "G. NION",
+            "driver": "G. NION",
+            "owner": "EC. J-P.R. VILAULT",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2750.M"
         },
         {
             "number": 12,
             "horse": "HAVE SEVEN",
-            "description": ""
+            "description": "",
+            "performance": "D.4.3.8.D",
+            "gains": 262100,
+            "sex": "H",
+            "age": 7,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "Y. DESMET",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2750.M"
         },
         {
             "number": 13,
             "horse": "FLY SPEED",
-            "description": ""
+            "description": "",
+            "performance": "8.6.8.9.6",
+            "gains": 389280,
+            "sex": "H",
+            "age": 9,
+            "trainer": "CL. FRECELLE",
+            "jockey": "J.PH. MONCLIN",
+            "driver": "J.PH. MONCLIN",
+            "owner": "EC. LEOMY",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2775.M"
         },
         {
             "number": 14,
             "horse": "ENZO D'ESSARTS",
-            "description": ""
+            "description": "",
+            "performance": "4.6.1.3.0",
+            "gains": 411160,
+            "sex": "H",
+            "age": 10,
+            "trainer": "R. LAGADEUC",
+            "jockey": "R. LAGADEUC",
+            "driver": "R. LAGADEUC",
+            "owner": "EC. DES ESSARTS",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2775.M"
         },
         {
             "number": 15,
             "horse": "GITANO",
-            "description": ""
+            "description": "",
+            "performance": "6.5.4.1.5",
+            "gains": 499340,
+            "sex": "H",
+            "age": 8,
+            "trainer": "THEO DUVALDESTIN",
+            "jockey": "TH. DUVALDESTIN",
+            "driver": "TH. DUVALDESTIN",
+            "owner": "Y. DESMET",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2775.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

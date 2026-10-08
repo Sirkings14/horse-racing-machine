@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-28-08-2025_ab2a63aa30_beebd96006.txt",
-    "parsed_at": "2026-10-08T10:35:42.235013Z",
+    "parsed_at": "2026-10-08T23:52:14.640301Z",
     "date": "2025-08-28",
     "race": {
         "race_name": "GRAND PRIX DES FEMMES JOCKEYS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DIVIDE AND RULE",
-            "description": ""
+            "description": "",
+            "performance": "6.5.1.6.7",
+            "gains": 74314,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JP.GAUVIN",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "J.ROHR",
+            "weight": 60.0,
+            "draw": 16
         },
         {
             "number": 2,
             "horse": "CHICA DE CIUDAD",
-            "description": ""
+            "description": "",
+            "performance": "5.1.2.0.1",
+            "gains": 69075,
+            "sex": "F",
+            "age": 4,
+            "trainer": "P.CHEVIGNY DE",
+            "jockey": "A.MOLINS",
+            "driver": "A.MOLINS",
+            "owner": "P.DE CHEVIGNY",
+            "weight": 59.5,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "ALVA",
-            "description": ""
+            "description": "",
+            "performance": "8.2.1.5.5",
+            "gains": 108890,
+            "sex": "F",
+            "age": 5,
+            "trainer": "F.CHAPPET",
+            "jockey": "M.MICHEL",
+            "driver": "M.MICHEL",
+            "owner": "A.GILIBERT",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "SALALAH",
-            "description": ""
+            "description": "",
+            "performance": "2.2.1.0.4",
+            "gains": 92721,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.ANDREU",
+            "jockey": "M.WALDHAUSER",
+            "driver": "M.WALDHAUSER",
+            "owner": "R.FOUQUET",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "ALREYYAH",
-            "description": ""
+            "description": "",
+            "performance": "4.1.5.1.4",
+            "gains": 30824,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J.REYNIER",
+            "jockey": "M.GERMAIN",
+            "driver": "M.GERMAIN",
+            "owner": "SCEA JLC",
+            "weight": 58.5,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "HONEYFLOWER",
-            "description": ""
+            "description": "",
+            "performance": "8.7.2.1.5",
+            "gains": 21650,
+            "sex": "F",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "L.GALLO",
+            "driver": "L.GALLO",
+            "owner": "GODOLPHIN SNC",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "WITH ZEST",
-            "description": ""
+            "description": "",
+            "performance": "7.1.3.2",
+            "gains": 19913,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARATTI",
+            "jockey": "C.PACAUT",
+            "driver": "C.PACAUT",
+            "owner": "R.NG",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "ALABAMA MOON",
-            "description": ""
+            "description": "",
+            "performance": "5.9.3.3.2",
+            "gains": 79746,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H.BLUME",
+            "jockey": "L.BAILS",
+            "driver": "L.BAILS",
+            "owner": "ST. MACA-RONNI",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 9,
             "horse": "ASHIKIDAH",
-            "description": ""
+            "description": "",
+            "performance": "4.2.9.1.3",
+            "gains": 27200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "D.SANTIAGO",
+            "driver": "D.SANTIAGO",
+            "owner": "AGA KHAN STUDS",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 10,
             "horse": "WAZIERS",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.9.0",
+            "gains": 113292,
+            "sex": "F",
+            "age": 5,
+            "trainer": "F.FORESI",
+            "jockey": "M.BRUNELLI",
+            "driver": "M.BRUNELLI",
+            "owner": "EC.CH.BRIDAULT",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 11,
             "horse": "STUPOR MUNDI",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.6.6",
+            "gains": 42000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J.REYNIER",
+            "jockey": "P.CHEYER",
+            "driver": "P.CHEYER",
+            "owner": "S. P. AGRI-STUD",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "TRUE VALUE",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.3.1",
+            "gains": 91715,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.B. BARBE",
+            "jockey": "F.VALLE SKAR",
+            "driver": "F.VALLE SKAR",
+            "owner": "C.B. BARBE",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 13,
             "horse": "NOVA HOPE",
-            "description": ""
+            "description": "",
+            "performance": "4.8.1.0.1",
+            "gains": 43262,
+            "sex": "F",
+            "age": 4,
+            "trainer": "P&J.BRANDT",
+            "jockey": "L.POGGIONOVO",
+            "driver": "L.POGGIONOVO",
+            "owner": "A.MOUKNASS",
+            "weight": 54.5,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "ALYAQUT",
-            "description": ""
+            "description": "",
+            "performance": "1.0.0.0.9",
+            "gains": 39440,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.DELZANGLES",
+            "jockey": "S.CHUETTE",
+            "driver": "S.CHUETTE",
+            "owner": "M.DELZANGLES",
+            "weight": 53.5,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "CHANEL GOLD",
-            "description": ""
+            "description": "",
+            "performance": "9.7.D.1.0",
+            "gains": 54058,
+            "sex": "F",
+            "age": 5,
+            "trainer": "J.REYNIER",
+            "jockey": "A.MASSIN",
+            "driver": "A.MASSIN",
+            "owner": "S.GOLDMANN",
+            "weight": 53.5,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "IRISHKAMAYA",
-            "description": ""
+            "description": "",
+            "performance": "4.0.1.3.1",
+            "gains": 97710,
+            "sex": "F",
+            "age": 5,
+            "trainer": "J.DUPONT-FAHN",
+            "jockey": "E.RABHI",
+            "driver": "E.RABHI",
+            "owner": "DO. BILLARD PERE ET F",
+            "weight": 53.0,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

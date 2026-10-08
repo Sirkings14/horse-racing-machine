@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_14-01-2026_0_0b5d4f05b6_03d065eeb1.txt",
-    "parsed_at": "2026-10-08T10:35:44.133151Z",
+    "parsed_at": "2026-10-08T23:52:17.334640Z",
     "date": "2026-01-14",
     "race": {
         "race_name": "PRIX DE CANNES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "KAHUNA",
-            "description": ""
+            "description": "",
+            "performance": "4.8.1.0.7",
+            "gains": 164246,
+            "sex": "H",
+            "age": 9,
+            "trainer": "L.CADOT",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "SAS.MON ROMAIN",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 2,
             "horse": "WATCH HIM",
-            "description": ""
+            "description": "",
+            "performance": "5.0.8.4.8",
+            "gains": 229782,
+            "sex": "M",
+            "age": 8,
+            "trainer": "J.REYNIER",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "LG BLOODSTOCK",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "AMERICAN GLORY",
-            "description": ""
+            "description": "",
+            "performance": "3.0.3.0.2",
+            "gains": 108170,
+            "sex": "F",
+            "age": 5,
+            "trainer": "N.PERRET",
+            "jockey": "S.RUIS",
+            "driver": "S.RUIS",
+            "owner": "A.REN",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "MAX VERST",
-            "description": ""
+            "description": "",
+            "performance": "3.5.1.7.6",
+            "gains": 193745,
+            "sex": "H",
+            "age": 7,
+            "trainer": "R.FRADET",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "GOUSSERIE RACING",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "ALPAGE",
-            "description": ""
+            "description": "",
+            "performance": "5.3.2.6.9",
+            "gains": 141934,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. JIMENEZ ALVAREZ",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "E.FERNAN. DE VEGA",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 6,
             "horse": "GILDED DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "2.2.5.0.2",
+            "gains": 86840,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.PITART",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "EC.PIERRE MBAPPE",
+            "weight": 57.0,
+            "draw": 16
         },
         {
             "number": 7,
             "horse": "CENTRAL PARK WEST",
-            "description": ""
+            "description": "",
+            "performance": "1.9.3.6.2",
+            "gains": 327698,
+            "sex": "H",
+            "age": 8,
+            "trainer": "JUL .PHELIPPON",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "HORSEMOOD",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 8,
             "horse": "EUSKADI",
-            "description": ""
+            "description": "",
+            "performance": "2.2.8.7.6",
+            "gains": 36651,
+            "sex": "M",
+            "age": 4,
+            "trainer": "CH.GOURDAIN",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "O.MESTELAN",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "ALOYSIUS",
-            "description": ""
+            "description": "",
+            "performance": "2.3.9.1.6",
+            "gains": 41218,
+            "sex": "M",
+            "age": 4,
+            "trainer": "JC.ROUGET",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "EC.S.STEMPNIAK",
+            "weight": 56.5,
+            "draw": 5
         },
         {
             "number": 10,
             "horse": "XILOFONO",
-            "description": ""
+            "description": "",
+            "performance": "0.1.7.2.6",
+            "gains": 70146,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.ARIZ. ELOSEGUI",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "A.GARCIA FERRER",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 11,
             "horse": "HARRY WAY",
-            "description": ""
+            "description": "",
+            "performance": "9.0.6.6.3",
+            "gains": 188264,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N.PERRET",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "GOUSSERIE RACING",
+            "weight": 55.5,
+            "draw": 12
         },
         {
             "number": 12,
             "horse": "I'M A BELIEVER",
-            "description": ""
+            "description": "",
+            "performance": "7.4.4.5.5",
+            "gains": 137397,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.ESCUDER",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 54.5,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "MELBORA",
-            "description": ""
+            "description": "",
+            "performance": "6.3.0.6.8",
+            "gains": 124453,
+            "sex": "F",
+            "age": 6,
+            "trainer": "E.MIKHALIDES",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "SANG.BLOODSTOCK",
+            "weight": 54.0,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "GRECIAN BONANZA",
-            "description": ""
+            "description": "",
+            "performance": "4.2.7.1.0",
+            "gains": 100459,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M.SCAND.LACAILLE",
+            "jockey": "G.GUEDJ-GAY",
+            "driver": "G.GUEDJ-GAY",
+            "owner": "G.AU.NORMAND",
+            "weight": 54.0,
+            "draw": 2
         },
         {
             "number": 15,
             "horse": "GRAND BALCON",
-            "description": ""
+            "description": "",
+            "performance": "9.6.0.5.2",
+            "gains": 138455,
+            "sex": "H",
+            "age": 7,
+            "trainer": "P.MONFORT",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "BAIE DES ANGES",
+            "weight": 53.5,
+            "draw": 1
         },
         {
             "number": 16,
             "horse": "DRESSMAN",
-            "description": ""
+            "description": "",
+            "performance": "2.0.4.4.1",
+            "gains": 78140,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.ERNI",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "L.DOMENIG",
+            "weight": 53.5,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-22-02-2025_a83b1733a6_4fd756b668.txt",
-    "parsed_at": "2026-10-08T10:35:41.502689Z",
+    "parsed_at": "2026-10-08T23:52:13.624395Z",
     "date": "2025-02-22",
     "race": {
         "race_name": "PRIX DE L'HIPPODROME DE RABAT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "MATT MACHINE",
-            "description": ""
+            "description": "",
+            "performance": "1.6.2.1.0",
+            "gains": 111884,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "M.GEISLER",
+            "driver": "M.GEISLER",
+            "owner": "ST. LIBERTY LEAF",
+            "weight": 62.0,
+            "draw": 15
         },
         {
             "number": 2,
             "horse": "FOU FURIEUX",
-            "description": ""
+            "description": "",
+            "performance": "6.1.0.1.0",
+            "gains": 77270,
+            "sex": "M",
+            "age": 4,
+            "trainer": "H.BOUTIN",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "D.R.LODGE",
+            "weight": 60.0,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "NOBLEMAN",
-            "description": ""
+            "description": "",
+            "performance": "5.6.1.2.1",
+            "gains": 69300,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "JC.ROUGET",
+            "driver": "JC.ROUGET",
+            "owner": "J.ROMEL",
+            "weight": 58.5,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "TUMBLER",
-            "description": ""
+            "description": "",
+            "performance": "2.3.5.2.0",
+            "gains": 116180,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "SCEA HS DES FORETS",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 5,
             "horse": "JOSEPHINO",
-            "description": ""
+            "description": "",
+            "performance": "5.3.2.2.4",
+            "gains": 118876,
+            "sex": "M",
+            "age": 6,
+            "trainer": "T.BACHELOT",
+            "jockey": "I.JANA. KOPLIKOVA",
+            "driver": "I.JANA. KOPLIKOVA",
+            "owner": "J.DUFKOVA",
+            "weight": 58.0,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "SHOWPOWER",
-            "description": ""
+            "description": "",
+            "performance": "4.1.2.7.2",
+            "gains": 49045,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.SIAS",
+            "jockey": "I.JANA. KOPLIKOVA",
+            "driver": "I.JANA. KOPLIKOVA",
+            "owner": "J.DUFKOVA",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 7,
             "horse": "WONDER BOY",
-            "description": ""
+            "description": "",
+            "performance": "5.4.4.0.6",
+            "gains": 282586,
+            "sex": "H",
+            "age": 10,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "P.MONFORT",
+            "driver": "P.MONFORT",
+            "owner": "L.BAUDOUIN",
+            "weight": 56.5,
+            "draw": 8
         },
         {
             "number": 8,
             "horse": "ROOFTOP",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.5.2",
+            "gains": 35570,
+            "sex": "H",
+            "age": 4,
+            "trainer": "B.MARIE",
+            "jockey": "C.TOLAINI",
+            "driver": "C.TOLAINI",
+            "owner": "STARS OF FORTUNE",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 9,
             "horse": "DOM BERTRAND",
-            "description": ""
+            "description": "",
+            "performance": "7.0.0.4.2",
+            "gains": 76050,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "L.GISCARD D'ESTAING",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "BIG LOG",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.6.3",
+            "gains": 85720,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "B.LYNAM",
+            "weight": 56.5,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "ASTRA DREAM",
-            "description": ""
+            "description": "",
+            "performance": "7.4.3.8.6",
+            "gains": 61210,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.BANZ/C.ESCUDER",
+            "weight": 56.0,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "IZASTEP",
-            "description": ""
+            "description": "",
+            "performance": "0.0.6.5.1",
+            "gains": 99400,
+            "sex": "M",
+            "age": 5,
+            "trainer": "A.ORANI",
+            "jockey": "F.FORESI",
+            "driver": "F.FORESI",
+            "owner": "C.WEISS",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 13,
             "horse": "VENTS CONTRAIRES",
-            "description": ""
+            "description": "",
+            "performance": "6.6.0.2.5",
+            "gains": 177456,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E.WEISSMEIER",
+            "jockey": "FX.WEISSMEIER",
+            "driver": "FX.WEISSMEIER",
+            "owner": "TURF CLUB BADEN",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "NADELIA",
-            "description": ""
+            "description": "",
+            "performance": "5.2.0.6.7",
+            "gains": 34747,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "C.WINGTANS",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 15,
             "horse": "AVERSA",
-            "description": ""
+            "description": "",
+            "performance": "0.8.0.0.5",
+            "gains": 115650,
+            "sex": "F",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "JP.VANDEN HEEDE",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 16,
             "horse": "INDIAN PACIFIC",
-            "description": ""
+            "description": "",
+            "performance": "1.4.5.6.4",
+            "gains": 200719,
+            "sex": "H",
+            "age": 9,
+            "trainer": "H.BESNIER",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "D.ALEXANDRE",
+            "weight": 55.0,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

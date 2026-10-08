@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_17-08-2024_8bfff7b3cf_f1cf790973.txt",
-    "parsed_at": "2026-10-08T10:35:44.671929Z",
+    "parsed_at": "2026-10-08T23:52:18.092590Z",
     "date": "2024-08-17",
     "race": {
         "race_name": "PRIX LE PARISIEN",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GRECIAN BONANZA",
-            "description": ""
+            "description": "",
+            "performance": "1.4.2.7.3",
+            "gains": 70580,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.GUEDJ-GAY",
+            "jockey": "J.RESIMONT",
+            "driver": "J.RESIMONT",
+            "owner": "G.AU.NORMAND",
+            "weight": 60.0,
+            "draw": 10
         },
         {
             "number": 2,
             "horse": "DEEP SEA",
-            "description": ""
+            "description": "",
+            "performance": "7.0.2.0.4",
+            "gains": 80570,
+            "sex": "F",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "E.LIBAUD",
+            "driver": "E.LIBAUD",
+            "owner": "A.KURTH",
+            "weight": 60.0,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "LETTY'S MARVEL",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4.0.4",
+            "gains": 222997,
+            "sex": "H",
+            "age": 9,
+            "trainer": "T.PICCONE",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "G.BARBARIN",
+            "weight": 60.0,
+            "draw": 1
         },
         {
             "number": 4,
             "horse": "NASOMO",
-            "description": ""
+            "description": "",
+            "performance": "6.0.1.2.7",
+            "gains": 33760,
+            "sex": "M",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "M.DEL.SANCHEZ",
+            "driver": "M.DEL.SANCHEZ",
+            "owner": "PEDRO A MATEOS",
+            "weight": 59.5,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "FUTURE FATE",
-            "description": ""
+            "description": "",
+            "performance": "4.4.1.4.3",
+            "gains": 23850,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "TIM.DONWORTH",
+            "driver": "TIM.DONWORTH",
+            "owner": "LNJ FOXWOODS",
+            "weight": 59.0,
+            "draw": 8
         },
         {
             "number": 6,
             "horse": "HENRY THE LION",
-            "description": ""
+            "description": "",
+            "performance": "5.4.2.3.5",
+            "gains": 43570,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "E.WARE",
+            "weight": 59.0,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "BUMBLE BEE",
-            "description": ""
+            "description": "",
+            "performance": "6.4.7.6.1",
+            "gains": 41910,
+            "sex": "F",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.BRESSON",
+            "driver": "F.BRESSON",
+            "owner": "A.BARATIN",
+            "weight": 58.0,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "HARRISON POINT",
-            "description": ""
+            "description": "",
+            "performance": "1.2.8.2.1",
+            "gains": 112025,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.BELMONT",
+            "jockey": "F.BELMONT",
+            "driver": "F.BELMONT",
+            "owner": "G.DELACHAUX",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "VEGA OF SAINTS",
-            "description": ""
+            "description": "",
+            "performance": "6.4.1.3.6",
+            "gains": 57480,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "HS. DES PYRENEES",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "LUNATICOS",
-            "description": ""
+            "description": "",
+            "performance": "8.2.3.0.4",
+            "gains": 87265,
+            "sex": "H",
+            "age": 6,
+            "trainer": "H.LEBOUC",
+            "jockey": "T.MERCIER",
+            "driver": "T.MERCIER",
+            "owner": "T.MERCIER",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "ON Y VA",
-            "description": ""
+            "description": "",
+            "performance": "5.4.3.8.1",
+            "gains": 116050,
+            "sex": "M",
+            "age": 7,
+            "trainer": "R.MANGIONE",
+            "jockey": "J.LEROY",
+            "driver": "J.LEROY",
+            "owner": "D.DUMOULIN",
+            "weight": 57.0,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "LINFASOMMER",
-            "description": ""
+            "description": "",
+            "performance": "2.7.9.8.6",
+            "gains": 64330,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "JP.ROMAN",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "APOLLON",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.9.3",
+            "gains": 62826,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.BOISSEAU",
+            "jockey": "Z.KOPLIK",
+            "driver": "Z.KOPLIK",
+            "owner": "LOKO TRANS SLOVA.",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "SAADIYAT",
-            "description": ""
+            "description": "",
+            "performance": "9.5.0.1.5",
+            "gains": 20050,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "C.LAFFON-PARIAS",
+            "driver": "C.LAFFON-PARIAS",
+            "owner": "AL SHIRA'AA RACING",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 15,
             "horse": "ALCOTAN",
-            "description": ""
+            "description": "",
+            "performance": "4.8.2.0.4",
+            "gains": 52310,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D.PROVOST",
+            "jockey": "M.DREAN",
+            "driver": "M.DREAN",
+            "owner": "M.DREAN",
+            "weight": 56.5,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "KING OF TWIST",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.0.7",
+            "gains": 150715,
+            "sex": "H",
+            "age": 8,
+            "trainer": "H.JOURNIAC",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "C.CAULLERY",
+            "weight": 56.0,
+            "draw": 6
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

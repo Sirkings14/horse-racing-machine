@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_27-05-2025_e70269904a_38f136ec08.txt",
-    "parsed_at": "2026-10-08T10:35:46.060972Z",
+    "parsed_at": "2026-10-08T23:52:20.097399Z",
     "date": "2025-05-27",
     "race": {
         "race_name": "PRIX DE LA MUETTE",
@@ -16,94 +16,257 @@
         {
             "number": 1,
             "horse": "FRENCH BARON",
-            "description": ""
+            "description": "",
+            "performance": "1.5.3.2",
+            "gains": 46055,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D.MELE",
+            "jockey": "J.CHARRON",
+            "driver": "J.CHARRON",
+            "owner": "M.DE SOUSA",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "CHANCE DE BALLON",
-            "description": ""
+            "description": "",
+            "performance": "2.3.7.1.1",
+            "gains": 106630,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.SOLIER",
+            "jockey": "O.JOUIN",
+            "driver": "O.JOUIN",
+            "owner": "MUSTANG SARL",
+            "weight": 71.5
         },
         {
             "number": 3,
             "horse": "ROCK OF YOU",
-            "description": ""
+            "description": "",
+            "performance": "5.2.J.0.A",
+            "gains": 54890,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.LEQUIEN",
+            "jockey": "D.THOMAS",
+            "driver": "D.THOMAS",
+            "owner": "O.THOMAS",
+            "weight": 71.0
         },
         {
             "number": 4,
             "horse": "MASK D'AMOUR",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.5.4",
+            "gains": 79430,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.NICOLLE",
+            "jockey": "C.LEFEBVRE",
+            "driver": "C.LEFEBVRE",
+            "owner": "EC. M. LYNNE MACLE",
+            "weight": 70.0
         },
         {
             "number": 5,
             "horse": "KIM ROQUE",
-            "description": ""
+            "description": "",
+            "performance": "T.1.6.5.1",
+            "gains": 59965,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D.MELE",
+            "jockey": "L.BRECHET",
+            "driver": "L.BRECHET",
+            "owner": "D.MELE",
+            "weight": 69.5
         },
         {
             "number": 6,
             "horse": "GINAGOLD",
-            "description": ""
+            "description": "",
+            "performance": "2.A.2.1",
+            "gains": 51750,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C&Y.LERNER",
+            "jockey": "T.ANDRIEUX",
+            "driver": "T.ANDRIEUX",
+            "owner": "C&Y. LERNER",
+            "weight": 69.5
         },
         {
             "number": 7,
             "horse": "APANIIWA",
-            "description": ""
+            "description": "",
+            "performance": "3.7.9.0.3",
+            "gains": 156960,
+            "sex": "F",
+            "age": 5,
+            "trainer": "Y.FOUIN",
+            "jockey": "A.CHESNEAU",
+            "driver": "A.CHESNEAU",
+            "owner": "RACING 53",
+            "weight": 68.5
         },
         {
             "number": 8,
             "horse": "MAGIC FLIGHT",
-            "description": ""
+            "description": "",
+            "performance": "2.8.7.0.T",
+            "gains": 102160,
+            "sex": "H",
+            "age": 5,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "J.REVELEY",
+            "driver": "J.REVELEY",
+            "owner": "EC. VICT. DREAMS",
+            "weight": 68.5
         },
         {
             "number": 9,
             "horse": "MICKDEBOMEC",
-            "description": ""
+            "description": "",
+            "performance": "1.0.6.2.1",
+            "gains": 38870,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.D’ANDIGNE",
+            "jockey": "S.PLANQUE",
+            "driver": "S.PLANQUE",
+            "owner": "C.COIFFIER",
+            "weight": 68.0
         },
         {
             "number": 10,
             "horse": "BEAUBOURG",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.9",
+            "gains": 21840,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.BOISBRUNET",
+            "jockey": "L.ZULIANI",
+            "driver": "L.ZULIANI",
+            "owner": "Y.MAUPOIL",
+            "weight": 68.0
         },
         {
             "number": 11,
             "horse": "KOCOTTE MAG",
-            "description": ""
+            "description": "",
+            "performance": "1.5.1.2.5",
+            "gains": 58290,
+            "sex": "F",
+            "age": 5,
+            "trainer": "F.NICOLLE",
+            "jockey": "K.NABET",
+            "driver": "K.NABET",
+            "owner": "COMTE AA.MAGGIAR",
+            "weight": 68.0
         },
         {
             "number": 12,
             "horse": "FRERE VERT",
-            "description": ""
+            "description": "",
+            "performance": "J.5.3.3.2",
+            "gains": 37950,
+            "sex": "H",
+            "age": 5,
+            "trainer": "J.DA SILVA",
+            "jockey": "B.LESTRADE",
+            "driver": "B.LESTRADE",
+            "owner": "P.PAPOT",
+            "weight": 68.0
         },
         {
             "number": 13,
             "horse": "SURINFIL",
-            "description": ""
+            "description": "",
+            "performance": "6.6.9.A.7",
+            "gains": 94670,
+            "sex": "H",
+            "age": 5,
+            "trainer": "BUTEL & BEAUNEZ",
+            "jockey": "L.VANDAMME",
+            "driver": "L.VANDAMME",
+            "owner": "G.REILLE-VILLEDEY",
+            "weight": 67.5
         },
         {
             "number": 14,
             "horse": "KEL STORY",
-            "description": ""
+            "description": "",
+            "performance": "1.6.5.6.0",
+            "gains": 114885,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.SEROR",
+            "jockey": "L.PHILIPPERON",
+            "driver": "L.PHILIPPERON",
+            "owner": "S.SUTTON JAMES FINCH",
+            "weight": 66.5
         },
         {
             "number": 15,
             "horse": "PARFUM D'UNE REINE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.4.7",
+            "gains": 62885,
+            "sex": "F",
+            "age": 5,
+            "trainer": "H.MERIENNE",
+            "jockey": "G.MEUNIER",
+            "driver": "G.MEUNIER",
+            "owner": "EC .JUMELLE",
+            "weight": 66.0
         },
         {
             "number": 16,
             "horse": "BELISMA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.9.5.7",
+            "gains": 42880,
+            "sex": "F",
+            "age": 5,
+            "trainer": "CHAILLE-CHAILLE & PAMART",
+            "jockey": "P.DUBOURG",
+            "driver": "P.DUBOURG",
+            "owner": "CHAILLE-CHAILLE & PAMART",
+            "weight": 64.0
         },
         {
             "number": 17,
             "horse": "MAZARIN DU BERLAIS",
-            "description": ""
+            "description": "",
+            "performance": "7.3.9.A.A",
+            "gains": 42455,
+            "sex": "H",
+            "age": 5,
+            "trainer": "ROB.COLLET",
+            "jockey": "THO .JOURNIAC",
+            "driver": "THO .JOURNIAC",
+            "owner": "EC. BLACK & WHITE",
+            "weight": 62.0
         },
         {
             "number": 18,
             "horse": "SHINCO DU FICHEAU",
-            "description": ""
+            "description": "",
+            "performance": "3.A.8.9.7",
+            "gains": 7805,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.PONTOIR",
+            "jockey": "C.POINCOT",
+            "driver": "C.POINCOT",
+            "owner": "L.DYER",
+            "weight": 62.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

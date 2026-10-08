@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-09-07-2023_ab4c25ba8e_14becccff5.txt",
-    "parsed_at": "2026-10-08T10:35:40.358886Z",
+    "parsed_at": "2026-10-08T23:52:11.982204Z",
     "date": "2023-07-09",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DEEP HOPE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.3.1.1",
+            "gains": 82510,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "A.FRASSETTO",
+            "weight": 62.5,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "RAYSTEVE",
-            "description": ""
+            "description": "",
+            "performance": "3.6.1.4.2",
+            "gains": 157285,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "V.HEAD",
+            "driver": "V.HEAD",
+            "owner": "SPARKLING STAR",
+            "weight": 61.0,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "BAILEYS BLUES",
-            "description": ""
+            "description": "",
+            "performance": "2.5.0.0.4",
+            "gains": 113885,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.PICCONE",
+            "jockey": "AS.CROMBEZ",
+            "driver": "AS.CROMBEZ",
+            "owner": "G.R. BAILEY LTD",
+            "weight": 61.0,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "IMPITOYABLE",
-            "description": ""
+            "description": "",
+            "performance": "6.3.1.2.2",
+            "gains": 100950,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "EC.BERND & TORSTEN RA",
+            "weight": 60.0,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "MUBAALEGH",
-            "description": ""
+            "description": "",
+            "performance": "2.4.9.0.3",
+            "gains": 188954,
+            "sex": "H",
+            "age": 9,
+            "trainer": "O.PESLIER",
+            "jockey": "JV.TOUX",
+            "driver": "JV.TOUX",
+            "owner": "JV.TOUX",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "CHIRIMIRI",
-            "description": ""
+            "description": "",
+            "performance": "6.1.2.0.0",
+            "gains": 76345,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "J. ORT.BLOODSTOCK L",
+            "weight": 57.5,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "WHITE PLATIN",
-            "description": ""
+            "description": "",
+            "performance": "5.8.0.1.0",
+            "gains": 92828,
+            "sex": "H",
+            "age": 5,
+            "trainer": "R.THOMAS",
+            "jockey": "C.BARANDE BARBE",
+            "driver": "C.BARANDE BARBE",
+            "owner": "D.SIEGENTHALER",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "BACCHILIDE",
-            "description": ""
+            "description": "",
+            "performance": "0.6.4.0.7",
+            "gains": 52060,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "M.GUARNIERI",
+            "driver": "M.GUARNIERI",
+            "owner": "P.FERRARIO",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "MR GOODNIGHT",
-            "description": ""
+            "description": "",
+            "performance": "4.0.2.3.9",
+            "gains": 48910,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "B.LYNAM",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "FLEUR DE BAILEYS",
-            "description": ""
+            "description": "",
+            "performance": "0.5.2.4.0",
+            "gains": 53910,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "GR BAILEY",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "BABA SIM",
-            "description": ""
+            "description": "",
+            "performance": "8.8.3.4.9",
+            "gains": 63770,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "J.GOOSSENS",
+            "driver": "J.GOOSSENS",
+            "owner": "TRIPLE B. STABLES",
+            "weight": 54.5,
+            "draw": 2
         },
         {
             "number": 12,
             "horse": "AL ULA",
-            "description": ""
+            "description": "",
+            "performance": "8.0.6.1.0",
+            "gains": 62941,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.MADAMET",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 54.0,
+            "draw": 11
         },
         {
             "number": 13,
             "horse": "TRUE ROMANCE",
-            "description": ""
+            "description": "",
+            "performance": "4.0.7.0.8",
+            "gains": 175799,
+            "sex": "H",
+            "age": 8,
+            "trainer": "H.JOURNIAC",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "EC. ROGIER",
+            "weight": 53.5,
+            "draw": 1
         },
         {
             "number": 14,
             "horse": "SIRIUS SLEW",
-            "description": ""
+            "description": "",
+            "performance": "4.8.1.0.0",
+            "gains": 67582,
+            "sex": "H",
+            "age": 7,
+            "trainer": "H.BESNIER",
+            "jockey": "N.VERHEYEN",
+            "driver": "N.VERHEYEN",
+            "owner": "STAL MOLENHOF",
+            "weight": 53.5,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "KHAN",
-            "description": ""
+            "description": "",
+            "performance": "3.7.3.1.4",
+            "gains": 60740,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.LEFEBVRE",
+            "jockey": "C.O'HALLORAN",
+            "driver": "C.O'HALLORAN",
+            "owner": "C.O'HALLORAN",
+            "weight": 53.0,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "VITARE",
-            "description": ""
+            "description": "",
+            "performance": "0.5.2.0.4",
+            "gains": 58220,
+            "sex": "H",
+            "age": 6,
+            "trainer": "E.ETIENNE",
+            "jockey": "A.WATTEL",
+            "driver": "A.WATTEL",
+            "owner": "A.PRATT",
+            "weight": 53.0,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

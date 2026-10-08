@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH-PMUB-DU-04-05-2025_3dc655622c_f1618b32ab.txt",
-    "parsed_at": "2026-10-08T10:35:39.177708Z",
+    "parsed_at": "2026-10-08T23:52:10.392053Z",
     "date": "2025-05-04",
     "race": {
         "race_name": "PRIX DE LA VILLE DE PARIS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ZAWAN",
-            "description": ""
+            "description": "",
+            "performance": "6.3.1",
+            "gains": 19200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "G.HERNON",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "A.B RACING",
+            "weight": 59.0,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "MAHASEN",
-            "description": ""
+            "description": "",
+            "performance": "4.4.4.3.3",
+            "gains": 16700,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "AL S. RACING",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "ALEKSINE",
-            "description": ""
+            "description": "",
+            "performance": "6.5.3.6.1",
+            "gains": 48610,
+            "sex": "M",
+            "age": 3,
+            "trainer": "TIM.DONWORTH",
+            "jockey": "G.TROLLEY DE PREVAUX",
+            "driver": "G.TROLLEY DE PREVAUX",
+            "owner": "A.JATHIERE",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "ZOLIA",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.3.7",
+            "gains": 31210,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.GADBIN",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "G P .G.AU. NORMAN",
+            "weight": 57.0,
+            "draw": 16
         },
         {
             "number": 5,
             "horse": "ACTO",
-            "description": ""
+            "description": "",
+            "performance": "9.3.3.1.5",
+            "gains": 15300,
+            "sex": "H",
+            "age": 3,
+            "trainer": "F.CHAPPET",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "L.MINEO",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "EL PEQUENIO",
-            "description": ""
+            "description": "",
+            "performance": "7.0.6.4.3",
+            "gains": 34450,
+            "sex": "H",
+            "age": 3,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "EC. HDBB",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "RUE ERNESTINE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.4.6",
+            "gains": 23250,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.GADBIN",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "EC. X",
+            "weight": 56.0,
+            "draw": 4
         },
         {
             "number": 8,
             "horse": "GREEN CAPE",
-            "description": ""
+            "description": "",
+            "performance": "6.4.2.4.4",
+            "gains": 16300,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.FABRE",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "GODOLPHIN SNC",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "THE SNARK",
-            "description": ""
+            "description": "",
+            "performance": "2.5.4.2.7",
+            "gains": 23550,
+            "sex": "H",
+            "age": 3,
+            "trainer": "P.CHEVIGNY DE",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "EC. CHALHOUB",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "ZIGGY STAR",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.6.8",
+            "gains": 20900,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "EC.JP.BONARDEL",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "SOMMERBLAU",
-            "description": ""
+            "description": "",
+            "performance": "5.6.6.1",
+            "gains": 9000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.BARON",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "PH.DESBOIS",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "RIDE ON",
-            "description": ""
+            "description": "",
+            "performance": "9.4.5",
+            "gains": 3600,
+            "sex": "M",
+            "age": 3,
+            "trainer": "F.BELLEMERE",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "EU. BL. MANAG",
+            "weight": 54.5,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "TOOGOODTOBEROOD",
-            "description": ""
+            "description": "",
+            "performance": "0.4.0.1.6",
+            "gains": 21615,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BRASME",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "EC. BRILLANTISSIME",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 14,
             "horse": "GOLDEN ALQA",
-            "description": ""
+            "description": "",
+            "performance": "5.7.3",
+            "gains": 8050,
+            "sex": "F",
+            "age": 3,
+            "trainer": "X.BLANCHET",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "A.LACAZE",
+            "weight": 54.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "BANMA",
-            "description": ""
+            "description": "",
+            "performance": "1.6.8",
+            "gains": 4750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.GADBIN",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "G.PARIENTE HOLDING",
+            "weight": 54.0,
+            "draw": 2
         },
         {
             "number": 16,
             "horse": "ORANGERIE",
-            "description": ""
+            "description": "",
+            "performance": "9.6.5.9",
+            "gains": 1500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUARNIERI",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "A.LIETTI",
+            "weight": 54.0,
+            "draw": 6
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             16,

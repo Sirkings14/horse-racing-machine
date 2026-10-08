@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_29-04-2024_0_272d80f296_4875abd837.txt",
-    "parsed_at": "2026-10-08T10:35:46.305843Z",
+    "parsed_at": "2026-10-08T23:52:20.458023Z",
     "date": "2024-04-29",
     "race": {
         "race_name": "PRIX CHANTILLY CAPITALE DU CHEVAL",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CHARTWELL",
-            "description": ""
+            "description": "",
+            "performance": "7.1.3.1.3",
+            "gains": 36400,
+            "sex": "M",
+            "age": 3,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "EC. JML RACING",
+            "weight": 59.5,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "HAWK POWER",
-            "description": ""
+            "description": "",
+            "performance": "2.2.3",
+            "gains": 15300,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "GODOLPHIN SNC",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "GILDED DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.2.4",
+            "gains": 34000,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "AL ASAYL FRANCE",
+            "weight": 57.5,
+            "draw": 12
         },
         {
             "number": 4,
             "horse": "GOWAY",
-            "description": ""
+            "description": "",
+            "performance": "3.1.3.2.2",
+            "gains": 62950,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. FRIEDRIDER",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 5,
             "horse": "MEAUTIS",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.3.7",
+            "gains": 17850,
+            "sex": "M",
+            "age": 3,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "G. AU.NORMAND",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "WIT PERD",
-            "description": ""
+            "description": "",
+            "performance": "1.6.5.6.0",
+            "gains": 15350,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H.JOURNIAC",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "EC.TREIZE HEUREUX",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "ALTHURAYA",
-            "description": ""
+            "description": "",
+            "performance": "1.5.1.6.2",
+            "gains": 26700,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.BERGE",
+            "jockey": "R.PHILIPPON",
+            "driver": "R.PHILIPPON",
+            "owner": "R.PHILIPPON",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 8,
             "horse": "DEMPY",
-            "description": ""
+            "description": "",
+            "performance": "1.5.5.4",
+            "gains": 18250,
+            "sex": "H",
+            "age": 3,
+            "trainer": "L.BOISSEAU",
+            "jockey": "V.HEAD",
+            "driver": "V.HEAD",
+            "owner": "P.WATTANAVRANGKUL",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "PESTACLE",
-            "description": ""
+            "description": "",
+            "performance": "2.3.0.1.9",
+            "gains": 14850,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "JP.ARIOTTI",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "GANASS",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.4.2",
+            "gains": 40350,
+            "sex": "M",
+            "age": 3,
+            "trainer": "G.MOSSE",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "FASHION GREY",
-            "description": ""
+            "description": "",
+            "performance": "6.2.1.2.2",
+            "gains": 29750,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HA.PANTALL",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "TILILA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.3.5.6",
+            "gains": 20900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "A.FABRE",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "AGORIA",
-            "description": ""
+            "description": "",
+            "performance": "1.9.2",
+            "gains": 15900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "HOLLYMOUNT STUD",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "STARZO FAL",
-            "description": ""
+            "description": "",
+            "performance": "2.2.5.2.3",
+            "gains": 34270,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "M.BARATTI",
+            "driver": "M.BARATTI",
+            "owner": "FAL STUD SAS",
+            "weight": 54.0,
+            "draw": 2
         },
         {
             "number": 15,
             "horse": "MERI LILOU",
-            "description": ""
+            "description": "",
+            "performance": "4.1.5.0",
+            "gains": 13550,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "J.TAPPREST",
+            "weight": 54.0,
+            "draw": 9
         },
         {
             "number": 16,
             "horse": "LOST IN MUSIC",
-            "description": ""
+            "description": "",
+            "performance": "4.5.1.5.7",
+            "gains": 38022,
+            "sex": "H",
+            "age": 3,
+            "trainer": "H.LEBOUC",
+            "jockey": "L.GADBIN",
+            "driver": "L.GADBIN",
+            "owner": "J.BERTHELOT",
+            "weight": 53.0,
+            "draw": 4
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

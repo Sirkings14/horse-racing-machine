@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-10-02-2026_f19f3c9eea_b6d2aeff0f.txt",
-    "parsed_at": "2026-10-08T10:35:40.421428Z",
+    "parsed_at": "2026-10-08T23:52:12.075354Z",
     "date": "2026-02-10",
     "race": {
         "race_name": "PRIX DE DIEPPE",
@@ -16,69 +16,161 @@
         {
             "number": 1,
             "horse": "LOLITA",
-            "description": ""
+            "description": "",
+            "performance": "6.D.4.6.3",
+            "gains": 41645,
+            "trainer": "D. LOCQUENEUX",
+            "jockey": "G.MARTIN",
+            "driver": "G.MARTIN",
+            "owner": "O. ROFFI-URANO",
+            "listed_chrono": "1.12.30"
         },
         {
             "number": 2,
             "horse": "LOVINA PERRINE",
-            "description": ""
+            "description": "",
+            "performance": "8.6.8.2.7",
+            "gains": 56870,
+            "trainer": "J.F. MARY",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "J.F. MARY",
+            "listed_chrono": "1.12.50"
         },
         {
             "number": 3,
             "horse": "LESDY MAGODA",
-            "description": ""
+            "description": "",
+            "performance": "2.4.3.2.6",
+            "gains": 59825,
+            "trainer": "L. JUBLOT",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "P.J. HUET",
+            "listed_chrono": "1.12.90"
         },
         {
             "number": 4,
             "horse": "LAISSEZ FAIRE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.2.D",
+            "gains": 59995,
+            "trainer": "C. GODARD",
+            "jockey": "G. PORZIO",
+            "driver": "G. PORZIO",
+            "owner": "EC. MANTARO",
+            "listed_chrono": "1.11.70"
         },
         {
             "number": 5,
             "horse": "LA FORMIDABLE",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.5.5",
+            "gains": 60559,
+            "trainer": "L. FERRO",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "St. ALLE.RACING CLUB",
+            "listed_chrono": "1.14.80"
         },
         {
             "number": 6,
             "horse": "LAIKA DES MARES",
-            "description": ""
+            "description": "",
+            "performance": "4.1.6.4.1",
+            "gains": 61955,
+            "trainer": "E. VARIN",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "EC. E. VARIN",
+            "listed_chrono": "1.11.90"
         },
         {
             "number": 7,
             "horse": "LADY DE VANDEL",
-            "description": ""
+            "description": "",
+            "performance": "6.1.1.3.1",
+            "gains": 62200,
+            "trainer": "A.LHERETE",
+            "jockey": "F. LAGADEUC",
+            "driver": "F. LAGADEUC",
+            "owner": "EC. A. LHERETE",
+            "listed_chrono": "1.13.80"
         },
         {
             "number": 8,
             "horse": "LADY DES ARRIS",
-            "description": ""
+            "description": "",
+            "performance": "0.7.4.8.D",
+            "gains": 62760,
+            "trainer": "V. LEBARQUE",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "EC. CTE P. de MONTESSON",
+            "listed_chrono": "1.11.20"
         },
         {
             "number": 9,
             "horse": "LA MITIDJA",
-            "description": ""
+            "description": "",
+            "performance": "6.5.D.D.D",
+            "gains": 62770,
+            "trainer": "L. VAUBERT",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "L. VAUBERT",
+            "listed_chrono": "1.12.10"
         },
         {
             "number": 10,
             "horse": "LADY DE SAFRAN",
-            "description": ""
+            "description": "",
+            "performance": "4.3.0.6.1",
+            "gains": 62940,
+            "trainer": "B. LE BELLER",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "F. CHITEL",
+            "listed_chrono": "1.12.60"
         },
         {
             "number": 11,
             "horse": "LA DAME DE COEUR",
-            "description": ""
+            "description": "",
+            "performance": "0.5.3.D.2",
+            "gains": 64510,
+            "trainer": "J. DUBOIS",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "J. DUBOIS",
+            "listed_chrono": "1.12.30"
         },
         {
             "number": 12,
             "horse": "LEMONADE FIZZ",
-            "description": ""
+            "description": "",
+            "performance": "7.8.D.7.1",
+            "gains": 64845,
+            "trainer": "C. GODARD",
+            "jockey": "E. ALLARD",
+            "driver": "E. ALLARD",
+            "owner": "EC.FOXGLEN",
+            "listed_chrono": "1.10.80"
         },
         {
             "number": 13,
             "horse": "LUNA HAUFOR",
-            "description": ""
+            "description": "",
+            "performance": "D.D.2.1.9",
+            "gains": 65075,
+            "trainer": "CH. BIGEON",
+            "jockey": "D. BONNE",
+            "driver": "D. BONNE",
+            "owner": "EC.Ch.BIGEON",
+            "listed_chrono": "1.11.60"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             7,

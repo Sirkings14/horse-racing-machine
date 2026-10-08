@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_19-02-2026_411e5d9922_3891639117.txt",
-    "parsed_at": "2026-10-08T10:35:44.915174Z",
+    "parsed_at": "2026-10-08T23:52:18.441992Z",
     "date": "2026-02-19",
     "race": {
         "race_name": "PRIX DU CANTAL",
@@ -16,84 +16,197 @@
         {
             "number": 1,
             "horse": "HIATUS",
-            "description": ""
+            "description": "",
+            "performance": "9.1.D.0.0",
+            "gains": 188910,
+            "trainer": "B. BOURGOIN",
+            "jockey": "N. BAZIRE",
+            "driver": "N. BAZIRE",
+            "owner": "EC. L.B. BOURGOIN",
+            "listed_chrono": "1.11.00"
         },
         {
             "number": 2,
             "horse": "GLOUGLOU D'EMI",
-            "description": ""
+            "description": "",
+            "performance": "D.6.0.1.8",
+            "gains": 189935,
+            "trainer": "St. PROVOOST",
+            "jockey": "J. TRAVERS",
+            "driver": "J. TRAVERS",
+            "owner": "EC. DANOVER",
+            "listed_chrono": "1.11.60"
         },
         {
             "number": 3,
             "horse": "FLAMBEUR DU DIGEON",
-            "description": ""
+            "description": "",
+            "performance": "7.0.4.0.5",
+            "gains": 194570,
+            "trainer": "J.J. BAILLON",
+            "jockey": "E. RAFFIN",
+            "driver": "E. RAFFIN",
+            "owner": "J.J. BAILLON",
+            "listed_chrono": "1.11.20"
         },
         {
             "number": 4,
             "horse": "GALEO D'AMARO",
-            "description": ""
+            "description": "",
+            "performance": "0.9.9.8.7",
+            "gains": 197255,
+            "trainer": "P.L. DESAUNETTE",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "L. VAUBERT",
+            "listed_chrono": "1.12.50"
         },
         {
             "number": 5,
             "horse": "HIGOR DAIRPET",
-            "description": ""
+            "description": "",
+            "performance": "0.9.0.D.5",
+            "gains": 197330,
+            "trainer": "A.F. DONA. MARCILLAC",
+            "jockey": "CL. LELIEVRE",
+            "driver": "CL. LELIEVRE",
+            "owner": "CH. AUDOUIN",
+            "listed_chrono": "1.11.50"
         },
         {
             "number": 6,
             "horse": "GOODMORNING CHARLY",
-            "description": ""
+            "description": "",
+            "performance": "3.5.8.4.0",
+            "gains": 197545,
+            "trainer": "B. OLICARD",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "M. MOLINARO",
+            "listed_chrono": "1.12.00"
         },
         {
             "number": 7,
             "horse": "FRANCO FLEURI",
-            "description": ""
+            "description": "",
+            "performance": "3.0.3.0.0",
+            "gains": 197990,
+            "trainer": "ST. MEUNIER",
+            "jockey": "R. LAMY",
+            "driver": "R. LAMY",
+            "owner": "EC. AURMATH",
+            "listed_chrono": "1.13.00"
         },
         {
             "number": 8,
             "horse": "FOREVER D'ARIANE",
-            "description": ""
+            "description": "",
+            "performance": "2.4.6.4.3",
+            "gains": 200600,
+            "trainer": "D. BETHOUART",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "D. BETHOUART",
+            "listed_chrono": "1.13.00"
         },
         {
             "number": 9,
             "horse": "HELIOS DES CHAMPS",
-            "description": ""
+            "description": "",
+            "performance": "D.2.2.4.D",
+            "gains": 200620,
+            "trainer": "ARNAUD DESMOTTES",
+            "jockey": "GUILLAUME MARTIN",
+            "driver": "GUILLAUME MARTIN",
+            "owner": "EC. TENA. SAUVIGNEY",
+            "listed_chrono": "1.12.40"
         },
         {
             "number": 10,
             "horse": "HADRIEN",
-            "description": ""
+            "description": "",
+            "performance": "9.4.0.D.D",
+            "gains": 200890,
+            "trainer": "M. MONACO",
+            "jockey": "T. BEAUVAIS",
+            "driver": "T. BEAUVAIS",
+            "owner": "SCU.TWISTER",
+            "listed_chrono": "1.11.50"
         },
         {
             "number": 11,
             "horse": "FUCHSIA DU RIB",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.6.0",
+            "gains": 202080,
+            "trainer": "A. TOMASELLI",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "A. TOMASELLI",
+            "listed_chrono": "1.11.30"
         },
         {
             "number": 12,
             "horse": "HERAKLION",
-            "description": ""
+            "description": "",
+            "performance": "8.0.4.0.0",
+            "gains": 203425,
+            "trainer": "D. ALEXANDRE",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "O. SIMONETTI",
+            "listed_chrono": "1.11.60"
         },
         {
             "number": 13,
             "horse": "HAUTAIN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.9.0.0",
+            "gains": 203810,
+            "trainer": "V. LEBARQUE",
+            "jockey": "Y. LEBOURGEOIS",
+            "driver": "Y. LEBOURGEOIS",
+            "owner": "EC. Cte. P. de MONTESSON",
+            "listed_chrono": "1.12.00"
         },
         {
             "number": 14,
             "horse": "GALINETTE BLEUE",
-            "description": ""
+            "description": "",
+            "performance": "0.D.4.0.D",
+            "gains": 204530,
+            "trainer": "R. COPPENS",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "L. VERCRUYSSE",
+            "listed_chrono": "1.12.50"
         },
         {
             "number": 15,
             "horse": "GUESS FOUTEAU",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.3.0",
+            "gains": 204540,
+            "trainer": "A. DREUX",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "A. DREUX",
+            "listed_chrono": "1.11.20"
         },
         {
             "number": 16,
             "horse": "GOELAND DE JANZE",
-            "description": ""
+            "description": "",
+            "performance": "8.D.D.D.3",
+            "gains": 204635,
+            "trainer": "CH.A. MARY",
+            "jockey": "F. LAGADEUC",
+            "driver": "F. LAGADEUC",
+            "owner": "S. TESSIER",
+            "listed_chrono": "1.11.50"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             14,

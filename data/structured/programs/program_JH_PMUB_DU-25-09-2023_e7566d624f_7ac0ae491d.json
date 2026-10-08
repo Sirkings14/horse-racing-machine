@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-25-09-2023_e7566d624f_7ac0ae491d.txt",
-    "parsed_at": "2026-10-08T10:35:41.905462Z",
+    "parsed_at": "2026-10-08T23:52:14.204878Z",
     "date": "2023-09-25",
     "race": {
         "race_name": "PRIX PETR DU PAYS DE THIERACHE",
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "HORS BORD",
-            "description": ""
+            "description": "",
+            "performance": "3.2.1.1.1",
+            "gains": 142365,
+            "sex": "H",
+            "age": 6,
+            "trainer": "P.Y. VERVA",
+            "jockey": "J.M. CHAINEUX",
+            "driver": "J.M. CHAINEUX",
+            "owner": "Philippe BEINE",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2750.M"
         },
         {
             "number": 2,
             "horse": "GIBUS DE NAVARY",
-            "description": ""
+            "description": "",
+            "performance": "D.0.7.1.4",
+            "gains": 142950,
+            "sex": "H",
+            "age": 7,
+            "trainer": "J. KOUBICHE",
+            "jockey": "P. HACHIN",
+            "driver": "P. HACHIN",
+            "owner": "P. HACHIN",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2750.M"
         },
         {
             "number": 3,
             "horse": "FLAMENCO",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.1.4",
+            "gains": 144510,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. OUVRIE",
+            "jockey": "J. ROUX",
+            "driver": "J. ROUX",
+            "owner": "Ec.Jérémy ROUX",
+            "listed_chrono": "1.13.10",
+            "listed_distance": "2750.M"
         },
         {
             "number": 4,
             "horse": "HOLLY MESLOISE",
-            "description": ""
+            "description": "",
+            "performance": "9.0.1.2.4",
+            "gains": 147575,
+            "sex": "F",
+            "age": 6,
+            "trainer": "DAVID LEFEVRE",
+            "jockey": "P. BELLOCHE",
+            "driver": "P. BELLOCHE",
+            "owner": "Ecurie B",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2750.M"
         },
         {
             "number": 5,
             "horse": "HEADSCOTT",
-            "description": ""
+            "description": "",
+            "performance": "3.D.D.8.0",
+            "gains": 148690,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A. CHAVATTE",
+            "jockey": "A. CHAVATTE",
+            "driver": "A. CHAVATTE",
+            "owner": "Louis CHAUVIERE",
+            "listed_chrono": "1.13.20",
+            "listed_distance": "2750.M"
         },
         {
             "number": 6,
             "horse": "GORLANDO",
-            "description": ""
+            "description": "",
+            "performance": "9.0.2.7.2",
+            "gains": 150750,
+            "sex": "M",
+            "age": 7,
+            "trainer": "D. DEVOLDER",
+            "jockey": "CH. DE GROOTE",
+            "driver": "CH. DE GROOTE",
+            "owner": "BVBA Lieven DE GROOTE",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2750.M"
         },
         {
             "number": 7,
             "horse": "HARVEST DE BULIERE",
-            "description": ""
+            "description": "",
+            "performance": "7.4.8.3.D",
+            "gains": 226710,
+            "sex": "M",
+            "age": 6,
+            "trainer": "G. GELORMINI",
+            "jockey": "E. DESSARTRE",
+            "driver": "E. DESSARTRE",
+            "owner": "Ch. CAVANNA",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2775.M"
         },
         {
             "number": 8,
             "horse": "EXCELLENT DAY",
-            "description": ""
+            "description": "",
+            "performance": "5.5.0.D.D",
+            "gains": 228080,
+            "sex": "H",
+            "age": 9,
+            "trainer": "PH. MASSCHAELE",
+            "jockey": "P. HAWAS",
+            "driver": "P. HAWAS",
+            "owner": "P. HAWAS",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2775.M"
         },
         {
             "number": 9,
             "horse": "HERMINE GIRL",
-            "description": ""
+            "description": "",
+            "performance": "7.0.6.7.D",
+            "gains": 233410,
+            "sex": "F",
+            "age": 6,
+            "trainer": "J.CH. PITON",
+            "jockey": "St. PROVOOST",
+            "driver": "St. PROVOOST",
+            "owner": "Ec. DANOVER",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2775.M"
         },
         {
             "number": 10,
             "horse": "FUEGO DU MORTIER",
-            "description": ""
+            "description": "",
+            "performance": "5.9.5.7.1",
+            "gains": 259155,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J. VANMEERBECK",
+            "jockey": "J. VANMEERBECK",
+            "driver": "J. VANMEERBECK",
+            "owner": "J. VANMEERBECK",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2775.M"
         },
         {
             "number": 11,
             "horse": "DIEGO DU HOULET",
-            "description": ""
+            "description": "",
+            "performance": "0.7.0.9.0",
+            "gains": 272930,
+            "sex": "H",
+            "age": 10,
+            "trainer": "LAURENT VERVA",
+            "jockey": "L. VERVA",
+            "driver": "L. VERVA",
+            "owner": "R. VATINET",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2775.M"
         },
         {
             "number": 12,
             "horse": "GAIA D'OCCAGNES",
-            "description": ""
+            "description": "",
+            "performance": "0.7.D.5.7",
+            "gains": 274310,
+            "sex": "F",
+            "age": 7,
+            "trainer": "D. BERTRAND",
+            "jockey": "J.PH. RAFFEGEAU",
+            "driver": "J.PH. RAFFEGEAU",
+            "owner": "Thierry MASSICOT",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2775.M"
         },
         {
             "number": 13,
             "horse": "GHALIE DU GOUTIER",
-            "description": ""
+            "description": "",
+            "performance": "2.D.4.3.2",
+            "gains": 275320,
+            "sex": "F",
+            "age": 7,
+            "trainer": "M. VERVA",
+            "jockey": "TH. DUVALDESTIN",
+            "driver": "TH. DUVALDESTIN",
+            "owner": "Ec. SAINT MARTIN",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2775.M"
         },
         {
             "number": 14,
             "horse": "EAGLE MESLOIS",
-            "description": ""
+            "description": "",
+            "performance": "R.9.D.6.8",
+            "gains": 282860,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P. BELLOCHE",
+            "jockey": "P. BELLOCHE",
+            "driver": "P. BELLOCHE",
+            "owner": "Ec. B",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2775.M"
         },
         {
             "number": 15,
             "horse": "EL SANTO HAUFOR",
-            "description": ""
+            "description": "",
+            "performance": "7.D.7.6.6",
+            "gains": 284760,
+            "sex": "H",
+            "age": 9,
+            "trainer": "B. MARIE",
+            "jockey": "H. VAN DEN HENDE",
+            "driver": "H. VAN DEN HENDE",
+            "owner": "Y. DESMET",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2775.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             13,

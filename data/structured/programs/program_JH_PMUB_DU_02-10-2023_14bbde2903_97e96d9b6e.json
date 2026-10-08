@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_02-10-2023_14bbde2903_97e96d9b6e.txt",
-    "parsed_at": "2026-10-08T10:35:42.780958Z",
+    "parsed_at": "2026-10-08T23:52:15.399252Z",
     "date": "2023-10-02",
     "race": {
         "race_name": "ATTELE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "FIRST IN LOVE",
-            "description": ""
+            "description": "",
+            "performance": "7.4.6.6.D",
+            "gains": 221000,
+            "sex": "M",
+            "age": 8,
+            "trainer": "L.J. LEGROS",
+            "jockey": "J.M. LEGROS",
+            "driver": "J.M. LEGROS",
+            "owner": "EC. DU VIEUX CHENE",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2150.M"
         },
         {
             "number": 2,
             "horse": "FRANCEVILLE",
-            "description": ""
+            "description": "",
+            "performance": "2.5.0.1.8",
+            "gains": 222760,
+            "sex": "F",
+            "age": 8,
+            "trainer": "CEDRIC TERRY",
+            "jockey": "F. TERRY",
+            "driver": "F. TERRY",
+            "owner": "PH. AUTONNE",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2150.M"
         },
         {
             "number": 3,
             "horse": "FOREVER SPEED",
-            "description": ""
+            "description": "",
+            "performance": "D.0.7.0.D",
+            "gains": 224880,
+            "sex": "M",
+            "age": 8,
+            "trainer": "JULIEN RAFFESTIN",
+            "jockey": "JULIEN RAFFESTIN",
+            "driver": "JULIEN RAFFESTIN",
+            "owner": "S. DALMASSE",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2150.M"
         },
         {
             "number": 4,
             "horse": "DIWI D'OCCAGNES",
-            "description": ""
+            "description": "",
+            "performance": "8.2.A.6.D",
+            "gains": 222230,
+            "sex": "H",
+            "age": 10,
+            "trainer": "D. BROHIER",
+            "jockey": "D. BROHIER",
+            "driver": "D. BROHIER",
+            "owner": "D. BROHIER",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2150.M"
         },
         {
             "number": 5,
             "horse": "FALCO DU DOUET",
-            "description": ""
+            "description": "",
+            "performance": "0.3.6.7.2",
+            "gains": 224110,
+            "sex": "M",
+            "age": 8,
+            "trainer": "T. LE BELLER",
+            "jockey": "J.CH. GERMAIN",
+            "driver": "J.CH. GERMAIN",
+            "owner": "EC. J-P.R. VILAULT",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2150.M"
         },
         {
             "number": 6,
             "horse": "GOLIATH DU CAUX",
-            "description": ""
+            "description": "",
+            "performance": "3.6.1.4.5",
+            "gains": 218630,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. LAURENT",
+            "jockey": "A. LAURENT",
+            "driver": "A. LAURENT",
+            "owner": "EC. A. LAURENT",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2150.M"
         },
         {
             "number": 7,
             "horse": "FAST CASH",
-            "description": ""
+            "description": "",
+            "performance": "4.2.0.9.0",
+            "gains": 224670,
+            "sex": "H",
+            "age": 8,
+            "trainer": "THEO DUVALDESTIN",
+            "jockey": "TH. DUVALDESTIN",
+            "driver": "TH. DUVALDESTIN",
+            "owner": "B. ANDREANI",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2150.M"
         },
         {
             "number": 8,
             "horse": "FORBAN",
-            "description": ""
+            "description": "",
+            "performance": "9.6.5.6.0",
+            "gains": 217840,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.F. SENET",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "EC. KARIBOU",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2150.M"
         },
         {
             "number": 9,
             "horse": "ECLAIR DE KEROSAY",
-            "description": ""
+            "description": "",
+            "performance": "2.8.4.8.2",
+            "gains": 204660,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M. ABRIVARD",
+            "jockey": "ET. LEFRANC",
+            "driver": "ET. LEFRANC",
+            "owner": "EC. ET. LEFRANC",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2150.M"
         },
         {
             "number": 10,
             "horse": "FRICHTI",
-            "description": ""
+            "description": "",
+            "performance": "7.4.4.5.1",
+            "gains": 114815,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J. VANMEERBECK",
+            "jockey": "J. VANMEERBECK",
+            "driver": "J. VANMEERBECK",
+            "owner": "J. VANMEERBECK",
+            "listed_chrono": "1.13.30",
+            "listed_distance": "2150.M"
         },
         {
             "number": 11,
             "horse": "EQUEJUELO",
-            "description": ""
+            "description": "",
+            "performance": "D.0.8.6.D",
+            "gains": 215860,
+            "sex": "M",
+            "age": 9,
+            "trainer": "E. RAFFIN",
+            "jockey": "F. LERCIER",
+            "driver": "F. LERCIER",
+            "owner": "J.M. SOUICI",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2150.M"
         },
         {
             "number": 12,
             "horse": "GRANDE PRETRESSE",
-            "description": ""
+            "description": "",
+            "performance": "5.D.7.1.2",
+            "gains": 205460,
+            "sex": "F",
+            "age": 7,
+            "trainer": "J.L.CL. DERSOIR",
+            "jockey": "S. LEBLOND",
+            "driver": "S. LEBLOND",
+            "owner": "EC.DE LA FRENAIE",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2150.M"
         },
         {
             "number": 13,
             "horse": "DOMINO D'AUVRECY",
-            "description": ""
+            "description": "",
+            "performance": "8.1.6.2.7",
+            "gains": 190470,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J. GUELPA",
+            "jockey": "J. GUELPA",
+            "driver": "J. GUELPA",
+            "owner": "P. YVANES",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2150.M"
         },
         {
             "number": 14,
             "horse": "FERLAINE",
-            "description": ""
+            "description": "",
+            "performance": "4.4.2.7.7",
+            "gains": 205790,
+            "sex": "F",
+            "age": 8,
+            "trainer": "D. THOMAIN",
+            "jockey": "CH. MIRANDEL",
+            "driver": "CH. MIRANDEL",
+            "owner": "EC. MZ",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2150.M"
         },
         {
             "number": 15,
             "horse": "FILARETE DU VERGER",
-            "description": ""
+            "description": "",
+            "performance": "5.6.D.3.6",
+            "gains": 215350,
+            "sex": "F",
+            "age": 8,
+            "trainer": "PH. DAUGEARD",
+            "jockey": "PH. DAUGEARD",
+            "driver": "PH. DAUGEARD",
+            "owner": "EC. PH. DAUGEARD",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2150.M"
         },
         {
             "number": 16,
             "horse": "FONZY D'HERIPRE",
-            "description": ""
+            "description": "",
+            "performance": "1.8.1.1.1",
+            "gains": 217330,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "D. FRICAUX",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2150.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

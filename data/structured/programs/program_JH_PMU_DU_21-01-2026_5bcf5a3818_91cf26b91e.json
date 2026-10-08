@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_21-01-2026_5bcf5a3818_91cf26b91e.txt",
-    "parsed_at": "2026-10-08T10:35:46.942314Z",
+    "parsed_at": "2026-10-08T23:52:21.388015Z",
     "date": "2026-01-19",
     "race": {
         "race_name": "PRIX UNE DE MAI",
@@ -16,74 +16,173 @@
         {
             "number": 1,
             "horse": "HERALDIQUE",
-            "description": ""
+            "description": "",
+            "performance": "2.6.2.2.7",
+            "gains": 285140,
+            "trainer": "H. GRIFT",
+            "jockey": "PIERRICK LE MOEL",
+            "driver": "PIERRICK LE MOEL",
+            "owner": "EC. DAGON TROT.",
+            "listed_chrono": "1.10.60"
         },
         {
             "number": 2,
             "horse": "GOLDEN VISAIS",
-            "description": ""
+            "description": "",
+            "performance": "5.6.5.1.1",
+            "gains": 285350,
+            "trainer": "D. CINIER",
+            "jockey": "J.CH. FERON",
+            "driver": "J.CH. FERON",
+            "owner": "B. HERBILLON",
+            "listed_chrono": "1.11.50"
         },
         {
             "number": 3,
             "horse": "GREGOR",
-            "description": ""
+            "description": "",
+            "performance": "7.2.D.1.2",
+            "gains": 307935,
+            "trainer": "D. BROUWER",
+            "jockey": "D. BROUWER",
+            "driver": "D. BROUWER",
+            "owner": "R. GOUDSBLOM",
+            "listed_chrono": "1.12.20"
         },
         {
             "number": 4,
             "horse": "GREAT OF MADRIK",
-            "description": ""
+            "description": "",
+            "performance": "3.8.7.5.4",
+            "gains": 334655,
+            "trainer": "H. GRIFT",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "DRAVIET STABLES",
+            "listed_chrono": "1.11.60"
         },
         {
             "number": 5,
             "horse": "HEROS DES MOTTES",
-            "description": ""
+            "description": "",
+            "performance": "9.D.7.8.0",
+            "gains": 342940,
+            "trainer": "Nils PACHA",
+            "jockey": "N. PACHA",
+            "driver": "N. PACHA",
+            "owner": "J. F. PAIN",
+            "listed_chrono": "1.11.70"
         },
         {
             "number": 6,
             "horse": "FUTUR DU CHENE",
-            "description": ""
+            "description": "",
+            "performance": "1.D.8.3.0",
+            "gains": 343255,
+            "trainer": "S. LALOUM",
+            "jockey": "J.CH. SOREL",
+            "driver": "J.CH. SOREL",
+            "owner": "A. LALOUM",
+            "listed_chrono": "1.12.70"
         },
         {
             "number": 7,
             "horse": "GIMY DU POMMEREUX",
-            "description": ""
+            "description": "",
+            "performance": "6.8.4.0.7",
+            "gains": 382480,
+            "trainer": "D. CINIER",
+            "jockey": "D. CINIER",
+            "driver": "D. CINIER",
+            "owner": "G. LHERPINIERE",
+            "listed_chrono": "1.11.80"
         },
         {
             "number": 8,
             "horse": "GALA DE CRENNES",
-            "description": ""
+            "description": "",
+            "performance": "0.5.4.7.8",
+            "gains": 394591,
+            "trainer": "P. REPICHET",
+            "jockey": "D. BEKAERT",
+            "driver": "D. BEKAERT",
+            "owner": "EC.Hs. de CRENNES",
+            "listed_chrono": "1.12.30"
         },
         {
             "number": 9,
             "horse": "ISTER MAN",
-            "description": ""
+            "description": "",
+            "performance": "1.8.7.2.3",
+            "gains": 396380,
+            "trainer": "J. CUOQ",
+            "jockey": "TH. BRIAND",
+            "driver": "TH. BRIAND",
+            "owner": "Ch. SCHANDRIN",
+            "listed_chrono": "1.10.60"
         },
         {
             "number": 10,
             "horse": "GIBUS",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.7.4",
+            "gains": 410000,
+            "trainer": "J.M. ROUBAUD",
+            "jockey": "S. STEFANO",
+            "driver": "S. STEFANO",
+            "owner": "EC. S. ROUBAUD",
+            "listed_chrono": "1.10.70"
         },
         {
             "number": 11,
             "horse": "IBISCUS MAN",
-            "description": ""
+            "description": "",
+            "performance": "4.D.6.7.6",
+            "gains": 455440,
+            "trainer": "R.CH. LARUE",
+            "jockey": "R.CH. LARUE",
+            "driver": "R.CH. LARUE",
+            "owner": "D. LARUE",
+            "listed_chrono": "1.09.50"
         },
         {
             "number": 12,
             "horse": "HUDO DU RUEL",
-            "description": ""
+            "description": "",
+            "performance": "2.1.6.2.4",
+            "gains": 475900,
+            "trainer": "N. ENSCH",
+            "jockey": "N. ENSCH",
+            "driver": "N. ENSCH",
+            "owner": "Christian CARUANA",
+            "listed_chrono": "1.10.80"
         },
         {
             "number": 13,
             "horse": "HAPPY DANICA",
-            "description": ""
+            "description": "",
+            "performance": "6.0.3.66",
+            "gains": 481505,
+            "trainer": "A. GARANDEAU",
+            "jockey": "A. GARANDEAU",
+            "driver": "A. GARANDEAU",
+            "owner": "C. DOUILLET",
+            "listed_chrono": "1.09.90"
         },
         {
             "number": 14,
             "horse": "HYMNE DU GERS",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.1.8",
+            "gains": 498010,
+            "trainer": "N. BAZIRE",
+            "jockey": "CH. MARTENS",
+            "driver": "CH. MARTENS",
+            "owner": "EC. J.M. RANCOULE",
+            "listed_chrono": "1.11.20"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             11,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_11-11-2025_988df02b91_a3fc85a6f9.txt",
-    "parsed_at": "2026-10-08T10:35:43.832212Z",
+    "parsed_at": "2026-10-08T23:52:16.908059Z",
     "date": "2025-11-11",
     "race": {
         "race_name": "PRIX DE LA VILLE DE TOULOUSE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "POCA GEN",
-            "description": ""
+            "description": "",
+            "performance": "4.4.8.2.2",
+            "gains": 113641,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C. HERI. DE BEAUVOIR",
+            "jockey": "M.ROMARY",
+            "driver": "M.ROMARY",
+            "owner": "M.HERI. DE BEAUVOIR",
+            "weight": 60.0,
+            "draw": 14
         },
         {
             "number": 2,
             "horse": "XYLOPHONE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.8.0",
+            "gains": 64672,
+            "sex": "H",
+            "age": 4,
+            "trainer": "JP. MA. DA COSTA OLIVEIRA",
+            "jockey": "B. MARIE",
+            "driver": "B. MARIE",
+            "owner": "JM.DE FREITAS OLIVEIRA",
+            "weight": 58.0,
+            "draw": 6
         },
         {
             "number": 3,
             "horse": "PARTENIT",
-            "description": ""
+            "description": "",
+            "performance": "8.6.0.0.4",
+            "gains": 143809,
+            "sex": "M",
+            "age": 7,
+            "trainer": "P. COTTIER",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "LE MARAIS SAS",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "VERITABLE",
-            "description": ""
+            "description": "",
+            "performance": "3.0.2.1.0",
+            "gains": 122330,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S. GAVILAN",
+            "jockey": "D.SANTIAGO",
+            "driver": "D.SANTIAGO",
+            "owner": "L.MOUTOUSSAMY",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "XILOFONO",
-            "description": ""
+            "description": "",
+            "performance": "1.7.2.6.6",
+            "gains": 70146,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G. ARIZK. ELOSEGUI",
+            "jockey": "RN. VALLE",
+            "driver": "RN. VALLE",
+            "owner": "A. GARCIA FERRER",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 6,
             "horse": "CHELSEA DU NINIAN",
-            "description": ""
+            "description": "",
+            "performance": "1.0.8.7.5",
+            "gains": 155395,
+            "sex": "F",
+            "age": 7,
+            "trainer": "N. PAYSAN",
+            "jockey": "A. GAVILAN",
+            "driver": "A. GAVILAN",
+            "owner": "N.PAYSAN/MJP.GAUTIER",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 7,
             "horse": "NOLITO",
-            "description": ""
+            "description": "",
+            "performance": "1.4.2.4.4",
+            "gains": 148488,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S. GAVILAN",
+            "jockey": "G. GUEDJ-GAY",
+            "driver": "G. GUEDJ-GAY",
+            "owner": "V. VIOLANES",
+            "weight": 56.0,
+            "draw": 4
         },
         {
             "number": 8,
             "horse": "PRETTY STORM",
-            "description": ""
+            "description": "",
+            "performance": "6.4.1.3.2",
+            "gains": 63133,
+            "sex": "F",
+            "age": 4,
+            "trainer": "P. SOGORB",
+            "jockey": "A. GUTIERREZ VAL",
+            "driver": "A. GUTIERREZ VAL",
+            "owner": "S. KINAST",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 9,
             "horse": "BLOU LAGOON",
-            "description": ""
+            "description": "",
+            "performance": "2.4.1.0.8",
+            "gains": 44548,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D.WATRIGANT",
+            "jockey": "F. VERON",
+            "driver": "F. VERON",
+            "owner": "A. ATTERBRAND",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "MAROON SIX",
-            "description": ""
+            "description": "",
+            "performance": "5.9.7.6.5",
+            "gains": 191832,
+            "sex": "M",
+            "age": 6,
+            "trainer": "J. SOUBAGNE",
+            "jockey": "H. MOUESAN",
+            "driver": "H. MOUESAN",
+            "owner": "G. BELLOCQ",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 11,
             "horse": "A BEAUREGARD",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.3.2",
+            "gains": 38913,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "THOUVENEL RACING",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 12,
             "horse": "ZAHYANA",
-            "description": ""
+            "description": "",
+            "performance": "8.7.8.5.0",
+            "gains": 71322,
+            "sex": "F",
+            "age": 5,
+            "trainer": "JESUS",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "M. KOHAIZA",
+            "weight": 55.5,
+            "draw": 2
         },
         {
             "number": 13,
             "horse": "TIC TAC",
-            "description": ""
+            "description": "",
+            "performance": "9.0.0.8.0",
+            "gains": 53087,
+            "sex": "H",
+            "age": 4,
+            "trainer": "HA. PANTALL",
+            "jockey": "S. PASQUIER",
+            "driver": "S. PASQUIER",
+            "owner": "PH. LASSEN",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "HATIM",
-            "description": ""
+            "description": "",
+            "performance": "8.3.6.6.0",
+            "gains": 42843,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F. ROHAUT",
+            "jockey": "A. CRASTUS",
+            "driver": "A. CRASTUS",
+            "owner": "S.A. A.AL THANI",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "BRITANIA",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.1.3",
+            "gains": 58214,
+            "sex": "F",
+            "age": 3,
+            "trainer": "F. ROHAUT",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "F. ROHAUT",
+            "weight": 54.5,
+            "draw": 10
         },
         {
             "number": 16,
             "horse": "PORTUCALE",
-            "description": ""
+            "description": "",
+            "performance": "1.4.4.6.3",
+            "gains": 34955,
+            "sex": "F",
+            "age": 4,
+            "trainer": "GRE.LEENDERS",
+            "jockey": "V.SEGUY",
+            "driver": "V.SEGUY",
+            "owner": "EC. DES MOUILLOTINS",
+            "weight": 54.5,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

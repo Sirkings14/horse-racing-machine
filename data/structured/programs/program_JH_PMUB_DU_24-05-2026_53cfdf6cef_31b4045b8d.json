@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_24-05-2026_53cfdf6cef_31b4045b8d.txt",
-    "parsed_at": "2026-10-08T10:35:45.655889Z",
+    "parsed_at": "2026-10-08T23:52:19.514694Z",
     "date": "2026-05-24",
     "race": {
         "race_name": "PRIX DE L'ORANGERIE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "TORTISAMBERT",
-            "description": ""
+            "description": "",
+            "performance": "5.1.2.8.3",
+            "gains": 149753,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.CHAPPET",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "G.AUG.NORMAND",
+            "weight": 61.5,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "AFOGADO",
-            "description": ""
+            "description": "",
+            "performance": "7.0.4.8.3",
+            "gains": 72360,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P&J.BRANDT",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "F.BLICHFELD",
+            "weight": 61.0,
+            "draw": 11
         },
         {
             "number": 3,
             "horse": "SKYLIGHT BROCHARD",
-            "description": ""
+            "description": "",
+            "performance": "2.0.4.5.2",
+            "gains": 165270,
+            "sex": "H",
+            "age": 5,
+            "trainer": "TIM.DONWORTH",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "TIM .DONWORTH",
+            "weight": 60.0,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "PURE LEGEND",
-            "description": ""
+            "description": "",
+            "performance": "4.4.7.6.4",
+            "gains": 51642,
+            "sex": "H",
+            "age": 4,
+            "trainer": "HF.DEVIN",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "H.DEVIN",
+            "weight": 58.5,
+            "draw": 7
         },
         {
             "number": 5,
             "horse": "TALENTUOSO",
-            "description": ""
+            "description": "",
+            "performance": "9.3.2.3.1",
+            "gains": 96567,
+            "sex": "H",
+            "age": 5,
+            "trainer": "PE.DUBOIS",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "BLU RACING",
+            "weight": 58.0,
+            "draw": 16
         },
         {
             "number": 6,
             "horse": "KRASKHOV",
-            "description": ""
+            "description": "",
+            "performance": "3.3.4.1.0",
+            "gains": 57027,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DEL.SANCHEZ",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "A.JATHIERE",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "AWAITING CHRISTMAS",
-            "description": ""
+            "description": "",
+            "performance": "9.0.0.4.0",
+            "gains": 65056,
+            "sex": "H",
+            "age": 4,
+            "trainer": "V.LUKA",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "LERAM S.R.O.",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "DURYTHME",
-            "description": ""
+            "description": "",
+            "performance": "6.8.0.7.6",
+            "gains": 69432,
+            "sex": "H",
+            "age": 5,
+            "trainer": "CHR.HEAD",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "FREDERIC HEAD",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "NO LIMIT DREAM",
-            "description": ""
+            "description": "",
+            "performance": "4.8.2.7.5",
+            "gains": 169812,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G.MOSSE",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "M.ANDRIA",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "CHALDERO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.8.9",
+            "gains": 71098,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.NIESLANIK",
+            "jockey": "L.MORRIS",
+            "driver": "L.MORRIS",
+            "owner": "E.NIESLANIKOVA",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 11,
             "horse": "DUTY",
-            "description": ""
+            "description": "",
+            "performance": "4.1.8.2.8",
+            "gains": 34892,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DELZANGLES",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "R.NG",
+            "weight": 55.5,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "PAINTELLO",
-            "description": ""
+            "description": "",
+            "performance": "2.1.9.2.4",
+            "gains": 62759,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.BUDKA",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "EC. GEORGINIO",
+            "weight": 55.0,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "SALALAH",
-            "description": ""
+            "description": "",
+            "performance": "4.4.3.0.0",
+            "gains": 113225,
+            "sex": "F",
+            "age": 5,
+            "trainer": "J.ANDREU",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "R.FOUQUET",
+            "weight": 55.0,
+            "draw": 2
         },
         {
             "number": 14,
             "horse": "GALORD",
-            "description": ""
+            "description": "",
+            "performance": "4.0.0.3.0",
+            "gains": 139391,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.FEY",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "E.DECOSTER",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "BARGING THRU",
-            "description": ""
+            "description": "",
+            "performance": "1.D.0.6.1",
+            "gains": 101506,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N.MOONS",
+            "jockey": "S.TISON",
+            "driver": "S.TISON",
+            "owner": "N.MOONS",
+            "weight": 54.0,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "NAKED MEMORIES",
-            "description": ""
+            "description": "",
+            "performance": "2.2.9.6.0",
+            "gains": 58611,
+            "sex": "H",
+            "age": 4,
+            "trainer": "X.BLANCHET",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "EC. GEORGINIO",
+            "weight": 54.0,
+            "draw": 14
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

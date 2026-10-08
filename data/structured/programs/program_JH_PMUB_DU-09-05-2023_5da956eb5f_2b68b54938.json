@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-09-05-2023_5da956eb5f_2b68b54938.txt",
-    "parsed_at": "2026-10-08T10:35:40.330302Z",
+    "parsed_at": "2026-10-08T23:52:11.941131Z",
     "date": "2023-05-09",
     "race": {
         "race_name": "PRIX CHANTILLY CAPITALE DU CHEVAL",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "PREMIER ORDRE",
-            "description": ""
+            "description": "",
+            "performance": "2.6.1.2.1",
+            "gains": 50900,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "M.GUARNIERI",
+            "driver": "M.GUARNIERI",
+            "owner": "M.GUARNIERI",
+            "weight": 59.5,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "HOXTON",
-            "description": ""
+            "description": "",
+            "performance": "2.7.3.3.2",
+            "gains": 38390,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PLANQUE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. FRIEDRIDER",
+            "weight": 58.5,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "COGNAC",
-            "description": ""
+            "description": "",
+            "performance": "4.7.2.5.2",
+            "gains": 27110,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "BUTEL & BEAUNEZ",
+            "driver": "BUTEL & BEAUNEZ",
+            "owner": "G.REILLE-VILLEDEY",
+            "weight": 58.0,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "DURANGO",
-            "description": ""
+            "description": "",
+            "performance": "5.4.1.4.0",
+            "gains": 15600,
+            "sex": "H",
+            "age": 3,
+            "trainer": "H.JOURNIAC",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "AL ASAYL FRANCE",
+            "weight": 58.0,
+            "draw": 6
         },
         {
             "number": 5,
             "horse": "MADAME DE SAXE",
-            "description": ""
+            "description": "",
+            "performance": "5.1.5.8",
+            "gains": 11950,
+            "sex": "F",
+            "age": 3,
+            "trainer": "O.PESLIER",
+            "jockey": "R.LE DREN DOLEUZE",
+            "driver": "R.LE DREN DOLEUZE",
+            "owner": "P.FELLOUS",
+            "weight": 57.5,
+            "draw": 5
         },
         {
             "number": 6,
             "horse": "NOSHOWONFRIDAY",
-            "description": ""
+            "description": "",
+            "performance": "4.5.2.3.8",
+            "gains": 13500,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "ARGELLA RACING",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 7,
             "horse": "RECOLETTY",
-            "description": ""
+            "description": "",
+            "performance": "4.1.5",
+            "gains": 18350,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "G.BARBARIN",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "GREENWOOD",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2",
+            "gains": 17900,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.GAVILAN",
+            "jockey": "L.LARRIGADE",
+            "driver": "L.LARRIGADE",
+            "owner": "C.BLEU",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 9,
             "horse": "CUEROS",
-            "description": ""
+            "description": "",
+            "performance": "3.4.4",
+            "gains": 9450,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "M.DEL.SANCHEZ",
+            "driver": "M.DEL.SANCHEZ",
+            "owner": "J. MALD. TRINCHANT",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "I'M A BELIEVER",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.5.5",
+            "gains": 27450,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "MURCIANO",
-            "description": ""
+            "description": "",
+            "performance": "3.2.3.4.2",
+            "gains": 20250,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "N.LE ROCH",
+            "driver": "N.LE ROCH",
+            "owner": "HS D'ETREHAM",
+            "weight": 55.5,
+            "draw": 2
         },
         {
             "number": 12,
             "horse": "SCHWENDI",
-            "description": ""
+            "description": "",
+            "performance": "7.5.3.2.2",
+            "gains": 18900,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.TRULLIER",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "EC. JML RACING",
+            "weight": 55.5,
+            "draw": 4
         },
         {
             "number": 13,
             "horse": "MORE",
-            "description": ""
+            "description": "",
+            "performance": "1.8.1.2.6",
+            "gains": 28600,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "I.SMITS",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "MOON RIDER",
-            "description": ""
+            "description": "",
+            "performance": "2.1.6.6.2",
+            "gains": 20400,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "J.DE MIEULLE",
+            "driver": "J.DE MIEULLE",
+            "owner": "HS DU L. SAINT GERM",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "WONDER OF YOU",
-            "description": ""
+            "description": "",
+            "performance": "1.5.6",
+            "gains": 6100,
+            "sex": "M",
+            "age": 3,
+            "trainer": "L.ROUSSEL",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "R.HILLEN",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "BLINDMAN",
-            "description": ""
+            "description": "",
+            "performance": "6.6.3.6",
+            "gains": 4050,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "M. POGGIONI",
+            "weight": 55.0,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

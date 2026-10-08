@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_17-06-2025_02c47f73a0_833e0e2bf0.txt",
-    "parsed_at": "2026-10-08T10:35:44.645006Z",
+    "parsed_at": "2026-10-08T23:52:18.053253Z",
     "date": "2025-06-17",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "BAUHINIA RHAPSODY",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.9.4",
+            "gains": 87723,
+            "sex": "H",
+            "age": 5,
+            "trainer": "JV.TOUX",
+            "jockey": "A.BERNARD",
+            "driver": "A.BERNARD",
+            "owner": "M.AUGER",
+            "weight": 61.0,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "SOUS LA NEIGE",
-            "description": ""
+            "description": "",
+            "performance": "8.2.6.7.4",
+            "gains": 79398,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.HERNON",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "A.DON/D.MACAULIFFE",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "GAILLARD",
-            "description": ""
+            "description": "",
+            "performance": "4.3.7.7.5",
+            "gains": 55330,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.BARON",
+            "jockey": "A.BARON",
+            "driver": "A.BARON",
+            "owner": "J.VAUTRIN",
+            "weight": 58.0,
+            "draw": 3
         },
         {
             "number": 4,
             "horse": "SPEED HUNTER",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.1.3",
+            "gains": 17400,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.LEROY",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "E.LOUNGAR",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "SOUVENIR D'ECAJEUL",
-            "description": ""
+            "description": "",
+            "performance": "3.3.9.4.4",
+            "gains": 125679,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.ARIZKORRETA",
+            "jockey": "V.JANACEK",
+            "driver": "V.JANACEK",
+            "owner": "HORSES & BERRIES SL",
+            "weight": 57.5,
+            "draw": 6
         },
         {
             "number": 6,
             "horse": "PRINCE OF CLOUDS",
-            "description": ""
+            "description": "",
+            "performance": "0.3.8.5.0",
+            "gains": 38820,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "I.CORBANI",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "CHIRICCO",
-            "description": ""
+            "description": "",
+            "performance": "2.5.1.1.5",
+            "gains": 45340,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BRASME",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "EC . MELANIE",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 8,
             "horse": "NOLITO",
-            "description": ""
+            "description": "",
+            "performance": "9.5.2.8.0",
+            "gains": 127620,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.GAVILAN",
+            "jockey": "C.GROSBOIS",
+            "driver": "C.GROSBOIS",
+            "owner": "V.VIOLANES",
+            "weight": 55.5,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "LIGHT WAKEUP",
-            "description": ""
+            "description": "",
+            "performance": "0.4.0.0.0",
+            "gains": 158547,
+            "sex": "H",
+            "age": 7,
+            "trainer": "H.BOUJARDINE",
+            "jockey": "O.ANDIGNE",
+            "driver": "O.ANDIGNE",
+            "owner": "H.BOUJARDINE",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "SEPTIMUS",
-            "description": ""
+            "description": "",
+            "performance": "6.0.0.1.2",
+            "gains": 23350,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.NIGGE",
+            "jockey": "D.BREUX",
+            "driver": "D.BREUX",
+            "owner": "C.ZASS",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 11,
             "horse": "CALYPSO",
-            "description": ""
+            "description": "",
+            "performance": "0.3.0.2.6",
+            "gains": 59394,
+            "sex": "H",
+            "age": 5,
+            "trainer": "ED.MONFORT",
+            "jockey": "L.ROUSSEL",
+            "driver": "L.ROUSSEL",
+            "owner": "F.RAOUL",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 12,
             "horse": "GOGUEN SPAISE",
-            "description": ""
+            "description": "",
+            "performance": "4.1.2.3.3",
+            "gains": 68685,
+            "sex": "H",
+            "age": 5,
+            "trainer": "ED.MONFORT",
+            "jockey": "Y.BARILLE",
+            "driver": "Y.BARILLE",
+            "owner": "C.GUEZET",
+            "weight": 54.5,
+            "draw": 2
         },
         {
             "number": 13,
             "horse": "FAMOSO",
-            "description": ""
+            "description": "",
+            "performance": "0.3.1.8.4",
+            "gains": 89190,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.PAUTIER",
+            "jockey": "A.WERLE",
+            "driver": "A.WERLE",
+            "owner": "P.ARTIGUES",
+            "weight": 54.0,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "KER WELEN",
-            "description": ""
+            "description": "",
+            "performance": "6.7.2.0.3",
+            "gains": 135000,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N.LEENDERS",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "F.PEREZ GONZALEZ",
+            "weight": 53.5,
+            "draw": 8
         },
         {
             "number": 15,
             "horse": "MARILLAWOOD",
-            "description": ""
+            "description": "",
+            "performance": "8.1.5.4.2",
+            "gains": 23630,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N.LEENDERS",
+            "jockey": "H.LEBOUC",
+            "driver": "H.LEBOUC",
+            "owner": "HS DE MAGOUET",
+            "weight": 53.5,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "CROWDFUNDING",
-            "description": ""
+            "description": "",
+            "performance": "3.6.3.3.0",
+            "gains": 111030,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.BOUTIN",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "EC. NICOLATO",
+            "weight": 53.0,
+            "draw": 4
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

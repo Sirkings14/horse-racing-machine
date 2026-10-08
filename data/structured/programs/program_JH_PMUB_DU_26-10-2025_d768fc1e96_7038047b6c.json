@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_26-10-2025_d768fc1e96_7038047b6c.txt",
-    "parsed_at": "2026-10-08T10:35:45.971635Z",
+    "parsed_at": "2026-10-08T23:52:19.975745Z",
     "date": "2025-10-26",
     "race": {
         "race_name": "PRIX DE L'ELEV AGE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "AMERICAN GLORY",
-            "description": ""
+            "description": "",
+            "performance": "3.0.2.7.2",
+            "gains": 101044,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N.PERRET",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "A.REN",
+            "weight": 60.0,
+            "draw": 14
         },
         {
             "number": 2,
             "horse": "MAIA STAR",
-            "description": ""
+            "description": "",
+            "performance": "8.6.1.3.3",
+            "gains": 68276,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "EC. VICT. DREAMS",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "VENUS OCEANE",
-            "description": ""
+            "description": "",
+            "performance": "1.9.0.5.1",
+            "gains": 60225,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "EC.ADES HAZAN",
+            "weight": 59.5,
+            "draw": 11
         },
         {
             "number": 4,
             "horse": "GOLDEN BELLE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.3.2.9",
+            "gains": 52540,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.FOUASSIER",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "SCEA EC. BADER",
+            "weight": 59.5,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "MASAIYA",
-            "description": ""
+            "description": "",
+            "performance": "8.4.1.2.2",
+            "gains": 66992,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.KARKOSA",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "F.KAHRAMAN",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "MIYALAA",
-            "description": ""
+            "description": "",
+            "performance": "1.8.0.2.1",
+            "gains": 73321,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "EC. VICT. DREAMS",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 7,
             "horse": "DIALLA",
-            "description": ""
+            "description": "",
+            "performance": "4.6.1.2.6",
+            "gains": 56809,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "PARC MONCEAU",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "ORION QUEEN",
-            "description": ""
+            "description": "",
+            "performance": "1.2.1.4.3",
+            "gains": 24870,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.SCAND.LACAILLE",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "CH. RACING",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "SHEEMA'S ROSE",
-            "description": ""
+            "description": "",
+            "performance": "0.4.8.0.7",
+            "gains": 40690,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.DEHEZ",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "A.CLAIRE",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "ZAHYANA",
-            "description": ""
+            "description": "",
+            "performance": "7.8.5.0.0",
+            "gains": 71322,
+            "sex": "F",
+            "age": 5,
+            "trainer": "JESUS",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "M.KOHAIZA",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 11,
             "horse": "PROMISES FULFILLED",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.2",
+            "gains": 21270,
+            "sex": "F",
+            "age": 3,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "WHITE BIRCH FARM",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "LA MAZZI GOGO",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.1.3",
+            "gains": 62250,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F.FORESI",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "EC. KURA",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 13,
             "horse": "DJHANSY",
-            "description": ""
+            "description": "",
+            "performance": "4.0.8.8.4",
+            "gains": 26460,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.COUETIL",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "JJ.HAMON",
+            "weight": 54.0,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "AVERNES",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.7.3",
+            "gains": 81863,
+            "sex": "F",
+            "age": 7,
+            "trainer": "M.SCAND.LACAILLE",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "EC. J. RACING SAS",
+            "weight": 53.5,
+            "draw": 5
         },
         {
             "number": 15,
             "horse": "SHALOHA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.8.0.0",
+            "gains": 59558,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.NICOT",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "C.GUIMARD",
+            "weight": 53.5,
+            "draw": 6
         },
         {
             "number": 16,
             "horse": "SEPULVEDA",
-            "description": ""
+            "description": "",
+            "performance": "2.0.1.5.6",
+            "gains": 17170,
+            "sex": "F",
+            "age": 3,
+            "trainer": "CL. & HERMANS",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "SARL DARPAT FRANCE",
+            "weight": 53.5,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             1,

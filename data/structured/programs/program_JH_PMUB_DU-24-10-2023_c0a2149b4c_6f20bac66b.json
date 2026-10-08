@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-24-10-2023_c0a2149b4c_6f20bac66b.txt",
-    "parsed_at": "2026-10-08T10:35:41.786523Z",
+    "parsed_at": "2026-10-08T23:52:14.030159Z",
     "date": "2023-10-22",
     "race": {
         "race_name": "PRIX SANTO PIETRO",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "EDWINA",
-            "description": ""
+            "description": "",
+            "performance": "1.T.7.8.4",
+            "gains": 89210,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.REVELEY",
+            "jockey": "JPH .DUBOIS",
+            "driver": "JPH .DUBOIS",
+            "owner": "EC. VICT. DREAMS",
+            "weight": 71.0
         },
         {
             "number": 2,
             "horse": "JOHNNY ROQUE",
-            "description": ""
+            "description": "",
+            "performance": "A.6.1",
+            "gains": 26950,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.CHARRON",
+            "jockey": "D.MELE",
+            "driver": "D.MELE",
+            "owner": "P.PAPOT",
+            "weight": 68.5
         },
         {
             "number": 3,
             "horse": "IYENGAR DE PAIL",
-            "description": ""
+            "description": "",
+            "performance": "1.9.4.3.2",
+            "gains": 46610,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.MAYEUR",
+            "jockey": "E.GRALL",
+            "driver": "E.GRALL",
+            "owner": "T.BARCELLINI",
+            "weight": 67.5
         },
         {
             "number": 4,
             "horse": "ROYALE MILADY HAS",
-            "description": ""
+            "description": "",
+            "performance": "4.3.A.T.9",
+            "gains": 54960,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.ZULIANI",
+            "jockey": "AS.PACAULT",
+            "driver": "AS.PACAULT",
+            "owner": "HS DE BEAUVOIR",
+            "weight": 67.0
         },
         {
             "number": 5,
             "horse": "FRENCH EXIT",
-            "description": ""
+            "description": "",
+            "performance": "J.6.1.6.6",
+            "gains": 61810,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.PHILIPPERON",
+            "jockey": "M.ROLLAND",
+            "driver": "M.ROLLAND",
+            "owner": "JP.DJIAN",
+            "weight": 66.0
         },
         {
             "number": 6,
             "horse": "ROAZHON PARK",
-            "description": ""
+            "description": "",
+            "performance": "2.3.4.2.5",
+            "gains": 44695,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.BRECHET",
+            "jockey": "GAB.LEENDERS",
+            "driver": "GAB.LEENDERS",
+            "owner": "MARCHOSI RACING",
+            "weight": 66.0
         },
         {
             "number": 7,
             "horse": "JURY BLEU",
-            "description": ""
+            "description": "",
+            "performance": "7.8.2.1.5",
+            "gains": 39775,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.LEFEBVRE",
+            "jockey": "D.BRESSOU",
+            "driver": "D.BRESSOU",
+            "owner": "D.BRESSOU",
+            "weight": 66.0
         },
         {
             "number": 8,
             "horse": "JUKIRIKO",
-            "description": ""
+            "description": "",
+            "performance": "1.5.6.T.3",
+            "gains": 31395,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.BEAURAIN",
+            "jockey": "E.GRALL",
+            "driver": "E.GRALL",
+            "owner": "O.TRINQUET",
+            "weight": 66.0
         },
         {
             "number": 9,
             "horse": "MAMIX'S PASSION",
-            "description": ""
+            "description": "",
+            "performance": "3.5.3.2.2",
+            "gains": 80120,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.MEUNIER",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "EC. THOMAS SIVADIER",
+            "weight": 65.5
         },
         {
             "number": 10,
             "horse": "JASMINE DE CORTON",
-            "description": ""
+            "description": "",
+            "performance": "0.1.3.3.0",
+            "gains": 39600,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.RE",
+            "jockey": "E.GRALL",
+            "driver": "E.GRALL",
+            "owner": "D.GUYON",
+            "weight": 65.5
         },
         {
             "number": 11,
             "horse": "IF",
-            "description": ""
+            "description": "",
+            "performance": "1.5.4.3",
+            "gains": 23115,
+            "sex": "H",
+            "age": 4,
+            "trainer": "K.DENIEL",
+            "jockey": "F.NICOLLE",
+            "driver": "F.NICOLLE",
+            "owner": "A.JATHIERE",
+            "weight": 65.5
         },
         {
             "number": 12,
             "horse": "LE ROI DAVID",
-            "description": ""
+            "description": "",
+            "performance": "6.4.3.1.J",
+            "gains": 114085,
+            "sex": "H",
+            "age": 4,
+            "trainer": "K.NABET",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "D.DAHAN",
+            "weight": 64.5
         },
         {
             "number": 13,
             "horse": "A NOUS TOUS",
-            "description": ""
+            "description": "",
+            "performance": "3.4.1.4.2",
+            "gains": 39530,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.ZULIANI",
+            "jockey": "J.DELAUNAY",
+            "driver": "J.DELAUNAY",
+            "owner": "J.DETRE/P.DETRE",
+            "weight": 64.5
         },
         {
             "number": 14,
             "horse": "HILL OF BAMBOO",
-            "description": ""
+            "description": "",
+            "performance": "4.4.T.0.6",
+            "gains": 77290,
+            "sex": "H",
+            "age": 4,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "C.BOUTIN",
+            "driver": "C.BOUTIN",
+            "owner": "F.HUTHER/R.CLAROT",
+            "weight": 63.0
         },
         {
             "number": 15,
             "horse": "GOOD SAULAIE",
-            "description": ""
+            "description": "",
+            "performance": "6.2.3.5.7",
+            "gains": 22435,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.ANDRIEUX",
+            "jockey": "D.MELE",
+            "driver": "D.MELE",
+            "owner": "D.MELE",
+            "weight": 63.0
         },
         {
             "number": 16,
             "horse": "JOURNEE DE REVE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.4.3.4",
+            "gains": 16880,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.GAUTRON",
+            "jockey": "E.GRALL",
+            "driver": "E.GRALL",
+            "owner": "E.GRALL",
+            "weight": 62.5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

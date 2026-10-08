@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_01-11-2024_fda9dbbf44_b6ff127a71.txt",
-    "parsed_at": "2026-10-08T10:35:42.661743Z",
+    "parsed_at": "2026-10-08T23:52:15.231326Z",
     "date": "2024-11-01",
     "race": {
         "race_name": "GRAND PRIX DE LA VILLE DE LAVAL",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GAUDEPSOU",
-            "description": ""
+            "description": "",
+            "performance": "0.6.9.6.7",
+            "gains": 213400,
+            "sex": "H",
+            "age": 8,
+            "trainer": "GUILLAUME MARTIN",
+            "jockey": "A. MICHEL",
+            "driver": "A. MICHEL",
+            "owner": "EC. CENS'ATION",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "GREAT TIGRESS",
-            "description": ""
+            "description": "",
+            "performance": "0.9.7.D.7",
+            "gains": 225470,
+            "sex": "F",
+            "age": 8,
+            "trainer": "EMILIEN RAULLINE",
+            "jockey": "EMILIEN RAULLINE",
+            "driver": "EMILIEN RAULLINE",
+            "owner": "J. SECHE",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "FOGO PICO",
-            "description": ""
+            "description": "",
+            "performance": "7.7.D.D.D",
+            "gains": 226220,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. JOSEPH",
+            "jockey": "F. JOSEPH",
+            "driver": "F. JOSEPH",
+            "owner": "EC. N.-D. NEVEU",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "JASON",
-            "description": ""
+            "description": "",
+            "performance": "0.0.9.6.3",
+            "gains": 229240,
+            "sex": "M",
+            "age": 5,
+            "trainer": "P. LEVESQUE",
+            "jockey": "P. LEVESQUE",
+            "driver": "P. LEVESQUE",
+            "owner": "EC. P. LEVESQUE",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "HASUR DAIRPET",
-            "description": ""
+            "description": "",
+            "performance": "8.3.5.6.2",
+            "gains": 231160,
+            "sex": "M",
+            "age": 7,
+            "trainer": "M. ABRIVARD",
+            "jockey": "J. BRUNEAU",
+            "driver": "J. BRUNEAU",
+            "owner": "EC. J.R.",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "JEWELCANDLE FAC",
-            "description": ""
+            "description": "",
+            "performance": "0.1.8.3.0",
+            "gains": 232600,
+            "sex": "F",
+            "age": 5,
+            "trainer": "D. BONNE",
+            "jockey": "D. BONNE",
+            "driver": "D. BONNE",
+            "owner": "EC. S. GUARATO",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "GAZELLE DE VAL",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.6.7",
+            "gains": 238125,
+            "sex": "F",
+            "age": 8,
+            "trainer": "E. LAMBERTZ",
+            "jockey": "E. LAMBERTZ",
+            "driver": "E. LAMBERTZ",
+            "owner": "E. LAMBERTZ",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 8,
             "horse": "GYS",
-            "description": ""
+            "description": "",
+            "performance": "4.0.3.D.2",
+            "gains": 239790,
+            "sex": "H",
+            "age": 8,
+            "trainer": "E. BEAUVAIS",
+            "jockey": "E. BEAUVAIS",
+            "driver": "E. BEAUVAIS",
+            "owner": "P. LEDEME",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 9,
             "horse": "HACKER LOVER",
-            "description": ""
+            "description": "",
+            "performance": "1.8.2.1.1",
+            "gains": 239890,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M. MOTTIER",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "EC. D.M. MOTTIER",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 10,
             "horse": "CASH BANK BIGI",
-            "description": ""
+            "description": "",
+            "performance": "3.D.2.D.3",
+            "gains": 404910,
+            "sex": "F",
+            "age": 6,
+            "trainer": "B. ROCHARD",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "RO. BISELLI",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2875.M"
         },
         {
             "number": 11,
             "horse": "HANNIBAL TUILERIE",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.6.2",
+            "gains": 424585,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. ANGOT",
+            "jockey": "J. BRUNEAU",
+            "driver": "J. BRUNEAU",
+            "owner": "EC. BRUNEAU",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 12,
             "horse": "INO DU LUPIN",
-            "description": ""
+            "description": "",
+            "performance": "D.9.7.2.1",
+            "gains": 476910,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A. WIELS",
+            "jockey": "J.P. MARMION",
+            "driver": "J.P. MARMION",
+            "owner": "EC. J. P. MARMION",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2875.M"
         },
         {
             "number": 13,
             "horse": "BORDEAUX S.",
-            "description": ""
+            "description": "",
+            "performance": "D.D.4.3.3",
+            "gains": 486890,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.PH. MONCLIN",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "GLOBAL GLIDE AB",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2875.M"
         },
         {
             "number": 14,
             "horse": "IBIKI DE HOUELLE",
-            "description": ""
+            "description": "",
+            "performance": "5.9.1.2.1",
+            "gains": 536910,
+            "sex": "M",
+            "age": 6,
+            "trainer": "K. LEBLANC",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "D. AUGEREAU",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2875.M"
         },
         {
             "number": 15,
             "horse": "GENDREEN",
-            "description": ""
+            "description": "",
+            "performance": "2.1.7.8.8",
+            "gains": 543860,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "PH. GRUMETZ",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 16,
             "horse": "GRACE DU DIGEON",
-            "description": ""
+            "description": "",
+            "performance": "3.2.0.0.5",
+            "gains": 548490,
+            "sex": "F",
+            "age": 8,
+            "trainer": "F. NIVARD",
+            "jockey": "CH. DREUX",
+            "driver": "CH. DREUX",
+            "owner": "EC. CHARLES DREUX",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2875.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

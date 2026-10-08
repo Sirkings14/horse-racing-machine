@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_10-06-2025_8fde6270bd_dbbe439a55.txt",
-    "parsed_at": "2026-10-08T10:35:43.675471Z",
+    "parsed_at": "2026-10-08T23:52:16.653752Z",
     "date": "2025-06-10",
     "race": {
         "race_name": "PRIX DE FOUILLEUSE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LAITH",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.5.3",
+            "gains": 75250,
+            "sex": "M",
+            "age": 3,
+            "trainer": "J.REYNIER",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "SANG. HOLDINGS",
+            "weight": 60.0,
+            "draw": 10
         },
         {
             "number": 2,
             "horse": "VALMACCA",
-            "description": ""
+            "description": "",
+            "performance": "2.7.4.3.1",
+            "gains": 62400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "P.COTTIER",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "AU.NORMAND/SUD",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "HEMEVEZ",
-            "description": ""
+            "description": "",
+            "performance": "5.1.5.2.4",
+            "gains": 28400,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "LC.OLIV.FERNANDES",
+            "weight": 59.0,
+            "draw": 6
         },
         {
             "number": 4,
             "horse": "MAGICAL TRAIL",
-            "description": ""
+            "description": "",
+            "performance": "3.7.2.9.1",
+            "gains": 20790,
+            "sex": "F",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "S.SAADI",
+            "driver": "S.SAADI",
+            "owner": "GODOLPHIN SNC",
+            "weight": 58.0,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "STUNNING ANGEL",
-            "description": ""
+            "description": "",
+            "performance": "2.2.7.2.5",
+            "gains": 78000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "R.FRADET",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "GOUSSERIE RACING",
+            "weight": 57.0,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "PRINCE AUBOIS",
-            "description": ""
+            "description": "",
+            "performance": "4.1.4.6.6",
+            "gains": 49100,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.PENOT",
+            "jockey": "J.MOUTARD",
+            "driver": "J.MOUTARD",
+            "owner": "C.PENOT",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "PRECIOSO",
-            "description": ""
+            "description": "",
+            "performance": "5.2.1.3.5",
+            "gains": 25300,
+            "sex": "M",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "P.RECHSTEINER",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "STOLEN KISS",
-            "description": ""
+            "description": "",
+            "performance": "5.0.1.3.2",
+            "gains": 31450,
+            "sex": "M",
+            "age": 3,
+            "trainer": "P.COTTIER",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "L.BAUDRON",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 9,
             "horse": "NOFIX",
-            "description": ""
+            "description": "",
+            "performance": "2.2.6.1.4",
+            "gains": 29975,
+            "sex": "H",
+            "age": 3,
+            "trainer": "ED.MONFORT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "WERTH. & FRERE",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 10,
             "horse": "FAME",
-            "description": ""
+            "description": "",
+            "performance": "3.6.5.4.3",
+            "gains": 22050,
+            "sex": "F",
+            "age": 3,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "EC.VICT. DREAMS",
+            "weight": 56.0,
+            "draw": 1
         },
         {
             "number": 11,
             "horse": "BRAVO BAY",
-            "description": ""
+            "description": "",
+            "performance": "6.5.3.6.2",
+            "gains": 37400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "G.BIETOLINI",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "R.SHAYKHUTDINOV",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 12,
             "horse": "APOGEO",
-            "description": ""
+            "description": "",
+            "performance": "1.3.3.6.0",
+            "gains": 21050,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.GUARNIERI",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "G.VELLUCCI",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "THE DOCTOR",
-            "description": ""
+            "description": "",
+            "performance": "1.7.4.2.2",
+            "gains": 35250,
+            "sex": "M",
+            "age": 3,
+            "trainer": "N.PERRET",
+            "jockey": "S.RUIS",
+            "driver": "S.RUIS",
+            "owner": "N.PERRET",
+            "weight": 55.0,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "HEMATITE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.0.3.9",
+            "gains": 25800,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.WATTEL",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "EC. BENA. SOFIANE",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 15,
             "horse": "VICTORY CALL",
-            "description": ""
+            "description": "",
+            "performance": "6.1.6.3",
+            "gains": 18250,
+            "sex": "F",
+            "age": 3,
+            "trainer": "HF.DEVIN",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "JC.SEROUL",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 16,
             "horse": "ELUSIVE BELARDO",
-            "description": ""
+            "description": "",
+            "performance": "1.1.3.2.3",
+            "gains": 37300,
+            "sex": "F",
+            "age": 3,
+            "trainer": "N.CAULLERY",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "T.KEREFOFF",
+            "weight": 54.5,
+            "draw": 14
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

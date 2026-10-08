@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_31-07-2023_73e4f3db1e_a4b22318db.txt",
-    "parsed_at": "2026-10-08T10:35:46.539526Z",
+    "parsed_at": "2026-10-08T23:52:20.805858Z",
     "date": "2023-07-31",
     "race": {
         "race_name": "PRIX TOYOTA TOYS MOTORS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "RISING UP",
-            "description": ""
+            "description": "",
+            "performance": "0.3.3.1.8",
+            "gains": 80060,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "JP.VANDEN HEEDE",
+            "weight": 59.0,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "WINTER'S LOVE",
-            "description": ""
+            "description": "",
+            "performance": "2.6.1.6.1",
+            "gains": 21750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "H.A.PANTALL",
+            "driver": "H.A.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 58.5,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "HERNAN CORTES",
-            "description": ""
+            "description": "",
+            "performance": "8.1.1.3.3",
+            "gains": 34147,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "JPH .DUBOIS",
+            "driver": "JPH .DUBOIS",
+            "owner": "V.DUBOIS",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 4,
             "horse": "WOODSTOCK CITY",
-            "description": ""
+            "description": "",
+            "performance": "4.1.5.5.3",
+            "gains": 28850,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "CHR.HEAD",
+            "driver": "CHR.HEAD",
+            "owner": "GL RACING",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "MAGELLAN",
-            "description": ""
+            "description": "",
+            "performance": "6.3.1.1.2",
+            "gains": 36050,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "EC. LENGLET",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "VOTE FOR PEDRO",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.9.6",
+            "gains": 25900,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "HF.DEVIN",
+            "driver": "HF.DEVIN",
+            "owner": "H.DEVIN",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "LICEO",
-            "description": ""
+            "description": "",
+            "performance": "5.5.1.2.3",
+            "gains": 18400,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "JC.ROUGET",
+            "driver": "JC.ROUGET",
+            "owner": "EC.ANTONIO CARO",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "JAGDA",
-            "description": ""
+            "description": "",
+            "performance": "2.6.7.2.6",
+            "gains": 38935,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "L.GIREL",
+            "driver": "L.GIREL",
+            "owner": "L.GIREL",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 9,
             "horse": "TAYBET",
-            "description": ""
+            "description": "",
+            "performance": "0.7.2.6.1",
+            "gains": 30050,
+            "sex": "M",
+            "age": 3,
+            "trainer": "G.MOSSE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "RENT A HORSE BY YOHEA",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "MELBORA",
-            "description": ""
+            "description": "",
+            "performance": "4.6.1.1.3",
+            "gains": 30750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "G.RARICK",
+            "driver": "G.RARICK",
+            "owner": "J. BELL",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 11,
             "horse": "RAVIOLI",
-            "description": ""
+            "description": "",
+            "performance": "5.1.3",
+            "gains": 15150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "V.SEGUY",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "A.WIGAN",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "COCO DU HAUT",
-            "description": ""
+            "description": "",
+            "performance": "4.4.3.4.0",
+            "gains": 35770,
+            "sex": "F",
+            "age": 3,
+            "trainer": "D.BOCHE",
+            "jockey": "N.PAYSAN",
+            "driver": "N.PAYSAN",
+            "owner": "L.JAMET",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 13,
             "horse": "RISING BLAST",
-            "description": ""
+            "description": "",
+            "performance": "8.5.7.5.4",
+            "gains": 28210,
+            "sex": "M",
+            "age": 3,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "S.KOBAYASHI",
+            "driver": "S.KOBAYASHI",
+            "owner": "Y.INUTSUKA",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "SEE THE LIGHT",
-            "description": ""
+            "description": "",
+            "performance": "6.0.1.2.5",
+            "gains": 25850,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "RELIABLE RACING",
+            "weight": 55.0,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "BLAS",
-            "description": ""
+            "description": "",
+            "performance": "3.7.0.2.2",
+            "gains": 24750,
+            "sex": "M",
+            "age": 3,
+            "trainer": "E.VERHESTRAETEN",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "C.TRECCO",
+            "weight": 55.0,
+            "draw": 13
         },
         {
             "number": 16,
             "horse": "CHIAREGGIO",
-            "description": ""
+            "description": "",
+            "performance": "8.1.4.2",
+            "gains": 17400,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "M.NIGGE",
+            "driver": "M.NIGGE",
+            "owner": "L.BONGEN",
+            "weight": 55.0,
+            "draw": 7
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             13,

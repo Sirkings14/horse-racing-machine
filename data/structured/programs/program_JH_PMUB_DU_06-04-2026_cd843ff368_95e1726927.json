@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_06-04-2026_cd843ff368_95e1726927.txt",
-    "parsed_at": "2026-10-08T10:35:43.240389Z",
+    "parsed_at": "2026-10-08T23:52:16.031097Z",
     "date": "2026-04-04",
     "race": {
         "race_name": "PRIX DE LA ROCHELLE",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "CI PPO RA",
-            "description": ""
+            "description": "",
+            "performance": "1.6.A.7.2",
+            "gains": 221750,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F.BELLEMERE",
+            "jockey": "B.LE CLERC",
+            "driver": "B.LE CLERC",
+            "owner": "G.BLAIN",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "JAGUAR DU BERLAIS",
-            "description": ""
+            "description": "",
+            "performance": "3.1.4.5.3",
+            "gains": 201650,
+            "sex": "H",
+            "age": 8,
+            "trainer": "E.GRALL",
+            "jockey": "THO .JOURNIAC",
+            "driver": "THO .JOURNIAC",
+            "owner": "FAMILLE BRYANT",
+            "weight": 71.5
         },
         {
             "number": 3,
             "horse": "KIROGA",
-            "description": ""
+            "description": "",
+            "performance": "1.7.3.8.7",
+            "gains": 130000,
+            "sex": "F",
+            "age": 6,
+            "trainer": "SOURD. DE BEAUREGARD",
+            "jockey": "C.LEFEBVRE",
+            "driver": "C.LEFEBVRE",
+            "owner": "C.BAEYENS",
+            "weight": 70.5
         },
         {
             "number": 4,
             "horse": "ITAL CONTI",
-            "description": ""
+            "description": "",
+            "performance": "5.3.2.1.8",
+            "gains": 200825,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.DELAUNAY",
+            "jockey": "F.GILES",
+            "driver": "F.GILES",
+            "owner": "EC.P. JOUBERT",
+            "weight": 70.5
         },
         {
             "number": 5,
             "horse": "EARL OF SHANNON",
-            "description": ""
+            "description": "",
+            "performance": "4.3.0.2.0",
+            "gains": 190310,
+            "sex": "H",
+            "age": 6,
+            "trainer": "F.NICOLLE",
+            "jockey": "B.FROST",
+            "driver": "B.FROST",
+            "owner": "EC. C. MARZOCCO",
+            "weight": 70.0
         },
         {
             "number": 6,
             "horse": "PRIAM DU MESNIL",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.2.4",
+            "gains": 74590,
+            "sex": "H",
+            "age": 5,
+            "trainer": "N. GEORGE & A. ZETTERHOLM",
+            "jockey": "J.REVELEY",
+            "driver": "J.REVELEY",
+            "owner": "Y.TARZOUT",
+            "weight": 69.0
         },
         {
             "number": 7,
             "horse": "LEGENDE ALLEN",
-            "description": ""
+            "description": "",
+            "performance": "0.5.A.1.2",
+            "gains": 62310,
+            "sex": "F",
+            "age": 5,
+            "trainer": "H.MERIENNE",
+            "jockey": "T.BEAURAIN",
+            "driver": "T.BEAURAIN",
+            "owner": "H.MERIENNE",
+            "weight": 68.0
         },
         {
             "number": 8,
             "horse": "KINGPARK",
-            "description": ""
+            "description": "",
+            "performance": "3.0.0.7.7",
+            "gains": 94065,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.PEAN",
+            "jockey": "T.CHEVILLARD",
+            "driver": "T.CHEVILLARD",
+            "owner": "A.A.PEAN",
+            "weight": 68.0
         },
         {
             "number": 9,
             "horse": "KISS KISS",
-            "description": ""
+            "description": "",
+            "performance": "6.3.1.2.A",
+            "gains": 119870,
+            "sex": "F",
+            "age": 6,
+            "trainer": "P.QUINTON",
+            "jockey": "Q.DEFONTAINE",
+            "driver": "Q.DEFONTAINE",
+            "owner": "HS. DE SAINT-VOIR",
+            "weight": 66.5
         },
         {
             "number": 10,
             "horse": "HAMANDIO",
-            "description": ""
+            "description": "",
+            "performance": "8.6.1.5.1",
+            "gains": 266872,
+            "sex": "H",
+            "age": 9,
+            "trainer": "N. GEORGE & A. ZETTERHOLM",
+            "jockey": "K.NABET",
+            "driver": "K.NABET",
+            "owner": "C.ALEXANDER",
+            "weight": 66.5
         },
         {
             "number": 11,
             "horse": "FLANKER",
-            "description": ""
+            "description": "",
+            "performance": "3.A.0.0.J",
+            "gains": 215965,
+            "sex": "H",
+            "age": 9,
+            "trainer": "CHAILLE-CHAILLE & PAMART",
+            "jockey": "F.BAYLE",
+            "driver": "F.BAYLE",
+            "owner": "P.LAUGA",
+            "weight": 66.0
         },
         {
             "number": 12,
             "horse": "KRISNA",
-            "description": ""
+            "description": "",
+            "performance": "6.5.5.2.1",
+            "gains": 93735,
+            "sex": "F",
+            "age": 6,
+            "trainer": "D.MELE",
+            "jockey": "L.ZULIANI",
+            "driver": "L.ZULIANI",
+            "owner": "E.LENZI",
+            "weight": 65.5
         },
         {
             "number": 13,
             "horse": "FAN D'APPLE'S",
-            "description": ""
+            "description": "",
+            "performance": "4.J.9.4.3",
+            "gains": 349009,
+            "sex": "H",
+            "age": 11,
+            "trainer": "P.QUINTON",
+            "jockey": "A.ZULIANI",
+            "driver": "A.ZULIANI",
+            "owner": "EC. DES M",
+            "weight": 65.5
         },
         {
             "number": 14,
             "horse": "MALBEC DU MATHAN",
-            "description": ""
+            "description": "",
+            "performance": "5.2.8.5.2",
+            "gains": 117755,
+            "sex": "H",
+            "age": 9,
+            "trainer": "CHAILLE-CHAILLE & PAMART",
+            "jockey": "C.PRICHARD",
+            "driver": "C.PRICHARD",
+            "owner": "EC. DU MATHAN",
+            "weight": 65.5
         },
         {
             "number": 15,
             "horse": "INSIDE MONTLIOUX",
-            "description": ""
+            "description": "",
+            "performance": "6.9.6.0.6",
+            "gains": 320068,
+            "sex": "H",
+            "age": 9,
+            "trainer": "BR.BEAUNEZ",
+            "jockey": "L.PHILIPPERON",
+            "driver": "L.PHILIPPERON",
+            "owner": "B.BEAUNEZ",
+            "weight": 65.0
         },
         {
             "number": 16,
             "horse": "FOUDRE DELTA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.A.2.6",
+            "gains": 287036,
+            "sex": "H",
+            "age": 11,
+            "trainer": "Y.FOUIN",
+            "jockey": "J.PHELIPPE",
+            "driver": "J.PHELIPPE",
+            "owner": "Y.FOUIN",
+            "weight": 63.5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

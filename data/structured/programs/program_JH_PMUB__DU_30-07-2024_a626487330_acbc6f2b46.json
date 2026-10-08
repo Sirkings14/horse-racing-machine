@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB__DU_30-07-2024_a626487330_acbc6f2b46.txt",
-    "parsed_at": "2026-10-08T10:35:46.590416Z",
+    "parsed_at": "2026-10-08T23:52:20.882501Z",
     "date": "2024-07-30",
     "race": {
         "race_name": "PLAT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DEEP HOPE",
-            "description": ""
+            "description": "",
+            "performance": "5.6.0.3.1",
+            "gains": 142210,
+            "sex": "H",
+            "age": 5,
+            "trainer": "K.ALALOS",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "O.GHRGHAR",
+            "weight": 61.0,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "OZAN",
-            "description": ""
+            "description": "",
+            "performance": "0.8.3.1.8",
+            "gains": 140100,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "G.DOLEUZE",
+            "driver": "G.DOLEUZE",
+            "owner": "C.STEPHENSON",
+            "weight": 60.5,
+            "draw": 4
         },
         {
             "number": 3,
             "horse": "RAKAN",
-            "description": ""
+            "description": "",
+            "performance": "1.6.9.0.1",
+            "gains": 161150,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.BARZALONA",
+            "jockey": "P.GROUALLE",
+            "driver": "P.GROUALLE",
+            "owner": "GOUSSERIE RACING",
+            "weight": 60.0,
+            "draw": 5
         },
         {
             "number": 4,
             "horse": "SHINNING OCEAN",
-            "description": ""
+            "description": "",
+            "performance": "9.3.9.1.0",
+            "gains": 167705,
+            "sex": "M",
+            "age": 7,
+            "trainer": "E.HARDOUIN",
+            "jockey": "H.BLUME",
+            "driver": "H.BLUME",
+            "owner": "Y.MARIE-NELLY",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "HOT SPOT",
-            "description": ""
+            "description": "",
+            "performance": "9.3.3.5.5",
+            "gains": 179807,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A.MADAMET",
+            "jockey": "JP.SILVA PEREIRA",
+            "driver": "JP.SILVA PEREIRA",
+            "owner": "DM.BAT. RIBEIRO",
+            "weight": 59.0,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "PEDRITO",
-            "description": ""
+            "description": "",
+            "performance": "2.0.0.0.0",
+            "gains": 165730,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HA.PANTALL",
+            "weight": 58.0,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "TORPEN",
-            "description": ""
+            "description": "",
+            "performance": "7.4.3.4.9",
+            "gains": 284320,
+            "sex": "H",
+            "age": 7,
+            "trainer": "H.BESNIER",
+            "jockey": "R.SCHOOF",
+            "driver": "R.SCHOOF",
+            "owner": "R.SCHOOF",
+            "weight": 58.0,
+            "draw": 1
         },
         {
             "number": 8,
             "horse": "ROYAL SHAKE",
-            "description": ""
+            "description": "",
+            "performance": "8.8.2.6.6",
+            "gains": 55170,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "ROY RACING",
+            "weight": 57.5,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "ROYAL SAXO",
-            "description": ""
+            "description": "",
+            "performance": "6.2.4.1.6",
+            "gains": 38200,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "JC.ROUGET",
+            "driver": "JC.ROUGET",
+            "owner": "EC. TLV",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "ABELARD F",
-            "description": ""
+            "description": "",
+            "performance": "2.9.1.1.5",
+            "gains": 87217,
+            "sex": "M",
+            "age": 6,
+            "trainer": "B.MARIE",
+            "jockey": "A.KARKOSA",
+            "driver": "A.KARKOSA",
+            "owner": "Y.POPELIER",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 11,
             "horse": "TOIJK",
-            "description": ""
+            "description": "",
+            "performance": "6.2.0.2.4",
+            "gains": 193241,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.GUYON",
+            "jockey": "H.SAUER",
+            "driver": "H.SAUER",
+            "owner": "STALL LAURUS",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 12,
             "horse": "MIAMI VOICE",
-            "description": ""
+            "description": "",
+            "performance": "3.4.8.7.1",
+            "gains": 46320,
+            "sex": "M",
+            "age": 6,
+            "trainer": "C.SOUMILLON",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "A&G BOTTI",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 13,
             "horse": "FREJA",
-            "description": ""
+            "description": "",
+            "performance": "8.3.3.5.2",
+            "gains": 87360,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "LEOPARDUCCIO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.1.0",
+            "gains": 77660,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "C.B. BARBE",
+            "driver": "C.B. BARBE",
+            "owner": "C.B. BARBE",
+            "weight": 53.0,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "CHANEL GOLD",
-            "description": ""
+            "description": "",
+            "performance": "9.0.0.1.0",
+            "gains": 43000,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "JP.CARVALHO",
+            "driver": "JP.CARVALHO",
+            "owner": "GERMAN RACING CLUB",
+            "weight": 53.0,
+            "draw": 12
         },
         {
             "number": 16,
             "horse": "ALCANOR",
-            "description": ""
+            "description": "",
+            "performance": "0.4.4.0.2",
+            "gains": 72260,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "EC. MEIOHAS",
+            "weight": 53.0,
+            "draw": 16
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_18-07-2024_006645441e_ca44551518.txt",
-    "parsed_at": "2026-10-08T10:35:44.844632Z",
+    "parsed_at": "2026-10-08T23:52:18.334320Z",
     "date": "2024-07-18",
     "race": {
         "race_name": "PRIX VICHY COMMUNAUTE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "PAPER TROPHY",
-            "description": ""
+            "description": "",
+            "performance": "0.6.0.1.0",
+            "gains": 169770,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T. BACHELOT",
+            "jockey": "R. AVIAL LOPEZ",
+            "driver": "R. AVIAL LOPEZ",
+            "owner": "CH.E PIERROU",
+            "weight": 61.0,
+            "draw": 1
         },
         {
             "number": 2,
             "horse": "WUKHANN",
-            "description": ""
+            "description": "",
+            "performance": "1.1.3.2.0",
+            "gains": 90330,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M. GUYON",
+            "jockey": "J. PARIZE",
+            "driver": "J. PARIZE",
+            "owner": "RICHARD FRANCES",
+            "weight": 59.5,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "LIGHTNING BOLT",
-            "description": ""
+            "description": "",
+            "performance": "5.1.1.1.0",
+            "gains": 45800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A. MADAMET",
+            "jockey": "M. SEROR",
+            "driver": "M. SEROR",
+            "owner": "RACING 53",
+            "weight": 59.5,
+            "draw": 3
         },
         {
             "number": 4,
             "horse": "KAYRAT",
-            "description": ""
+            "description": "",
+            "performance": "5.4.1.0.1",
+            "gains": 148910,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. ORANI",
+            "jockey": "M. SCAND. LACAILLE",
+            "driver": "M. SCAND. LACAILLE",
+            "owner": "MARLON ARCH",
+            "weight": 59.5,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "KAPANI",
-            "description": ""
+            "description": "",
+            "performance": "1.6.9.9.9",
+            "gains": 144750,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C. LECOEUVRE",
+            "jockey": "M. PITART",
+            "driver": "M. PITART",
+            "owner": "HUBERT MERAUD",
+            "weight": 59.0,
+            "draw": 8
         },
         {
             "number": 6,
             "horse": "SEA BREAKER",
-            "description": ""
+            "description": "",
+            "performance": "0.1.8.0.6",
+            "gains": 53890,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T. PICCONE",
+            "jockey": "HA. PANTALL",
+            "driver": "HA. PANTALL",
+            "owner": "GUY HEALD",
+            "weight": 57.0,
+            "draw": 16
         },
         {
             "number": 7,
             "horse": "UTAMARO",
-            "description": ""
+            "description": "",
+            "performance": "3.7.8.3.2",
+            "gains": 181700,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M. FOREST",
+            "jockey": "C. BOCSKAI",
+            "driver": "C. BOCSKAI",
+            "owner": "STALL CIMBA",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 8,
             "horse": "MASTER OF HOPE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.7.7.3",
+            "gains": 17750,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I. MENDIZABAL",
+            "jockey": "M. DELZANGLES",
+            "driver": "M. DELZANGLES",
+            "owner": "NICOLAS GIROT",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 9,
             "horse": "FLATTEN THE CURVE",
-            "description": ""
+            "description": "",
+            "performance": "6.4.2.5.3",
+            "gains": 121150,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M. VELON",
+            "jockey": "C. FEY",
+            "driver": "C. FEY",
+            "owner": "ECKHARD SAUREN",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 10,
             "horse": "BARBATE",
-            "description": ""
+            "description": "",
+            "performance": "0.6.0.1.0",
+            "gains": 46150,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A. POUCHIN",
+            "jockey": "C. LAFFON-PARIAS",
+            "driver": "C. LAFFON-PARIAS",
+            "owner": "SARL DARPAT FRANCE",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "LE BUGISTE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.6.5",
+            "gains": 38810,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R. THOMAS",
+            "jockey": "P. DECOUZ",
+            "driver": "P. DECOUZ",
+            "owner": "D.PELTIER",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 12,
             "horse": "DSCHINGIS SPECTRE",
-            "description": ""
+            "description": "",
+            "performance": "2.7.1.2.2",
+            "gains": 19850,
+            "sex": "M",
+            "age": 4,
+            "trainer": "E. HARDOUIN",
+            "jockey": "M. BRASME",
+            "driver": "M. BRASME",
+            "owner": "AVATARA S.A.",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "CHELSEA DU NINIAN",
-            "description": ""
+            "description": "",
+            "performance": "3.0.3.0.6",
+            "gains": 112505,
+            "sex": "F",
+            "age": 6,
+            "trainer": "D. BOCHE",
+            "jockey": "N. PAYSAN",
+            "driver": "N. PAYSAN",
+            "owner": "N.PAYSAN",
+            "weight": 54.0,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "PERDRIOLLE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.5.2.0",
+            "gains": 73540,
+            "sex": "F",
+            "age": 5,
+            "trainer": "M. BARZALONA",
+            "jockey": "N. PERRET",
+            "driver": "N. PERRET",
+            "owner": "GEORGES DUCA",
+            "weight": 54.0,
+            "draw": 2
         },
         {
             "number": 15,
             "horse": "GUINESS STAR",
-            "description": ""
+            "description": "",
+            "performance": "2.2.7.5.1",
+            "gains": 15740,
+            "sex": "M",
+            "age": 4,
+            "trainer": "L.POGGIONOVO",
+            "jockey": "A. COUETIL",
+            "driver": "A. COUETIL",
+            "owner": "SC THIERRY PIGEON",
+            "weight": 54.0,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "BLACK HAWK",
-            "description": ""
+            "description": "",
+            "performance": "1.7.5.2.1",
+            "gains": 131110,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A. LEMAITRE",
+            "jockey": "L. PONTOIR",
+            "driver": "L. PONTOIR",
+            "owner": "ANTOINE BOUCHER",
+            "weight": 53.5,
+            "draw": 11
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

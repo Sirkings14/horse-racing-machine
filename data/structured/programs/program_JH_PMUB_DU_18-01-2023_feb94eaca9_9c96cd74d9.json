@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_18-01-2023_feb94eaca9_9c96cd74d9.txt",
-    "parsed_at": "2026-10-08T10:35:44.742171Z",
+    "parsed_at": "2026-10-08T23:52:18.194340Z",
     "date": "2023-01-16",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "SAINT HELLIER",
-            "description": ""
+            "description": "",
+            "performance": "1.1.7.2.1",
+            "gains": 65950,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.VERON",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "M.NIKITAS",
+            "weight": 62.5,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "NIGHTHAB",
-            "description": ""
+            "description": "",
+            "performance": "1.2.1.2.1",
+            "gains": 54320,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "V.SARTORI",
+            "driver": "V.SARTORI",
+            "owner": "EC. DU SUD",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "WARM BREEZE",
-            "description": ""
+            "description": "",
+            "performance": "1.7.0.3.2",
+            "gains": 51500,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.JOURNIAC",
+            "jockey": "L.ROVISSE",
+            "driver": "L.ROVISSE",
+            "owner": "J.ANXO",
+            "weight": 59.0,
+            "draw": 5
         },
         {
             "number": 4,
             "horse": "HELIOPOLIS",
-            "description": ""
+            "description": "",
+            "performance": "3.1.6.2.1",
+            "gains": 44810,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "A.WIGAN",
+            "weight": 59.0,
+            "draw": 16
         },
         {
             "number": 5,
             "horse": "VIS LE REVE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.2.3",
+            "gains": 40300,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "S.BROGI",
+            "driver": "S.BROGI",
+            "owner": "P.SIGAUD",
+            "weight": 58.5,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "SEASALT",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.1",
+            "gains": 19880,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "P.WALTER",
+            "weight": 58.5,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "JOH SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "5.1.1.6.3",
+            "gains": 18940,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.RUIS",
+            "jockey": "P.SIGAUD",
+            "driver": "P.SIGAUD",
+            "owner": "A.KRAULIGER",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 8,
             "horse": "JOLI COUP",
-            "description": ""
+            "description": "",
+            "performance": "5.4.6.0.1",
+            "gains": 97250,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "J.PARIZE",
+            "driver": "J.PARIZE",
+            "owner": "G.COHEN",
+            "weight": 57.5,
+            "draw": 14
         },
         {
             "number": 9,
             "horse": "MARTIAL ART",
-            "description": ""
+            "description": "",
+            "performance": "2.2.4.4.5",
+            "gains": 23116,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.CABRE",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "N.OZGULER",
+            "weight": 57.5,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "RANDONNEUR",
-            "description": ""
+            "description": "",
+            "performance": "7.4.1",
+            "gains": 13800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "P.WULK",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "HAPPY HARRY",
-            "description": ""
+            "description": "",
+            "performance": "4.0.7.6.1",
+            "gains": 58950,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.ORANI",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "S.MOLKS",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 12,
             "horse": "LIGHTED GLORY",
-            "description": ""
+            "description": "",
+            "performance": "2.4.4.8.5",
+            "gains": 46700,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.TRULLIER",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "T.MARECHAL",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "LE DUC",
-            "description": ""
+            "description": "",
+            "performance": "3.6.7.0.2",
+            "gains": 25900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PLANQUE",
+            "jockey": "I.JANA. KOPLIKOVA",
+            "driver": "I.JANA. KOPLIKOVA",
+            "owner": "JM.VARCIN",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "ROYAL MONARCH",
-            "description": ""
+            "description": "",
+            "performance": "3.8.8.3.1",
+            "gains": 22180,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "U.KLEIN",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 15,
             "horse": "KISS QUEEN",
-            "description": ""
+            "description": "",
+            "performance": "1.9.2.4.2",
+            "gains": 19600,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.EVENO",
+            "driver": "S.EVENO",
+            "owner": "LE HS DE LA GOUSSERIE",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 16,
             "horse": "ZULU NYALA",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.3.5",
+            "gains": 23750,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "LEGEND RACING CLUB",
+            "weight": 56.5,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

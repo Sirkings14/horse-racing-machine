@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_14-04-2023_75544a72d7_ca1bba82be.txt",
-    "parsed_at": "2026-10-08T10:35:44.168343Z",
+    "parsed_at": "2026-10-08T23:52:17.379175Z",
     "date": "2023-04-14",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GLORIEUSE CARNOIS",
-            "description": ""
+            "description": "",
+            "performance": "D.4.D.3.1",
+            "gains": 208330,
+            "sex": "F",
+            "age": 7,
+            "trainer": "E. RAFFIN",
+            "jockey": "L. ROELENS",
+            "driver": "L. ROELENS",
+            "owner": "M. VAN HONSEBROUCK",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 2,
             "horse": "GALA DE CRENNES",
-            "description": ""
+            "description": "",
+            "performance": "2.6.7.2.5",
+            "gains": 209720,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E. SZIRMAY",
+            "jockey": "E. SZIRMAY",
+            "driver": "E. SZIRMAY",
+            "owner": "EC. HS DE CRENNES",
+            "listed_chrono": "1.13.10",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 3,
             "horse": "GHOSTBUSTER",
-            "description": ""
+            "description": "",
+            "performance": "1.6.8.9.3",
+            "gains": 212670,
+            "sex": "H",
+            "age": 7,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "S. RAIMOND",
+            "driver": "S. RAIMOND",
+            "owner": "EC. MOLINA",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 4,
             "horse": "FETICHE ATOUT",
-            "description": ""
+            "description": "",
+            "performance": "8.1.2.6.D",
+            "gains": 215620,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. LAGADEUC",
+            "jockey": "CH. MOTTIER",
+            "driver": "CH. MOTTIER",
+            "owner": "EC. CH. MOTTIER",
+            "listed_chrono": "1.12.60",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 5,
             "horse": "ENDURO",
-            "description": ""
+            "description": "",
+            "performance": "D.5.6.2.1",
+            "gains": 215930,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. OUVRIE",
+            "jockey": "S. ROGER",
+            "driver": "S. ROGER",
+            "owner": "R. PLANTIN",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 6,
             "horse": "DRACO JIEL",
-            "description": ""
+            "description": "",
+            "performance": "0.3.D.1.5",
+            "gains": 217720,
+            "sex": "H",
+            "age": 10,
+            "trainer": "D. BERTRAND",
+            "jockey": "J.L. DERSOIR",
+            "driver": "J.L. DERSOIR",
+            "owner": "EC. LUCK",
+            "listed_chrono": "1.13.10",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 7,
             "horse": "FANATIC FLASH",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.2.1",
+            "gains": 223900,
+            "sex": "H",
+            "age": 8,
+            "trainer": "D. THOMAIN",
+            "jockey": "J.PH. RAFFEGEAU",
+            "driver": "J.PH. RAFFEGEAU",
+            "owner": "EC. J.Y. ET J.P. RAFFEGEAU",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 8,
             "horse": "FORMI",
-            "description": ""
+            "description": "",
+            "performance": "8.8.0.0.5",
+            "gains": 226845,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A. BARRIER",
+            "jockey": "CH.A. MARY",
+            "driver": "CH.A. MARY",
+            "owner": "HERVÉ CHENET",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 9,
             "horse": "GAELIC DU ROCHER",
-            "description": ""
+            "description": "",
+            "performance": "8.2.5.0.2",
+            "gains": 236530,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "TH. BOURGAULT",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 10,
             "horse": "EMENCOURT D'AZIF",
-            "description": ""
+            "description": "",
+            "performance": "4.3.0.0.1",
+            "gains": 236640,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J.F. SENET",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "EC. J-F. SENET",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 11,
             "horse": "DISCO D'OCCAGNES",
-            "description": ""
+            "description": "",
+            "performance": "6.0.4.3.0",
+            "gains": 236770,
+            "sex": "H",
+            "age": 10,
+            "trainer": "F. NIVARD",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "D. BENCHETRIT",
+            "listed_chrono": "1.10.20",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 12,
             "horse": "GREAT OF MADRIK",
-            "description": ""
+            "description": "",
+            "performance": "6.5.3.5.1",
+            "gains": 238235,
+            "sex": "M",
+            "age": 7,
+            "trainer": "M. ABRIVARD",
+            "jockey": "S. GUARATO",
+            "driver": "S. GUARATO",
+            "owner": "EC. SIMPLICE",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 13,
             "horse": "GLAMOUR QUEEN",
-            "description": ""
+            "description": "",
+            "performance": "0.8.7.2.5",
+            "gains": 238680,
+            "sex": "F",
+            "age": 7,
+            "trainer": "J.PH. DUBOIS",
+            "jockey": "PH. MOULIN",
+            "driver": "PH. MOULIN",
+            "owner": "EC. VICT. DREAMS",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 14,
             "horse": "FLOREAL",
-            "description": ""
+            "description": "",
+            "performance": "4.2.7.0.2",
+            "gains": 239500,
+            "sex": "H",
+            "age": 8,
+            "trainer": "R. BOUVIER",
+            "jockey": "CHARLES BOUVIER",
+            "driver": "CHARLES BOUVIER",
+            "owner": "CHARLES BOUVIER",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 15,
             "horse": "FILHIO DE LOU",
-            "description": ""
+            "description": "",
+            "performance": "1.4.4.3.0",
+            "gains": 240660,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. ABRIVARD",
+            "jockey": "LEO ABRIVARD",
+            "driver": "LEO ABRIVARD",
+            "owner": "CH. GERMAIN",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2 850.M"
         },
         {
             "number": 16,
             "horse": "GAMIN JABA",
-            "description": ""
+            "description": "",
+            "performance": "D.9.D.0.2",
+            "gains": 243780,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "G. BAZIRE",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2 850.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             13,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_21-08-2025_9978a1d92c_8460a835a8.txt",
-    "parsed_at": "2026-10-08T10:35:45.256133Z",
+    "parsed_at": "2026-10-08T23:52:18.941071Z",
     "date": "2025-08-21",
     "race": {
         "race_name": "PRIX CARREFOUR DEAUVILLE - TOUQUES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "REVERSO",
-            "description": ""
+            "description": "",
+            "performance": "1.5.8.8.6",
+            "gains": 107503,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I.JANAC. KOPLIKOVA",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "J.DUFKOVA",
+            "weight": 61.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "MATT MACHINE",
-            "description": ""
+            "description": "",
+            "performance": "6.2.1.7.5",
+            "gains": 123432,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M.GEISLER",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "ST. LIBERTY LEAF",
+            "weight": 59.5,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "BELLANO",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.01",
+            "gains": 49500,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "M.MOTSCHMANN",
+            "weight": 59.5,
+            "draw": 7
         },
         {
             "number": 4,
             "horse": "KIARO",
-            "description": ""
+            "description": "",
+            "performance": "7.6.0.1.0",
+            "gains": 65095,
+            "sex": "M",
+            "age": 4,
+            "trainer": "HA.PANTALL",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "L.ALBOUY/A.ARFI",
+            "weight": 58.5,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "RAKAN",
-            "description": ""
+            "description": "",
+            "performance": "4.5.1.4.3",
+            "gains": 207352,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.FOUASSIER",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "TESSE/BERTHO",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "WESTMINSTER NIGHT",
-            "description": ""
+            "description": "",
+            "performance": "0.2.2.0.5",
+            "gains": 125419,
+            "sex": "H",
+            "age": 6,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "WEST. RACE HORSES",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "VCTE DE JODELET",
-            "description": ""
+            "description": "",
+            "performance": "0.1.8.1.4",
+            "gains": 63910,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "B. ED.DE ROTHSCHILD",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 8,
             "horse": "LEOPARDUCCIO",
-            "description": ""
+            "description": "",
+            "performance": "1.6.5.0.1",
+            "gains": 128410,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.B.BARBE",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "C.B.BARBE",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "JOSEPHINO",
-            "description": ""
+            "description": "",
+            "performance": "3.5.6.5.3",
+            "gains": 128277,
+            "sex": "M",
+            "age": 6,
+            "trainer": "I.JANA.KOPLIKOVA",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "J.DUFKOVA",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "CHALDERO",
-            "description": ""
+            "description": "",
+            "performance": "1.2.6.1.1",
+            "gains": 44159,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.NIESLANIK",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "E.NIESLANIKOVA",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "SCARFACE",
-            "description": ""
+            "description": "",
+            "performance": "5.4.7.0.3",
+            "gains": 233000,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.BOUTIN",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "SCU. MICOLO",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "SHOWPOWER",
-            "description": ""
+            "description": "",
+            "performance": "4.0.4.4.1",
+            "gains": 55105,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I.JANA.KOPLIKOVA",
+            "jockey": "G.SIAS",
+            "driver": "G.SIAS",
+            "owner": "J.DUFKOVA",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 13,
             "horse": "SEVENDAY",
-            "description": ""
+            "description": "",
+            "performance": "3.5.6.1.9",
+            "gains": 36126,
+            "sex": "H",
+            "age": 4,
+            "trainer": "JC.ROUGET",
+            "jockey": "C.PACAUT",
+            "driver": "C.PACAUT",
+            "owner": "EC. S. STEMPNIAK",
+            "weight": 54.5,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "EVERSTAR",
-            "description": ""
+            "description": "",
+            "performance": "3.6.7.4.9",
+            "gains": 82965,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.GADBIN",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "V.GADBIN",
+            "weight": 54.0,
+            "draw": 5
         },
         {
             "number": 15,
             "horse": "WAPI",
-            "description": ""
+            "description": "",
+            "performance": "2.4.4.0.0",
+            "gains": 44621,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C&Y.LERNER",
+            "jockey": "D.SALMON",
+            "driver": "D.SALMON",
+            "owner": "EC.HS. CADRAN",
+            "weight": 54.0,
+            "draw": 15
         },
         {
             "number": 16,
             "horse": "ZELORO",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.1.8",
+            "gains": 21000,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P&J.BRANDT",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "ST. PERLEN AB",
+            "weight": 54.0,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             10,

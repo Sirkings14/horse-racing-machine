@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_08-03-2026_8413ff5aec_c1b7908b30.txt",
-    "parsed_at": "2026-10-08T10:35:46.773861Z",
+    "parsed_at": "2026-10-08T23:52:21.143504Z",
     "date": "2026-03-08",
     "race": {
         "race_name": "ATTELE",
@@ -16,69 +16,161 @@
         {
             "number": 1,
             "horse": "HOKKAIDO JIEL",
-            "description": ""
+            "description": "",
+            "performance": "8.1.4.6.6",
+            "gains": 1504780,
+            "trainer": "J.L. DERSOIR",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "EC.LUCK",
+            "listed_chrono": "1.09.10"
         },
         {
             "number": 2,
             "horse": "HARLEY GEMA",
-            "description": ""
+            "description": "",
+            "performance": "1.0.1.1.0",
+            "gains": 627270,
+            "trainer": "M. SASSIER",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "EC. Marc SASSIER",
+            "listed_chrono": "1.10.90"
         },
         {
             "number": 3,
             "horse": "FAKIR MERITE",
-            "description": ""
+            "description": "",
+            "performance": "7.0.0.8.8",
+            "gains": 573350,
+            "trainer": "N. ENSCH",
+            "jockey": "N. ENSCH",
+            "driver": "N. ENSCH",
+            "owner": "G. VEYRAC",
+            "listed_chrono": "1.10.00"
         },
         {
             "number": 4,
             "horse": "GO ON BOY",
-            "description": ""
+            "description": "",
+            "performance": "2.D.2.1.1",
+            "gains": 2759297,
+            "trainer": "R. DERIEUX",
+            "jockey": "R. DERIEUX",
+            "driver": "R. DERIEUX",
+            "owner": "C. LOGIER",
+            "listed_chrono": "1.08.40"
         },
         {
             "number": 5,
             "horse": "INMAROSA",
-            "description": ""
+            "description": "",
+            "performance": "6.0.3.1.4",
+            "gains": 1151411,
+            "trainer": "L.CL. ABRIVARD",
+            "jockey": "LEO ABRIVARD",
+            "driver": "LEO ABRIVARD",
+            "owner": "J. COTTEL",
+            "listed_chrono": "1.08.40"
         },
         {
             "number": 6,
             "horse": "EXECUTIV EK",
-            "description": ""
+            "description": "",
+            "performance": "9.1.3.3.2",
+            "gains": 703700,
+            "trainer": "A. GOCCIADORO",
+            "jockey": "A. GOCCIADORO",
+            "driver": "A. GOCCIADORO",
+            "owner": "Azienda Agr. BIASUZZI",
+            "listed_chrono": "1.10.10"
         },
         {
             "number": 7,
             "horse": "IGUSKI SAUTONNE",
-            "description": ""
+            "description": "",
+            "performance": "5.1.5.3.5",
+            "gains": 1047980,
+            "trainer": "M. ABRIVARD",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "EC.LD-M. ABRIVARD",
+            "listed_chrono": "1.09.00"
         },
         {
             "number": 8,
             "horse": "FRANK GIO",
-            "description": ""
+            "description": "",
+            "performance": "6.4.2.2.4",
+            "gains": 975369,
+            "trainer": "S. GUARATO",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "Scu. BIVANS SRL",
+            "listed_chrono": "1.09.90"
         },
         {
             "number": 9,
             "horse": "LARGO DE CASTELLE",
-            "description": ""
+            "description": "",
+            "performance": "5.3.4.4.2",
+            "gains": 245577,
+            "trainer": "H. GRIFT",
+            "jockey": "LANA HENRY",
+            "driver": "LANA HENRY",
+            "owner": "EC. DRAGON TROTTERS",
+            "listed_chrono": "1.11.00"
         },
         {
             "number": 10,
             "horse": "LIGHTNING STRIDE",
-            "description": ""
+            "description": "",
+            "performance": "0.4.4.9.A",
+            "gains": 346489,
+            "trainer": "Antti OJANPERA",
+            "jockey": "S. RAITALA",
+            "driver": "S. RAITALA",
+            "owner": "HPT NORDIC AB",
+            "listed_chrono": "1.10.80"
         },
         {
             "number": 11,
             "horse": "JONGLEUSE DE LUNE",
-            "description": ""
+            "description": "",
+            "performance": "6.2.1.3.3",
+            "gains": 388060,
+            "trainer": "K. LEBLANC",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "ELEV. AL.WITH ME",
+            "listed_chrono": "1.11.20"
         },
         {
             "number": 12,
             "horse": "FELLOW WISE AS",
-            "description": ""
+            "description": "",
+            "performance": "7.9.D.D.5",
+            "gains": 201868,
+            "trainer": "N. BAZIRE",
+            "jockey": "N. BAZIRE",
+            "driver": "N. BAZIRE",
+            "owner": "G.RICCIO",
+            "listed_chrono": "1.10.90"
         },
         {
             "number": 13,
             "horse": "GOLD VOICE",
-            "description": ""
+            "description": "",
+            "performance": "D.5.8.4.4",
+            "gains": 507230,
+            "trainer": "TH. LEVESQUE",
+            "jockey": "J.CH. FERON",
+            "driver": "J.CH. FERON",
+            "owner": "D. BENCHETRIT",
+            "listed_chrono": "1.10.30"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

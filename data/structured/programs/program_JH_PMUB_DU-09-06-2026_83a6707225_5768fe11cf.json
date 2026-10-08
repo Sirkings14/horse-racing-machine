@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-09-06-2026_83a6707225_5768fe11cf.txt",
-    "parsed_at": "2026-10-08T10:35:40.348596Z",
+    "parsed_at": "2026-10-08T23:52:11.969321Z",
     "date": "2026-06-09",
     "race": {
         "race_name": "PRIX BENJAMIN BOUTIN",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "BON VIVEUR",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.2.3",
+            "gains": 26576,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.PITART",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "B.GIRAUDON",
+            "weight": 60.0,
+            "draw": 14
         },
         {
             "number": 2,
             "horse": "CHICA SUERTE",
-            "description": ""
+            "description": "",
+            "performance": "1.9.1.1.3",
+            "gains": 30584,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J.BOISNARD",
+            "jockey": "H.LEBOUC",
+            "driver": "H.LEBOUC",
+            "owner": "A.PRUDENT",
+            "weight": 58.5,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "DEUX PONTS",
-            "description": ""
+            "description": "",
+            "performance": "4.2.3.4",
+            "gains": 11126,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.RULEC",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "N.OZDOGAN",
+            "weight": 58.5,
+            "draw": 7
         },
         {
             "number": 4,
             "horse": "ZARLAND",
-            "description": ""
+            "description": "",
+            "performance": "7.6.5.3.3",
+            "gains": 9691,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.WATTEL",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "R.BAGUENAULT",
+            "weight": 58.5,
+            "draw": 5
         },
         {
             "number": 5,
             "horse": "HENDRIXX",
-            "description": ""
+            "description": "",
+            "performance": "1.8.6.6",
+            "gains": 14684,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "STARS OF FORTUNE",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "INCENTIVE VICTORY",
-            "description": ""
+            "description": "",
+            "performance": "7.6.1.5",
+            "gains": 15820,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.KOBAYASHI",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "P.MOSBEUX",
+            "weight": 57.5,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "SEA NYMPH",
-            "description": ""
+            "description": "",
+            "performance": "3.5.1.6",
+            "gains": 9595,
+            "sex": "F",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "G.HEALD",
+            "weight": 57.5,
+            "draw": 16
         },
         {
             "number": 8,
             "horse": "TI AMO BELLO",
-            "description": ""
+            "description": "",
+            "performance": "9.5.5.1.7",
+            "gains": 20544,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.PITART",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "EC.METAL/EC. PUGLIA",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "THE TINKER",
-            "description": ""
+            "description": "",
+            "performance": "5.8.0.5.7",
+            "gains": 17302,
+            "sex": "M",
+            "age": 3,
+            "trainer": "P&J.BRANDT",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "F.BLICHFELDT",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "ZELZARA",
-            "description": ""
+            "description": "",
+            "performance": "0.8.2.7.6",
+            "gains": 33809,
+            "sex": "F",
+            "age": 3,
+            "trainer": "Y.BARBEROT",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "J.MESTRALLET",
+            "weight": 56.5,
+            "draw": 1
         },
         {
             "number": 11,
             "horse": "FAOLIO",
-            "description": ""
+            "description": "",
+            "performance": "2.1.4.5.6",
+            "gains": 23387,
+            "sex": "H",
+            "age": 3,
+            "trainer": "D&P.PROD'HOMME",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "A.KRAULIGER",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "EGYPTIAN GLORY",
-            "description": ""
+            "description": "",
+            "performance": "5.1.6",
+            "gains": 13991,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "I.CORBANI",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 13,
             "horse": "HOWITZER",
-            "description": ""
+            "description": "",
+            "performance": "4.6.1.9.6",
+            "gains": 23243,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H.GHABRI",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "H.ARIBI",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 14,
             "horse": "SAMOR",
-            "description": ""
+            "description": "",
+            "performance": "9.3.4.3",
+            "gains": 9760,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.FERLAND",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "WERTHEIMER & FRERE",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 15,
             "horse": "TEVERE",
-            "description": ""
+            "description": "",
+            "performance": "4.0.8.6.2",
+            "gains": 11182,
+            "sex": "F",
+            "age": 3,
+            "trainer": "D.ARTU",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "L.PASCALI/ A.STARITA",
+            "weight": 54.5,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "HEY JO",
-            "description": ""
+            "description": "",
+            "performance": "5.3.1.7",
+            "gains": 10406,
+            "sex": "H",
+            "age": 3,
+            "trainer": "F.BRESSON",
+            "jockey": "J.CLAUDIC",
+            "driver": "J.CLAUDIC",
+            "owner": "P.STEIN",
+            "weight": 54.0,
+            "draw": 11
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             10,

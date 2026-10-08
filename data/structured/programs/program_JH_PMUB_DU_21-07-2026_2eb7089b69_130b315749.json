@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_21-07-2026_2eb7089b69_130b315749.txt",
-    "parsed_at": "2026-10-08T10:35:45.242740Z",
+    "parsed_at": "2026-10-08T23:52:18.919204Z",
     "date": "2026-07-21",
     "race": {
         "race_name": "PRIX IMPERATRICE EUGENIE",
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "LOHENGREEN",
-            "description": ""
+            "description": "",
+            "performance": "3.6.2.2.1",
+            "gains": 27514,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.ESCUDER",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "B.GIRAUDON",
+            "weight": 60.0,
+            "draw": 15
         },
         {
             "number": 2,
             "horse": "STUDY OF CASE",
-            "description": ""
+            "description": "",
+            "performance": "1.3.2.3.3",
+            "gains": 21816,
+            "sex": "M",
+            "age": 3,
+            "trainer": "N.PERRET",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "ARGELLA RACING",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "SELVO",
-            "description": ""
+            "description": "",
+            "performance": "5.1.3.7.5",
+            "gains": 16876,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.FERLAND",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "WERTHEIMER & FRERE",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 4,
             "horse": "HEPBURN",
-            "description": ""
+            "description": "",
+            "performance": "2.3.2.4.5",
+            "gains": 41332,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.ESCUDER",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "GUY PARIENTE HOLDING",
+            "weight": 56.0,
+            "draw": 1
         },
         {
             "number": 5,
             "horse": "YOKOZUNA",
-            "description": ""
+            "description": "",
+            "performance": "6.1.2.2.6",
+            "gains": 11735,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H.SHIMIZU",
+            "jockey": "J.NICOLEAU",
+            "driver": "J.NICOLEAU",
+            "owner": "S.OKAMOTO",
+            "weight": 56.0,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "MARTAGHALYA",
-            "description": ""
+            "description": "",
+            "performance": "1.9.3",
+            "gains": 9300,
+            "sex": "F",
+            "age": 3,
+            "trainer": "AS&D.ALLARD",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "AS&D.AS&D.ALLARD",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "I AM MAELIA",
-            "description": ""
+            "description": "",
+            "performance": "1.4.8.5.3",
+            "gains": 18477,
+            "sex": "F",
+            "age": 3,
+            "trainer": "JP.GAUVIN",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "EC.B.MILLIERE/H.PACINI",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 8,
             "horse": "DERBYCAT",
-            "description": ""
+            "description": "",
+            "performance": "3.7.1",
+            "gains": 8115,
+            "sex": "F",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "WEST.RACE HORSES S",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "ANODIAC",
-            "description": ""
+            "description": "",
+            "performance": "3.4.1.6.1",
+            "gains": 22160,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.GOUYETTE",
+            "jockey": "P.REMOUE",
+            "driver": "P.REMOUE",
+            "owner": "G.LE SAINT",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 10,
             "horse": "LOVING QUEEN",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.7.6",
+            "gains": 24400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "FR.MONFORT",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "LA MOTTERAYE ELEVAGE",
+            "weight": 54.5,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "LOVATREE PARIS",
-            "description": ""
+            "description": "",
+            "performance": "4.4.4.1.3",
+            "gains": 40089,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.GAVILAN",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "A.RIVETTI/J.GAVILAN",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "DERNI CHOP",
-            "description": ""
+            "description": "",
+            "performance": "4.2.2.3.6",
+            "gains": 12192,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.CESANDRI",
+            "jockey": "L.PLOMMEE",
+            "driver": "L.PLOMMEE",
+            "owner": "G.FAGOT-PICHAT",
+            "weight": 53.0,
+            "draw": 13
         },
         {
             "number": 13,
             "horse": "AUTOROUTE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.1.0.6",
+            "gains": 12776,
+            "sex": "F",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "J.CYGLER",
+            "weight": 52.5,
+            "draw": 3
         },
         {
             "number": 14,
             "horse": "ZARABABY",
-            "description": ""
+            "description": "",
+            "performance": "3.3.5.6.8",
+            "gains": 11559,
+            "sex": "F",
+            "age": 3,
+            "trainer": "D.ARTU",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "EC. ARTU SNC",
+            "weight": 52.0,
+            "draw": 7
         },
         {
             "number": 15,
             "horse": "KRISTAL",
-            "description": ""
+            "description": "",
+            "performance": "0.6.7.8.7",
+            "gains": 3786,
+            "sex": "H",
+            "age": 3,
+            "trainer": "R.FRADET",
+            "jockey": "C.PACAUT",
+            "driver": "C.PACAUT",
+            "owner": "L.FRADET",
+            "weight": 51.0,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             14,

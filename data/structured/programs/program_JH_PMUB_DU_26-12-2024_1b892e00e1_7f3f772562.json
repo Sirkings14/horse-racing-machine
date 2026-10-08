@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_26-12-2024_1b892e00e1_7f3f772562.txt",
-    "parsed_at": "2026-10-08T10:35:45.991258Z",
+    "parsed_at": "2026-10-08T23:52:20.000469Z",
     "date": "2024-12-26",
     "race": {
         "race_name": "PRIX DE PIERREFONDS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "SPLENDINO",
-            "description": ""
+            "description": "",
+            "performance": "2.4.6.5.1",
+            "gains": 102150,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "JC.SEROUL",
+            "weight": 61.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "CENTRAL PARK WEST",
-            "description": ""
+            "description": "",
+            "performance": "5.4.8.3.1",
+            "gains": 264383,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.TRULLIER",
+            "jockey": "JUL .PHELIPPON",
+            "driver": "JUL .PHELIPPON",
+            "owner": "HORSEMOOD",
+            "weight": 60.5,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "CALAS",
-            "description": ""
+            "description": "",
+            "performance": "4.9.4.3.4",
+            "gains": 83250,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.MOISAN",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "BUCK RACING",
+            "weight": 59.0,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "HAVOC",
-            "description": ""
+            "description": "",
+            "performance": "1.4.6.5.1",
+            "gains": 182948,
+            "sex": "M",
+            "age": 6,
+            "trainer": "R.MANGIONE",
+            "jockey": "M.RULEC",
+            "driver": "M.RULEC",
+            "owner": "C.FOELLER",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "CHARLESQUINT",
-            "description": ""
+            "description": "",
+            "performance": "6.0.0.0.0",
+            "gains": 229325,
+            "sex": "H",
+            "age": 7,
+            "trainer": "H.JOURNIAC",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "MJ.GOETSCHY",
+            "weight": 59.0,
+            "draw": 6
         },
         {
             "number": 6,
             "horse": "SAINT ETIENNE",
-            "description": ""
+            "description": "",
+            "performance": "1.0.6.0.6",
+            "gains": 72930,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "G.AU.NORMAND",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 7,
             "horse": "GANASS",
-            "description": ""
+            "description": "",
+            "performance": "1.4.0.3.6",
+            "gains": 88300,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "CELESTIN",
-            "description": ""
+            "description": "",
+            "performance": "3.2.7.4.0",
+            "gains": 273353,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D.BREUX",
+            "jockey": "JP.MACE. DA COSTA",
+            "driver": "JP.MACE. DA COSTA",
+            "owner": "A.MARIE-NELLY",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "SITOI",
-            "description": ""
+            "description": "",
+            "performance": "2.9.1.2.7",
+            "gains": 24700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "H.BESNIER",
+            "jockey": "L.GADBIN",
+            "driver": "L.GADBIN",
+            "owner": "G.AU.NORMAND",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 10,
             "horse": "BAD BOY",
-            "description": ""
+            "description": "",
+            "performance": "5.3.4.1.2",
+            "gains": 77000,
+            "sex": "H",
+            "age": 3,
+            "trainer": "H.BOUTIN",
+            "jockey": "J.LEROY",
+            "driver": "J.LEROY",
+            "owner": "F.LEIDA",
+            "weight": 56.5,
+            "draw": 8
         },
         {
             "number": 11,
             "horse": "GIMANZOR",
-            "description": ""
+            "description": "",
+            "performance": "6.2.3.1.4",
+            "gains": 26730,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "JC.SEROUL",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "DENIA",
-            "description": ""
+            "description": "",
+            "performance": "8.8.1.3.2",
+            "gains": 117940,
+            "sex": "F",
+            "age": 6,
+            "trainer": "C.PACAUT",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "M.NIKITAS",
+            "weight": 54.5,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "TRUE TEDESCO",
-            "description": ""
+            "description": "",
+            "performance": "6.7.2.5.7",
+            "gains": 61640,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.BERGE",
+            "jockey": "A.SUBORICS",
+            "driver": "A.SUBORICS",
+            "owner": "ST. MYDLINGHOVEN",
+            "weight": 54.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "TILILA",
-            "description": ""
+            "description": "",
+            "performance": "5.8.2.2.8",
+            "gains": 42880,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "A.FABRE",
+            "weight": 53.5,
+            "draw": 13
         },
         {
             "number": 15,
             "horse": "PURPLE MOOD",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.9.8",
+            "gains": 51700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "J.MARIEN",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "M.VIDIC",
+            "weight": 53.0,
+            "draw": 1
         },
         {
             "number": 16,
             "horse": "EXCITING",
-            "description": ""
+            "description": "",
+            "performance": "9.1.1.0.3",
+            "gains": 98080,
+            "sex": "M",
+            "age": 6,
+            "trainer": "B.MARIE",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "WOOD.BLOODSTOCK",
+            "weight": 52.5,
+            "draw": 12
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_27-08-2024_f324eeb821_369292eab2.txt",
-    "parsed_at": "2026-10-08T10:35:46.103467Z",
+    "parsed_at": "2026-10-08T23:52:20.155288Z",
     "date": "2024-08-27",
     "race": {
         "race_name": "PLAT",
@@ -16,74 +16,215 @@
         {
             "number": 1,
             "horse": "OZAN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.3.1",
+            "gains": 140100,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "G.DOLEUZE",
+            "driver": "G.DOLEUZE",
+            "owner": "C.STEPHENSON",
+            "weight": 61.0,
+            "draw": 1
         },
         {
             "number": 2,
             "horse": "TUDO BEM",
-            "description": ""
+            "description": "",
+            "performance": "6.5.0.6.4",
+            "gains": 400189,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.GUYON",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "F.NORMAND",
+            "weight": 60.5,
+            "draw": 2
         },
         {
             "number": 3,
             "horse": "BEST OF LIGHT",
-            "description": ""
+            "description": "",
+            "performance": "5.0.1.0.3",
+            "gains": 62900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "I.CORBANI",
+            "weight": 59.0,
+            "draw": 8
         },
         {
             "number": 4,
             "horse": "DROLE DE DAME",
-            "description": ""
+            "description": "",
+            "performance": "0.1.7.2.1",
+            "gains": 77930,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "I.CORBANI",
+            "weight": 59.0,
+            "draw": 3
         },
         {
             "number": 5,
             "horse": "IMPITOYABLE",
-            "description": ""
+            "description": "",
+            "performance": "2.8.1.2.2",
+            "gains": 134050,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "LE. DUCA. AGENCY",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "WHITE PLATIN",
-            "description": ""
+            "description": "",
+            "performance": "8.5.9.5.0",
+            "gains": 155608,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.THOMAS",
+            "jockey": "C.B. BARBE",
+            "driver": "C.B. BARBE",
+            "owner": "D.SIEGENTHALER",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "DROGO",
-            "description": ""
+            "description": "",
+            "performance": "0.8.9.2.8",
+            "gains": 126825,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.BARZALONA",
+            "jockey": "V.DISSAUX",
+            "driver": "V.DISSAUX",
+            "owner": "N.GIOVANNELLI",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "WHISTLE AND FLUTE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.7.2.9",
+            "gains": 49640,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "H.DE NICOLAY",
+            "driver": "H.DE NICOLAY",
+            "owner": "M.JOSIPOVIC",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 9,
             "horse": "BROTHERS OF LILY'S",
-            "description": ""
+            "description": "",
+            "performance": "2.9.7.1.7",
+            "gains": 56450,
+            "sex": "H",
+            "age": 3,
+            "trainer": "H.JOURNIAC",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "EC. NORMANDY SPIRIT",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "YOKEN",
-            "description": ""
+            "description": "",
+            "performance": "6.0.1.8.3",
+            "gains": 26770,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "J.DUPONT-FAHN",
+            "driver": "J.DUPONT-FAHN",
+            "owner": "B.COOPER/J.BILLARD",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 11,
             "horse": "IGNOL",
-            "description": ""
+            "description": "",
+            "performance": "8.2.1.2.5",
+            "gains": 29340,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "SV.GIANELLA",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 12,
             "horse": "HERA",
-            "description": ""
+            "description": "",
+            "performance": "0.2.3.5.1",
+            "gains": 27900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. FRIEDRIDER",
+            "weight": 54.0,
+            "draw": 10
         },
         {
             "number": 13,
             "horse": "ISMAEL PAINT",
-            "description": ""
+            "description": "",
+            "performance": "4.3.5.3.2",
+            "gains": 132255,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.PROVOST",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "CH.PLISSON",
+            "weight": 53.5,
+            "draw": 14
         },
         {
             "number": 14,
             "horse": "SHELBYLANDOR",
-            "description": ""
+            "description": "",
+            "performance": "1.5.5.8.1",
+            "gains": 54480,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.ROMARY",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "A.COUANE",
+            "weight": 53.0,
+            "draw": 9
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

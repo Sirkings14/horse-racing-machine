@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-16-04-2024_1ad9359ae6_db68b4e56c.txt",
-    "parsed_at": "2026-10-08T10:35:40.996603Z",
+    "parsed_at": "2026-10-08T23:52:12.898923Z",
     "date": "2024-04-16",
     "race": {
         "race_name": "HAIES",
@@ -16,79 +16,215 @@
         {
             "number": 1,
             "horse": "YOU FOR ME",
-            "description": ""
+            "description": "",
+            "performance": "6.6.3.5.3",
+            "gains": 61165,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.DUMOUCH",
+            "jockey": "GAB.LEENDERS",
+            "driver": "GAB.LEENDERS",
+            "owner": "EC.H.GUERIN",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "JOUE CONTRE JOUE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.A.8.2",
+            "gains": 48230,
+            "sex": "F",
+            "age": 5,
+            "trainer": "J.REVELEY",
+            "jockey": "H.MERIENNE",
+            "driver": "H.MERIENNE",
+            "owner": "EC. P. JOUBERT",
+            "weight": 72.0
         },
         {
             "number": 3,
             "horse": "JUST IN TIME BLUE",
-            "description": ""
+            "description": "",
+            "performance": "2.3.1.4.7",
+            "gains": 38410,
+            "sex": "H",
+            "age": 5,
+            "trainer": "R.MAYEUR",
+            "jockey": "E.GRALL",
+            "driver": "E.GRALL",
+            "owner": "P.VICHOT",
+            "weight": 71.5
         },
         {
             "number": 4,
             "horse": "VIF CREEK",
-            "description": ""
+            "description": "",
+            "performance": "1.9.2.5",
+            "gains": 19690,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.LABAISSE",
+            "jockey": "S.MARSCH",
+            "driver": "S.MARSCH",
+            "owner": "C.TOURNADRE",
+            "weight": 71.5
         },
         {
             "number": 5,
             "horse": "FRENCH EXIT",
-            "description": ""
+            "description": "",
+            "performance": "A.A.4.A.J",
+            "gains": 71710,
+            "sex": "F",
+            "age": 5,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "M.ROLLAND",
+            "driver": "M.ROLLAND",
+            "owner": "JP.DJIAN",
+            "weight": 71.5
         },
         {
             "number": 6,
             "horse": "ROI K'ALIN",
-            "description": ""
+            "description": "",
+            "performance": "6.3.4.8.4",
+            "gains": 36510,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.PHILIPPERON",
+            "jockey": "M.ROLLAND",
+            "driver": "M.ROLLAND",
+            "owner": "A.DUBOE",
+            "weight": 70.5
         },
         {
             "number": 7,
             "horse": "HAPPY HARRY",
-            "description": ""
+            "description": "",
+            "performance": "3.4.3.7.8",
+            "gains": 14130,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.ZULIANI",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "N.OZGULER",
+            "weight": 70.5
         },
         {
             "number": 8,
             "horse": "KAMYADOR",
-            "description": ""
+            "description": "",
+            "performance": "7.2.1.2.A",
+            "gains": 69030,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.ANDRIEUX",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "M.PUTRINO",
+            "weight": 70.0
         },
         {
             "number": 9,
             "horse": "J'ARRIVE DE L'EST",
-            "description": ""
+            "description": "",
+            "performance": "J.1.1.4.A",
+            "gains": 56260,
+            "sex": "H",
+            "age": 5,
+            "trainer": "B.LE CLERC",
+            "jockey": "D.MELE",
+            "driver": "D.MELE",
+            "owner": "G.LENZI",
+            "weight": 70.0
         },
         {
             "number": 10,
             "horse": "SAINTELOI D'OROUX",
-            "description": ""
+            "description": "",
+            "performance": "4.2.4.1.3",
+            "gains": 33000,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.BAYLE",
+            "jockey": "A.CHAILLE-CHAILLE",
+            "driver": "A.CHAILLE-CHAILLE",
+            "owner": "A.LEZEAU",
+            "weight": 69.5
         },
         {
             "number": 11,
             "horse": "JUSTE RAISE",
-            "description": ""
+            "description": "",
+            "performance": "4.6.A.8.2",
+            "gains": 43490,
+            "sex": "F",
+            "age": 5,
+            "trainer": "J.CHARRON",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "ELE. DES VALLONS",
+            "weight": 68.5
         },
         {
             "number": 12,
             "horse": "JUMPER BAIE",
-            "description": ""
+            "description": "",
+            "performance": "5.T.A.6.1",
+            "gains": 15160,
+            "sex": "H",
+            "age": 5,
+            "trainer": "K.NABET",
+            "jockey": "R.SCHMIDLIN",
+            "driver": "R.SCHMIDLIN",
+            "owner": "R.SCHMIDLIN",
+            "weight": 68.5
         },
         {
             "number": 13,
             "horse": "JEWEL STAR",
-            "description": ""
+            "description": "",
+            "performance": "2.5.2.6.1",
+            "gains": 28890,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D.THOMAS",
+            "jockey": "A.FOUASSIER",
+            "driver": "A.FOUASSIER",
+            "owner": "EC. DES MOUILLOTINS",
+            "weight": 68.0
         },
         {
             "number": 14,
             "horse": "JUST A GIGOLO",
-            "description": ""
+            "description": "",
+            "performance": "3.3.5.3.A",
+            "gains": 23270,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.VANDAMME",
+            "jockey": "P&F.ADDA & RENAUT",
+            "driver": "P&F.ADDA & RENAUT",
+            "owner": "EC.JAECKIN",
+            "weight": 67.0
         },
         {
             "number": 15,
             "horse": "JARATATA DU DORAT",
-            "description": ""
+            "description": "",
+            "performance": "7.T.4.5.A",
+            "gains": 5520,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.BEAURAIN",
+            "jockey": "V.DEVILLARS",
+            "driver": "V.DEVILLARS",
+            "owner": "C.MICHEL",
+            "weight": 67.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

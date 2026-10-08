@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_19-08-2023_9007126e43_6e575350a6.txt",
-    "parsed_at": "2026-10-08T10:35:44.982819Z",
+    "parsed_at": "2026-10-08T23:52:18.539855Z",
     "date": "2023-08-19",
     "race": {
         "race_name": "PRIX DE JUMIEGES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "UZEL",
-            "description": ""
+            "description": "",
+            "performance": "9.5.1.0.1",
+            "gains": 116220,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "S.AKNIN",
+            "weight": 60.0,
+            "draw": 12
         },
         {
             "number": 2,
             "horse": "JACKSUN",
-            "description": ""
+            "description": "",
+            "performance": "6.9.5.7.0",
+            "gains": 245514,
+            "sex": "H",
+            "age": 9,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "M.FIGGE",
+            "driver": "M.FIGGE",
+            "owner": "EC. PREMIERE CLASSE",
+            "weight": 60.0,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "KHOCHENKO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.2.0.4",
+            "gains": 255630,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.BARZALONA",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "JL.BOUYENVAL",
+            "weight": 59.5,
+            "draw": 6
         },
         {
             "number": 4,
             "horse": "EXCITING",
-            "description": ""
+            "description": "",
+            "performance": "0.9.4.0.5",
+            "gains": 67560,
+            "sex": "M",
+            "age": 5,
+            "trainer": "T.BACHELOT",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "WOOD.BLOODSTOCK",
+            "weight": 59.0,
+            "draw": 5
         },
         {
             "number": 5,
             "horse": "ALERIO",
-            "description": ""
+            "description": "",
+            "performance": "3.0.8.8.3",
+            "gains": 42970,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "A.SCHUTZ",
+            "driver": "A.SCHUTZ",
+            "owner": "A.B RACING",
+            "weight": 59.0,
+            "draw": 13
         },
         {
             "number": 6,
             "horse": "GREAT ROTATION",
-            "description": ""
+            "description": "",
+            "performance": "6.0.5.2.4",
+            "gains": 87045,
+            "sex": "M",
+            "age": 4,
+            "trainer": "B.MURZABAYEV",
+            "jockey": "H.GREWE",
+            "driver": "H.GREWE",
+            "owner": "E.SAUREN",
+            "weight": 58.5,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "DRAGONET",
-            "description": ""
+            "description": "",
+            "performance": "2.0.0.0.7",
+            "gains": 164962,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.GUYON",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 8,
             "horse": "FULL PRECIEUX",
-            "description": ""
+            "description": "",
+            "performance": "2.3.4.5.8",
+            "gains": 90780,
+            "sex": "H",
+            "age": 8,
+            "trainer": "T.PICCONE",
+            "jockey": "M.DESVAUX",
+            "driver": "M.DESVAUX",
+            "owner": "M.DESVAUX",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 9,
             "horse": "ANCTOT",
-            "description": ""
+            "description": "",
+            "performance": "7.0.8.0.1",
+            "gains": 44230,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "S.DEHEZ",
+            "driver": "S.DEHEZ",
+            "owner": "S.DEHEZ",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 10,
             "horse": "LEPTI PRINSADI",
-            "description": ""
+            "description": "",
+            "performance": "0.7.9.2.0",
+            "gains": 96669,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.SOUMILLON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "JF.GRIBOMONT",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "EL MANIFICO",
-            "description": ""
+            "description": "",
+            "performance": "0.1.7.3.6",
+            "gains": 307880,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.DEMURO",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "A.LOUIS-DREYFUS",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "MARVANCO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.3.0",
+            "gains": 21940,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 13,
             "horse": "AUTUMN PRIDE",
-            "description": ""
+            "description": "",
+            "performance": "1.3.7.0.3",
+            "gains": 81121,
+            "sex": "M",
+            "age": 7,
+            "trainer": "F.VERON",
+            "jockey": "D.WATRIGANT",
+            "driver": "D.WATRIGANT",
+            "owner": "C.CABANNE",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "NAMASTE",
-            "description": ""
+            "description": "",
+            "performance": "4.5.0.3.2",
+            "gains": 89280,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.VELON",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "EC. HS. DE ST. VINCENT",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "AMI SOLEDAD",
-            "description": ""
+            "description": "",
+            "performance": "1.6.5.6.3",
+            "gains": 44450,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.BESNIER",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "ST. BURG NANSTEIN",
+            "weight": 54.5,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "LETTY'S MARVEL",
-            "description": ""
+            "description": "",
+            "performance": "1.0.6.7.0",
+            "gains": 177047,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "G.BARBARIN",
+            "weight": 54.0,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

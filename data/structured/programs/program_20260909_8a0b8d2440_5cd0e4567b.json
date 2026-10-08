@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_20260909_8a0b8d2440_5cd0e4567b.txt",
-    "parsed_at": "2026-10-08T10:35:38.995165Z",
+    "parsed_at": "2026-10-08T23:52:10.145771Z",
     "date": "2026-09-06",
     "race": {
         "race_name": "QATAR PRIX DE LA REINE MARGUERITE PRESENTE PAR LE PARISIEN",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CASSIUS",
-            "description": ""
+            "description": "",
+            "performance": "4.0.1.6.3",
+            "gains": 149398,
+            "sex": "M",
+            "age": 6,
+            "trainer": "P&J.BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "TE.KJESETH",
+            "weight": 61.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "REMBRAND TO GO",
-            "description": ""
+            "description": "",
+            "performance": "4.1.2.3.5",
+            "gains": 73092,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.RULEC",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "C.BOCKELMANN",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 3,
             "horse": "SHRIHARA",
-            "description": ""
+            "description": "",
+            "performance": "1.3.5.1.3",
+            "gains": 61558,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.FEY",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "G.SELLIER",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 4,
             "horse": "DIXMUDE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.4.1.8",
+            "gains": 25807,
+            "sex": "H",
+            "age": 4,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "EC. DAVID R. LAYANI FA",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 5,
             "horse": "ALMIRO",
-            "description": ""
+            "description": "",
+            "performance": "3.2.0.0.2",
+            "gains": 90727,
+            "sex": "H",
+            "age": 6,
+            "trainer": "P.DECOUZ",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "P.P.DECOUZ",
+            "weight": 56.5,
+            "draw": 7
         },
         {
             "number": 6,
             "horse": "ZILYA",
-            "description": ""
+            "description": "",
+            "performance": "0.6.6.0.1",
+            "gains": 135488,
+            "sex": "F",
+            "age": 7,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "EC.BONARDEL",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 7,
             "horse": "PAOLINO",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.0.7",
+            "gains": 35858,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D&P.PROD'HO",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "A.KRAULIGER",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "PRINCESSE D'AMOUR",
-            "description": ""
+            "description": "",
+            "performance": "2.1.5.1.0",
+            "gains": 90602,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "PC.BOUDOT",
+            "driver": "PC.BOUDOT",
+            "owner": "EC. VICT. DREAMS",
+            "weight": 55.5,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "YES ZARA",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.3.1",
+            "gains": 121402,
+            "sex": "F",
+            "age": 6,
+            "trainer": "C.FEY",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "ST. ALLE. RACING CLUB",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "CRISTABEL",
-            "description": ""
+            "description": "",
+            "performance": "3.5.5.0.1",
+            "gains": 30602,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.COUETIL",
+            "jockey": "O.ANDIGNE",
+            "driver": "O.ANDIGNE",
+            "owner": "P.DAVID",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 11,
             "horse": "MACHETE",
-            "description": ""
+            "description": "",
+            "performance": "6.4.3.6.3",
+            "gains": 153624,
+            "sex": "H",
+            "age": 7,
+            "trainer": "S.PECORARO",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "N.RUGANI",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "MONONOF",
-            "description": ""
+            "description": "",
+            "performance": "3.4.5.5.3",
+            "gains": 77971,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S.KOBAYASHI",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "S.UZZAN",
+            "weight": 55.5,
+            "draw": 2
         },
         {
             "number": 13,
             "horse": "MARINALEDA",
-            "description": ""
+            "description": "",
+            "performance": "4.7.9.2.2",
+            "gains": 51488,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARATTI",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "G.BAJETTI",
+            "weight": 54.5,
+            "draw": 4
         },
         {
             "number": 14,
             "horse": "MISTER GATZ",
-            "description": ""
+            "description": "",
+            "performance": "7.6.2.4.0",
+            "gains": 76460,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.NIGGE",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "G.AU.NORMAND",
+            "weight": 54.5,
+            "draw": 15
         },
         {
             "number": 15,
             "horse": "GOLD PLAYER",
-            "description": ""
+            "description": "",
+            "performance": "3.0.8.0.0",
+            "gains": 163446,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F.FORESI",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "N.CARRIE-EYCHENNE",
+            "weight": 54.0,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "ZELKER",
-            "description": ""
+            "description": "",
+            "performance": "7.7.4.6.4",
+            "gains": 26961,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.RULEC",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "S.WALD",
+            "weight": 54.0,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

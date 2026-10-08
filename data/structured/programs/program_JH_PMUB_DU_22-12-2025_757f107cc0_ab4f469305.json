@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_22-12-2025_757f107cc0_ab4f469305.txt",
-    "parsed_at": "2026-10-08T10:35:45.456020Z",
+    "parsed_at": "2026-10-08T23:52:19.236531Z",
     "date": "2025-12-22",
     "race": {
         "race_name": "PRIX DU MONT SAINT-MICHEL",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "HASAPIKO",
-            "description": ""
+            "description": "",
+            "performance": "1.2.0.3.1",
+            "gains": 99150,
+            "sex": "F",
+            "age": 5,
+            "trainer": "S. WATTEL",
+            "jockey": "T. BACHELOT",
+            "driver": "T. BACHELOT",
+            "owner": "E. MUDGE",
+            "weight": 60.0,
+            "draw": 2
         },
         {
             "number": 2,
             "horse": "A BEAUREGARD",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.2.3",
+            "gains": 64363,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "THOUVENEL RACING",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "WILLY WINNER",
-            "description": ""
+            "description": "",
+            "performance": "3.1.5.9.4",
+            "gains": 91504,
+            "sex": "H",
+            "age": 5,
+            "trainer": "JP. GAUVIN",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "EC. JEAN-PAUL GAUVIN",
+            "weight": 58.5,
+            "draw": 1
         },
         {
             "number": 4,
             "horse": "WINDFLOWER",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.1.3",
+            "gains": 32570,
+            "sex": "F",
+            "age": 3,
+            "trainer": "P.COTTIER",
+            "jockey": "H. BESNIER",
+            "driver": "H. BESNIER",
+            "owner": "EC. GRIBOMONT",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "BARBATE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.8.1",
+            "gains": 87500,
+            "sex": "H",
+            "age": 5,
+            "trainer": "Y. BARBEROT",
+            "jockey": "A. MADAMET",
+            "driver": "A. MADAMET",
+            "owner": "EC. M. OFFENSTADT",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "TIGER ROCK",
-            "description": ""
+            "description": "",
+            "performance": "9.0.2.5.4",
+            "gains": 40581,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C&Y. LERNER",
+            "jockey": "R. THOMAS",
+            "driver": "R. THOMAS",
+            "owner": "CHEVOTEL RACING",
+            "weight": 57.0,
+            "draw": 14
         },
         {
             "number": 7,
             "horse": "BOETTI",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.0.4",
+            "gains": 53058,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A. BUDKA",
+            "jockey": "A. HAMELIN",
+            "driver": "A. HAMELIN",
+            "owner": "G.DE MOLINER",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "NASDAQ",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.2.1",
+            "gains": 72630,
+            "sex": "M",
+            "age": 4,
+            "trainer": "Y. VOLLMER",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "V. WENNER",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "COMBERMERE",
-            "description": ""
+            "description": "",
+            "performance": "0.4.2.4.0",
+            "gains": 177676,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J.LEROY",
+            "jockey": "E. CORALLO",
+            "driver": "E. CORALLO",
+            "owner": "D.DUMOULIN",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "HAVIASSOR",
-            "description": ""
+            "description": "",
+            "performance": "4.6.4.1.1",
+            "gains": 69199,
+            "sex": "H",
+            "age": 7,
+            "trainer": "P.CHEVIGNY DE",
+            "jockey": "S. PASQUIER",
+            "driver": "S. PASQUIER",
+            "owner": "LEO. DUCASS AGENCY",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "KALEO CAESAR",
-            "description": ""
+            "description": "",
+            "performance": "1.1.8.0.7",
+            "gains": 61990,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A. COUETIL",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "I.DE SAINT ANTHOST",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "INCREMENTAL",
-            "description": ""
+            "description": "",
+            "performance": "0.5.0.5.1",
+            "gains": 38634,
+            "sex": "H",
+            "age": 5,
+            "trainer": "N.CAULLERY",
+            "jockey": "T. TRULLIER",
+            "driver": "T. TRULLIER",
+            "owner": "D.BREESE",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 13,
             "horse": "DEMPY",
-            "description": ""
+            "description": "",
+            "performance": "2.0.A.3.0",
+            "gains": 72492,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D.BONILLA",
+            "jockey": "P. REMOUE",
+            "driver": "P. REMOUE",
+            "owner": "P. WATTANAVRANGKUL",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 14,
             "horse": "KALEO PALACE",
-            "description": ""
+            "description": "",
+            "performance": "2.8.3.6.8",
+            "gains": 94272,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. COUETIL",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "RAB. MARIE CLAUDE",
+            "weight": 54.5,
+            "draw": 8
         },
         {
             "number": 15,
             "horse": "TIC TAC",
-            "description": ""
+            "description": "",
+            "performance": "0.6.9.0.0",
+            "gains": 54359,
+            "sex": "H",
+            "age": 4,
+            "trainer": "HA. PANTALL",
+            "jockey": "M.MARQUETTE",
+            "driver": "M.MARQUETTE",
+            "owner": "PH. LASSEN",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 16,
             "horse": "HUCHENANE",
-            "description": ""
+            "description": "",
+            "performance": "4.3.1.9.2",
+            "gains": 48752,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.LOTOUX",
+            "jockey": "J. CLAUDIC",
+            "driver": "J. CLAUDIC",
+            "owner": "O. LE QUERE",
+            "weight": 54.0,
+            "draw": 6
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

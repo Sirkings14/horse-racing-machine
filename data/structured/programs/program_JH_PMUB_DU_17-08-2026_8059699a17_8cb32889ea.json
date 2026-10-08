@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_17-08-2026_8059699a17_8cb32889ea.txt",
-    "parsed_at": "2026-10-08T10:35:44.681292Z",
+    "parsed_at": "2026-10-08T23:52:18.106931Z",
     "date": "2026-08-17",
     "race": {
         "race_name": "PRIX DE ENFOIRES",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "KAMARO D'HUEZ",
-            "description": ""
+            "description": "",
+            "performance": "3.2.5.3.7",
+            "gains": 281810,
+            "sex": "H",
+            "age": 6,
+            "trainer": "E.ALLAIRE",
+            "jockey": "G.MEUNIER",
+            "driver": "G.MEUNIER",
+            "owner": "ALLAIRE /JP CANU",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "INNER SUCCESS",
-            "description": ""
+            "description": "",
+            "performance": "1.6.1.3.3",
+            "gains": 85116,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.SEROR",
+            "jockey": "BR.LE CLERC",
+            "driver": "BR.LE CLERC",
+            "owner": "R.NG",
+            "weight": 71.5
         },
         {
             "number": 3,
             "horse": "ROCK AND ROLL",
-            "description": ""
+            "description": "",
+            "performance": "6.3.4.3.3",
+            "gains": 316200,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.SEROR",
+            "jockey": "B.LE CLERC",
+            "driver": "B.LE CLERC",
+            "owner": "J.ANXO",
+            "weight": 69.5
         },
         {
             "number": 4,
             "horse": "ASTA LA PASTA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.3.2.2",
+            "gains": 95429,
+            "sex": "H",
+            "age": 8,
+            "trainer": "N.VERGNE",
+            "jockey": "A.RENARD",
+            "driver": "A.RENARD",
+            "owner": "K.CLIFT",
+            "weight": 69.5
         },
         {
             "number": 5,
             "horse": "PINK PERSEVERANCE",
-            "description": ""
+            "description": "",
+            "performance": "4.1.1.4.1",
+            "gains": 74265,
+            "sex": "F",
+            "age": 5,
+            "trainer": "M.SEROR",
+            "jockey": "A.ZULIANI",
+            "driver": "A.ZULIANI",
+            "owner": "M.BOUDOT",
+            "weight": 68.5
         },
         {
             "number": 6,
             "horse": "FEU DE DIEU",
-            "description": ""
+            "description": "",
+            "performance": "3.9.2.7.1",
+            "gains": 131040,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D.COTTIN",
+            "jockey": "L.BRECHET",
+            "driver": "L.BRECHET",
+            "owner": "DREAM WITH ME STABLE",
+            "weight": 68.5
         },
         {
             "number": 7,
             "horse": "GINO'S LINE",
-            "description": ""
+            "description": "",
+            "performance": "6.2.8.4.1",
+            "gains": 64580,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.ESTRABOL",
+            "jockey": "T.CHEVILLARD",
+            "driver": "T.CHEVILLARD",
+            "owner": "MT.GONZALEZ LLANO",
+            "weight": 67.5
         },
         {
             "number": 8,
             "horse": "HACKER DU BERLAIS",
-            "description": ""
+            "description": "",
+            "performance": "2.3.8.2.3",
+            "gains": 308595,
+            "sex": "H",
+            "age": 5,
+            "trainer": "CHAILLE-CHAILLE & PAMART",
+            "jockey": "G.MASURE",
+            "driver": "G.MASURE",
+            "owner": "EC. H. DE MONTMIRAIL",
+            "weight": 67.5
         },
         {
             "number": 9,
             "horse": "KEL STORY",
-            "description": ""
+            "description": "",
+            "performance": "5.0.A.6.A",
+            "gains": 203745,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.SEROR",
+            "jockey": "L.PHILIPPERON",
+            "driver": "L.PHILIPPERON",
+            "owner": "J.FINCH",
+            "weight": 66.5
         },
         {
             "number": 10,
             "horse": "NARUTO",
-            "description": ""
+            "description": "",
+            "performance": "2.8.A.A.4",
+            "gains": 106350,
+            "sex": "H",
+            "age": 7,
+            "trainer": "P.VOVCENKO",
+            "jockey": "K.NABET",
+            "driver": "K.NABET",
+            "owner": "STALL EMOJI",
+            "weight": 66.5
         },
         {
             "number": 11,
             "horse": "NADURRA",
-            "description": ""
+            "description": "",
+            "performance": "1.1.8.0.6",
+            "gains": 64925,
+            "sex": "F",
+            "age": 5,
+            "trainer": "O.ELLART",
+            "jockey": "N.CLAUDE",
+            "driver": "N.CLAUDE",
+            "owner": "O.ELLART",
+            "weight": 66.5
         },
         {
             "number": 12,
             "horse": "LORELEY DES PLACES",
-            "description": ""
+            "description": "",
+            "performance": "1.4.3.7.1",
+            "gains": 102240,
+            "sex": "F",
+            "age": 5,
+            "trainer": "F.NICOLLE",
+            "jockey": "L.ZULIANI",
+            "driver": "L.ZULIANI",
+            "owner": "MP.LEJEUNE",
+            "weight": 66.5
         },
         {
             "number": 13,
             "horse": "TIPPERARY SUNSET",
-            "description": ""
+            "description": "",
+            "performance": "2.5.3.T.4",
+            "gains": 69005,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N.VERGNE",
+            "jockey": "G.FAIVRE-PICON",
+            "driver": "G.FAIVRE-PICON",
+            "owner": "A.JATHIERE",
+            "weight": 66.5
         },
         {
             "number": 14,
             "horse": "LE COLOMBAR",
-            "description": ""
+            "description": "",
+            "performance": "6.4.2.1.8",
+            "gains": 109460,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.SEROR",
+            "jockey": "D.UBEDA",
+            "driver": "D.UBEDA",
+            "owner": "SARL CARION E.M.M.",
+            "weight": 66.0
         },
         {
             "number": 15,
             "horse": "RISK DU BRIZAIS",
-            "description": ""
+            "description": "",
+            "performance": "2.1.5.5.6",
+            "gains": 227883,
+            "sex": "H",
+            "age": 9,
+            "trainer": "CHAILLE-CHAILLE & PAMART",
+            "jockey": "F.BAYLE",
+            "driver": "F.BAYLE",
+            "owner": "HS. DE MAGOUET",
+            "weight": 65.5
         },
         {
             "number": 16,
             "horse": "ATYPIQUE D'OROUX",
-            "description": ""
+            "description": "",
+            "performance": "1.3.5.1.1",
+            "gains": 58005,
+            "sex": "F",
+            "age": 5,
+            "trainer": "CHAILLE-CHAILLE & PAMART",
+            "jockey": "L . SALMON",
+            "driver": "L . SALMON",
+            "owner": "JJ.GABILLAT",
+            "weight": 65.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

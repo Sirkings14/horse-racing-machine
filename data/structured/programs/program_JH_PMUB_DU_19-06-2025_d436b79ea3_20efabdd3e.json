@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_19-06-2025_d436b79ea3_20efabdd3e.txt",
-    "parsed_at": "2026-10-08T10:35:44.960763Z",
+    "parsed_at": "2026-10-08T23:52:18.505195Z",
     "date": "2025-06-19",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LE ROI LEON",
-            "description": ""
+            "description": "",
+            "performance": "9.8.4.5.1",
+            "gains": 14600,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.DELZANGLES",
+            "jockey": "D.BREUX",
+            "driver": "D.BREUX",
+            "owner": "C.LAMBERT",
+            "weight": 59.0,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "AVANT L'ORAGE",
-            "description": ""
+            "description": "",
+            "performance": "1.0.6.4.9",
+            "gains": 17750,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.FABRE",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "A. FABRE",
+            "weight": 58.5,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "THINTHREAD",
-            "description": ""
+            "description": "",
+            "performance": "1.4.8",
+            "gains": 8500,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.FABRE",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "I..ALSAGAR",
+            "weight": 57.5,
+            "draw": 8
         },
         {
             "number": 4,
             "horse": "SAMWEST",
-            "description": ""
+            "description": "",
+            "performance": "7.8.1.4.5",
+            "gains": 21950,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "P.ARSAGUET",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "GERARD TER BORCH",
-            "description": ""
+            "description": "",
+            "performance": "3.4.1",
+            "gains": 11250,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.DELZANGLES",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "PY.LEFEVRE",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "GREEN CAPE",
-            "description": ""
+            "description": "",
+            "performance": "5.3.6.4.2",
+            "gains": 26200,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.FABRE",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "GODOLPHIN SNC",
+            "weight": 56.5,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "GALICIANO",
-            "description": ""
+            "description": "",
+            "performance": "1.5.4.3",
+            "gains": 19000,
+            "sex": "M",
+            "age": 3,
+            "trainer": "Y.FOUIN",
+            "jockey": "P.REMOUE",
+            "driver": "P.REMOUE",
+            "owner": "G. PAR. HOLDING",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 8,
             "horse": "DSCHINGIS GALILEI",
-            "description": ""
+            "description": "",
+            "performance": "1.3.0.3.3",
+            "gains": 17350,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.BRASME",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "AVATARA S.A.",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "VIE SECRETE",
-            "description": ""
+            "description": "",
+            "performance": "9.0.2.9",
+            "gains": 5400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "S.LADJADJ",
+            "driver": "S.LADJADJ",
+            "owner": "EC.JML",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "WEEMAGATEE",
-            "description": ""
+            "description": "",
+            "performance": "6.1.1.1.5",
+            "gains": 31225,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J.ANDREU",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "H.BOUDOUAIA",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "ROULETTE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.0.2",
+            "gains": 27270,
+            "sex": "M",
+            "age": 3,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "RT RACING",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 12,
             "horse": "PRINCESSE TREZY",
-            "description": ""
+            "description": "",
+            "performance": "1.4.3.6.3",
+            "gains": 26340,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.KOBAYASHI",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "G. PAR. HOLDING",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 13,
             "horse": "GOLDEN DISC",
-            "description": ""
+            "description": "",
+            "performance": "5.2.4.0",
+            "gains": 7420,
+            "sex": "F",
+            "age": 3,
+            "trainer": "HF.DEVIN",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "H.DEVIN",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "GWO KA",
-            "description": ""
+            "description": "",
+            "performance": "3.4.5.8.1",
+            "gains": 33200,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.FERLAND",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "EC. MILL REEF SAS",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "LE PROFESSIONNEL",
-            "description": ""
+            "description": "",
+            "performance": "1.5.0.5.6",
+            "gains": 12100,
+            "sex": "M",
+            "age": 3,
+            "trainer": "D.WATRIGANT",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "G.RICCOBONO",
+            "weight": 54.5,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "GABYLOU",
-            "description": ""
+            "description": "",
+            "performance": "4.8.7.1.3",
+            "gains": 27940,
+            "sex": "H",
+            "age": 3,
+            "trainer": "G.FOURRIER",
+            "jockey": "H.LEBOUC",
+            "driver": "H.LEBOUC",
+            "owner": "EC. R.E.",
+            "weight": 54.0,
+            "draw": 14
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

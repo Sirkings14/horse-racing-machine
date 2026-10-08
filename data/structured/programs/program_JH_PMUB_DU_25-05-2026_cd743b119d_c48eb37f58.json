@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_25-05-2026_cd743b119d_c48eb37f58.txt",
-    "parsed_at": "2026-10-08T10:35:45.771203Z",
+    "parsed_at": "2026-10-08T23:52:19.678168Z",
     "date": "2026-05-25",
     "race": {
         "race_name": "PRIX DES HAUTS DE FRANCE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "RIASSOU",
-            "description": ""
+            "description": "",
+            "performance": "2.7.1.1.5",
+            "gains": 68705,
+            "sex": "F",
+            "age": 5,
+            "trainer": "P. SIGAUD",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "P. SIGAUD",
+            "weight": 60.0,
+            "draw": 16
         },
         {
             "number": 2,
             "horse": "HALF HALF",
-            "description": ""
+            "description": "",
+            "performance": "1.6.2.3.0",
+            "gains": 157326,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.SMAGA",
+            "jockey": "A. POUCHIN",
+            "driver": "A. POUCHIN",
+            "owner": "M. FOUGY-SMAGA",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 3,
             "horse": "PUMALIN PARK",
-            "description": ""
+            "description": "",
+            "performance": "8.4.4.1.9",
+            "gains": 84979,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G. MOSSE",
+            "jockey": "S. PASQUIER",
+            "driver": "S. PASQUIER",
+            "owner": "R.NG",
+            "weight": 59.5,
+            "draw": 11
         },
         {
             "number": 4,
             "horse": "CALAS",
-            "description": ""
+            "description": "",
+            "performance": "1.5.1.5.0",
+            "gains": 110750,
+            "sex": "H",
+            "age": 6,
+            "trainer": "P&J. BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "BUCK RACING",
+            "weight": 59.0,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "COMME QUOI",
-            "description": ""
+            "description": "",
+            "performance": "2.2.6.7.2",
+            "gains": 95333,
+            "sex": "H",
+            "age": 5,
+            "trainer": "N. PERRET",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "JC. SEROUL",
+            "weight": 58.5,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "SERINES",
-            "description": ""
+            "description": "",
+            "performance": "0.7.9.0.7",
+            "gains": 56189,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A. KARKOSA",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "S. PEGZA",
+            "weight": 57.0,
+            "draw": 14
         },
         {
             "number": 7,
             "horse": "TRUE TEDESCO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.8.0",
+            "gains": 135057,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. SUBORICS",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "ST. MYDLINGHOVEN",
+            "weight": 56.5,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "ZIGGY STAR",
-            "description": ""
+            "description": "",
+            "performance": "5.7.4.0.9",
+            "gains": 66230,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "EC. JP. BONARDEL",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "DUBALAA",
-            "description": ""
+            "description": "",
+            "performance": "0.2.2.4.1",
+            "gains": 45237,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J. REYNIER",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "LG BLOODSTOCK",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "JOH SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "3.8.4.5.6",
+            "gains": 146420,
+            "sex": "F",
+            "age": 7,
+            "trainer": "P. SIGAUD",
+            "jockey": "A. MOLINS",
+            "driver": "A. MOLINS",
+            "owner": "P. SIGAUD",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 11,
             "horse": "PRINCE AUBOIS",
-            "description": ""
+            "description": "",
+            "performance": "0.9.3.0.2",
+            "gains": 68888,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S. PENOT",
+            "jockey": "T. PICCONE",
+            "driver": "T. PICCONE",
+            "owner": "C.PENOT",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 12,
             "horse": "BAUHINIA RHAPSODY",
-            "description": ""
+            "description": "",
+            "performance": "0.7.0.5.0",
+            "gains": 88771,
+            "sex": "H",
+            "age": 6,
+            "trainer": "JV. TOUX",
+            "jockey": "T. TRULLIER",
+            "driver": "T. TRULLIER",
+            "owner": "M.AUGER",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 13,
             "horse": "CASARES",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.2.3",
+            "gains": 70720,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D&P. PROD’HOMME",
+            "jockey": "R. MANGIONE",
+            "driver": "R. MANGIONE",
+            "owner": "B. GIRAUDON",
+            "weight": 54.0,
+            "draw": 13
         },
         {
             "number": 14,
             "horse": "BABY HARTWOOD",
-            "description": ""
+            "description": "",
+            "performance": "5.5.2.0.4",
+            "gains": 37512,
+            "sex": "M",
+            "age": 4,
+            "trainer": "V.DISSAUX",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "D.GUINDON",
+            "weight": 53.5,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "THE SNARK",
-            "description": ""
+            "description": "",
+            "performance": "1.6.3.7.9",
+            "gains": 40140,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P. CHEVIGNY DE",
+            "jockey": "A. MADAMET",
+            "driver": "A. MADAMET",
+            "owner": "EC. CHALHOUB S.A.L.",
+            "weight": 53.5,
+            "draw": 10
         },
         {
             "number": 16,
             "horse": "LISIPPO",
-            "description": ""
+            "description": "",
+            "performance": "3.2.0.1.1",
+            "gains": 30104,
+            "sex": "M",
+            "age": 4,
+            "trainer": "F. CARNEVALI",
+            "jockey": "A. HAMELIN",
+            "driver": "A. HAMELIN",
+            "owner": "F. BARBERI",
+            "weight": 52.5,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

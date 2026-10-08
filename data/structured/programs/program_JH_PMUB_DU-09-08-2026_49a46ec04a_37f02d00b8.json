@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-09-08-2026_49a46ec04a_37f02d00b8.txt",
-    "parsed_at": "2026-10-08T10:35:40.369043Z",
+    "parsed_at": "2026-10-08T23:52:11.998507Z",
     "date": "2026-08-09",
     "race": {
         "race_name": "GRAND HANDICAP DE DEAUVILLE",
@@ -16,104 +16,305 @@
         {
             "number": 1,
             "horse": "UN INSTANT",
-            "description": ""
+            "description": "",
+            "performance": "4.4.2.6.8",
+            "gains": 177984,
+            "sex": "M",
+            "age": 5,
+            "trainer": "N. PERRET",
+            "jockey": "A. POUCHIN",
+            "driver": "A. POUCHIN",
+            "owner": "GOUSSERIE RACING",
+            "weight": 60.0,
+            "draw": 1
         },
         {
             "number": 2,
             "horse": "POSCHIAVO",
-            "description": ""
+            "description": "",
+            "performance": "4.3.6.4.4",
+            "gains": 88877,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.NIGGE",
+            "jockey": "PC. BOUDOT",
+            "driver": "PC. BOUDOT",
+            "owner": "L.BONGEN",
+            "weight": 59.0,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "CALAS",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.5.1",
+            "gains": 149880,
+            "sex": "H",
+            "age": 6,
+            "trainer": "P&J. BRANDT",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "BUCK RACING",
+            "weight": 58.5,
+            "draw": 20
         },
         {
             "number": 4,
             "horse": "WAPI",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.5.2",
+            "gains": 117951,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C&Y. LERNER",
+            "jockey": "R. THOMAS",
+            "driver": "R. THOMAS",
+            "owner": "AL.JACQ/C.BERQUIER",
+            "weight": 57.5,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "FAST RAAJ",
-            "description": ""
+            "description": "",
+            "performance": "3.6.6.4.3",
+            "gains": 380309,
+            "sex": "H",
+            "age": 8,
+            "trainer": "Y. BARBEROT",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "A. JATHIERE",
+            "weight": 57.5,
+            "draw": 16
         },
         {
             "number": 6,
             "horse": "SUPIDO",
-            "description": ""
+            "description": "",
+            "performance": "4.7.3.1.8",
+            "gains": 93122,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I.WILLIAMS",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "BELL/LYONS/JAMES",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "BABAKOOL",
-            "description": ""
+            "description": "",
+            "performance": "2.7.7.4.0",
+            "gains": 84395,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.FERLAND",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "WERTHEIMER & FRERE",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "APAX",
-            "description": ""
+            "description": "",
+            "performance": "1.5.5.9.2",
+            "gains": 211283,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S. GAVILAN",
+            "jockey": "D.SANTIAGO",
+            "driver": "D.SANTIAGO",
+            "owner": "L.MOUTOUSSAMY",
+            "weight": 56.5,
+            "draw": 18
         },
         {
             "number": 9,
             "horse": "BREIZH SKY",
-            "description": ""
+            "description": "",
+            "performance": "5.4.8.4.9",
+            "gains": 399569,
+            "sex": "H",
+            "age": 6,
+            "trainer": "L.BAUDRON",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "A. JATHIERE/EC. ELAG",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "OLYMPIC MESSAGE",
-            "description": ""
+            "description": "",
+            "performance": "9.3.6.3.4",
+            "gains": 126606,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N. PERRET",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "R. RABA",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 11,
             "horse": "HALF HALF",
-            "description": ""
+            "description": "",
+            "performance": "3.4.2.1.5",
+            "gains": 183544,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.SMAGA",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "M.FOUGY-SMAGA",
+            "weight": 55.5,
+            "draw": 19
         },
         {
             "number": 12,
             "horse": "MIJAS",
-            "description": ""
+            "description": "",
+            "performance": "6.0.1.3.1",
+            "gains": 66690,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "T. BACHELOT",
+            "driver": "T. BACHELOT",
+            "owner": "JM. MALDONADO",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 13,
             "horse": "BIG LOG",
-            "description": ""
+            "description": "",
+            "performance": "0.3.3.1.0",
+            "gains": 181750,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D&P. PROD’HOMME",
+            "jockey": "A. HAMELIN",
+            "driver": "A. HAMELIN",
+            "owner": "B. LYNAM",
+            "weight": 53.5,
+            "draw": 4
         },
         {
             "number": 14,
             "horse": "KRASKHOV",
-            "description": ""
+            "description": "",
+            "performance": "6.6.3.3.4",
+            "gains": 59571,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "A. MADAMET",
+            "driver": "A. MADAMET",
+            "owner": "A.JATHIERE/A.MOUKNASS",
+            "weight": 53.5,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "COMME QUOI",
-            "description": ""
+            "description": "",
+            "performance": "5.5.2.2.6",
+            "gains": 98761,
+            "sex": "H",
+            "age": 5,
+            "trainer": "N. PERRET",
+            "jockey": "A. CRASTUS",
+            "driver": "A. CRASTUS",
+            "owner": "JC. SEROUL",
+            "weight": 53.5,
+            "draw": 12
         },
         {
             "number": 16,
             "horse": "MELUSINE DU HOULEY",
-            "description": ""
+            "description": "",
+            "performance": "1.2.8.3.2",
+            "gains": 63350,
+            "sex": "F",
+            "age": 3,
+            "trainer": "Y. BARBEROT",
+            "jockey": "T. TRULLIER",
+            "driver": "T. TRULLIER",
+            "owner": "C.PELIER/G.HEBERT",
+            "weight": 52.0,
+            "draw": 15
         },
         {
             "number": 17,
             "horse": "IKOTOFETSY",
-            "description": ""
+            "description": "",
+            "performance": "9.8.5.0.6",
+            "gains": 51840,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.AND.SOA RATSIMIHAH",
+            "jockey": "C.PACAUT",
+            "driver": "C.PACAUT",
+            "owner": "M.ANDRI. RATSIMIHAH",
+            "weight": 51.5,
+            "draw": 7
         },
         {
             "number": 18,
             "horse": "SAINT ELIGIUS",
-            "description": ""
+            "description": "",
+            "performance": "8.2.1.3.4",
+            "gains": 35602,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BRASME",
+            "jockey": "E. HARDOUIN",
+            "driver": "E. HARDOUIN",
+            "owner": "SJ. KILROY",
+            "weight": 51.0,
+            "draw": 17
         },
         {
             "number": 19,
             "horse": "STAR ROCK",
-            "description": ""
+            "description": "",
+            "performance": "7.0.6.0.9",
+            "gains": 122553,
+            "sex": "H",
+            "age": 7,
+            "trainer": "V.LUKA",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "LERAM S.R.O.",
+            "weight": 51.0,
+            "draw": 9
         },
         {
             "number": 20,
             "horse": "TOPY'SIM",
-            "description": ""
+            "description": "",
+            "performance": "3.1.0.2.2",
+            "gains": 76537,
+            "sex": "F",
+            "age": 5,
+            "trainer": "N. GUILBERT",
+            "jockey": "L.BAILS",
+            "driver": "L.BAILS",
+            "owner": "N. GUILBERT",
+            "weight": 51.0,
+            "draw": 14
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             10,

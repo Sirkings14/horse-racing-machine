@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_10-02-2024_a44f41c528_46d02a3e5d.txt",
-    "parsed_at": "2026-10-08T10:35:43.640854Z",
+    "parsed_at": "2026-10-08T23:52:16.599143Z",
     "date": "2024-02-10",
     "race": {
         "race_name": "ATTELE",
@@ -16,74 +16,215 @@
         {
             "number": 1,
             "horse": "SAYONARA",
-            "description": ""
+            "description": "",
+            "performance": "0.9.5.4.4",
+            "gains": 459531,
+            "sex": "F",
+            "age": 7,
+            "trainer": "F. NIVARD",
+            "jockey": "F. WALLIN",
+            "driver": "F. WALLIN",
+            "owner": "F. WALLIN",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2100.M"
         },
         {
             "number": 2,
             "horse": "GOELAND D'HAUFOR",
-            "description": ""
+            "description": "",
+            "performance": "2.9.4.D.2",
+            "gains": 490010,
+            "sex": "H",
+            "age": 8,
+            "trainer": "D. BONNE",
+            "jockey": "CH. BIGEON",
+            "driver": "CH. BIGEON",
+            "owner": "EC. CH. BIGEON",
+            "listed_chrono": "1.10.20",
+            "listed_distance": "2100.M"
         },
         {
             "number": 3,
             "horse": "ALWAYS EK",
-            "description": ""
+            "description": "",
+            "performance": "4.2.3.1.1",
+            "gains": 416548,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A. GOCCIADORO",
+            "jockey": "A. GOCCIADORO",
+            "driver": "A. GOCCIADORO",
+            "owner": "EFFEBI SRL",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2100.M"
         },
         {
             "number": 4,
             "horse": "HIP HOP HAUFOR",
-            "description": ""
+            "description": "",
+            "performance": "6.5.1.7.9",
+            "gains": 500270,
+            "sex": "M",
+            "age": 7,
+            "trainer": "CH. BIGEON",
+            "jockey": "CH. BIGEON",
+            "driver": "CH. BIGEON",
+            "owner": "EC. CH. BIGEON",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2100.M"
         },
         {
             "number": 5,
             "horse": "DERBY DU DOLLAR",
-            "description": ""
+            "description": "",
+            "performance": "0.9.D.0.0",
+            "gains": 380660,
+            "sex": "M",
+            "age": 11,
+            "trainer": "J. TRAVERS",
+            "jockey": "ST. PROVOOST",
+            "driver": "ST. PROVOOST",
+            "owner": "ECURIE DANOVER",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2100.M"
         },
         {
             "number": 6,
             "horse": "BILO JEPSON",
-            "description": ""
+            "description": "",
+            "performance": "0.3.3.1.1",
+            "gains": 488773,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D. THOMAIN",
+            "jockey": "VITALE CIOTOLA",
+            "driver": "VITALE CIOTOLA",
+            "owner": "SCU. NININNI",
+            "listed_chrono": "1.10.30",
+            "listed_distance": "2100.M"
         },
         {
             "number": 7,
             "horse": "IMHATRA AM",
-            "description": ""
+            "description": "",
+            "performance": "9.7.6.3.4",
+            "gains": 462237,
+            "sex": "F",
+            "age": 6,
+            "trainer": "B. ROCHARD",
+            "jockey": "J. WESTHOLM",
+            "driver": "J. WESTHOLM",
+            "owner": "STALL COURANT",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2100.M"
         },
         {
             "number": 8,
             "horse": "HELIADE DU GOUTIER",
-            "description": ""
+            "description": "",
+            "performance": "7.8.7.6.3",
+            "gains": 510568,
+            "sex": "F",
+            "age": 7,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "S. GUARATO",
+            "driver": "S. GUARATO",
+            "owner": "EC. SAINT MARTIN",
+            "listed_chrono": "1.09.80",
+            "listed_distance": "2100.M"
         },
         {
             "number": 9,
             "horse": "HAVE A DREAM",
-            "description": ""
+            "description": "",
+            "performance": "2.5.2.3.0",
+            "gains": 364370,
+            "sex": "M",
+            "age": 7,
+            "trainer": "M. ABRIVARD",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "JPB HORSES",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2100.M"
         },
         {
             "number": 10,
             "horse": "CASH BANK BIGI",
-            "description": ""
+            "description": "",
+            "performance": "D.0.5.D.6",
+            "gains": 358860,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F. OUVRIE",
+            "jockey": "TH. DUVALDESTIN",
+            "driver": "TH. DUVALDESTIN",
+            "owner": "ROSSANO BISELLI",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2100.M"
         },
         {
             "number": 11,
             "horse": "HIDALGO DES NOES",
-            "description": ""
+            "description": "",
+            "performance": "6.0.4.0.3",
+            "gains": 341160,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. COLLETTE",
+            "jockey": "ST. PROVOOST",
+            "driver": "ST. PROVOOST",
+            "owner": "EC. DANOVER",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2100.M"
         },
         {
             "number": 12,
             "horse": "OSCAR L.A.",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.2.1",
+            "gains": 351137,
+            "sex": "M",
+            "age": 8,
+            "trainer": "F. LAGADEUC",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "G. HERZ",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2100.M"
         },
         {
             "number": 13,
             "horse": "IBIKI DE HOUELLE",
-            "description": ""
+            "description": "",
+            "performance": "1.D.1.7.1",
+            "gains": 363860,
+            "sex": "M",
+            "age": 6,
+            "trainer": "E. RAFFIN",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "D. AUGEREAU",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2100.M"
         },
         {
             "number": 14,
             "horse": "FAVORI DE L'ITON",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.4.D",
+            "gains": 281330,
+            "sex": "H",
+            "age": 9,
+            "trainer": "B. BEAUCAMP",
+            "jockey": "HUGHES LEVESQUE",
+            "driver": "HUGHES LEVESQUE",
+            "owner": "EC. DE L' ITON",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2100.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-15-05-2024_b9d65ac0c2_25cccfc155.txt",
-    "parsed_at": "2026-10-08T10:35:40.913712Z",
+    "parsed_at": "2026-10-08T23:52:12.777656Z",
     "date": "2024-05-15",
     "race": {
         "race_name": "PRIX DU GATINAIS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "FASHION TOUCH",
-            "description": ""
+            "description": "",
+            "performance": "3.0.5.4.6",
+            "gains": 329360,
+            "sex": "F",
+            "age": 9,
+            "trainer": "F. LAGADEUC",
+            "jockey": "P.L. DESAUNETTE",
+            "driver": "P.L. DESAUNETTE",
+            "owner": "P. LEBRAULT",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "DEGANAWIDAH",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.7.6",
+            "gains": 334965,
+            "sex": "H",
+            "age": 11,
+            "trainer": "J. TRAVERS",
+            "jockey": "ST. PROVOOST",
+            "driver": "ST. PROVOOST",
+            "owner": "EC.DANOVER",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "HIDALGO DES NOES",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.0.9",
+            "gains": 361710,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "ST. PROVOOST",
+            "driver": "ST. PROVOOST",
+            "owner": "EC. DANOVER",
+            "listed_chrono": "1.10.30",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "EQUINOXE JIEL",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.9.6",
+            "gains": 394820,
+            "sex": "H",
+            "age": 10,
+            "trainer": "M. ABRIVARD",
+            "jockey": "J.L. DERSOIR",
+            "driver": "J.L. DERSOIR",
+            "owner": "EC. LUCK",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "EBERTON",
-            "description": ""
+            "description": "",
+            "performance": "5.8.D.0.5",
+            "gains": 410390,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J. GUELPA",
+            "jockey": "J. GUELPA",
+            "driver": "J. GUELPA",
+            "owner": "PAULINE GUELPA",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "BORDEAUX S.",
-            "description": ""
+            "description": "",
+            "performance": "4.3.5.2.D",
+            "gains": 423564,
+            "sex": "H",
+            "age": 8,
+            "trainer": "G. GELORMINI",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "GLOBAL GLIDE AB",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "GENDREEN",
-            "description": ""
+            "description": "",
+            "performance": "6.4.4.8.3",
+            "gains": 441060,
+            "sex": "H",
+            "age": 8,
+            "trainer": "L.CL. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "PH. GRUMETZ",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 8,
             "horse": "EVEIL DU CHATELET",
-            "description": ""
+            "description": "",
+            "performance": "0.0.2.4.0",
+            "gains": 447090,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J.CH. PITON",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC. DES CHARMES",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 9,
             "horse": "HE AND ME",
-            "description": ""
+            "description": "",
+            "performance": "3.0.2.7.1",
+            "gains": 448420,
+            "sex": "M",
+            "age": 7,
+            "trainer": "J. DUBOIS",
+            "jockey": "J. DUBOIS",
+            "driver": "J. DUBOIS",
+            "owner": "EC. THIERRY GUIBERT",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 10,
             "horse": "FAKIR DE MAHEY",
-            "description": ""
+            "description": "",
+            "performance": "3.D.8.0.3",
+            "gains": 490910,
+            "sex": "M",
+            "age": 9,
+            "trainer": "M. MOTTIER",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "M. SOULAS",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 11,
             "horse": "GOELAND D'HAUFOR",
-            "description": ""
+            "description": "",
+            "performance": "D.9.7.2.9",
+            "gains": 490910,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. BARRIER",
+            "jockey": "CH. BIGEON",
+            "driver": "CH. BIGEON",
+            "owner": "EC. CH. BIGEON",
+            "listed_chrono": "1.10.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 12,
             "horse": "BILO JEPSON",
-            "description": ""
+            "description": "",
+            "performance": "4.0.4.0.3",
+            "gains": 505573,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D. THOMAIN",
+            "jockey": "VITALE CIOTOLA",
+            "driver": "VITALE CIOTOLA",
+            "owner": "SCU. NININNI",
+            "listed_chrono": "1.10.30",
+            "listed_distance": "2850.M"
         },
         {
             "number": 13,
             "horse": "GRACE DU DIGEON",
-            "description": ""
+            "description": "",
+            "performance": "1.4.2.4.9",
+            "gains": 508890,
+            "sex": "F",
+            "age": 8,
+            "trainer": "F. NIVARD",
+            "jockey": "CH. DREUX",
+            "driver": "CH. DREUX",
+            "owner": "EC.CH. DREUX",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 14,
             "horse": "FAKIR MERITE",
-            "description": ""
+            "description": "",
+            "performance": "6.7.0.9.7",
+            "gains": 513690,
+            "sex": "M",
+            "age": 9,
+            "trainer": "F. MARTY",
+            "jockey": "F. MARTY",
+            "driver": "F. MARTY",
+            "owner": "G. VEYRAC",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 15,
             "horse": "FERRARI SISU",
-            "description": ""
+            "description": "",
+            "performance": "8.3.4.6.6",
+            "gains": 515042,
+            "sex": "H",
+            "age": 9,
+            "trainer": "C. LUGAUER",
+            "jockey": "C. LUGAUER",
+            "driver": "C. LUGAUER",
+            "owner": "C. LUGAUER",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 16,
             "horse": "EPSOM D'HERFRAIE",
-            "description": ""
+            "description": "",
+            "performance": "8.D.1.1.5",
+            "gains": 518500,
+            "sex": "H",
+            "age": 10,
+            "trainer": "L. BAUDOUIN",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "EC. LE RIVAGE",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2850.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

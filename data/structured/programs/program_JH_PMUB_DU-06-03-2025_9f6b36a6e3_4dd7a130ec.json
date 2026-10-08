@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-06-03-2025_9f6b36a6e3_4dd7a130ec.txt",
-    "parsed_at": "2026-10-08T10:35:39.962993Z",
+    "parsed_at": "2026-10-08T23:52:11.408145Z",
     "date": "2025-03-06",
     "race": {
         "race_name": "PRIX DE LA GASCOGNE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "MICHIGAN FIRE",
-            "description": ""
+            "description": "",
+            "performance": "4.0.3.3.1",
+            "gains": 23250,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.CHUETTE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "F.PERREE",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "AZOV",
-            "description": ""
+            "description": "",
+            "performance": "2.2.4.6.2",
+            "gains": 157726,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G.GUEDJ-GAY",
+            "jockey": "J.RESIMONT",
+            "driver": "J.RESIMONT",
+            "owner": "C.LAUFFER",
+            "weight": 58.5,
+            "draw": 4
         },
         {
             "number": 3,
             "horse": "AMERICAN GLORY",
-            "description": ""
+            "description": "",
+            "performance": "1.3.1.1.3",
+            "gains": 62550,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "A.REN",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 4,
             "horse": "SHEEMA'S ROSE",
-            "description": ""
+            "description": "",
+            "performance": "9.6.7.0.5",
+            "gains": 35100,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "JP.MA. DA COSTA OLIVEIRA",
+            "driver": "JP.MA. DA COSTA OLIVEIRA",
+            "owner": "A.CLAIRE",
+            "weight": 58.5,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "GANASS",
-            "description": ""
+            "description": "",
+            "performance": "4.5.1.4.0",
+            "gains": 94660,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "ZAHYANA",
-            "description": ""
+            "description": "",
+            "performance": "2.5.1.2.1",
+            "gains": 68770,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "JESUS",
+            "driver": "JESUS",
+            "owner": "M.KOHAIZA",
+            "weight": 56.5,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "GANT",
-            "description": ""
+            "description": "",
+            "performance": "8.1.3.1.1",
+            "gains": 42857,
+            "sex": "M",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "WEST. RACE HORSES",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 8,
             "horse": "RISING BLAST",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.4.7",
+            "gains": 69630,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.LEMAITRE",
+            "jockey": "H.SAUER",
+            "driver": "H.SAUER",
+            "owner": "STALL LAURUS",
+            "weight": 56.0,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "BAD BOY",
-            "description": ""
+            "description": "",
+            "performance": "2.0.5.3.4",
+            "gains": 82700,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.BOUTIN",
+            "jockey": "J.LEROY",
+            "driver": "J.LEROY",
+            "owner": "F.LEIDA",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "BENIMARU",
-            "description": ""
+            "description": "",
+            "performance": "5.0.8.0.1",
+            "gains": 35900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.SIAS",
+            "jockey": "S.PENOT",
+            "driver": "S.PENOT",
+            "owner": "CHAMALLOUIS",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "AQUILA VOLANTE",
-            "description": ""
+            "description": "",
+            "performance": "9.1.0.3.9",
+            "gains": 71600,
+            "sex": "M",
+            "age": 4,
+            "trainer": "L.ROUSSEL",
+            "jockey": "G.PANNIER",
+            "driver": "G.PANNIER",
+            "owner": "J.MAHIQUES",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "THUNDERSPEED",
-            "description": ""
+            "description": "",
+            "performance": "0.5.0.3.3",
+            "gains": 196820,
+            "sex": "M",
+            "age": 8,
+            "trainer": "M.GUYON",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "EC. GRIBOMONT",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 13,
             "horse": "TRUE TEDESCO",
-            "description": ""
+            "description": "",
+            "performance": "1.6.4.6.7",
+            "gains": 80880,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "A.SUBORICS",
+            "driver": "A.SUBORICS",
+            "owner": "ST. MYDLINGHOVEN",
+            "weight": 55.0,
+            "draw": 9
         },
         {
             "number": 14,
             "horse": "GIMANZOR",
-            "description": ""
+            "description": "",
+            "performance": "9.6.2.3.1",
+            "gains": 26730,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "JC.SEROUL",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "ROUDOUDOU",
-            "description": ""
+            "description": "",
+            "performance": "7.1.2.5.7",
+            "gains": 38320,
+            "sex": "M",
+            "age": 4,
+            "trainer": "B.MARIE",
+            "jockey": "E.THUEUX",
+            "driver": "E.THUEUX",
+            "owner": "D.MIQUEL / E.THUEUX",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "HENRY THE LION",
-            "description": ""
+            "description": "",
+            "performance": "4.4.3.0.2",
+            "gains": 64230,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.MADAMET",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "E.WARE",
+            "weight": 53.0,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

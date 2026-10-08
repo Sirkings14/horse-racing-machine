@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_19-05-2026_5812614dca_9ce50da614.txt",
-    "parsed_at": "2026-10-08T10:35:44.945566Z",
+    "parsed_at": "2026-10-08T23:52:18.484941Z",
     "date": "2026-05-19",
     "race": {
         "race_name": "PRIX DE LA FORET DE CHANTILLY",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ZELZARI",
-            "description": ""
+            "description": "",
+            "performance": "1.1.4.4.1",
+            "gains": 119980,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D.MELE",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "IKARUSRACING",
+            "weight": 64.0,
+            "draw": 4
         },
         {
             "number": 2,
             "horse": "CENTRAL PARK WEST",
-            "description": ""
+            "description": "",
+            "performance": "0.5.0.2.4",
+            "gains": 367079,
+            "sex": "H",
+            "age": 8,
+            "trainer": "JUL .PHELIPPON",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "HORSEMOOD",
+            "weight": 59.0,
+            "draw": 1
         },
         {
             "number": 3,
             "horse": "GILDED DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "4.7.1.8.2",
+            "gains": 117634,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.PITART",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "MBA. P. RACING STABLES",
+            "weight": 59.0,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "BOTICELLI",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.2.2",
+            "gains": 70849,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.RULEC",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "S.MOLKS",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "SIYOUKING",
-            "description": ""
+            "description": "",
+            "performance": "3.1.2.4.6",
+            "gains": 97209,
+            "sex": "H",
+            "age": 5,
+            "trainer": "Z.KOPLIK",
+            "jockey": "G.SIAS",
+            "driver": "G.SIAS",
+            "owner": "ID.COMUNICATIVE",
+            "weight": 57.5,
+            "draw": 5
         },
         {
             "number": 6,
             "horse": "AL MAX",
-            "description": ""
+            "description": "",
+            "performance": "5.3.1.9.3",
+            "gains": 42207,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P.DECOUZ",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "MJ RACING",
+            "weight": 57.5,
+            "draw": 6
         },
         {
             "number": 7,
             "horse": "SAUCEPOT",
-            "description": ""
+            "description": "",
+            "performance": "6.1.2",
+            "gains": 12682,
+            "sex": "F",
+            "age": 4,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "AL ASAYL FRANCE",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "PTIT PEDRO",
-            "description": ""
+            "description": "",
+            "performance": "1.0.3.0.8",
+            "gains": 153644,
+            "sex": "M",
+            "age": 7,
+            "trainer": "J.BOISNARD",
+            "jockey": "H.LEBOUC",
+            "driver": "H.LEBOUC",
+            "owner": "A.PRUDENT",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 9,
             "horse": "STORMY DONALD",
-            "description": ""
+            "description": "",
+            "performance": "0.5.0.1.7",
+            "gains": 52290,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.CHAPPET",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "EC. DAVID R. LAYANI FA",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "DOUBLE UP",
-            "description": ""
+            "description": "",
+            "performance": "9.0.7.1.3",
+            "gains": 31403,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "I.CORBANI",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "MEMPHIS TENNESSEE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.2.4",
+            "gains": 77611,
+            "sex": "M",
+            "age": 5,
+            "trainer": "Y.BONNEFOY",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "LUGDUNUM RACING 3",
+            "weight": 55.0,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "HUMAN EVOLUTION",
-            "description": ""
+            "description": "",
+            "performance": "1.5.1.2.2",
+            "gains": 95168,
+            "sex": "M",
+            "age": 5,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "I.PANTALL",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "EL PEQUENIO",
-            "description": ""
+            "description": "",
+            "performance": "0.9.0.7.9",
+            "gains": 87184,
+            "sex": "H",
+            "age": 4,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "EC. HDBB",
+            "weight": 54.0,
+            "draw": 3
         },
         {
             "number": 14,
             "horse": "FEVE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.6.3",
+            "gains": 55550,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.LEROY",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "EC.MESSICA",
+            "weight": 53.5,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "STANGHELI",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.2.3",
+            "gains": 119386,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "Y.BURRUS",
+            "weight": 53.5,
+            "draw": 11
         },
         {
             "number": 16,
             "horse": "AQUILA VOLANTE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.4.0.0",
+            "gains": 99950,
+            "sex": "M",
+            "age": 5,
+            "trainer": "G.PANNIER",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "J.MAHIQUES",
+            "weight": 53.0,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

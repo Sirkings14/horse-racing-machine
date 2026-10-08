@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-23-01-2023_569c14790f_1e3eb2022d.txt",
-    "parsed_at": "2026-10-08T10:35:41.583002Z",
+    "parsed_at": "2026-10-08T23:52:13.739931Z",
     "date": "2023-01-21",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "COUR DU ROI",
-            "description": ""
+            "description": "",
+            "performance": "7.7.5.3.2",
+            "gains": 65500,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "B.GIRAUDON",
+            "weight": 60.0,
+            "draw": 16
         },
         {
             "number": 2,
             "horse": "TUT TUT",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.9.7",
+            "gains": 61960,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "S.BUCKLEY",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 3,
             "horse": "JOHEN",
-            "description": ""
+            "description": "",
+            "performance": "1.4.5.3.6",
+            "gains": 79170,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "JL QUINIOU",
+            "weight": 59.0,
+            "draw": 1
         },
         {
             "number": 4,
             "horse": "MAMMALINA",
-            "description": ""
+            "description": "",
+            "performance": "4.1.1.1.3",
+            "gains": 69375,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GERMAIN",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "G.AU.NORMAND",
+            "weight": 59.0,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "UNCLE BO",
-            "description": ""
+            "description": "",
+            "performance": "5.4.1.4.8",
+            "gains": 53300,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.JOURNIAC",
+            "jockey": "L.ROVISSE",
+            "driver": "L.ROVISSE",
+            "owner": "JC.SEROUL",
+            "weight": 59.0,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "MONTMIRAIL",
-            "description": ""
+            "description": "",
+            "performance": "2.6.1.3.8",
+            "gains": 37880,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "JC.ROUGET",
+            "driver": "JC.ROUGET",
+            "owner": "I.COTROZZI",
+            "weight": 59.0,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "OFFRANVILLE",
-            "description": ""
+            "description": "",
+            "performance": "1.9.5.1.2",
+            "gains": 36560,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "A.JATHIERE",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "INVESTISSEUR",
-            "description": ""
+            "description": "",
+            "performance": "1.4.4.3.1",
+            "gains": 33060,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.ORANI",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "SBM .ALQASSIMI",
+            "weight": 58.5,
+            "draw": 3
         },
         {
             "number": 9,
             "horse": "WASSIM",
-            "description": ""
+            "description": "",
+            "performance": "3.4.3.7.9",
+            "gains": 37022,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PLANQUE",
+            "jockey": "E.CASTELLI",
+            "driver": "E.CASTELLI",
+            "owner": "B.LYNAM",
+            "weight": 57.5,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "ETATIQUE",
-            "description": ""
+            "description": "",
+            "performance": "3.5.3.7.4",
+            "gains": 33040,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.CABRE",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "LG BLOODSTOCK",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "MAGNOLIA STATE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.2.1",
+            "gains": 45569,
+            "sex": "F",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "EC. TYGALY",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "MR GOODNIGHT",
-            "description": ""
+            "description": "",
+            "performance": "5.0.2.2.1",
+            "gains": 31860,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.ROUSSEL",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "EC. EDGAR MESSAOUD",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 13,
             "horse": "CORTEZ BANK",
-            "description": ""
+            "description": "",
+            "performance": "8.2.2.9.1",
+            "gains": 28050,
+            "sex": "H",
+            "age": 4,
+            "trainer": "V.SEGUY",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "S.GRANDIN",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "GAME RUN",
-            "description": ""
+            "description": "",
+            "performance": "2.4.1.1.6",
+            "gains": 53460,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "EARL EC. LA V. MARTIGNY",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 15,
             "horse": "YES FOR EVER",
-            "description": ""
+            "description": "",
+            "performance": "9.2.5.1.3",
+            "gains": 26350,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "LE HS DE LA GOUSSERIE",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "FORCHESTER",
-            "description": ""
+            "description": "",
+            "performance": "4.7.3.8.5",
+            "gains": 29750,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "LE HS DE LA GOUSSERIE",
+            "weight": 55.5,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

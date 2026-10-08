@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-31-07-2024_0479d63d84_4d054fcc36.txt",
-    "parsed_at": "2026-10-08T10:35:42.543646Z",
+    "parsed_at": "2026-10-08T23:52:15.070627Z",
     "date": "2024-07-31",
     "race": {
         "race_name": "PRIX DE PIGALLE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GLOIRE DU LUPIN",
-            "description": ""
+            "description": "",
+            "performance": "2.3.0.D.D",
+            "gains": 240910,
+            "sex": "F",
+            "age": 8,
+            "trainer": "A. WIELS",
+            "jockey": "J.P. MARMION",
+            "driver": "J.P. MARMION",
+            "owner": "Ec. J. P. MARMION",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 2,
             "horse": "FOREVER JIEL",
-            "description": ""
+            "description": "",
+            "performance": "0.0.9.7.2",
+            "gains": 252575,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M. ABRIVARD",
+            "jockey": "J.L. DERSOIR",
+            "driver": "J.L. DERSOIR",
+            "owner": "Ec. LUCK",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2875.M"
         },
         {
             "number": 3,
             "horse": "FILARETE DU VERGER",
-            "description": ""
+            "description": "",
+            "performance": "5.7.9.4.0",
+            "gains": 252770,
+            "sex": "F",
+            "age": 9,
+            "trainer": "PH. DAUGEARD",
+            "jockey": "PH. DAUGEARD",
+            "driver": "PH. DAUGEARD",
+            "owner": "Ec. Ph. DAUGEARD",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2875.M"
         },
         {
             "number": 4,
             "horse": "FILOU DE CHARDET",
-            "description": ""
+            "description": "",
+            "performance": "6.D.8.0.6",
+            "gains": 253320,
+            "sex": "H",
+            "age": 9,
+            "trainer": "S. OLIVIER",
+            "jockey": "PH. DAUGEARD",
+            "driver": "PH. DAUGEARD",
+            "owner": "Ec. Ph. DAUGEARD",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 5,
             "horse": "FALCO DU DOUET",
-            "description": ""
+            "description": "",
+            "performance": "5.D.D.6.7",
+            "gains": 257640,
+            "sex": "M",
+            "age": 9,
+            "trainer": "F. NIVARD",
+            "jockey": "G. NION",
+            "driver": "G. NION",
+            "owner": "Ec. J-P.R. VILAULT",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2875.M"
         },
         {
             "number": 6,
             "horse": "HOTLINE DE CARSI",
-            "description": ""
+            "description": "",
+            "performance": "6.0.2.7.0",
+            "gains": 258540,
+            "sex": "F",
+            "age": 7,
+            "trainer": "J.F. SENET",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "Ec. J-F. SENET",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2875.M"
         },
         {
             "number": 7,
             "horse": "HAMILTON DU HAM",
-            "description": ""
+            "description": "",
+            "performance": "4.4.1.6.D",
+            "gains": 261610,
+            "sex": "H",
+            "age": 7,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "Y. DESMET",
+            "driver": "Y. DESMET",
+            "owner": "Y. DESMET",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 8,
             "horse": "HORATIUS D'ELA",
-            "description": ""
+            "description": "",
+            "performance": "8.D.3.2.4",
+            "gains": 264085,
+            "sex": "M",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "M. SASSIER",
+            "driver": "M. SASSIER",
+            "owner": "E. PIERRE",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2875.M"
         },
         {
             "number": 9,
             "horse": "FALCO FUN",
-            "description": ""
+            "description": "",
+            "performance": "1.3.1.3.D",
+            "gains": 265010,
+            "sex": "H",
+            "age": 9,
+            "trainer": "CL. LELIEVRE",
+            "jockey": "P. LELIEVRE",
+            "driver": "P. LELIEVRE",
+            "owner": "Ec. Pascal LELIEVRE",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2875.M"
         },
         {
             "number": 10,
             "horse": "DOMINO D'AUVRECY",
-            "description": ""
+            "description": "",
+            "performance": "6.9.0.0.3",
+            "gains": 265130,
+            "sex": "H",
+            "age": 11,
+            "trainer": "G. GELORMINI",
+            "jockey": "J. GUELPA",
+            "driver": "J. GUELPA",
+            "owner": "P. YVANES",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2875.M"
         },
         {
             "number": 11,
             "horse": "HELLO SPORT",
-            "description": ""
+            "description": "",
+            "performance": "D.8.8.0.3",
+            "gains": 265150,
+            "sex": "H",
+            "age": 7,
+            "trainer": "THEO DUVALDESTIN",
+            "jockey": "TH. DUVALDESTIN",
+            "driver": "TH. DUVALDESTIN",
+            "owner": "Ec.HS DES QUATRE VENTS",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 12,
             "horse": "DASSERO",
-            "description": ""
+            "description": "",
+            "performance": "0.D.0.5.5",
+            "gains": 269275,
+            "sex": "H",
+            "age": 11,
+            "trainer": "E. DE JESUS",
+            "jockey": "P.G. CAVEY",
+            "driver": "P.G. CAVEY",
+            "owner": "P.G. CAVEY",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2875.M"
         },
         {
             "number": 13,
             "horse": "GLOIRE DU PERCHE",
-            "description": ""
+            "description": "",
+            "performance": "8.D.9.2.D",
+            "gains": 269500,
+            "sex": "F",
+            "age": 8,
+            "trainer": "D. THOMAIN",
+            "jockey": "V. SEGUIN",
+            "driver": "V. SEGUIN",
+            "owner": "Ec. FOIRET",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2875.M"
         },
         {
             "number": 14,
             "horse": "GIPSY DE CHAMANT",
-            "description": ""
+            "description": "",
+            "performance": "2.D.5.2.6",
+            "gains": 270528,
+            "sex": "F",
+            "age": 8,
+            "trainer": "P.Y. VERVA",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "P.D. PAILLOT",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2875.M"
         },
         {
             "number": 15,
             "horse": "HOLD UP DU DIGEON",
-            "description": ""
+            "description": "",
+            "performance": "6.3.5.7.4",
+            "gains": 271805,
+            "sex": "H",
+            "age": 7,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "TH. RAFFEGEAU",
+            "driver": "TH. RAFFEGEAU",
+            "owner": "J.Y. ROZE",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2875.M"
         },
         {
             "number": 16,
             "horse": "FUEGO DU MORTIER",
-            "description": ""
+            "description": "",
+            "performance": "8.0.4.0.8",
+            "gains": 273205,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J. VANMEERBECK",
+            "jockey": "J. VANMEERBECK",
+            "driver": "J. VANMEERBECK",
+            "owner": "J. VANMEERBECK",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2875.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

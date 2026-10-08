@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_10-09-2023_ebb5c32dd2_34c5e54ece.txt",
-    "parsed_at": "2026-10-08T10:35:43.713607Z",
+    "parsed_at": "2026-10-08T23:52:16.714374Z",
     "date": "2023-09-10",
     "race": {
         "race_name": "QATAR PRIX CARRUS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "WONNEMOND",
-            "description": ""
+            "description": "",
+            "performance": "5.8.0.6.3",
+            "gains": 686505,
+            "sex": "H",
+            "age": 10,
+            "trainer": "A.MADAMET",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "STALL FROHNBACH",
+            "weight": 61.0,
+            "draw": 15
         },
         {
             "number": 2,
             "horse": "KATOUCHA",
-            "description": ""
+            "description": "",
+            "performance": "8.5.4.9.6",
+            "gains": 86281,
+            "sex": "F",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "B.GIRAUDON",
+            "weight": 59.5,
+            "draw": 4
         },
         {
             "number": 3,
             "horse": "NEPALAIS",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.2.2",
+            "gains": 130320,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 58.5,
+            "draw": 6
         },
         {
             "number": 4,
             "horse": "VALIABAD",
-            "description": ""
+            "description": "",
+            "performance": "9.7.0.5.1",
+            "gains": 68050,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "M.WATT",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 5,
             "horse": "PRINCIPE",
-            "description": ""
+            "description": "",
+            "performance": "8.4.2.2.0",
+            "gains": 151070,
+            "sex": "H",
+            "age": 5,
+            "trainer": "R.PIECHULEK",
+            "jockey": "P.SCHIERGEN",
+            "driver": "P.SCHIERGEN",
+            "owner": "K. ALLOFS",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "LE NOMADE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.6.1",
+            "gains": 64750,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "AL ASAYL FRANCE",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 7,
             "horse": "EXCITING",
-            "description": ""
+            "description": "",
+            "performance": "5.0.9.4.0",
+            "gains": 69680,
+            "sex": "M",
+            "age": 5,
+            "trainer": "T.BACHELOT",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "WOOD.BLOODSTOCK LTD",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 8,
             "horse": "HIGHBARI",
-            "description": ""
+            "description": "",
+            "performance": "0.3.5.5.4",
+            "gains": 139995,
+            "sex": "M",
+            "age": 6,
+            "trainer": "F.VERON",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "SCEA EC. BADER",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "MONEYMAN",
-            "description": ""
+            "description": "",
+            "performance": "4.9.2.4.2",
+            "gains": 48780,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "WERTHEIMER & FRERE",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "AL KHAMSIN",
-            "description": ""
+            "description": "",
+            "performance": "7.1.5.3.1",
+            "gains": 138123,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.MANGIONE",
+            "jockey": "H. MENNE. MARTINEZ",
+            "driver": "H. MENNE. MARTINEZ",
+            "owner": "H. MENNE. MARTINEZ",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 11,
             "horse": "THE LAUREATE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.6.0.3",
+            "gains": 56710,
+            "sex": "M",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "I.CORBANI",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "GRAND BALCON",
-            "description": ""
+            "description": "",
+            "performance": "8.4.3.3.4",
+            "gains": 59680,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "J.MERIENNE",
+            "driver": "J.MERIENNE",
+            "owner": "A.GALLO",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "BEVAN",
-            "description": ""
+            "description": "",
+            "performance": "4.0.4.1.3",
+            "gains": 83200,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.GUEDJ-GAY",
+            "jockey": "L.GADBIN",
+            "driver": "L.GADBIN",
+            "owner": "S.DOUSSOT",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 14,
             "horse": "WINTER'S LOVE",
-            "description": ""
+            "description": "",
+            "performance": "3.0.2.6.1",
+            "gains": 27750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "SWISS BANK",
-            "description": ""
+            "description": "",
+            "performance": "3.3.3.0.6",
+            "gains": 181310,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A.POUCHIN",
+            "jockey": "O.DE MONTZEY",
+            "driver": "O.DE MONTZEY",
+            "owner": "CO.CORRAL",
+            "weight": 54.5,
+            "draw": 2
         },
         {
             "number": 16,
             "horse": "PUMP PUMP JUNIOR",
-            "description": ""
+            "description": "",
+            "performance": "2.6.3.1.1",
+            "gains": 58810,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "JP.GAUVIN",
+            "driver": "JP.GAUVIN",
+            "owner": "JC.BOURET",
+            "weight": 54.0,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

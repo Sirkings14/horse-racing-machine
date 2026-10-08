@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_08-11-2023_0_b76009f400_909cdaf5b9.txt",
-    "parsed_at": "2026-10-08T10:35:43.538610Z",
+    "parsed_at": "2026-10-08T23:52:16.447004Z",
     "date": "2023-11-08",
     "race": {
         "race_name": null,
@@ -16,74 +16,215 @@
         {
             "number": 1,
             "horse": "GALON DE VIRE",
-            "description": ""
+            "description": "",
+            "performance": "0.8.4.4.4",
+            "gains": 240920,
+            "sex": "H",
+            "age": 7,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "A.PH. GRIMAULT",
+            "driver": "A.PH. GRIMAULT",
+            "owner": "S. M.GRIMAULT",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "3000.M"
         },
         {
             "number": 2,
             "horse": "GRANDE DE RANCHY",
-            "description": ""
+            "description": "",
+            "performance": "9.0.7.3.6",
+            "gains": 247860,
+            "sex": "F",
+            "age": 7,
+            "trainer": "O. RAFFIN",
+            "jockey": "E. VARIN",
+            "driver": "E. VARIN",
+            "owner": "EC. E. VARIN",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "3000.M"
         },
         {
             "number": 3,
             "horse": "GAIA D'OCCAGNES",
-            "description": ""
+            "description": "",
+            "performance": "5.6.0.7.0",
+            "gains": 278900,
+            "sex": "F",
+            "age": 7,
+            "trainer": "A. BARRIER",
+            "jockey": "J.PH. RAFFEGEAU",
+            "driver": "J.PH. RAFFEGEAU",
+            "owner": "Thierry MASSICOT",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "3000.M"
         },
         {
             "number": 4,
             "horse": "FEE LUCERNAISE",
-            "description": ""
+            "description": "",
+            "performance": "8.9.0.0.3",
+            "gains": 281730,
+            "sex": "F",
+            "age": 8,
+            "trainer": "M. CHARUEL",
+            "jockey": "M. CHARUEL",
+            "driver": "M. CHARUEL",
+            "owner": "P. LEVEILLE",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "3000.M"
         },
         {
             "number": 5,
             "horse": "FAITHFUL",
-            "description": ""
+            "description": "",
+            "performance": "2.0.0.4.D",
+            "gains": 282320,
+            "sex": "M",
+            "age": 8,
+            "trainer": "B. ROCHARD",
+            "jockey": "A. PACARY",
+            "driver": "A. PACARY",
+            "owner": "EC. A. DELAROQUE",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "3000.M"
         },
         {
             "number": 6,
             "horse": "HIDALGO DES NOES",
-            "description": ""
+            "description": "",
+            "performance": "0.9.9.8.2",
+            "gains": 323080,
+            "sex": "H",
+            "age": 6,
+            "trainer": "J. TRAVERS",
+            "jockey": "St. PROVOOST",
+            "driver": "St. PROVOOST",
+            "owner": "EC. DANOVER",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "3025.M"
         },
         {
             "number": 7,
             "horse": "FALCO D'HAVAROCHE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.0.9",
+            "gains": 414870,
+            "sex": "H",
+            "age": 8,
+            "trainer": "L. BAUDOUIN",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "EC. J.M. BAUDOUIN",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "3025.M"
         },
         {
             "number": 8,
             "horse": "HARLEM DE BUCY",
-            "description": ""
+            "description": "",
+            "performance": "1.2.0.D.2",
+            "gains": 424770,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A. ABRIVARD",
+            "jockey": "CH. ECALARD",
+            "driver": "CH. ECALARD",
+            "owner": "EC. BRINDOR",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "3025.M"
         },
         {
             "number": 9,
             "horse": "EPSOM D'HERFRAIE",
-            "description": ""
+            "description": "",
+            "performance": "0.D.D.D.4",
+            "gains": 428650,
+            "sex": "H",
+            "age": 9,
+            "trainer": "R. MARTY",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "EC. LE RIVAGE",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "3025.M"
         },
         {
             "number": 10,
             "horse": "IDEAL DU POMMEAU",
-            "description": ""
+            "description": "",
+            "performance": "5.3.2.D.1",
+            "gains": 443850,
+            "sex": "M",
+            "age": 5,
+            "trainer": "M. ABRIVARD",
+            "jockey": "S. GUARATO",
+            "driver": "S. GUARATO",
+            "owner": "Scu. BIVANS SRL",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "3025.M"
         },
         {
             "number": 11,
             "horse": "HORACE DU GOUTIER",
-            "description": ""
+            "description": "",
+            "performance": "0.1.2.1.1",
+            "gains": 469310,
+            "sex": "M",
+            "age": 6,
+            "trainer": "H. MONTHULE",
+            "jockey": "S. GUARATO",
+            "driver": "S. GUARATO",
+            "owner": "EC. SAINT MARTIN",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "3025.M"
         },
         {
             "number": 12,
             "horse": "GASPAR D'ANGIS",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.D.2",
+            "gains": 522660,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E. RAFFIN",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "EC. J.M. BAUDOUIN",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "3025.M"
         },
         {
             "number": 13,
             "horse": "GANAY DE BANVILLE",
-            "description": ""
+            "description": "",
+            "performance": "2.3.R.3.2",
+            "gains": 546790,
+            "sex": "M",
+            "age": 7,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC. VALLIERE RACING",
+            "listed_chrono": "1.09.80",
+            "listed_distance": "3025.M"
         },
         {
             "number": 14,
             "horse": "DELIA DU POMMEREUX",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.8.4",
+            "gains": 1892315,
+            "sex": "F",
+            "age": 10,
+            "trainer": "D. DULONG",
+            "jockey": "S. ROGER",
+            "driver": "S. ROGER",
+            "owner": "N. LOLIC",
+            "listed_chrono": "1.09.60",
+            "listed_distance": "3050.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             13,

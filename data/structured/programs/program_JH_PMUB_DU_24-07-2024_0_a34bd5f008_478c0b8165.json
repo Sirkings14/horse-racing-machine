@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_24-07-2024_0_a34bd5f008_478c0b8165.txt",
-    "parsed_at": "2026-10-08T10:35:45.669814Z",
+    "parsed_at": "2026-10-08T23:52:19.536576Z",
     "date": "2024-07-24",
     "race": {
         "race_name": "ATTELE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "HEDE DARLING",
-            "description": ""
+            "description": "",
+            "performance": "1.0.2.2.0",
+            "gains": 314562,
+            "sex": "M",
+            "age": 7,
+            "trainer": "S. ERNAULT",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "GLOBAL GLIDE",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 2,
             "horse": "FRAGONARD DELO",
-            "description": ""
+            "description": "",
+            "performance": "4.D.0.7.0",
+            "gains": 315950,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A. COLLETTE",
+            "jockey": "A. DUPERCHE",
+            "driver": "A. DUPERCHE",
+            "owner": "G. ATTARD",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2875.M"
         },
         {
             "number": 3,
             "horse": "GIRL DE BASSIERE",
-            "description": ""
+            "description": "",
+            "performance": "5.6.5.6.5",
+            "gains": 322760,
+            "sex": "F",
+            "age": 8,
+            "trainer": "B. ROCHARD",
+            "jockey": "C. CHENU",
+            "driver": "C. CHENU",
+            "owner": "J.L. DUCATEL",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 4,
             "horse": "FAVORI DE L'ITON",
-            "description": ""
+            "description": "",
+            "performance": "0.8.0.9.1",
+            "gains": 323430,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P.Y. VERVA",
+            "jockey": "P.L. DESAUNETTE",
+            "driver": "P.L. DESAUNETTE",
+            "owner": "EC. INITIAL",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2875.M"
         },
         {
             "number": 5,
             "horse": "GHOSTBUSTER",
-            "description": ""
+            "description": "",
+            "performance": "0.3.0.D.3",
+            "gains": 325470,
+            "sex": "H",
+            "age": 8,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "S. RAIMOND",
+            "driver": "S. RAIMOND",
+            "owner": "EC. MOLINA",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2875.M"
         },
         {
             "number": 6,
             "horse": "HEADING REFERENCE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.0",
+            "gains": 328950,
+            "sex": "H",
+            "age": 10,
+            "trainer": "F. NIVARD",
+            "jockey": "CÉDRIC PARYS",
+            "driver": "CÉDRIC PARYS",
+            "owner": "KLV HOLDING AB",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2875.M"
         },
         {
             "number": 7,
             "horse": "GRAAL DU TRESOR",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.5.3",
+            "gains": 340270,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. MOTTIER",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "C. BEIL. MOTTIER",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2875.M"
         },
         {
             "number": 8,
             "horse": "HYMNE DU GERS",
-            "description": ""
+            "description": "",
+            "performance": "1.0.2.2.0",
+            "gains": 342060,
+            "sex": "H",
+            "age": 7,
+            "trainer": "T. OUVRIE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC. J.M.RANCOULE",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2875.M"
         },
         {
             "number": 9,
             "horse": "HELIOT DE CAHOT",
-            "description": ""
+            "description": "",
+            "performance": "9.4.0.0.0",
+            "gains": 345460,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G. GELORMINI",
+            "jockey": "S. PRIOUL",
+            "driver": "S. PRIOUL",
+            "owner": "S. PRIOUL",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 10,
             "horse": "GUINESS D'HERFRAIE",
-            "description": ""
+            "description": "",
+            "performance": "3.4.1.6.D",
+            "gains": 351000,
+            "sex": "F",
+            "age": 8,
+            "trainer": "D. THOMAIN",
+            "jockey": "CL. THOMAIN",
+            "driver": "CL. THOMAIN",
+            "owner": "EC. DU HS. D'ERABLE",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 11,
             "horse": "HANNIBAL TUILERIE",
-            "description": ""
+            "description": "",
+            "performance": "6.2.0.4.8",
+            "gains": 351085,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M. ABRIVARD",
+            "jockey": "J. BRUNEAU",
+            "driver": "J. BRUNEAU",
+            "owner": "CH.M. BRUNEAU",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 12,
             "horse": "GRINDELWALD",
-            "description": ""
+            "description": "",
+            "performance": "8.5.D.1.1",
+            "gains": 353090,
+            "sex": "F",
+            "age": 8,
+            "trainer": "ARNAUD DESMOTTES",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "M. COMOLET",
+            "listed_chrono": "1.10.30",
+            "listed_distance": "2875.M"
         },
         {
             "number": 13,
             "horse": "ESTEBAN JIEL",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.7.9",
+            "gains": 353190,
+            "sex": "H",
+            "age": 10,
+            "trainer": "S. BAUDE",
+            "jockey": "J.L. DERSOIR",
+            "driver": "J.L. DERSOIR",
+            "owner": "EC. LUCK",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2875.M"
         },
         {
             "number": 14,
             "horse": "GIBUS",
-            "description": ""
+            "description": "",
+            "performance": "D.0.8.6.6",
+            "gains": 353860,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. LAGADEUC",
+            "jockey": "L. PESCHET",
+            "driver": "L. PESCHET",
+            "owner": "A. WIT",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2875.M"
         },
         {
             "number": 15,
             "horse": "GOLD DAIRPET",
-            "description": ""
+            "description": "",
+            "performance": "3.3.0.9.2",
+            "gains": 355980,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. LAMY",
+            "jockey": "C. CHENU",
+            "driver": "C. CHENU",
+            "owner": "R. COHEN",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2875.M"
         },
         {
             "number": 16,
             "horse": "FONZY D'HERIPRE",
-            "description": ""
+            "description": "",
+            "performance": "3.D.1.1.1",
+            "gains": 362630,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "D. FRICAUX",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2875.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

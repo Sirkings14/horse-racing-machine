@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_28-03-2023_6b4003109a_ccbb73fe65.txt",
-    "parsed_at": "2026-10-08T10:35:46.204406Z",
+    "parsed_at": "2026-10-08T23:52:20.299519Z",
     "date": "2023-03-28",
     "race": {
         "race_name": null,
@@ -16,94 +16,275 @@
         {
             "number": 1,
             "horse": "MONTIGNY",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.7.0",
+            "gains": 23050,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "G.AU.NORMAND",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "STARFIX",
-            "description": ""
+            "description": "",
+            "performance": "0.7.8.0.0",
+            "gains": 46970,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D.SANTIAGO",
+            "jockey": "MF.WEISSMEIER",
+            "driver": "MF.WEISSMEIER",
+            "owner": "STALL PICADILLY",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "WINNAN",
-            "description": ""
+            "description": "",
+            "performance": "0.8.6.7.5",
+            "gains": 69910,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "TOUT SUR LE ROUGE",
+            "weight": 59.5,
+            "draw": 9
         },
         {
             "number": 4,
             "horse": "QUIETLY CONFIDENT",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.5.5",
+            "gains": 47070,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "A.ANDRIEU",
+            "weight": 59.5,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "CAPOBLANCO",
-            "description": ""
+            "description": "",
+            "performance": "0.3.1.0.4",
+            "gains": 34000,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "M.SCANDELLA-LACAILLE",
+            "driver": "M.SCANDELLA-LACAILLE",
+            "owner": "M.BLANC",
+            "weight": 59.5,
+            "draw": 6
         },
         {
             "number": 6,
             "horse": "MEDAVY",
-            "description": ""
+            "description": "",
+            "performance": "5.1.4.6.2",
+            "gains": 11100,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "G.AU.NORMAND",
+            "weight": 59.5,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "SINNDARILLO",
-            "description": ""
+            "description": "",
+            "performance": "2.4.1.6.8",
+            "gains": 15850,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "P.NADOR",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "SCREEN SHOT",
-            "description": ""
+            "description": "",
+            "performance": "0.1.4.5.0",
+            "gains": 11650,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "PAT .BARBE",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 9,
             "horse": "SLEEPY SUZY",
-            "description": ""
+            "description": "",
+            "performance": "6.3.7.0.6",
+            "gains": 42910,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "N.RICIGNUOLO",
+            "weight": 58.5,
+            "draw": 12
         },
         {
             "number": 10,
             "horse": "SPAIN SAGE",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4.2.1",
+            "gains": 20550,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "X.TH.DEMEAULTE",
+            "driver": "X.TH.DEMEAULTE",
+            "owner": "M.THOMAS",
+            "weight": 58.5,
+            "draw": 13
         },
         {
             "number": 11,
             "horse": "MAKILROY",
-            "description": ""
+            "description": "",
+            "performance": "1.0.2.2.3",
+            "gains": 65350,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "N.CAULLERY",
+            "weight": 58.0,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "MAX VERST",
-            "description": ""
+            "description": "",
+            "performance": "4.7.4.0.0",
+            "gains": 24900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "LE HS DE LA GOUSSERIE",
+            "weight": 58.0,
+            "draw": 16
         },
         {
             "number": 13,
             "horse": "MARITOT",
-            "description": ""
+            "description": "",
+            "performance": "6.0.9.2.7",
+            "gains": 48650,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H.BESNIER",
+            "jockey": "S.LABATE",
+            "driver": "S.LABATE",
+            "owner": "D.RABHI",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 14,
             "horse": "RED CRAZY",
-            "description": ""
+            "description": "",
+            "performance": "4.7.0.5.0",
+            "gains": 65790,
+            "sex": "M",
+            "age": 4,
+            "trainer": "L.BOISSEAU",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 57.0,
+            "draw": 17
         },
         {
             "number": 15,
             "horse": "MINO PICO",
-            "description": ""
+            "description": "",
+            "performance": "5.6.2",
+            "gains": 3500,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "R.LE DREN DOLEUZE",
+            "driver": "R.LE DREN DOLEUZE",
+            "owner": "E.ELHRARI",
+            "weight": 57.0,
+            "draw": 2
         },
         {
             "number": 16,
             "horse": "ZWIALH",
-            "description": ""
+            "description": "",
+            "performance": "0.2.4.0.4",
+            "gains": 52520,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.RUIS",
+            "jockey": "C.RONDELE-LANCELIN",
+            "driver": "C.RONDELE-LANCELIN",
+            "owner": "C.RONDELE-LANCELIN",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 17,
             "horse": "ROMANCE DE PARIS",
-            "description": ""
+            "description": "",
+            "performance": "0.9.6.9.0",
+            "gains": 20600,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R.MANGIONE",
+            "jockey": "E.THUEUX",
+            "driver": "E.THUEUX",
+            "owner": "E.THUEUX",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 18,
             "horse": "POWER PAPERS",
-            "description": ""
+            "description": "",
+            "performance": "0.2.6",
+            "gains": 4400,
+            "sex": "M",
+            "age": 4,
+            "trainer": "B.MURZABAYEV",
+            "jockey": "A.SUBORICS",
+            "driver": "A.SUBORICS",
+            "owner": "AVATARA S.A.",
+            "weight": 55.5,
+            "draw": 18
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             1,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-06-05-2024_216fe51efd_2b6a141507.txt",
-    "parsed_at": "2026-10-08T10:35:39.986680Z",
+    "parsed_at": "2026-10-08T23:52:11.438733Z",
     "date": "2024-05-06",
     "race": {
         "race_name": "ATTELE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "COMAND",
-            "description": ""
+            "description": "",
+            "performance": "0.7.9.D.5",
+            "gains": 57667,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N. RAIMBEAUX",
+            "jockey": "N. RAIMBEAUX",
+            "driver": "N. RAIMBEAUX",
+            "owner": "ALFRED ZAMMIT",
+            "listed_chrono": "1.15.90",
+            "listed_distance": "2950.M"
         },
         {
             "number": 2,
             "horse": "MADAME AF DJUPMYRA",
-            "description": ""
+            "description": "",
+            "performance": "D.8.D.3.4",
+            "gains": 101158,
+            "sex": "F",
+            "age": 9,
+            "trainer": "J.CH. PITON",
+            "jockey": "J.Ch. PITON",
+            "driver": "J.Ch. PITON",
+            "owner": "J.CH. PITON",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2950.M"
         },
         {
             "number": 3,
             "horse": "FOREVER MARANCOURT",
-            "description": ""
+            "description": "",
+            "performance": "9.D.5.D.0",
+            "gains": 116750,
+            "sex": "H",
+            "age": 9,
+            "trainer": "G. FOURNIGAULT",
+            "jockey": "P. CALLIER",
+            "driver": "P. CALLIER",
+            "owner": "P. CALLIER",
+            "listed_chrono": "1.13.10",
+            "listed_distance": "2950.M"
         },
         {
             "number": 4,
             "horse": "HARO DARCHE",
-            "description": ""
+            "description": "",
+            "performance": "1.6.3.1.3",
+            "gains": 117040,
+            "sex": "H",
+            "age": 7,
+            "trainer": "ALEXIS LERENARD",
+            "jockey": "F. NAKACHE",
+            "driver": "F. NAKACHE",
+            "owner": "F. NAKACHE",
+            "listed_chrono": "1.13.80",
+            "listed_distance": "2950.M"
         },
         {
             "number": 5,
             "horse": "GRANIT PACO",
-            "description": ""
+            "description": "",
+            "performance": "9.6.7.5.0",
+            "gains": 117815,
+            "sex": "H",
+            "age": 8,
+            "trainer": "B. RUET",
+            "jockey": "P. CALLIER",
+            "driver": "P. CALLIER",
+            "owner": "P. CALLIER",
+            "listed_chrono": "1.13.30",
+            "listed_distance": "2950.M"
         },
         {
             "number": 6,
             "horse": "HIBOU D'ERPION",
-            "description": ""
+            "description": "",
+            "performance": "1.6.3.1.3",
+            "gains": 123295,
+            "sex": "H",
+            "age": 7,
+            "trainer": "K. LEBLANC",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "EC. SEBASTIEN DUPONT",
+            "listed_chrono": "1.13.30",
+            "listed_distance": "2950.M"
         },
         {
             "number": 7,
             "horse": "HEROS D'YVEL",
-            "description": ""
+            "description": "",
+            "performance": "4.D.9.D.7",
+            "gains": 123655,
+            "sex": "H",
+            "age": 7,
+            "trainer": "L. VERRIERE",
+            "jockey": "MICKAEL CORMY",
+            "driver": "MICKAEL CORMY",
+            "owner": "EC.DU VIEUX CHENE",
+            "listed_chrono": "1.13.40",
+            "listed_distance": "2950.M"
         },
         {
             "number": 8,
             "horse": "HARLEQUIN",
-            "description": ""
+            "description": "",
+            "performance": "4.0.9.D.0",
+            "gains": 126230,
+            "sex": "H",
+            "age": 7,
+            "trainer": "L. LAMAZIERE",
+            "jockey": "G.R. HUGUET",
+            "driver": "G.R. HUGUET",
+            "owner": "EC. SIDERE",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2950.M"
         },
         {
             "number": 9,
             "horse": "HOLERO LOVE",
-            "description": ""
+            "description": "",
+            "performance": "0.D.2.1.0",
+            "gains": 240450,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E. RAFFIN",
+            "jockey": "S. GUARATO",
+            "driver": "S. GUARATO",
+            "owner": "EC. BREIZH D'ESPACE",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2975.M"
         },
         {
             "number": 10,
             "horse": "BAHIA DEL CIRCEO",
-            "description": ""
+            "description": "",
+            "performance": "8.1.0.9.3",
+            "gains": 246148,
+            "sex": "F",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "Vitale CIOTOLA",
+            "driver": "Vitale CIOTOLA",
+            "owner": "FRANCESCO GARGIULO",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2975.M"
         },
         {
             "number": 11,
             "horse": "GYBOR WELL",
-            "description": ""
+            "description": "",
+            "performance": "4.D.8.2.1",
+            "gains": 246460,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. ABRIVARD",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "EC. LD-M. ABRIVARD",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2975.M"
         },
         {
             "number": 12,
             "horse": "HAVE SEVEN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.2",
+            "gains": 246640,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "Y. DESMET",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2975.M"
         },
         {
             "number": 13,
             "horse": "FILOU DE CHARDET",
-            "description": ""
+            "description": "",
+            "performance": "2.7.9.D.6",
+            "gains": 251600,
+            "sex": "H",
+            "age": 9,
+            "trainer": "PH. DAUGEARD",
+            "jockey": "PH. DAUGEARD",
+            "driver": "PH. DAUGEARD",
+            "owner": "EC. PH. DAUGEARD",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2975.M"
         },
         {
             "number": 14,
             "horse": "GIPSY DE CHAMANT",
-            "description": ""
+            "description": "",
+            "performance": "2.6.5.0.2",
+            "gains": 251678,
+            "sex": "F",
+            "age": 8,
+            "trainer": "P.Y. VERVA",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "P.D. PAILLOT",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2975.M"
         },
         {
             "number": 15,
             "horse": "FALCON D'ESPACE",
-            "description": ""
+            "description": "",
+            "performance": "8.0.5.1.5",
+            "gains": 251860,
+            "sex": "H",
+            "age": 9,
+            "trainer": "R. HUE",
+            "jockey": "S. GUARATO",
+            "driver": "S. GUARATO",
+            "owner": "EC.BREIZH D'ESPACE",
+            "listed_chrono": "1.12.70",
+            "listed_distance": "2975.M"
         },
         {
             "number": 16,
             "horse": "ESPOIR DES CHAMPS",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.4.9",
+            "gains": 255830,
+            "sex": "H",
+            "age": 10,
+            "trainer": "CEDRIC TERRY",
+            "jockey": "PH. DAUGEARD",
+            "driver": "PH. DAUGEARD",
+            "owner": "STEVE OUAZAN",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2975.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

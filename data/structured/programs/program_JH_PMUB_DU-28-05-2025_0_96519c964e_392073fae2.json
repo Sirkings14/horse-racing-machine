@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-28-05-2025_0_96519c964e_392073fae2.txt",
-    "parsed_at": "2026-10-08T10:35:42.205895Z",
+    "parsed_at": "2026-10-08T23:52:14.609428Z",
     "date": "2025-05-28",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ROCK JOYEUX",
-            "description": ""
+            "description": "",
+            "performance": "3.4.1.6.1",
+            "gains": 146530,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N.PERRET",
+            "jockey": "S.RUIS",
+            "driver": "S.RUIS",
+            "owner": "J.N.TEMAM",
+            "weight": 60.5,
+            "draw": 10
         },
         {
             "number": 2,
             "horse": "KAPANI",
-            "description": ""
+            "description": "",
+            "performance": "0.5.3.2.5",
+            "gains": 165180,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.PITART",
+            "jockey": "E.PUILLET-RODA",
+            "driver": "E.PUILLET-RODA",
+            "owner": "H.MERAUD",
+            "weight": 60.0,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "TIC TAC",
-            "description": ""
+            "description": "",
+            "performance": "8.0.5.4.1",
+            "gains": 53087,
+            "sex": "H",
+            "age": 4,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "PH.LASSEN",
+            "weight": 59.0,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "NAMOURIA",
-            "description": ""
+            "description": "",
+            "performance": "3.7.2.7.4",
+            "gains": 26100,
+            "sex": "F",
+            "age": 4,
+            "trainer": "W.HICKST",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "G .BRUMMERHOF",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "NACIDO",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.4.4",
+            "gains": 62920,
+            "sex": "H",
+            "age": 7,
+            "trainer": "H.BLUME",
+            "jockey": "D.BREUX",
+            "driver": "D.BREUX",
+            "owner": "Y.MARIE-NELLY",
+            "weight": 58.0,
+            "draw": 16
         },
         {
             "number": 6,
             "horse": "MYKISS",
-            "description": ""
+            "description": "",
+            "performance": "7.6.0.0.4",
+            "gains": 213749,
+            "sex": "H",
+            "age": 8,
+            "trainer": "G.BATISTIC",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "S.RENZ U.A.",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 7,
             "horse": "CHELSEA DU NINIAN",
-            "description": ""
+            "description": "",
+            "performance": "7.5.0.2.3",
+            "gains": 145795,
+            "sex": "F",
+            "age": 7,
+            "trainer": "N.PAYSAN",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "N.PAYSAN",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 8,
             "horse": "SPINELLO",
-            "description": ""
+            "description": "",
+            "performance": "4.1.3.5.4",
+            "gains": 64050,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BARATTI",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "G.LAROCHE",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 9,
             "horse": "HAPPY VALENTINE",
-            "description": ""
+            "description": "",
+            "performance": "8.1.1.4.2",
+            "gains": 25150,
+            "sex": "F",
+            "age": 4,
+            "trainer": "U.SCHWINN",
+            "jockey": "S.BREUX",
+            "driver": "S.BREUX",
+            "owner": "G .SOMMERBERG",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "CUNCERTO",
-            "description": ""
+            "description": "",
+            "performance": "3.6.7.3.2",
+            "gains": 68700,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.RULEC",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "C.FOELLER",
+            "weight": 54.5,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "ORLHENA",
-            "description": ""
+            "description": "",
+            "performance": "6.0.3.7.3",
+            "gains": 55170,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.BOUTIN",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "EC.NICOLATO",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "REVENTADOR",
-            "description": ""
+            "description": "",
+            "performance": "3.1.8.3.4",
+            "gains": 130690,
+            "sex": "H",
+            "age": 8,
+            "trainer": "S.GOUVAZE",
+            "jockey": "F.LEFEBVRE",
+            "driver": "F.LEFEBVRE",
+            "owner": "S.GOUVAZE",
+            "weight": 53.0,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "BADEN ROCKS",
-            "description": ""
+            "description": "",
+            "performance": "1.6.0.3.5",
+            "gains": 163480,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.WHITFIELD",
+            "jockey": "D.SANTIAGO",
+            "driver": "D.SANTIAGO",
+            "owner": "STALL HAYLEY",
+            "weight": 52.0,
+            "draw": 8
         },
         {
             "number": 14,
             "horse": "WARELIA",
-            "description": ""
+            "description": "",
+            "performance": "9.4.3.0.7",
+            "gains": 60950,
+            "sex": "F",
+            "age": 5,
+            "trainer": "Y.VOLLMER",
+            "jockey": "F.VALLE SKAR",
+            "driver": "F.VALLE SKAR",
+            "owner": "K.THELEN",
+            "weight": 52.0,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "FLAMINGWAY",
-            "description": ""
+            "description": "",
+            "performance": "9.7.4.0.2",
+            "gains": 15800,
+            "sex": "H",
+            "age": 5,
+            "trainer": "N.PAYSAN",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "R.SCHLIENGER",
+            "weight": 52.0,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "ROSETTA STONE",
-            "description": ""
+            "description": "",
+            "performance": "2.3.7.4.0",
+            "gains": 102780,
+            "sex": "H",
+            "age": 6,
+            "trainer": "MF.WEISSMEIER",
+            "jockey": "C.PACAUT",
+            "driver": "C.PACAUT",
+            "owner": "G.C. RHEIN-MAIN",
+            "weight": 51.5,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

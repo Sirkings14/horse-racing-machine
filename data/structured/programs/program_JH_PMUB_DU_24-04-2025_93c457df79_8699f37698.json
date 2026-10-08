@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_24-04-2025_93c457df79_8699f37698.txt",
-    "parsed_at": "2026-10-08T10:35:45.642968Z",
+    "parsed_at": "2026-10-08T23:52:19.493971Z",
     "date": "2025-04-24",
     "race": {
         "race_name": "PRIX DE MARLY",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "VALMACCA",
-            "description": ""
+            "description": "",
+            "performance": "4.3.1.1.1",
+            "gains": 55850,
+            "sex": "F",
+            "age": 3,
+            "trainer": "H.BESNIER",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "AU.NORMAND",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "BURN TO SHINE",
-            "description": ""
+            "description": "",
+            "performance": "1.6.2.1.4",
+            "gains": 29900,
+            "sex": "H",
+            "age": 3,
+            "trainer": "E.VERHESTRAETEN",
+            "jockey": "A.MURPHY",
+            "driver": "A.MURPHY",
+            "owner": "A.MURPHY",
+            "weight": 59.0,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "SWEET CHOP",
-            "description": ""
+            "description": "",
+            "performance": "3.2.3.2.2",
+            "gains": 61600,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.WERLE",
+            "jockey": "G.LEMER",
+            "driver": "G.LEMER",
+            "owner": "H.DEVILLAIRS",
+            "weight": 58.0,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "SMILE FOR ME",
-            "description": ""
+            "description": "",
+            "performance": "4.3.1.4.6",
+            "gains": 52150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.PACAUT",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "J.BOUTILLIER",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 5,
             "horse": "GUSTAN",
-            "description": ""
+            "description": "",
+            "performance": "5.4.4.1.5",
+            "gains": 18850,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "D.GUILLEMIN",
+            "driver": "D.GUILLEMIN",
+            "owner": "P.PAPON",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "MARKUS",
-            "description": ""
+            "description": "",
+            "performance": "4.5.1.5.1",
+            "gains": 33130,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "P.SOGORB",
+            "driver": "P.SOGORB",
+            "owner": "P.SOGORB",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "STOLEN KISS",
-            "description": ""
+            "description": "",
+            "performance": "1.3.2.2.4",
+            "gains": 30350,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "L.BAUDRON",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 8,
             "horse": "LAITH",
-            "description": ""
+            "description": "",
+            "performance": "0.5.3.1.4",
+            "gains": 36750,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "SANG. HOLDINGS",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 9,
             "horse": "VICTORY FOLIE",
-            "description": ""
+            "description": "",
+            "performance": "7.5.1.3.4",
+            "gains": 26000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.TRULLIER",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "D.GALT",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "FAME",
-            "description": ""
+            "description": "",
+            "performance": "5.4.3.5.3",
+            "gains": 16350,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "JPH .DUBOIS",
+            "driver": "JPH .DUBOIS",
+            "owner": "EC. VICT. DREAMS",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "AVENTINO",
-            "description": ""
+            "description": "",
+            "performance": "2.1.4.6.6",
+            "gains": 28900,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "EC.WALDECK",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 12,
             "horse": "MISTER CHANG",
-            "description": ""
+            "description": "",
+            "performance": "6.5.2.2.5",
+            "gains": 28400,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "EC. NORMANDY SPIRIT",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 13,
             "horse": "RASTRELLARE",
-            "description": ""
+            "description": "",
+            "performance": "1.7.2.3.5",
+            "gains": 26250,
+            "sex": "H",
+            "age": 3,
+            "trainer": "G.SIAS",
+            "jockey": "J.SOUDAN",
+            "driver": "J.SOUDAN",
+            "owner": "AG.KAVANAGH",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 14,
             "horse": "THE DOCTOR",
-            "description": ""
+            "description": "",
+            "performance": "4.2.2.2.4",
+            "gains": 24200,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "N.PERRET",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "CITY TOWN",
-            "description": ""
+            "description": "",
+            "performance": "8.5.1.5.5",
+            "gains": 19750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "A.SCHUTZ",
+            "driver": "A.SCHUTZ",
+            "owner": "J.ABDULLAH",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 16,
             "horse": "PRINCESSE MANDEL",
-            "description": ""
+            "description": "",
+            "performance": "6.9.4.3",
+            "gains": 10000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "EC.D. R.LAYANI FA",
+            "weight": 54.5,
+            "draw": 4
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

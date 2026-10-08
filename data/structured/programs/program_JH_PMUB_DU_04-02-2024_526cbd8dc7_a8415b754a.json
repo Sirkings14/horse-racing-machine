@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_04-02-2024_526cbd8dc7_a8415b754a.txt",
-    "parsed_at": "2026-10-08T10:35:42.936577Z",
+    "parsed_at": "2026-10-08T23:52:15.621724Z",
     "date": "2024-02-04",
     "race": {
         "race_name": "PRIX DE LA GIRONDE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "FIGARO GRAVE",
-            "description": ""
+            "description": "",
+            "performance": "9.5.0.2.1",
+            "gains": 189645,
+            "sex": "H",
+            "age": 9,
+            "trainer": "L. BAUDOUIN",
+            "jockey": "J. CAPELLE",
+            "driver": "J. CAPELLE",
+            "owner": "J. CAPELLE",
+            "listed_chrono": "1.13.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "FEEL SMART",
-            "description": ""
+            "description": "",
+            "performance": "8.9.8.0.3",
+            "gains": 192050,
+            "sex": "F",
+            "age": 9,
+            "trainer": "P.Y. VERVA",
+            "jockey": "M. BIZOUX",
+            "driver": "M. BIZOUX",
+            "owner": "A. DUSART",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "FISTON A PAPA",
-            "description": ""
+            "description": "",
+            "performance": "0.D.D.5.7",
+            "gains": 192345,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. LAGADEUC",
+            "jockey": "P.L. DESAUNETTE",
+            "driver": "P.L. DESAUNETTE",
+            "owner": "Ec. CELLA",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "EDI JOSSELYN",
-            "description": ""
+            "description": "",
+            "performance": "2.4.5.3.4",
+            "gains": 195490,
+            "sex": "M",
+            "age": 10,
+            "trainer": "B. ROCHARD",
+            "jockey": "S. LARD.DESCOUT",
+            "driver": "S. LARD.DESCOUT",
+            "owner": "Ec. D. CORDEAU",
+            "listed_chrono": "1.13.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "EASY BLEU",
-            "description": ""
+            "description": "",
+            "performance": "0.2.D.D.0",
+            "gains": 196610,
+            "sex": "H",
+            "age": 10,
+            "trainer": "CEDRIC TERRY",
+            "jockey": "F. TERRY",
+            "driver": "F. TERRY",
+            "owner": "Ec. TIM",
+            "listed_chrono": "1.12.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "FULMIDA",
-            "description": ""
+            "description": "",
+            "performance": "0.6.7.6.9",
+            "gains": 198860,
+            "sex": "F",
+            "age": 9,
+            "trainer": "A.G. MAILLARD",
+            "jockey": "A.G. MAILLARD",
+            "driver": "A.G. MAILLARD",
+            "owner": "Ec.A.G. MAILLARD",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "FAKIR DE L'AULNE",
-            "description": ""
+            "description": "",
+            "performance": "1.3.4.D.8",
+            "gains": 200290,
+            "sex": "H",
+            "age": 9,
+            "trainer": "E. RAFFIN",
+            "jockey": "C. JEAN",
+            "driver": "C. JEAN",
+            "owner": "S.H. SAUVAGE",
+            "listed_chrono": "1.13.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "FOLLOW ME FLASH",
-            "description": ""
+            "description": "",
+            "performance": "9.2.2.0.6",
+            "gains": 203215,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M. ABRIVARD",
+            "jockey": "ET. LEFRANC",
+            "driver": "ET. LEFRANC",
+            "owner": "Ec. Et. LEFRANC",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "FEELING BOY",
-            "description": ""
+            "description": "",
+            "performance": "4.D.4.D.5",
+            "gains": 203955,
+            "sex": "H",
+            "age": 9,
+            "trainer": "Y. DREUX",
+            "jockey": "Y. DREUX",
+            "driver": "Y. DREUX",
+            "owner": "Y. DREUX",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "FERLAINE",
-            "description": ""
+            "description": "",
+            "performance": "D.8.9.9.8",
+            "gains": 205790,
+            "sex": "F",
+            "age": 9,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "CH. MIRANDEL",
+            "driver": "CH. MIRANDEL",
+            "owner": "Ec. MZ",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "FELLI ELEVEN",
-            "description": ""
+            "description": "",
+            "performance": "0.9.R.5.4",
+            "gains": 206430,
+            "sex": "M",
+            "age": 9,
+            "trainer": "F. GUERINEAU",
+            "jockey": "A. RIPOLL RIGO",
+            "driver": "A. RIPOLL RIGO",
+            "owner": "Cu. HERM. INIGUEZ",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "FILOU SMILING",
-            "description": ""
+            "description": "",
+            "performance": "3.0.8.7.3",
+            "gains": 209110,
+            "sex": "H",
+            "age": 9,
+            "trainer": "D. THOMAIN",
+            "jockey": "St. PROVOOST",
+            "driver": "St. PROVOOST",
+            "owner": "Ec. DANOVER",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "FURIEUSE PURPLE",
-            "description": ""
+            "description": "",
+            "performance": "0.9.3.2.1",
+            "gains": 209200,
+            "sex": "F",
+            "age": 9,
+            "trainer": "GUILLAUME MARTIN",
+            "jockey": "Y. DOUSSET",
+            "driver": "Y. DOUSSET",
+            "owner": "Ec. PURPLE",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 14,
             "horse": "DANDY GEDE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.D.D",
+            "gains": 214000,
+            "sex": "H",
+            "age": 11,
+            "trainer": "J. TRAVERS",
+            "jockey": "St. PROVOOST",
+            "driver": "St. PROVOOST",
+            "owner": "Ec. DANOVER",
+            "listed_chrono": "1.12.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 15,
             "horse": "DESTIN DE STAR",
-            "description": ""
+            "description": "",
+            "performance": "3.D.3.1.3",
+            "gains": 214906,
+            "sex": "H",
+            "age": 11,
+            "trainer": "F. NIVARD",
+            "jockey": "P.A. RYN.BOULARD",
+            "driver": "P.A. RYN.BOULARD",
+            "owner": "P. DONDELINGER",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 16,
             "horse": "ECUME DE FURETAIS",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.7.5",
+            "gains": 216540,
+            "sex": "F",
+            "age": 10,
+            "trainer": "M. MOTTIER",
+            "jockey": "C. CHENU",
+            "driver": "C. CHENU",
+            "owner": "H. ROBERT",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             7,

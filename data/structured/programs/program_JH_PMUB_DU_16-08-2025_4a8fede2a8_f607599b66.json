@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_16-08-2025_4a8fede2a8_f607599b66.txt",
-    "parsed_at": "2026-10-08T10:35:44.503601Z",
+    "parsed_at": "2026-10-08T23:52:17.855455Z",
     "date": "2025-08-16",
     "race": {
         "race_name": "GRAND HANDICAP DES SPRINTERS",
@@ -16,94 +16,275 @@
         {
             "number": 1,
             "horse": "TEN HORNS",
-            "description": ""
+            "description": "",
+            "performance": "5.5.1.5.2",
+            "gains": 151240,
+            "sex": "M",
+            "age": 4,
+            "trainer": "P.COTTIER",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "AU.NORMAND",
+            "weight": 62.0,
+            "draw": 14
         },
         {
             "number": 2,
             "horse": "NATIONAL SERVICE",
-            "description": ""
+            "description": "",
+            "performance": "8.1.5.2.3",
+            "gains": 318152,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.REYNIER",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "E.GILLIAR",
+            "weight": 61.0,
+            "draw": 13
         },
         {
             "number": 3,
             "horse": "GAME RUN",
-            "description": ""
+            "description": "",
+            "performance": "0.1.2.6.8",
+            "gains": 243490,
+            "sex": "H",
+            "age": 6,
+            "trainer": "E.MIKHALIDES",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "S.GRANDIN",
+            "weight": 61.0,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "UN INSTANT",
-            "description": ""
+            "description": "",
+            "performance": "7.8.4.3.0",
+            "gains": 116350,
+            "sex": "M",
+            "age": 4,
+            "trainer": "N.PERRET",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "EC.TH. SIVADIER",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "CIAO PA'",
-            "description": ""
+            "description": "",
+            "performance": "0.3.0.6.2",
+            "gains": 185646,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.BOUTIN",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "SCU. MICOLO",
+            "weight": 58.5,
+            "draw": 18
         },
         {
             "number": 6,
             "horse": "MAJOR OAK",
-            "description": ""
+            "description": "",
+            "performance": "1.4.6.0.6",
+            "gains": 148280,
+            "sex": "H",
+            "age": 5,
+            "trainer": "MF.WEISSMEIER",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "ST. HEXENBERG",
+            "weight": 58.5,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "OZAN",
-            "description": ""
+            "description": "",
+            "performance": "1.0.0.0.5",
+            "gains": 183000,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G.DOLEUZE",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "C.STEPHENSON",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "OMICRONE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.7.9",
+            "gains": 128220,
+            "sex": "F",
+            "age": 5,
+            "trainer": "P.GROUALLE",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "F.LE CORNO",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 9,
             "horse": "IVORY SPRING",
-            "description": ""
+            "description": "",
+            "performance": "0.4.7.2.1",
+            "gains": 133910,
+            "sex": "H",
+            "age": 6,
+            "trainer": "E.MIKHALIDES",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "B.GIRAUDON",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 10,
             "horse": "TERTIUS",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.2.3",
+            "gains": 197615,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M.NIGGE",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "C.ZASS",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "CHIRICCO",
-            "description": ""
+            "description": "",
+            "performance": "7.1.2.5.1",
+            "gains": 72896,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BRASME",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "EC.MELANIE",
+            "weight": 54.5,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "FORZA CAPITANO",
-            "description": ""
+            "description": "",
+            "performance": "0.3.5.0.8",
+            "gains": 297628,
+            "sex": "H",
+            "age": 10,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "G.KERN",
+            "weight": 54.5,
+            "draw": 15
         },
         {
             "number": 13,
             "horse": "HORTENSIA BASC",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.5.1",
+            "gains": 92500,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.JUNK",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "A.JUNK",
+            "weight": 53.5,
+            "draw": 3
         },
         {
             "number": 14,
             "horse": "FORCHESTER",
-            "description": ""
+            "description": "",
+            "performance": "9.2.4.3.4",
+            "gains": 130392,
+            "sex": "H",
+            "age": 6,
+            "trainer": "ED.MONFORT",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "EC.TYGALY",
+            "weight": 53.0,
+            "draw": 9
         },
         {
             "number": 15,
             "horse": "IMPITOYABLE",
-            "description": ""
+            "description": "",
+            "performance": "1.8.7.9.1",
+            "gains": 172136,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S.LANSLOTS",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "STAL VIE EN ROSE",
+            "weight": 52.5,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "BAILEYS BACHELOR",
-            "description": ""
+            "description": "",
+            "performance": "1.1.4.4.1",
+            "gains": 57910,
+            "sex": "H",
+            "age": 4,
+            "trainer": "JV.TOUX",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "C.MOULY",
+            "weight": 52.0,
+            "draw": 6
         },
         {
             "number": 17,
             "horse": "SIMPLY LOVELY",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.2.3",
+            "gains": 111151,
+            "sex": "H",
+            "age": 7,
+            "trainer": "JM.BEGUIGNE",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "SPARKLING STAR",
+            "weight": 52.0,
+            "draw": 17
         },
         {
             "number": 18,
             "horse": "WHITE PLATIN",
-            "description": ""
+            "description": "",
+            "performance": "1.0.0.2.2",
+            "gains": 187558,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.B.BARBE",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "D.SIEGENTHALER",
+            "weight": 52.0,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

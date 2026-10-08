@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-07-04-2026_33fadf595b_0c6ca36685.txt",
-    "parsed_at": "2026-10-08T10:35:40.084377Z",
+    "parsed_at": "2026-10-08T23:52:11.584295Z",
     "date": "2026-04-05",
     "race": {
         "race_name": "PRIX DE L'OPERATION OVERLORD",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DIVINE CHRISNAT",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.2.1",
+            "gains": 178308,
+            "sex": "F",
+            "age": 6,
+            "trainer": "CH.PLISSON",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "M.PEHU",
+            "weight": 60.5,
+            "draw": 2
         },
         {
             "number": 2,
             "horse": "QUIET KING",
-            "description": ""
+            "description": "",
+            "performance": "2.3.1.1.9",
+            "gains": 67937,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "I.CORBANI",
+            "weight": 60.5,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "CELESTIAL",
-            "description": ""
+            "description": "",
+            "performance": "3.2.1.0.0",
+            "gains": 75829,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.WATTEL",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "AMIS DU MONDE ENTIER",
+            "weight": 59.5,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "STAR OF ARTABAN",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.3.1",
+            "gains": 56299,
+            "sex": "H",
+            "age": 4,
+            "trainer": "JV.TOUX",
+            "jockey": "P.BAZIRE",
+            "driver": "P.BAZIRE",
+            "owner": "JV.TOUX",
+            "weight": 59.0,
+            "draw": 5
         },
         {
             "number": 5,
             "horse": "KAHUNA",
-            "description": ""
+            "description": "",
+            "performance": "9.0.2.4.8",
+            "gains": 173918,
+            "sex": "H",
+            "age": 9,
+            "trainer": "L.CADOT",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "SAS MON ROMAIN",
+            "weight": 59.0,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "WATCH HIM",
-            "description": ""
+            "description": "",
+            "performance": "2.4.7.5.0",
+            "gains": 241603,
+            "sex": "M",
+            "age": 8,
+            "trainer": "J.REYNIER",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "LG BLOODSTOCK",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "STORMY DONALD",
-            "description": ""
+            "description": "",
+            "performance": "0.1.7.5.5",
+            "gains": 50254,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.CHAPPET",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "EC. D. R. LAYANI FA",
+            "weight": 57.5,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "ZELZARI",
-            "description": ""
+            "description": "",
+            "performance": "4.4.1.2.1",
+            "gains": 69080,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D.MELE",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "IKARUSRACING",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "FEVE",
-            "description": ""
+            "description": "",
+            "performance": "6.3.4.1.0",
+            "gains": 55550,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.LEROY",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "EC. MESSICA",
+            "weight": 57.0,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "RAKHIM",
-            "description": ""
+            "description": "",
+            "performance": "8.1.4.7.5",
+            "gains": 33988,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.REYNIER",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "N.BIZAKOV",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 11,
             "horse": "DARI RIVER",
-            "description": ""
+            "description": "",
+            "performance": "6.0.0.7.5",
+            "gains": 85961,
+            "sex": "F",
+            "age": 5,
+            "trainer": "Y.BARBEROT",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "R.SHEPARD",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 12,
             "horse": "CICCIO BOY",
-            "description": ""
+            "description": "",
+            "performance": "1.3.4.0.9",
+            "gains": 296461,
+            "sex": "M",
+            "age": 8,
+            "trainer": "M.JUSTUM",
+            "jockey": "M.JUSTUM",
+            "driver": "M.JUSTUM",
+            "owner": "JM.ANGLES",
+            "weight": 56.5,
+            "draw": 16
         },
         {
             "number": 13,
             "horse": "BAUHINIA RHAPSODY",
-            "description": ""
+            "description": "",
+            "performance": "5.0.0.0.4",
+            "gains": 88383,
+            "sex": "H",
+            "age": 6,
+            "trainer": "JV.TOUX",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "M.AUGER",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "GOWAY",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.0.2",
+            "gains": 138982,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.BERNHARDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "E.BERNHARDT",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "DUBALAA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.4.1.1",
+            "gains": 45237,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.REYNIER",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "LG BLOODSTOCK",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "STAR ROCK",
-            "description": ""
+            "description": "",
+            "performance": "0.9.2.5.1",
+            "gains": 120893,
+            "sex": "H",
+            "age": 7,
+            "trainer": "V.LUKA",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "LERAM S.R.O.",
+            "weight": 55.5,
+            "draw": 6
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

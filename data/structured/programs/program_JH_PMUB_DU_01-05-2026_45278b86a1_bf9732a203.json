@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_01-05-2026_45278b86a1_bf9732a203.txt",
-    "parsed_at": "2026-10-08T10:35:42.584380Z",
+    "parsed_at": "2026-10-08T23:52:15.126348Z",
     "date": "2026-05-01",
     "race": {
         "race_name": "PRIX DE BEAUMESNIL",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LIBECCIO WIND",
-            "description": ""
+            "description": "",
+            "performance": "3.2.3",
+            "gains": 11610,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.FABRE",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "GODOLPHIN SNC",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "LOHENGREEN",
-            "description": ""
+            "description": "",
+            "performance": "2.2.1.3.7",
+            "gains": 23380,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.ESCUDER",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "B.GIRAUDON",
+            "weight": 58.5,
+            "draw": 11
         },
         {
             "number": 3,
             "horse": "TABEO",
-            "description": ""
+            "description": "",
+            "performance": "3.4.1.2",
+            "gains": 15557,
+            "sex": "M",
+            "age": 3,
+            "trainer": "W.HICKST",
+            "jockey": "G.MEURY",
+            "driver": "G.MEURY",
+            "owner": "S.KLOHSS",
+            "weight": 58.5,
+            "draw": 5
         },
         {
             "number": 4,
             "horse": "MUST BAY",
-            "description": ""
+            "description": "",
+            "performance": "3.3.5.2",
+            "gains": 13218,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "JC.SEROUL",
+            "weight": 58.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "PERSIAN GRACE",
-            "description": ""
+            "description": "",
+            "performance": "5.2.2",
+            "gains": 10888,
+            "sex": "F",
+            "age": 3,
+            "trainer": "Y.BARBEROT",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "AVATARA S.A.",
+            "weight": 57.5,
+            "draw": 13
         },
         {
             "number": 6,
             "horse": "MON PAULIN",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4.3.3",
+            "gains": 34154,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.SEROR",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "GOUSSERIE RACING",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "BOX OFFICER",
-            "description": ""
+            "description": "",
+            "performance": "1.4.2.0",
+            "gains": 16517,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "EC. NORMANDY SPIRIT",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 8,
             "horse": "ZELZARA",
-            "description": ""
+            "description": "",
+            "performance": "2.7.6.7.2",
+            "gains": 33809,
+            "sex": "F",
+            "age": 3,
+            "trainer": "Y.BARBEROT",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "J.MESTRALLET",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "TI AMO BELLO",
-            "description": ""
+            "description": "",
+            "performance": "5.1.7.6.2",
+            "gains": 18432,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.PITART",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "EC.METAL",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 10,
             "horse": "MARIA APOLLONIA",
-            "description": ""
+            "description": "",
+            "performance": "5.3.1.2",
+            "gains": 19804,
+            "sex": "F",
+            "age": 3,
+            "trainer": "P.COTTIER",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "AP RACING SC",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "EXTRAVAGANTE",
-            "description": ""
+            "description": "",
+            "performance": "6.3.7",
+            "gains": 5367,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "ANNUA RACING SL",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "WITTELSBACH",
-            "description": ""
+            "description": "",
+            "performance": "4.1.2.3.5",
+            "gains": 20438,
+            "sex": "M",
+            "age": 3,
+            "trainer": "JC.ROUGET",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "LE MARAIS SAS",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "BLACKCLOVER",
-            "description": ""
+            "description": "",
+            "performance": "5.4.2.3.5",
+            "gains": 12598,
+            "sex": "F",
+            "age": 3,
+            "trainer": "X.BLANCHET",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "EC.GEORGINIO",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "TOO DARN QUICK",
-            "description": ""
+            "description": "",
+            "performance": "6.5.3.8",
+            "gains": 5424,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "B. ED.DE ROTHSCHILD",
+            "weight": 55.5,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "YZYA",
-            "description": ""
+            "description": "",
+            "performance": "0.8.3.9.4",
+            "gains": 11201,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.WATTEL",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "BOOOST SAS",
+            "weight": 54.0,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "POET'S LYRICS",
-            "description": ""
+            "description": "",
+            "performance": "5.6.2.6",
+            "gains": 5139,
+            "sex": "F",
+            "age": 3,
+            "trainer": "Y.BARBEROT",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "HS. DU MONT DIT MONT",
+            "weight": 54.0,
+            "draw": 16
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-20-02-2025_5d05e3bebf_8a8e0a1398.txt",
-    "parsed_at": "2026-10-08T10:35:41.321126Z",
+    "parsed_at": "2026-10-08T23:52:13.362278Z",
     "date": "2025-02-20",
     "race": {
         "race_name": "PRIX DU CANTAL",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GAMIN DU GAULTIER",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4.5.0",
+            "gains": 174345,
+            "sex": "H",
+            "age": 9,
+            "trainer": "D. THOMAIN",
+            "jockey": "P. DESSARTRE",
+            "driver": "P. DESSARTRE",
+            "owner": "P. DESSARTRE",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "FRANCO FLEURI",
-            "description": ""
+            "description": "",
+            "performance": "5.5.0.2.2",
+            "gains": 180140,
+            "sex": "H",
+            "age": 10,
+            "trainer": "ARNAUD MORIN",
+            "jockey": "ARNAUD MORIN",
+            "driver": "ARNAUD MORIN",
+            "owner": "ARNAUD MORIN",
+            "listed_chrono": "1.13.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "GIBALDI DE HOUELLE",
-            "description": ""
+            "description": "",
+            "performance": "9.0.9.6.0",
+            "gains": 182095,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M. MOTTIER",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "Y. X. HAMON",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "GIANA DE MARZY",
-            "description": ""
+            "description": "",
+            "performance": "5.D.0.1.4",
+            "gains": 185595,
+            "sex": "F",
+            "age": 9,
+            "trainer": "G. GELORMINI",
+            "jockey": "A. THOMAS",
+            "driver": "A. THOMAS",
+            "owner": "EC. DELTO",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "EUNIS DU PATURAL",
-            "description": ""
+            "description": "",
+            "performance": "3.5.3.7.2",
+            "gains": 188985,
+            "sex": "H",
+            "age": 11,
+            "trainer": "F. NIVARD",
+            "jockey": "J. JULIEN",
+            "driver": "J. JULIEN",
+            "owner": "S. JULIEN",
+            "listed_chrono": "1.13.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "GEODE DU CHERISAY",
-            "description": ""
+            "description": "",
+            "performance": "3.6.6.3.1",
+            "gains": 189335,
+            "sex": "F",
+            "age": 9,
+            "trainer": "E. RAFFIN",
+            "jockey": "R. MOURICE",
+            "driver": "R. MOURICE",
+            "owner": "EC. R. MOURICE",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "GO GO GIGI",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.D.D",
+            "gains": 192770,
+            "sex": "F",
+            "age": 9,
+            "trainer": "B. ROCHARD",
+            "jockey": "J.L. LABIGNE",
+            "driver": "J.L. LABIGNE",
+            "owner": "J.L. LABIGNE",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 8,
             "horse": "FERGIE HIGHLAND",
-            "description": ""
+            "description": "",
+            "performance": "0.7.5.1.5",
+            "gains": 194140,
+            "sex": "F",
+            "age": 10,
+            "trainer": "A. COLLETTE",
+            "jockey": "B. CHANONAT",
+            "driver": "B. CHANONAT",
+            "owner": "L. COATLEVEN",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 9,
             "horse": "GAMIN DES ISLES",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.7.3",
+            "gains": 196770,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "S. BOURLIER",
+            "driver": "S. BOURLIER",
+            "owner": "EC. S. BOURLIER",
+            "listed_chrono": "1.12.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 10,
             "horse": "GRANIT DU FRESNE",
-            "description": ""
+            "description": "",
+            "performance": "0.D.5.9.5",
+            "gains": 197170,
+            "sex": "H",
+            "age": 9,
+            "trainer": "L. LAUDREN",
+            "jockey": "L. LAUDREN",
+            "driver": "L. LAUDREN",
+            "owner": "J. COTTEL",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 11,
             "horse": "GRAND TRIO LUDOIS",
-            "description": ""
+            "description": "",
+            "performance": "4.1.2.3.1",
+            "gains": 200115,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M. ABRIVARD",
+            "jockey": "S. LALOUM",
+            "driver": "S. LALOUM",
+            "owner": "A. LALOUM",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 12,
             "horse": "FAVICI PASMARICK",
-            "description": ""
+            "description": "",
+            "performance": "8.7.3.5.1",
+            "gains": 201290,
+            "sex": "H",
+            "age": 10,
+            "trainer": "A. BARRIER",
+            "jockey": "P. DANET",
+            "driver": "P. DANET",
+            "owner": "J.CL. BALLARDIN",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 13,
             "horse": "GALANT DE BRUYERE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.4.D",
+            "gains": 201405,
+            "sex": "H",
+            "age": 9,
+            "trainer": "D. BONNE",
+            "jockey": "CH. DREUX",
+            "driver": "CH. DREUX",
+            "owner": "EC. CH. DREUX",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 14,
             "horse": "GO TO AMERICA",
-            "description": ""
+            "description": "",
+            "performance": "6.5.2.0.0",
+            "gains": 202670,
+            "sex": "F",
+            "age": 9,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "P. VERCRUYSSE",
+            "driver": "P. VERCRUYSSE",
+            "owner": "L. VERCRUYSSE",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 15,
             "horse": "GAROU DU CHENE",
-            "description": ""
+            "description": "",
+            "performance": "7.D.0.1.D",
+            "gains": 202850,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "J. LE MER",
+            "driver": "J. LE MER",
+            "owner": "Y. GUEDJ",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 16,
             "horse": "GET UP DES PLAINES",
-            "description": ""
+            "description": "",
+            "performance": "5.3.4.0.5",
+            "gains": 203045,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P. HOUEL",
+            "jockey": "V. MOQUET",
+            "driver": "V. MOQUET",
+            "owner": "D. MARCON",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2850.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

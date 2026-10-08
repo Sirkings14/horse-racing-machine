@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-01-05-2024_03b691c347_5a01871e0c.txt",
-    "parsed_at": "2026-10-08T10:35:39.472821Z",
+    "parsed_at": "2026-10-08T23:52:10.728654Z",
     "date": "2024-05-01",
     "race": {
         "race_name": "PRIX DE FOUILLEUSE",
@@ -16,74 +16,215 @@
         {
             "number": 1,
             "horse": "LORD OF WAR",
-            "description": ""
+            "description": "",
+            "performance": "6.5.2.1.3",
+            "gains": 25900,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N.TEMAM",
+            "weight": 59.0,
+            "draw": 5
         },
         {
             "number": 2,
             "horse": "JOJO JUNIOR",
-            "description": ""
+            "description": "",
+            "performance": "6.7.2.1.5",
+            "gains": 39300,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "GOUSSERIE RACING",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 3,
             "horse": "SADAK",
-            "description": ""
+            "description": "",
+            "performance": "1.4.3.9",
+            "gains": 18800,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "N.BIZAKOV",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 4,
             "horse": "GET TOGETHER",
-            "description": ""
+            "description": "",
+            "performance": "2.1.5.1.5",
+            "gains": 38250,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. MG",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "GEORGES VILLE",
-            "description": ""
+            "description": "",
+            "performance": "4.4.1",
+            "gains": 20000,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "J. CYGLER",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "AMORCITA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.3.6",
+            "gains": 28150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "P.RECHSTEINER",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 7,
             "horse": "MA MOME",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.3.4",
+            "gains": 99650,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "JP.VANDEN HEEDE",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "EVERSTAR",
-            "description": ""
+            "description": "",
+            "performance": "4.3.3.5.6",
+            "gains": 42150,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "L.GADBIN",
+            "driver": "L.GADBIN",
+            "owner": "A.DOERNER",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "HAMLET'S NIGHT",
-            "description": ""
+            "description": "",
+            "performance": "2.4.5",
+            "gains": 9600,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "GODOLPHIN SNC",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "ZVIKOVA",
-            "description": ""
+            "description": "",
+            "performance": "5.1.3.7.8",
+            "gains": 19100,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "A.JATHIERE",
+            "weight": 54.5,
+            "draw": 13
         },
         {
             "number": 11,
             "horse": "L'ARDECHOISE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.3.3.3",
+            "gains": 27450,
+            "sex": "F",
+            "age": 3,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "A.GILIBERT/N.SALTIEL",
+            "weight": 54.0,
+            "draw": 3
         },
         {
             "number": 12,
             "horse": "LAST STAND",
-            "description": ""
+            "description": "",
+            "performance": "3.4.5",
+            "gains": 6600,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.RUIS",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "J.ROMEL",
+            "weight": 54.0,
+            "draw": 2
         },
         {
             "number": 13,
             "horse": "CHAMBERI",
-            "description": ""
+            "description": "",
+            "performance": "6.8.9",
+            "gains": 0,
+            "sex": "H",
+            "age": 3,
+            "trainer": "P.CHEYER",
+            "jockey": "Z.KOPLIK",
+            "driver": "Z.KOPLIK",
+            "owner": "MR VACLAV SLOVAK",
+            "weight": 54.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "MAGIC PERSEVERANCE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.1.0.5",
+            "gains": 25200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "M.GUARNIERI",
+            "driver": "M.GUARNIERI",
+            "owner": "C.CORSI",
+            "weight": 53.5,
+            "draw": 11
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

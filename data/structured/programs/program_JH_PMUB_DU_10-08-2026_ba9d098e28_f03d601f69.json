@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_10-08-2026_ba9d098e28_f03d601f69.txt",
-    "parsed_at": "2026-10-08T10:35:43.703422Z",
+    "parsed_at": "2026-10-08T23:52:16.698489Z",
     "date": "2026-08-10",
     "race": {
         "race_name": "PRIX GENYBET SUPER TOP 5",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LE FUTUR",
-            "description": ""
+            "description": "",
+            "performance": "3.0.9.1.6",
+            "gains": 21924,
+            "sex": "M",
+            "age": 3,
+            "trainer": "Y. BARBEROT",
+            "jockey": "CP. LEMAIRE",
+            "driver": "CP. LEMAIRE",
+            "owner": "PH. LASSEN",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "SHAPESMITH",
-            "description": ""
+            "description": "",
+            "performance": "2.3.8",
+            "gains": 6508,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A&L. FABRE",
+            "jockey": "PC. BOUDOT",
+            "driver": "PC. BOUDOT",
+            "owner": "GODOLPHIN SNC",
+            "weight": 59.5,
+            "draw": 8
         },
         {
             "number": 3,
             "horse": "SEA NYMPH",
-            "description": ""
+            "description": "",
+            "performance": "5.3.5.1.6",
+            "gains": 11707,
+            "sex": "F",
+            "age": 3,
+            "trainer": "HA. PANTALL",
+            "jockey": "T. PICCONE",
+            "driver": "T. PICCONE",
+            "owner": "G. HEALD",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 4,
             "horse": "STEALITWITHAKISS",
-            "description": ""
+            "description": "",
+            "performance": "5.1.2.2.7",
+            "gains": 17140,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A&L. FABRE",
+            "jockey": "A. POUCHIN",
+            "driver": "A. POUCHIN",
+            "owner": "J. BIANCO",
+            "weight": 58.5,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "BAHI",
-            "description": ""
+            "description": "",
+            "performance": "5.2.4.3",
+            "gains": 11557,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C&Y. LERNER",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "AL SHAQAB RACING",
+            "weight": 58.5,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "RASHEED",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.6.6",
+            "gains": 23346,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BARATTI",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "T.S.BRAR/H.BRAR",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "INCENTIVE VICTORY",
-            "description": ""
+            "description": "",
+            "performance": "0.7.7.6.1",
+            "gains": 16612,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S. KOBAYASHI",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "P. MOSBEUX",
+            "weight": 57.5,
+            "draw": 6
         },
         {
             "number": 8,
             "horse": "ENTLEBUCH",
-            "description": ""
+            "description": "",
+            "performance": "4.2.4.0.6",
+            "gains": 19259,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H. SAUER",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "STALL LAURUS",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 9,
             "horse": "EXELMANS",
-            "description": ""
+            "description": "",
+            "performance": "6.5.2",
+            "gains": 5332,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.FERLAND",
+            "jockey": "E. CORALLO",
+            "driver": "E. CORALLO",
+            "owner": "A. MAUBERT",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "GALASSI",
-            "description": ""
+            "description": "",
+            "performance": "7.2.6",
+            "gains": 4566,
+            "sex": "H",
+            "age": 3,
+            "trainer": "Y. BARBEROT",
+            "jockey": "H. JOURNIAC",
+            "driver": "H. JOURNIAC",
+            "owner": "R. SIEPMANN",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 11,
             "horse": "ELUSIVE WAY",
-            "description": ""
+            "description": "",
+            "performance": "1.3.4.1.3",
+            "gains": 30398,
+            "sex": "F",
+            "age": 3,
+            "trainer": "JPH. DUBOIS",
+            "jockey": "A. MADAMET",
+            "driver": "A. MADAMET",
+            "owner": "EC. VICTORIA DREAMS",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 12,
             "horse": "AL GHARIYA",
-            "description": ""
+            "description": "",
+            "performance": "1.7.0",
+            "gains": 5288,
+            "sex": "F",
+            "age": 3,
+            "trainer": "I.WILLIAMS",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "E. NOLAN",
+            "weight": 55.5,
+            "draw": 1
         },
         {
             "number": 13,
             "horse": "LACALAS",
-            "description": ""
+            "description": "",
+            "performance": "7.1.0.5.7",
+            "gains": 19201,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J. LEROY",
+            "jockey": "L.GALLO",
+            "driver": "L.GALLO",
+            "owner": "F. LEIDA",
+            "weight": 55.0,
+            "draw": 13
         },
         {
             "number": 14,
             "horse": "NEVADOS",
-            "description": ""
+            "description": "",
+            "performance": "6.1.9.0",
+            "gains": 4502,
+            "sex": "H",
+            "age": 3,
+            "trainer": "HA. PANTALL",
+            "jockey": "M.PROTTI",
+            "driver": "M.PROTTI",
+            "owner": "HA. PANTALL",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 15,
             "horse": "GRAND MARRAKCHI",
-            "description": ""
+            "description": "",
+            "performance": "5.3.0.5",
+            "gains": 2892,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.ROLLAND",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "P. GOUTMANN",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "SHAMBHALLA",
-            "description": ""
+            "description": "",
+            "performance": "5.4.7.4",
+            "gains": 6054,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S. KOBAYASHI",
+            "jockey": "E. HARDOUIN",
+            "driver": "E. HARDOUIN",
+            "owner": "JC. CAMPOS",
+            "weight": 54.5,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-12-01-2024_1_d46bac15dd_1cef7d5e1d.txt",
-    "parsed_at": "2026-10-08T10:35:40.613910Z",
+    "parsed_at": "2026-10-08T23:52:12.351403Z",
     "date": "2024-01-12",
     "race": {
         "race_name": "PRIX DE CHERBOURG",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "NEPALAIS",
-            "description": ""
+            "description": "",
+            "performance": "0.8.0.0.1",
+            "gains": 130320,
+            "sex": "H",
+            "age": 6,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 2,
             "horse": "DAILYMOTION",
-            "description": ""
+            "description": "",
+            "performance": "0.2.1.0.4",
+            "gains": 38700,
+            "sex": "F",
+            "age": 4,
+            "trainer": "E.VERHESTRAETEN",
+            "jockey": "CHR.HEAD",
+            "driver": "CHR.HEAD",
+            "owner": "JE.DUBOIS",
+            "weight": 59.0,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "LOFSONGUR ISLANDE",
-            "description": ""
+            "description": "",
+            "performance": "0.7.9.4.4",
+            "gains": 26460,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "B.VAN DALFSEN",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "BLUFF",
-            "description": ""
+            "description": "",
+            "performance": "8.1.0.6.1",
+            "gains": 36290,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.RUIS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "G.HADDAD",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 5,
             "horse": "LOVE IS GOLD",
-            "description": ""
+            "description": "",
+            "performance": "1.5.1.4.2",
+            "gains": 28900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "PIER.MENARD",
+            "driver": "PIER.MENARD",
+            "owner": "SARL GROUPE KR",
+            "weight": 57.5,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "LETTY'S MARVEL",
-            "description": ""
+            "description": "",
+            "performance": "4.2.1.3.3",
+            "gains": 216057,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M.GUYON",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "G.BARBARIN",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 7,
             "horse": "AL KHAMSIN",
-            "description": ""
+            "description": "",
+            "performance": "8.4.0.9.0",
+            "gains": 140283,
+            "sex": "H",
+            "age": 7,
+            "trainer": "R.MANGIONE",
+            "jockey": "H. MENNE. MARTINEZ",
+            "driver": "H. MENNE. MARTINEZ",
+            "owner": "H. MENNE. MARTINEZ",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 8,
             "horse": "RECOLETTY",
-            "description": ""
+            "description": "",
+            "performance": "0.6.7.3.1",
+            "gains": 37500,
+            "sex": "F",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "G.BARBARIN",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "YOUNG MAN",
-            "description": ""
+            "description": "",
+            "performance": "3.5.0.1.3",
+            "gains": 146615,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.BARON",
+            "jockey": "A.BARON",
+            "driver": "A.BARON",
+            "owner": "M.BARON/P.BLANC",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 10,
             "horse": "HAVOC",
-            "description": ""
+            "description": "",
+            "performance": "6.6.0.8.7",
+            "gains": 128053,
+            "sex": "M",
+            "age": 6,
+            "trainer": "T.BACHELOT",
+            "jockey": "S.PECORARO",
+            "driver": "S.PECORARO",
+            "owner": "N.RUGANI",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "ALCATOSER",
-            "description": ""
+            "description": "",
+            "performance": "7.6.2.9.3",
+            "gains": 32260,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.CORALLO",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "G.AU.NORMAND",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 12,
             "horse": "FLORES",
-            "description": ""
+            "description": "",
+            "performance": "0.6.2.0",
+            "gains": 4200,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.MASSIN",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "F&O HINDERZE RACING",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "RAMIRA",
-            "description": ""
+            "description": "",
+            "performance": "0.6.2",
+            "gains": 3850,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "J.LAPORTE",
+            "weight": 54.0,
+            "draw": 2
         },
         {
             "number": 14,
             "horse": "KILIA",
-            "description": ""
+            "description": "",
+            "performance": "1.4.5.1.9",
+            "gains": 40330,
+            "sex": "F",
+            "age": 5,
+            "trainer": "P.CHEYER",
+            "jockey": "P.DECOUZ",
+            "driver": "P.DECOUZ",
+            "owner": "RENT A HORSE BY YOHEA",
+            "weight": 53.5,
+            "draw": 15
         },
         {
             "number": 15,
             "horse": "EDEN",
-            "description": ""
+            "description": "",
+            "performance": "1.1.7.8.1",
+            "gains": 31400,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "R.LE DREN DOLEUZE",
+            "driver": "R.LE DREN DOLEUZE",
+            "owner": "J.MAHIQUES",
+            "weight": 52.5,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "HAVANA SIX",
-            "description": ""
+            "description": "",
+            "performance": "3.8.1.2.0",
+            "gains": 39865,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.MADAMET",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "M.MOTSCHMANN",
+            "weight": 52.5,
+            "draw": 12
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

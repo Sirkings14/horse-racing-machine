@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_04-07-2024_17bfd26296_a3fb1f6873.txt",
-    "parsed_at": "2026-10-08T10:35:42.994997Z",
+    "parsed_at": "2026-10-08T23:52:15.708118Z",
     "date": "2024-07-04",
     "race": {
         "race_name": "PRIX DU PETIT PRE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "BRIO",
-            "description": ""
+            "description": "",
+            "performance": "3.4.1.5.2",
+            "gains": 29500,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.BERGE",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "A.DON/D.MACAULIFFE",
+            "weight": 59.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "LORD OF WAR",
-            "description": ""
+            "description": "",
+            "performance": "3.4.6.5.2",
+            "gains": 36300,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N.TEMAM/S.LAHMI",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 3,
             "horse": "ROLLERCOASTER",
-            "description": ""
+            "description": "",
+            "performance": "8.4.7.2.1",
+            "gains": 17700,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.TRULLIER",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "P.HARTZER",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 4,
             "horse": "DARI RIVER",
-            "description": ""
+            "description": "",
+            "performance": "6.2.2.2.1",
+            "gains": 32550,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "MME R.SHEPARD",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 5,
             "horse": "SAXON GIRL",
-            "description": ""
+            "description": "",
+            "performance": "5.5.4.5.1",
+            "gains": 29400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "TIM.DONWORTH",
+            "driver": "TIM.DONWORTH",
+            "owner": "M.EDWARDS",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "SERQUIGNY",
-            "description": ""
+            "description": "",
+            "performance": "7.4.1.6.6",
+            "gains": 27400,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "G.AU.NORMAND",
+            "weight": 57.5,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "SIYOUKING",
-            "description": ""
+            "description": "",
+            "performance": "5.7.6.1.1",
+            "gains": 28700,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "F.ROHAUT",
+            "driver": "F.ROHAUT",
+            "owner": "S.BOUCHERON",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "ATTENTIVE",
-            "description": ""
+            "description": "",
+            "performance": "5.1.1.6.4",
+            "gains": 22600,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.BOISSEAU",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "C.HEAD",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "PRINCE OF CLOUDS",
-            "description": ""
+            "description": "",
+            "performance": "7.0.1.2.4",
+            "gains": 20400,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "M.DEL.SANCHEZ",
+            "driver": "M.DEL.SANCHEZ",
+            "owner": "I.CORBANI",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 10,
             "horse": "TOKYO DREAMER",
-            "description": ""
+            "description": "",
+            "performance": "6.6.3.5.5",
+            "gains": 19002,
+            "sex": "F",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "DANCING QUEEN",
-            "description": ""
+            "description": "",
+            "performance": "3.5.7.1.6",
+            "gains": 16500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "HS. DU LOGIS ST. GERM",
+            "weight": 56.5,
+            "draw": 15
         },
         {
             "number": 12,
             "horse": "AMORCITA",
-            "description": ""
+            "description": "",
+            "performance": "3.3.3.1.1",
+            "gains": 43550,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "P.RECHSTEINER",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 13,
             "horse": "BAGGALA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.4.2",
+            "gains": 23450,
+            "sex": "F",
+            "age": 3,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HS. DU LOGIS ST. GERM",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 14,
             "horse": "TARNAC",
-            "description": ""
+            "description": "",
+            "performance": "0.5.1",
+            "gains": 14900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "H.DE PRACOMTAL",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "HAMLET'S NIGHT",
-            "description": ""
+            "description": "",
+            "performance": "6.2.2.4.5",
+            "gains": 21700,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "GODOLPHIN SNC",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "PARRHESIA",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.3.0",
+            "gains": 53200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "AS.CROMBEZ",
+            "driver": "AS.CROMBEZ",
+            "owner": "J.COUVERCELLE",
+            "weight": 55.0,
+            "draw": 16
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_20-07-2025_36ca68df1a_9a5fb0ed49.txt",
-    "parsed_at": "2026-10-08T10:35:45.116031Z",
+    "parsed_at": "2026-10-08T23:52:18.739148Z",
     "date": "2025-07-20",
     "race": {
         "race_name": "PRIX DU CHATEAU NEUF",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CIAO PA'",
-            "description": ""
+            "description": "",
+            "performance": "0.6.2.1.6",
+            "gains": 178520,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.BOUTIN",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "SC. MICOLO",
+            "weight": 62.0,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "MAJOR OAK",
-            "description": ""
+            "description": "",
+            "performance": "4.6.0.6.6",
+            "gains": 122830,
+            "sex": "H",
+            "age": 5,
+            "trainer": "MF.WEISSMEIER",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "ST. HEXENBERG",
+            "weight": 59.0,
+            "draw": 4
         },
         {
             "number": 3,
             "horse": "WILD WEST",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.1.3",
+            "gains": 115100,
+            "sex": "M",
+            "age": 5,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "I.CORBANI",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 4,
             "horse": "AGAT",
-            "description": ""
+            "description": "",
+            "performance": "5.5.3.5.3",
+            "gains": 54820,
+            "sex": "H",
+            "age": 4,
+            "trainer": "CHR.HEAD",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "N.BIZAKOV",
+            "weight": 59.0,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "FORZA CAPITANO",
-            "description": ""
+            "description": "",
+            "performance": "3.5.0.8.0",
+            "gains": 297628,
+            "sex": "H",
+            "age": 10,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "G.KERN",
+            "weight": 58.0,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "TUDO BEM",
-            "description": ""
+            "description": "",
+            "performance": "0.8.0.0.0",
+            "gains": 412959,
+            "sex": "H",
+            "age": 9,
+            "trainer": "N.CAULLERY",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "F.NORMAND",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "SCARFACE",
-            "description": ""
+            "description": "",
+            "performance": "4.7.0.3.0",
+            "gains": 230964,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.BOUTIN",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "SC. MICOLO SNC",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 8,
             "horse": "FOU FURIEUX",
-            "description": ""
+            "description": "",
+            "performance": "0.8.6.0.0",
+            "gains": 78860,
+            "sex": "M",
+            "age": 4,
+            "trainer": "N.CAULLERY",
+            "jockey": "P.BAZIRE",
+            "driver": "P.BAZIRE",
+            "owner": "D.R.LODGE",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 9,
             "horse": "SIMPLY LOVELY",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.3.5",
+            "gains": 101480,
+            "sex": "H",
+            "age": 7,
+            "trainer": "JM.BEGUIGNE",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "S. STAR",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "ZEOLAKIS",
-            "description": ""
+            "description": "",
+            "performance": "3.6.5.0.0",
+            "gains": 30652,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.GREWE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "C. HOLSCHBACH",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 11,
             "horse": "TORPEN",
-            "description": ""
+            "description": "",
+            "performance": "7.0.0.9.3",
+            "gains": 291740,
+            "sex": "H",
+            "age": 8,
+            "trainer": "R.SCHOOF",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "R.SCHOOF",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "IMPITOYABLE",
-            "description": ""
+            "description": "",
+            "performance": "7.9.1.8.4",
+            "gains": 163036,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S.LANSLOTS",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "ST. VIE EN ROSE",
+            "weight": 55.0,
+            "draw": 6
         },
         {
             "number": 13,
             "horse": "BROTHERS OF LILY'S",
-            "description": ""
+            "description": "",
+            "performance": "0.5.0.3.6",
+            "gains": 75520,
+            "sex": "H",
+            "age": 4,
+            "trainer": "Y.BARBEROT",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "EC. NORMANDY SPIRIT",
+            "weight": 54.5,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "KING ROBBE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.5.1.6",
+            "gains": 286410,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.BOUTIN",
+            "jockey": "L.GALLO",
+            "driver": "L.GALLO",
+            "owner": "B.DUTRUEL",
+            "weight": 52.5,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "BACCHILIDE",
-            "description": ""
+            "description": "",
+            "performance": "5.1.6.0.0",
+            "gains": 118130,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.GUARNIERI",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "P.FERRARIO",
+            "weight": 52.5,
+            "draw": 7
         },
         {
             "number": 16,
             "horse": "GOLDFIELD",
-            "description": ""
+            "description": "",
+            "performance": "2.3.7.0.3",
+            "gains": 51140,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.CERULIS",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "EC. GALAXY",
+            "weight": 52.5,
+            "draw": 8
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

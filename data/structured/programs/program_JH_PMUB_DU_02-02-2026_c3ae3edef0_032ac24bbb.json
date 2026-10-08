@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_02-02-2026_c3ae3edef0_032ac24bbb.txt",
-    "parsed_at": "2026-10-08T10:35:42.701532Z",
+    "parsed_at": "2026-10-08T23:52:15.283507Z",
     "date": "2026-02-02",
     "race": {
         "race_name": "PRIX DU V AR",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GRECIAN COMET",
-            "description": ""
+            "description": "",
+            "performance": "7.1.4.1.7",
+            "gains": 40959,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JC. ROUGET",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "EC.NICOLATO",
+            "weight": 61.0,
+            "draw": 1
         },
         {
             "number": 2,
             "horse": "MILLAR",
-            "description": ""
+            "description": "",
+            "performance": "3.4.7.1.2",
+            "gains": 33108,
+            "sex": "M",
+            "age": 4,
+            "trainer": "ED. MONFORT",
+            "jockey": "S. PASQUIER",
+            "driver": "S. PASQUIER",
+            "owner": "WERTHEIMER & FRERE",
+            "weight": 60.0,
+            "draw": 2
         },
         {
             "number": 3,
             "horse": "FIUMICCINO",
-            "description": ""
+            "description": "",
+            "performance": "5.0.1.2.1",
+            "gains": 41956,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P. COTTIER",
+            "jockey": "H. BESNIER",
+            "driver": "H. BESNIER",
+            "owner": "JPJ. DUBOIS",
+            "weight": 59.5,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "ALOYSIUS",
-            "description": ""
+            "description": "",
+            "performance": "4.2.3.9.1",
+            "gains": 45799,
+            "sex": "M",
+            "age": 4,
+            "trainer": "JC. ROUGET",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "EC. SERGE STEMPNIAK",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "PRINCESSE TREZY",
-            "description": ""
+            "description": "",
+            "performance": "6.0.1.4.1",
+            "gains": 44190,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S. KOBAYASHI",
+            "jockey": "E. HARDOUIN",
+            "driver": "E. HARDOUIN",
+            "owner": "GUY PARIENTE HOLDING",
+            "weight": 58.5,
+            "draw": 14
         },
         {
             "number": 6,
             "horse": "LANTANA",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.1.4",
+            "gains": 34190,
+            "sex": "F",
+            "age": 4,
+            "trainer": "P. DECOUZ",
+            "jockey": "A. MADAMET",
+            "driver": "A. MADAMET",
+            "owner": "EC. SKYMARC FARM",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "NOUS Y SOMMES",
-            "description": ""
+            "description": "",
+            "performance": "3.2.3.1.5",
+            "gains": 22483,
+            "sex": "H",
+            "age": 4,
+            "trainer": "N. PERRET",
+            "jockey": "A. CRASTUS",
+            "driver": "A. CRASTUS",
+            "owner": "JC. SEROUL",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "LADY VITESSE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.1.1",
+            "gains": 44016,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R. CHOTARD",
+            "jockey": "S. RUIS",
+            "driver": "S. RUIS",
+            "owner": "EC. MELANIE",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 9,
             "horse": "AQUITAIN",
-            "description": ""
+            "description": "",
+            "performance": "9.3.1.2.7",
+            "gains": 14124,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S. GAVILAN",
+            "jockey": "F. VERON",
+            "driver": "F. VERON",
+            "owner": "E.HARIVEL/P.SEBAOUN",
+            "weight": 57.0,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "TIMBER CIRCLE",
-            "description": ""
+            "description": "",
+            "performance": "8.3.1",
+            "gains": 9450,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G. RARICK",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "N. NAGEL",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "BLUE SEABIRD",
-            "description": ""
+            "description": "",
+            "performance": "8.3.4.5.5",
+            "gains": 47202,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S. GAVILAN",
+            "jockey": "T. PICCONE",
+            "driver": "T. PICCONE",
+            "owner": "P. SEBAOUN/ C. AUCHE",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 12,
             "horse": "WEEMAGATEE",
-            "description": ""
+            "description": "",
+            "performance": "2.0.2.3.6",
+            "gains": 53517,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J. ANDREU",
+            "jockey": "T. BACHELOT",
+            "driver": "T. BACHELOT",
+            "owner": "H. BOUDOUAIA",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "BLARNEY",
-            "description": ""
+            "description": "",
+            "performance": "1.6.3.3.1",
+            "gains": 32238,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J. REYNIER",
+            "jockey": "A. ORANI",
+            "driver": "A. ORANI",
+            "owner": "PJ. MCCREERY",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 14,
             "horse": "SIR CRATER",
-            "description": ""
+            "description": "",
+            "performance": "6.0.2.1.1",
+            "gains": 37950,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S. GAVILAN",
+            "jockey": "D.SANTIAGO",
+            "driver": "D.SANTIAGO",
+            "owner": "B. SANTIAGO",
+            "weight": 55.0,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "KAWAALOT",
-            "description": ""
+            "description": "",
+            "performance": "1.0.6.2.4",
+            "gains": 24523,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BOUTIN",
+            "jockey": "F. VALLE SKAR",
+            "driver": "F. VALLE SKAR",
+            "owner": "P. WIDLOECHER",
+            "weight": 53.0,
+            "draw": 16
         },
         {
             "number": 16,
             "horse": "MEME TOI",
-            "description": ""
+            "description": "",
+            "performance": "5.8.3.8.4",
+            "gains": 4726,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.ESCUDER",
+            "jockey": "T. TRULLIER",
+            "driver": "T. TRULLIER",
+            "owner": "JC. SEROUL",
+            "weight": 51.5,
+            "draw": 10
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-02-11-2024_6b2750395d_9992cd4b90.txt",
-    "parsed_at": "2026-10-08T10:35:39.597475Z",
+    "parsed_at": "2026-10-08T23:52:10.906823Z",
     "date": "2024-11-02",
     "race": {
         "race_name": "PRIX CEREALISTE",
@@ -16,74 +16,201 @@
         {
             "number": 1,
             "horse": "LE ROI DAVID",
-            "description": ""
+            "description": "",
+            "performance": "1.1.8.4.2",
+            "gains": 283130,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.GILES",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "D.DAHAN",
+            "weight": 73.0
         },
         {
             "number": 2,
             "horse": "JOUR POLAIRE",
-            "description": ""
+            "description": "",
+            "performance": "5.5.1.5.6",
+            "gains": 116955,
+            "sex": "H",
+            "age": 5,
+            "trainer": "K.NABET",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "J.BRION",
+            "weight": 71.5
         },
         {
             "number": 3,
             "horse": "JANE DE LA BRUNIE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.A.3.T",
+            "gains": 92130,
+            "sex": "F",
+            "age": 5,
+            "trainer": "L.ZULIANI",
+            "jockey": "LAGENESTE & MACAIRE",
+            "driver": "LAGENESTE & MACAIRE",
+            "owner": "J.CROUZILLAC",
+            "weight": 69.0
         },
         {
             "number": 4,
             "horse": "LOU FAST",
-            "description": ""
+            "description": "",
+            "performance": "0.6.A.T.8",
+            "gains": 259340,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.PHILIPPERON",
+            "jockey": "ROB.COLLET",
+            "driver": "ROB.COLLET",
+            "owner": "EC. CMV DARBY STABLE",
+            "weight": 67.5
         },
         {
             "number": 5,
             "horse": "JAVA",
-            "description": ""
+            "description": "",
+            "performance": "3.A.6.1.3",
+            "gains": 140840,
+            "sex": "F",
+            "age": 5,
+            "trainer": "G.MASURE",
+            "jockey": "A.CHAILLE-CHAILLE",
+            "driver": "A.CHAILLE-CHAILLE",
+            "owner": "EC. M. LYN. MACLENNAN",
+            "weight": 66.5
         },
         {
             "number": 6,
             "horse": "JOANA CONTI",
-            "description": ""
+            "description": "",
+            "performance": "4.0.0.1.6",
+            "gains": 61875,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C.LEFEBVRE",
+            "jockey": "SOURD.DE BEAUREGARD",
+            "driver": "SOURD.DE BEAUREGARD",
+            "owner": "I.DA SILVA/J.DA SILVA",
+            "weight": 65.0
         },
         {
             "number": 7,
             "horse": "YOU FOR ME",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.6.6",
+            "gains": 71065,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.DUMOUCH",
+            "jockey": "GAB.LEENDERS",
+            "driver": "GAB.LEENDERS",
+            "owner": "EC.H.GUERIN",
+            "weight": 65.0
         },
         {
             "number": 8,
             "horse": "PANAREA",
-            "description": ""
+            "description": "",
+            "performance": "1.0.3.1.T",
+            "gains": 74890,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C.PRICHARD",
+            "jockey": "F.NICOLLE",
+            "driver": "F.NICOLLE",
+            "owner": "EC. TEAM SPIRIT",
+            "weight": 65.0
         },
         {
             "number": 9,
             "horse": "HAPPY HARRY",
-            "description": ""
+            "description": "",
+            "performance": "6.3.5.6.9",
+            "gains": 74535,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.ZULIANI",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "N.OZGULER",
+            "weight": 64.5
         },
         {
             "number": 10,
             "horse": "CUNCERTO",
-            "description": ""
+            "description": "",
+            "performance": "2.7.2.2.4",
+            "gains": 36295,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D.UBEDA",
+            "jockey": "M.RULEC",
+            "driver": "M.RULEC",
+            "owner": "C.FOELLER",
+            "weight": 64.0
         },
         {
             "number": 11,
             "horse": "FOLLOW YOU",
-            "description": ""
+            "description": "",
+            "performance": "6.0.1.5.4",
+            "gains": 62975,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.MEUNIER",
+            "jockey": "C.MARTINON",
+            "driver": "C.MARTINON",
+            "owner": "BARON A.D' AREXY",
+            "weight": 63.0
         },
         {
             "number": 12,
             "horse": "JOUVANCELLE",
-            "description": ""
+            "description": "",
+            "performance": "8.4.9.2.5",
+            "gains": 109300,
+            "sex": "F",
+            "age": 5,
+            "trainer": "B.FROST",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "C.LAGIER",
+            "weight": 63.0
         },
         {
             "number": 13,
             "horse": "DIXAN SENORA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.5.5.4",
+            "gains": 36190,
+            "sex": "M",
+            "age": 5,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "E.LYON",
+            "driver": "E.LYON",
+            "owner": "P.GORAL",
+            "weight": 62.0
         },
         {
             "number": 14,
             "horse": "KERIDA",
-            "description": ""
+            "description": "",
+            "performance": "3.4.0.3.5",
+            "gains": 74140,
+            "sex": "F",
+            "age": 5,
+            "trainer": "T.SERVIER",
+            "jockey": "D.COTTIN",
+            "driver": "D.COTTIN",
+            "owner": "JPJ .DUBOIS",
+            "weight": 62.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

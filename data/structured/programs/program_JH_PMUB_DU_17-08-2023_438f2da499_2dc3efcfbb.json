@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_17-08-2023_438f2da499_2dc3efcfbb.txt",
-    "parsed_at": "2026-10-08T10:35:44.666972Z",
+    "parsed_at": "2026-10-08T23:52:18.084835Z",
     "date": "2023-08-17",
     "race": {
         "race_name": "PRIX DE BALLEROY",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "RISING UP",
-            "description": ""
+            "description": "",
+            "performance": "0.0.3.3.1",
+            "gains": 80060,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "JP.VAN. HEEDE",
+            "weight": 59.0,
+            "draw": 16
         },
         {
             "number": 2,
             "horse": "AROWN",
-            "description": ""
+            "description": "",
+            "performance": "1.6.6.1.5",
+            "gains": 46080,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "L.EDON",
+            "driver": "L.EDON",
+            "owner": "L.EDON",
+            "weight": 58.5,
+            "draw": 11
         },
         {
             "number": 3,
             "horse": "BIG LOG",
-            "description": ""
+            "description": "",
+            "performance": "4.4.6.2.1",
+            "gains": 28000,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.BADEL",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "B.LYNAM",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 4,
             "horse": "MOVING COLOURS",
-            "description": ""
+            "description": "",
+            "performance": "0.5.3.1.0",
+            "gains": 15955,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 57.0,
+            "draw": 14
         },
         {
             "number": 5,
             "horse": "EUREKA",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.3.0",
+            "gains": 56740,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "L.LARRIGADE",
+            "driver": "L.LARRIGADE",
+            "owner": "H.DOS SANTOS",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "BELAFONTE",
-            "description": ""
+            "description": "",
+            "performance": "1.7.3.3",
+            "gains": 21100,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "DUGLAS/PUGLIA",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 7,
             "horse": "TAWAFUQ",
-            "description": ""
+            "description": "",
+            "performance": "3.1.2.4.5",
+            "gains": 20900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.ROHAUT",
+            "driver": "F.ROHAUT",
+            "owner": "SHADWELL FRANCE",
+            "weight": 56.5,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "OLYMPIC MESSAGE",
-            "description": ""
+            "description": "",
+            "performance": "5.4.1.5.5",
+            "gains": 20600,
+            "sex": "M",
+            "age": 3,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "R.NG",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "MURCIANO",
-            "description": ""
+            "description": "",
+            "performance": "6.3.3.3.2",
+            "gains": 35650,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.PLANQUE",
+            "jockey": "N.LE ROCH",
+            "driver": "N.LE ROCH",
+            "owner": "HS. D'ETREHAM",
+            "weight": 56.0,
+            "draw": 12
         },
         {
             "number": 10,
             "horse": "QUARTZ DU HOULEY",
-            "description": ""
+            "description": "",
+            "performance": "2.3.3.2.4",
+            "gains": 32115,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "C.PELIER",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 11,
             "horse": "BE THE KING",
-            "description": ""
+            "description": "",
+            "performance": "1.2.5.4.7",
+            "gains": 19650,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "R.SHAYKHUTDINOV",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "VIVERNUS",
-            "description": ""
+            "description": "",
+            "performance": "7.6.5.7.1",
+            "gains": 14800,
+            "sex": "M",
+            "age": 3,
+            "trainer": "R.MANGIONE",
+            "jockey": "S.CACERES",
+            "driver": "S.CACERES",
+            "owner": "SUL. S.M..ALFALAHI",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 13,
             "horse": "ADEVA",
-            "description": ""
+            "description": "",
+            "performance": "0.2.3.8.2",
+            "gains": 21150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "HOYEAU/AMAR",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 14,
             "horse": "NOSHOWONFRIDAY",
-            "description": ""
+            "description": "",
+            "performance": "6.8.4.5.2",
+            "gains": 13500,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.GUITRAUD",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "ARGELLA RACING",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 15,
             "horse": "TREMBLANT",
-            "description": ""
+            "description": "",
+            "performance": "7.3.4.3",
+            "gains": 11900,
+            "sex": "M",
+            "age": 3,
+            "trainer": "B.MURZABAYEV",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "SUC. K.ABDULLAH",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 16,
             "horse": "FILLE DU ROI",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.9.7",
+            "gains": 52650,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "H.NICOLAY DE",
+            "driver": "H.NICOLAY DE",
+            "owner": "D.GARCIA-DUBOIS",
+            "weight": 55.0,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_31-08-2026_729de45912_8ada240694.txt",
-    "parsed_at": "2026-10-08T10:35:46.558173Z",
+    "parsed_at": "2026-10-08T23:52:20.835153Z",
     "date": "2026-08-31",
     "race": {
         "race_name": "PRIX DE SAINT-PAIR-DU-MONT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "COSY BEAR",
-            "description": ""
+            "description": "",
+            "performance": "6.1.8.3.2",
+            "gains": 58289,
+            "sex": "H",
+            "age": 3,
+            "trainer": "P&J.BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "F.BLICHFELDT",
+            "weight": 60.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "NITY GALESTE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.7.2.1",
+            "gains": 24126,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H.GHABRI",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "E.POITEVIN",
+            "weight": 60.0,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "SORANO",
-            "description": ""
+            "description": "",
+            "performance": "6.1.6.2.4",
+            "gains": 30365,
+            "sex": "M",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "D.UNGER/M.DEROUIN",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 4,
             "horse": "BASQUIAT",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.1.2",
+            "gains": 38462,
+            "sex": "H",
+            "age": 3,
+            "trainer": "P.COTTIER",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "GOUSSERIE RACING",
+            "weight": 59.0,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "LOHENGREEN",
-            "description": ""
+            "description": "",
+            "performance": "0.3.6.2.2",
+            "gains": 27514,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.ESCUDER",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "B.GIRAUDON",
+            "weight": 58.0,
+            "draw": 7
         },
         {
             "number": 6,
             "horse": "SHAPESMITH",
-            "description": ""
+            "description": "",
+            "performance": "3.2.3.8",
+            "gains": 13900,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A&L.FABRE",
+            "jockey": "PC.BOUDOT",
+            "driver": "PC.BOUDOT",
+            "owner": "GODOLPHIN SNC",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "SAGARMATHA",
-            "description": ""
+            "description": "",
+            "performance": "1.3.0.7.3",
+            "gains": 33621,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.FERLAND",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "EVEREST RACING",
+            "weight": 56.5,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "BAHI",
-            "description": ""
+            "description": "",
+            "performance": "7.5.2.4.3",
+            "gains": 12349,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "AL SHAQAB RACING",
+            "weight": 55.0,
+            "draw": 2
         },
         {
             "number": 9,
             "horse": "ENTLEBUCH",
-            "description": ""
+            "description": "",
+            "performance": "4.4.2.4.0",
+            "gains": 24011,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H.SAUER",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "STALL LAURUS",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "MARTAGHALYA",
-            "description": ""
+            "description": "",
+            "performance": "0.5.1.9.3",
+            "gains": 11412,
+            "sex": "F",
+            "age": 3,
+            "trainer": "AS&D.ALLARD",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "AS&D.ALLARD",
+            "weight": 53.5,
+            "draw": 16
         },
         {
             "number": 11,
             "horse": "ELUSIVE WAY",
-            "description": ""
+            "description": "",
+            "performance": "2.1.3.4.1",
+            "gains": 40430,
+            "sex": "F",
+            "age": 3,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "EC.VICT. DREAMS",
+            "weight": 53.0,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "ANODIAC",
-            "description": ""
+            "description": "",
+            "performance": "0.3.4.1.6",
+            "gains": 22160,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.GOUYETTE",
+            "jockey": "P.REMOUE",
+            "driver": "P.REMOUE",
+            "owner": "G.LE SAINT",
+            "weight": 53.0,
+            "draw": 13
         },
         {
             "number": 13,
             "horse": "GOOD BYE DAVIER",
-            "description": ""
+            "description": "",
+            "performance": "6.3.6.1.2",
+            "gains": 17924,
+            "sex": "M",
+            "age": 3,
+            "trainer": "ED.MONFORT",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "SCEA HS .D'ORFAUSSE",
+            "weight": 53.0,
+            "draw": 1
         },
         {
             "number": 14,
             "horse": "EXELMANS",
-            "description": ""
+            "description": "",
+            "performance": "0.6.5.2",
+            "gains": 5332,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.FERLAND",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "A.MAUBERT",
+            "weight": 53.0,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "GALASSI",
-            "description": ""
+            "description": "",
+            "performance": "0.7.2.6",
+            "gains": 4566,
+            "sex": "H",
+            "age": 3,
+            "trainer": "Y.BARBEROT",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "R.SIEPMANN",
+            "weight": 52.5,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "GRAND MARRAKCHI",
-            "description": ""
+            "description": "",
+            "performance": "6.5.3.0.5",
+            "gains": 4212,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.ROLLAND",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "P.GOUTMANN",
+            "weight": 52.5,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-15-09-2024_2e38a51d4e_5bb872cb4f.txt",
-    "parsed_at": "2026-10-08T10:35:40.941489Z",
+    "parsed_at": "2026-10-08T23:52:12.815007Z",
     "date": "2024-09-15",
     "race": {
         "race_name": "QATAR PRIX CARRUS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "WILD PANSY",
-            "description": ""
+            "description": "",
+            "performance": "0.0.7.2.6",
+            "gains": 77217,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 60.0,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "CALAS",
-            "description": ""
+            "description": "",
+            "performance": "4.3.4.2.1",
+            "gains": 79010,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.MOISAN",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "BUCK RACING",
+            "weight": 60.0,
+            "draw": 11
         },
         {
             "number": 3,
             "horse": "NOIR",
-            "description": ""
+            "description": "",
+            "performance": "2.3.8.0.8",
+            "gains": 28417,
+            "sex": "F",
+            "age": 4,
+            "trainer": "B.MARIE",
+            "jockey": "A.KARKOSA",
+            "driver": "A.KARKOSA",
+            "owner": "R.ZIELINSKI",
+            "weight": 58.5,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "GET SET",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.1.0",
+            "gains": 169750,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F.VERON",
+            "jockey": "L.GADBIN",
+            "driver": "L.GADBIN",
+            "owner": "C.VIDEMENT",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "BELAFONTE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.0.6.1",
+            "gains": 64850,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "EC. PUGLIA",
+            "weight": 58.0,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "THUNDERSPEED",
-            "description": ""
+            "description": "",
+            "performance": "3.3.5.1.1",
+            "gains": 195720,
+            "sex": "M",
+            "age": 7,
+            "trainer": "C.SOUMILLON",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "EC. GRIBOMONT",
+            "weight": 58.0,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "COSMAS",
-            "description": ""
+            "description": "",
+            "performance": "8.0.1.0.4",
+            "gains": 81440,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.MANGIONE",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "L.AMELINE",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "PLAIN BEAU",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.3.4",
+            "gains": 205955,
+            "sex": "H",
+            "age": 9,
+            "trainer": "T.TRULLIER",
+            "jockey": "JUL .PHELIPPON",
+            "driver": "JUL .PHELIPPON",
+            "owner": "G.CAGGIULA",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "GIRAFFE",
-            "description": ""
+            "description": "",
+            "performance": "4.4.4.3.2",
+            "gains": 94270,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "GOUSSERIE RACING",
+            "weight": 57.0,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "NEPALAIS",
-            "description": ""
+            "description": "",
+            "performance": "9.8.3.5.6",
+            "gains": 147710,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.DEMURO",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 11,
             "horse": "LOU MAN",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.6.7",
+            "gains": 114080,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.GUYON",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 12,
             "horse": "BAKHCHISARAY",
-            "description": ""
+            "description": "",
+            "performance": "4.9.2.1.0",
+            "gains": 157205,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.GRANDIN",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. FRIEDRIDER",
+            "weight": 56.5,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "CENTORINA",
-            "description": ""
+            "description": "",
+            "performance": "6.0.0.5.2",
+            "gains": 67580,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "GL RACING / A.CH. DU FAU",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "CHIAREGGIO",
-            "description": ""
+            "description": "",
+            "performance": "0.5.1.9.0",
+            "gains": 68270,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "M.NIGGE",
+            "driver": "M.NIGGE",
+            "owner": "L.BONGEN",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 15,
             "horse": "BUMBLE BEE",
-            "description": ""
+            "description": "",
+            "performance": "4.6.4.7.6",
+            "gains": 46150,
+            "sex": "F",
+            "age": 5,
+            "trainer": "M.VELON",
+            "jockey": "F.BRESSON",
+            "driver": "F.BRESSON",
+            "owner": "A.BARATIN",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "WALDKAUZ",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.2.5",
+            "gains": 86182,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.MADAMET",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "K.WILHELM",
+            "weight": 53.5,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

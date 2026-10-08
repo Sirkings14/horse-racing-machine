@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_14-11-2023_fdc750abbf_abed66069b.txt",
-    "parsed_at": "2026-10-08T10:35:44.252196Z",
+    "parsed_at": "2026-10-08T23:52:17.489100Z",
     "date": "2023-11-14",
     "race": {
         "race_name": "PRIX DE LA ROTONDE DE MINERVE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "I'M A BELIEVER",
-            "description": ""
+            "description": "",
+            "performance": "7.1.5.4.6",
+            "gains": 64300,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "FIRST SNOW MOON",
-            "description": ""
+            "description": "",
+            "performance": "4.3.4.1.6",
+            "gains": 29000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "OCEA. BLOODSTOCK",
+            "weight": 58.5,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "ATHANASIA",
-            "description": ""
+            "description": "",
+            "performance": "4.5.8.1.1",
+            "gains": 25700,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "F.ROHAUT",
+            "driver": "F.ROHAUT",
+            "owner": "AL ASAYL FRANCE",
+            "weight": 58.0,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "ALSIMRYA",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.7.2",
+            "gains": 19400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "AL SHAQAB RACING",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "CENTORINA",
-            "description": ""
+            "description": "",
+            "performance": "1.0.9.1.3",
+            "gains": 51600,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "GL RACING",
+            "weight": 57.5,
+            "draw": 5
         },
         {
             "number": 6,
             "horse": "O'SSITOT",
-            "description": ""
+            "description": "",
+            "performance": "1.0.3.5.5",
+            "gains": 39250,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "P.DECOUZ",
+            "driver": "P.DECOUZ",
+            "owner": "GOUSSERIE RACING",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 7,
             "horse": "LOFSONGUR ISLANDE",
-            "description": ""
+            "description": "",
+            "performance": "4.4.0.3.6",
+            "gains": 25400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "B.VAN DALFSEN",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 8,
             "horse": "GRIMAUD",
-            "description": ""
+            "description": "",
+            "performance": "5.1.4.5.1",
+            "gains": 24900,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "F.ROHAUT",
+            "driver": "F.ROHAUT",
+            "owner": "RIVIERA EQUINE",
+            "weight": 57.5,
+            "draw": 6
         },
         {
             "number": 9,
             "horse": "L'ACAJOU",
-            "description": ""
+            "description": "",
+            "performance": "2.4.7.3.3",
+            "gains": 40100,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "M.ELDUBEBA",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 10,
             "horse": "CAMERON",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4.7.3",
+            "gains": 37900,
+            "sex": "M",
+            "age": 3,
+            "trainer": "R.PIECHULEK",
+            "jockey": "M.MUNCH",
+            "driver": "M.MUNCH",
+            "owner": "E.SCHWAIGER",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "INDIAN GOLD",
-            "description": ""
+            "description": "",
+            "performance": "5.6.5.5.4",
+            "gains": 32525,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "SV.GIANELLA",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 12,
             "horse": "DIANE'STAR",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.5.2",
+            "gains": 43320,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "C.BERTI",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 13,
             "horse": "CHIAREGGIO",
-            "description": ""
+            "description": "",
+            "performance": "2.6.4.3.8",
+            "gains": 40700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "M.NIGGE",
+            "driver": "M.NIGGE",
+            "owner": "L.BONGEN",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "SEE THE LIGHT",
-            "description": ""
+            "description": "",
+            "performance": "4.3.8.6.0",
+            "gains": 35790,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "RELIABLE RACING",
+            "weight": 55.0,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "ALCATOSER",
-            "description": ""
+            "description": "",
+            "performance": "2.9.3.2.4",
+            "gains": 30610,
+            "sex": "H",
+            "age": 3,
+            "trainer": "E.CORALLO",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "G.AU.NORMAND",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "GABIJA",
-            "description": ""
+            "description": "",
+            "performance": "6.5.1.6.2",
+            "gains": 17150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "E.DE SPA",
+            "weight": 55.0,
+            "draw": 12
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

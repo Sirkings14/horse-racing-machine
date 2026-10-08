@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-28-10-2025_4486ffe013_9c50ad0c1d.txt",
-    "parsed_at": "2026-10-08T10:35:42.259233Z",
+    "parsed_at": "2026-10-08T23:52:14.676638Z",
     "date": "2025-10-28",
     "race": {
         "race_name": "PRIX DE LA ROUTE DES PRINCES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "BABAKOOL",
-            "description": ""
+            "description": "",
+            "performance": "4.0.4.6.5",
+            "gains": 79290,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.FERLAND",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "WERTHEIMER & FRERE",
+            "weight": 61.0,
+            "draw": 6
         },
         {
             "number": 2,
             "horse": "ALVA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.8.2.1",
+            "gains": 154561,
+            "sex": "F",
+            "age": 5,
+            "trainer": "F. CHAPPET",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "A. GILIBERT / H. MERAUD",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "TORTISAMBERT",
-            "description": ""
+            "description": "",
+            "performance": "3.3.7.7.4",
+            "gains": 94144,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F. CHAPPET",
+            "jockey": "S. PASQUIER",
+            "driver": "S. PASQUIER",
+            "owner": "G. AU. NORMAND",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 4,
             "horse": "DIVINE CHRISNAT",
-            "description": ""
+            "description": "",
+            "performance": "8.0.6.6.0",
+            "gains": 122181,
+            "sex": "F",
+            "age": 5,
+            "trainer": "CH. PLISSON",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "M.PEHU",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 5,
             "horse": "KIARO",
-            "description": ""
+            "description": "",
+            "performance": "0.9.3.7.6",
+            "gains": 72221,
+            "sex": "M",
+            "age": 4,
+            "trainer": "HA. PANTALL",
+            "jockey": "T. PICCONE",
+            "driver": "T. PICCONE",
+            "owner": "L.ALBOUY/A.ARFI",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 6,
             "horse": "SOUS LA NEIGE",
-            "description": ""
+            "description": "",
+            "performance": "7.4.0.5.5",
+            "gains": 86644,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G. HERNON",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "A.DON/D.MACAULIFFE",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 7,
             "horse": "GEORGES VILLE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.0.4.4",
+            "gains": 73108,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C. HERI. DE BEAUVOIR",
+            "jockey": "M.ROMARY",
+            "driver": "M.ROMARY",
+            "owner": "JR. POWELL",
+            "weight": 56.0,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "PIQUOISEAU",
-            "description": ""
+            "description": "",
+            "performance": "8.4.4.4.4",
+            "gains": 27404,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.FERLAND",
+            "jockey": "E. CORALLO",
+            "driver": "E. CORALLO",
+            "owner": "EC. MAXIME MOCZULSKI",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "NO LIMIT DREAM",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.0",
+            "gains": 137520,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G. MOSSE",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "M.ANDRIA",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 10,
             "horse": "GUALDA",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.1.2",
+            "gains": 78436,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARATTI",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "NEARCO PRODUCCIONES.",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "WESTMINSTER NIGHT",
-            "description": ""
+            "description": "",
+            "performance": "5.3.0.0.2",
+            "gains": 131257,
+            "sex": "H",
+            "age": 6,
+            "trainer": "HA. PANTALL",
+            "jockey": "A. CRASTUS",
+            "driver": "A. CRASTUS",
+            "owner": "WESTMINSTER RACE HORSES",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "CELESTIAL",
-            "description": ""
+            "description": "",
+            "performance": "0.4.9.0.1",
+            "gains": 33581,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S. WATTEL",
+            "jockey": "T. BACHELOT",
+            "driver": "T. BACHELOT",
+            "owner": "AMIS DU MONDE ENTIER",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 13,
             "horse": "STAR ROCK",
-            "description": ""
+            "description": "",
+            "performance": "1.2.9.0.0",
+            "gains": 110840,
+            "sex": "H",
+            "age": 6,
+            "trainer": "V.LUKA",
+            "jockey": "A. MADAMET",
+            "driver": "A. MADAMET",
+            "owner": "LERAM S.R.O.",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 14,
             "horse": "ROOFTOP",
-            "description": ""
+            "description": "",
+            "performance": "0.0.7.1.0",
+            "gains": 74653,
+            "sex": "H",
+            "age": 4,
+            "trainer": "Y. BONNEFOY",
+            "jockey": "E. WEISSMEIER",
+            "driver": "E. WEISSMEIER",
+            "owner": "STARS OF FORTUNE",
+            "weight": 54.5,
+            "draw": 8
         },
         {
             "number": 15,
             "horse": "LEOPARDUCCIO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.7.6.4",
+            "gains": 134517,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C. BARANDE BARBE",
+            "jockey": "F. VALLE SKAR",
+            "driver": "F. VALLE SKAR",
+            "owner": "D. AIRALDI/ C. BARANDE BARB",
+            "weight": 54.0,
+            "draw": 16
         },
         {
             "number": 16,
             "horse": "CASARES",
-            "description": ""
+            "description": "",
+            "performance": "3.1.3.7.0",
+            "gains": 61048,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "E. HARDOUIN",
+            "driver": "E. HARDOUIN",
+            "owner": "CUA. MEDITERRANEO",
+            "weight": 53.5,
+            "draw": 4
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             12,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_11-01-2024_48919f7801_3a72f3e362.txt",
-    "parsed_at": "2026-10-08T10:35:43.744639Z",
+    "parsed_at": "2026-10-08T23:52:16.774762Z",
     "date": "2024-01-11",
     "race": {
         "race_name": "PRIX DE LA COTE D'AZUR",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "FEE LUCERNAISE",
-            "description": ""
+            "description": "",
+            "performance": "7.0.8.9.0",
+            "gains": 282410,
+            "sex": "F",
+            "age": 9,
+            "trainer": "J.CH. FERON",
+            "jockey": "S. CINGLAND",
+            "driver": "S. CINGLAND",
+            "owner": "P. LEVEILLE",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2925.M"
         },
         {
             "number": 2,
             "horse": "GAMBLE RIVER",
-            "description": ""
+            "description": "",
+            "performance": "D.8.D.5.4",
+            "gains": 282570,
+            "sex": "M",
+            "age": 8,
+            "trainer": "S. STEFANO",
+            "jockey": "K. THONNERIEUX",
+            "driver": "K. THONNERIEUX",
+            "owner": "G. LAUMESFELT",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2925.M"
         },
         {
             "number": 3,
             "horse": "EOLIEN DE CHENU",
-            "description": ""
+            "description": "",
+            "performance": "0.9.0.6.8",
+            "gains": 286300,
+            "sex": "H",
+            "age": 10,
+            "trainer": "TH. BRIAND",
+            "jockey": "CH.A. MALLET",
+            "driver": "CH.A. MALLET",
+            "owner": "EC. Ch. MALLET",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2925.M"
         },
         {
             "number": 4,
             "horse": "IDEAL DU ROCHER",
-            "description": ""
+            "description": "",
+            "performance": "9.2.2.1.4",
+            "gains": 289692,
+            "sex": "H",
+            "age": 6,
+            "trainer": "F. LAGADEUC",
+            "jockey": "CH. MOTTIER",
+            "driver": "CH. MOTTIER",
+            "owner": "EC. Charley MOTTIER",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2925.M"
         },
         {
             "number": 5,
             "horse": "ESTERO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.9.0.6",
+            "gains": 291210,
+            "sex": "H",
+            "age": 10,
+            "trainer": "P. VERCRUYSSE",
+            "jockey": "J.P. ENSCH",
+            "driver": "J.P. ENSCH",
+            "owner": "M. BOUNIEUX",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2925.M"
         },
         {
             "number": 6,
             "horse": "FLASH DE VELY",
-            "description": ""
+            "description": "",
+            "performance": "3.D.9.0.6",
+            "gains": 293600,
+            "sex": "H",
+            "age": 9,
+            "trainer": "S. CINGLAND",
+            "jockey": "S. CINGLAND",
+            "driver": "S. CINGLAND",
+            "owner": "PH. DEQUEKER",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2925.M"
         },
         {
             "number": 7,
             "horse": "DOUGLAS DU PONT",
-            "description": ""
+            "description": "",
+            "performance": "D.0.D.9.2",
+            "gains": 299220,
+            "sex": "H",
+            "age": 11,
+            "trainer": "N. ENSCH",
+            "jockey": "N. ENSCH",
+            "driver": "N. ENSCH",
+            "owner": "M. BOUNIEUX",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2925.M"
         },
         {
             "number": 8,
             "horse": "FLOREAL",
-            "description": ""
+            "description": "",
+            "performance": "4.2.1.D.4",
+            "gains": 301680,
+            "sex": "H",
+            "age": 9,
+            "trainer": "R. BOUVIER",
+            "jockey": "Robin BOUVIER",
+            "driver": "Robin BOUVIER",
+            "owner": "CHARLES BOUVIER",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2925.M"
         },
         {
             "number": 9,
             "horse": "HONKY TONK BLUES",
-            "description": ""
+            "description": "",
+            "performance": "4.0.2.1.2",
+            "gains": 366820,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D. BEKAERT",
+            "jockey": "N. ENSCH",
+            "driver": "N. ENSCH",
+            "owner": "EC. BRESIL",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2950.M"
         },
         {
             "number": 10,
             "horse": "BORDEAUX S.",
-            "description": ""
+            "description": "",
+            "performance": "0.1.D.0.0",
+            "gains": 383894,
+            "sex": "H",
+            "age": 8,
+            "trainer": "CH. MARTENS",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "GLOBAL GLIDE AB",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2950.M"
         },
         {
             "number": 11,
             "horse": "KENNEDY",
-            "description": ""
+            "description": "",
+            "performance": "9.9.7.5.D",
+            "gains": 408815,
+            "sex": "M",
+            "age": 9,
+            "trainer": "G. GELORMINI",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "St. PANA. RACING",
+            "listed_chrono": "1.10.30",
+            "listed_distance": "2950.M"
         },
         {
             "number": 12,
             "horse": "EL GRECO BELLO",
-            "description": ""
+            "description": "",
+            "performance": "9.4.5.8.1",
+            "gains": 428130,
+            "sex": "H",
+            "age": 10,
+            "trainer": "PIERRICK LE MOEL",
+            "jockey": "Pierrick LE MOEL",
+            "driver": "Pierrick LE MOEL",
+            "owner": "EC. MZ",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2950.M"
         },
         {
             "number": 13,
             "horse": "FAKIR DU RANCH",
-            "description": ""
+            "description": "",
+            "performance": "2.9.D.2.2",
+            "gains": 467180,
+            "sex": "H",
+            "age": 9,
+            "trainer": "Y.A. BRIAND",
+            "jockey": "Y. HARET",
+            "driver": "Y. HARET",
+            "owner": "Y.A. BRIAND",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2950.M"
         },
         {
             "number": 14,
             "horse": "EDEN BASQUE",
-            "description": ""
+            "description": "",
+            "performance": "5.5.D.8.7",
+            "gains": 486390,
+            "sex": "H",
+            "age": 10,
+            "trainer": "R. DERIEUX",
+            "jockey": "N. ENSCH",
+            "driver": "N. ENSCH",
+            "owner": "EC. CASTAGNICCIA",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2950.M"
         },
         {
             "number": 15,
             "horse": "ERIC THE EEL",
-            "description": ""
+            "description": "",
+            "performance": "2.8.1.2.D",
+            "gains": 587815,
+            "sex": "M",
+            "age": 8,
+            "trainer": "F. NIVARD",
+            "jockey": "T. MALMQVIST",
+            "driver": "T. MALMQVIST",
+            "owner": "St.PANA. RACING",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2950.M"
         },
         {
             "number": 16,
             "horse": "ECHO DE CHANLECY",
-            "description": ""
+            "description": "",
+            "performance": "6.9.7.6.D",
+            "gains": 646610,
+            "sex": "H",
+            "age": 10,
+            "trainer": "T. LE BELLER",
+            "jockey": "E.G. BLOT",
+            "driver": "E.G. BLOT",
+            "owner": "E.G. BLOT",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2950.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

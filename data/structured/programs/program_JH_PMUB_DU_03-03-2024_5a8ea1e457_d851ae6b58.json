@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_03-03-2024_5a8ea1e457_d851ae6b58.txt",
-    "parsed_at": "2026-10-08T10:35:42.802192Z",
+    "parsed_at": "2026-10-08T23:52:15.432797Z",
     "date": "2024-03-03",
     "race": {
         "race_name": "HAIES",
@@ -16,74 +16,201 @@
         {
             "number": 1,
             "horse": "ZEPHYR DE BEAUMONT",
-            "description": ""
+            "description": "",
+            "performance": "2.2.1.8.8",
+            "gains": 29050,
+            "sex": "M",
+            "age": 4,
+            "trainer": "T.BEAURAIN",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "J.HAMON",
+            "weight": 70.0
         },
         {
             "number": 2,
             "horse": "MAGIC FLIGHT",
-            "description": ""
+            "description": "",
+            "performance": "A.3.4.6",
+            "gains": 12730,
+            "sex": "H",
+            "age": 4,
+            "trainer": "B.LESTRADE",
+            "jockey": "JPH .DUBOIS",
+            "driver": "JPH .DUBOIS",
+            "owner": "EC. VICT. DREAMS",
+            "weight": 68.0
         },
         {
             "number": 3,
             "horse": "KAPSA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.5",
+            "gains": 28090,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N.FERREIRA",
+            "jockey": "S.DEHEZ",
+            "driver": "S.DEHEZ",
+            "owner": "GUY PARIE. HOLDING",
+            "weight": 67.5
         },
         {
             "number": 4,
             "horse": "PEARL DOCTOR",
-            "description": ""
+            "description": "",
+            "performance": "3.6.2.3.J",
+            "gains": 23680,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.VANDAMME",
+            "jockey": "P&F.ADDA & RENAUT",
+            "driver": "P&F.ADDA & RENAUT",
+            "owner": "H.HAYOUN",
+            "weight": 67.0
         },
         {
             "number": 5,
             "horse": "KOBATTLE DU BEARN",
-            "description": ""
+            "description": "",
+            "performance": "8.4.4.7.5",
+            "gains": 14090,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.MAYEUR",
+            "jockey": "E.GRALL",
+            "driver": "E.GRALL",
+            "owner": "M.LAGAHE",
+            "weight": 66.0
         },
         {
             "number": 6,
             "horse": "BEAU DINO",
-            "description": ""
+            "description": "",
+            "performance": "6.3.4.3",
+            "gains": 10520,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.BRECHET",
+            "jockey": "GAB.LEENDERS",
+            "driver": "GAB.LEENDERS",
+            "owner": "SE. RACING MANAGEMENT",
+            "weight": 66.0
         },
         {
             "number": 7,
             "horse": "ALGAJUST",
-            "description": ""
+            "description": "",
+            "performance": "A.4.1.A.1",
+            "gains": 25270,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.ANDRIEUX",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "Y.FOUIN",
+            "weight": 65.5
         },
         {
             "number": 8,
             "horse": "CALLIANDRA",
-            "description": ""
+            "description": "",
+            "performance": "7.2.3.A.A",
+            "gains": 13680,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.PRICHARD",
+            "jockey": "ROB.COLLET",
+            "driver": "ROB.COLLET",
+            "owner": "TERR.D'AVILLY ST LEON",
+            "weight": 65.0
         },
         {
             "number": 9,
             "horse": "NUPSALA NOLIMIT",
-            "description": ""
+            "description": "",
+            "performance": "2.4.A",
+            "gains": 11200,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R.POINCOT",
+            "jockey": "S.DEHEZ",
+            "driver": "S.DEHEZ",
+            "owner": "S.DEHEZ",
+            "weight": 65.0
         },
         {
             "number": 10,
             "horse": "ASTALAVISTA",
-            "description": ""
+            "description": "",
+            "performance": "7.3.4",
+            "gains": 8425,
+            "sex": "H",
+            "age": 4,
+            "trainer": "K.NABET",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "EC. PATRICK KLEIN",
+            "weight": 65.0
         },
         {
             "number": 11,
             "horse": "ELIITE",
-            "description": ""
+            "description": "",
+            "performance": "2.7.2.T.7",
+            "gains": 18265,
+            "sex": "H",
+            "age": 4,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "S.DEHEZ",
+            "driver": "S.DEHEZ",
+            "owner": "L.ALARD",
+            "weight": 64.5
         },
         {
             "number": 12,
             "horse": "SOLOMON SEAL",
-            "description": ""
+            "description": "",
+            "performance": "4.3.4.0.8",
+            "gains": 11300,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.MEUNIER",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "F.DUVIVIER",
+            "weight": 64.5
         },
         {
             "number": 13,
             "horse": "MAZARIN DU BERLAIS",
-            "description": ""
+            "description": "",
+            "performance": "4.A.6.6",
+            "gains": 5430,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.PHILIPPERON",
+            "jockey": "ROB.COLLET",
+            "driver": "ROB.COLLET",
+            "owner": "EC.BLACK & WHITE",
+            "weight": 64.0
         },
         {
             "number": 14,
             "horse": "HARGNAR",
-            "description": ""
+            "description": "",
+            "performance": "5.3.8",
+            "gains": 6125,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.SEIGNEUL",
+            "jockey": "H.MERIENNE",
+            "driver": "H.MERIENNE",
+            "owner": "EC. DE LA VERTE VALLEE",
+            "weight": 63.5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

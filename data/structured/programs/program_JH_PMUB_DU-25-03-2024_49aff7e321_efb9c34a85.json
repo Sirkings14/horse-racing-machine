@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-25-03-2024_49aff7e321_efb9c34a85.txt",
-    "parsed_at": "2026-10-08T10:35:41.844046Z",
+    "parsed_at": "2026-10-08T23:52:14.112996Z",
     "date": "2024-03-25",
     "race": {
         "race_name": "PLAT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "PUREST TIME",
-            "description": ""
+            "description": "",
+            "performance": "5.4.5.6.1",
+            "gains": 70710,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "M.MOTTO",
+            "weight": 61.5,
+            "draw": 4
         },
         {
             "number": 2,
             "horse": "CHIRIMIRI",
-            "description": ""
+            "description": "",
+            "performance": "5.7.1.2.7",
+            "gains": 124915,
+            "sex": "H",
+            "age": 6,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "J. ORTEGA BLOODSTOCK L",
+            "weight": 61.0,
+            "draw": 5
         },
         {
             "number": 3,
             "horse": "DENVER CHOP",
-            "description": ""
+            "description": "",
+            "performance": "8.7.1.6.3",
+            "gains": 94370,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "O. DE MONTZEY",
+            "driver": "O. DE MONTZEY",
+            "owner": "A.CHOPARD",
+            "weight": 61.0,
+            "draw": 12
         },
         {
             "number": 4,
             "horse": "O TRASNO",
-            "description": ""
+            "description": "",
+            "performance": "8.0.4.5.2",
+            "gains": 172700,
+            "sex": "M",
+            "age": 6,
+            "trainer": "E.HARDOUIN",
+            "jockey": "B.MONTZEY",
+            "driver": "B.MONTZEY",
+            "owner": "BLOKE EUR. MOBILIARIO",
+            "weight": 60.5,
+            "draw": 6
         },
         {
             "number": 5,
             "horse": "RAYSTEVE",
-            "description": ""
+            "description": "",
+            "performance": "3.2.0.6.6",
+            "gains": 174495,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.BARZALONA",
+            "jockey": "JM.BEGUIGNE",
+            "driver": "JM.BEGUIGNE",
+            "owner": "SPARKLING STAR",
+            "weight": 59.0,
+            "draw": 13
         },
         {
             "number": 6,
             "horse": "WHITE PLATIN",
-            "description": ""
+            "description": "",
+            "performance": "0.4.3.0.1",
+            "gains": 139068,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.THOMAS",
+            "jockey": "C.BARANDE BARBE",
+            "driver": "C.BARANDE BARBE",
+            "owner": "D.SIEGENTHALER",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 7,
             "horse": "INVESTISSEUR",
-            "description": ""
+            "description": "",
+            "performance": "6.5.0.1.1",
+            "gains": 79910,
+            "sex": "M",
+            "age": 5,
+            "trainer": "M.GRANDIN",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "S.GRANDIN",
+            "weight": 59.0,
+            "draw": 1
         },
         {
             "number": 8,
             "horse": "DROGO",
-            "description": ""
+            "description": "",
+            "performance": "1.0.1.2.1",
+            "gains": 116755,
+            "sex": "H",
+            "age": 6,
+            "trainer": "L.BOISSEAU",
+            "jockey": "V.DISSAUX",
+            "driver": "V.DISSAUX",
+            "owner": "N.GIOVANNELLI",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "IMPITOYABLE",
-            "description": ""
+            "description": "",
+            "performance": "6.0.3.2.6",
+            "gains": 112050,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.BACHELOT",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "EC. BERND & TORSTEN RA",
+            "weight": 58.5,
+            "draw": 7
         },
         {
             "number": 10,
             "horse": "TERRITORYWAR",
-            "description": ""
+            "description": "",
+            "performance": "1.5.9.7.5",
+            "gains": 60140,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.GUYON",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "CU.MEDITERRANEO",
+            "weight": 58.5,
+            "draw": 16
         },
         {
             "number": 11,
             "horse": "FEEL YOUR POWER",
-            "description": ""
+            "description": "",
+            "performance": "2.8.4.7.4",
+            "gains": 73190,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "G.KERN",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 12,
             "horse": "FRENCH DEFENSE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.2.2.2",
+            "gains": 59750,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "ARGELLA RACING",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 13,
             "horse": "WILD WEST",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.3.4",
+            "gains": 39350,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "I.CORBANI",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "ISMAEL PAINT",
-            "description": ""
+            "description": "",
+            "performance": "4.8.3.0.6",
+            "gains": 101845,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "CH.CH.PLISSON",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "PRADARO",
-            "description": ""
+            "description": "",
+            "performance": "2.2.1.4.7",
+            "gains": 281170,
+            "sex": "H",
+            "age": 9,
+            "trainer": "S.VOGT",
+            "jockey": "S.LANSLOTS",
+            "driver": "S.LANSLOTS",
+            "owner": "STAL VIE EN ROSE",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 16,
             "horse": "FURIOSO",
-            "description": ""
+            "description": "",
+            "performance": "6.8.3.0.0",
+            "gains": 36080,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "G.KERN",
+            "weight": 55.5,
+            "draw": 8
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

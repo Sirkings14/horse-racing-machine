@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_16-01-2025_d57f50f3f1_4f5d06a43c.txt",
-    "parsed_at": "2026-10-08T10:35:44.421389Z",
+    "parsed_at": "2026-10-08T23:52:17.738825Z",
     "date": "2025-01-16",
     "race": {
         "race_name": "ATTELE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "FILOU DE LA ROUVRE",
-            "description": ""
+            "description": "",
+            "performance": "0.7.9.D.D",
+            "gains": 228740,
+            "sex": "M",
+            "age": 10,
+            "trainer": "J. LEBOUTEILLER",
+            "jockey": "J. LEBOUTEILLER",
+            "driver": "J. LEBOUTEILLER",
+            "owner": "A.M. CHATEL",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2100.M"
         },
         {
             "number": 2,
             "horse": "FAVORI DE BRY",
-            "description": ""
+            "description": "",
+            "performance": "1.2.A.D.2",
+            "gains": 236720,
+            "sex": "H",
+            "age": 10,
+            "trainer": "R. DERIEUX",
+            "jockey": "R. DERIEUX",
+            "driver": "R. DERIEUX",
+            "owner": "M. DE SOUSA",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2100.M"
         },
         {
             "number": 3,
             "horse": "GORDON MIJACK",
-            "description": ""
+            "description": "",
+            "performance": "D.0.5.6.2",
+            "gains": 240070,
+            "sex": "H",
+            "age": 9,
+            "trainer": "B. ROCHARD",
+            "jockey": "A. DE JESUS",
+            "driver": "A. DE JESUS",
+            "owner": "STÉPHANE CALLICO",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2100.M"
         },
         {
             "number": 4,
             "horse": "GOLD D'ECROVILLE",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.6.4",
+            "gains": 226350,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M. LEGROS",
+            "jockey": "B. MARIE",
+            "driver": "B. MARIE",
+            "owner": "R. JEAN",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2100.M"
         },
         {
             "number": 5,
             "horse": "ASTRONASCENTE ZAC",
-            "description": ""
+            "description": "",
+            "performance": "9.1.1.2.0",
+            "gains": 232390,
+            "sex": "H",
+            "age": 9,
+            "trainer": "E. RAFFIN",
+            "jockey": "J. CORBANIE",
+            "driver": "J. CORBANIE",
+            "owner": "M. BRUYNEEL",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2100.M"
         },
         {
             "number": 6,
             "horse": "FURIOSO FLIGNY",
-            "description": ""
+            "description": "",
+            "performance": "3.3.2.7.0",
+            "gains": 226780,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "A. DE JESUS",
+            "driver": "A. DE JESUS",
+            "owner": "EC. DES AULNAIES",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2100.M"
         },
         {
             "number": 7,
             "horse": "GUERRIER CASTELETS",
-            "description": ""
+            "description": "",
+            "performance": "8.D.4.2.3",
+            "gains": 239940,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M. ABRIVARD",
+            "jockey": "BARBARA GUENET",
+            "driver": "BARBARA GUENET",
+            "owner": "BARBARA GUENET",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2100.M"
         },
         {
             "number": 8,
             "horse": "FOGO PICO",
-            "description": ""
+            "description": "",
+            "performance": "D.0.D.0.7",
+            "gains": 226220,
+            "sex": "H",
+            "age": 10,
+            "trainer": "M. MOTTIER",
+            "jockey": "F. JOSEPH",
+            "driver": "F. JOSEPH",
+            "owner": "ECURIE N.-D. NEVEU",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2100.M"
         },
         {
             "number": 9,
             "horse": "GOLDEN VISAIS",
-            "description": ""
+            "description": "",
+            "performance": "9.7.7.4.6",
+            "gains": 236060,
+            "sex": "H",
+            "age": 9,
+            "trainer": "T. BEAUVAIS",
+            "jockey": "C. BUHIGNE",
+            "driver": "C. BUHIGNE",
+            "owner": "B. HERBILLON",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2100.M"
         },
         {
             "number": 10,
             "horse": "ELEVEN SHAPTER",
-            "description": ""
+            "description": "",
+            "performance": "9.0.2.D.9",
+            "gains": 204020,
+            "sex": "H",
+            "age": 11,
+            "trainer": "P.A. RYN.BOULARD",
+            "jockey": "P.A. RYN.BOULARD",
+            "driver": "P.A. RYN.BOULARD",
+            "owner": "P.A. RYN.-BOULARD",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2100.M"
         },
         {
             "number": 11,
             "horse": "FEUX VERTS",
-            "description": ""
+            "description": "",
+            "performance": "9.6.0.9.2",
+            "gains": 214610,
+            "sex": "H",
+            "age": 10,
+            "trainer": "D. BROHIER",
+            "jockey": "D. BROHIER",
+            "driver": "D. BROHIER",
+            "owner": "A. POULIN",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2100.M"
         },
         {
             "number": 12,
             "horse": "ALONE",
-            "description": ""
+            "description": "",
+            "performance": "7.8.2.D.6",
+            "gains": 207237,
+            "sex": "H",
+            "age": 10,
+            "trainer": "F. NIVARD",
+            "jockey": "R. KUIPER",
+            "driver": "R. KUIPER",
+            "owner": "TRAV. STALL AB",
+            "listed_chrono": "1.13.90",
+            "listed_distance": "2100.M"
         },
         {
             "number": 13,
             "horse": "FERRERO DU LOISIR",
-            "description": ""
+            "description": "",
+            "performance": "D.D.7.D.D",
+            "gains": 218000,
+            "sex": "H",
+            "age": 10,
+            "trainer": "L. JUBLOT",
+            "jockey": "L. JUBLOT",
+            "driver": "L. JUBLOT",
+            "owner": "BENOÎT BERRUE",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2100.M"
         },
         {
             "number": 14,
             "horse": "GOLDORACK",
-            "description": ""
+            "description": "",
+            "performance": "D.0.0.0.7",
+            "gains": 204110,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P.Y. VERVA",
+            "jockey": "B. GROULT",
+            "driver": "B. GROULT",
+            "owner": "B. GROULT",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2100.M"
         },
         {
             "number": 15,
             "horse": "GALION",
-            "description": ""
+            "description": "",
+            "performance": "4.2.3.2.1",
+            "gains": 225875,
+            "sex": "H",
+            "age": 9,
+            "trainer": "E. DE JESUS",
+            "jockey": "A. DE JESUS",
+            "driver": "A. DE JESUS",
+            "owner": "J.FR. ALLEAUME",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2100.M"
         },
         {
             "number": 16,
             "horse": "MISTER DONALD",
-            "description": ""
+            "description": "",
+            "performance": "1.7.9.0.D",
+            "gains": 205474,
+            "sex": "H",
+            "age": 9,
+            "trainer": "LEO ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "EC.J.P. BARJON",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2100.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

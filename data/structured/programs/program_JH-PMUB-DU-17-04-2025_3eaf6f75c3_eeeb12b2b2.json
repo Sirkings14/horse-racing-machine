@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH-PMUB-DU-17-04-2025_3eaf6f75c3_eeeb12b2b2.txt",
-    "parsed_at": "2026-10-08T10:35:39.184103Z",
+    "parsed_at": "2026-10-08T23:52:10.401042Z",
     "date": "2025-04-17",
     "race": {
         "race_name": "PRIX DE LA FONTAINE CARPEAUX",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "SAINT ETIENNE",
-            "description": ""
+            "description": "",
+            "performance": "9.1.0.2.1",
+            "gains": 109500,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "G.A.NORMAND",
+            "weight": 60.0,
+            "draw": 14
         },
         {
             "number": 2,
             "horse": "AMERICAN FLAG",
-            "description": ""
+            "description": "",
+            "performance": "0.6.5.0.6",
+            "gains": 149125,
+            "sex": "H",
+            "age": 5,
+            "trainer": "H.JOURNIAC",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "Y.BARBEROT",
+            "weight": 59.5,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "HYPERCORE",
-            "description": ""
+            "description": "",
+            "performance": "1.3.1.9.1",
+            "gains": 49250,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "P.GROUALLE",
+            "driver": "P.GROUALLE",
+            "owner": "C. CONSEIL",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 4,
             "horse": "HAVOC",
-            "description": ""
+            "description": "",
+            "performance": "8.3.2.8.8",
+            "gains": 196468,
+            "sex": "M",
+            "age": 7,
+            "trainer": "E.HARDOUIN",
+            "jockey": "M.RULEC",
+            "driver": "M.RULEC",
+            "owner": "C.FOELLER",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 5,
             "horse": "HAVE DANCER",
-            "description": ""
+            "description": "",
+            "performance": "7.2.6.8.1",
+            "gains": 209097,
+            "sex": "M",
+            "age": 8,
+            "trainer": "T.BACHELOT",
+            "jockey": "G.MOSSE",
+            "driver": "G.MOSSE",
+            "owner": "THE GENT. STABLE",
+            "weight": 57.0,
+            "draw": 6
         },
         {
             "number": 6,
             "horse": "GANASS",
-            "description": ""
+            "description": "",
+            "performance": "8.4.5.1.4",
+            "gains": 94660,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "ZAHYANA",
-            "description": ""
+            "description": "",
+            "performance": "0.2.5.1.2",
+            "gains": 68770,
+            "sex": "F",
+            "age": 5,
+            "trainer": "M.BARZALONA",
+            "jockey": "JESUS",
+            "driver": "JESUS",
+            "owner": "M.KOHAIZA",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 8,
             "horse": "DOURIANN",
-            "description": ""
+            "description": "",
+            "performance": "2.4.0.0.4",
+            "gains": 99620,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.DEMURO",
+            "jockey": "G.MOSSE",
+            "driver": "G.MOSSE",
+            "owner": "AB RACING",
+            "weight": 56.0,
+            "draw": 3
         },
         {
             "number": 9,
             "horse": "GRAND BALCON",
-            "description": ""
+            "description": "",
+            "performance": "4.6.2.0.2",
+            "gains": 127880,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.SOUMILLON",
+            "jockey": "J.CARAYON",
+            "driver": "J.CARAYON",
+            "owner": "BAIE DES ANGES",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "RISING BLAST",
-            "description": ""
+            "description": "",
+            "performance": "7.0.1.1.2",
+            "gains": 70690,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.LEMAITRE",
+            "jockey": "H.SAUER",
+            "driver": "H.SAUER",
+            "owner": "S. LAURUS",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 11,
             "horse": "MAIA STAR",
-            "description": ""
+            "description": "",
+            "performance": "8.8.2.8.7",
+            "gains": 25100,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "JPH .DUBOIS",
+            "driver": "JPH .DUBOIS",
+            "owner": "EC.VICT. DREAMS",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "RAQEEBB",
-            "description": ""
+            "description": "",
+            "performance": "5.0.2.0.0",
+            "gains": 35138,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "E.LIBAUD",
+            "driver": "E.LIBAUD",
+            "owner": "AJ.DUFFIELD",
+            "weight": 54.5,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "ETERNEL'S BEAUTE",
-            "description": ""
+            "description": "",
+            "performance": "8.8.6.2.5",
+            "gains": 64590,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.ROUSSEL",
+            "jockey": "G.PANNIER",
+            "driver": "G.PANNIER",
+            "owner": "J.MAHIQUES",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 14,
             "horse": "VILLA DES ARTS",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.5.5",
+            "gains": 44820,
+            "sex": "F",
+            "age": 4,
+            "trainer": "B.MARIE",
+            "jockey": "A.KARKOSA",
+            "driver": "A.KARKOSA",
+            "owner": "K.GOZDZIALSKI",
+            "weight": 54.0,
+            "draw": 2
         },
         {
             "number": 15,
             "horse": "CHARLESQUINT",
-            "description": ""
+            "description": "",
+            "performance": "2.8.1.1.2",
+            "gains": 261225,
+            "sex": "H",
+            "age": 8,
+            "trainer": "R.MANGIONE",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "EC. NICOLATO",
+            "weight": 53.5,
+            "draw": 9
         },
         {
             "number": 16,
             "horse": "NARCOS",
-            "description": ""
+            "description": "",
+            "performance": "1.0.3.6.8",
+            "gains": 277065,
+            "sex": "M",
+            "age": 8,
+            "trainer": "T.TRULLIER",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "M.VARIN",
+            "weight": 52.0,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

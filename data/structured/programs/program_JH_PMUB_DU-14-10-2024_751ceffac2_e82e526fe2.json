@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-14-10-2024_751ceffac2_e82e526fe2.txt",
-    "parsed_at": "2026-10-08T10:35:40.841760Z",
+    "parsed_at": "2026-10-08T23:52:12.684181Z",
     "date": "2024-10-14",
     "race": {
         "race_name": "PRIX DES LANDES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GALORD",
-            "description": ""
+            "description": "",
+            "performance": "1.6.1.2.6",
+            "gains": 128040,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "C.FEY",
+            "driver": "C.FEY",
+            "owner": "E.DECOSTER",
+            "weight": 61.5,
+            "draw": 5
         },
         {
             "number": 2,
             "horse": "LARNO",
-            "description": ""
+            "description": "",
+            "performance": "0.1.3.1.7",
+            "gains": 386530,
+            "sex": "H",
+            "age": 10,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "B.GOUDOT",
+            "driver": "B.GOUDOT",
+            "owner": "JP.VANDEN HEEDE",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "KILOECHO",
-            "description": ""
+            "description": "",
+            "performance": "4.0.7.7.9",
+            "gains": 243160,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A.LEMAITRE",
+            "jockey": "JV.TOUX",
+            "driver": "JV.TOUX",
+            "owner": "JV.TOUX",
+            "weight": 58.0,
+            "draw": 7
         },
         {
             "number": 4,
             "horse": "TIGRR",
-            "description": ""
+            "description": "",
+            "performance": "4.6.3.2.0",
+            "gains": 168520,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.BARZALONA",
+            "jockey": "P.GROUALLE",
+            "driver": "P.GROUALLE",
+            "owner": "GOUSSERIE RACING",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 5,
             "horse": "CELESTIN",
-            "description": ""
+            "description": "",
+            "performance": "4.0.0.3.5",
+            "gains": 254803,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D.BREUX",
+            "jockey": "JP.M. DA COS. OLIVEIRA",
+            "driver": "JP.M. DA COS. OLIVEIRA",
+            "owner": "A.MARIE-NELLY",
+            "weight": 57.5,
+            "draw": 3
         },
         {
             "number": 6,
             "horse": "TUMBLER",
-            "description": ""
+            "description": "",
+            "performance": "0.5.2.4.6",
+            "gains": 86500,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.TRULLIER",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "SCEA HS DES FORETS",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "PANDIA SELENE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.8.0.9",
+            "gains": 99300,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "S.EGLOFF",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "DIVINE CHRISNAT",
-            "description": ""
+            "description": "",
+            "performance": "4.6.1.0.4",
+            "gains": 65790,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R.PEHU",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "M.PEHU",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 9,
             "horse": "COUR DU ROI",
-            "description": ""
+            "description": "",
+            "performance": "3.5.0.2.1",
+            "gains": 115470,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "B.GIRAUDON",
+            "weight": 54.5,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "PEACEFUL SEA",
-            "description": ""
+            "description": "",
+            "performance": "6.8.0.0.3",
+            "gains": 12900,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "S.KOBAYASHI",
+            "driver": "S.KOBAYASHI",
+            "owner": "G.HENRY/S.VALERIO",
+            "weight": 54.5,
+            "draw": 14
         },
         {
             "number": 11,
             "horse": "TERREDEGUERRE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.0.6.4",
+            "gains": 71880,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "CU. MEDITERRANEO",
+            "weight": 54.0,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "MR CASSIOPE",
-            "description": ""
+            "description": "",
+            "performance": "8.6.0.7.0",
+            "gains": 86630,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "M.BIOTTEAU",
+            "weight": 53.5,
+            "draw": 1
         },
         {
             "number": 13,
             "horse": "JOH SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "3.5.8.5.0",
+            "gains": 59400,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "P.SIGAUD",
+            "driver": "P.SIGAUD",
+            "owner": "P.SIGAUD",
+            "weight": 53.5,
+            "draw": 4
         },
         {
             "number": 14,
             "horse": "MISSOURI",
-            "description": ""
+            "description": "",
+            "performance": "7.7.7.5.6",
+            "gains": 27900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "J.CARAYON",
+            "driver": "J.CARAYON",
+            "owner": "BAIE DES ANGES",
+            "weight": 53.5,
+            "draw": 15
         },
         {
             "number": 15,
             "horse": "LAURENT",
-            "description": ""
+            "description": "",
+            "performance": "D.2.7.4.1",
+            "gains": 113020,
+            "sex": "H",
+            "age": 5,
+            "trainer": "B.MARIE",
+            "jockey": "J.LEROY",
+            "driver": "J.LEROY",
+            "owner": "E.LOUNGAR",
+            "weight": 53.0,
+            "draw": 11
         },
         {
             "number": 16,
             "horse": "HARTWOOD MAN",
-            "description": ""
+            "description": "",
+            "performance": "0.6.0.1.3",
+            "gains": 79260,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.VERON",
+            "jockey": "V.DISSAUX",
+            "driver": "V.DISSAUX",
+            "owner": "D.GUINDON",
+            "weight": 52.0,
+            "draw": 16
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

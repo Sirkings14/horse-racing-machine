@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-28-08-2024_4b02b40ce5_6cbd379e8e.txt",
-    "parsed_at": "2026-10-08T10:35:42.230597Z",
+    "parsed_at": "2026-10-08T23:52:14.633202Z",
     "date": "2024-08-28",
     "race": {
         "race_name": "PRIX DES BORDS DE L'OISE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "KING TREZY",
-            "description": ""
+            "description": "",
+            "performance": "1.3.3.4.3",
+            "gains": 45850,
+            "sex": "M",
+            "age": 3,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "E.FEURTET",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 2,
             "horse": "MONNA VANNA",
-            "description": ""
+            "description": "",
+            "performance": "5.2.7.1.4",
+            "gains": 45700,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.FOREST",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "T.JONES",
+            "weight": 57.5,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "ELEGANT FRIEND",
-            "description": ""
+            "description": "",
+            "performance": "8.1.1.4.1",
+            "gains": 27850,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "MIZ VEGA",
-            "description": ""
+            "description": "",
+            "performance": "1.6.4.5.1",
+            "gains": 40700,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.CLEMENT",
+            "driver": "N.CLEMENT",
+            "owner": "AL SHAQAB RACING",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 5,
             "horse": "TEARDROP EXPLODES",
-            "description": ""
+            "description": "",
+            "performance": "3.7.3.1.3",
+            "gains": 33850,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "L.GADBIN",
+            "driver": "L.GADBIN",
+            "owner": "AJ.CRABB",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 6,
             "horse": "RAIMONDIN",
-            "description": ""
+            "description": "",
+            "performance": "1.5.4.2",
+            "gains": 16150,
+            "sex": "H",
+            "age": 3,
+            "trainer": "D.BOCHE",
+            "jockey": "L.GADBIN",
+            "driver": "L.GADBIN",
+            "owner": "EC. SERVAL",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "O'WOOD",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.2.9",
+            "gains": 23750,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "E.LIBAUD",
+            "driver": "E.LIBAUD",
+            "owner": "LES GALOPINS",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "SKY GOLD",
-            "description": ""
+            "description": "",
+            "performance": "7.3.4.1.6",
+            "gains": 15300,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "M.MASCOLO",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 9,
             "horse": "ROSE D'ETE",
-            "description": ""
+            "description": "",
+            "performance": "8.1.1.6.1",
+            "gains": 46100,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "J.ANDREU",
+            "driver": "J.ANDREU",
+            "owner": "JPJ.DUBOIS",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 10,
             "horse": "LEPSA",
-            "description": ""
+            "description": "",
+            "performance": "9.1.4.3.5",
+            "gains": 23800,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "LG BLOODSTOCK",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 11,
             "horse": "PARRHESIA",
-            "description": ""
+            "description": "",
+            "performance": "8.0.1.5.2",
+            "gains": 53200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "H.LEBOUC",
+            "jockey": "AS.CROMBEZ",
+            "driver": "AS.CROMBEZ",
+            "owner": "J.COUVERCELLE",
+            "weight": 55.0,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "GANASS",
-            "description": ""
+            "description": "",
+            "performance": "3.0.1.5.4",
+            "gains": 48050,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 55.0,
+            "draw": 13
         },
         {
             "number": 13,
             "horse": "KIND OF STAR",
-            "description": ""
+            "description": "",
+            "performance": "1.4.8.3.5",
+            "gains": 35500,
+            "sex": "H",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "B.RE-SCANDELLA",
+            "driver": "B.RE-SCANDELLA",
+            "owner": "D.MORDENTI",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "MASAIYA",
-            "description": ""
+            "description": "",
+            "performance": "2.3.6.0.6",
+            "gains": 5670,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "S.A. AGA KHAN",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 15,
             "horse": "MEHLANGO",
-            "description": ""
+            "description": "",
+            "performance": "7.9.1.5.3",
+            "gains": 31520,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "F.JOLIVET",
+            "driver": "F.JOLIVET",
+            "owner": "F.JOLIVET",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 16,
             "horse": "PEPETE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.3.6",
+            "gains": 68900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "J.JULIAN",
+            "weight": 54.0,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

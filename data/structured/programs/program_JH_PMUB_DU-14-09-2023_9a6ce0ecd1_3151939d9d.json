@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-14-09-2023_9a6ce0ecd1_3151939d9d.txt",
-    "parsed_at": "2026-10-08T10:35:40.828588Z",
+    "parsed_at": "2026-10-08T23:52:12.662717Z",
     "date": "2023-09-14",
     "race": {
         "race_name": "PRIX ROLAND FOUGEDOIRE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ALATHEA",
-            "description": ""
+            "description": "",
+            "performance": "9.1.5.2.4",
+            "gains": 40850,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "L.GOELET",
+            "weight": 60.0,
+            "draw": 8
         },
         {
             "number": 2,
             "horse": "ROMANTIC ROSE",
-            "description": ""
+            "description": "",
+            "performance": "7.1.0.9.5",
+            "gains": 47010,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R.THOMAS",
+            "jockey": "J.GOOSSENS",
+            "driver": "J.GOOSSENS",
+            "owner": "TRIPLE B. STABLES",
+            "weight": 60.0,
+            "draw": 5
         },
         {
             "number": 3,
             "horse": "INDIAN GOLD",
-            "description": ""
+            "description": "",
+            "performance": "5.5.4.6.1",
+            "gains": 29000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "B.MURZABAYEV",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "SV.GIANELLA",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 4,
             "horse": "ANOLINE",
-            "description": ""
+            "description": "",
+            "performance": "9.5.3.6.1",
+            "gains": 44500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "EC.TYGALY",
+            "weight": 59.0,
+            "draw": 16
         },
         {
             "number": 5,
             "horse": "ENDLESS CHAIN",
-            "description": ""
+            "description": "",
+            "performance": "1.3.2.3.2",
+            "gains": 23650,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "HF.DEVIN",
+            "driver": "HF.DEVIN",
+            "owner": "H.SAITO",
+            "weight": 59.0,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "PRECIOSITE",
-            "description": ""
+            "description": "",
+            "performance": "5.0.3.7.1",
+            "gains": 17900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "G.AU.NORMAND",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "VEGA OF SAINTS",
-            "description": ""
+            "description": "",
+            "performance": "2.9.0.1.6",
+            "gains": 21050,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.ROUSSEL",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "HS DES PYRENEES",
+            "weight": 58.0,
+            "draw": 13
         },
         {
             "number": 8,
             "horse": "AVERSA",
-            "description": ""
+            "description": "",
+            "performance": "6.8.2.0.2",
+            "gains": 42040,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.MAILLOT",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "JP.VANDEN HEEDE",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 9,
             "horse": "NOTTINGHAM",
-            "description": ""
+            "description": "",
+            "performance": "4.1.5.0.0",
+            "gains": 77185,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "H.BLUME",
+            "driver": "H.BLUME",
+            "owner": "HD.JARLING",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 10,
             "horse": "FILLE DU ROI",
-            "description": ""
+            "description": "",
+            "performance": "5.1.1.0.9",
+            "gains": 54850,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "H. DE NICOLAY",
+            "driver": "H. DE NICOLAY",
+            "owner": "D.GARCIA-DUBOIS",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 11,
             "horse": "FASTER",
-            "description": ""
+            "description": "",
+            "performance": "5.4.0.3.3",
+            "gains": 78475,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D.SANTIAGO",
+            "jockey": "G.RARICK",
+            "driver": "G.RARICK",
+            "owner": "B.GUSDAL",
+            "weight": 57.0,
+            "draw": 2
         },
         {
             "number": 12,
             "horse": "ABELIA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.5.1.0",
+            "gains": 27040,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "CHR.HEAD",
+            "driver": "CHR.HEAD",
+            "owner": "F.HEAD",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "AL ULA",
-            "description": ""
+            "description": "",
+            "performance": "6.3.0.8.0",
+            "gains": 66721,
+            "sex": "F",
+            "age": 5,
+            "trainer": "H.BOUTIN",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 14,
             "horse": "BAILEYS MEMOIRE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.2.0.6",
+            "gains": 41220,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H.JOURNIAC",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "G.R. BAILEY LTD",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "ALVA",
-            "description": ""
+            "description": "",
+            "performance": "8.9.1.6",
+            "gains": 13500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PLANQUE",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A. GILIBERT",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 16,
             "horse": "IKEN",
-            "description": ""
+            "description": "",
+            "performance": "2.6.2.4.0",
+            "gains": 52630,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "J.SOUDAN",
+            "driver": "J.SOUDAN",
+            "owner": "C.DE MOUBRAY",
+            "weight": 56.0,
+            "draw": 4
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

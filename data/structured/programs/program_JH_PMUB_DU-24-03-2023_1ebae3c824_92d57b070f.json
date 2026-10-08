@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-24-03-2023_1ebae3c824_92d57b070f.txt",
-    "parsed_at": "2026-10-08T10:35:41.716109Z",
+    "parsed_at": "2026-10-08T23:52:13.932446Z",
     "date": "2023-03-24",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GAGNEUR",
-            "description": ""
+            "description": "",
+            "performance": "4.1.1.3.4",
+            "gains": 110990,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. GENCE",
+            "jockey": "F. GENCE",
+            "driver": "F. GENCE",
+            "owner": "EC.J. MOUCHARD",
+            "listed_chrono": "1.14.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "GINKGO THELOIS",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.D.2",
+            "gains": 117690,
+            "sex": "H",
+            "age": 7,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "EC.ANDRÉ CARREE",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "GAI MATIN",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.D.3",
+            "gains": 121575,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E. RAFFIN",
+            "jockey": "G. GILLOT",
+            "driver": "G. GILLOT",
+            "owner": "G. GILLOT",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "ECRIN PERCERIE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.2.6.9",
+            "gains": 122470,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P.A. RYN.BOULARD",
+            "jockey": "P.A. RYN.BOULARD",
+            "driver": "P.A. RYN.BOULARD",
+            "owner": "P.A. RYN.BOULARD",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "GAYLORD JAYF",
-            "description": ""
+            "description": "",
+            "performance": "D.D.4.6.6",
+            "gains": 123290,
+            "sex": "M",
+            "age": 7,
+            "trainer": "F. NIVARD",
+            "jockey": "D. CHERBONNEL",
+            "driver": "D. CHERBONNEL",
+            "owner": "Y. FAUCHEUX",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "FURIOSO FLIGNY",
-            "description": ""
+            "description": "",
+            "performance": "3.5.1.4.2",
+            "gains": 125980,
+            "sex": "H",
+            "age": 8,
+            "trainer": "CEDRIC TERRY",
+            "jockey": "A. DE JESUS",
+            "driver": "A. DE JESUS",
+            "owner": "EC. DES AULNAIES",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "FIRST IN LOVE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.3.0.0",
+            "gains": 204440,
+            "sex": "M",
+            "age": 8,
+            "trainer": "L.J. LEGROS",
+            "jockey": "J.M. LEGROS",
+            "driver": "J.M. LEGROS",
+            "owner": "EC. DU VIEUX CHENE",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 8,
             "horse": "FELLI ELEVEN",
-            "description": ""
+            "description": "",
+            "performance": "0.9.R.5.4",
+            "gains": 206430,
+            "sex": "M",
+            "age": 8,
+            "trainer": "G.A. POU POU",
+            "jockey": "A. RIPOLL RIGO",
+            "driver": "A. RIPOLL RIGO",
+            "owner": "CU.HERMANOS INIGUEZ",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2875.M"
         },
         {
             "number": 9,
             "horse": "FORBAN",
-            "description": ""
+            "description": "",
+            "performance": "2.4.0.4.4",
+            "gains": 214300,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. VERVA",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "EC.KARIBOU",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2875.M"
         },
         {
             "number": 10,
             "horse": "DRACO JIEL",
-            "description": ""
+            "description": "",
+            "performance": "3.D.1.5.3",
+            "gains": 217720,
+            "sex": "H",
+            "age": 10,
+            "trainer": "D. BERTRAND",
+            "jockey": "J.L. DERSOIR",
+            "driver": "J.L. DERSOIR",
+            "owner": "EC. LUCK",
+            "listed_chrono": "1.13.10",
+            "listed_distance": "2875.M"
         },
         {
             "number": 11,
             "horse": "EMENCOURT D'AZIF",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.0.7",
+            "gains": 224380,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J.F. SENET",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "EC. J-F. SENET",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 12,
             "horse": "GALANT GALAA",
-            "description": ""
+            "description": "",
+            "performance": "5.3.2.3.D",
+            "gains": 226940,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. OUVRIE",
+            "jockey": "B. GOETZ",
+            "driver": "B. GOETZ",
+            "owner": "EC.BG TROT",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 13,
             "horse": "GENDREEN",
-            "description": ""
+            "description": "",
+            "performance": "D.1.3.2.2",
+            "gains": 229020,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "PH. GRUMETZ",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2875.M"
         },
         {
             "number": 14,
             "horse": "FLOREAL",
-            "description": ""
+            "description": "",
+            "performance": "2.7.0.2.6",
+            "gains": 234780,
+            "sex": "H",
+            "age": 8,
+            "trainer": "R. BOUVIER",
+            "jockey": "CHARLES BOUVIER",
+            "driver": "CHARLES BOUVIER",
+            "owner": "CHARLES BOUVIER",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2875.M"
         },
         {
             "number": 15,
             "horse": "GRANIT MESLOIS",
-            "description": ""
+            "description": "",
+            "performance": "D.3.D.D.2",
+            "gains": 235160,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. COLLETTE",
+            "jockey": "P. BELLOCHE",
+            "driver": "P. BELLOCHE",
+            "owner": "EC.BOIS DOUFRAY",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2875.M"
         },
         {
             "number": 16,
             "horse": "GREAT OF MADRIK",
-            "description": ""
+            "description": "",
+            "performance": "5.3.5.1.2",
+            "gains": 237350,
+            "sex": "M",
+            "age": 7,
+            "trainer": "M. ABRIVARD",
+            "jockey": "S. GUARATO",
+            "driver": "S. GUARATO",
+            "owner": "EC. SIMPLICE",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2875.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             13,

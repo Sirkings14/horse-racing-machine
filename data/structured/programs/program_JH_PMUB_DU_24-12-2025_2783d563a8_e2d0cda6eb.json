@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_24-12-2025_2783d563a8_e2d0cda6eb.txt",
-    "parsed_at": "2026-10-08T10:35:45.735718Z",
+    "parsed_at": "2026-10-08T23:52:19.625294Z",
     "date": "2025-12-24",
     "race": {
         "race_name": "PRIX DE CRAON",
@@ -16,84 +16,197 @@
         {
             "number": 1,
             "horse": "CHITCHAT",
-            "description": ""
+            "description": "",
+            "performance": "0.3.1.0.2",
+            "gains": 195632,
+            "trainer": "D.WAJERSTEN",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "St. SOFO",
+            "listed_chrono": "1.11.10"
         },
         {
             "number": 2,
             "horse": "CHESTNUT",
-            "description": ""
+            "description": "",
+            "performance": "D.1.D.2.8",
+            "gains": 195844,
+            "trainer": "D. REDEN",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "POP N PAULA AB",
+            "listed_chrono": "1.11.20"
         },
         {
             "number": 3,
             "horse": "JIZOU D'ETANG",
-            "description": ""
+            "description": "",
+            "performance": "D.1.2.7.D",
+            "gains": 200250,
+            "trainer": "CH. BIGEON",
+            "jockey": "D. BONNE",
+            "driver": "D. BONNE",
+            "owner": "F.L. ADAM",
+            "listed_chrono": "1.10.50"
         },
         {
             "number": 4,
             "horse": "JIBI DU FRUITIER",
-            "description": ""
+            "description": "",
+            "performance": "7.9.5.6.3",
+            "gains": 205945,
+            "trainer": "CH.M. BRUNEAU",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "M. BRUNEAU",
+            "listed_chrono": "1.10.30"
         },
         {
             "number": 5,
             "horse": "MISTER DONALD",
-            "description": ""
+            "description": "",
+            "performance": "5.0.6.D.0",
+            "gains": 215204,
+            "trainer": "L.CL. ABRIVARD",
+            "jockey": "M. GRUMETZ",
+            "driver": "M. GRUMETZ",
+            "owner": "EC. J.P BARJON",
+            "listed_chrono": "1.10.90"
         },
         {
             "number": 6,
             "horse": "MATEO DI QUATTRO",
-            "description": ""
+            "description": "",
+            "performance": "6.4.7.5.2",
+            "gains": 217240,
+            "trainer": "J. UNTERSTEINER",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "P. BRONSMAN AB",
+            "listed_chrono": "1.12.70"
         },
         {
             "number": 7,
             "horse": "DRAGOWSKI",
-            "description": ""
+            "description": "",
+            "performance": "2.4.1.6.3",
+            "gains": 222266,
+            "trainer": "H.E. BONDO",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "VAPORINO SRL",
+            "listed_chrono": "1.11.40"
         },
         {
             "number": 8,
             "horse": "JOLIVERT DU GERS",
-            "description": ""
+            "description": "",
+            "performance": "4.2.2.5.6",
+            "gains": 222855,
+            "trainer": "M. ABRIVARD",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "EC. J.P. BRAGATO",
+            "listed_chrono": "1.10.50"
         },
         {
             "number": 9,
             "horse": "L.A.BOKO",
-            "description": ""
+            "description": "",
+            "performance": "D.D.6.8.5",
+            "gains": 225864,
+            "trainer": "D. LOCQUENEUX",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "St. YNWA AB",
+            "listed_chrono": "1.11.70"
         },
         {
             "number": 10,
             "horse": "JE TE CHERCHE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.8.2.1",
+            "gains": 227900,
+            "trainer": "Théo DUVALDESTIN",
+            "jockey": "THEO DUVALDESTIN",
+            "driver": "THEO DUVALDESTIN",
+            "owner": "Théo DUVALDESTIN",
+            "listed_chrono": "1.09.30"
         },
         {
             "number": 11,
             "horse": "DOWHATYOUDODOWELL",
-            "description": ""
+            "description": "",
+            "performance": "9.5.A.4.6",
+            "gains": 229703,
+            "trainer": "H.E. BONDO",
+            "jockey": "E. RAFFIN",
+            "driver": "E. RAFFIN",
+            "owner": "STU. HOLE IN ONE",
+            "listed_chrono": "1.10.80"
         },
         {
             "number": 12,
             "horse": "GREG DE NIRO",
-            "description": ""
+            "description": "",
+            "performance": "7.3.6.5.0",
+            "gains": 235560,
+            "trainer": "G. CURENS",
+            "jockey": "J.CH. PITON",
+            "driver": "J.CH. PITON",
+            "owner": "J. DAUSSY",
+            "listed_chrono": "1.12.80"
         },
         {
             "number": 13,
             "horse": "GLAMOUR YOMA",
-            "description": ""
+            "description": "",
+            "performance": "0.8.0.6.7",
+            "gains": 240505,
+            "trainer": "P.J. CORDEAU",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "J. MARTINEZ",
+            "listed_chrono": "1.10.20"
         },
         {
             "number": 14,
             "horse": "JUST DE L'OISON",
-            "description": ""
+            "description": "",
+            "performance": "1.1.D.D.2",
+            "gains": 249090,
+            "trainer": "TH. DUVALDESTIN",
+            "jockey": "G.A. POU POU",
+            "driver": "G.A. POU POU",
+            "owner": "J.CL.B. LECLERC",
+            "listed_chrono": "1.11.80"
         },
         {
             "number": 15,
             "horse": "CARLOFORTE FONT",
-            "description": ""
+            "description": "",
+            "performance": "4.2.5.3.3",
+            "gains": 253006,
+            "trainer": "J. ENGWERDA",
+            "jockey": "J. VAN RIJN",
+            "driver": "J. VAN RIJN",
+            "owner": "P. V. DER RASIEREN",
+            "listed_chrono": "1.11.10"
         },
         {
             "number": 16,
             "horse": "GLOBAL DUBHE",
-            "description": ""
+            "description": "",
+            "performance": "4.1.4.6.2",
+            "gains": 254240,
+            "trainer": "D.REDEN",
+            "jockey": "P.PH. PLOQUIN",
+            "driver": "P.PH. PLOQUIN",
+            "owner": "SRF STABLE",
+            "listed_chrono": "1.09.80"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             10,

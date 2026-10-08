@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_11-08-2026_d644f6e69a_718276ad99.txt",
-    "parsed_at": "2026-10-08T10:35:43.796089Z",
+    "parsed_at": "2026-10-08T23:52:16.853776Z",
     "date": "2026-08-11",
     "race": {
         "race_name": "PRIX DES COLLECTIVITES LOCALES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CHAUMIERE DE PRE",
-            "description": ""
+            "description": "",
+            "performance": "0.6.1.1.5",
+            "gains": 100243,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.BIETOLINI",
+            "jockey": "PC.BOUDOT",
+            "driver": "PC.BOUDOT",
+            "owner": "KL.RAMSEY",
+            "weight": 61.0,
+            "draw": 10
         },
         {
             "number": 2,
             "horse": "ZELORO",
-            "description": ""
+            "description": "",
+            "performance": "1.4.4.2.1",
+            "gains": 80517,
+            "sex": "H",
+            "age": 5,
+            "trainer": "P&J.BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "STALL PERLEN AB",
+            "weight": 60.5,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "DOUBLE UP",
-            "description": ""
+            "description": "",
+            "performance": "3.6.9.0.7",
+            "gains": 42755,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "I.CORBANI",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "SEONA",
-            "description": ""
+            "description": "",
+            "performance": "5.4.4.0.2",
+            "gains": 98713,
+            "sex": "F",
+            "age": 4,
+            "trainer": "FR.MONFORT",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "A.GRAY",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 5,
             "horse": "ROI DE L'AIR",
-            "description": ""
+            "description": "",
+            "performance": "1.7.2.1.6",
+            "gains": 122827,
+            "sex": "M",
+            "age": 6,
+            "trainer": "J.BOISNARD",
+            "jockey": "H.LEBOUC",
+            "driver": "H.LEBOUC",
+            "owner": "G.BEN LASSIN",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "FEARLESS CHEETAH",
-            "description": ""
+            "description": "",
+            "performance": "0.6.1.2.6",
+            "gains": 97439,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F.BRESSON",
+            "jockey": "J.CLAUDIC",
+            "driver": "J.CLAUDIC",
+            "owner": "F.F.BRESSON",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 7,
             "horse": "EVERSTAR",
-            "description": ""
+            "description": "",
+            "performance": "3.3.0.7.6",
+            "gains": 134334,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.GADBIN",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "V.GADBIN",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "SAINT AQUILIN",
-            "description": ""
+            "description": "",
+            "performance": "1.9.4.1.1",
+            "gains": 118675,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.BRAEM",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "REPRO-ZAMAN",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "STANGHELI",
-            "description": ""
+            "description": "",
+            "performance": "2.0.5.0.0",
+            "gains": 124558,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A&L.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "Y.BURRUS",
+            "weight": 54.5,
+            "draw": 13
         },
         {
             "number": 10,
             "horse": "TRUE TEDESCO",
-            "description": ""
+            "description": "",
+            "performance": "8.0.7.0.0",
+            "gains": 135820,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.SUBORICS",
+            "jockey": "B.MARIE",
+            "driver": "B.MARIE",
+            "owner": "ST.MYDLINGHOVEN",
+            "weight": 54.0,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "MEMPHIS TENNESSEE",
-            "description": ""
+            "description": "",
+            "performance": "6.9.0.0.0",
+            "gains": 78113,
+            "sex": "M",
+            "age": 5,
+            "trainer": "Y.BONNEFOY",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "LUGDUNUM RACING 3",
+            "weight": 54.0,
+            "draw": 12
         },
         {
             "number": 12,
             "horse": "STRAKO",
-            "description": ""
+            "description": "",
+            "performance": "1.0.1.6.1",
+            "gains": 131467,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.WATTEL",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "A.WATTEL",
+            "weight": 53.5,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "VOLCANO",
-            "description": ""
+            "description": "",
+            "performance": "0.7.5.0.1",
+            "gains": 28821,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.SCHUTZ",
+            "jockey": "A.BADEL",
+            "driver": "A.BADEL",
+            "owner": "M.MOTSCHMANN",
+            "weight": 53.0,
+            "draw": 14
         },
         {
             "number": 14,
             "horse": "ZACAPO",
-            "description": ""
+            "description": "",
+            "performance": "6.6.1.9.2",
+            "gains": 113956,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.BOUTIN",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "ECURIE NICOLATO",
+            "weight": 52.5,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "MY QUEEN",
-            "description": ""
+            "description": "",
+            "performance": "0.3.6.3.2",
+            "gains": 50501,
+            "sex": "F",
+            "age": 4,
+            "trainer": "PIER.MENARD",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "S.AKNIN",
+            "weight": 52.5,
+            "draw": 15
         },
         {
             "number": 16,
             "horse": "AVANT NOUS",
-            "description": ""
+            "description": "",
+            "performance": "4.3.2.2.4",
+            "gains": 37609,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.SMRCZEK",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "ST. BURG NANSTEIN",
+            "weight": 52.5,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

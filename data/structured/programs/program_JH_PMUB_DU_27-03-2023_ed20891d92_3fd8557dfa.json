@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_27-03-2023_ed20891d92_3fd8557dfa.txt",
-    "parsed_at": "2026-10-08T10:35:46.029089Z",
+    "parsed_at": "2026-10-08T23:52:20.052653Z",
     "date": "2023-03-27",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "MUBAALEGH",
-            "description": ""
+            "description": "",
+            "performance": "3.4.7.0.2",
+            "gains": 178714,
+            "sex": "H",
+            "age": 9,
+            "trainer": "C.SOUMILLON",
+            "jockey": "JV.TOUX",
+            "driver": "JV.TOUX",
+            "owner": "JV.TOUX",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "LESSLEPASSER",
-            "description": ""
+            "description": "",
+            "performance": "1.3.2.2.2",
+            "gains": 100380,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.BOUTIN",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "EC. CLUB DES ETOILES",
+            "weight": 59.5,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "O TRASNO",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.3.2",
+            "gains": 112230,
+            "sex": "M",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "B.MONTZEY",
+            "driver": "B.MONTZEY",
+            "owner": "BLOKE EUR. MOBI.",
+            "weight": 59.5,
+            "draw": 6
         },
         {
             "number": 4,
             "horse": "TERRITORYWAR",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.4.9",
+            "gains": 39310,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "M.DEL.SANCHEZ",
+            "driver": "M.DEL.SANCHEZ",
+            "owner": "CUA. MEDITERRANEO",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "IMPITOYABLE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.5.5.2",
+            "gains": 65440,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "EC. BERND & TORSTEN",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 6,
             "horse": "BACCHILIDE",
-            "description": ""
+            "description": "",
+            "performance": "7.3.1.6.3",
+            "gains": 49060,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "M.GUARNIERI",
+            "driver": "M.GUARNIERI",
+            "owner": "P.FERRARIO",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 7,
             "horse": "GORDON BREAK",
-            "description": ""
+            "description": "",
+            "performance": "7.6.8.3.1",
+            "gains": 55610,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "EC. TLV",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 8,
             "horse": "TARIDA",
-            "description": ""
+            "description": "",
+            "performance": "2.0.0.2.1",
+            "gains": 135670,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "L.FLOC'H",
+            "weight": 57.5,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "CHILLI BOY",
-            "description": ""
+            "description": "",
+            "performance": "4.2.0.1.3",
+            "gains": 33940,
+            "sex": "M",
+            "age": 4,
+            "trainer": "R.MANGIONE",
+            "jockey": "G.ALIMPINISIS",
+            "driver": "G.ALIMPINISIS",
+            "owner": "A.DIMITROPOULOS",
+            "weight": 56.0,
+            "draw": 1
         },
         {
             "number": 10,
             "horse": "BABA SIM",
-            "description": ""
+            "description": "",
+            "performance": "9.0.0.0.0",
+            "gains": 55750,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "J.GOOSSENS",
+            "driver": "J.GOOSSENS",
+            "owner": "TRIPLE B. STABLES",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "HY DREAM",
-            "description": ""
+            "description": "",
+            "performance": "1.6.0.4.9",
+            "gains": 75970,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.CRASTUS",
+            "jockey": "R.CHOTARD",
+            "driver": "R.CHOTARD",
+            "owner": "JP.DELAPORTE",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 12,
             "horse": "PILE OU FACE",
-            "description": ""
+            "description": "",
+            "performance": "1.8.8.0.8",
+            "gains": 71630,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.BOISSEAU",
+            "jockey": "S.MORINEAU",
+            "driver": "S.MORINEAU",
+            "owner": "F.BABISKI",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "MONSIEURVALCHOP",
-            "description": ""
+            "description": "",
+            "performance": "4.2.5.2.6",
+            "gains": 40050,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "J.PARIZE",
+            "driver": "J.PARIZE",
+            "owner": "G.SOMME",
+            "weight": 53.5,
+            "draw": 13
         },
         {
             "number": 14,
             "horse": "CRISTAL MARVELOUS",
-            "description": ""
+            "description": "",
+            "performance": "3.6.8.4.1",
+            "gains": 122440,
+            "sex": "F",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "CH.PLISSON",
+            "weight": 53.0,
+            "draw": 8
         },
         {
             "number": 15,
             "horse": "ISMAEL PAINT",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.6.7",
+            "gains": 41925,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.GUTIERREZ VAL",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "CH.PLISSON",
+            "weight": 53.0,
+            "draw": 10
         },
         {
             "number": 16,
             "horse": "FAVARITX",
-            "description": ""
+            "description": "",
+            "performance": "6.8.2.0.9",
+            "gains": 65490,
+            "sex": "M",
+            "age": 5,
+            "trainer": "G.MEURY",
+            "jockey": "M.DEL.SANCHEZ",
+            "driver": "M.DEL.SANCHEZ",
+            "owner": "CUA. MEDITERRANEO",
+            "weight": 51.0,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

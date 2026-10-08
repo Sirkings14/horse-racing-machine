@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_08-06-2025_3360023822_e208d8f42d.txt",
-    "parsed_at": "2026-10-08T10:35:43.494379Z",
+    "parsed_at": "2026-10-08T23:52:16.382978Z",
     "date": "2025-06-08",
     "race": {
         "race_name": "PRIX DU PALAIS DES GLACES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DIVINE CHRISNAT",
-            "description": ""
+            "description": "",
+            "performance": "0.1.4.7.2",
+            "gains": 115160,
+            "sex": "F",
+            "age": 5,
+            "trainer": "CH.PLISSON",
+            "jockey": "R. PEHU",
+            "driver": "R. PEHU",
+            "owner": "M.PEHU",
+            "weight": 61.5,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "DIVIDE AND RULE",
-            "description": ""
+            "description": "",
+            "performance": "1.6.7.7.0",
+            "gains": 70610,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JP.GAUVIN",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "J.ROHR",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "AVENUE MONTAIGNE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.3.3",
+            "gains": 84410,
+            "sex": "F",
+            "age": 4,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "M. GUYON",
+            "driver": "M. GUYON",
+            "owner": "GEMINI STUD",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "DONAMAY",
-            "description": ""
+            "description": "",
+            "performance": "7.6.2.5.4",
+            "gains": 29115,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.SUBORICS",
+            "jockey": "H. BOUTIN",
+            "driver": "H. BOUTIN",
+            "owner": "ST. PHILLIP I",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 5,
             "horse": "ALVA",
-            "description": ""
+            "description": "",
+            "performance": "1.5.5.6.5",
+            "gains": 98820,
+            "sex": "F",
+            "age": 5,
+            "trainer": "F.CHAPPET",
+            "jockey": "C. DEMURO",
+            "driver": "C. DEMURO",
+            "owner": "A.GILIBERT",
+            "weight": 58.5,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "QUALIXIA",
-            "description": ""
+            "description": "",
+            "performance": "2.6.2.9.9",
+            "gains": 33700,
+            "sex": "F",
+            "age": 4,
+            "trainer": "P.DECOUZ",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "EC.SKYMARC FARM",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 7,
             "horse": "SIGNORA BELLISSIMA",
-            "description": ""
+            "description": "",
+            "performance": "2.7.5.4.0",
+            "gains": 32795,
+            "sex": "F",
+            "age": 5,
+            "trainer": "N.CAULLERY",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "S.DUMONT",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 8,
             "horse": "UM WADI",
-            "description": ""
+            "description": "",
+            "performance": "4.7.6.9.5",
+            "gains": 17640,
+            "sex": "F",
+            "age": 4,
+            "trainer": "ED.MONFORT",
+            "jockey": "C. SOUMILLON",
+            "driver": "C. SOUMILLON",
+            "owner": "AL SHAQAB RACING",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 9,
             "horse": "AVERSA",
-            "description": ""
+            "description": "",
+            "performance": "4.6.6.4.2",
+            "gains": 145370,
+            "sex": "F",
+            "age": 5,
+            "trainer": "N.CAULLERY",
+            "jockey": "R. THOMAS",
+            "driver": "R. THOMAS",
+            "owner": "JP.VAN. HEEDE",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 10,
             "horse": "TRUE VALUE",
-            "description": ""
+            "description": "",
+            "performance": "3.1.9.0.8",
+            "gains": 91715,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.B. BARBE",
+            "jockey": "F. VALLE SKAR",
+            "driver": "F. VALLE SKAR",
+            "owner": "C.B. BARBE",
+            "weight": 55.5,
+            "draw": 2
         },
         {
             "number": 11,
             "horse": "ALLURRE",
-            "description": ""
+            "description": "",
+            "performance": "9.6.1.0.7",
+            "gains": 115410,
+            "sex": "F",
+            "age": 6,
+            "trainer": "M.CESANDRI",
+            "jockey": "D PROVOST",
+            "driver": "D PROVOST",
+            "owner": "M.RISI/JC.RAVIER",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 12,
             "horse": "CHICA DE CIUDAD",
-            "description": ""
+            "description": "",
+            "performance": "2.0.1.1.5",
+            "gains": 40720,
+            "sex": "F",
+            "age": 4,
+            "trainer": "P. DE CHEVIGNY",
+            "jockey": "A. BARON",
+            "driver": "A. BARON",
+            "owner": "P.DE CHEVIGNY",
+            "weight": 55.5,
+            "draw": 1
         },
         {
             "number": 13,
             "horse": "ATLANTIC WAYS",
-            "description": ""
+            "description": "",
+            "performance": "0.1.2.7.2",
+            "gains": 78660,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "A. POUCHIN",
+            "driver": "A. POUCHIN",
+            "owner": "M.KELLER",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "STELLANIA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.8.1.2",
+            "gains": 48130,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "C. LECOEUVRE",
+            "driver": "C. LECOEUVRE",
+            "owner": "JP.DUBOIS",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 15,
             "horse": "REMAMA",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.4.5",
+            "gains": 32063,
+            "sex": "F",
+            "age": 5,
+            "trainer": "BR.BEAUNEZ",
+            "jockey": "T. PICCONE",
+            "driver": "T. PICCONE",
+            "owner": "P.WALTER",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 16,
             "horse": "EVER KATE",
-            "description": ""
+            "description": "",
+            "performance": "8.1.1.3.9",
+            "gains": 24400,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F.BRESSON",
+            "jockey": "F. VERON",
+            "driver": "F. VERON",
+            "owner": "P.STEIN",
+            "weight": 54.5,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

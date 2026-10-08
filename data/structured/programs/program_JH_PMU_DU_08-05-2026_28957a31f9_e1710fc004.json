@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_08-05-2026_28957a31f9_e1710fc004.txt",
-    "parsed_at": "2026-10-08T10:35:46.777876Z",
+    "parsed_at": "2026-10-08T23:52:21.149874Z",
     "date": "2026-05-08",
     "race": {
         "race_name": "PRIX HUBERT BAGUENAULT DE PUCHESSE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DIVIDE AND RULE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.0.7.4",
+            "gains": 110792,
+            "sex": "F",
+            "age": 5,
+            "trainer": "JP.GAUVIN",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "J.ROHR",
+            "weight": 60.0,
+            "draw": 8
         },
         {
             "number": 2,
             "horse": "THOR LIGHTNING",
-            "description": ""
+            "description": "",
+            "performance": "1.5.3.2.7",
+            "gains": 83084,
+            "sex": "M",
+            "age": 5,
+            "trainer": "S.RICHTER",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "T.JANDER",
+            "weight": 60.0,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "TASHANKA",
-            "description": ""
+            "description": "",
+            "performance": "6.1.5.1.2",
+            "gains": 89534,
+            "sex": "M",
+            "age": 5,
+            "trainer": "J.ANDREU",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "JC.SEROUL",
+            "weight": 59.0,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "RIASSOU",
-            "description": ""
+            "description": "",
+            "performance": "7.1.1.5.5",
+            "gains": 59033,
+            "sex": "F",
+            "age": 5,
+            "trainer": "P.SIGAUD",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "P.SIGAUD",
+            "weight": 59.0,
+            "draw": 5
         },
         {
             "number": 5,
             "horse": "CREW DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "6.0.2.0.6",
+            "gains": 322552,
+            "sex": "H",
+            "age": 9,
+            "trainer": "C.BOUTIN",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "EC. NICOLATO",
+            "weight": 58.0,
+            "draw": 13
         },
         {
             "number": 6,
             "horse": "EVERSTAR",
-            "description": ""
+            "description": "",
+            "performance": "7.6.6.2.1",
+            "gains": 128916,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.GADBIN",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "V.GADBIN",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "HAZA",
-            "description": ""
+            "description": "",
+            "performance": "4.1.5.3.9",
+            "gains": 78491,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.COELHO",
+            "jockey": "F.LEFEBVRE",
+            "driver": "F.LEFEBVRE",
+            "owner": "A.COELHO",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 8,
             "horse": "ZIGGY STAR",
-            "description": ""
+            "description": "",
+            "performance": "7.4.0.9.9",
+            "gains": 64194,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "EC. JP.BONARDEL",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "ACTO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.2.5.0",
+            "gains": 66266,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.CHAPPET",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "L.MINEO",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "SIR CRATER",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.6.6",
+            "gains": 57522,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.GAVILAN",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "B.SANTIAGO",
+            "weight": 55.5,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "AQUITAIN",
-            "description": ""
+            "description": "",
+            "performance": "1.2.0.9.3",
+            "gains": 33996,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.GAVILAN",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "E.HARIVEL",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "JOH SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "8.4.5.6.0",
+            "gains": 139294,
+            "sex": "F",
+            "age": 7,
+            "trainer": "P.SIGAUD",
+            "jockey": "A.MOLINS",
+            "driver": "A.MOLINS",
+            "owner": "P.SIGAUD",
+            "weight": 55.0,
+            "draw": 3
         },
         {
             "number": 13,
             "horse": "PASSINGSHOT",
-            "description": ""
+            "description": "",
+            "performance": "0.9.0.4.3",
+            "gains": 66523,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.SCAND.LACAILLE",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "M.BLANC",
+            "weight": 54.5,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "NOFIX",
-            "description": ""
+            "description": "",
+            "performance": "7.9.9.0.3",
+            "gains": 49533,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.ESCUDER",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "WAPI",
-            "description": ""
+            "description": "",
+            "performance": "2.5.2.0.9",
+            "gains": 56501,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "AL.JACQ/C.BERQUIER",
+            "weight": 54.0,
+            "draw": 11
         },
         {
             "number": 16,
             "horse": "ZACAPO",
-            "description": ""
+            "description": "",
+            "performance": "2.3.1.2.4",
+            "gains": 105184,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.BOUTIN",
+            "jockey": "J.CLAUDIC",
+            "driver": "J.CLAUDIC",
+            "owner": "EC. NICOLATO",
+            "weight": 53.5,
+            "draw": 7
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_15-01-2025_351ae688ee_3d51a8c944.txt",
-    "parsed_at": "2026-10-08T10:35:44.264925Z",
+    "parsed_at": "2026-10-08T23:52:17.509741Z",
     "date": "2025-01-15",
     "race": {
         "race_name": "PRIX DE CANNES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "AMERICAN FLAG",
-            "description": ""
+            "description": "",
+            "performance": "6.5.4.0.8",
+            "gains": 145635,
+            "sex": "H",
+            "age": 5,
+            "trainer": "H.JOURNIAC",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "Y.BARBEROT",
+            "weight": 62.0,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "HAVOC",
-            "description": ""
+            "description": "",
+            "performance": "8.1.4.6.5",
+            "gains": 182948,
+            "sex": "M",
+            "age": 7,
+            "trainer": "E.HARDOUIN",
+            "jockey": "M.RULEC",
+            "driver": "M.RULEC",
+            "owner": "C.FOELLER",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "VENTS CONTRAIRES",
-            "description": ""
+            "description": "",
+            "performance": "2.5.0.7.8",
+            "gains": 177456,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.GUYON",
+            "jockey": "FX.WEISSMEIER",
+            "driver": "FX.WEISSMEIER",
+            "owner": "TURF CLUB BADEN",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 4,
             "horse": "LOU MAN",
-            "description": ""
+            "description": "",
+            "performance": "1.0.7.2.1",
+            "gains": 121140,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.CRASTUS",
+            "jockey": "B.RE-SCANDELLA",
+            "driver": "B.RE-SCANDELLA",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 5,
             "horse": "GRAND BALCON",
-            "description": ""
+            "description": "",
+            "performance": "2.1.3.0.0",
+            "gains": 113570,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.BACHELOT",
+            "jockey": "J.CARAYON",
+            "driver": "J.CARAYON",
+            "owner": "BAIE DES ANGES",
+            "weight": 57.0,
+            "draw": 16
         },
         {
             "number": 6,
             "horse": "CHARLESQUINT",
-            "description": ""
+            "description": "",
+            "performance": "0.6.0.0.0",
+            "gains": 229325,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.DEMURO",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "MJ.GOETSCHY",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 7,
             "horse": "GAIDAR",
-            "description": ""
+            "description": "",
+            "performance": "0.1.4.4.1",
+            "gains": 84870,
+            "sex": "H",
+            "age": 6,
+            "trainer": "F.VERON",
+            "jockey": "G.MOSSE",
+            "driver": "G.MOSSE",
+            "owner": "F.AMAR",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "FORCE TRANQUILLE",
-            "description": ""
+            "description": "",
+            "performance": "3.7.7.3.1",
+            "gains": 93090,
+            "sex": "F",
+            "age": 6,
+            "trainer": "H.BOUTIN",
+            "jockey": "R.CHOTARD",
+            "driver": "R.CHOTARD",
+            "owner": "JP.DELAPORTE",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 9,
             "horse": "USER KINDLY",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.5.0",
+            "gains": 81882,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "E.MIKHALIDES",
+            "driver": "E.MIKHALIDES",
+            "owner": "B.CASTELLI",
+            "weight": 54.5,
+            "draw": 13
         },
         {
             "number": 10,
             "horse": "ALPAGE",
-            "description": ""
+            "description": "",
+            "performance": "1.0.6.6.3",
+            "gains": 72010,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.PACAUT",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N..TEMAM",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "DENIA",
-            "description": ""
+            "description": "",
+            "performance": "0.8.8.1.3",
+            "gains": 117940,
+            "sex": "F",
+            "age": 7,
+            "trainer": "A.ORANI",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "M.NIKITAS",
+            "weight": 54.0,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "LEPARD",
-            "description": ""
+            "description": "",
+            "performance": "5.1.7.7.0",
+            "gains": 75060,
+            "sex": "M",
+            "age": 6,
+            "trainer": "B.MARIE",
+            "jockey": "S.LABATE",
+            "driver": "S.LABATE",
+            "owner": "C.LEONI",
+            "weight": 54.0,
+            "draw": 11
         },
         {
             "number": 13,
             "horse": "RIO D'OCTOBRE",
-            "description": ""
+            "description": "",
+            "performance": "6.8.0.6.0",
+            "gains": 73180,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B.HOBART",
+            "jockey": "P.AZZOPARDI",
+            "driver": "P.AZZOPARDI",
+            "owner": "P.AZZOPARDI",
+            "weight": 53.0,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "SAINT HELLIER",
-            "description": ""
+            "description": "",
+            "performance": "9.5.4.6.8",
+            "gains": 128170,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "C.GRANDIN",
+            "weight": 53.0,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "NOSDARGENT",
-            "description": ""
+            "description": "",
+            "performance": "9.9.8.0.0",
+            "gains": 222223,
+            "sex": "H",
+            "age": 10,
+            "trainer": "P.REMOUE",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "B.GIRAUDON",
+            "weight": 52.5,
+            "draw": 2
         },
         {
             "number": 16,
             "horse": "KHOCHENKO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.7",
+            "gains": 300570,
+            "sex": "H",
+            "age": 10,
+            "trainer": "M. MICHEL",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "JL.BOUYENVAL",
+            "weight": 52.5,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

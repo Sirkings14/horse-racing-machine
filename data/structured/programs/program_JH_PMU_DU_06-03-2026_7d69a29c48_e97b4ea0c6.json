@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_06-03-2026_7d69a29c48_e97b4ea0c6.txt",
-    "parsed_at": "2026-10-08T10:35:46.748861Z",
+    "parsed_at": "2026-10-08T23:52:21.109651Z",
     "date": "2026-03-06",
     "race": {
         "race_name": "ATTELE",
@@ -16,69 +16,161 @@
         {
             "number": 1,
             "horse": "HORIZON D'EYMY",
-            "description": ""
+            "description": "",
+            "performance": "0.D.D.4.3",
+            "gains": 219255,
+            "trainer": "C. DE SOETE",
+            "jockey": "K. DEPUYDT",
+            "driver": "K. DEPUYDT",
+            "owner": "K.MANDERLIER",
+            "listed_chrono": "1.10.90"
         },
         {
             "number": 2,
             "horse": "HIDALGO DE VARENNE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.3.1.4",
+            "gains": 222880,
+            "trainer": "E. LELIEVRE",
+            "jockey": "E. LELIEVRE",
+            "driver": "E. LELIEVRE",
+            "owner": "E. LELIEVRE",
+            "listed_chrono": "1.12.40"
         },
         {
             "number": 3,
             "horse": "GOODMORNING CHARLY",
-            "description": ""
+            "description": "",
+            "performance": "1.3.5.8.4",
+            "gains": 224095,
+            "trainer": "B. OLICARD",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "M. MOLINARO",
+            "listed_chrono": "1.12.00"
         },
         {
             "number": 4,
             "horse": "IRON JET",
-            "description": ""
+            "description": "",
+            "performance": "7.0.4.D.0",
+            "gains": 223372,
+            "trainer": "B. MICHARDIERE",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "EC.HUNTER VALLEY",
+            "listed_chrono": "1.12.00"
         },
         {
             "number": 5,
             "horse": "JACOMO BELLO",
-            "description": ""
+            "description": "",
+            "performance": "3.3.3.5.3",
+            "gains": 214710,
+            "trainer": "TH. LEVESQUE",
+            "jockey": "R. LAMY",
+            "driver": "R. LAMY",
+            "owner": "EC. Thomas LEVESQUE",
+            "listed_chrono": "1.09.70"
         },
         {
             "number": 6,
             "horse": "JANKO HAUFOR",
-            "description": ""
+            "description": "",
+            "performance": "0.1.2.1.0",
+            "gains": 220630,
+            "trainer": "CH. BIGEON",
+            "jockey": "D. BONNE",
+            "driver": "D. BONNE",
+            "owner": "EC. Christian BIGEON",
+            "listed_chrono": "1.11.40"
         },
         {
             "number": 7,
             "horse": "GRAZIELA D'EL",
-            "description": ""
+            "description": "",
+            "performance": "0.6.0.5.D",
+            "gains": 220480,
+            "trainer": "F. HEON",
+            "jockey": "GUILLAUME MARTIN",
+            "driver": "GUILLAUME MARTIN",
+            "owner": "F. HEON",
+            "listed_chrono": "1.11.30"
         },
         {
             "number": 8,
             "horse": "IOUPY TOLLEVILLE",
-            "description": ""
+            "description": "",
+            "performance": "7.0.7.1.6",
+            "gains": 211505,
+            "trainer": "E. SZIRMAY",
+            "jockey": "F. OUVRIE",
+            "driver": "F. OUVRIE",
+            "owner": "E. SZIRMAY",
+            "listed_chrono": "1.12.00"
         },
         {
             "number": 9,
             "horse": "JAGUAR DU FAN",
-            "description": ""
+            "description": "",
+            "performance": "4.2.1.2.5",
+            "gains": 210095,
+            "trainer": "CH.A. MARY",
+            "jockey": "A. BARRIER",
+            "driver": "A. BARRIER",
+            "owner": "G. BERTHAULT",
+            "listed_chrono": "1.12.00"
         },
         {
             "number": 10,
             "horse": "IMHOTEP FROMENTRO",
-            "description": ""
+            "description": "",
+            "performance": "7.4.2.2.0",
+            "gains": 204025,
+            "trainer": "N. RAIMBEAUX",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "EC. LEOMY",
+            "listed_chrono": "1.11.20"
         },
         {
             "number": 11,
             "horse": "JOS MAZA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.0.1.1",
+            "gains": 201878,
+            "trainer": "M. ROTHENGATTER",
+            "jockey": "M. ROTHENGATTER",
+            "driver": "M. ROTHENGATTER",
+            "owner": "SCHA. LOGISTICS",
+            "listed_chrono": "1.11.30"
         },
         {
             "number": 12,
             "horse": "GASSMAN D'ESSA",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.7.0",
+            "gains": 202350,
+            "trainer": "N. DEVIGNE",
+            "jockey": "G. MONNIER",
+            "driver": "G. MONNIER",
+            "owner": "N. DEVIGNE",
+            "listed_chrono": "1.12.30"
         },
         {
             "number": 13,
             "horse": "JIZOU D'ETANG",
-            "description": ""
+            "description": "",
+            "performance": "5.9.3.8.D",
+            "gains": 211460,
+            "trainer": "CH. BIGEON",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "F.L. ADAM",
+            "listed_chrono": "1.10.50"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

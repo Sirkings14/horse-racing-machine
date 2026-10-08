@@ -1,0 +1,92 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_08-10-2026_R1_713efe0916_737360bb66.txt",
+    "parsed_at": "2026-10-08T23:52:22.018233Z",
+    "date": "2026-10-08",
+    "meeting": 1,
+    "track": "SAINT-CLOUD",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                1,
+                5,
+                8
+            ],
+            "winner": 1,
+            "second": 5,
+            "third": 8
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                4,
+                2
+            ],
+            "winner": 4,
+            "second": 2,
+            "third": null
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                3,
+                1,
+                7
+            ],
+            "winner": 3,
+            "second": 1,
+            "third": 7
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                10,
+                8,
+                1,
+                3
+            ],
+            "winner": 10,
+            "second": 8,
+            "third": 1,
+            "fourth": 3
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                2,
+                4,
+                5
+            ],
+            "winner": 2,
+            "second": 4,
+            "third": 5
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                7,
+                11,
+                5,
+                1,
+                6
+            ],
+            "winner": 7,
+            "second": 11,
+            "third": 5,
+            "fourth": 1,
+            "fifth": 6
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                4,
+                8,
+                11
+            ],
+            "winner": 4,
+            "second": 8,
+            "third": 11
+        }
+    ]
+}

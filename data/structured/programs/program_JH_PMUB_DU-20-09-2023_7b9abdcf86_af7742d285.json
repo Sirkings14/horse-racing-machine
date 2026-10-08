@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-20-09-2023_7b9abdcf86_af7742d285.txt",
-    "parsed_at": "2026-10-08T10:35:41.379011Z",
+    "parsed_at": "2026-10-08T23:52:13.441483Z",
     "date": "2023-09-20",
     "race": {
         "race_name": "PRIX DE LA FEDERATION DES CAISSES DE CREDIT MUTUEL DU SUD-EST",
@@ -16,74 +16,215 @@
         {
             "number": 1,
             "horse": "D'AMOUR DE MAGNY",
-            "description": ""
+            "description": "",
+            "performance": "4.6.4.7.2",
+            "gains": 150801,
+            "sex": "H",
+            "age": 10,
+            "trainer": "G. FOURNIGAULT",
+            "jockey": "G. FOURNIGAULT",
+            "driver": "G. FOURNIGAULT",
+            "owner": "Ec. G. FOURNIGAULT",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "HARRY DE SASSY",
-            "description": ""
+            "description": "",
+            "performance": "5.1.D.1.1",
+            "gains": 152900,
+            "sex": "H",
+            "age": 6,
+            "trainer": "F. LAGADEUC",
+            "jockey": "Jules LEROULLEY",
+            "driver": "Jules LEROULLEY",
+            "owner": "M. COLLET",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "HERA D'ATOUT",
-            "description": ""
+            "description": "",
+            "performance": "4.5.5.1.4",
+            "gains": 153340,
+            "sex": "F",
+            "age": 6,
+            "trainer": "N. ENSCH",
+            "jockey": "N. ENSCH",
+            "driver": "N. ENSCH",
+            "owner": "Ec. Gianni FASCELLA",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "FLORALYSE D'AUTHOU",
-            "description": ""
+            "description": "",
+            "performance": "7.6.2.1.D",
+            "gains": 155015,
+            "sex": "F",
+            "age": 8,
+            "trainer": "A. BARRIER",
+            "jockey": "M. VARIN",
+            "driver": "M. VARIN",
+            "owner": "M. VARIN",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "FOX TROT CERISE",
-            "description": ""
+            "description": "",
+            "performance": "7.1.8.7.D",
+            "gains": 155690,
+            "sex": "H",
+            "age": 8,
+            "trainer": "B. RUET",
+            "jockey": "B. RUET",
+            "driver": "B. RUET",
+            "owner": "B. RUET",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "FOREVER D'ARIANE",
-            "description": ""
+            "description": "",
+            "performance": "7.4.0.6.0",
+            "gains": 157610,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. NIVARD",
+            "jockey": "Julien CHAUVIN",
+            "driver": "Julien CHAUVIN",
+            "owner": "Ec. Julien CHAUVIN",
+            "listed_chrono": "1.13.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "FELTENA DE LUBEL",
-            "description": ""
+            "description": "",
+            "performance": "4.5.D.D.3",
+            "gains": 200070,
+            "sex": "F",
+            "age": 8,
+            "trainer": "A. ROZZONI",
+            "jockey": "A. ROZZONI",
+            "driver": "A. ROZZONI",
+            "owner": "Jérémy JEUFFE",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2875.M"
         },
         {
             "number": 8,
             "horse": "GIVE ME CASH",
-            "description": ""
+            "description": "",
+            "performance": "6.1.5.9.D",
+            "gains": 210990,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M. MOTTIER",
+            "jockey": "L. GARCIA",
+            "driver": "L. GARCIA",
+            "owner": "K. GARCIA",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2875.M"
         },
         {
             "number": 9,
             "horse": "FALCO DU DOUET",
-            "description": ""
+            "description": "",
+            "performance": "3.6.7.2.2",
+            "gains": 224110,
+            "sex": "M",
+            "age": 8,
+            "trainer": "T. LE BELLER",
+            "jockey": "J.CH. GERMAIN",
+            "driver": "J.CH. GERMAIN",
+            "owner": "Ec. J-P.R. VILAULT",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2875.M"
         },
         {
             "number": 10,
             "horse": "ECKMUHL JACK",
-            "description": ""
+            "description": "",
+            "performance": "4.4.3.8.4",
+            "gains": 228230,
+            "sex": "H",
+            "age": 9,
+            "trainer": "MARTIN CORMY",
+            "jockey": "MICKAEL CORMY",
+            "driver": "MICKAEL CORMY",
+            "owner": "Ec. du VIEUX CHENE",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 11,
             "horse": "DICK DES MALBERAUX",
-            "description": ""
+            "description": "",
+            "performance": "D.D.0.D.8",
+            "gains": 232080,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J. CUOQ",
+            "jockey": "Y. LAVIGNE",
+            "driver": "Y. LAVIGNE",
+            "owner": "Jean-Claude CACHIA",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2875.M"
         },
         {
             "number": 12,
             "horse": "EDEN JULRY",
-            "description": ""
+            "description": "",
+            "performance": "4.6.2.3.3",
+            "gains": 251230,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A. TINTILLIER",
+            "jockey": "J.P. GAUVIN",
+            "driver": "J.P. GAUVIN",
+            "owner": "Ec. JULRY",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2875.M"
         },
         {
             "number": 13,
             "horse": "FORMI",
-            "description": ""
+            "description": "",
+            "performance": "5.9.8.0.0",
+            "gains": 256045,
+            "sex": "M",
+            "age": 8,
+            "trainer": "L. VERRIERE",
+            "jockey": "A. BONNEFOY",
+            "driver": "A. BONNEFOY",
+            "owner": "Bernard SANCHO",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2875.M"
         },
         {
             "number": 14,
             "horse": "FLICKA JULRY",
-            "description": ""
+            "description": "",
+            "performance": "D.3.1.3.2",
+            "gains": 272650,
+            "sex": "F",
+            "age": 8,
+            "trainer": "J.P. GAUVIN",
+            "jockey": "J.P. GAUVIN",
+            "driver": "J.P. GAUVIN",
+            "owner": "Ec. JULRY",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2875.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-17-01-2025_5e7bfb3b8e_6f8885b440.txt",
-    "parsed_at": "2026-10-08T10:35:41.056260Z",
+    "parsed_at": "2026-10-08T23:52:12.985169Z",
     "date": "2025-01-17",
     "race": {
         "race_name": "PRIX DU PAYS D'OUCHE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "VADIRUM",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.5.6",
+            "gains": 106226,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "M.GEISLER",
+            "driver": "M.GEISLER",
+            "owner": "HJ",
+            "weight": 62.0,
+            "draw": 15
         },
         {
             "number": 2,
             "horse": "KOSAKENZIPFEL",
-            "description": ""
+            "description": "",
+            "performance": "2.9.2.3.9",
+            "gains": 101670,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.PIECHULEK",
+            "jockey": "S.STEINBERG",
+            "driver": "S.STEINBERG",
+            "owner": "ST. WO LAUF. SIE DENN",
+            "weight": 62.0,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "COMBERMERE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.1.7",
+            "gains": 169040,
+            "sex": "H",
+            "age": 9,
+            "trainer": "H.BOUTIN",
+            "jockey": "J.LEROY",
+            "driver": "J.LEROY",
+            "owner": "D.DUMOULIN",
+            "weight": 61.0,
+            "draw": 10
         },
         {
             "number": 4,
             "horse": "KALEO PALACE",
-            "description": ""
+            "description": "",
+            "performance": "4.5.0.6.8",
+            "gains": 83970,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F.VERON",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "RAB. MARIE CLAUDE",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "BOSIOH",
-            "description": ""
+            "description": "",
+            "performance": "8.1.4.2.3",
+            "gains": 248030,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A.CRASTUS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N.TEMAM",
+            "weight": 59.0,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "DEVIL IN THE SKY",
-            "description": ""
+            "description": "",
+            "performance": "6.3.0.0.8",
+            "gains": 75400,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "PH.ALLAIRE",
+            "weight": 57.5,
+            "draw": 3
         },
         {
             "number": 7,
             "horse": "ETERNEL'S BEAUTE",
-            "description": ""
+            "description": "",
+            "performance": "2.5.6.4.1",
+            "gains": 63000,
+            "sex": "F",
+            "age": 4,
+            "trainer": "B.MARIE",
+            "jockey": "G.PANNIER",
+            "driver": "G.PANNIER",
+            "owner": "J.MAHIQUES",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "IDEAL KING",
-            "description": ""
+            "description": "",
+            "performance": "3.9.6.0.0",
+            "gains": 110644,
+            "sex": "H",
+            "age": 8,
+            "trainer": "D.SANTIAGO",
+            "jockey": "V.LUKA",
+            "driver": "V.LUKA",
+            "owner": "LERAM S.R.O.",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "NEKOLETO",
-            "description": ""
+            "description": "",
+            "performance": "1.3.4.0.2",
+            "gains": 66750,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.MEURY",
+            "jockey": "X.BLANCHET",
+            "driver": "X.BLANCHET",
+            "owner": "N.AIKEN",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "BEAUTIFUL MEMORY",
-            "description": ""
+            "description": "",
+            "performance": "1.3.9.0.5",
+            "gains": 70400,
+            "sex": "F",
+            "age": 5,
+            "trainer": "M.FOREST",
+            "jockey": "C&G.HUE & TAUPIN",
+            "driver": "C&G.HUE & TAUPIN",
+            "owner": "K.LAMONARCA",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "MASSIMO",
-            "description": ""
+            "description": "",
+            "performance": "2.0.4.0.1",
+            "gains": 46330,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.CLEMENT",
+            "driver": "N.CLEMENT",
+            "owner": "H.GISI",
+            "weight": 54.5,
+            "draw": 2
         },
         {
             "number": 12,
             "horse": "THIRSTY",
-            "description": ""
+            "description": "",
+            "performance": "8.0.3.4.4",
+            "gains": 108685,
+            "sex": "M",
+            "age": 8,
+            "trainer": "P.REMOUE",
+            "jockey": "A.FOUASSIER",
+            "driver": "A.FOUASSIER",
+            "owner": "G.AU.NORMAND",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 13,
             "horse": "QUALIAND",
-            "description": ""
+            "description": "",
+            "performance": "5.1.4.7.3",
+            "gains": 34070,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "SC THIERRY PIGEON",
+            "weight": 54.0,
+            "draw": 13
         },
         {
             "number": 14,
             "horse": "STEP MORNING",
-            "description": ""
+            "description": "",
+            "performance": "1.0.3.3.1",
+            "gains": 68055,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.VILCHIEN",
+            "jockey": "L.HEB. DE VEYRINAS",
+            "driver": "L.HEB. DE VEYRINAS",
+            "owner": "G.BEILVERT",
+            "weight": 52.5,
+            "draw": 5
         },
         {
             "number": 15,
             "horse": "REVENTADOR",
-            "description": ""
+            "description": "",
+            "performance": "3.4.4.5.5",
+            "gains": 125810,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F.LEFEBVRE",
+            "jockey": "G.COURBOT",
+            "driver": "G.COURBOT",
+            "owner": "EC. CROCODILE",
+            "weight": 51.5,
+            "draw": 11
         },
         {
             "number": 16,
             "horse": "GOLDYWAY DE SAON",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.0.0",
+            "gains": 52940,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.BERGE",
+            "jockey": "A.TINCHON",
+            "driver": "A.TINCHON",
+            "owner": "A.DUPONT",
+            "weight": 51.0,
+            "draw": 8
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

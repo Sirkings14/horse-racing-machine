@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_12-06-2024_27b8094e85_9e12d5c5a3.txt",
-    "parsed_at": "2026-10-08T10:35:43.896376Z",
+    "parsed_at": "2026-10-08T23:52:16.992431Z",
     "date": "2024-06-12",
     "race": {
         "race_name": "PLAT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GENTLEMAN BEAUTY",
-            "description": ""
+            "description": "",
+            "performance": "5.4.6.6.1",
+            "gains": 42000,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "SALABI RACING",
+            "weight": 59.0,
+            "draw": 4
         },
         {
             "number": 2,
             "horse": "DANCE SIOUX",
-            "description": ""
+            "description": "",
+            "performance": "6.2.1.4.2",
+            "gains": 61350,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "P.BARY",
+            "driver": "P.BARY",
+            "owner": "LAGHI FRANCE",
+            "weight": 58.0,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "SILVER FEATHER",
-            "description": ""
+            "description": "",
+            "performance": "4.1.6.9",
+            "gains": 16500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 4,
             "horse": "DARI RIVER",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.1.0",
+            "gains": 30900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "R.SHEPARD",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "SAXON GIRL",
-            "description": ""
+            "description": "",
+            "performance": "5.4.5.1.2",
+            "gains": 27200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "G.TROLLEY DE PREVAUX",
+            "jockey": "TIM.DONWORTH",
+            "driver": "TIM.DONWORTH",
+            "owner": "M.EDWARDS",
+            "weight": 56.5,
+            "draw": 8
         },
         {
             "number": 6,
             "horse": "DURYTHME",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.2",
+            "gains": 24600,
+            "sex": "H",
+            "age": 3,
+            "trainer": "P.BAZIRE",
+            "jockey": "CHR.HEAD",
+            "driver": "CHR.HEAD",
+            "owner": "FREDERIC HEAD",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 7,
             "horse": "NICE SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "6.7.3.1.3",
+            "gains": 22800,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "CHR.HEAD",
+            "driver": "CHR.HEAD",
+            "owner": "M.MBACKE",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "CONCERTATION",
-            "description": ""
+            "description": "",
+            "performance": "4.6.4.2.2",
+            "gains": 35600,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "FAMILLE MOUSSAC",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 9,
             "horse": "BAGGALA",
-            "description": ""
+            "description": "",
+            "performance": "1.4.2",
+            "gains": 17400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HS. DU LOGIS ST. GERM",
+            "weight": 55.0,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "GOLDEN ROCK",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4",
+            "gains": 6750,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "V.DISSAUX",
+            "driver": "V.DISSAUX",
+            "owner": "M.HOVELACQUE",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 11,
             "horse": "ATLANTIC WAYS",
-            "description": ""
+            "description": "",
+            "performance": "4.2.6.5.3",
+            "gains": 54050,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "S.KUMIN",
+            "weight": 54.0,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "TRUE VALUE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.6.0.1",
+            "gains": 39340,
+            "sex": "F",
+            "age": 3,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "C.B.BARBE",
+            "driver": "C.B.BARBE",
+            "owner": "C.B. BARBE",
+            "weight": 54.0,
+            "draw": 13
         },
         {
             "number": 13,
             "horse": "POTEMKINE",
-            "description": ""
+            "description": "",
+            "performance": "1.8.8",
+            "gains": 10500,
+            "sex": "H",
+            "age": 3,
+            "trainer": "J.CLAUDIC",
+            "jockey": "G.DOLEUZE",
+            "driver": "G.DOLEUZE",
+            "owner": "G.DOLEUZE",
+            "weight": 54.0,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "ROSE ACADEMY",
-            "description": ""
+            "description": "",
+            "performance": "8.5.5.2.5",
+            "gains": 36750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.TRULLIER",
+            "jockey": "X.BLANCHET",
+            "driver": "X.BLANCHET",
+            "owner": "SEARCHING",
+            "weight": 53.5,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "ARPENTEUR",
-            "description": ""
+            "description": "",
+            "performance": "0.1.2.2.3",
+            "gains": 32350,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "EC. WALDECK",
+            "weight": 53.5,
+            "draw": 10
         },
         {
             "number": 16,
             "horse": "VIBRATO",
-            "description": ""
+            "description": "",
+            "performance": "3.6.2.2.4",
+            "gains": 16150,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "X.BLANCHET",
+            "driver": "X.BLANCHET",
+            "owner": "A. GILIBERT",
+            "weight": 53.5,
+            "draw": 12
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

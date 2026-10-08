@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_09-02-2026_ceb38c637e_cfb2377b80.txt",
-    "parsed_at": "2026-10-08T10:35:43.559065Z",
+    "parsed_at": "2026-10-08T23:52:16.479293Z",
     "date": "2026-02-09",
     "race": {
         "race_name": "PRIX DES BOUCHES-DU-RHONE",
@@ -16,74 +16,215 @@
         {
             "number": 1,
             "horse": "APAX",
-            "description": ""
+            "description": "",
+            "performance": "6.4.9.3.3",
+            "gains": 193863,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S. GAVILAN",
+            "jockey": "D.SANTIAGO",
+            "driver": "D.SANTIAGO",
+            "owner": "L.MOUTOUSSAMY",
+            "weight": 61.5,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "COLONEL MITCH",
-            "description": ""
+            "description": "",
+            "performance": "1.7.1.2.2",
+            "gains": 73056,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R. FRADET",
+            "jockey": "H. BESNIER",
+            "driver": "H. BESNIER",
+            "owner": "EC. EDGAR MESSAOUD",
+            "weight": 61.0,
+            "draw": 6
         },
         {
             "number": 3,
             "horse": "LORD OF WAR",
-            "description": ""
+            "description": "",
+            "performance": "7.8.1.7.0",
+            "gains": 109333,
+            "sex": "M",
+            "age": 5,
+            "trainer": "N. PERRET",
+            "jockey": "A. CRASTUS",
+            "driver": "A. CRASTUS",
+            "owner": "J.N.TEMAM/S.LAHMI",
+            "weight": 60.0,
+            "draw": 5
         },
         {
             "number": 4,
             "horse": "GILDED DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "1.8.2.2.5",
+            "gains": 112290,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.PITART",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "EC. PIERRE MBAPPE",
+            "weight": 59.5,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "CREW DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.4.3",
+            "gains": 294569,
+            "sex": "H",
+            "age": 9,
+            "trainer": "C.BOUTIN",
+            "jockey": "H. BOUTIN",
+            "driver": "H. BOUTIN",
+            "owner": "EC. NICOLATO",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "SHAHBANDAR",
-            "description": ""
+            "description": "",
+            "performance": "6.1.7.0.2",
+            "gains": 72029,
+            "sex": "H",
+            "age": 6,
+            "trainer": "I.JANA. KOPLIKOVA",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "J. DUFKOVA",
+            "weight": 59.0,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "OTOMAI",
-            "description": ""
+            "description": "",
+            "performance": "3.0.1.1.2",
+            "gains": 37916,
+            "sex": "M",
+            "age": 4,
+            "trainer": "JC. ROUGET",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "EC. DE MALOU",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "FELIX AUX ORMES",
-            "description": ""
+            "description": "",
+            "performance": "2.5.0.3.0",
+            "gains": 71360,
+            "sex": "M",
+            "age": 4,
+            "trainer": "Y. BARBEROT",
+            "jockey": "H. JOURNIAC",
+            "driver": "H. JOURNIAC",
+            "owner": "Y. LENOIR",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "ANANTEAL",
-            "description": ""
+            "description": "",
+            "performance": "1.8.0.0.1",
+            "gains": 39121,
+            "sex": "H",
+            "age": 4,
+            "trainer": "ED. MONFORT",
+            "jockey": "F. VERON",
+            "driver": "F. VERON",
+            "owner": "M.DELAUNAY",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "JOH SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "4.4.0.1.9",
+            "gains": 135928,
+            "sex": "F",
+            "age": 7,
+            "trainer": "P. SIGAUD",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "P. SIGAUD",
+            "weight": 55.5,
+            "draw": 2
         },
         {
             "number": 11,
             "horse": "BREIZH MOON",
-            "description": ""
+            "description": "",
+            "performance": "6.0.8.1.5",
+            "gains": 59715,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F. FORESI",
+            "jockey": "A. ORANI",
+            "driver": "A. ORANI",
+            "owner": "S. DUROT",
+            "weight": 53.5,
+            "draw": 9
         },
         {
             "number": 12,
             "horse": "IZASTEP",
-            "description": ""
+            "description": "",
+            "performance": "1.1.3.7.8",
+            "gains": 137164,
+            "sex": "M",
+            "age": 6,
+            "trainer": "F. FORESI",
+            "jockey": "A. MADAMET",
+            "driver": "A. MADAMET",
+            "owner": "C. WEISS",
+            "weight": 53.0,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "MARLOWE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.3.1.3",
+            "gains": 135215,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.BOUTIN",
+            "jockey": "E. HARDOUIN",
+            "driver": "E. HARDOUIN",
+            "owner": "G. MAAREK",
+            "weight": 51.0,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "TALISMAN TOUCH",
-            "description": ""
+            "description": "",
+            "performance": "0.8.7.3.0",
+            "gains": 132675,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J. PARIZE",
+            "jockey": "D.BREUX",
+            "driver": "D.BREUX",
+            "owner": "S. DUGAST",
+            "weight": 51.0,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

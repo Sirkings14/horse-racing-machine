@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_20-11-2023_9c63d526ae_d5fcb3fb1f.txt",
-    "parsed_at": "2026-10-08T10:35:45.144884Z",
+    "parsed_at": "2026-10-08T23:52:18.779389Z",
     "date": "2023-11-20",
     "race": {
         "race_name": "PRIX DE MONTIGNAC-CHARENTE",
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "CICERO T.G.",
-            "description": ""
+            "description": "",
+            "performance": "8.4.1.0.7",
+            "gains": 247582,
+            "sex": "M",
+            "age": 6,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "CH.TEIEN GUNDERSEN",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "FAVORI DE L'ITON",
-            "description": ""
+            "description": "",
+            "performance": "8.4.D.D.3",
+            "gains": 281330,
+            "sex": "H",
+            "age": 8,
+            "trainer": "B. BEAUCAMP",
+            "jockey": "HUGHES LEVESQUE",
+            "driver": "HUGHES LEVESQUE",
+            "owner": "EC. DE L' ITON",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "ZEROZEROSETTE GAR",
-            "description": ""
+            "description": "",
+            "performance": "0.6.4.5.0",
+            "gains": 327118,
+            "sex": "M",
+            "age": 8,
+            "trainer": "M. MINOPOLI JR.",
+            "jockey": "VITALE CIOTOLA",
+            "driver": "VITALE CIOTOLA",
+            "owner": "SCU. NININNI",
+            "listed_chrono": "1.10.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "HORCHESTRO",
-            "description": ""
+            "description": "",
+            "performance": "4.6.D.D.1",
+            "gains": 331190,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D. BEKAERT",
+            "jockey": "G.R. HUGUET",
+            "driver": "G.R. HUGUET",
+            "owner": "G. DAMBACH",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "ESTEBAN JIEL",
-            "description": ""
+            "description": "",
+            "performance": "4.9.9.0.0",
+            "gains": 331890,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. LAGADEUC",
+            "jockey": "J.L. DERSOIR",
+            "driver": "J.L. DERSOIR",
+            "owner": "EC. LUCK",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "HE AND ME",
-            "description": ""
+            "description": "",
+            "performance": "3.1.7.5.D",
+            "gains": 375670,
+            "sex": "M",
+            "age": 6,
+            "trainer": "E. RAFFIN",
+            "jockey": "M. LENOIR",
+            "driver": "M. LENOIR",
+            "owner": "EC. TH. GUIBERT",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "GAMIN JABA",
-            "description": ""
+            "description": "",
+            "performance": "0.0.2.4.D",
+            "gains": 379680,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "G. BAZIRE",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "FILOU D'ANJOU",
-            "description": ""
+            "description": "",
+            "performance": "5.6.3.1.1",
+            "gains": 390550,
+            "sex": "H",
+            "age": 8,
+            "trainer": "B. ROCHARD",
+            "jockey": "E. BEUDARD",
+            "driver": "E. BEUDARD",
+            "owner": "E. BEUDARD",
+            "listed_chrono": "1.10.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "AL CAPONE STECCA",
-            "description": ""
+            "description": "",
+            "performance": "9.3.9.3.2",
+            "gains": 400998,
+            "sex": "M",
+            "age": 7,
+            "trainer": "G. GELORMINI",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "PRINCLING HOLDING",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "EDY DU POMMEREUX",
-            "description": ""
+            "description": "",
+            "performance": "7.8.0.7.5",
+            "gains": 403520,
+            "sex": "H",
+            "age": 9,
+            "trainer": "D. THOMAIN",
+            "jockey": "S. ROGER",
+            "driver": "S. ROGER",
+            "owner": "N. LOLIC",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "DJEMBE D'ORGERES",
-            "description": ""
+            "description": "",
+            "performance": "2.5.6.1.2",
+            "gains": 406710,
+            "sex": "H",
+            "age": 10,
+            "trainer": "M. ABRIVARD",
+            "jockey": "G.R. HUGUET",
+            "driver": "G.R. HUGUET",
+            "owner": "EC. LOUIS D'AUR",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "FALCO D'HAVAROCHE",
-            "description": ""
+            "description": "",
+            "performance": "7.0.0.5.0",
+            "gains": 415770,
+            "sex": "H",
+            "age": 8,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "EC. J.M.BAUDOUIN",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "EPSOM D'HERFRAIE",
-            "description": ""
+            "description": "",
+            "performance": "5.0.D.D.D",
+            "gains": 433150,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. NIVARD",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "EC. LE RIVAGE",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 14,
             "horse": "GOELAND D'HAUFOR",
-            "description": ""
+            "description": "",
+            "performance": "9.5.0.D.D",
+            "gains": 437810,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D. BONNE",
+            "jockey": "CH. BIGEON",
+            "driver": "CH. BIGEON",
+            "owner": "EC. CH.BIGEON",
+            "listed_chrono": "1.10.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 15,
             "horse": "FIFTY FIVE BOND",
-            "description": ""
+            "description": "",
+            "performance": "4.3.5.D.9",
+            "gains": 448810,
+            "sex": "H",
+            "age": 8,
+            "trainer": "CH. MARTENS",
+            "jockey": "V. MARTENS",
+            "driver": "V. MARTENS",
+            "owner": "EC. OLMENHOF",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

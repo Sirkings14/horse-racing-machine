@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-07-04-2024_49cb12c5ec_2f228f3dfa.txt",
-    "parsed_at": "2026-10-08T10:35:40.076025Z",
+    "parsed_at": "2026-10-08T23:52:11.570580Z",
     "date": "2024-04-07",
     "race": {
         "race_name": "SUPER HANDICAP DE REOUVERTURE",
@@ -16,89 +16,260 @@
         {
             "number": 1,
             "horse": "LANAKEN",
-            "description": ""
+            "description": "",
+            "performance": "4.1.3.1.2",
+            "gains": 167542,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.POUCHIN",
+            "jockey": "E.LIBAUD",
+            "driver": "E.LIBAUD",
+            "owner": "LES GALOPINS",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "AMEDRAS",
-            "description": ""
+            "description": "",
+            "performance": "1.2.6.8.5",
+            "gains": 221040,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.LEMAITRE",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DRIDI",
+            "weight": 59.5,
+            "draw": 1
         },
         {
             "number": 3,
             "horse": "HALF HALF",
-            "description": ""
+            "description": "",
+            "performance": "4.6.8.3.2",
+            "gains": 88533,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "M.FOUGY-SMAGA",
+            "weight": 59.5,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "KENDLY",
-            "description": ""
+            "description": "",
+            "performance": "5.4.4.9.1",
+            "gains": 77460,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.MANGIONE",
+            "jockey": "P.SOGORB",
+            "driver": "P.SOGORB",
+            "owner": "G. AU.NORMAND",
+            "weight": 59.5,
+            "draw": 17
         },
         {
             "number": 5,
             "horse": "DEEP HOPE",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.1.2",
+            "gains": 138720,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.VELON",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "O.GHRGHAR",
+            "weight": 59.0,
+            "draw": 6
         },
         {
             "number": 6,
             "horse": "RAKAN",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.2.1",
+            "gains": 148150,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.BARZALONA",
+            "jockey": "P.GROUALLE",
+            "driver": "P.GROUALLE",
+            "owner": "GOUSSERIE RACING",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "PEDRITO",
-            "description": ""
+            "description": "",
+            "performance": "0.3.5.9.1",
+            "gains": 160530,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HA.PANTALL",
+            "weight": 57.5,
+            "draw": 11
         },
         {
             "number": 8,
             "horse": "VICTORY SALUTE",
-            "description": ""
+            "description": "",
+            "performance": "3.1.0.3.1",
+            "gains": 35810,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "E.GILLIAR",
+            "weight": 57.0,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "SHORT FINAL",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.3.2",
+            "gains": 61920,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.GROSSO",
+            "jockey": "S.KOBAYASHI",
+            "driver": "S.KOBAYASHI",
+            "owner": "S.ALLOUCHE",
+            "weight": 56.5,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "TORPEN",
-            "description": ""
+            "description": "",
+            "performance": "8.6.1.0.7",
+            "gains": 270730,
+            "sex": "H",
+            "age": 7,
+            "trainer": "H.BESNIER",
+            "jockey": "R.SCHOOF",
+            "driver": "R.SCHOOF",
+            "owner": "R.SCHOOF",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 11,
             "horse": "SEE YOU PINK",
-            "description": ""
+            "description": "",
+            "performance": "7.8.1.8.1",
+            "gains": 74090,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.MADAMET",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "G.SEROR",
+            "weight": 55.5,
+            "draw": 12
         },
         {
             "number": 12,
             "horse": "WE RIDE THE WORLD",
-            "description": ""
+            "description": "",
+            "performance": "4.4.4.8.3",
+            "gains": 358174,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A.CRASTUS",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "A.BAUDRON",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "ARABINO",
-            "description": ""
+            "description": "",
+            "performance": "4.4.9.7.5",
+            "gains": 168442,
+            "sex": "H",
+            "age": 9,
+            "trainer": "D.SANTIAGO",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "STALL GATTOPARDO",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 14,
             "horse": "WHITE PLATIN",
-            "description": ""
+            "description": "",
+            "performance": "2.0.4.3.0",
+            "gains": 149138,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.THOMAS",
+            "jockey": "C.B. BARBE",
+            "driver": "C.B. BARBE",
+            "owner": "D.SIEGENTHALER",
+            "weight": 54.0,
+            "draw": 4
         },
         {
             "number": 15,
             "horse": "VARIYNI",
-            "description": ""
+            "description": "",
+            "performance": "1.2.1.3.3",
+            "gains": 35100,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "H.H. AGA KHAN",
+            "weight": 54.0,
+            "draw": 7
         },
         {
             "number": 16,
             "horse": "SZAFRAN",
-            "description": ""
+            "description": "",
+            "performance": "A.R.0.7.7",
+            "gains": 29650,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.VILCHIEN",
+            "jockey": "J.GRASSICK",
+            "driver": "J.GRASSICK",
+            "owner": "J.GRASSICK",
+            "weight": 53.5,
+            "draw": 14
         },
         {
             "number": 17,
             "horse": "ETATIQUE",
-            "description": ""
+            "description": "",
+            "performance": "2.4.0.7.3",
+            "gains": 84690,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "A.WATRIGANT",
+            "driver": "A.WATRIGANT",
+            "owner": "J.SUZAN/C.MARCELLIN",
+            "weight": 51.5,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

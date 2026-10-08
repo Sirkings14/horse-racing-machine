@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_29-03-2025_a30e8525a1_7d84bd407b.txt",
-    "parsed_at": "2026-10-08T10:35:46.301231Z",
+    "parsed_at": "2026-10-08T23:52:20.450795Z",
     "date": "2025-03-29",
     "race": {
         "race_name": "PRIX DU LANGUEDOC",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "SPLENDINO",
-            "description": ""
+            "description": "",
+            "performance": "3.0.2.4.6",
+            "gains": 105450,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "JC.SEROUL",
+            "weight": 60.0,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "LOU MAN",
-            "description": ""
+            "description": "",
+            "performance": "8.5.0.7.1",
+            "gains": 124320,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.PACAUT",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 3,
             "horse": "GANT",
-            "description": ""
+            "description": "",
+            "performance": "5.8.1.3.1",
+            "gains": 44977,
+            "sex": "M",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "WEST. RACE HORSES",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 4,
             "horse": "ALMIRO",
-            "description": ""
+            "description": "",
+            "performance": "0.9.7.8.6",
+            "gains": 20300,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.LEMAITRE",
+            "jockey": "P.DECOUZ",
+            "driver": "P.DECOUZ",
+            "owner": "EC. GRIEZMANN",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "THUNDERSPEED",
-            "description": ""
+            "description": "",
+            "performance": "2.0.5.0.3",
+            "gains": 206890,
+            "sex": "M",
+            "age": 8,
+            "trainer": "M.GUYON",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "EC. GRIBOMONT",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "VILLA DES ARTS",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.5.1",
+            "gains": 44820,
+            "sex": "F",
+            "age": 4,
+            "trainer": "B.MARIE",
+            "jockey": "A.KARKOSA",
+            "driver": "A.KARKOSA",
+            "owner": "K.GOZDZIALSKI",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "TRUE TEDESCO",
-            "description": ""
+            "description": "",
+            "performance": "4.1.6.4.6",
+            "gains": 85120,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "A.SUBORICS",
+            "driver": "A.SUBORICS",
+            "owner": "ST. MYDLINGHOVEN",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "PALAZZO",
-            "description": ""
+            "description": "",
+            "performance": "8.3.6.0.3",
+            "gains": 42850,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "SMITS/DUBOIS",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "AQUILA VOLANTE",
-            "description": ""
+            "description": "",
+            "performance": "6.9.1.0.3",
+            "gains": 73190,
+            "sex": "M",
+            "age": 4,
+            "trainer": "L.ROUSSEL",
+            "jockey": "G.PANNIER",
+            "driver": "G.PANNIER",
+            "owner": "J.MAHIQUES",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "LISEO",
-            "description": ""
+            "description": "",
+            "performance": "3.8.9.7.8",
+            "gains": 49376,
+            "sex": "H",
+            "age": 6,
+            "trainer": "E.HARDOUIN",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "D.RICARD",
+            "weight": 54.5,
+            "draw": 8
         },
         {
             "number": 11,
             "horse": "FAMILIAR",
-            "description": ""
+            "description": "",
+            "performance": "2.7.3.5.7",
+            "gains": 48840,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.TRULLIER",
+            "jockey": "D.WINDRIF",
+            "driver": "D.WINDRIF",
+            "owner": "C.TRECCO",
+            "weight": 53.0,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "TREATWOOD",
-            "description": ""
+            "description": "",
+            "performance": "5.7.4.6.3",
+            "gains": 46510,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.BOISSEAU",
+            "jockey": "N.BELLANGER",
+            "driver": "N.BELLANGER",
+            "owner": "HS. DE LA HUDERIE",
+            "weight": 53.0,
+            "draw": 3
         },
         {
             "number": 13,
             "horse": "E VA BIN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.1.8",
+            "gains": 52140,
+            "sex": "M",
+            "age": 6,
+            "trainer": "G.SIAS",
+            "jockey": "F.CARNEVALI",
+            "driver": "F.CARNEVALI",
+            "owner": "ESAGERUMA",
+            "weight": 52.5,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "VAZIRPOUR",
-            "description": ""
+            "description": "",
+            "performance": "0.6.0.8.6",
+            "gains": 25793,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "J.MANOVA",
+            "driver": "J.MANOVA",
+            "owner": "SV VONDRA",
+            "weight": 52.5,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "DREAMS",
-            "description": ""
+            "description": "",
+            "performance": "3.5.0.0.2",
+            "gains": 126910,
+            "sex": "M",
+            "age": 7,
+            "trainer": "A.CRASTUS",
+            "jockey": "S.PECORARO",
+            "driver": "S.PECORARO",
+            "owner": "N.RUGANI",
+            "weight": 52.0,
+            "draw": 6
         },
         {
             "number": 16,
             "horse": "IRTYCH",
-            "description": ""
+            "description": "",
+            "performance": "4.3.7.1.2",
+            "gains": 68050,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P.CHEYER",
+            "jockey": "I.ENDALTSEV",
+            "driver": "I.ENDALTSEV",
+            "owner": "ZLATY KUN S.R.O",
+            "weight": 51.5,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

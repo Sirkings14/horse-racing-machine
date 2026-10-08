@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_17-04-2023_95327eee71_a91c8164a7.txt",
-    "parsed_at": "2026-10-08T10:35:44.612493Z",
+    "parsed_at": "2026-10-08T23:52:18.008014Z",
     "date": "2023-04-17",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "RAYSTEVE",
-            "description": ""
+            "description": "",
+            "performance": "1.4.2.3.2",
+            "gains": 148275,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "V.HEAD",
+            "driver": "V.HEAD",
+            "owner": "SPARKLING STAR",
+            "weight": 60.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "MONTUSSAN",
-            "description": ""
+            "description": "",
+            "performance": "0.1.4.1.8",
+            "gains": 90910,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "P.DE CHEVIGNY",
+            "driver": "P.DE CHEVIGNY",
+            "owner": "SARL JEDBURGH STUD",
+            "weight": 59.5,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "IMPITOYABLE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.5.5",
+            "gains": 91940,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "EC.BERND & TORSTEN",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "EAGLEWAY",
-            "description": ""
+            "description": "",
+            "performance": "6.6.6.1.5",
+            "gains": 209053,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.BARZALONA",
+            "jockey": "AN.HOLLINSHEAD",
+            "driver": "AN.HOLLINSHEAD",
+            "owner": "JL.MARRIOTT",
+            "weight": 58.0,
+            "draw": 10
         },
         {
             "number": 5,
             "horse": "O TRASNO",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.3.2",
+            "gains": 122300,
+            "sex": "M",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "B.MONTZEY",
+            "driver": "B.MONTZEY",
+            "owner": "BLOKE EUR. MOBILIARIO",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "ELUSIVE FOOT",
-            "description": ""
+            "description": "",
+            "performance": "4.6.6.0.2",
+            "gains": 144049,
+            "sex": "M",
+            "age": 6,
+            "trainer": "T.PICCONE",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "JC.SEROUL",
+            "weight": 57.5,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "LESSLEPASSER",
-            "description": ""
+            "description": "",
+            "performance": "7.1.3.2.2",
+            "gains": 101440,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.BOUTIN",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "EC. CLUB DES ETOILES",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "TERRITORYWAR",
-            "description": ""
+            "description": "",
+            "performance": "6.0.1.5.4",
+            "gains": 40900,
+            "sex": "M",
+            "age": 4,
+            "trainer": "R.SOUSA FERREIRA",
+            "jockey": "M.DEL.SANCHEZ",
+            "driver": "M.DEL.SANCHEZ",
+            "owner": "CU. MEDITERRANEO",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "GAME RUN",
-            "description": ""
+            "description": "",
+            "performance": "1.9.0.2.4",
+            "gains": 63460,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "S.GRANDIN",
+            "weight": 57.0,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "KING ROBBE",
-            "description": ""
+            "description": "",
+            "performance": "7.6.0.9.1",
+            "gains": 189610,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S.MAILLOT",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "B.DUTRUEL",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 11,
             "horse": "BASEEMA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.5",
+            "gains": 13950,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "A.FABRE",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 12,
             "horse": "MOWAEVA",
-            "description": ""
+            "description": "",
+            "performance": "4.0.6.5.0",
+            "gains": 144861,
+            "sex": "H",
+            "age": 6,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "L.FLOC'H",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "BACCHILIDE",
-            "description": ""
+            "description": "",
+            "performance": "0.7.3.1.6",
+            "gains": 49060,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "M.GUARNIERI",
+            "driver": "M.GUARNIERI",
+            "owner": "P.FERRARIO",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "GORDON BREAK",
-            "description": ""
+            "description": "",
+            "performance": "0.7.6.8.3",
+            "gains": 55610,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "EC. TLV",
+            "weight": 54.5,
+            "draw": 9
         },
         {
             "number": 15,
             "horse": "JOSEJOSEPHINE",
-            "description": ""
+            "description": "",
+            "performance": "9.6.0.5.1",
+            "gains": 49790,
+            "sex": "F",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "CH.PLISSON",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "FLEUR DE BAILEYS",
-            "description": ""
+            "description": "",
+            "performance": "4.0.0.1.2",
+            "gains": 41720,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H.JOURNIAC",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "GR BAILEY",
+            "weight": 54.0,
+            "draw": 8
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

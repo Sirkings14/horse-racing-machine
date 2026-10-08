@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-30-03-2026_6f51d13f9b_033ed53d91.txt",
-    "parsed_at": "2026-10-08T10:35:42.428781Z",
+    "parsed_at": "2026-10-08T23:52:14.910167Z",
     "date": "2026-03-30",
     "race": {
         "race_name": "PRIX DU PALIO DE CHANTILLY",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "TONNANT",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.5.3",
+            "gains": 23610,
+            "sex": "M",
+            "age": 3,
+            "trainer": "P&J.BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "F.BLICHFELDT",
+            "weight": 60.0,
+            "draw": 14
         },
         {
             "number": 2,
             "horse": "LIWOOD",
-            "description": ""
+            "description": "",
+            "performance": "7.6.2.7.5",
+            "gains": 32339,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.PITART",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "EC.MG",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "SIRAT",
-            "description": ""
+            "description": "",
+            "performance": "2.3.5.4.6",
+            "gains": 21091,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H.GHABRI",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "H.ARIBI",
+            "weight": 58.5,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "QUEMAZAL",
-            "description": ""
+            "description": "",
+            "performance": "4.2.1.3.2",
+            "gains": 29120,
+            "sex": "M",
+            "age": 3,
+            "trainer": "G.BIETOLINI",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "O.GHRGHAR",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "PAS DE VAGUES",
-            "description": ""
+            "description": "",
+            "performance": "6.5.4.1.2",
+            "gains": 20353,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.ESCUDER",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "M.CHARLEU",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "MON PAULIN",
-            "description": ""
+            "description": "",
+            "performance": "5.4.3.3.1",
+            "gains": 29402,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.ESCUDER",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "GOUSSERIE RACING",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 7,
             "horse": "TI AMO BELLO",
-            "description": ""
+            "description": "",
+            "performance": "1.7.6.2.4",
+            "gains": 16320,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.PITART",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "EC.METAL",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 8,
             "horse": "SQUARE D'ANVERS",
-            "description": ""
+            "description": "",
+            "performance": "1.7.9.0",
+            "gains": 10470,
+            "sex": "M",
+            "age": 3,
+            "trainer": "V.DISSAUX",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "EC. S. STEMPNIAK",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 9,
             "horse": "EXXPERT",
-            "description": ""
+            "description": "",
+            "performance": "3.7.4",
+            "gains": 6713,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "EC.JML RACING",
+            "weight": 56.5,
+            "draw": 5
         },
         {
             "number": 10,
             "horse": "CHARLY",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.4.6",
+            "gains": 40820,
+            "sex": "H",
+            "age": 3,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "EC.HDBB",
+            "weight": 56.0,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "REVE DU FRAISSE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.3.2",
+            "gains": 28572,
+            "sex": "M",
+            "age": 3,
+            "trainer": "JC.ROUGET",
+            "jockey": "JB.EYQUEM",
+            "driver": "JB.EYQUEM",
+            "owner": "E.CHOMARD",
+            "weight": 56.0,
+            "draw": 12
         },
         {
             "number": 12,
             "horse": "TERRITOIRE",
-            "description": ""
+            "description": "",
+            "performance": "5.8.0",
+            "gains": 988,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.BUDKA",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "MF.HERMANS",
+            "weight": 55.0,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "LIGHT OF THUNDER",
-            "description": ""
+            "description": "",
+            "performance": "1.3.5.8.9",
+            "gains": 15944,
+            "sex": "F",
+            "age": 3,
+            "trainer": "G.HERNON",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "ROY RACING LTD",
+            "weight": 54.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "BLACK THUNDER",
-            "description": ""
+            "description": "",
+            "performance": "3.7.4.2.5",
+            "gains": 12543,
+            "sex": "M",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "M.BIOTTEAU",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "ARTOA",
-            "description": ""
+            "description": "",
+            "performance": "4.5.2",
+            "gains": 5789,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "HS. DE ULIA SL",
+            "weight": 54.0,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "MISTER BLACK",
-            "description": ""
+            "description": "",
+            "performance": "0.4.9",
+            "gains": 2223,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "O.GHRGHAR",
+            "weight": 54.0,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

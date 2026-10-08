@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_30-12-2025_bc7c76f675_9ea01f599d.txt",
-    "parsed_at": "2026-10-08T10:35:46.511662Z",
+    "parsed_at": "2026-10-08T23:52:20.765824Z",
     "date": "2025-12-30",
     "race": {
         "race_name": "PRIX OUEST FRANCE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CHAUMIERE DE PRE",
-            "description": ""
+            "description": "",
+            "performance": "7.6.0.7.2",
+            "gains": 72561,
+            "sex": "H",
+            "age": 3,
+            "trainer": "G.BIETOLINI",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "KL.RAMSEY",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "KOURPLUVIX",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.4.2",
+            "gains": 30645,
+            "sex": "H",
+            "age": 3,
+            "trainer": "J.REYNIER",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "LEO. DUCASS AGENCY",
+            "weight": 59.5,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "ZIGGY STAR",
-            "description": ""
+            "description": "",
+            "performance": "9.2.1.1.2",
+            "gains": 58850,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "EC.JP.BONARDEL",
+            "weight": 58.5,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "FIUMICCINO",
-            "description": ""
+            "description": "",
+            "performance": "1.2.1.1.7",
+            "gains": 40996,
+            "sex": "H",
+            "age": 3,
+            "trainer": "P.COTTIER",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "JPJ .DUBOIS",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "THE DOCTOR",
-            "description": ""
+            "description": "",
+            "performance": "1.8.9.9.0",
+            "gains": 44850,
+            "sex": "H",
+            "age": 3,
+            "trainer": "N.PERRET",
+            "jockey": "S.RUIS",
+            "driver": "S.RUIS",
+            "owner": "R.RABA",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 6,
             "horse": "OLYA",
-            "description": ""
+            "description": "",
+            "performance": "0.5.0.5.4",
+            "gains": 36884,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.FABRE",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "L.L.FABRE",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 7,
             "horse": "MOST GLAMOROUS",
-            "description": ""
+            "description": "",
+            "performance": "1.4.5.1.2",
+            "gains": 31406,
+            "sex": "F",
+            "age": 3,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "T.R.WAHLSTEDT",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "RUE ERNESTINE",
-            "description": ""
+            "description": "",
+            "performance": "5.1.2.0.5",
+            "gains": 33845,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.GADBIN",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "EC.X",
+            "weight": 56.0,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "REMBRAND TO GO",
-            "description": ""
+            "description": "",
+            "performance": "1.0.4.4",
+            "gains": 14285,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.RULEC",
+            "jockey": "E.CORALLO",
+            "driver": "E.CORALLO",
+            "owner": "C.BOCKELMANN",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "TELCHERBOLINE",
-            "description": ""
+            "description": "",
+            "performance": "7.4.2.0.5",
+            "gains": 51273,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J.BOISNARD",
+            "jockey": "H.LEBOUC",
+            "driver": "H.LEBOUC",
+            "owner": "L.CHARITAL",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 11,
             "horse": "LARLIB",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.1",
+            "gains": 31000,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.DELZANGLES",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "S.FARGEON",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "HAZA",
-            "description": ""
+            "description": "",
+            "performance": "8.3.7.8.4",
+            "gains": 55837,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.COELHO",
+            "jockey": "F.LEFEBVRE",
+            "driver": "F.LEFEBVRE",
+            "owner": "A.COELHO",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "MON COMEDIEN",
-            "description": ""
+            "description": "",
+            "performance": "0.3.6.9.4",
+            "gains": 42572,
+            "sex": "H",
+            "age": 3,
+            "trainer": "J.LEROY",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "S.TAIEB",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 14,
             "horse": "FAITHFUL FRIEND",
-            "description": ""
+            "description": "",
+            "performance": "5.2.7.3.8",
+            "gains": 34279,
+            "sex": "F",
+            "age": 3,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "N.FORMAN HARDY",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 15,
             "horse": "GALAGOS",
-            "description": ""
+            "description": "",
+            "performance": "0.6.3.5.6",
+            "gains": 9492,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.DELZANGLES",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "F.HRUBY",
+            "weight": 55.0,
+            "draw": 13
         },
         {
             "number": 16,
             "horse": "YOUNG AND PROUD",
-            "description": ""
+            "description": "",
+            "performance": "9.6.2.5.1",
+            "gains": 100391,
+            "sex": "M",
+            "age": 3,
+            "trainer": "LD.RACCO",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "R.ROOBAERT",
+            "weight": 54.5,
+            "draw": 14
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

@@ -1,36 +1,36 @@
 {
   "method": "walk_forward_logistic_top3",
-  "dataset_races": 432,
-  "dataset_rows": 6799,
+  "dataset_races": 433,
+  "dataset_rows": 6815,
   "minimum_training_races": 5,
-  "evaluated_races": 427,
+  "evaluated_races": 428,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1475,
-    "winner_hit_rate_at_3": 0.37,
-    "average_actual_top3_covered_by_predicted_top3": 0.8759,
-    "average_actual_top3_covered_by_predicted_top5": 1.3653,
-    "brier_score_top3": 0.149985,
-    "log_loss_top3": 0.474532,
-    "expected_calibration_error_top3": 0.011953
+    "winner_hit_rate_at_1": 0.1472,
+    "winner_hit_rate_at_3": 0.3715,
+    "average_actual_top3_covered_by_predicted_top3": 0.8785,
+    "average_actual_top3_covered_by_predicted_top5": 1.3692,
+    "brier_score_top3": 0.149931,
+    "log_loss_top3": 0.474362,
+    "expected_calibration_error_top3": 0.011448
   },
   "baselines": {
     "favorites": {
-      "winner_hit_rate_at_1": 0.1546,
-      "winner_hit_rate_at_3": 0.3817,
-      "average_actual_top3_covered_by_predicted_top3": 0.904,
-      "average_actual_top3_covered_by_predicted_top5": 1.363
+      "winner_hit_rate_at_1": 0.1542,
+      "winner_hit_rate_at_3": 0.3832,
+      "average_actual_top3_covered_by_predicted_top3": 0.9042,
+      "average_actual_top3_covered_by_predicted_top5": 1.3668
     },
     "form": {
-      "winner_hit_rate_at_1": 0.1077,
-      "winner_hit_rate_at_3": 0.3068,
-      "average_actual_top3_covered_by_predicted_top3": 0.7564,
-      "average_actual_top3_covered_by_predicted_top5": 1.2529
+      "winner_hit_rate_at_1": 0.1075,
+      "winner_hit_rate_at_3": 0.3061,
+      "average_actual_top3_covered_by_predicted_top3": 0.7593,
+      "average_actual_top3_covered_by_predicted_top5": 1.257
     }
   },
   "calibration": {
-    "brier_score": 0.149985,
-    "log_loss": 0.474532,
-    "ece": 0.011953,
+    "brier_score": 0.149931,
+    "log_loss": 0.474362,
+    "ece": 0.011448,
     "calibration_bins": [
       {
         "lower": 0.0,
@@ -42,23 +42,23 @@
       {
         "lower": 0.1,
         "upper": 0.2,
-        "count": 4577,
-        "mean_probability": 0.144961,
-        "observed_rate": 0.151191
+        "count": 4586,
+        "mean_probability": 0.144953,
+        "observed_rate": 0.150894
       },
       {
         "lower": 0.2,
         "upper": 0.3,
-        "count": 1374,
-        "mean_probability": 0.246347,
-        "observed_rate": 0.240175
+        "count": 1380,
+        "mean_probability": 0.246423,
+        "observed_rate": 0.241304
       },
       {
         "lower": 0.3,
         "upper": 0.4,
-        "count": 693,
-        "mean_probability": 0.338732,
-        "observed_rate": 0.350649
+        "count": 694,
+        "mean_probability": 0.338731,
+        "observed_rate": 0.350144
       },
       {
         "lower": 0.4,
@@ -84,9 +84,9 @@
       {
         "lower": 0.9,
         "upper": 1.0,
-        "count": 6718,
-        "mean_probability": 0.186911,
-        "observed_rate": 0.190682
+        "count": 6734,
+        "mean_probability": 0.18694,
+        "observed_rate": 0.190674
       }
     ]
   },
@@ -17170,6 +17170,46 @@
         }
       },
       "race_key": "2026-10-07|ENGHIEN|1"
+    },
+    {
+      "winner": 1,
+      "predicted_top1": 15,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": true,
+      "actual_top3": [
+        1,
+        5,
+        8
+      ],
+      "predicted_top3": [
+        1,
+        5,
+        15
+      ],
+      "top3_coverage_by_top3": 2,
+      "top3_coverage_by_top5": 3,
+      "model_ranking": [
+        15,
+        1,
+        5,
+        3,
+        8
+      ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": true,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 2,
+          "top3_coverage_by_top5": 3
+        }
+      },
+      "race_key": "2026-10-08|SAINT-CLOUD|1"
     }
   ]
 }

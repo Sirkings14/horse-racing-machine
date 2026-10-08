@@ -1,25 +1,18 @@
 {
   "method": "walk_forward_pairwise_finishing_order",
-  "dataset_races": 432,
+  "dataset_races": 433,
   "warmup_races": 216,
-  "evaluated_races": 216,
+  "evaluated_races": 217,
   "metrics": {
-    "pairwise_order_accuracy": 0.6025,
-    "top5_position_accuracy": 0.3484,
-    "exact_top3_order_rate": 0.125,
-    "exact_top5_order_rate": 0.125
+    "pairwise_order_accuracy": 0.6027,
+    "top5_position_accuracy": 0.3483,
+    "exact_top3_order_rate": 0.1244,
+    "exact_top5_order_rate": 0.1244
   },
   "baseline": {
     "pairwise_random_accuracy": 0.5
   },
   "per_race": [
-    {
-      "race_key": "2026-02-02|CAGNES-SUR-MER|2",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
     {
       "race_key": "2026-02-04|CAGNES-SUR-MER|2",
       "pairwise_accuracy": 0.6667,
@@ -710,6 +703,13 @@
       "race_key": "2026-10-07|ENGHIEN|1",
       "pairwise_accuracy": 0.6667,
       "top5_position_accuracy": 0.25,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-10-08|SAINT-CLOUD|1",
+      "pairwise_accuracy": 0.6667,
+      "top5_position_accuracy": 0.3333,
       "exact_top3": false,
       "exact_top5": false
     }

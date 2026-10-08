@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_01-06-2026_adc30fcd66_86cddb2567.txt",
-    "parsed_at": "2026-10-08T10:35:46.659826Z",
+    "parsed_at": "2026-10-08T23:52:20.976870Z",
     "date": "2026-06-01",
     "race": {
         "race_name": "PRIX DE CHATELPERRON",
@@ -16,69 +16,161 @@
         {
             "number": 1,
             "horse": "IVAN DU JAYLE",
-            "description": ""
+            "description": "",
+            "performance": "D.5.D.7.6",
+            "gains": 131360,
+            "trainer": "M. AUVRAY",
+            "jockey": "M. AUVRAY",
+            "driver": "M. AUVRAY",
+            "owner": "M. AUVRAY",
+            "listed_chrono": "1.12.50"
         },
         {
             "number": 2,
             "horse": "HELLO BOY DU PIC",
-            "description": ""
+            "description": "",
+            "performance": "5.0.8.D.5",
+            "gains": 137420,
+            "trainer": "J. CUOQ",
+            "jockey": "J. CUOQ",
+            "driver": "J. CUOQ",
+            "owner": "F. CUOQ",
+            "listed_chrono": "1.13.00"
         },
         {
             "number": 3,
             "horse": "IRIS INTENSE",
-            "description": ""
+            "description": "",
+            "performance": "7.D.1.D.6",
+            "gains": 152485,
+            "trainer": "A.PH. GRIMAULT",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "D. FRICAUX",
+            "listed_chrono": "1.10.80"
         },
         {
             "number": 4,
             "horse": "IDEAL MOSSA",
-            "description": ""
+            "description": "",
+            "performance": "6.3.6.4.9",
+            "gains": 152662,
+            "trainer": "Sté. Ent. Jo.VANMEERBECK",
+            "jockey": "M. LEGROS",
+            "driver": "M. LEGROS",
+            "owner": "TH. DENIMAL",
+            "listed_chrono": "1.12.10"
         },
         {
             "number": 5,
             "horse": "IMPERATOR D'EM",
-            "description": ""
+            "description": "",
+            "performance": "1.0.3.3.0",
+            "gains": 160505,
+            "trainer": "P.L. DESAUNETTE",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "Fabien COLIGNY",
+            "listed_chrono": "1.13.50"
         },
         {
             "number": 6,
             "horse": "GOLDY SMILE",
-            "description": ""
+            "description": "",
+            "performance": "8.0.2.8.6",
+            "gains": 162010,
+            "trainer": "B. DESLANDES",
+            "jockey": "A. GENDROT",
+            "driver": "A. GENDROT",
+            "owner": "B. DESLANDES",
+            "listed_chrono": "1.12.90"
         },
         {
             "number": 7,
             "horse": "HIGH TECH ROC",
-            "description": ""
+            "description": "",
+            "performance": "D.6.0.4.8",
+            "gains": 162390,
+            "trainer": "Nils PACHA",
+            "jockey": "B. CHAUVE-LAFFAY",
+            "driver": "B. CHAUVE-LAFFAY",
+            "owner": "A. PACHA",
+            "listed_chrono": "1.13.90"
         },
         {
             "number": 8,
             "horse": "HELIA SUCCES",
-            "description": ""
+            "description": "",
+            "performance": "1.6.0.2.0",
+            "gains": 164935,
+            "trainer": "J. DUBREIL",
+            "jockey": "A. BARRIER",
+            "driver": "A. BARRIER",
+            "owner": "J. DUBREIL",
+            "listed_chrono": "1.13.60"
         },
         {
             "number": 9,
             "horse": "IASELMA",
-            "description": ""
+            "description": "",
+            "performance": "1.7.3.8.0",
+            "gains": 165835,
+            "trainer": "J. GOSSELIN",
+            "jockey": "J. GOSSELIN",
+            "driver": "J. GOSSELIN",
+            "owner": "J. GOSSELIN",
+            "listed_chrono": "1.13.50"
         },
         {
             "number": 10,
             "horse": "HALTESS GRIFF",
-            "description": ""
+            "description": "",
+            "performance": "0.3.D.0.0",
+            "gains": 167330,
+            "trainer": "L. LERENARD",
+            "jockey": "Q. CHAUVE-LAFFAY",
+            "driver": "Q. CHAUVE-LAFFAY",
+            "owner": "EC. de BELGRAVE",
+            "listed_chrono": "1.12.60"
         },
         {
             "number": 11,
             "horse": "IRENO DES PLAINES",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.8.0",
+            "gains": 168465,
+            "trainer": "K. LEBLANC",
+            "jockey": "M.J. BARCELO BISQUERRA",
+            "driver": "M.J. BARCELO BISQUERRA",
+            "owner": "EC. du GRAND BUISSON",
+            "listed_chrono": "1.11.90"
         },
         {
             "number": 12,
             "horse": "IDEAL DELADOU",
-            "description": ""
+            "description": "",
+            "performance": "9.D.D.D.D",
+            "gains": 169705,
+            "trainer": "Nils PACHA",
+            "jockey": "S. LALOUM",
+            "driver": "S. LALOUM",
+            "owner": "A. PACHA",
+            "listed_chrono": "1.12.70"
         },
         {
             "number": 13,
             "horse": "INDIAN PACIFIC",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.9.5",
+            "gains": 171710,
+            "trainer": "G. GILLOT",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "G. GILLOT",
+            "listed_chrono": "1.12.80"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             13,

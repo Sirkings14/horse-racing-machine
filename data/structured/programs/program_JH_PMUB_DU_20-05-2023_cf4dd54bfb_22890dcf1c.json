@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_20-05-2023_cf4dd54bfb_22890dcf1c.txt",
-    "parsed_at": "2026-10-08T10:35:45.075919Z",
+    "parsed_at": "2026-10-08T23:52:18.684843Z",
     "date": "2023-05-20",
     "race": {
         "race_name": "RACING TV GRANDE COURSE DE HAIES D'AUTEUIL",
@@ -16,79 +16,215 @@
         {
             "number": 1,
             "horse": "FERONILY",
-            "description": ""
+            "description": "",
+            "performance": "1.2.1.4.3",
+            "gains": 93005,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.MEYLER",
+            "jockey": "E.MULLINS",
+            "driver": "E.MULLINS",
+            "owner": "P.BYRNE",
+            "weight": 68.0
         },
         {
             "number": 2,
             "horse": "KLASSICAL DREAM",
-            "description": ""
+            "description": "",
+            "performance": "1.9.2.2.1",
+            "gains": 945039,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P.TOWNEND",
+            "jockey": "WP.MULLINS",
+            "driver": "WP.MULLINS",
+            "owner": "J.COLEMAN",
+            "weight": 68.0
         },
         {
             "number": 3,
             "horse": "FOLSOM PRISON",
-            "description": ""
+            "description": "",
+            "performance": "3.6.4.4.4",
+            "gains": 334724,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.DA SILVA",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "H.DICHAMP",
+            "weight": 68.0
         },
         {
             "number": 4,
             "horse": "ASTERION FORLONGE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.7.4",
+            "gains": 307813,
+            "sex": "H",
+            "age": 9,
+            "trainer": "NW.BOINVILLE",
+            "jockey": "WP.MULLINS",
+            "driver": "WP.MULLINS",
+            "owner": "J.DONNELLY",
+            "weight": 68.0
         },
         {
             "number": 5,
             "horse": "HAUT EN COULEURS",
-            "description": ""
+            "description": "",
+            "performance": "4.5.2.T.4",
+            "gains": 83813,
+            "sex": "H",
+            "age": 6,
+            "trainer": "J.CHARRON",
+            "jockey": "WP.MULLINS",
+            "driver": "WP.MULLINS",
+            "owner": "J.DONNELLY",
+            "weight": 68.0
         },
         {
             "number": 6,
             "horse": "ANOUMA FREEDOM",
-            "description": ""
+            "description": "",
+            "performance": "A.8.2.1.1",
+            "gains": 480188,
+            "sex": "H",
+            "age": 12,
+            "trainer": "G.RE",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "PG.DUMAS",
+            "weight": 68.0
         },
         {
             "number": 7,
             "horse": "FLOORING PORTER",
-            "description": ""
+            "description": "",
+            "performance": "3.4.4.4.2",
+            "gains": 659325,
+            "sex": "H",
+            "age": 8,
+            "trainer": "D.E .MULLINS",
+            "jockey": "G.CROMWELL",
+            "driver": "G.CROMWELL",
+            "owner": "FL. PORTER SYNDIC.",
+            "weight": 68.0
         },
         {
             "number": 8,
             "horse": "LUCKY ONE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.8.3",
+            "gains": 200675,
+            "sex": "H",
+            "age": 8,
+            "trainer": "G.MEUNIER",
+            "jockey": "S.LEECH",
+            "driver": "S.LEECH",
+            "owner": "B.HALSALL",
+            "weight": 68.0
         },
         {
             "number": 9,
             "horse": "THELEME",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.1.4",
+            "gains": 769251,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G.MASURE",
+            "jockey": "A.CHAILLE-CHAILLE",
+            "driver": "A.CHAILLE-CHAILLE",
+            "owner": "JDG BLOOD.SERV.",
+            "weight": 68.0
         },
         {
             "number": 10,
             "horse": "KILCRUIT",
-            "description": ""
+            "description": "",
+            "performance": "1.5.3.1.4",
+            "gains": 117466,
+            "sex": "H",
+            "age": 8,
+            "trainer": "L.ZULIANI",
+            "jockey": "WP.MULLINS",
+            "driver": "WP.MULLINS",
+            "owner": "MA.MASTERSON",
+            "weight": 68.0
         },
         {
             "number": 11,
             "horse": "HEWICK",
-            "description": ""
+            "description": "",
+            "performance": "1.T.1.T.1",
+            "gains": 518765,
+            "sex": "H",
+            "age": 8,
+            "trainer": "R.BLACKMORE",
+            "jockey": "JJ.HANLON",
+            "driver": "JJ.HANLON",
+            "owner": "TJ.MC DONALD",
+            "weight": 68.0
         },
         {
             "number": 12,
             "horse": "HERMES BAIE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.3.2.2",
+            "gains": 910177,
+            "sex": "H",
+            "age": 6,
+            "trainer": "B.LESTRADE",
+            "jockey": "F.NICOLLE",
+            "driver": "F.NICOLLE",
+            "owner": "P.PAPOT",
+            "weight": 68.0
         },
         {
             "number": 13,
             "horse": "GOA LIL",
-            "description": ""
+            "description": "",
+            "performance": "1.4.4.7.1",
+            "gains": 227126,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F.GILES",
+            "jockey": "N. GEORGE & A. ZETTERHOLM",
+            "driver": "N. GEORGE & A. ZETTERHOLM",
+            "owner": "N.TWISTON-DAVIES",
+            "weight": 68.0
         },
         {
             "number": 14,
             "horse": "ROBERTA HAS",
-            "description": ""
+            "description": "",
+            "performance": "T.6.2.1.1",
+            "gains": 213834,
+            "sex": "F",
+            "age": 6,
+            "trainer": "A.ZULIANI",
+            "jockey": "F.NICOLLE",
+            "driver": "F.NICOLLE",
+            "owner": "SCEA HAMEL STUD",
+            "weight": 66.0
         },
         {
             "number": 15,
             "horse": "SANS BRUIT",
-            "description": ""
+            "description": "",
+            "performance": "1.1.7.T.2",
+            "gains": 245575,
+            "sex": "H",
+            "age": 5,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "D.COTTIN",
+            "driver": "D.COTTIN",
+            "owner": "A.PEAKE",
+            "weight": 66.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

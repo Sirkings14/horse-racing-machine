@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_05-10-2023_6d70c72565_057732692c.txt",
-    "parsed_at": "2026-10-08T10:35:43.156247Z",
+    "parsed_at": "2026-10-08T23:52:15.919397Z",
     "date": "2023-10-05",
     "race": {
         "race_name": "PRIX DE VERSAILLES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "HAYEJOHN",
-            "description": ""
+            "description": "",
+            "performance": "3.1.5.3.7",
+            "gains": 83430,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "EC. PUGLIA",
+            "weight": 61.0,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "LA GALIOTE",
-            "description": ""
+            "description": "",
+            "performance": "0.7.0.6.1",
+            "gains": 26200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "FAIRWAY SAS",
+            "weight": 58.5,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "SAHARA SPRING",
-            "description": ""
+            "description": "",
+            "performance": "6.4.3.4.7",
+            "gains": 38050,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "I.CORBANI",
+            "weight": 58.0,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "NOLITO",
-            "description": ""
+            "description": "",
+            "performance": "4.0.3.3.2",
+            "gains": 66370,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HA.PANTALL",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "BLUE BAYOU",
-            "description": ""
+            "description": "",
+            "performance": "2.5.8.4.1",
+            "gains": 64740,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "P.SOGORB",
+            "driver": "P.SOGORB",
+            "owner": "S.BERLAND",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 6,
             "horse": "SIDEDREAM",
-            "description": ""
+            "description": "",
+            "performance": "9.4.0.1",
+            "gains": 16300,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "WERTH. & FRERE",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "MAAYAFUSHI",
-            "description": ""
+            "description": "",
+            "performance": "1.8.6.4.4",
+            "gains": 32050,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.ROUSSEAU",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HA.PANTALL",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 8,
             "horse": "BIG LOG",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.4.6",
+            "gains": 28000,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "B.LYNAM",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 9,
             "horse": "TAWAFUQ",
-            "description": ""
+            "description": "",
+            "performance": "4.3.1.2.4",
+            "gains": 25300,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.ROHAUT",
+            "driver": "F.ROHAUT",
+            "owner": "SHADWELL FRANCE",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "QUARTZ DU HOULEY",
-            "description": ""
+            "description": "",
+            "performance": "4.2.2.3.3",
+            "gains": 46965,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "C.PELIER",
+            "weight": 55.0,
+            "draw": 2
         },
         {
             "number": 11,
             "horse": "COSMO BEAU",
-            "description": ""
+            "description": "",
+            "performance": "1.4.5.4.3",
+            "gains": 35050,
+            "sex": "M",
+            "age": 3,
+            "trainer": "G.MOSSE",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "M.MOTSCHMANN",
+            "weight": 55.0,
+            "draw": 3
         },
         {
             "number": 12,
             "horse": "LE FREINAY",
-            "description": ""
+            "description": "",
+            "performance": "0.6.0.5.1",
+            "gains": 16250,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "EC. DELLOYE",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 13,
             "horse": "AVERSA",
-            "description": ""
+            "description": "",
+            "performance": "5.6.8.2.0",
+            "gains": 44160,
+            "sex": "F",
+            "age": 3,
+            "trainer": "R.THOMAS",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "JP.VAN. HEEDE",
+            "weight": 54.5,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "RECORDING ANGEL",
-            "description": ""
+            "description": "",
+            "performance": "4.3.6.D.4",
+            "gains": 14370,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "GODOLPHIN SNC",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "MICHELANGELO",
-            "description": ""
+            "description": "",
+            "performance": "2.5.4.4.3",
+            "gains": 30560,
+            "sex": "M",
+            "age": 3,
+            "trainer": "F.VERON",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "LA FLECHE RACING",
+            "weight": 54.0,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "ALVA",
-            "description": ""
+            "description": "",
+            "performance": "2.8.9.1.6",
+            "gains": 23570,
+            "sex": "F",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A. GILIBERT/H. MERAUD",
+            "weight": 53.5,
+            "draw": 6
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             16,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-10-12-2024_96d10cce61_8052fea874.txt",
-    "parsed_at": "2026-10-08T10:35:40.505261Z",
+    "parsed_at": "2026-10-08T23:52:12.195430Z",
     "date": "2024-12-10",
     "race": {
         "race_name": "PRIX DE LA PISTE DES LIONS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CHIRIMIRI",
-            "description": ""
+            "description": "",
+            "performance": "2.0.2.7.1",
+            "gains": 166475,
+            "sex": "H",
+            "age": 6,
+            "trainer": "E.CORALLO",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "J. ORT. BLOODSTOCK L",
+            "weight": 60.5,
+            "draw": 2
         },
         {
             "number": 2,
             "horse": "CENTRAL PARK WEST",
-            "description": ""
+            "description": "",
+            "performance": "4.8.3.1.4",
+            "gains": 262263,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.TRULLIER",
+            "jockey": "JUL .PHELIPPON",
+            "driver": "JUL .PHELIPPON",
+            "owner": "HORSEMOOD",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "SHINNING OCEAN",
-            "description": ""
+            "description": "",
+            "performance": "6.0.0.0.9",
+            "gains": 169295,
+            "sex": "M",
+            "age": 7,
+            "trainer": "D.BREUX",
+            "jockey": "H.BLUME",
+            "driver": "H.BLUME",
+            "owner": "Y.MARIE-NELLY",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "STANGHELI",
-            "description": ""
+            "description": "",
+            "performance": "7.0.4.9.5",
+            "gains": 91160,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.MOSSE",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "Y.BURRUS",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "SKY POWER",
-            "description": ""
+            "description": "",
+            "performance": "0.5.0.0.3",
+            "gains": 221056,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.SOUMILLON",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "ROY RACING LTD",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 6,
             "horse": "ALFRED",
-            "description": ""
+            "description": "",
+            "performance": "0.0.9.0.5",
+            "gains": 40819,
+            "sex": "H",
+            "age": 3,
+            "trainer": "J.MOUTARD",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 7,
             "horse": "HALEINE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.6.5.2",
+            "gains": 44670,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "G.AU.NORMAND",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "LEOPARDUCCIO",
-            "description": ""
+            "description": "",
+            "performance": "1.3.1.4.3",
+            "gains": 111750,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.EON",
+            "jockey": "C.BARANDE BARBE",
+            "driver": "C.BARANDE BARBE",
+            "owner": "D.AIRALDI",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 9,
             "horse": "STAR ROCK",
-            "description": ""
+            "description": "",
+            "performance": "3.5.6.0.4",
+            "gains": 56380,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.MADAMET",
+            "jockey": "V.LUKA",
+            "driver": "V.LUKA",
+            "owner": "LERAM S.R.O.",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "LE FREINAY",
-            "description": ""
+            "description": "",
+            "performance": "0.6.0.3.0",
+            "gains": 63720,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.THOMAS",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "EC. DELLOYE",
+            "weight": 54.5,
+            "draw": 10
         },
         {
             "number": 11,
             "horse": "MARHARRY",
-            "description": ""
+            "description": "",
+            "performance": "5.8.1.3.2",
+            "gains": 42650,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "FAL STUD SAS",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "CALADBOLG",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.7.4",
+            "gains": 34950,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.BALLY",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "M.BEKHTI",
+            "weight": 54.0,
+            "draw": 1
         },
         {
             "number": 13,
             "horse": "MURCIANO",
-            "description": ""
+            "description": "",
+            "performance": "5.0.1.2.9",
+            "gains": 76660,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "N.LE ROCH",
+            "driver": "N.LE ROCH",
+            "owner": "HS D'ETREHAM",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 14,
             "horse": "MY BLACK LADY",
-            "description": ""
+            "description": "",
+            "performance": "8.6.8.6.5",
+            "gains": 78910,
+            "sex": "F",
+            "age": 5,
+            "trainer": "H.JOURNIAC",
+            "jockey": "J.BOISNARD",
+            "driver": "J.BOISNARD",
+            "owner": "HS DE CLAIREFONTAINE",
+            "weight": 54.0,
+            "draw": 5
         },
         {
             "number": 15,
             "horse": "THE FIRST DANCE",
-            "description": ""
+            "description": "",
+            "performance": "1.7.8.6.7",
+            "gains": 43700,
+            "sex": "F",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "CN.WRIGHT",
+            "weight": 54.0,
+            "draw": 15
         },
         {
             "number": 16,
             "horse": "GUALDA",
-            "description": ""
+            "description": "",
+            "performance": "1.5.0.4.6",
+            "gains": 40650,
+            "sex": "F",
+            "age": 3,
+            "trainer": "R.MANGIONE",
+            "jockey": "M.BARATTI",
+            "driver": "M.BARATTI",
+            "owner": "NE. PRODUCCIONES",
+            "weight": 53.5,
+            "draw": 9
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

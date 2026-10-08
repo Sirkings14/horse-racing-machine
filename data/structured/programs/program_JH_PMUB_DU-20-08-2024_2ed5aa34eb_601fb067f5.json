@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-20-08-2024_2ed5aa34eb_601fb067f5.txt",
-    "parsed_at": "2026-10-08T10:35:41.374901Z",
+    "parsed_at": "2026-10-08T23:52:13.435050Z",
     "date": "2024-08-20",
     "race": {
         "race_name": "PRIX BFM NORMANDIE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DSCHINGIS KING",
-            "description": ""
+            "description": "",
+            "performance": "4.3.3.3.1",
+            "gains": 50650,
+            "sex": "M",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "A.WATTEL",
+            "driver": "A.WATTEL",
+            "owner": "AVATARA S.A.",
+            "weight": 61.0,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "NACIDO",
-            "description": ""
+            "description": "",
+            "performance": "5.5.5.5.4",
+            "gains": 43420,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "H.BLUME",
+            "driver": "H.BLUME",
+            "owner": "GESTUT NIEDERRHEIN",
+            "weight": 60.5,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "WOOT CITY",
-            "description": ""
+            "description": "",
+            "performance": "0.7.1.0.2",
+            "gains": 194671,
+            "sex": "H",
+            "age": 7,
+            "trainer": "T.PICCONE",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "L.DISARO",
+            "weight": 60.0,
+            "draw": 11
         },
         {
             "number": 4,
             "horse": "PAPER TROPHY",
-            "description": ""
+            "description": "",
+            "performance": "0.0.6.0.1",
+            "gains": 169770,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.THOMAS",
+            "jockey": "R.AVIAL LOPEZ",
+            "driver": "R.AVIAL LOPEZ",
+            "owner": "C.PIERROU",
+            "weight": 60.0,
+            "draw": 14
         },
         {
             "number": 5,
             "horse": "CRACKOVIA",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.1.5",
+            "gains": 73814,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "J. N. & D. LIVINGSTON",
+            "weight": 59.0,
+            "draw": 6
         },
         {
             "number": 6,
             "horse": "KAYRAT",
-            "description": ""
+            "description": "",
+            "performance": "7.5.4.1.0",
+            "gains": 149970,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "M.SCAND.LACAILLE",
+            "driver": "M.SCAND.LACAILLE",
+            "owner": "M.ARCH",
+            "weight": 58.5,
+            "draw": 16
         },
         {
             "number": 7,
             "horse": "WUKHANN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.1.3",
+            "gains": 90330,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "J.PARIZE",
+            "driver": "J.PARIZE",
+            "owner": "R.FRANCES",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "LEMPIRA",
-            "description": ""
+            "description": "",
+            "performance": "6.5.3.1.0",
+            "gains": 28920,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "COMTE G.DE ST-SEINE",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 9,
             "horse": "SUPER ALEX",
-            "description": ""
+            "description": "",
+            "performance": "8.3.3.7.1",
+            "gains": 15810,
+            "sex": "H",
+            "age": 9,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "JPH .DUBOIS",
+            "driver": "JPH .DUBOIS",
+            "owner": "V.DUBOIS/J.DUBOIS",
+            "weight": 56.5,
+            "draw": 8
         },
         {
             "number": 10,
             "horse": "LISMORE",
-            "description": ""
+            "description": "",
+            "performance": "3.1.6.6.2",
+            "gains": 18900,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "H.SHIMIZU",
+            "driver": "H.SHIMIZU",
+            "owner": "TEAM HOGDALA A.B.",
+            "weight": 56.0,
+            "draw": 1
         },
         {
             "number": 11,
             "horse": "FLATTEN THE CURVE",
-            "description": ""
+            "description": "",
+            "performance": "9.6.4.2.5",
+            "gains": 121150,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.HAMMER-HANSEN",
+            "jockey": "C.FEY",
+            "driver": "C.FEY",
+            "owner": "E.SAUREN",
+            "weight": 54.5,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "GUINESS STAR",
-            "description": ""
+            "description": "",
+            "performance": "3.2.2.7.5",
+            "gains": 23160,
+            "sex": "M",
+            "age": 4,
+            "trainer": "L.POGGIONOVO",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "SC THIERRY PIGEON",
+            "weight": 53.5,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "DREAMS",
-            "description": ""
+            "description": "",
+            "performance": "2.5.5.6.1",
+            "gains": 115260,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "S.PECORARO",
+            "driver": "S.PECORARO",
+            "owner": "P.FLORE",
+            "weight": 53.0,
+            "draw": 5
         },
         {
             "number": 14,
             "horse": "ROSETTA STONE",
-            "description": ""
+            "description": "",
+            "performance": "1.3.3.0.1",
+            "gains": 88690,
+            "sex": "H",
+            "age": 5,
+            "trainer": "R.MANGIONE",
+            "jockey": "MF.WEISSMEIER",
+            "driver": "MF.WEISSMEIER",
+            "owner": "GA.CLUB RHEIN-MAIN",
+            "weight": 53.0,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "BLACK HAWK",
-            "description": ""
+            "description": "",
+            "performance": "5.0.1.7.5",
+            "gains": 132060,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.POUCHIN",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "ANT .BOUCHER",
+            "weight": 53.0,
+            "draw": 2
         },
         {
             "number": 16,
             "horse": "RUSSIAN TWIST",
-            "description": ""
+            "description": "",
+            "performance": "2.9.0.2.2",
+            "gains": 77120,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.SUBIAS",
+            "jockey": "L.HEB. DE VEYRINAS",
+            "driver": "L.HEB. DE VEYRINAS",
+            "owner": "JC.OBELLIANNE",
+            "weight": 53.0,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

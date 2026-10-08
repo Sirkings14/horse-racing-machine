@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-26-05-2024_0_8aed4c18a8_1eae4348fa.txt",
-    "parsed_at": "2026-10-08T10:35:42.019225Z",
+    "parsed_at": "2026-10-08T23:52:14.358490Z",
     "date": "2024-05-26",
     "race": {
         "race_name": "PRIX DE LA VILLE DE PARIS",
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "CLAVUS",
-            "description": ""
+            "description": "",
+            "performance": "1.9.2.4.1",
+            "gains": 42200,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "F.BLICHFELDT",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 2,
             "horse": "AQUILA VOLANTE",
-            "description": ""
+            "description": "",
+            "performance": "4.3.1.5.8",
+            "gains": 57850,
+            "sex": "M",
+            "age": 3,
+            "trainer": "R.MANGIONE",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "M.PIETRANGELO",
+            "weight": 58.5,
+            "draw": 1
         },
         {
             "number": 3,
             "horse": "CONTENTIOUS SOUL",
-            "description": ""
+            "description": "",
+            "performance": "4.3.3.2.1",
+            "gains": 24950,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "P. DE CHEVIGNY",
+            "driver": "P. DE CHEVIGNY",
+            "owner": "I.CORBANI",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "AMORCITA",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.1.3",
+            "gains": 35850,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "P.RECHSTEINER",
+            "weight": 56.0,
+            "draw": 3
         },
         {
             "number": 5,
             "horse": "BELISE",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.6",
+            "gains": 25800,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "B. ED.DE ROTHSCHILD",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 6,
             "horse": "HAMLET'S NIGHT",
-            "description": ""
+            "description": "",
+            "performance": "2.2.4.5",
+            "gains": 20050,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "GODOLPHIN SNC",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "ATLANTIC WAYS",
-            "description": ""
+            "description": "",
+            "performance": "2.6.5.3.2",
+            "gains": 49650,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "S.KUMIN",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "TRUE VALUE",
-            "description": ""
+            "description": "",
+            "performance": "1.6.0.1.1",
+            "gains": 39340,
+            "sex": "F",
+            "age": 3,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "C.BARANDE BARBE",
+            "driver": "C.BARANDE BARBE",
+            "owner": "C.BARANDE BARBE",
+            "weight": 55.0,
+            "draw": 15
         },
         {
             "number": 9,
             "horse": "ARPENTEUR",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.3.3",
+            "gains": 32350,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "EC.WALDECK",
+            "weight": 54.5,
+            "draw": 13
         },
         {
             "number": 10,
             "horse": "LOVECAYAN",
-            "description": ""
+            "description": "",
+            "performance": "5.1.5.3",
+            "gains": 15300,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "EC. DES MONNAIES",
+            "weight": 54.5,
+            "draw": 14
         },
         {
             "number": 11,
             "horse": "PARRHESIA",
-            "description": ""
+            "description": "",
+            "performance": "2.3.0.9.4",
+            "gains": 38000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "AS.CROMBEZ",
+            "driver": "AS.CROMBEZ",
+            "owner": "J.COUVERCELLE",
+            "weight": 54.0,
+            "draw": 9
         },
         {
             "number": 12,
             "horse": "ABIAT",
-            "description": ""
+            "description": "",
+            "performance": "3.0.3.2.4",
+            "gains": 14870,
+            "sex": "F",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "M.RULEC",
+            "driver": "M.RULEC",
+            "owner": "L.SAROVA",
+            "weight": 54.0,
+            "draw": 4
         },
         {
             "number": 13,
             "horse": "BONNY WAY",
-            "description": ""
+            "description": "",
+            "performance": "7.5.1.7",
+            "gains": 12900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.BOISSEAU",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "A.KRAULIGER",
+            "weight": 54.0,
+            "draw": 8
         },
         {
             "number": 14,
             "horse": "BEJAR",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.3.2",
+            "gains": 31570,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "BR.BEAUNEZ",
+            "driver": "BR.BEAUNEZ",
+            "owner": "X.HUMBERT",
+            "weight": 53.0,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "IBERIA",
-            "description": ""
+            "description": "",
+            "performance": "3.7.4.7.8",
+            "gains": 6710,
+            "sex": "F",
+            "age": 3,
+            "trainer": "V.SEGUY",
+            "jockey": "P.GROUALLE",
+            "driver": "P.GROUALLE",
+            "owner": "BEAUMELLES RACING",
+            "weight": 53.0,
+            "draw": 11
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-31-03-2025_b2f03a44d2_2ce2fd27a3.txt",
-    "parsed_at": "2026-10-08T10:35:42.516472Z",
+    "parsed_at": "2026-10-08T23:52:15.033843Z",
     "date": "2025-03-31",
     "race": {
         "race_name": "PRIX DU PALIO DE CHANTILLY",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CHAUMIERE DE PRE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.1.1.4",
+            "gains": 38600,
+            "sex": "H",
+            "age": 3,
+            "trainer": "R.THOMAS",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "KL.RAMSEY",
+            "weight": 60.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "HUNTER'S LUCK",
-            "description": ""
+            "description": "",
+            "performance": "7.1.1.1.9",
+            "gains": 37500,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "P.DREUX",
+            "weight": 59.5,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "GOOD SPEED",
-            "description": ""
+            "description": "",
+            "performance": "2.6.6.5.2",
+            "gains": 36300,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "EC. METAL",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 4,
             "horse": "ALPHA JET",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.6.4",
+            "gains": 34050,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "M.BARATTI",
+            "driver": "M.BARATTI",
+            "owner": "DASSAULT/TREVES",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "LADY VITESSE",
-            "description": ""
+            "description": "",
+            "performance": "3.6.6.7.0",
+            "gains": 28600,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "R.CHOTARD",
+            "driver": "R.CHOTARD",
+            "owner": "EC. MELANIE",
+            "weight": 58.0,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "DEFULLY",
-            "description": ""
+            "description": "",
+            "performance": "4.1.3.4",
+            "gains": 23050,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "CLEMENT & HERMANS",
+            "driver": "CLEMENT & HERMANS",
+            "owner": "R.SHAYKHU.",
+            "weight": 58.0,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "PERIHELIO",
-            "description": ""
+            "description": "",
+            "performance": "7.1.3.3",
+            "gains": 14900,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "S.EGLOFF",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "ACTO",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.5",
+            "gains": 15300,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "L.MINEO",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "MARVELOUS BY NIGHT",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.2.4",
+            "gains": 46131,
+            "sex": "F",
+            "age": 3,
+            "trainer": "G.GUEDJ-GAY",
+            "jockey": "J.RESIMONT",
+            "driver": "J.RESIMONT",
+            "owner": "EC. S. STEMPNIAK",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "DUCHESSE DE MORNY",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.4.8",
+            "gains": 27750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "EC. C. MARZOCCO",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "BOGDANN",
-            "description": ""
+            "description": "",
+            "performance": "0.9.6.5.4",
+            "gains": 4500,
+            "sex": "H",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "ROB.COLLET",
+            "driver": "ROB.COLLET",
+            "owner": "X.KEPA",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "SI SEULEMENT",
-            "description": ""
+            "description": "",
+            "performance": "0.5.1.2",
+            "gains": 16500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "H.JOURNIAC",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "M.LAGASSE",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "CHATEAU ESQUIULE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.0.7",
+            "gains": 8400,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "A.LARTIGAU",
+            "driver": "A.LARTIGAU",
+            "owner": "J.ANXO",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "GABYLOU",
-            "description": ""
+            "description": "",
+            "performance": "1.3.6.1.7",
+            "gains": 24600,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.GROSBOIS",
+            "jockey": "G.FOURRIER",
+            "driver": "G.FOURRIER",
+            "owner": "EC. R.E.",
+            "weight": 54.0,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "FILLE D'ARGENTINE",
-            "description": ""
+            "description": "",
+            "performance": "1.3.3.5.7",
+            "gains": 18450,
+            "sex": "F",
+            "age": 3,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "RC.MONTENEGRO",
+            "driver": "RC.MONTENEGRO",
+            "owner": "I.MONTENEGRO",
+            "weight": 53.5,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "MINO GALESTE",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.4.6",
+            "gains": 17500,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "E.POITEVIN",
+            "weight": 53.5,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

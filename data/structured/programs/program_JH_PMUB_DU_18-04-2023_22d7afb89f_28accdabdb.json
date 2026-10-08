@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_18-04-2023_22d7afb89f_28accdabdb.txt",
-    "parsed_at": "2026-10-08T10:35:44.796741Z",
+    "parsed_at": "2026-10-08T23:52:18.268728Z",
     "date": "2023-04-18",
     "race": {
         "race_name": null,
@@ -16,79 +16,215 @@
         {
             "number": 1,
             "horse": "ISPANO STAR",
-            "description": ""
+            "description": "",
+            "performance": "6.7.1.4.3",
+            "gains": 81185,
+            "sex": "H",
+            "age": 5,
+            "trainer": "J.CHARRON",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "J.FINCH",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "LES COUZ",
-            "description": ""
+            "description": "",
+            "performance": "8.3.0.1.3",
+            "gains": 50355,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.RE",
+            "jockey": "B.RE-SCANDELLA",
+            "driver": "B.RE-SCANDELLA",
+            "owner": "B.RE-SCANDELLA",
+            "weight": 71.5
         },
         {
             "number": 3,
             "horse": "ENDAVI",
-            "description": ""
+            "description": "",
+            "performance": "3.4.A.3.5",
+            "gains": 29085,
+            "sex": "H",
+            "age": 5,
+            "trainer": "V.BERNARD",
+            "jockey": "L.CARBERRY",
+            "driver": "L.CARBERRY",
+            "owner": "D.RICARD",
+            "weight": 71.0
         },
         {
             "number": 4,
             "horse": "SARATOGA EST",
-            "description": ""
+            "description": "",
+            "performance": "6.1.5.4.2",
+            "gains": 25315,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.PHILIPPERON",
+            "jockey": "M.ROLLAND",
+            "driver": "M.ROLLAND",
+            "owner": "F.BIANCO",
+            "weight": 71.0
         },
         {
             "number": 5,
             "horse": "LE LASCAR",
-            "description": ""
+            "description": "",
+            "performance": "A.1.1",
+            "gains": 25080,
+            "sex": "H",
+            "age": 5,
+            "trainer": "K.DUBOURG",
+            "jockey": "C.BONIN",
+            "driver": "C.BONIN",
+            "owner": "EC.BERND & TORSTEN",
+            "weight": 71.0
         },
         {
             "number": 6,
             "horse": "ESPOIR DE NOEL",
-            "description": ""
+            "description": "",
+            "performance": "4.5.1.4.1",
+            "gains": 21705,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.BEAURAIN",
+            "jockey": "F.FOUCHER",
+            "driver": "F.FOUCHER",
+            "owner": "F.FOUCHER",
+            "weight": 71.0
         },
         {
             "number": 7,
             "horse": "DEMOISELLE KAP",
-            "description": ""
+            "description": "",
+            "performance": "5.T.1.4.A",
+            "gains": 52205,
+            "sex": "F",
+            "age": 5,
+            "trainer": "J.BURKE",
+            "jockey": "S.LEECH",
+            "driver": "S.LEECH",
+            "owner": "JL.MARRIOTT",
+            "weight": 70.5
         },
         {
             "number": 8,
             "horse": "SINGAPORE TRIP",
-            "description": ""
+            "description": "",
+            "performance": "T.9.2.A.8",
+            "gains": 112660,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.ZULIANI",
+            "jockey": "D.SATALIA",
+            "driver": "D.SATALIA",
+            "owner": "T.JONES",
+            "weight": 70.0
         },
         {
             "number": 9,
             "horse": "ILTONE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.3.5.1",
+            "gains": 35010,
+            "sex": "H",
+            "age": 5,
+            "trainer": "B.LESTRADE",
+            "jockey": "N. GEO. & A. ZETTERHOLM",
+            "driver": "N. GEO. & A. ZETTERHOLM",
+            "owner": "THE FRAN.PARTNERSHIP",
+            "weight": 70.0
         },
         {
             "number": 10,
             "horse": "JOE DE TEILLEE",
-            "description": ""
+            "description": "",
+            "performance": "4.3.A.1.2",
+            "gains": 26785,
+            "sex": "H",
+            "age": 5,
+            "trainer": "V.MORIN",
+            "jockey": "J.MARION",
+            "driver": "J.MARION",
+            "owner": "EC. ANJOU PASSION",
+            "weight": 70.0
         },
         {
             "number": 11,
             "horse": "ILUMINE PRECIEUSE",
-            "description": ""
+            "description": "",
+            "performance": "9.T.2.9",
+            "gains": 10810,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.DESVAUX",
+            "jockey": "M.DESVAUX",
+            "driver": "M.DESVAUX",
+            "owner": "M.DESVAUX",
+            "weight": 70.0
         },
         {
             "number": 12,
             "horse": "VANDRIMAR",
-            "description": ""
+            "description": "",
+            "performance": "4.2.T.T.6",
+            "gains": 15450,
+            "sex": "H",
+            "age": 5,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "AS.PACAULT",
+            "driver": "AS.PACAULT",
+            "owner": "CA.DE CLE.TONNERRE",
+            "weight": 69.0
         },
         {
             "number": 13,
             "horse": "SAINT SIRE",
-            "description": ""
+            "description": "",
+            "performance": "2.4.5.3.6",
+            "gains": 50845,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.RICHARD",
+            "jockey": "I.GALLORINI",
+            "driver": "I.GALLORINI",
+            "owner": "C.GUEDJ",
+            "weight": 69.0
         },
         {
             "number": 14,
             "horse": "ITALIAANA LE DUN",
-            "description": ""
+            "description": "",
+            "performance": "8.4.1.3.0",
+            "gains": 38965,
+            "sex": "F",
+            "age": 5,
+            "trainer": "F.GILES",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "E.KRAHENBUHL",
+            "weight": 68.0
         },
         {
             "number": 15,
             "horse": "GHOST RIDER",
-            "description": ""
+            "description": "",
+            "performance": "1.7.A.8.0",
+            "gains": 7500,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.SOLIGNAC",
+            "jockey": "M.SOLIGNAC",
+            "driver": "M.SOLIGNAC",
+            "owner": "K.PARKINSON",
+            "weight": 68.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

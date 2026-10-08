@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-02-09-2024_cea678203e_0952ab6941.txt",
-    "parsed_at": "2026-10-08T10:35:39.577917Z",
+    "parsed_at": "2026-10-08T23:52:10.877972Z",
     "date": "2024-09-02",
     "race": {
         "race_name": "PRIX VAND B",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "IMPERATOR D'ELA",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.D.1",
+            "gains": 172155,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A. BARRIER",
+            "jockey": "M. VARIN",
+            "driver": "M. VARIN",
+            "owner": "EC. HERVÉ GUERIN",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2775.M"
         },
         {
             "number": 2,
             "horse": "IDEFIX DE CENTULE",
-            "description": ""
+            "description": "",
+            "performance": "7.6.2.D.2",
+            "gains": 185880,
+            "sex": "M",
+            "age": 6,
+            "trainer": "T. LE BELLER",
+            "jockey": "T. LE BELLER",
+            "driver": "T. LE BELLER",
+            "owner": "EC. T. LE BELLER",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2775.M"
         },
         {
             "number": 3,
             "horse": "IRON JET",
-            "description": ""
+            "description": "",
+            "performance": "D.4.0.3.1",
+            "gains": 191372,
+            "sex": "M",
+            "age": 6,
+            "trainer": "T. COMPAS",
+            "jockey": "B. MICHARDIERE",
+            "driver": "B. MICHARDIERE",
+            "owner": "EC. HUNTER VALLEY",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2775.M"
         },
         {
             "number": 4,
             "horse": "HORS BORD",
-            "description": ""
+            "description": "",
+            "performance": "9.0.1.6.0",
+            "gains": 197195,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D. BONNE",
+            "jockey": "J.M. CHAINEUX",
+            "driver": "J.M. CHAINEUX",
+            "owner": "PHILIPPE BEINE",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2775.M"
         },
         {
             "number": 5,
             "horse": "INDY DE JYR",
-            "description": ""
+            "description": "",
+            "performance": "3.5.4.2.5",
+            "gains": 197340,
+            "sex": "H",
+            "age": 6,
+            "trainer": "GUILLAUME MARTIN",
+            "jockey": "M. SASSIER",
+            "driver": "M. SASSIER",
+            "owner": "EC. JYR",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2775.M"
         },
         {
             "number": 6,
             "horse": "FELINE DE CALVI",
-            "description": ""
+            "description": "",
+            "performance": "6.2.7.8.3",
+            "gains": 205620,
+            "sex": "F",
+            "age": 9,
+            "trainer": "N. PERRON",
+            "jockey": "L. VAUBERT",
+            "driver": "L. VAUBERT",
+            "owner": "R. RUCINSKI",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2775.M"
         },
         {
             "number": 7,
             "horse": "HARRY DE SASSY",
-            "description": ""
+            "description": "",
+            "performance": "2.0.5.1.1",
+            "gains": 229480,
+            "sex": "H",
+            "age": 7,
+            "trainer": "J. LEROULLEY",
+            "jockey": "J. LEROULLEY",
+            "driver": "J. LEROULLEY",
+            "owner": "M. COLLET",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2775.M"
         },
         {
             "number": 8,
             "horse": "GALA DE CRENNES",
-            "description": ""
+            "description": "",
+            "performance": "0.9.5.2.4",
+            "gains": 289820,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.P. MAILLARD",
+            "jockey": "E. SZIRMAY",
+            "driver": "E. SZIRMAY",
+            "owner": "EC. HS DE CRENNES",
+            "listed_chrono": "1.12.60",
+            "listed_distance": "2775.M"
         },
         {
             "number": 9,
             "horse": "FORBAN",
-            "description": ""
+            "description": "",
+            "performance": "6.6.9.2.4",
+            "gains": 292600,
+            "sex": "H",
+            "age": 9,
+            "trainer": "TH. DROMIGNY",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "EC. KARIBOU",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2775.M"
         },
         {
             "number": 10,
             "horse": "HARRY CARISAIE",
-            "description": ""
+            "description": "",
+            "performance": "4.D.3.6.4",
+            "gains": 294640,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M. ABRIVARD",
+            "jockey": "J.ET. THUET",
+            "driver": "J.ET. THUET",
+            "owner": "J.ET. THUET",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2775.M"
         },
         {
             "number": 11,
             "horse": "HEDIC GEMA",
-            "description": ""
+            "description": "",
+            "performance": "1.1.8.1.1",
+            "gains": 333310,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "M. SASSIER",
+            "driver": "M. SASSIER",
+            "owner": "EC. M. SASSIER",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2800.M"
         },
         {
             "number": 12,
             "horse": "GAUDEO",
-            "description": ""
+            "description": "",
+            "performance": "T.D.D.0.0",
+            "gains": 364060,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A. DABOUIS",
+            "jockey": "M. DABOUIS",
+            "driver": "M. DABOUIS",
+            "owner": "A. DABOUIS",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2800.M"
         },
         {
             "number": 13,
             "horse": "HYMNE DU GERS",
-            "description": ""
+            "description": "",
+            "performance": "1.2.1.0.2",
+            "gains": 401310,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC. J.M. RANCOULE",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2800.M"
         },
         {
             "number": 14,
             "horse": "ENZO D'ESSARTS",
-            "description": ""
+            "description": "",
+            "performance": "3.0.4.6.1",
+            "gains": 418160,
+            "sex": "H",
+            "age": 10,
+            "trainer": "R. LAGADEUC",
+            "jockey": "R. LAGADEUC",
+            "driver": "R. LAGADEUC",
+            "owner": "EC. DES ESSARTS",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2800.M"
         },
         {
             "number": 15,
             "horse": "GRACE DU DIGEON",
-            "description": ""
+            "description": "",
+            "performance": "0.5.D.1.4",
+            "gains": 513390,
+            "sex": "F",
+            "age": 8,
+            "trainer": "CH. DREUX",
+            "jockey": "CH. DREUX",
+            "driver": "CH. DREUX",
+            "owner": "EC. CH. DREUX",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2800.M"
         },
         {
             "number": 16,
             "horse": "IBIKI DE HOUELLE",
-            "description": ""
+            "description": "",
+            "performance": "9.1.2.1.1",
+            "gains": 532910,
+            "sex": "M",
+            "age": 6,
+            "trainer": "E. RAFFIN",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "D. AUGEREAU",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2800.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

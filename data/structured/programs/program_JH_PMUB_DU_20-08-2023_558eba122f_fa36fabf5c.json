@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_20-08-2023_558eba122f_fa36fabf5c.txt",
-    "parsed_at": "2026-10-08T10:35:45.129920Z",
+    "parsed_at": "2026-10-08T23:52:18.755087Z",
     "date": "2023-08-20",
     "race": {
         "race_name": "SUMBE GRAND HANDICAP",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CHARLESQUINT",
-            "description": ""
+            "description": "",
+            "performance": "1.0.7.3.1",
+            "gains": 229325,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A.POUCHIN",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "MJ.GOETSCHY",
+            "weight": 60.0,
+            "draw": 16
         },
         {
             "number": 2,
             "horse": "PARCHEMIN",
-            "description": ""
+            "description": "",
+            "performance": "5.3.5.1.5",
+            "gains": 155490,
+            "sex": "H",
+            "age": 5,
+            "trainer": "B.MURZABAYEV",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "GODOLPHIN SNC",
+            "weight": 60.0,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "INTEGRANT",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.3.6",
+            "gains": 133586,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "HF.DEVIN",
+            "driver": "HF.DEVIN",
+            "owner": "H.SAITO",
+            "weight": 59.5,
+            "draw": 8
         },
         {
             "number": 4,
             "horse": "SAINT HELLIER",
-            "description": ""
+            "description": "",
+            "performance": "1.0.1.5.8",
+            "gains": 112970,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "M.NIKITAS",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 5,
             "horse": "ELIYASS",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.1.1",
+            "gains": 48200,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "JC.ROUGET",
+            "driver": "JC.ROUGET",
+            "owner": "S.A. AGA KHAN",
+            "weight": 58.0,
+            "draw": 7
         },
         {
             "number": 6,
             "horse": "WONNEMOND",
-            "description": ""
+            "description": "",
+            "performance": "8.0.6.3.7",
+            "gains": 683705,
+            "sex": "H",
+            "age": 10,
+            "trainer": "A.MADAMET",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "STALL FROHNBACH",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "BEHTAR",
-            "description": ""
+            "description": "",
+            "performance": "3.8.0.2.3",
+            "gains": 53820,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "S.A. AGA KHAN",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "NIGHTHAB",
-            "description": ""
+            "description": "",
+            "performance": "8.8.9.0.1",
+            "gains": 102840,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "V.SARTORI",
+            "driver": "V.SARTORI",
+            "owner": "LEGEND RACING CLUB",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "VALIABAD",
-            "description": ""
+            "description": "",
+            "performance": "7.0.5.1.2",
+            "gains": 68050,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "M.WATT",
+            "weight": 57.0,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "BAKHCHISARAY",
-            "description": ""
+            "description": "",
+            "performance": "1.7.7.3.5",
+            "gains": 113105,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. FRIEDRIDER",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "MONSIEUR XOO",
-            "description": ""
+            "description": "",
+            "performance": "0.9.4.3.3",
+            "gains": 162644,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.GUITRAUD",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "D. XOUAL",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "CARAMELITO",
-            "description": ""
+            "description": "",
+            "performance": "1.3.6.6.8",
+            "gains": 66220,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "F.ROHAUT",
+            "driver": "F.ROHAUT",
+            "owner": "P.SABBAN",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "INDIAN PACIFIC",
-            "description": ""
+            "description": "",
+            "performance": "4.4.6.0.2",
+            "gains": 148634,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.SOUMILLON",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "D.ALEXANDRE",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 14,
             "horse": "DAYSHANN",
-            "description": ""
+            "description": "",
+            "performance": "0.9.6.5.1",
+            "gains": 73401,
+            "sex": "M",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "M.DEL.SANCHEZ",
+            "driver": "M.DEL.SANCHEZ",
+            "owner": "J. MALDO. TRINCHANT",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "WHITE WHISKY",
-            "description": ""
+            "description": "",
+            "performance": "5.0.8.1.4",
+            "gains": 86300,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.VERON",
+            "jockey": "G.ALIMPINISIS",
+            "driver": "G.ALIMPINISIS",
+            "owner": "R.SHAYKHUTDINOV",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "THIRSTY",
-            "description": ""
+            "description": "",
+            "performance": "0.7.3.1.6",
+            "gains": 89085,
+            "sex": "M",
+            "age": 6,
+            "trainer": "S.PASQUIER",
+            "jockey": "A.FOUASSIER",
+            "driver": "A.FOUASSIER",
+            "owner": "G.AU.NORMAND",
+            "weight": 55.0,
+            "draw": 12
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-16-03-2024_3d3444814b_d752c5c30a.txt",
-    "parsed_at": "2026-10-08T10:35:40.987221Z",
+    "parsed_at": "2026-10-08T23:52:12.884696Z",
     "date": "2024-03-16",
     "race": {
         "race_name": "PRIX DE LA GLORIETTE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "SUNFAST",
-            "description": ""
+            "description": "",
+            "performance": "1.7.8.1.1",
+            "gains": 115770,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "ARGELLA RACING",
+            "weight": 60.5,
+            "draw": 16
         },
         {
             "number": 2,
             "horse": "ORION ROCK",
-            "description": ""
+            "description": "",
+            "performance": "6.1.4.2.3",
+            "gains": 52700,
+            "sex": "M",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HARAS DE HUS",
+            "weight": 59.5,
+            "draw": 13
         },
         {
             "number": 3,
             "horse": "TARAJAL",
-            "description": ""
+            "description": "",
+            "performance": "0.2.6.1.2",
+            "gains": 73170,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.RUIS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N..TEMAM",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 4,
             "horse": "MOONWALK STEP",
-            "description": ""
+            "description": "",
+            "performance": "5.3.5.4.1",
+            "gains": 321972,
+            "sex": "H",
+            "age": 11,
+            "trainer": "M.BARZALONA",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "D.DAHAN",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "QATAR RIVER",
-            "description": ""
+            "description": "",
+            "performance": "7.4.2.6.3",
+            "gains": 203740,
+            "sex": "H",
+            "age": 9,
+            "trainer": "D.SANTIAGO",
+            "jockey": "J.SOUDAN",
+            "driver": "J.SOUDAN",
+            "owner": "A.MARIE-NELLY",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "WOOT CITY",
-            "description": ""
+            "description": "",
+            "performance": "7.0.4.2.1",
+            "gains": 149621,
+            "sex": "H",
+            "age": 7,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "L.DISARO",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "MORPHEWAN",
-            "description": ""
+            "description": "",
+            "performance": "1.3.0.1.2",
+            "gains": 44070,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "D.DUMOULIN",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "LORNE",
-            "description": ""
+            "description": "",
+            "performance": "5.0.0.6.3",
+            "gains": 67260,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.CRASTUS",
+            "jockey": "A.FOUASSIER",
+            "driver": "A.FOUASSIER",
+            "owner": "EC.DUPONT SEBASTIEN",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "CUNCERTO",
-            "description": ""
+            "description": "",
+            "performance": "3.3.0.8.5",
+            "gains": 51540,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "M.RULEC",
+            "driver": "M.RULEC",
+            "owner": "C.FOELLER",
+            "weight": 54.5,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "WUKHANN",
-            "description": ""
+            "description": "",
+            "performance": "5.5.7.3.4",
+            "gains": 33630,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "SUC. Y. SEYD. DE CLAUSONNE",
+            "weight": 54.5,
+            "draw": 15
         },
         {
             "number": 11,
             "horse": "CHEEK TO CHEEK",
-            "description": ""
+            "description": "",
+            "performance": "3.5.0.0.2",
+            "gains": 45370,
+            "sex": "F",
+            "age": 5,
+            "trainer": "M.GUYON",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "F.RAOUL",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "WEMATCH",
-            "description": ""
+            "description": "",
+            "performance": "2.1.5.2.2",
+            "gains": 75210,
+            "sex": "M",
+            "age": 5,
+            "trainer": "P.REMOUE",
+            "jockey": "A.FOUASSIER",
+            "driver": "A.FOUASSIER",
+            "owner": "M.MASSARD",
+            "weight": 53.0,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "REVENTADOR",
-            "description": ""
+            "description": "",
+            "performance": "3.1.4.5.0",
+            "gains": 97760,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E.HARDOUIN",
+            "jockey": "H.SAUER",
+            "driver": "H.SAUER",
+            "owner": "STALL LAURUS",
+            "weight": 53.0,
+            "draw": 3
         },
         {
             "number": 14,
             "horse": "ULTRASOUND",
-            "description": ""
+            "description": "",
+            "performance": "9.4.6.7.4",
+            "gains": 23850,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.MADAMET",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "C.HORN",
+            "weight": 53.0,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "PENTAOUR",
-            "description": ""
+            "description": "",
+            "performance": "2.2.6.4.2",
+            "gains": 55410,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.VELON",
+            "jockey": "BOLLACK-BADEL",
+            "driver": "BOLLACK-BADEL",
+            "owner": "EC.N.FORGEARD",
+            "weight": 52.5,
+            "draw": 1
         },
         {
             "number": 16,
             "horse": "SNUGGLES",
-            "description": ""
+            "description": "",
+            "performance": "0.5.6.0.0",
+            "gains": 24750,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.TRULLIER",
+            "jockey": "M.AND. RATSIMIHAH",
+            "driver": "M.AND. RATSIMIHAH",
+            "owner": "M.AND. RATSIMIHAH",
+            "weight": 52.0,
+            "draw": 8
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

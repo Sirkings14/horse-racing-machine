@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_08-07-2025_8b12dc8094_88d4eb42cd.txt",
-    "parsed_at": "2026-10-08T10:35:43.508622Z",
+    "parsed_at": "2026-10-08T23:52:16.402410Z",
     "date": "2025-07-08",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ZIGGY STAR",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.2.3",
+            "gains": 58850,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "EC.JP.BONARDEL",
+            "weight": 59.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "THINTHREAD",
-            "description": ""
+            "description": "",
+            "performance": "5.1.4.8",
+            "gains": 10700,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "I..ALSAGAR",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "MINO GALESTE",
-            "description": ""
+            "description": "",
+            "performance": "9.7.1.2.5",
+            "gains": 43050,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H.GHABRI",
+            "jockey": "J.MOUTARD",
+            "driver": "J.MOUTARD",
+            "owner": "E.POITEVIN",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "LIBYAN KNIGHT",
-            "description": ""
+            "description": "",
+            "performance": "7.0.3.7.3",
+            "gains": 23400,
+            "sex": "M",
+            "age": 3,
+            "trainer": "H.GHABRI",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "M.AGUEL",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "GERARD TER BORCH",
-            "description": ""
+            "description": "",
+            "performance": "2.3.4.1",
+            "gains": 21700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.DELZANGLES",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "PY.LEFEVRE",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 6,
             "horse": "KELCE",
-            "description": ""
+            "description": "",
+            "performance": "2.3.3",
+            "gains": 10000,
+            "sex": "H",
+            "age": 3,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "OTI MANA. PTY LTD",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "CERVINIA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.3.2.8",
+            "gains": 41950,
+            "sex": "F",
+            "age": 3,
+            "trainer": "G.ARIK. ELOSEGUI",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "M. NOSTRUM C.B.",
+            "weight": 55.5,
+            "draw": 4
         },
         {
             "number": 8,
             "horse": "SEONA",
-            "description": ""
+            "description": "",
+            "performance": "4.6.4.5.3",
+            "gains": 32950,
+            "sex": "F",
+            "age": 3,
+            "trainer": "FR.MONFORT",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "A.GRAY",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 9,
             "horse": "IFFROCTA FAL",
-            "description": ""
+            "description": "",
+            "performance": "3.2.2.1.6",
+            "gains": 30950,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARATTI",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "FAL STUD SAS",
+            "weight": 55.5,
+            "draw": 1
         },
         {
             "number": 10,
             "horse": "MISS ANGEL",
-            "description": ""
+            "description": "",
+            "performance": "1.1.3.8.4",
+            "gains": 28150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "EC. M. OFFENSTADT",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 11,
             "horse": "TAKE ME I'M YOURS",
-            "description": ""
+            "description": "",
+            "performance": "0.1.3.5.5",
+            "gains": 20000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J.DUPONT-FAHN",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "J.DUPONT-FAHN",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "ISPERIA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.0.4",
+            "gains": 10750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "X.BLANCHET",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "EC. GEORGINIO",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "DSCHINGIS ZANDEE",
-            "description": ""
+            "description": "",
+            "performance": "9.1.1.3.1",
+            "gains": 41500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BRASME",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "AVATARA S.A.",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "LARLIB",
-            "description": ""
+            "description": "",
+            "performance": "2.6.0",
+            "gains": 4600,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.DELZANGLES",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "S.FARGEON",
+            "weight": 55.0,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "YOUNG AND PROUD",
-            "description": ""
+            "description": "",
+            "performance": "5.1.1.0.0",
+            "gains": 88775,
+            "sex": "M",
+            "age": 3,
+            "trainer": "JP.MA. DA COST. OLIVEIRA",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "R.ROOBAERT",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 16,
             "horse": "KNUCKLE",
-            "description": ""
+            "description": "",
+            "performance": "3.9.1.7",
+            "gains": 8300,
+            "sex": "F",
+            "age": 3,
+            "trainer": "TIM.DONWORTH",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "TC.STEWART",
+            "weight": 54.5,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-06-05-2023_6c529b23b3_00dcd32b34.txt",
-    "parsed_at": "2026-10-08T10:35:39.982472Z",
+    "parsed_at": "2026-10-08T23:52:11.431896Z",
     "date": "2023-05-06",
     "race": {
         "race_name": "PRIX DU ROUERGUE",
@@ -16,69 +16,200 @@
         {
             "number": 1,
             "horse": "FAKIR DE MAHEY",
-            "description": ""
+            "description": "",
+            "performance": "A.4.1.0.7",
+            "gains": 406320,
+            "sex": "M",
+            "age": 8,
+            "trainer": "M. MOTTIER",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "M. SOULAS",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2100.M"
         },
         {
             "number": 2,
             "horse": "FAKIR DU RANCH",
-            "description": ""
+            "description": "",
+            "performance": "4.4.1.3.6",
+            "gains": 421120,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. ABRIVARD",
+            "jockey": "Y. HARET",
+            "driver": "Y. HARET",
+            "owner": "Y.A. BRIAND",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2100.M"
         },
         {
             "number": 3,
             "horse": "GASPAR DE BRION",
-            "description": ""
+            "description": "",
+            "performance": "3.1.7.1.D",
+            "gains": 362340,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M. ABRIVARD",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "EC.LD-M. ABRIVARD",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2100.M"
         },
         {
             "number": 4,
             "horse": "KENNEDY",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.5.5",
+            "gains": 365216,
+            "sex": "M",
+            "age": 8,
+            "trainer": "E. RAFFIN",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "STALL PANA. RACING",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2100.M"
         },
         {
             "number": 5,
             "horse": "DIGNE ET DROIT",
-            "description": ""
+            "description": "",
+            "performance": "D.6.0.7.0",
+            "gains": 404448,
+            "sex": "M",
+            "age": 10,
+            "trainer": "A. BARRIER",
+            "jockey": "P.A. RYNW.BOULARD",
+            "driver": "P.A. RYNW.BOULARD",
+            "owner": "J. FERNA.SANCHEZ",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2100.M"
         },
         {
             "number": 6,
             "horse": "ORACLE TILE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.1.1.1",
+            "gains": 362847,
+            "sex": "M",
+            "age": 7,
+            "trainer": "CL. DUVALDESTIN",
+            "jockey": "TH. DUVALDESTIN",
+            "driver": "TH. DUVALDESTIN",
+            "owner": "STALL READY TO WIN",
+            "listed_chrono": "1.10.10",
+            "listed_distance": "2100.M"
         },
         {
             "number": 7,
             "horse": "EVEIL DU CHATELET",
-            "description": ""
+            "description": "",
+            "performance": "0.0.R.7.D",
+            "gains": 417390,
+            "sex": "H",
+            "age": 9,
+            "trainer": "T. OUVRIE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC.DES CHARMES",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2100.M"
         },
         {
             "number": 8,
             "horse": "GOELAND D'HAUFOR",
-            "description": ""
+            "description": "",
+            "performance": "3.D.7.2.4",
+            "gains": 399060,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D. BONNE",
+            "jockey": "CH. BIGEON",
+            "driver": "CH. BIGEON",
+            "owner": "EC. CH.BIGEON",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2100.M"
         },
         {
             "number": 9,
             "horse": "FULTON",
-            "description": ""
+            "description": "",
+            "performance": "0.1.7.4.7",
+            "gains": 371090,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC. DES CHARMES",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2100.M"
         },
         {
             "number": 10,
             "horse": "AL CAPONE STECCA",
-            "description": ""
+            "description": "",
+            "performance": "4.D.6.0.2",
+            "gains": 349248,
+            "sex": "M",
+            "age": 7,
+            "trainer": "G. GELORMINI",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "EMILIANO STECCA",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2100.M"
         },
         {
             "number": 11,
             "horse": "GRAND ART",
-            "description": ""
+            "description": "",
+            "performance": "7.6.6.3.D",
+            "gains": 355801,
+            "sex": "M",
+            "age": 7,
+            "trainer": "F. NIVARD",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "STALL RITA",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2100.M"
         },
         {
             "number": 12,
             "horse": "ESTEBAN JIEL",
-            "description": ""
+            "description": "",
+            "performance": "2.9.3.0.3",
+            "gains": 325890,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. LAGADEUC",
+            "jockey": "J.L. DERSOIR",
+            "driver": "J.L. DERSOIR",
+            "owner": "EC. LUCK",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2100.M"
         },
         {
             "number": 13,
             "horse": "DE LA CHENEVIERE",
-            "description": ""
+            "description": "",
+            "performance": "8.D.4.0.D",
+            "gains": 253740,
+            "sex": "F",
+            "age": 10,
+            "trainer": "L. GABORIT",
+            "jockey": "L. GABORIT",
+            "driver": "L. GABORIT",
+            "owner": "N. BARBONI",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2100.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

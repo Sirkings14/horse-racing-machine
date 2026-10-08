@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_19-01-2026_a9cb4b75b9_9cd72fc05f.txt",
-    "parsed_at": "2026-10-08T10:35:44.902409Z",
+    "parsed_at": "2026-10-08T23:52:18.421684Z",
     "date": "2026-01-19",
     "race": {
         "race_name": "PRIX CHARLES GASTAUD",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "AMIDARGENT",
-            "description": ""
+            "description": "",
+            "performance": "6.1.4.8.1",
+            "gains": 38926,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.PITART",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "E.KRAHENBUHL",
+            "weight": 60.0,
+            "draw": 4
         },
         {
             "number": 2,
             "horse": "PASSINGSHOT",
-            "description": ""
+            "description": "",
+            "performance": "4.3.8.7.3",
+            "gains": 66523,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.SCAND.LACAILLE",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "M.BLANC",
+            "weight": 59.0,
+            "draw": 1
         },
         {
             "number": 3,
             "horse": "COLONEL MITCH",
-            "description": ""
+            "description": "",
+            "performance": "7.1.2.2.1",
+            "gains": 47606,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.FRADET",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "EC.ED.MESSAOUD",
+            "weight": 58.0,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "OTOMAI",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.2.2",
+            "gains": 30790,
+            "sex": "M",
+            "age": 4,
+            "trainer": "JC.ROUGET",
+            "jockey": "JB.EYQUEM",
+            "driver": "JB.EYQUEM",
+            "owner": "EC. DE MALOU",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 5,
             "horse": "FELIX AUX ORMES",
-            "description": ""
+            "description": "",
+            "performance": "5.0.3.0.7",
+            "gains": 61688,
+            "sex": "M",
+            "age": 4,
+            "trainer": "Y.BARBEROT",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "Y.LENOIR",
+            "weight": 57.5,
+            "draw": 6
         },
         {
             "number": 6,
             "horse": "NOFIX",
-            "description": ""
+            "description": "",
+            "performance": "3.4.0.3.5",
+            "gains": 49245,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.ESCUDER",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "GITANO",
-            "description": ""
+            "description": "",
+            "performance": "2.5.9.4.2",
+            "gains": 25084,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.ROHAUT",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "G.STRAWBRIDGE",
+            "weight": 57.5,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "AVENTINO",
-            "description": ""
+            "description": "",
+            "performance": "6.3.6.2.0",
+            "gains": 50878,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.ESCUDER",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "C.GRACEFFA",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "FILLE D'ARGENTINE",
-            "description": ""
+            "description": "",
+            "performance": "7.4.9.1.0",
+            "gains": 51269,
+            "sex": "F",
+            "age": 4,
+            "trainer": "RC.MONTENEGRO",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "I.MONTENEGRO",
+            "weight": 55.0,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "VICTORY FOLIE",
-            "description": ""
+            "description": "",
+            "performance": "8.2.4.8.2",
+            "gains": 44317,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N.CAULLERY",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "YA.BRIAND",
+            "weight": 55.0,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "STUPEFIANTE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.2.3",
+            "gains": 20274,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.PITART",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "B.GIRAUDON",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "AQUITAIN",
-            "description": ""
+            "description": "",
+            "performance": "3.1.2.7",
+            "gains": 14124,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.GAVILAN",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "E.HARIVEL",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 13,
             "horse": "LOVER SONG",
-            "description": ""
+            "description": "",
+            "performance": "2.9.0.0.9",
+            "gains": 34998,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.LABATE",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "L.MIRTO",
+            "weight": 54.5,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "NOCE DE RUBIS",
-            "description": ""
+            "description": "",
+            "performance": "4.3.5.1.4",
+            "gains": 23720,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.ANDREU",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "BOOOST SAS",
+            "weight": 54.5,
+            "draw": 5
         },
         {
             "number": 15,
             "horse": "HE TOUCHED ME",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.6.3",
+            "gains": 42836,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N.PERRET",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "GEMINI STUD",
+            "weight": 53.5,
+            "draw": 7
         },
         {
             "number": 16,
             "horse": "BABY HARTWOOD",
-            "description": ""
+            "description": "",
+            "performance": "4.6.1.4.1",
+            "gains": 28852,
+            "sex": "M",
+            "age": 4,
+            "trainer": "V.DISSAUX",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "D.GUINDON",
+            "weight": 53.5,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             10,

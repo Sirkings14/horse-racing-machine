@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_22-05-2025_ec860137b3_d448eb8290.txt",
-    "parsed_at": "2026-10-08T10:35:45.367665Z",
+    "parsed_at": "2026-10-08T23:52:19.103623Z",
     "date": "2025-05-22",
     "race": {
         "race_name": "PRIX DE L'ORANGERIE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CI MER",
-            "description": ""
+            "description": "",
+            "performance": "5.5.2.4.1",
+            "gains": 42400,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.SEROR",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "S.HOSSELET",
+            "weight": 60.0,
+            "draw": 12
         },
         {
             "number": 2,
             "horse": "AMEDRAS",
-            "description": ""
+            "description": "",
+            "performance": "8.7.4.4.1",
+            "gains": 265350,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.ESCUDER",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "A.DRIDI",
+            "weight": 59.5,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "DURYTHME",
-            "description": ""
+            "description": "",
+            "performance": "7.6.1.6.1",
+            "gains": 68160,
+            "sex": "H",
+            "age": 4,
+            "trainer": "CHR.HEAD",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "F. HEAD",
+            "weight": 59.5,
+            "draw": 3
         },
         {
             "number": 4,
             "horse": "TIMES WARRIOR",
-            "description": ""
+            "description": "",
+            "performance": "0.2.1.2.5",
+            "gains": 69870,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.FERLAND",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "A.BELSHAW",
+            "weight": 58.0,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "TORTISAMBERT",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.3.6",
+            "gains": 70620,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.CHAPPET",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "G.AU.NORMAND",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "LANAKEN",
-            "description": ""
+            "description": "",
+            "performance": "0.3.1.3.2",
+            "gains": 194952,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E.LIBAUD",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "LES GALOPINS",
+            "weight": 58.0,
+            "draw": 14
         },
         {
             "number": 7,
             "horse": "CENTENARIO",
-            "description": ""
+            "description": "",
+            "performance": "1.2.5.1.0",
+            "gains": 132780,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G.MOSSE",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "EC. HANNAH",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "CHIRIMIRI",
-            "description": ""
+            "description": "",
+            "performance": "9.7.2.0.2",
+            "gains": 167535,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.FERLAND",
+            "jockey": "E.CORALLO",
+            "driver": "E.CORALLO",
+            "owner": "J. ORT.BLOOD.",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 9,
             "horse": "SWING FOR ME",
-            "description": ""
+            "description": "",
+            "performance": "6.4.8.7.2",
+            "gains": 117135,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.ALONSO PENA",
+            "jockey": "V. ALONSO V. DE LA PENA",
+            "driver": "V. ALONSO V. DE LA PENA",
+            "owner": "I.PEREZ HUERT",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "FOU FURIEUX",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.8.6",
+            "gains": 77270,
+            "sex": "M",
+            "age": 4,
+            "trainer": "N.CAULLERY",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "D.R.LODGE",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "SCARFACE",
-            "description": ""
+            "description": "",
+            "performance": "3.0.5.2.7",
+            "gains": 227600,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.BOUTIN",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "SCU. MICOLO",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "ABELARD F",
-            "description": ""
+            "description": "",
+            "performance": "9.1.2.3.6",
+            "gains": 109627,
+            "sex": "M",
+            "age": 7,
+            "trainer": "A.KARKOSA",
+            "jockey": "B.MARIE",
+            "driver": "B.MARIE",
+            "owner": "Y.POPELIER",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "FORCHESTER",
-            "description": ""
+            "description": "",
+            "performance": "4.7.6.4.4",
+            "gains": 108700,
+            "sex": "H",
+            "age": 6,
+            "trainer": "ED.MONFORT",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "EC. TYGALY",
+            "weight": 54.5,
+            "draw": 5
         },
         {
             "number": 14,
             "horse": "ETEL DU NINIAN",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.0.7",
+            "gains": 102690,
+            "sex": "F",
+            "age": 7,
+            "trainer": "C.GUYON",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "C.GUYON",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "WONDER BOY",
-            "description": ""
+            "description": "",
+            "performance": "5.4.9.5.4",
+            "gains": 287506,
+            "sex": "H",
+            "age": 10,
+            "trainer": "ED.MONFORT",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "L.BAUDOUIN",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 16,
             "horse": "SIMPLY STRIKING",
-            "description": ""
+            "description": "",
+            "performance": "2.0.7.2.9",
+            "gains": 336407,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "G.MEURY",
+            "driver": "G.MEURY",
+            "owner": "CUA.MEDITERRANEO",
+            "weight": 53.0,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

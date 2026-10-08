@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-05-02-2026_ecc17816d0_0d3dd80218.txt",
-    "parsed_at": "2026-10-08T10:35:39.858104Z",
+    "parsed_at": "2026-10-08T23:52:11.255789Z",
     "date": "2026-02-05",
     "race": {
         "race_name": "ATTELE",
@@ -16,84 +16,197 @@
         {
             "number": 1,
             "horse": "CERTAINLY",
-            "description": ""
+            "description": "",
+            "performance": "6.3.1.3.3",
+            "gains": 197015,
+            "trainer": "J. EHLERS",
+            "jockey": "F. OUVRIE",
+            "driver": "F. OUVRIE",
+            "owner": "Roy CAJBACK",
+            "listed_chrono": "1.11.50"
         },
         {
             "number": 2,
             "horse": "JALIMEDE",
-            "description": ""
+            "description": "",
+            "performance": "2.7.4.1.D",
+            "gains": 191800,
+            "trainer": "CH. MIRANDEL",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "A. HIET",
+            "listed_chrono": "1.11.60"
         },
         {
             "number": 3,
             "horse": "NEO TURBO",
-            "description": ""
+            "description": "",
+            "performance": "9.1.1.6.1",
+            "gains": 184070,
+            "trainer": "J. CORBANIE",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "M. BRUYNEEL",
+            "listed_chrono": "1.10.60"
         },
         {
             "number": 4,
             "horse": "DYLAN DOG FONT",
-            "description": ""
+            "description": "",
+            "performance": "0.5.D.6.4",
+            "gains": 189755,
+            "trainer": "E. MONTAGNA",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "Sc. MY HORSE",
+            "listed_chrono": "1.10.80"
         },
         {
             "number": 5,
             "horse": "HELIOS DES CHAMPS",
-            "description": ""
+            "description": "",
+            "performance": "2.2.4.D.D",
+            "gains": 200620,
+            "trainer": "ARNAUD DESMOTTES",
+            "jockey": "ARNAUD DESMOTTES",
+            "driver": "ARNAUD DESMOTTES",
+            "owner": "EC. TENA.SAUVIGNEY",
+            "listed_chrono": "1.12.40"
         },
         {
             "number": 6,
             "horse": "HIATUS",
-            "description": ""
+            "description": "",
+            "performance": "1.D.0.0.0",
+            "gains": 188910,
+            "trainer": "B. BOURGOIN",
+            "jockey": "N. BAZIRE",
+            "driver": "N. BAZIRE",
+            "owner": "EC. L.B. BOURGOIN",
+            "listed_chrono": "1.11.60"
         },
         {
             "number": 7,
             "horse": "JACOMO BELLO",
-            "description": ""
+            "description": "",
+            "performance": "3.5.3.1.1",
+            "gains": 198190,
+            "trainer": "TH. LEVESQUE",
+            "jockey": "TH. LEVESQUE",
+            "driver": "TH. LEVESQUE",
+            "owner": "EC. Th. LEVESQUE",
+            "listed_chrono": "1.09.70"
         },
         {
             "number": 8,
             "horse": "JOKER GEMA",
-            "description": ""
+            "description": "",
+            "performance": "5.1.2.4.1",
+            "gains": 187775,
+            "trainer": "M. SASSIER",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "EC. Marc SASSIER",
+            "listed_chrono": "1.09.90"
         },
         {
             "number": 9,
             "horse": "GLOBAL CONCEPT",
-            "description": ""
+            "description": "",
+            "performance": "1.6.D.1.1",
+            "gains": 186989,
+            "trainer": "J. WESTHOLM",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "Team WESTHOLM",
+            "listed_chrono": "1.12.10"
         },
         {
             "number": 10,
             "horse": "DAYAK",
-            "description": ""
+            "description": "",
+            "performance": "0.8.3.5.3",
+            "gains": 169482,
+            "trainer": "H.E. BONDO",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "Az. Agri. SANTA ROSA",
+            "listed_chrono": "1.10.10"
         },
         {
             "number": 11,
             "horse": "KAXIG IN",
-            "description": ""
+            "description": "",
+            "performance": "9.4.4.2.6",
+            "gains": 145957,
+            "trainer": "David PERSSON",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "INVEXBO AB",
+            "listed_chrono": "1.10.10"
         },
         {
             "number": 12,
             "horse": "PORTOFINO",
-            "description": ""
+            "description": "",
+            "performance": "D.3.8.5.3",
+            "gains": 104815,
+            "trainer": "F.B. LARSSON",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "Karin DAHLMAN",
+            "listed_chrono": "1.12.00"
         },
         {
             "number": 13,
             "horse": "DIE HARD",
-            "description": ""
+            "description": "",
+            "performance": "0.3.0.6.D",
+            "gains": 167662,
+            "trainer": "P.L. DESAUNETTE",
+            "jockey": "F. LAGADEUC",
+            "driver": "F. LAGADEUC",
+            "owner": "G. SARFATI",
+            "listed_chrono": "1.10.20"
         },
         {
             "number": 14,
             "horse": "GODFATHER",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.1.5",
+            "gains": 129209,
+            "trainer": "CH. ERIKSSON",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "UPH ACADEMY",
+            "listed_chrono": "1.13.20"
         },
         {
             "number": 15,
             "horse": "WALDGEIST",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.2.5",
+            "gains": 71872,
+            "trainer": "W. NIMCZYK",
+            "jockey": "R. BOT",
+            "driver": "R. BOT",
+            "owner": "GESTUT IDEE",
+            "listed_chrono": "0.00.00"
         },
         {
             "number": 16,
             "horse": "GOODWIN ZET",
-            "description": ""
+            "description": "",
+            "performance": "3.7.D.3.9",
+            "gains": 117776,
+            "trainer": "Antti OJANPERA",
+            "jockey": "D. BONNE",
+            "driver": "D. BONNE",
+            "owner": "TALLI-SEDAT",
+            "listed_chrono": "1.10.90"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

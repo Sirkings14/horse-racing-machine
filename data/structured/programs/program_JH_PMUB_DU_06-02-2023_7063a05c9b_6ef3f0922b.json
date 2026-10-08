@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_06-02-2023_7063a05c9b_6ef3f0922b.txt",
-    "parsed_at": "2026-10-08T10:35:43.215694Z",
+    "parsed_at": "2026-10-08T23:52:15.996600Z",
     "date": "2023-02-04",
     "race": {
         "race_name": null,
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "JUNKIE",
-            "description": ""
+            "description": "",
+            "performance": "3.2.0.4.2",
+            "gains": 19111,
+            "sex": "F",
+            "age": 4,
+            "trainer": "TH. LEVESQUE",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "EC. P. LEVESQUE",
+            "listed_chrono": "1.15.20",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 2,
             "horse": "DONNER AMOUR",
-            "description": ""
+            "description": "",
+            "performance": "D.1.D.D.8",
+            "gains": 20474,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F. OUVRIE",
+            "jockey": "VITALE CIOTOLA",
+            "driver": "VITALE CIOTOLA",
+            "owner": "AZ.AGR. PURLARI",
+            "listed_chrono": "0.00.00",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 3,
             "horse": "DANEA DI POGGIO",
-            "description": ""
+            "description": "",
+            "performance": "D.4.D.3.1",
+            "gains": 20630,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "V. PETRELLA",
+            "listed_chrono": "0.00.00",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 4,
             "horse": "DIABEL",
-            "description": ""
+            "description": "",
+            "performance": "D.D.4.D.D",
+            "gains": 24082,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D. THOMAIN",
+            "jockey": "M. SMORGON",
+            "driver": "M. SMORGON",
+            "owner": "SCU. ZB SPORT",
+            "listed_chrono": "0.00.00",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 5,
             "horse": "DUNA DI GIRIFALCO",
-            "description": ""
+            "description": "",
+            "performance": "4.2.D.D.1",
+            "gains": 24126,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F. NIVARD",
+            "jockey": "P. GUBELLINI",
+            "driver": "P. GUBELLINI",
+            "owner": "CHICOLINDO SRL",
+            "listed_chrono": "1.15.30",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 6,
             "horse": "DESDEMONA SAGE",
-            "description": ""
+            "description": "",
+            "performance": "D.D.1.D.D",
+            "gains": 24200,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M. SMORGON",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "SCU. TROTTO ITALIA",
+            "listed_chrono": "1.16.00",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 7,
             "horse": "DALILA BAR",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4.1.2",
+            "gains": 28386,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N. BAZIRE",
+            "jockey": "M. BEZIER",
+            "driver": "M. BEZIER",
+            "owner": "SCU. 4 A.B. SAS",
+            "listed_chrono": "0.00.00",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 8,
             "horse": "MISS JAJA",
-            "description": ""
+            "description": "",
+            "performance": "1.D.4.0.6",
+            "gains": 31044,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A. ABRIVARD",
+            "jockey": "B. BOURGOIN",
+            "driver": "B. BOURGOIN",
+            "owner": "EC. J.P. BARJON",
+            "listed_chrono": "1.15.10",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 9,
             "horse": "JACINTHE DES PRES",
-            "description": ""
+            "description": "",
+            "performance": "D.5.1.D.D",
+            "gains": 36450,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M. BEZIER",
+            "jockey": "A.H. ROBIN",
+            "driver": "A.H. ROBIN",
+            "owner": "EC. M. BEZIER",
+            "listed_chrono": "1.14.00",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 10,
             "horse": "JOMOLUNGMA",
-            "description": ""
+            "description": "",
+            "performance": "D.0.3.3.3",
+            "gains": 39900,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M. ABRIVARD",
+            "jockey": "H. SIONNEAU",
+            "driver": "H. SIONNEAU",
+            "owner": "M. AGOSTINI",
+            "listed_chrono": "1.14.00",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 11,
             "horse": "JOIA FEAT",
-            "description": ""
+            "description": "",
+            "performance": "D.0.D.D.4",
+            "gains": 44860,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.CH. PITON",
+            "jockey": "A.H. ROBIN",
+            "driver": "A.H. ROBIN",
+            "owner": "A. TEIXEIRA",
+            "listed_chrono": "1.14.00",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 12,
             "horse": "JUSTICIA SMART",
-            "description": ""
+            "description": "",
+            "performance": "D.4.1.6.2",
+            "gains": 47650,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R. CONGARD",
+            "jockey": "H. SIONNEAU",
+            "driver": "H. SIONNEAU",
+            "owner": "EC. SMART",
+            "listed_chrono": "1.14.20",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 13,
             "horse": "JOUVENCE DE CAREL",
-            "description": ""
+            "description": "",
+            "performance": "7.D.1.6.1",
+            "gains": 49390,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A. BARRIER",
+            "jockey": "TH. DUVALDESTIN",
+            "driver": "TH. DUVALDESTIN",
+            "owner": "L. VINCENT",
+            "listed_chrono": "1.13.40",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 14,
             "horse": "JANGA FLIGNY",
-            "description": ""
+            "description": "",
+            "performance": "8.1.D.8.D",
+            "gains": 49580,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H. SIONNEAU",
+            "jockey": "SALVATORE MINOPOLI",
+            "driver": "SALVATORE MINOPOLI",
+            "owner": "EC. LA PINSONNIERE",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2 700.M"
         },
         {
             "number": 15,
             "horse": "JUSTICIA GLAM",
-            "description": ""
+            "description": "",
+            "performance": "1.2.4.D.4",
+            "gains": 51310,
+            "sex": "F",
+            "age": 4,
+            "trainer": "THEO DUVALDESTIN",
+            "jockey": "SALVATORE MINOPOLI",
+            "driver": "SALVATORE MINOPOLI",
+            "owner": "EC. H.SIONNEAU",
+            "listed_chrono": "1.14.60",
+            "listed_distance": "2 700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

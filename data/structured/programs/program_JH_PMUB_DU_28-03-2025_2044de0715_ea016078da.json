@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_28-03-2025_2044de0715_ea016078da.txt",
-    "parsed_at": "2026-10-08T10:35:46.209071Z",
+    "parsed_at": "2026-10-08T23:52:20.306972Z",
     "date": "2025-03-28",
     "race": {
         "race_name": "PRIX AMALTHEA",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "MISTER DONALD",
-            "description": ""
+            "description": "",
+            "performance": "0.D.4.1.7",
+            "gains": 210194,
+            "sex": "H",
+            "age": 9,
+            "trainer": "LEO ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "EC. J.P. BARJON",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "HAPPY DANOVER",
-            "description": ""
+            "description": "",
+            "performance": "D.5.8.1.2",
+            "gains": 211625,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J. TRAVERS",
+            "jockey": "ST. PROVOOST",
+            "driver": "ST. PROVOOST",
+            "owner": "EC. DANOVER",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "FILOU SMILING",
-            "description": ""
+            "description": "",
+            "performance": "3.9.9.0.8",
+            "gains": 219080,
+            "sex": "H",
+            "age": 10,
+            "trainer": "R. LE CREPS",
+            "jockey": "ST. PROVOOST",
+            "driver": "ST. PROVOOST",
+            "owner": "EC. DANOVER",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "HOTLINE DE CARSI",
-            "description": ""
+            "description": "",
+            "performance": "D.D.6.0.2",
+            "gains": 258540,
+            "sex": "F",
+            "age": 8,
+            "trainer": "J.F. SENET",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "EC. J-F. SENET",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "HEMMA DE BRIKVIL",
-            "description": ""
+            "description": "",
+            "performance": "4.D.D.4.D",
+            "gains": 265430,
+            "sex": "F",
+            "age": 8,
+            "trainer": "M. ABRIVARD",
+            "jockey": "R. FEELDERS",
+            "driver": "R. FEELDERS",
+            "owner": "H. FEELDERS",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "GIVE ME",
-            "description": ""
+            "description": "",
+            "performance": "0.3.2.6.0",
+            "gains": 283080,
+            "sex": "H",
+            "age": 9,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "S. RAIMOND",
+            "driver": "S. RAIMOND",
+            "owner": "S. RAIMOND",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "HORATIUS D'ELA",
-            "description": ""
+            "description": "",
+            "performance": "0.D.D.4.5",
+            "gains": 287435,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A. GENDROT",
+            "jockey": "M. SASSIER",
+            "driver": "M. SASSIER",
+            "owner": "E. PIERRE",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "GABELOU CARISAIE",
-            "description": ""
+            "description": "",
+            "performance": "6.0.0.5.8",
+            "gains": 288790,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A. BARRIER",
+            "jockey": "J.ET. THUET",
+            "driver": "J.ET. THUET",
+            "owner": "J.ET. THUET",
+            "listed_chrono": "1.12.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "FANFARONNEUR",
-            "description": ""
+            "description": "",
+            "performance": "7.D.D.D.8",
+            "gains": 298480,
+            "sex": "H",
+            "age": 10,
+            "trainer": "CEDRIC TERRY",
+            "jockey": "F. TERRY",
+            "driver": "F. TERRY",
+            "owner": "H. LE BEC",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "EMOI SPECIAL",
-            "description": ""
+            "description": "",
+            "performance": "0.4.5.7.0",
+            "gains": 301720,
+            "sex": "H",
+            "age": 11,
+            "trainer": "F. NIVARD",
+            "jockey": "ST. PROVOOST",
+            "driver": "ST. PROVOOST",
+            "owner": "EC. DANOVER",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "COBRA KILLER GAR",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.1.1",
+            "gains": 302241,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G. GELORMINI",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "INC. DI DIEGO ROM.",
+            "listed_chrono": "1.10.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "ISTER MAN",
-            "description": ""
+            "description": "",
+            "performance": "3.4.2.1.5",
+            "gains": 304360,
+            "sex": "H",
+            "age": 7,
+            "trainer": "J. CUOQ",
+            "jockey": "J. CUOQ",
+            "driver": "J. CUOQ",
+            "owner": "CH. SCHANDRIN",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "FALCO DES ROCHERS",
-            "description": ""
+            "description": "",
+            "performance": "8.3.0.0.9",
+            "gains": 304920,
+            "sex": "H",
+            "age": 10,
+            "trainer": "A. LENOIR",
+            "jockey": "A. LENOIR",
+            "driver": "A. LENOIR",
+            "owner": "P.A. SAUVAGET",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 14,
             "horse": "TOTO BAROSSO",
-            "description": ""
+            "description": "",
+            "performance": "2.3.6.4.7",
+            "gains": 307208,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "J. UNTERSTEINER",
+            "driver": "J. UNTERSTEINER",
+            "owner": "LEIF BERGWALL",
+            "listed_chrono": "1.10.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 15,
             "horse": "FALCON D'ESPACE",
-            "description": ""
+            "description": "",
+            "performance": "D.D.3.8.4",
+            "gains": 308810,
+            "sex": "H",
+            "age": 10,
+            "trainer": "P.Y. VERVA",
+            "jockey": "S. GUARATO",
+            "driver": "S. GUARATO",
+            "owner": "EC. BREIZH D'ESPACE",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 16,
             "horse": "GILMOUR",
-            "description": ""
+            "description": "",
+            "performance": "8.6.2.2.0",
+            "gains": 309410,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. LAGADEUC",
+            "jockey": "D. DELAROCHE",
+            "driver": "D. DELAROCHE",
+            "owner": "EC. D.DELAROCHE",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

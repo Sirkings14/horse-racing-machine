@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_31-12-2024_312b1ae718_843f101281.txt",
-    "parsed_at": "2026-10-08T10:35:46.585749Z",
+    "parsed_at": "2026-10-08T23:52:20.875084Z",
     "date": "2024-12-31",
     "race": {
         "race_name": "PRIX DE POITIERS",
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "GARDON",
-            "description": ""
+            "description": "",
+            "performance": "0.1.0.D.1",
+            "gains": 234090,
+            "sex": "H",
+            "age": 8,
+            "trainer": "R. DERIEUX",
+            "jockey": "R. DERIEUX",
+            "driver": "R. DERIEUX",
+            "owner": "M. DE SOUSA",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "GADGET DU GADE",
-            "description": ""
+            "description": "",
+            "performance": "0.7.8.7.1",
+            "gains": 262814,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.F. SENET",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "EC. DU DAMIER",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "HASARD D'ERABLE",
-            "description": ""
+            "description": "",
+            "performance": "3.8.5.2.1",
+            "gains": 276815,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D. THOMAIN",
+            "jockey": "CL. THOMAIN",
+            "driver": "CL. THOMAIN",
+            "owner": "EC. DU HS. D'ERABLE",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "FANFARONNEUR",
-            "description": ""
+            "description": "",
+            "performance": "9.D.D.D.D",
+            "gains": 298130,
+            "sex": "H",
+            "age": 9,
+            "trainer": "CEDRIC TERRY",
+            "jockey": "F. TERRY",
+            "driver": "F. TERRY",
+            "owner": "H. LE BEC",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "HEADSCOTT",
-            "description": ""
+            "description": "",
+            "performance": "1.3.2.3.1",
+            "gains": 306120,
+            "sex": "H",
+            "age": 7,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "A. CHAVATTE",
+            "driver": "A. CHAVATTE",
+            "owner": "L. CHAUVIERE",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "GIPSY DE CHAMANT",
-            "description": ""
+            "description": "",
+            "performance": "3.8.3.2.3",
+            "gains": 323328,
+            "sex": "F",
+            "age": 8,
+            "trainer": "P.Y. VERVA",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "P.D. PAILLOT",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "HARMONISTA",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.3.0",
+            "gains": 325630,
+            "sex": "F",
+            "age": 7,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "EC. DES CHARMES",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "HARRY CARISAIE",
-            "description": ""
+            "description": "",
+            "performance": "4.9.7.2.4",
+            "gains": 325700,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E. RAFFIN",
+            "jockey": "J.ET. THUET",
+            "driver": "J.ET. THUET",
+            "owner": "J.ET. THUET",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "HERE WE GO",
-            "description": ""
+            "description": "",
+            "performance": "5.2.8.0.0",
+            "gains": 329950,
+            "sex": "H",
+            "age": 7,
+            "trainer": "J. DUBOIS",
+            "jockey": "J. DUBOIS",
+            "driver": "J. DUBOIS",
+            "owner": "J. DUBOIS",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "GIRL DE BASSIERE",
-            "description": ""
+            "description": "",
+            "performance": "D.6.6.4.7",
+            "gains": 343530,
+            "sex": "F",
+            "age": 8,
+            "trainer": "B. ROCHARD",
+            "jockey": "C. CHENU",
+            "driver": "C. CHENU",
+            "owner": "J.L. DUCATEL",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "GHOSTBUSTER",
-            "description": ""
+            "description": "",
+            "performance": "0.5.6.D.D",
+            "gains": 345870,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. LAGADEUC",
+            "jockey": "S. RAIMOND",
+            "driver": "S. RAIMOND",
+            "owner": "EC. MOLINA",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "GAOTCHO JIEL",
-            "description": ""
+            "description": "",
+            "performance": "D.0.0.D.3",
+            "gains": 350190,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. ABRIVARD",
+            "jockey": "R. MOURICE",
+            "driver": "R. MOURICE",
+            "owner": "EC. M. GAGNANT",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "HALICIA BELLA",
-            "description": ""
+            "description": "",
+            "performance": "6.4.1.2.2",
+            "gains": 356090,
+            "sex": "F",
+            "age": 7,
+            "trainer": "A. ABRIVARD",
+            "jockey": "J.P. MARMION",
+            "driver": "J.P. MARMION",
+            "owner": "EC. J.P. MARMION",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 14,
             "horse": "GRAAL DU TRESOR",
-            "description": ""
+            "description": "",
+            "performance": "3.5.5.5.2",
+            "gains": 363670,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. MOTTIER",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "C. BEIL. MOTTIER",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 15,
             "horse": "GAUDEO",
-            "description": ""
+            "description": "",
+            "performance": "0.9.0.T.D",
+            "gains": 364060,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A. DABOUIS",
+            "jockey": "M. DABOUIS",
+            "driver": "M. DABOUIS",
+            "owner": "A. DABOUIS",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_31-01-2024_c91b9c7b87_7ec2cba292.txt",
-    "parsed_at": "2026-10-08T10:35:46.516125Z",
+    "parsed_at": "2026-10-08T23:52:20.772770Z",
     "date": "2024-01-31",
     "race": {
         "race_name": "PLAT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "IT'S ALL A DREAM",
-            "description": ""
+            "description": "",
+            "performance": "1.3.1.0.0",
+            "gains": 181840,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.LE GLAND",
+            "jockey": "B.LEGROS",
+            "driver": "B.LEGROS",
+            "owner": "JC.DAOUDAL",
+            "weight": 65.5,
+            "draw": 14
         },
         {
             "number": 2,
             "horse": "DOCTOR RON",
-            "description": ""
+            "description": "",
+            "performance": "3.9.0.0.3",
+            "gains": 85470,
+            "sex": "H",
+            "age": 5,
+            "trainer": "LU. .ARMAND",
+            "jockey": "D.GUILLEMIN",
+            "driver": "D.GUILLEMIN",
+            "owner": "E.ROSJOE",
+            "weight": 62.0,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "NATURAL PATH",
-            "description": ""
+            "description": "",
+            "performance": "6.8.7.1.4",
+            "gains": 144355,
+            "sex": "H",
+            "age": 7,
+            "trainer": "V.SEGUY",
+            "jockey": "TJ.MARTINS NOVAIS",
+            "driver": "TJ.MARTINS NOVAIS",
+            "owner": "JM.PEREZ ARMAS",
+            "weight": 61.5,
+            "draw": 8
         },
         {
             "number": 4,
             "horse": "FLY D'ASPE",
-            "description": ""
+            "description": "",
+            "performance": "2.3.1.4.0",
+            "gains": 134660,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A.GUTIERREZ VAL",
+            "jockey": "A.WATRIGANT",
+            "driver": "A.WATRIGANT",
+            "owner": "LE HS. DES SENS",
+            "weight": 61.0,
+            "draw": 1
         },
         {
             "number": 5,
             "horse": "OXALIS",
-            "description": ""
+            "description": "",
+            "performance": "8.0.5.7.4",
+            "gains": 126848,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.MOLINS",
+            "jockey": "J.RESIMONT",
+            "driver": "J.RESIMONT",
+            "owner": "C.LAUFFER",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 6,
             "horse": "EL TORERO",
-            "description": ""
+            "description": "",
+            "performance": "5.0.8.0.2",
+            "gains": 54170,
+            "sex": "H",
+            "age": 5,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "D.MORISSON",
+            "driver": "D.MORISSON",
+            "owner": "EC. DU GAVE",
+            "weight": 59.5,
+            "draw": 4
         },
         {
             "number": 7,
             "horse": "LARIS",
-            "description": ""
+            "description": "",
+            "performance": "7.0.5.3.9",
+            "gains": 217506,
+            "sex": "H",
+            "age": 11,
+            "trainer": "O.PESLIER",
+            "jockey": "D.WATRIGANT",
+            "driver": "D.WATRIGANT",
+            "owner": "D.TOAL",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "PASSALITO",
-            "description": ""
+            "description": "",
+            "performance": "4.7.9.4.7",
+            "gains": 108985,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M.EON",
+            "jockey": "S.GAVILAN",
+            "driver": "S.GAVILAN",
+            "owner": "L.DAVEIRA/R.SINGARIN",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "LAUPER",
-            "description": ""
+            "description": "",
+            "performance": "6.1.7.2.5",
+            "gains": 26630,
+            "sex": "F",
+            "age": 5,
+            "trainer": "G.GUEDJ-GAY",
+            "jockey": "RC.MONTENEGRO",
+            "driver": "RC.MONTENEGRO",
+            "owner": "NE. PRODUCCIONES",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "ABELARD F",
-            "description": ""
+            "description": "",
+            "performance": "9.3.5.3.4",
+            "gains": 48249,
+            "sex": "M",
+            "age": 6,
+            "trainer": "H.MOUESAN",
+            "jockey": "E.LEON PENATE",
+            "driver": "E.LEON PENATE",
+            "owner": "BORRI. COMO TURF",
+            "weight": 57.5,
+            "draw": 13
         },
         {
             "number": 11,
             "horse": "KENDAYA",
-            "description": ""
+            "description": "",
+            "performance": "3.5.4.9.6",
+            "gains": 15730,
+            "sex": "F",
+            "age": 5,
+            "trainer": "F.VERON",
+            "jockey": "F.FOUCHER",
+            "driver": "F.FOUCHER",
+            "owner": "M.GANDON",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 12,
             "horse": "NUIT D'ALIENOR",
-            "description": ""
+            "description": "",
+            "performance": "0.8.3.1.3",
+            "gains": 73925,
+            "sex": "F",
+            "age": 7,
+            "trainer": "M.FOULON",
+            "jockey": "CH.GOURDAIN",
+            "driver": "CH.GOURDAIN",
+            "owner": "PUR SANG D'ALIENOR",
+            "weight": 54.0,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "JUBILE",
-            "description": ""
+            "description": "",
+            "performance": "4.0.4.6.5",
+            "gains": 29490,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.SANCHEZ",
+            "jockey": "O.MONTZEY DE",
+            "driver": "O.MONTZEY DE",
+            "owner": "O.DE MONTZEY",
+            "weight": 53.5,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "WAIPA",
-            "description": ""
+            "description": "",
+            "performance": "1.0.3.0.1",
+            "gains": 52670,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.FOREST",
+            "jockey": "F.SANCHEZ",
+            "driver": "F.SANCHEZ",
+            "owner": "C.TERRE. LAVAL",
+            "weight": 53.0,
+            "draw": 16
         },
         {
             "number": 15,
             "horse": "CHAAM",
-            "description": ""
+            "description": "",
+            "performance": "5.9.0.1.2",
+            "gains": 74801,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.TOPIN",
+            "jockey": "D.GUILLEMIN",
+            "driver": "D.GUILLEMIN",
+            "owner": "D.GUILLEMIN",
+            "weight": 52.5,
+            "draw": 6
         },
         {
             "number": 16,
             "horse": "SHOWMAN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.1",
+            "gains": 35300,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.WERLE",
+            "jockey": "J.RESIMONT",
+            "driver": "J.RESIMONT",
+            "owner": "D.LAUFFER",
+            "weight": 52.5,
+            "draw": 9
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

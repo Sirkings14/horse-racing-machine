@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_03-09-2023_3716c10565_c412d91634.txt",
-    "parsed_at": "2026-10-08T10:35:42.894414Z",
+    "parsed_at": "2026-10-08T23:52:15.560024Z",
     "date": "2023-09-03",
     "race": {
         "race_name": "PRIX DE LA REINE MARGUERITE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "HOMO DEUS",
-            "description": ""
+            "description": "",
+            "performance": "6.8.4.1.5",
+            "gains": 95360,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "J.LISCIA",
+            "weight": 60.5,
+            "draw": 14
         },
         {
             "number": 2,
             "horse": "OFFICER OF STATE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.2.2.3",
+            "gains": 38150,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "GODOLPHIN SNC",
+            "weight": 60.0,
+            "draw": 8
         },
         {
             "number": 3,
             "horse": "UTAMARO",
-            "description": ""
+            "description": "",
+            "performance": "5.2.3.6.6",
+            "gains": 145010,
+            "sex": "M",
+            "age": 5,
+            "trainer": "M.FOREST",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "STALL CIMBA",
+            "weight": 58.5,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "KHOCHENKO",
-            "description": ""
+            "description": "",
+            "performance": "4.0.0.2.0",
+            "gains": 259870,
+            "sex": "H",
+            "age": 8,
+            "trainer": "O.PESLIER",
+            "jockey": "D.&P.PROD'HOMME",
+            "driver": "D.&P.PROD'HOMME",
+            "owner": "JL.BOUYENVAL",
+            "weight": 58.5,
+            "draw": 7
         },
         {
             "number": 5,
             "horse": "EVERILLO",
-            "description": ""
+            "description": "",
+            "performance": "1.0.5.1.0",
+            "gains": 59470,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "F.BRESSON",
+            "driver": "F.BRESSON",
+            "owner": "C.SALET",
+            "weight": 58.5,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "MATAURI GOLD",
-            "description": ""
+            "description": "",
+            "performance": "7.6.4.1.9",
+            "gains": 36410,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F.VERON",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "EC.TYGALY",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "WOODSTONE",
-            "description": ""
+            "description": "",
+            "performance": "3.0.2.0.6",
+            "gains": 83180,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "S.RICHTER",
+            "driver": "S.RICHTER",
+            "owner": "ROBERT HANNING",
+            "weight": 58.0,
+            "draw": 6
         },
         {
             "number": 8,
             "horse": "HAVOC",
-            "description": ""
+            "description": "",
+            "performance": "7.3.9.2.3",
+            "gains": 128053,
+            "sex": "M",
+            "age": 5,
+            "trainer": "M.VELON",
+            "jockey": "S.PECORARO",
+            "driver": "S.PECORARO",
+            "owner": "N.RUGANI",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 9,
             "horse": "DREAMS",
-            "description": ""
+            "description": "",
+            "performance": "7.7.2.3.2",
+            "gains": 76640,
+            "sex": "M",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "S.PECORARO",
+            "driver": "S.PECORARO",
+            "owner": "P.FLORE",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "SANTURIN",
-            "description": ""
+            "description": "",
+            "performance": "0.4.2.0.2",
+            "gains": 91342,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "I.OTTEN",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "KINTANA BLUE",
-            "description": ""
+            "description": "",
+            "performance": "0.2.3.8.1",
+            "gains": 43820,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "EC. QUADRABLUE",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 12,
             "horse": "PANJAMAN",
-            "description": ""
+            "description": "",
+            "performance": "7.0.5.8.0",
+            "gains": 127585,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "JP.MENVILLE",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 13,
             "horse": "SUNFAST",
-            "description": ""
+            "description": "",
+            "performance": "7.3.1.2.1",
+            "gains": 52210,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "ARGELLA RACING",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "NORTH HUNTER",
-            "description": ""
+            "description": "",
+            "performance": "2.3.1.1.2",
+            "gains": 117890,
+            "sex": "H",
+            "age": 8,
+            "trainer": "H.BESNIER",
+            "jockey": "E.MADER",
+            "driver": "E.MADER",
+            "owner": "STALL RAMON",
+            "weight": 56.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "CHEEK TO CHEEK",
-            "description": ""
+            "description": "",
+            "performance": "2.4.0.2.1",
+            "gains": 34400,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.PLANQUE",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "FRANK RAOUL",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 16,
             "horse": "LORENZO DE MEDICI",
-            "description": ""
+            "description": "",
+            "performance": "0.8.4.9.3",
+            "gains": 46900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "A.&G.BOTTI",
+            "driver": "A.&G.BOTTI",
+            "owner": "SCUDERIA DEI DUEPI",
+            "weight": 56.0,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

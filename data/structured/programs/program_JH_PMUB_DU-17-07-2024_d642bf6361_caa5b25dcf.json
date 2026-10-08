@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-17-07-2024_d642bf6361_caa5b25dcf.txt",
-    "parsed_at": "2026-10-08T10:35:41.114607Z",
+    "parsed_at": "2026-10-08T23:52:13.062712Z",
     "date": "2024-07-17",
     "race": {
         "race_name": "PRIX IMPERATRICE EUGENIE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DSCHINGIS DREAM",
-            "description": ""
+            "description": "",
+            "performance": "0.3.1.3.5",
+            "gains": 23400,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T. PICCONE",
+            "jockey": "HA. PANTALL",
+            "driver": "HA. PANTALL",
+            "owner": "P. BOURIGAULT",
+            "weight": 59.0,
+            "draw": 4
         },
         {
             "number": 2,
             "horse": "LA HARENGERE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.9",
+            "gains": 14750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A. CRASTUS",
+            "jockey": "Y. BARBEROT",
+            "driver": "Y. BARBEROT",
+            "owner": "G. AU.NORMAND",
+            "weight": 58.5,
+            "draw": 6
         },
         {
             "number": 3,
             "horse": "DJHANSY",
-            "description": ""
+            "description": "",
+            "performance": "4.1.3",
+            "gains": 16650,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L. POGGIONOVO",
+            "jockey": "A. COUETIL",
+            "driver": "A. COUETIL",
+            "owner": "JOEL-JEAN HAMON",
+            "weight": 58.0,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "KING ZARAK",
-            "description": ""
+            "description": "",
+            "performance": "1.1.3.6.5",
+            "gains": 36800,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T. TRULLIER",
+            "jockey": "M. SCANDELLA-LACAILLE",
+            "driver": "M. SCANDELLA-LACAILLE",
+            "owner": "ROLLAND CAPOZZI",
+            "weight": 57.5,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "SPINELLO",
-            "description": ""
+            "description": "",
+            "performance": "5.2.2.4",
+            "gains": 15425,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T. BACHELOT",
+            "jockey": "M. BARATTI",
+            "driver": "M. BARATTI",
+            "owner": "G.LAROCHE/JL.QUINIOU",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 6,
             "horse": "ARIGATO",
-            "description": ""
+            "description": "",
+            "performance": "3.5.6.2.6",
+            "gains": 46050,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A. LEMAITRE",
+            "jockey": "F. VERMEULEN",
+            "driver": "F. VERMEULEN",
+            "owner": "THE GENTLEMAN'S STABLE",
+            "weight": 56.5,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "DAY TRADER",
-            "description": ""
+            "description": "",
+            "performance": "4.5.1.1.3",
+            "gains": 39570,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A. POUCHIN",
+            "jockey": "S. WATTEL",
+            "driver": "S. WATTEL",
+            "owner": "AMIS DU MONDE ENTIER",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 8,
             "horse": "ZERAFA",
-            "description": ""
+            "description": "",
+            "performance": "2.3.3",
+            "gains": 12300,
+            "sex": "F",
+            "age": 3,
+            "trainer": "I. MENDIZABAL",
+            "jockey": "M. DELZANGLES",
+            "driver": "M. DELZANGLES",
+            "owner": "S.A. AGA KHAN",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 9,
             "horse": "CHESS",
-            "description": ""
+            "description": "",
+            "performance": "1.4.4.4",
+            "gains": 21500,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M. GUYON",
+            "jockey": "P&J. BRANDT",
+            "driver": "P&J. BRANDT",
+            "owner": "PIA BRANDT",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 10,
             "horse": "WIT PERD",
-            "description": ""
+            "description": "",
+            "performance": "5.3.6.0.1",
+            "gains": 20950,
+            "sex": "M",
+            "age": 3,
+            "trainer": "E. HARDOUIN",
+            "jockey": "N. CAULLERY",
+            "driver": "N. CAULLERY",
+            "owner": "EC. TREIZE HEUREUX",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 11,
             "horse": "NATURAL GIFT",
-            "description": ""
+            "description": "",
+            "performance": "3.0.4.1.2",
+            "gains": 26100,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M. BARZALONA",
+            "jockey": "HA. PANTALL",
+            "driver": "HA. PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 12,
             "horse": "SHOLTO",
-            "description": ""
+            "description": "",
+            "performance": "3.2.2.4",
+            "gains": 19175,
+            "sex": "H",
+            "age": 3,
+            "trainer": "F. VERON",
+            "jockey": "C. ERNI",
+            "driver": "C. ERNI",
+            "owner": "PAUL BAUMGARTNER",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 13,
             "horse": "DSCHINGIS RANGER",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4.1",
+            "gains": 16900,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A. MADAMET",
+            "jockey": "M. BRASME",
+            "driver": "M. BRASME",
+            "owner": "AVATARA S.A.",
+            "weight": 55.5,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "MEASTER OWEN",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.3.6",
+            "gains": 23750,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M. VELON",
+            "jockey": "JP. GAUVIN",
+            "driver": "JP. GAUVIN",
+            "owner": "NUNZIO RICIGNUOLO",
+            "weight": 53.5,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "LADY MANA",
-            "description": ""
+            "description": "",
+            "performance": "2.4.4.7.1",
+            "gains": 17450,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J. NICOLEAU",
+            "jockey": "M. CESANDRI",
+            "driver": "M. CESANDRI",
+            "owner": "GUILLAUME DUROT",
+            "weight": 53.5,
+            "draw": 15
         },
         {
             "number": 16,
             "horse": "GALIGERA",
-            "description": ""
+            "description": "",
+            "performance": "2.4.2.2.8",
+            "gains": 18700,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A. ORANI",
+            "jockey": "F. VERMEULEN",
+            "driver": "F. VERMEULEN",
+            "owner": "EC. MG/GUY PAR. HOLDING",
+            "weight": 53.0,
+            "draw": 10
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

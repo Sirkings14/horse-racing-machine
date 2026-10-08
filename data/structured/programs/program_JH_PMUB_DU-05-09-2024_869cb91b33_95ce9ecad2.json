@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-05-09-2024_869cb91b33_95ce9ecad2.txt",
-    "parsed_at": "2026-10-08T10:35:39.928920Z",
+    "parsed_at": "2026-10-08T23:52:11.359902Z",
     "date": "2024-09-05",
     "race": {
         "race_name": "PRIX DE LA GALERIE DES VARIETES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "AGAT",
-            "description": ""
+            "description": "",
+            "performance": "3.4.8.4.1",
+            "gains": 42650,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "CHR.HEAD",
+            "driver": "CHR.HEAD",
+            "owner": "N.BIZAKOV",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "CENTENARIO",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.0.0",
+            "gains": 86910,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.BACHELOT",
+            "jockey": "A.SCHUTZ",
+            "driver": "A.SCHUTZ",
+            "owner": "EC. HANNAH",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "KIMI ORENDA",
-            "description": ""
+            "description": "",
+            "performance": "0.6.8.5.8",
+            "gains": 90925,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H.LEBOUC",
+            "jockey": "PIER.MENARD",
+            "driver": "PIER.MENARD",
+            "owner": "T.LINES",
+            "weight": 59.5,
+            "draw": 5
         },
         {
             "number": 4,
             "horse": "ROYAL SHAKE",
-            "description": ""
+            "description": "",
+            "performance": "8.8.8.2.6",
+            "gains": 55170,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "ROY RACING LTD",
+            "weight": 59.0,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "GAILLARD",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.3.3",
+            "gains": 42820,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.EON",
+            "jockey": "Y.VOLLMER",
+            "driver": "Y.VOLLMER",
+            "owner": "B.DURRHEIMER",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "CROWDFUNDING",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.1.4",
+            "gains": 96730,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.SOUMILLON",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "B.VAN DALFSEN",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "LIWA OASIS",
-            "description": ""
+            "description": "",
+            "performance": "2.6.0.3.8",
+            "gains": 31500,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "P.BARY",
+            "driver": "P.BARY",
+            "owner": "AL SHIRA'AA RACING",
+            "weight": 57.0,
+            "draw": 2
         },
         {
             "number": 8,
             "horse": "WHITE PLATIN",
-            "description": ""
+            "description": "",
+            "performance": "7.8.5.9.5",
+            "gains": 156668,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.THOMAS",
+            "jockey": "C.BARANDE BARBE",
+            "driver": "C.BARANDE BARBE",
+            "owner": "D.SIEGENTHALER",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 9,
             "horse": "ALVA",
-            "description": ""
+            "description": "",
+            "performance": "6.5.2.3.7",
+            "gains": 70090,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "HAYEJOHN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.9.0.0",
+            "gains": 104730,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "JP.VANDEN HEEDE",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "KOSLOVKA",
-            "description": ""
+            "description": "",
+            "performance": "4.0.9.3.1",
+            "gains": 62990,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.POGGIONOVO",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "A.JATHIERE",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "LUCKY WINE",
-            "description": ""
+            "description": "",
+            "performance": "1.0.3.6.3",
+            "gains": 24370,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "EC. ELAG/LTN RACING",
+            "weight": 55.5,
+            "draw": 12
         },
         {
             "number": 13,
             "horse": "SILVER FEATHER",
-            "description": ""
+            "description": "",
+            "performance": "0.8.4.1.6",
+            "gains": 16500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "BONHEUR BLEU",
-            "description": ""
+            "description": "",
+            "performance": "7.9.4.4.8",
+            "gains": 73340,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.VELON",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "A.LIPPERT",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "GUALDA",
-            "description": ""
+            "description": "",
+            "performance": "4.6.4.5.1",
+            "gains": 30200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "M.BARATTI",
+            "driver": "M.BARATTI",
+            "owner": "N. PRODUCCIONES S.L.",
+            "weight": 53.5,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "LOVELY ANGEL",
-            "description": ""
+            "description": "",
+            "performance": "5.5.1.3.0",
+            "gains": 143340,
+            "sex": "F",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "HORSEMOOD",
+            "weight": 53.5,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

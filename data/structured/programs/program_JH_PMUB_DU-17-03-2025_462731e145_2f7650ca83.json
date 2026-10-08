@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-17-03-2025_462731e145_2f7650ca83.txt",
-    "parsed_at": "2026-10-08T10:35:41.087828Z",
+    "parsed_at": "2026-10-08T23:52:13.028408Z",
     "date": "2025-03-17",
     "race": {
         "race_name": "PRIX DES QUATRE GLACIERES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LIXTA",
-            "description": ""
+            "description": "",
+            "performance": "7.2.5.1.5",
+            "gains": 40750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.GUTIERREZ VAL",
+            "jockey": "J.SOUBAGNE",
+            "driver": "J.SOUBAGNE",
+            "owner": "X.SALLES",
+            "weight": 59.0,
+            "draw": 8
         },
         {
             "number": 2,
             "horse": "O SOLE MIO",
-            "description": ""
+            "description": "",
+            "performance": "3.5.3.5.5",
+            "gains": 36550,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "P.SOGORB",
+            "driver": "P.SOGORB",
+            "owner": "SARL GROUPE KR",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "FOUR FOUR FOUR",
-            "description": ""
+            "description": "",
+            "performance": "5.6.1.2",
+            "gains": 17500,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "J.CYGLER",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "NAKED MEMORIES",
-            "description": ""
+            "description": "",
+            "performance": "3.1.3.7.2",
+            "gains": 28750,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "CHR.HEAD",
+            "driver": "CHR.HEAD",
+            "owner": "H.SAITO",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 5,
             "horse": "MIKEY",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.0.0",
+            "gains": 23650,
+            "sex": "M",
+            "age": 3,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "D.DA COSTA PEDROSA",
+            "driver": "D.DA COSTA PEDROSA",
+            "owner": "J. DA SILVA RIB. CARDOSO",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 6,
             "horse": "LAITH",
-            "description": ""
+            "description": "",
+            "performance": "5.3.1.4.2",
+            "gains": 36750,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "SANG. HOLDINGS LTD",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "AFOGADO",
-            "description": ""
+            "description": "",
+            "performance": "1.2.5.6",
+            "gains": 22500,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "F.BLICHFELD",
+            "weight": 57.0,
+            "draw": 2
         },
         {
             "number": 8,
             "horse": "SEND WOOD",
-            "description": ""
+            "description": "",
+            "performance": "2.1.3.2.5",
+            "gains": 37950,
+            "sex": "F",
+            "age": 3,
+            "trainer": "H.LEBOUC",
+            "jockey": "G.FOURRIER",
+            "driver": "G.FOURRIER",
+            "owner": "EC. R.E.",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "GORA ERREALA",
-            "description": ""
+            "description": "",
+            "performance": "5.2.1.4.3",
+            "gains": 25150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "H.JOURNIAC",
+            "jockey": "R.AVIAL LOPEZ",
+            "driver": "R.AVIAL LOPEZ",
+            "owner": "A.GAL. INURRATEGUI",
+            "weight": 56.5,
+            "draw": 16
         },
         {
             "number": 10,
             "horse": "AVENTINO",
-            "description": ""
+            "description": "",
+            "performance": "1.4.6.6.5",
+            "gains": 18450,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "EC. WALDECK",
+            "weight": 56.5,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "ALEKSINE",
-            "description": ""
+            "description": "",
+            "performance": "3.6.1.2.4",
+            "gains": 45660,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.MOLINS",
+            "jockey": "TIM.DONWORTH",
+            "driver": "TIM.DONWORTH",
+            "owner": "A.JATHIERE",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 12,
             "horse": "THE DOCTOR",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.4",
+            "gains": 19800,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "N.N.PERRET",
+            "weight": 56.0,
+            "draw": 12
         },
         {
             "number": 13,
             "horse": "CITY TOWN",
-            "description": ""
+            "description": "",
+            "performance": "5.1.5.5",
+            "gains": 19750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "A.SCHUTZ",
+            "driver": "A.SCHUTZ",
+            "owner": "J.ABDULLAH",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 14,
             "horse": "EL PEQUENIO",
-            "description": ""
+            "description": "",
+            "performance": "6.4.3.1.2",
+            "gains": 33950,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "CLEMENT & HERMANS",
+            "driver": "CLEMENT & HERMANS",
+            "owner": "EC. HDBB",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "ANOTHERMINE",
-            "description": ""
+            "description": "",
+            "performance": "2.3.3.1.6",
+            "gains": 25350,
+            "sex": "F",
+            "age": 3,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "EC. DESJARDINS",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "KOHANA",
-            "description": ""
+            "description": "",
+            "performance": "9.2.5.6",
+            "gains": 7500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "A.FABRE",
+            "weight": 55.0,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

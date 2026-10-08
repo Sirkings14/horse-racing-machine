@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_21-05-2026_55881c9ab8_f16273942e.txt",
-    "parsed_at": "2026-10-08T10:35:45.220091Z",
+    "parsed_at": "2026-10-08T23:52:18.886163Z",
     "date": "2026-05-21",
     "race": {
         "race_name": "PRIX DE LA VILLE DE PARIS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "MICHAEL THE GREAT",
-            "description": ""
+            "description": "",
+            "performance": "8.8.1.1.2",
+            "gains": 33240,
+            "sex": "M",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "WEST. RACE HORSES",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "NOBLE D'ARGENT",
-            "description": ""
+            "description": "",
+            "performance": "0.1.9.5.5",
+            "gains": 29746,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.BOTTI",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "R.NG",
+            "weight": 59.0,
+            "draw": 5
         },
         {
             "number": 3,
             "horse": "SAINT SAENS",
-            "description": ""
+            "description": "",
+            "performance": "3.1.2.4.5",
+            "gains": 41442,
+            "sex": "M",
+            "age": 3,
+            "trainer": "Y.BARBEROT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "MJ.GOETSCHY",
+            "weight": 57.5,
+            "draw": 6
         },
         {
             "number": 4,
             "horse": "PAS DANSANT",
-            "description": ""
+            "description": "",
+            "performance": "7.3.3.5.1",
+            "gains": 36304,
+            "sex": "H",
+            "age": 3,
+            "trainer": "O.TRIGODET",
+            "jockey": "A.WERLE",
+            "driver": "A.WERLE",
+            "owner": "M.FABRE",
+            "weight": 57.5,
+            "draw": 3
         },
         {
             "number": 5,
             "horse": "NELLIEDONADO",
-            "description": ""
+            "description": "",
+            "performance": "1.2.5.3.2",
+            "gains": 24930,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.WATTEL",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "PD.SAVILL",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "BASANTI",
-            "description": ""
+            "description": "",
+            "performance": "4.8.6.1.3",
+            "gains": 21705,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "A.FABRE",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "TISSIMO",
-            "description": ""
+            "description": "",
+            "performance": "6.7.2.1.2",
+            "gains": 18588,
+            "sex": "M",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "P.BOURIGAULT",
+            "weight": 57.5,
+            "draw": 8
         },
         {
             "number": 8,
             "horse": "MISTER GEORGE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.5",
+            "gains": 14326,
+            "sex": "H",
+            "age": 3,
+            "trainer": "L.GADBIN",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "C.VIDEMENT",
+            "weight": 57.5,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "QUEMAZAL",
-            "description": ""
+            "description": "",
+            "performance": "6.4.2.1.3",
+            "gains": 30440,
+            "sex": "M",
+            "age": 3,
+            "trainer": "G.BIETOLINI",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "O.GHRGHAR",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "HOLY SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "6.1.8",
+            "gains": 12852,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "A.MOUKNASS",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "MELUSINE DU HOULEY",
-            "description": ""
+            "description": "",
+            "performance": "8.3.2.2.2",
+            "gains": 26918,
+            "sex": "F",
+            "age": 3,
+            "trainer": "Y.BARBEROT",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "C.PELIER/G.HEBERT",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 12,
             "horse": "ADONIDE",
-            "description": ""
+            "description": "",
+            "performance": "3.5.9",
+            "gains": 4446,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "AL SHAQAB RACING",
+            "weight": 56.0,
+            "draw": 12
         },
         {
             "number": 13,
             "horse": "MISS DE PANAME",
-            "description": ""
+            "description": "",
+            "performance": "0.7.0.1.0",
+            "gains": 20482,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "EC.JML RACING",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "SENA IULIA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.4.4",
+            "gains": 17937,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUARNIERI",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "G.LACHI",
+            "weight": 55.5,
+            "draw": 2
         },
         {
             "number": 15,
             "horse": "PALLADIO",
-            "description": ""
+            "description": "",
+            "performance": "5.2.2.9.8",
+            "gains": 13966,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "F.VALLE SKAR",
+            "driver": "F.VALLE SKAR",
+            "owner": "EC. D. R. LAYANI FA",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 16,
             "horse": "GOUTTES DE DIEU",
-            "description": ""
+            "description": "",
+            "performance": "0.4.1.0.7",
+            "gains": 35900,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "EC. EXTRA BALL",
+            "weight": 55.0,
+            "draw": 9
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             11,

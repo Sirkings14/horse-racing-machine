@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-29-05-2025_0_c5d60af4de_1d31f25d28.txt",
-    "parsed_at": "2026-10-08T10:35:42.340805Z",
+    "parsed_at": "2026-10-08T23:52:14.785198Z",
     "date": "2025-05-29",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CHIARANIYA",
-            "description": ""
+            "description": "",
+            "performance": "9.6.2.1.4",
+            "gains": 57800,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.SEROR",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "EC.QUADRABLUE",
+            "weight": 61.5,
+            "draw": 5
         },
         {
             "number": 2,
             "horse": "CLAVUS",
-            "description": ""
+            "description": "",
+            "performance": "4.0.8.6.8",
+            "gains": 92400,
+            "sex": "M",
+            "age": 4,
+            "trainer": "P&J.BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "F.BLICHFELDT",
+            "weight": 60.0,
+            "draw": 2
         },
         {
             "number": 3,
             "horse": "SKYLIGHT BROCHARD",
-            "description": ""
+            "description": "",
+            "performance": "0.8.3.4.1",
+            "gains": 115850,
+            "sex": "H",
+            "age": 4,
+            "trainer": "TIM.DONWORTH",
+            "jockey": "A.MOLINS",
+            "driver": "A.MOLINS",
+            "owner": "J.BROCHARD",
+            "weight": 59.5,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "DIVINE CHRISNAT",
-            "description": ""
+            "description": "",
+            "performance": "1.4.7.2.4",
+            "gains": 115160,
+            "sex": "F",
+            "age": 5,
+            "trainer": "CH.PLISSON",
+            "jockey": "R.PEHU",
+            "driver": "R.PEHU",
+            "owner": "M.PEHU",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 5,
             "horse": "BAUHINIA RHAPSODY",
-            "description": ""
+            "description": "",
+            "performance": "0.4.9.4.7",
+            "gains": 87723,
+            "sex": "H",
+            "age": 5,
+            "trainer": "JV.TOUX",
+            "jockey": "H.LEBOUC",
+            "driver": "H.LEBOUC",
+            "owner": "M.AUGER",
+            "weight": 58.5,
+            "draw": 3
         },
         {
             "number": 6,
             "horse": "GREY TORNADO",
-            "description": ""
+            "description": "",
+            "performance": "0.2.6.9.9",
+            "gains": 151080,
+            "sex": "M",
+            "age": 5,
+            "trainer": "HA.PANTALL",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "P.BOURIGAULT",
+            "weight": 58.5,
+            "draw": 4
         },
         {
             "number": 7,
             "horse": "GRAND SON OF CALYX",
-            "description": ""
+            "description": "",
+            "performance": "0.6.1.0.8",
+            "gains": 72400,
+            "sex": "H",
+            "age": 4,
+            "trainer": "Y.BARBEROT",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "A.JATHIERE",
+            "weight": 58.0,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "VCTE DE JODELET",
-            "description": ""
+            "description": "",
+            "performance": "1.8.1.4.1",
+            "gains": 63910,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "B .ED.DE ROTHSCHILD",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "STANGHELI",
-            "description": ""
+            "description": "",
+            "performance": "8.3.0.0.7",
+            "gains": 98580,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.FABRE",
+            "jockey": "A.MOSSE",
+            "driver": "A.MOSSE",
+            "owner": "Y.BURRUS",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "MICHIGAN FIRE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.0.3",
+            "gains": 23250,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DELZANGLES",
+            "jockey": "S.CHUETTE",
+            "driver": "S.CHUETTE",
+            "owner": "F.PERREE",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 11,
             "horse": "SOUVENIR D'ECAJEUL",
-            "description": ""
+            "description": "",
+            "performance": "3.9.4.4.2",
+            "gains": 118259,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.ARIZ. ELOSEGUI",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "HORSES.& BERRIES SL",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "CONTENTIOUS SOUL",
-            "description": ""
+            "description": "",
+            "performance": "3.6.3.4.2",
+            "gains": 50380,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P.CHEVIGNY DE",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "I.CORBANI",
+            "weight": 54.5,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "MODERN LIGHT",
-            "description": ""
+            "description": "",
+            "performance": "7.5.4.2.1",
+            "gains": 45455,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "SM.SMITH",
+            "weight": 54.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "LORD SINCLAIR",
-            "description": ""
+            "description": "",
+            "performance": "0.7.6.1.4",
+            "gains": 31760,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "F&O HIND. RACING",
+            "weight": 54.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "ROOFTOP",
-            "description": ""
+            "description": "",
+            "performance": "2.8.8.3.0",
+            "gains": 48440,
+            "sex": "H",
+            "age": 4,
+            "trainer": "Y.BONNEFOY",
+            "jockey": "B.MARIE",
+            "driver": "B.MARIE",
+            "owner": "STARS OF FORTUNE",
+            "weight": 53.5,
+            "draw": 16
         },
         {
             "number": 16,
             "horse": "PRINCE OF CLOUDS",
-            "description": ""
+            "description": "",
+            "performance": "0.3.8.5.0",
+            "gains": 38820,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "M.MICHEL",
+            "driver": "M.MICHEL",
+            "owner": "I.CORBANI",
+            "weight": 53.5,
+            "draw": 12
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             12,

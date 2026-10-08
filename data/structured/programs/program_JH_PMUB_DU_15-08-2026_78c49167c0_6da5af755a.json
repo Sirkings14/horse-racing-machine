@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_15-08-2026_78c49167c0_6da5af755a.txt",
-    "parsed_at": "2026-10-08T10:35:44.366382Z",
+    "parsed_at": "2026-10-08T23:52:17.656744Z",
     "date": "2026-08-15",
     "race": {
         "race_name": "PRIX DU CHAMP DURAND HONG KONG JOCKEY CLUB",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "MISTER GEORGE",
-            "description": ""
+            "description": "",
+            "performance": "1.4.0.1.5",
+            "gains": 42976,
+            "sex": "H",
+            "age": 3,
+            "trainer": "L.GADBIN",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "C.VIDEMENT",
+            "weight": 60.0,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "TANQUES",
-            "description": ""
+            "description": "",
+            "performance": "5.4.1.3.2",
+            "gains": 27384,
+            "sex": "M",
+            "age": 3,
+            "trainer": "E.LIBAUD",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "G.AU. NORMAND",
+            "weight": 58.5,
+            "draw": 11
         },
         {
             "number": 3,
             "horse": "ARDEN MIST",
-            "description": ""
+            "description": "",
+            "performance": "0.8.0.5.5",
+            "gains": 18074,
+            "sex": "H",
+            "age": 3,
+            "trainer": "PE.DUBOIS",
+            "jockey": "CP.LEMAIRE",
+            "driver": "CP.LEMAIRE",
+            "owner": "BLU RACING",
+            "weight": 58.0,
+            "draw": 6
         },
         {
             "number": 4,
             "horse": "ZAHARA",
-            "description": ""
+            "description": "",
+            "performance": "0.1.2.3.8",
+            "gains": 20429,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "JM.MALDONADO",
+            "weight": 57.5,
+            "draw": 3
         },
         {
             "number": 5,
             "horse": "ZARWALYAH",
-            "description": ""
+            "description": "",
+            "performance": "6.1.2.8.1",
+            "gains": 28818,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J.ANDREU",
+            "jockey": "M.WALDHAUSER",
+            "driver": "M.WALDHAUSER",
+            "owner": "EC. DE GINALYAH",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "MARBELLESA",
-            "description": ""
+            "description": "",
+            "performance": "3.3.3.3.5",
+            "gains": 17984,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "JM.MALDONADO",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 7,
             "horse": "ROZARION",
-            "description": ""
+            "description": "",
+            "performance": "8.2.2.2.3",
+            "gains": 40006,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.DELZANGLES",
+            "jockey": "PC.BOUDOT",
+            "driver": "PC.BOUDOT",
+            "owner": "FAMILLE BRYANT",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 8,
             "horse": "OSHIA",
-            "description": ""
+            "description": "",
+            "performance": "2.1.3.4.2",
+            "gains": 78564,
+            "sex": "F",
+            "age": 3,
+            "trainer": "JESUS",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "J.VAUTRIN",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 9,
             "horse": "NAY",
-            "description": ""
+            "description": "",
+            "performance": "2.2.8.4.1",
+            "gains": 29343,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J.REYNIER",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "G.AU. NORMAND",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 10,
             "horse": "MISS DE PANAME",
-            "description": ""
+            "description": "",
+            "performance": "4.0.0.0.7",
+            "gains": 25234,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "EC JML RACING",
+            "weight": 55.5,
+            "draw": 1
         },
         {
             "number": 11,
             "horse": "FATA MORGANA",
-            "description": ""
+            "description": "",
+            "performance": "9.8.4.5.1",
+            "gains": 12476,
+            "sex": "F",
+            "age": 3,
+            "trainer": "F.BRESSON",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "C.SALET",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "ANNA RENZI",
-            "description": ""
+            "description": "",
+            "performance": "1.3.0.9",
+            "gains": 10488,
+            "sex": "F",
+            "age": 3,
+            "trainer": "L.GADBIN",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "W.SLATTERY",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "ADONIDE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.3.5.9",
+            "gains": 4446,
+            "sex": "F",
+            "age": 3,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "RACING FRANCE",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 14,
             "horse": "GOUTTES DE DIEU",
-            "description": ""
+            "description": "",
+            "performance": "6.0.0.0.4",
+            "gains": 37220,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "EC. EXTRA BALL",
+            "weight": 54.5,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "DAMN PRECIOUS",
-            "description": ""
+            "description": "",
+            "performance": "1.7.0.7.7",
+            "gains": 23244,
+            "sex": "M",
+            "age": 3,
+            "trainer": "D.ARTU",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "V.JUD-FREI",
+            "weight": 54.5,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "DAISY DAISY",
-            "description": ""
+            "description": "",
+            "performance": "2.7.6.7.5",
+            "gains": 36829,
+            "sex": "F",
+            "age": 3,
+            "trainer": "ED.MONFORT",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "PD.PLAYER",
+            "weight": 54.0,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

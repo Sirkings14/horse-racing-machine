@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-08-06-2023_aee7182585_cc7c600d02.txt",
-    "parsed_at": "2026-10-08T10:35:40.199549Z",
+    "parsed_at": "2026-10-08T23:52:11.755445Z",
     "date": "2023-06-08",
     "race": {
         "race_name": "PRIX DU NABOB",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "TAYBET",
-            "description": ""
+            "description": "",
+            "performance": "2.6.1.5.4",
+            "gains": 28950,
+            "sex": "M",
+            "age": 3,
+            "trainer": "G.MOSSE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "RENT A HORSE BY YOHEA",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 2,
             "horse": "HAPTICS",
-            "description": ""
+            "description": "",
+            "performance": "5.2.1.2.1",
+            "gains": 37150,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "HF.DEVIN",
+            "driver": "HF.DEVIN",
+            "owner": "H.SAITO",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "NEKOLETO",
-            "description": ""
+            "description": "",
+            "performance": "3.6.1.3.5",
+            "gains": 22700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "R.MARINI",
+            "weight": 58.5,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "LOFSONGUR ISLANDE",
-            "description": ""
+            "description": "",
+            "performance": "5.5.1",
+            "gains": 13300,
+            "sex": "F",
+            "age": 3,
+            "trainer": "B.MURZABAYEV",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "B.VAN DALFSEN",
+            "weight": 58.5,
+            "draw": 1
         },
         {
             "number": 5,
             "horse": "MAGELLAN",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.2.5",
+            "gains": 34400,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "J.DE MIEULLE",
+            "driver": "J.DE MIEULLE",
+            "owner": "EC. LENGLET",
+            "weight": 58.0,
+            "draw": 14
         },
         {
             "number": 6,
             "horse": "AZKA",
-            "description": ""
+            "description": "",
+            "performance": "4.4.3.3.0",
+            "gains": 15200,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "A.MAMOU",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 7,
             "horse": "WAY TO MARSEILLE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.4.3.3",
+            "gains": 38650,
+            "sex": "H",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "GOUSSERIE RACING",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 8,
             "horse": "GRECIAN BONANZA",
-            "description": ""
+            "description": "",
+            "performance": "2.4.2.1.3",
+            "gains": 33300,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "JC.ROUGET",
+            "driver": "JC.ROUGET",
+            "owner": "C.KAIRIS",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "HIALEAH",
-            "description": ""
+            "description": "",
+            "performance": "0.1.0.4.5",
+            "gains": 16550,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "EC.FRANCKY DEFOSSE",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "PIANINO",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.3.8",
+            "gains": 35800,
+            "sex": "H",
+            "age": 3,
+            "trainer": "F.VERON",
+            "jockey": "A.WATRIGANT",
+            "driver": "A.WATRIGANT",
+            "owner": "HS DU GRAND COURGEON",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "RIO GRANDE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.3.3",
+            "gains": 13550,
+            "sex": "H",
+            "age": 3,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "C&Y.C&Y .LERNER",
+            "weight": 55.0,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "EAU DE COLOGNE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.7",
+            "gains": 5700,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "W.HICKST",
+            "driver": "W.HICKST",
+            "owner": "STALL WALDHAUS",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "LE TROPIC",
-            "description": ""
+            "description": "",
+            "performance": "3.5.3.3.1",
+            "gains": 29600,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.RUIS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N.TEMAM",
+            "weight": 54.5,
+            "draw": 13
         },
         {
             "number": 14,
             "horse": "MR LE PHILOSOPHE",
-            "description": ""
+            "description": "",
+            "performance": "3.6.0",
+            "gains": 3150,
+            "sex": "M",
+            "age": 3,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "BARON ED.DE ROTHSCHILD",
+            "weight": 54.0,
+            "draw": 7
         },
         {
             "number": 15,
             "horse": "L'IBANETA",
-            "description": ""
+            "description": "",
+            "performance": "9.2.2.5.5",
+            "gains": 9910,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "F.PERREE",
+            "weight": 53.0,
+            "draw": 15
         },
         {
             "number": 16,
             "horse": "BY EXETER",
-            "description": ""
+            "description": "",
+            "performance": "0.4.0",
+            "gains": 2700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "ROD.COLLET",
+            "driver": "ROD.COLLET",
+            "owner": "EC. SERGE STEMPNIAK",
+            "weight": 53.0,
+            "draw": 11
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

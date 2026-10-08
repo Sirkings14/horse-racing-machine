@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_28-02-2024_f0753732d9_afba93be14.txt",
-    "parsed_at": "2026-10-08T10:35:46.190568Z",
+    "parsed_at": "2026-10-08T23:52:20.280631Z",
     "date": "2024-02-28",
     "race": {
         "race_name": "ATTELE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "FABULEUX D'ECHAL",
-            "description": ""
+            "description": "",
+            "performance": "7.0.0.9.0",
+            "gains": 127115,
+            "sex": "H",
+            "age": 9,
+            "trainer": "E. RAFFIN",
+            "jockey": "J.S. CORMY",
+            "driver": "J.S. CORMY",
+            "owner": "EC. MINIER",
+            "listed_chrono": "1.13.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "FRICHTI",
-            "description": ""
+            "description": "",
+            "performance": "0.6.0.5.0",
+            "gains": 127715,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J. VANMEERBECK",
+            "jockey": "J. VANMEERBECK",
+            "driver": "J. VANMEERBECK",
+            "owner": "J. VANMEERBECK",
+            "listed_chrono": "1.13.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "GAGNANT DE BRIKVIL",
-            "description": ""
+            "description": "",
+            "performance": "9.6.7.0.9",
+            "gains": 129920,
+            "sex": "H",
+            "age": 8,
+            "trainer": "G. GELORMINI",
+            "jockey": "AUDE LEMOINE",
+            "driver": "AUDE LEMOINE",
+            "owner": "F. LEMOINE",
+            "listed_chrono": "1.13.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "GOSSIP BOY",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.8.5",
+            "gains": 136955,
+            "sex": "H",
+            "age": 8,
+            "trainer": "B. PITON",
+            "jockey": "B. PITON",
+            "driver": "B. PITON",
+            "owner": "S. BERNUT",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "GAULE ROMAINE",
-            "description": ""
+            "description": "",
+            "performance": "3.7.7.7.8",
+            "gains": 139845,
+            "sex": "F",
+            "age": 8,
+            "trainer": "A. COLLETTE",
+            "jockey": "X. GUIBOUT",
+            "driver": "X. GUIBOUT",
+            "owner": "M.CL. GUIBOUT",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "GAGNEUR",
-            "description": ""
+            "description": "",
+            "performance": "1.2.9.7.0",
+            "gains": 142940,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. GENCE",
+            "jockey": "F. GENCE",
+            "driver": "F. GENCE",
+            "owner": "EC.J. MOUCHARD",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "EL LOCO",
-            "description": ""
+            "description": "",
+            "performance": "7.9.9.0.9",
+            "gains": 143140,
+            "sex": "H",
+            "age": 10,
+            "trainer": "G. BEAUFILS",
+            "jockey": "G. BEAUFILS",
+            "driver": "G. BEAUFILS",
+            "owner": "D. JAUREGUI",
+            "listed_chrono": "1.13.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "ESPOIR DU JOUR",
-            "description": ""
+            "description": "",
+            "performance": "4.D.D.0.0",
+            "gains": 143790,
+            "sex": "H",
+            "age": 10,
+            "trainer": "TH. DROMIGNY",
+            "jockey": "J. VANMEERBECK",
+            "driver": "J. VANMEERBECK",
+            "owner": "S. CHICHE",
+            "listed_chrono": "1.12.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "GANYMED DE CORBERY",
-            "description": ""
+            "description": "",
+            "performance": "3.8.9.0.8",
+            "gains": 144845,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. LEGROS",
+            "jockey": "B. MARIE",
+            "driver": "B. MARIE",
+            "owner": "M. BESANA",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "FRISE PONT VAUTIER",
-            "description": ""
+            "description": "",
+            "performance": "D.3.0.5.9",
+            "gains": 150375,
+            "sex": "F",
+            "age": 9,
+            "trainer": "F. LAGADEUC",
+            "jockey": "VITALE CIOTOLA",
+            "driver": "VITALE CIOTOLA",
+            "owner": "F. LAIR",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "FAKIR STARDUST",
-            "description": ""
+            "description": "",
+            "performance": "0.6.D.0.6",
+            "gains": 152290,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J.F. SENET",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "EC. STAR. RACING",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "GRANDE SOIREE",
-            "description": ""
+            "description": "",
+            "performance": "D.0.3.D.5",
+            "gains": 154970,
+            "sex": "F",
+            "age": 8,
+            "trainer": "B. ROCHARD",
+            "jockey": "K. BUSNEL",
+            "driver": "K. BUSNEL",
+            "owner": "EC. CH. BOISNARD",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "FLYING DEVIL",
-            "description": ""
+            "description": "",
+            "performance": "0.2.4.6.2",
+            "gains": 155883,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. NIVARD",
+            "jockey": "A. BARRE",
+            "driver": "A. BARRE",
+            "owner": "A. BARRE",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 14,
             "horse": "FASHION MAKER",
-            "description": ""
+            "description": "",
+            "performance": "D.7.3.3.6",
+            "gains": 156910,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M. MOTTIER",
+            "jockey": "CH. CUILLER",
+            "driver": "CH. CUILLER",
+            "owner": "Y. DESMET",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 15,
             "horse": "FAN DE PHYT'S",
-            "description": ""
+            "description": "",
+            "performance": "6.3.3.0.5",
+            "gains": 159040,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P.Y. VERVA",
+            "jockey": "M. LEBREC",
+            "driver": "M. LEBREC",
+            "owner": "J.CH. VELLETRIE",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 16,
             "horse": "FEELING PACO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.R.3.7",
+            "gains": 159690,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M. ABRIVARD",
+            "jockey": "CH. LIBERGE",
+            "driver": "CH. LIBERGE",
+            "owner": "P. GUYONNET",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

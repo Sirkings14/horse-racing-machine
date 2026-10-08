@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-29-02-2024_9fd3ee9dd5_0a4b5d114b.txt",
-    "parsed_at": "2026-10-08T10:35:42.313358Z",
+    "parsed_at": "2026-10-08T23:52:14.748083Z",
     "date": "2024-02-29",
     "race": {
         "race_name": "ATTELE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "INGRID TURGOT",
-            "description": ""
+            "description": "",
+            "performance": "7.3.0.0.1",
+            "gains": 217730,
+            "sex": "F",
+            "age": 6,
+            "trainer": "N. ENSCH",
+            "jockey": "J.P. ENSCH",
+            "driver": "J.P. ENSCH",
+            "owner": "PH. SAVINEL",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2925.M"
         },
         {
             "number": 2,
             "horse": "INSTINCT D'AM",
-            "description": ""
+            "description": "",
+            "performance": "4.0.5.D.7",
+            "gains": 224760,
+            "sex": "M",
+            "age": 6,
+            "trainer": "CH. MARTENS",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "SCU. A. E C. BORSANI",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2925.M"
         },
         {
             "number": 3,
             "horse": "EL PASO D'OCCAGNES",
-            "description": ""
+            "description": "",
+            "performance": "0.5.8.7.D",
+            "gains": 227390,
+            "sex": "H",
+            "age": 10,
+            "trainer": "S. STEFANO",
+            "jockey": "J.M. ROUBAUD",
+            "driver": "J.M. ROUBAUD",
+            "owner": "EC. J. KONJOVIC",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2925.M"
         },
         {
             "number": 4,
             "horse": "IES WE KAN",
-            "description": ""
+            "description": "",
+            "performance": "1.1.D.5.D",
+            "gains": 230080,
+            "sex": "M",
+            "age": 6,
+            "trainer": "R. DERIEUX",
+            "jockey": "R. DERIEUX",
+            "driver": "R. DERIEUX",
+            "owner": "R.G. BELLAICHE",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2925.M"
         },
         {
             "number": 5,
             "horse": "HOVE PONT VAUTIER",
-            "description": ""
+            "description": "",
+            "performance": "6.3.3.3.6",
+            "gains": 233280,
+            "sex": "M",
+            "age": 7,
+            "trainer": "D. BEKAERT",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "EC. LE TREMONT",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2925.M"
         },
         {
             "number": 6,
             "horse": "ELAN D'HARCOUEL",
-            "description": ""
+            "description": "",
+            "performance": "3.0.6.4.7",
+            "gains": 234910,
+            "sex": "H",
+            "age": 10,
+            "trainer": "MARTIN CORMY",
+            "jockey": "M. DAOUGABEL",
+            "driver": "M. DAOUGABEL",
+            "owner": "LARA LE GEAY",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2925.M"
         },
         {
             "number": 7,
             "horse": "HARLEY GEMA",
-            "description": ""
+            "description": "",
+            "performance": "D.6.1.1.D",
+            "gains": 240810,
+            "sex": "F",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "M. SASSIER",
+            "driver": "M. SASSIER",
+            "owner": "EC.M. SASSIER",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2925.M"
         },
         {
             "number": 8,
             "horse": "FANGIO COBO",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.9.7",
+            "gains": 244540,
+            "sex": "H",
+            "age": 9,
+            "trainer": "PIERRICK LE MOEL",
+            "jockey": "PIERRICK LE MOEL",
+            "driver": "PIERRICK LE MOEL",
+            "owner": "EC. M.J. RUAULT",
+            "listed_chrono": "1.13.50",
+            "listed_distance": "2925.M"
         },
         {
             "number": 9,
             "horse": "HARIBO DU LOISIR",
-            "description": ""
+            "description": "",
+            "performance": "0.D.0.5.D",
+            "gains": 274440,
+            "sex": "M",
+            "age": 7,
+            "trainer": "P. BLANCHON",
+            "jockey": "J.M. ROUBAUD",
+            "driver": "J.M. ROUBAUD",
+            "owner": "J. COTTEL",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2950.M"
         },
         {
             "number": 10,
             "horse": "GAMBLE RIVER",
-            "description": ""
+            "description": "",
+            "performance": "8.0.D.8.D",
+            "gains": 282570,
+            "sex": "M",
+            "age": 8,
+            "trainer": "N. PACHA",
+            "jockey": "K. THONNERIEUX",
+            "driver": "K. THONNERIEUX",
+            "owner": "G. LAUMESFELT",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2950.M"
         },
         {
             "number": 11,
             "horse": "EOLIEN DE CHENU",
-            "description": ""
+            "description": "",
+            "performance": "5.8.0.9.0",
+            "gains": 288750,
+            "sex": "H",
+            "age": 10,
+            "trainer": "Y.A. BRIAND",
+            "jockey": "Y. HARET",
+            "driver": "Y. HARET",
+            "owner": "Y.A. BRIAND",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2950.M"
         },
         {
             "number": 12,
             "horse": "EPSON D'ARIANE",
-            "description": ""
+            "description": "",
+            "performance": "8.3.8.D.2",
+            "gains": 289950,
+            "sex": "H",
+            "age": 10,
+            "trainer": "N. MOUROT",
+            "jockey": "D. ALEXANDRE",
+            "driver": "D. ALEXANDRE",
+            "owner": "D. ALEXANDRE",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2950.M"
         },
         {
             "number": 13,
             "horse": "FELIX DU BOURG",
-            "description": ""
+            "description": "",
+            "performance": "2.8.4.6.5",
+            "gains": 332240,
+            "sex": "M",
+            "age": 9,
+            "trainer": "B. MARIE",
+            "jockey": "B. MARIE",
+            "driver": "B. MARIE",
+            "owner": "EC. D L",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2950.M"
         },
         {
             "number": 14,
             "horse": "EL PRESIDENTE",
-            "description": ""
+            "description": "",
+            "performance": "4.0.7.6.D",
+            "gains": 349350,
+            "sex": "H",
+            "age": 10,
+            "trainer": "K. DEVIENNE",
+            "jockey": "J.M. ROUBAUD",
+            "driver": "J.M. ROUBAUD",
+            "owner": "EC. DE ROUGEMONT",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2950.M"
         },
         {
             "number": 15,
             "horse": "ECLAT DES NOIX",
-            "description": ""
+            "description": "",
+            "performance": "8.0.3.6.6",
+            "gains": 380750,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J.CH. SOREL",
+            "jockey": "L. LERENARD",
+            "driver": "L. LERENARD",
+            "owner": "J. LERENARD",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2950.M"
         },
         {
             "number": 16,
             "horse": "EBERTON",
-            "description": ""
+            "description": "",
+            "performance": "7.D.4.D.0",
+            "gains": 398220,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J. GUELPA",
+            "jockey": "J. GUELPA",
+            "driver": "J. GUELPA",
+            "owner": "P. GUELPA",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2950.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_04-08-2025_5f7c0876e5_7b7c3670c6.txt",
-    "parsed_at": "2026-10-08T10:35:43.017028Z",
+    "parsed_at": "2026-10-08T23:52:15.730396Z",
     "date": "2025-08-04",
     "race": {
         "race_name": "PRIX REGION NORMANDIE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ZULU WARRIOR",
-            "description": ""
+            "description": "",
+            "performance": "1.0.6.8.2",
+            "gains": 115625,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "A.FABRE",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "NEPALAIS",
-            "description": ""
+            "description": "",
+            "performance": "8.0.1.0.1",
+            "gains": 203040,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F.CHAPPET",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "A.GILIBERT",
+            "weight": 59.5,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "COMBERMERE",
-            "description": ""
+            "description": "",
+            "performance": "5.0.0.1.1",
+            "gains": 170240,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J.LEROY",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "D.DUMOULIN",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 4,
             "horse": "VENUS OCEANE",
-            "description": ""
+            "description": "",
+            "performance": "0.5.1.0.4",
+            "gains": 34775,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "EC.ADES HAZAN",
+            "weight": 58.0,
+            "draw": 1
         },
         {
             "number": 5,
             "horse": "OURO PRETO",
-            "description": ""
+            "description": "",
+            "performance": "3.1.0.2.1",
+            "gains": 43450,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DELZANGLES",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "M.MOTSCHMANN",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "IL CAPO",
-            "description": ""
+            "description": "",
+            "performance": "0.3.0.1.0",
+            "gains": 63110,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.FRADET",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "EC.ED. MESSAOUD",
+            "weight": 57.5,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "CUNCERTO",
-            "description": ""
+            "description": "",
+            "performance": "1.3.6.7.3",
+            "gains": 95200,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.RULEC",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "C.FOELLER",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "TIGER ROCK",
-            "description": ""
+            "description": "",
+            "performance": "5.4.6.3.0",
+            "gains": 30910,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "CHEVOTEL RACING",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "I'M A BELIEVER",
-            "description": ""
+            "description": "",
+            "performance": "4.4.0.0.2",
+            "gains": 120200,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.CHAPPET",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "A.GILIBERT",
+            "weight": 57.0,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "BLACK HAWK",
-            "description": ""
+            "description": "",
+            "performance": "6.5.6.1.0",
+            "gains": 195245,
+            "sex": "H",
+            "age": 7,
+            "trainer": "L.PONTOIR",
+            "jockey": "J.MOUTARD",
+            "driver": "J.MOUTARD",
+            "owner": "ANT.BOUCHER",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "MEHLANGO",
-            "description": ""
+            "description": "",
+            "performance": "9.8.5.1.0",
+            "gains": 77840,
+            "sex": "M",
+            "age": 4,
+            "trainer": "F.JOLIVET",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "F.JOLIVET/B.CLERMONT",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 12,
             "horse": "MYKISS",
-            "description": ""
+            "description": "",
+            "performance": "4.7.3.7.6",
+            "gains": 223799,
+            "sex": "H",
+            "age": 8,
+            "trainer": "G.BATISTIC",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "SANDRA RENZ U.A.",
+            "weight": 56.5,
+            "draw": 16
         },
         {
             "number": 13,
             "horse": "DREAMS",
-            "description": ""
+            "description": "",
+            "performance": "8.7.1.9.3",
+            "gains": 138970,
+            "sex": "M",
+            "age": 7,
+            "trainer": "S.PECORARO",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "N.RUGANI",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "ACOTANGO",
-            "description": ""
+            "description": "",
+            "performance": "1.8.3.5.7",
+            "gains": 36450,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.ROLLAND",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "M.ROLLAND",
+            "weight": 56.0,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "MARTIN",
-            "description": ""
+            "description": "",
+            "performance": "1.0.4.0.0",
+            "gains": 37740,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DEL.SANCHEZ",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "CU. MEDITERRANEO",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "FLORENCE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.5.7.8",
+            "gains": 16001,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.KARKOSA",
+            "jockey": "B.MARIE",
+            "driver": "B.MARIE",
+            "owner": "R.ZIELINSKI",
+            "weight": 56.0,
+            "draw": 11
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

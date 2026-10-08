@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-31-01-2023_13af50ec16_f709ee6e5d.txt",
-    "parsed_at": "2026-10-08T10:35:42.502878Z",
+    "parsed_at": "2026-10-08T23:52:15.012254Z",
     "date": "2023-01-31",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DANTES",
-            "description": ""
+            "description": "",
+            "performance": "2.0.9.0.6",
+            "gains": 114920,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "LG BLOODSTOCK",
+            "weight": 60.5,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "KING ROBBE",
-            "description": ""
+            "description": "",
+            "performance": "9.1.1.4.5",
+            "gains": 189610,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S.MAILLOT",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "B.DUTRUEL",
+            "weight": 59.5,
+            "draw": 13
         },
         {
             "number": 3,
             "horse": "TARIDA",
-            "description": ""
+            "description": "",
+            "performance": "2.1.6.3.5",
+            "gains": 125600,
+            "sex": "F",
+            "age": 6,
+            "trainer": "S.PASQUIER",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "L.FLOC'H",
+            "weight": 59.0,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "NORWEGIAN SIR",
-            "description": ""
+            "description": "",
+            "performance": "6.5.5.0.1",
+            "gains": 132721,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A.POUCHIN",
+            "jockey": "C.BOUTIN",
+            "driver": "C.BOUTIN",
+            "owner": "G.PARIENTE",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "DIVA DU DANCING",
-            "description": ""
+            "description": "",
+            "performance": "1.6.7.1.0",
+            "gains": 148045,
+            "sex": "F",
+            "age": 6,
+            "trainer": "A.ORANI",
+            "jockey": "R.CHOTARD",
+            "driver": "R.CHOTARD",
+            "owner": "R.OLIVIER",
+            "weight": 58.0,
+            "draw": 1
         },
         {
             "number": 6,
             "horse": "OUT OF TIME",
-            "description": ""
+            "description": "",
+            "performance": "9.3.0.5.7",
+            "gains": 479712,
+            "sex": "M",
+            "age": 7,
+            "trainer": "G.CONGIU",
+            "jockey": "JP.GAUVIN",
+            "driver": "JP.GAUVIN",
+            "owner": "EC. MOISE OHANA",
+            "weight": 57.5,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "SIR SPARKALOT",
-            "description": ""
+            "description": "",
+            "performance": "1.3.5.1.0",
+            "gains": 51715,
+            "sex": "H",
+            "age": 5,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "M.VIDAL",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 8,
             "horse": "MILLE SABORDS",
-            "description": ""
+            "description": "",
+            "performance": "1.3.4.0.0",
+            "gains": 123605,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.GUYON",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "L.DASSAULT",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "MIRAGE REVE",
-            "description": ""
+            "description": "",
+            "performance": "8.7.6.0.7",
+            "gains": 55580,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.LEMAITRE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. RENK",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 10,
             "horse": "ELECTROSCOPE",
-            "description": ""
+            "description": "",
+            "performance": "5.5.2.9.2",
+            "gains": 68280,
+            "sex": "H",
+            "age": 5,
+            "trainer": "V.SEGUY",
+            "jockey": "S.RICHTER",
+            "driver": "S.RICHTER",
+            "owner": "T.MARECHAL",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "MYSTERY",
-            "description": ""
+            "description": "",
+            "performance": "0.2.5.2.1",
+            "gains": 35790,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.VELON",
+            "jockey": "JP.GAUVIN",
+            "driver": "JP.GAUVIN",
+            "owner": "SCU. MICOLO SNC",
+            "weight": 54.5,
+            "draw": 12
         },
         {
             "number": 12,
             "horse": "CARLTON CHOICE",
-            "description": ""
+            "description": "",
+            "performance": "0.7.2.1.4",
+            "gains": 291464,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "SCU. DEL GIGLIO SARDO",
+            "weight": 54.0,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "INATTENDU",
-            "description": ""
+            "description": "",
+            "performance": "0.3.0.2.1",
+            "gains": 157685,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E.CRUBLET",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "STALL DRESDENSIA",
+            "weight": 54.0,
+            "draw": 8
         },
         {
             "number": 14,
             "horse": "TOUR D'ECHELLE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.2.3.1",
+            "gains": 61300,
+            "sex": "F",
+            "age": 6,
+            "trainer": "A.CRASTUS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "D.FERNANDEZ-ORTEGA",
+            "weight": 54.0,
+            "draw": 16
         },
         {
             "number": 15,
             "horse": "J'AURAIS DU",
-            "description": ""
+            "description": "",
+            "performance": "2.3.0.0.0",
+            "gains": 221670,
+            "sex": "M",
+            "age": 7,
+            "trainer": "E.HARDOUIN",
+            "jockey": "C.BOUTIN",
+            "driver": "C.BOUTIN",
+            "owner": "EC. THOMAS SIVADIER",
+            "weight": 53.5,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "SCARFACE",
-            "description": ""
+            "description": "",
+            "performance": "9.7.0.7.6",
+            "gains": 59660,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.RUIS",
+            "jockey": "C.BOUTIN",
+            "driver": "C.BOUTIN",
+            "owner": "SARL JEDBURGH STUD",
+            "weight": 52.5,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             1,

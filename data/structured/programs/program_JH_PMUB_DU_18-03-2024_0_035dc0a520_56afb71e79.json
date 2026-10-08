@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_18-03-2024_0_035dc0a520_56afb71e79.txt",
-    "parsed_at": "2026-10-08T10:35:44.783265Z",
+    "parsed_at": "2026-10-08T23:52:18.250147Z",
     "date": "2024-03-18",
     "race": {
         "race_name": "PRIX DES QUATRE GLACIERES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "FERRARI FEVER",
-            "description": ""
+            "description": "",
+            "performance": "4.1.1.2.1",
+            "gains": 71950,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.TRULLIER",
+            "jockey": "JUL .PHELIPPON",
+            "driver": "JUL .PHELIPPON",
+            "owner": "EC. FORET JAUNE",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "DAMIEN",
-            "description": ""
+            "description": "",
+            "performance": "6.5.4.1.1",
+            "gains": 30750,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.PLANQUE",
+            "jockey": "A.FOUASSIER",
+            "driver": "A.FOUASSIER",
+            "owner": "C.BERTHO",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "MYSTERY TRAIN",
-            "description": ""
+            "description": "",
+            "performance": "2.2.9",
+            "gains": 9800,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "C.ALESI",
+            "driver": "C.ALESI",
+            "owner": "O.ORTMANS",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 4,
             "horse": "MARIE MANCINI",
-            "description": ""
+            "description": "",
+            "performance": "2.4.4.1.1",
+            "gains": 35000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. MG",
+            "weight": 56.0,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "PARRHESIA",
-            "description": ""
+            "description": "",
+            "performance": "9.4.4.3.3",
+            "gains": 30400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "D.COLE",
+            "weight": 55.5,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "HERA",
-            "description": ""
+            "description": "",
+            "performance": "1.3.3",
+            "gains": 18400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "EC. FRIEDRIDER",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "LILY OFTHE KINGDON",
-            "description": ""
+            "description": "",
+            "performance": "2.1.6.2.7",
+            "gains": 17600,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "B.ROCHETTE",
+            "weight": 54.5,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "NIGHT ACTION",
-            "description": ""
+            "description": "",
+            "performance": "1.0.2.3.4",
+            "gains": 17050,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "GOUSSERIE RACIN",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 9,
             "horse": "SPRING HEART",
-            "description": ""
+            "description": "",
+            "performance": "3.2.3.2",
+            "gains": 14450,
+            "sex": "F",
+            "age": 3,
+            "trainer": "R.MANGIONE",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "V.BOUTOUR",
+            "weight": 54.5,
+            "draw": 10
         },
         {
             "number": 10,
             "horse": "ANIELSKA",
-            "description": ""
+            "description": "",
+            "performance": "0.0.3.6.1",
+            "gains": 10200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "Y.HOUAR",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "KOSLOVKA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.3.3.4",
+            "gains": 23550,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "A.JATHIERE",
+            "weight": 54.0,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "L’ARDECHOISE",
-            "description": ""
+            "description": "",
+            "performance": "3.3.3",
+            "gains": 12600,
+            "sex": "F",
+            "age": 3,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "A.GILIBERT",
+            "weight": 54.0,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "STAR FROM THE EAST",
-            "description": ""
+            "description": "",
+            "performance": "5.3.1.2.9",
+            "gains": 22150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "G.HEALD",
+            "weight": 53.5,
+            "draw": 14
         },
         {
             "number": 14,
             "horse": "MAGIC PERSEVERANCE",
-            "description": ""
+            "description": "",
+            "performance": "1.0.5.0.2",
+            "gains": 17500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "M.GUARNIERI",
+            "driver": "M.GUARNIERI",
+            "owner": "C.CORSI",
+            "weight": 53.5,
+            "draw": 16
         },
         {
             "number": 15,
             "horse": "ETEL",
-            "description": ""
+            "description": "",
+            "performance": "1.6.6",
+            "gains": 8000,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "AS.CROMBEZ",
+            "driver": "AS.CROMBEZ",
+            "owner": "IM.ATCHIA",
+            "weight": 53.5,
+            "draw": 2
         },
         {
             "number": 16,
             "horse": "DIDJIE",
-            "description": ""
+            "description": "",
+            "performance": "7.7.5.5",
+            "gains": 3700,
+            "sex": "F",
+            "age": 3,
+            "trainer": "D.PROVOST",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "C.WINGTANS",
+            "weight": 53.0,
+            "draw": 11
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

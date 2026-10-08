@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-16-03-2025_ad9b1e2438_3fa45b191f.txt",
-    "parsed_at": "2026-10-08T10:35:40.991908Z",
+    "parsed_at": "2026-10-08T23:52:12.891911Z",
     "date": "2025-03-16",
     "race": {
         "race_name": "PRIX DE LA GLORIETTE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "RAGNAR CITY",
-            "description": ""
+            "description": "",
+            "performance": "9.7.1.1.5",
+            "gains": 37600,
+            "sex": "M",
+            "age": 4,
+            "trainer": "F.VERON",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "SC THIERRY PIGEON",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 2,
             "horse": "MORSAN",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.3.1",
+            "gains": 282071,
+            "sex": "H",
+            "age": 9,
+            "trainer": "E.HARDOUIN",
+            "jockey": "C.BOUTIN",
+            "driver": "C.BOUTIN",
+            "owner": "A.BOUTIN",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "MOTION",
-            "description": ""
+            "description": "",
+            "performance": "1.5.3",
+            "gains": 14000,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "X.BLANCHET",
+            "driver": "X.BLANCHET",
+            "owner": "X.BLANCHET",
+            "weight": 58.0,
+            "draw": 12
         },
         {
             "number": 4,
             "horse": "CHELSEA DU NINIAN",
-            "description": ""
+            "description": "",
+            "performance": "2.3.1.0.3",
+            "gains": 144995,
+            "sex": "F",
+            "age": 7,
+            "trainer": "T.BACHELOT",
+            "jockey": "N.PAYSAN",
+            "driver": "N.PAYSAN",
+            "owner": "N.PAYSAN",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 5,
             "horse": "ROYAUMONT",
-            "description": ""
+            "description": "",
+            "performance": "2.2.6.4.9",
+            "gains": 200078,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.DEMURO",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "IL CAPO",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.2.6",
+            "gains": 50500,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "EC.ED. MESSAOUD",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "ROUDOUDOU",
-            "description": ""
+            "description": "",
+            "performance": "3.7.1.2.5",
+            "gains": 45740,
+            "sex": "M",
+            "age": 4,
+            "trainer": "B.MARIE",
+            "jockey": "E.THUEUX",
+            "driver": "E.THUEUX",
+            "owner": "D.MIQUEL",
+            "weight": 56.0,
+            "draw": 3
         },
         {
             "number": 8,
             "horse": "ORLHENA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.6.1.4",
+            "gains": 44750,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "C.BOUTIN",
+            "driver": "C.BOUTIN",
+            "owner": "V.NICOLATO",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "BIBBIENA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.2.4",
+            "gains": 27550,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H.JOURNIAC",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "SCU. DEL BARGELLO",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 10,
             "horse": "DSCHINGIS RANGER",
-            "description": ""
+            "description": "",
+            "performance": "6.4.3.7.4",
+            "gains": 28440,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "AVATARA S.A.",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 11,
             "horse": "FREEZE",
-            "description": ""
+            "description": "",
+            "performance": "7.5.1.2.2",
+            "gains": 33550,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "H.BLUME",
+            "driver": "H.BLUME",
+            "owner": "ST. LIFE STYLE",
+            "weight": 54.5,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "POTE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.3.1.3",
+            "gains": 32300,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "H.BLUME",
+            "driver": "H.BLUME",
+            "owner": "ST. MORIKI'S FRIENDS",
+            "weight": 54.0,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "SKIMBLESHANKS",
-            "description": ""
+            "description": "",
+            "performance": "2.6.4.3.5",
+            "gains": 55900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "EC. JACQUES PIASCO",
+            "weight": 54.0,
+            "draw": 5
         },
         {
             "number": 14,
             "horse": "TURANIA",
-            "description": ""
+            "description": "",
+            "performance": "6.8.2.4.3",
+            "gains": 143249,
+            "sex": "H",
+            "age": 10,
+            "trainer": "A.CRASTUS",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "J.CAULLERY",
+            "weight": 53.5,
+            "draw": 7
         },
         {
             "number": 15,
             "horse": "MEHLANGO",
-            "description": ""
+            "description": "",
+            "performance": "0.8.3.2.2",
+            "gains": 49220,
+            "sex": "M",
+            "age": 4,
+            "trainer": "R.MANGIONE",
+            "jockey": "F.JOLIVET",
+            "driver": "F.JOLIVET",
+            "owner": "F.JOLIVET",
+            "weight": 53.5,
+            "draw": 1
         },
         {
             "number": 16,
             "horse": "NARCOS",
-            "description": ""
+            "description": "",
+            "performance": "3.6.8.0.3",
+            "gains": 263565,
+            "sex": "M",
+            "age": 8,
+            "trainer": "M.FOREST",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "M.VARIN",
+            "weight": 53.0,
+            "draw": 11
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-31-05-2023_03fe625f85_5bed765133.txt",
-    "parsed_at": "2026-10-08T10:35:42.526275Z",
+    "parsed_at": "2026-10-08T23:52:15.046201Z",
     "date": "2023-05-29",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "HELIOPOLIS",
-            "description": ""
+            "description": "",
+            "performance": "0.0.3.5.3",
+            "gains": 53810,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "J.TOMBARELLO",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "JAZZMEN",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.3.3",
+            "gains": 71437,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.SANTIAGO",
+            "jockey": "C.PETERSCHMITT",
+            "driver": "C.PETERSCHMITT",
+            "owner": "C.PETERSCHMITT",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 3,
             "horse": "MYKISS",
-            "description": ""
+            "description": "",
+            "performance": "2.9.5.4.2",
+            "gains": 137509,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "G.BATISTIC",
+            "driver": "G.BATISTIC",
+            "owner": "STALL BRASILIEN",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 4,
             "horse": "WAGGAD",
-            "description": ""
+            "description": "",
+            "performance": "5.0.A.3.4",
+            "gains": 16320,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.EON",
+            "jockey": "E.GRALL",
+            "driver": "E.GRALL",
+            "owner": "Y.GRALL",
+            "weight": 58.5,
+            "draw": 7
         },
         {
             "number": 5,
             "horse": "BLIND BUY",
-            "description": ""
+            "description": "",
+            "performance": "4.8.8.6.1",
+            "gains": 37900,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.SEIDL",
+            "jockey": "A.SUBORICS",
+            "driver": "A.SUBORICS",
+            "owner": "AVATARA S.A.",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 6,
             "horse": "TOTALLY GOLD",
-            "description": ""
+            "description": "",
+            "performance": "1.4.6.6.6",
+            "gains": 39121,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.LUKASEK",
+            "jockey": "I.JANA.KOPLIKOVA",
+            "driver": "I.JANA.KOPLIKOVA",
+            "owner": "J.DUFKOVA",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 7,
             "horse": "NORTHSEA STAR",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.8.8",
+            "gains": 81778,
+            "sex": "H",
+            "age": 9,
+            "trainer": "H.BESNIER",
+            "jockey": "K.KEREKES",
+            "driver": "K.KEREKES",
+            "owner": "K.GOGL",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 8,
             "horse": "KAPANI",
-            "description": ""
+            "description": "",
+            "performance": "4.7.9.2.5",
+            "gains": 53650,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.NICCO",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "H.MERAUD",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "LUCKY CHARLIE",
-            "description": ""
+            "description": "",
+            "performance": "5.3.9.1.2",
+            "gains": 25300,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P.BAZIRE",
+            "jockey": "Y.VOLLMER",
+            "driver": "Y.VOLLMER",
+            "owner": "EC. LUCK",
+            "weight": 56.5,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "HARIQ",
-            "description": ""
+            "description": "",
+            "performance": "1.1.4.3.1",
+            "gains": 52160,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.MOLINS",
+            "jockey": "E.MIKHALIDES",
+            "driver": "E.MIKHALIDES",
+            "owner": "C.VANDEL",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "BLACK HAWK",
-            "description": ""
+            "description": "",
+            "performance": "1.8.2.3.6",
+            "gains": 74830,
+            "sex": "M",
+            "age": 5,
+            "trainer": "T.TRULLIER",
+            "jockey": "M.DREAN",
+            "driver": "M.DREAN",
+            "owner": "M.DREAN",
+            "weight": 55.0,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "ANTE POST",
-            "description": ""
+            "description": "",
+            "performance": "7.2.3.5.2",
+            "gains": 21000,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "M.RULEC",
+            "driver": "M.RULEC",
+            "owner": "S.MOLKS",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 13,
             "horse": "AUEN ADVENTURE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.3.4.2",
+            "gains": 134780,
+            "sex": "H",
+            "age": 7,
+            "trainer": "L.BOISSEAU",
+            "jockey": "J.PARIZE",
+            "driver": "J.PARIZE",
+            "owner": "C.FOELLER",
+            "weight": 54.0,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "DIANA",
-            "description": ""
+            "description": "",
+            "performance": "4.7.3.5.7",
+            "gains": 43980,
+            "sex": "F",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "J.MAYER",
+            "driver": "J.MAYER",
+            "owner": "AJAX RACING",
+            "weight": 53.5,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "GARIGLIANO",
-            "description": ""
+            "description": "",
+            "performance": "3.5.0.0.4",
+            "gains": 78730,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "B.BOSSERT",
+            "driver": "B.BOSSERT",
+            "owner": "B.BOSSERT",
+            "weight": 52.5,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "INNIS",
-            "description": ""
+            "description": "",
+            "performance": "6.9.0.0.1",
+            "gains": 60666,
+            "sex": "H",
+            "age": 8,
+            "trainer": "E.CRUBLET",
+            "jockey": "C.WEBER",
+            "driver": "C.WEBER",
+            "owner": "C.WEBER",
+            "weight": 52.0,
+            "draw": 14
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

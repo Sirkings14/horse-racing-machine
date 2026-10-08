@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-11-11-2024_19a459e3f9_1838bfd2f8.txt",
-    "parsed_at": "2026-10-08T10:35:40.609227Z",
+    "parsed_at": "2026-10-08T23:52:12.344245Z",
     "date": "2024-11-11",
     "race": {
         "race_name": "PRIX DE LA VILLE DE TOULOUSE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "NIKOLAJ",
-            "description": ""
+            "description": "",
+            "performance": "7.1.2.3.0",
+            "gains": 67070,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.MEYER",
+            "jockey": "D.SCHOENHERR",
+            "driver": "D.SCHOENHERR",
+            "owner": "SCU. MICOLO SNC",
+            "weight": 60.0,
+            "draw": 4
         },
         {
             "number": 2,
             "horse": "COMMANDER'S WAY",
-            "description": ""
+            "description": "",
+            "performance": "1.3.1.1.7",
+            "gains": 49250,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.WERLE",
+            "jockey": "O.TRIGODET",
+            "driver": "O.TRIGODET",
+            "owner": "F.PERREE/O.TRIGODET",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "NATURAL GIFT",
-            "description": ""
+            "description": "",
+            "performance": "0.3.7.4.1",
+            "gains": 59675,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 57.5,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "BELAFONTE",
-            "description": ""
+            "description": "",
+            "performance": "0.9.2.1.0",
+            "gains": 77550,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "G.LEMER",
+            "driver": "G.LEMER",
+            "owner": "B.VAITILINGON",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "POCA GEN",
-            "description": ""
+            "description": "",
+            "performance": "0.7.5.4.2",
+            "gains": 60400,
+            "sex": "H",
+            "age": 5,
+            "trainer": "MA.BERNADET",
+            "jockey": "C.HER. DE BEAUVOIR",
+            "driver": "C.HER. DE BEAUVOIR",
+            "owner": "M.HER. DE BEAUVOIR",
+            "weight": 57.5,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "CHELSEA DU NINIAN",
-            "description": ""
+            "description": "",
+            "performance": "3.1.0.3.0",
+            "gains": 134925,
+            "sex": "F",
+            "age": 6,
+            "trainer": "T.BACHELOT",
+            "jockey": "N.PAYSAN",
+            "driver": "N.PAYSAN",
+            "owner": "N.PAYSAN",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "LUCIO VERO",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.4.4",
+            "gains": 73660,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.MOUESAN",
+            "jockey": "R.AVIAL LOPEZ",
+            "driver": "R.AVIAL LOPEZ",
+            "owner": "R.AVIAL SANCHEZ",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 8,
             "horse": "FOLLOW YOU",
-            "description": ""
+            "description": "",
+            "performance": "1.6.0.1.5",
+            "gains": 61230,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.WALDHAUSER",
+            "jockey": "C.MARTINON",
+            "driver": "C.MARTINON",
+            "owner": "BARON A.D' AREXY",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "AL BARQ",
-            "description": ""
+            "description": "",
+            "performance": "4.0.3.1.0",
+            "gains": 94730,
+            "sex": "M",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "S.GAVILAN",
+            "driver": "S.GAVILAN",
+            "owner": "L.MOUTOUSSAMY",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 10,
             "horse": "MON RICIN",
-            "description": ""
+            "description": "",
+            "performance": "1.3.6.0.5",
+            "gains": 57540,
+            "sex": "H",
+            "age": 5,
+            "trainer": "JB.EYQUEM",
+            "jockey": "F.MONNIER",
+            "driver": "F.MONNIER",
+            "owner": "HYPERION SARL",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 11,
             "horse": "MY HOPE",
-            "description": ""
+            "description": "",
+            "performance": "7.1.1.1.3",
+            "gains": 44700,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.TRULLIER",
+            "jockey": "D.SCHOENHERR",
+            "driver": "D.SCHOENHERR",
+            "owner": "D.SCHOENHERR",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "GRECIAN BONANZA",
-            "description": ""
+            "description": "",
+            "performance": "3.0.1.4.2",
+            "gains": 73580,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.GUEDJ-GAY",
+            "jockey": "J.RESIMONT",
+            "driver": "J.RESIMONT",
+            "owner": "G.AU.NORMAND",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "BLOU LAGOON",
-            "description": ""
+            "description": "",
+            "performance": "4.1.2.6.6",
+            "gains": 37500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "F.VERON",
+            "jockey": "D.WATRIGANT",
+            "driver": "D.WATRIGANT",
+            "owner": "A.ATTERBRAND",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 14,
             "horse": "PHILIPPO",
-            "description": ""
+            "description": "",
+            "performance": "6.9.2.5.4",
+            "gains": 37060,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "TJ.MARTINS NOVAIS",
+            "driver": "TJ.MARTINS NOVAIS",
+            "owner": "FINCA CAS SANT SL",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "TARAJAL",
-            "description": ""
+            "description": "",
+            "performance": "9.1.0.0.9",
+            "gains": 82670,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N..TEMAM",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 16,
             "horse": "MEXICAN DREAM",
-            "description": ""
+            "description": "",
+            "performance": "3.5.5.5.3",
+            "gains": 116020,
+            "sex": "F",
+            "age": 6,
+            "trainer": "E.HARDOUIN",
+            "jockey": "F.PARDON",
+            "driver": "F.PARDON",
+            "owner": "N.WEILAND-JAEGGI",
+            "weight": 54.5,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

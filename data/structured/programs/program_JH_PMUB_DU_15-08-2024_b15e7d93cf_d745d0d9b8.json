@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_15-08-2024_b15e7d93cf_d745d0d9b8.txt",
-    "parsed_at": "2026-10-08T10:35:44.357404Z",
+    "parsed_at": "2026-10-08T23:52:17.642888Z",
     "date": "2024-08-15",
     "race": {
         "race_name": "GRAND HANDICAP DES SPRINTERS",
@@ -16,89 +16,260 @@
         {
             "number": 1,
             "horse": "PUREST TIME",
-            "description": ""
+            "description": "",
+            "performance": "1.5.4.3.0",
+            "gains": 110370,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "M.DELCHER SANCHEZ",
+            "driver": "M.DELCHER SANCHEZ",
+            "owner": "M.MOTTO",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "LE TABOU",
-            "description": ""
+            "description": "",
+            "performance": "3.3.0.2.1",
+            "gains": 85350,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "G.DOLEUZE",
+            "driver": "G.DOLEUZE",
+            "owner": "C.STEPHENSON",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 3,
             "horse": "ROCK BOY",
-            "description": ""
+            "description": "",
+            "performance": "6.4.1.2.2",
+            "gains": 82190,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.BARZALONA",
+            "jockey": "R.CHOTARD",
+            "driver": "R.CHOTARD",
+            "owner": "TEAM CALAS",
+            "weight": 58.5,
+            "draw": 5
         },
         {
             "number": 4,
             "horse": "AVERSA",
-            "description": ""
+            "description": "",
+            "performance": "0.1.6.7.1",
+            "gains": 114550,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "JP.VAN. HEEDE",
+            "weight": 58.0,
+            "draw": 7
         },
         {
             "number": 5,
             "horse": "KIMI ORENDA",
-            "description": ""
+            "description": "",
+            "performance": "6.8.5.8.3",
+            "gains": 90925,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "PIER.MENARD",
+            "driver": "PIER.MENARD",
+            "owner": "T.LINES",
+            "weight": 58.0,
+            "draw": 17
         },
         {
             "number": 6,
             "horse": "TUDO BEM",
-            "description": ""
+            "description": "",
+            "performance": "5.0.6.4.4",
+            "gains": 397939,
+            "sex": "H",
+            "age": 8,
+            "trainer": "H.JOURNIAC",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "F.NORMAND",
+            "weight": 57.5,
+            "draw": 14
         },
         {
             "number": 7,
             "horse": "DROLE DE DAME",
-            "description": ""
+            "description": "",
+            "performance": "1.7.2.1.4",
+            "gains": 77930,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "I.CORBANI",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "WILD WEST",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.4.1",
+            "gains": 70090,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "I.CORBANI",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "TORPEN",
-            "description": ""
+            "description": "",
+            "performance": "0.7.4.3.4",
+            "gains": 284320,
+            "sex": "H",
+            "age": 7,
+            "trainer": "H.BESNIER",
+            "jockey": "R.SCHOOF",
+            "driver": "R.SCHOOF",
+            "owner": "R.SCHOOF",
+            "weight": 56.0,
+            "draw": 1
         },
         {
             "number": 10,
             "horse": "TERTIUS",
-            "description": ""
+            "description": "",
+            "performance": "2.3.2.5.1",
+            "gains": 172440,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.VELON",
+            "jockey": "M.NIGGE",
+            "driver": "M.NIGGE",
+            "owner": "C.ZASS",
+            "weight": 55.5,
+            "draw": 2
         },
         {
             "number": 11,
             "horse": "WHITE PLATIN",
-            "description": ""
+            "description": "",
+            "performance": "5.9.5.0.6",
+            "gains": 155608,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.THOMAS",
+            "jockey": "C.B. BARBE",
+            "driver": "C.B. BARBE",
+            "owner": "D.SIEGENTHALER",
+            "weight": 54.5,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "CIAO PA'",
-            "description": ""
+            "description": "",
+            "performance": "7.0.3.2.0",
+            "gains": 56810,
+            "sex": "M",
+            "age": 4,
+            "trainer": "H.BOUTIN",
+            "jockey": "C.BOUTIN",
+            "driver": "C.BOUTIN",
+            "owner": "SCU. MICOLO",
+            "weight": 54.5,
+            "draw": 11
         },
         {
             "number": 13,
             "horse": "MAJOR OAK",
-            "description": ""
+            "description": "",
+            "performance": "1.1.9.1.9",
+            "gains": 73670,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.MANGIONE",
+            "jockey": "MF.WEISSMEIER",
+            "driver": "MF.WEISSMEIER",
+            "owner": "ST. HEXENBERG",
+            "weight": 53.5,
+            "draw": 8
         },
         {
             "number": 14,
             "horse": "DROGO",
-            "description": ""
+            "description": "",
+            "performance": "8.9.2.8.0",
+            "gains": 126825,
+            "sex": "H",
+            "age": 6,
+            "trainer": "E.HARDOUIN",
+            "jockey": "V.DISSAUX",
+            "driver": "V.DISSAUX",
+            "owner": "N.GIOVANNELLI",
+            "weight": 53.5,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "WHISTLE AND FLUTE",
-            "description": ""
+            "description": "",
+            "performance": "0.7.2.9.6",
+            "gains": 49640,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "H.DE NICOLAY",
+            "driver": "H.DE NICOLAY",
+            "owner": "M.JOSIPOVIC",
+            "weight": 53.5,
+            "draw": 16
         },
         {
             "number": 16,
             "horse": "HAYEJOHN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.9.0.0",
+            "gains": 104730,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.PACAUT",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "JP.VAN.HEEDE",
+            "weight": 53.0,
+            "draw": 3
         },
         {
             "number": 17,
             "horse": "MCTENETT",
-            "description": ""
+            "description": "",
+            "performance": "0.6.6.2.7",
+            "gains": 33465,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "H.DE NICOLAY",
+            "driver": "H.DE NICOLAY",
+            "owner": "M.JOSIPOVIC",
+            "weight": 52.5,
+            "draw": 4
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_12-01-2026_f392c79c5d_bee009f455.txt",
-    "parsed_at": "2026-10-08T10:35:43.849883Z",
+    "parsed_at": "2026-10-08T23:52:16.935553Z",
     "date": "2026-01-12",
     "race": {
         "race_name": "PRIX V ANS BARBOT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "WESTMINSTER NIGHT",
-            "description": ""
+            "description": "",
+            "performance": "4.0.1.5.3",
+            "gains": 161288,
+            "sex": "H",
+            "age": 7,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "WEST. RACE HORSES",
+            "weight": 61.0,
+            "draw": 4
         },
         {
             "number": 2,
             "horse": "OLYMPIC MESSAGE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.4.1.3",
+            "gains": 111082,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N.PERRET",
+            "jockey": "S.RUIS",
+            "driver": "S.RUIS",
+            "owner": "R.RABA",
+            "weight": 60.5,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "GOWAY",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.2.1",
+            "gains": 131282,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.ESCUDER",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "EC. NICOLATO",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "RUSSIPANT FAL",
-            "description": ""
+            "description": "",
+            "performance": "6.3.2.5.1",
+            "gains": 226035,
+            "sex": "M",
+            "age": 7,
+            "trainer": "N.CAULLERY",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "T.KEREFOFF",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "BAYAMOON",
-            "description": ""
+            "description": "",
+            "performance": "1.6.6.3.5",
+            "gains": 59554,
+            "sex": "M",
+            "age": 5,
+            "trainer": "J.REYNIER",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "UNDER BLUE SKY",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 6,
             "horse": "GENTLEMAN BEAUTY",
-            "description": ""
+            "description": "",
+            "performance": "4.0.0.7.5",
+            "gains": 72939,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.JIMENEZ ALVAREZ",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "E.FERN. DE VEGA",
+            "weight": 57.5,
+            "draw": 3
         },
         {
             "number": 7,
             "horse": "SALALAH",
-            "description": ""
+            "description": "",
+            "performance": "0.9.3.3.2",
+            "gains": 106973,
+            "sex": "F",
+            "age": 5,
+            "trainer": "J.ANDREU",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "R.FOUQUET",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "FOU FURIEUX",
-            "description": ""
+            "description": "",
+            "performance": "4.1.4.4.0",
+            "gains": 99148,
+            "sex": "M",
+            "age": 5,
+            "trainer": "N.CAULLERY",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "D.R.LODGE/B.L.JONES",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "DUBALAA",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.8.3",
+            "gains": 21312,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.REYNIER",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "LG BLOODSTOCK",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 10,
             "horse": "ZACAPO",
-            "description": ""
+            "description": "",
+            "performance": "3.2.5.2.3",
+            "gains": 84240,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.BOUTIN",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "EC. NICOLATO",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 11,
             "horse": "CASARES",
-            "description": ""
+            "description": "",
+            "performance": "2.3.1.3.7",
+            "gains": 70720,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D&P.PROD'HOMME",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "B.GIRAUDON",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 12,
             "horse": "SOUVENIR D'ECAJEUL",
-            "description": ""
+            "description": "",
+            "performance": "4.0.2.8.2",
+            "gains": 150002,
+            "sex": "M",
+            "age": 5,
+            "trainer": "G.ARIZ.ELOSEGUI",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "HORSES & BERRIES",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "MON SCHATZI",
-            "description": ""
+            "description": "",
+            "performance": "7.0.5.6.3",
+            "gains": 64831,
+            "sex": "H",
+            "age": 4,
+            "trainer": "MF.WEISSMEIER",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "AVENTURIN RACING",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "NOBLEMAN",
-            "description": ""
+            "description": "",
+            "performance": "9.7.6.4.3",
+            "gains": 81750,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.ESCUDER",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "J.ROMEL",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "ABIAT",
-            "description": ""
+            "description": "",
+            "performance": "0.5.5.1.4",
+            "gains": 55408,
+            "sex": "F",
+            "age": 5,
+            "trainer": "M.RULEC",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "L.SAROVA",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 16,
             "horse": "LETTY'S MARVEL",
-            "description": ""
+            "description": "",
+            "performance": "1.8.9.1.2",
+            "gains": 271386,
+            "sex": "H",
+            "age": 11,
+            "trainer": "JESUS",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "G.BARBARIN",
+            "weight": 54.5,
+            "draw": 7
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             15,

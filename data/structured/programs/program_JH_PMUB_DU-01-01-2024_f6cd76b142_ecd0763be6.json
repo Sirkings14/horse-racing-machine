@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-01-01-2024_f6cd76b142_ecd0763be6.txt",
-    "parsed_at": "2026-10-08T10:35:39.437159Z",
+    "parsed_at": "2026-10-08T23:52:10.681071Z",
     "date": "2024-02-01",
     "race": {
         "race_name": "PRIX DE LANGEAIS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GUI D'ERABLE",
-            "description": ""
+            "description": "",
+            "performance": "8.1.0.D.D",
+            "gains": 185600,
+            "sex": "H",
+            "age": 8,
+            "trainer": "CL. THOMAIN",
+            "jockey": "CL. THOMAIN",
+            "driver": "CL. THOMAIN",
+            "owner": "Ec. du HS D'ERABLE",
+            "listed_chrono": "1.12.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "GIPSY DE CHAMANT",
-            "description": ""
+            "description": "",
+            "performance": "2.4.0.1.1",
+            "gains": 233098,
+            "sex": "F",
+            "age": 8,
+            "trainer": "P.Y. VERVA",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "P.D. PAILLOT",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "HARMONISTA",
-            "description": ""
+            "description": "",
+            "performance": "3.3.3.2.4",
+            "gains": 239190,
+            "sex": "F",
+            "age": 7,
+            "trainer": "F. NIVARD",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "Ec. des CHARMES",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "GOLIATH DU CAUX",
-            "description": ""
+            "description": "",
+            "performance": "5.1.5.0.8",
+            "gains": 252130,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. LAURENT",
+            "jockey": "A. LAURENT",
+            "driver": "A. LAURENT",
+            "owner": "Ec.A. LAURENT",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "HEDIC GEMA",
-            "description": ""
+            "description": "",
+            "performance": "1.3.4.6.2",
+            "gains": 253060,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "M. SASSIER",
+            "driver": "M. SASSIER",
+            "owner": "Ec. M. SASSIER",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "FRONSAC MADRIK",
-            "description": ""
+            "description": "",
+            "performance": "4.3.D.2.0",
+            "gains": 259980,
+            "sex": "H",
+            "age": 9,
+            "trainer": "D. THOMAIN",
+            "jockey": "S. GUARATO",
+            "driver": "S. GUARATO",
+            "owner": "Ec. BREIZH D'ESPACE",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "FLUO MESLOIS",
-            "description": ""
+            "description": "",
+            "performance": "0.D.5.D.6",
+            "gains": 263120,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P. BELLOCHE",
+            "jockey": "P. BELLOCHE",
+            "driver": "P. BELLOCHE",
+            "owner": "Ec. B",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 8,
             "horse": "FUEGO DU MORTIER",
-            "description": ""
+            "description": "",
+            "performance": "4.8.6.D.5",
+            "gains": 265125,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J. VANMEERBECK",
+            "jockey": "J. VANMEERBECK",
+            "driver": "J. VANMEERBECK",
+            "owner": "J. VANMEERBECK",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 9,
             "horse": "HURELLA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.7.D.D",
+            "gains": 271290,
+            "sex": "F",
+            "age": 7,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "Ec. MOUREAUX AS",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 10,
             "horse": "GALILEO BELLO",
-            "description": ""
+            "description": "",
+            "performance": "3.2.D.2.1",
+            "gains": 408170,
+            "sex": "M",
+            "age": 8,
+            "trainer": "G. GELORMINI",
+            "jockey": "A.F. DON. MARCILLAC",
+            "driver": "A.F. DON. MARCILLAC",
+            "owner": "Ec. MARCILLAC",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2875.M"
         },
         {
             "number": 11,
             "horse": "GAMIN JABA",
-            "description": ""
+            "description": "",
+            "performance": "8.3.2.2.0",
+            "gains": 413280,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "G. BAZIRE",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2875.M"
         },
         {
             "number": 12,
             "horse": "HE AND ME",
-            "description": ""
+            "description": "",
+            "performance": "7.1.3.1.7",
+            "gains": 417070,
+            "sex": "M",
+            "age": 7,
+            "trainer": "M. ABRIVARD",
+            "jockey": "M. LENOIR",
+            "driver": "M. LENOIR",
+            "owner": "Ec.Th. GUIBERT",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2875.M"
         },
         {
             "number": 13,
             "horse": "GENDREEN",
-            "description": ""
+            "description": "",
+            "performance": "3.2.1.9.5",
+            "gains": 429020,
+            "sex": "H",
+            "age": 8,
+            "trainer": "LEO ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "PH. GRUMETZ",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2875.M"
         },
         {
             "number": 14,
             "horse": "GRACE DU DIGEON",
-            "description": ""
+            "description": "",
+            "performance": "9.1.2.D.5",
+            "gains": 436140,
+            "sex": "F",
+            "age": 8,
+            "trainer": "E. RAFFIN",
+            "jockey": "Ch. DREUX",
+            "driver": "Ch. DREUX",
+            "owner": "Ec. Ch. DREUX",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2875.M"
         },
         {
             "number": 15,
             "horse": "HARLEM DE BUCY",
-            "description": ""
+            "description": "",
+            "performance": "4.4.1.2.0",
+            "gains": 439170,
+            "sex": "M",
+            "age": 7,
+            "trainer": "THEO DUVALDESTIN",
+            "jockey": "CH. ECALARD",
+            "driver": "CH. ECALARD",
+            "owner": "Ec. BRINDOR",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2875.M"
         },
         {
             "number": 16,
             "horse": "FIFTY FIVE BOND",
-            "description": ""
+            "description": "",
+            "performance": "D.6.3.5.4",
+            "gains": 463230,
+            "sex": "H",
+            "age": 9,
+            "trainer": "CH. MARTENS",
+            "jockey": "V. MARTENS",
+            "driver": "V. MARTENS",
+            "owner": "Ec. OLMENHOF",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2875.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             15,

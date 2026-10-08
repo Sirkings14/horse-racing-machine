@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_26-09-2026_b602c52e54_422c4965c6.txt",
-    "parsed_at": "2026-10-08T10:35:45.958089Z",
+    "parsed_at": "2026-10-08T23:52:19.954636Z",
     "date": "2026-09-26",
     "race": {
         "race_name": "HAIES",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "ROCK AND ROLL",
-            "description": ""
+            "description": "",
+            "performance": "5.6.6.3.4",
+            "gains": 324145,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.SEROR",
+            "jockey": "D.UBEDA",
+            "driver": "D.UBEDA",
+            "owner": "J.ANXO",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "BLUE BORANA",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.5.4",
+            "gains": 141435,
+            "sex": "H",
+            "age": 6,
+            "trainer": "GAB.LEENDERS",
+            "jockey": "A.ZULIANI",
+            "driver": "A.ZULIANI",
+            "owner": "SA.BRAMALL",
+            "weight": 72.0
         },
         {
             "number": 3,
             "horse": "MAGIC FLIGHT",
-            "description": ""
+            "description": "",
+            "performance": "0.1.4.0.T",
+            "gains": 149380,
+            "sex": "H",
+            "age": 6,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "T.VABOIS",
+            "driver": "T.VABOIS",
+            "owner": "EC. VICT. DREAMS",
+            "weight": 70.5
         },
         {
             "number": 4,
             "horse": "ROBIN HILL",
-            "description": ""
+            "description": "",
+            "performance": "A.3.0.1.5",
+            "gains": 83235,
+            "sex": "H",
+            "age": 6,
+            "trainer": "L.CARBERRY",
+            "jockey": "J.REVELEY",
+            "driver": "J.REVELEY",
+            "owner": "M.NAYLOR",
+            "weight": 69.5
         },
         {
             "number": 5,
             "horse": "INTERDIT DE JEU",
-            "description": ""
+            "description": "",
+            "performance": "4.0.5.1.J",
+            "gains": 214035,
+            "sex": "H",
+            "age": 8,
+            "trainer": "P&C.PELTIER",
+            "jockey": "M.CHAILLOLEAU",
+            "driver": "M.CHAILLOLEAU",
+            "owner": "J.DETRE/I.PELTIER",
+            "weight": 69.5
         },
         {
             "number": 6,
             "horse": "KEL STORY",
-            "description": ""
+            "description": "",
+            "performance": "2.7.5.0.A",
+            "gains": 227480,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.SEROR",
+            "jockey": "L.PHILIPPERON",
+            "driver": "L.PHILIPPERON",
+            "owner": "J.FINCH",
+            "weight": 69.0
         },
         {
             "number": 7,
             "horse": "LOU FAST",
-            "description": ""
+            "description": "",
+            "performance": "0.0.7.7.9",
+            "gains": 453870,
+            "sex": "H",
+            "age": 7,
+            "trainer": "ROB.COLLET",
+            "jockey": "A.GAUTRON",
+            "driver": "A.GAUTRON",
+            "owner": "EC. CMV DARBY STABLE",
+            "weight": 69.0
         },
         {
             "number": 8,
             "horse": "SHAZAM",
-            "description": ""
+            "description": "",
+            "performance": "1.4.2.7.3",
+            "gains": 128540,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.SEROR",
+            "jockey": "J.PHELIPPE",
+            "driver": "J.PHELIPPE",
+            "owner": "EC. MG BOUDOT",
+            "weight": 68.5
         },
         {
             "number": 9,
             "horse": "NARUTO",
-            "description": ""
+            "description": "",
+            "performance": "1.0.2.8.A",
+            "gains": 112950,
+            "sex": "H",
+            "age": 7,
+            "trainer": "P.VOVCENKO",
+            "jockey": "K.NABET",
+            "driver": "K.NABET",
+            "owner": "STALL EMOJI",
+            "weight": 68.0
         },
         {
             "number": 10,
             "horse": "GALANT CHABA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.8.2.3",
+            "gains": 119269,
+            "sex": "H",
+            "age": 10,
+            "trainer": "T.JOUIN",
+            "jockey": "L.ZULIANI",
+            "driver": "L.ZULIANI",
+            "owner": "B.LETOURNEUX",
+            "weight": 68.0
         },
         {
             "number": 11,
             "horse": "THE MUST",
-            "description": ""
+            "description": "",
+            "performance": "5.8.1.1.A",
+            "gains": 89930,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G.MENATO",
+            "jockey": "B.LE CLERC",
+            "driver": "B.LE CLERC",
+            "owner": "LG BLOODSTOCK",
+            "weight": 67.5
         },
         {
             "number": 12,
             "horse": "CHANT DE GARDE",
-            "description": ""
+            "description": "",
+            "performance": "4.J.5.A.1",
+            "gains": 24810,
+            "sex": "H",
+            "age": 6,
+            "trainer": "F.FOUCHER",
+            "jockey": "T.BEAURAIN",
+            "driver": "T.BEAURAIN",
+            "owner": "F.FOUCHER",
+            "weight": 67.0
         },
         {
             "number": 13,
             "horse": "JUMPER BAIE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.6.3",
+            "gains": 204035,
+            "sex": "H",
+            "age": 7,
+            "trainer": "R.SCHMIDLIN",
+            "jockey": "N.FERREIRA",
+            "driver": "N.FERREIRA",
+            "owner": "R.SCHMIDLIN",
+            "weight": 66.0
         },
         {
             "number": 14,
             "horse": "DARLIDA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.6.J.2",
+            "gains": 31100,
+            "sex": "F",
+            "age": 6,
+            "trainer": "L&M.VIEL",
+            "jockey": "Y.FOLLIN",
+            "driver": "Y.FOLLIN",
+            "owner": "EC. MINIER",
+            "weight": 66.0
         },
         {
             "number": 15,
             "horse": "MOSSY WALSH",
-            "description": ""
+            "description": "",
+            "performance": "A.0.7.4.3",
+            "gains": 35010,
+            "sex": "F",
+            "age": 6,
+            "trainer": "M.SEROR",
+            "jockey": "B.MARCHAND",
+            "driver": "B.MARCHAND",
+            "owner": "D.MAUGHAN",
+            "weight": 65.5
         },
         {
             "number": 16,
             "horse": "PREZIENNE DU LARGE",
-            "description": ""
+            "description": "",
+            "performance": "T.4.1.A.4",
+            "gains": 44150,
+            "sex": "F",
+            "age": 6,
+            "trainer": "J.DELAUNAY",
+            "jockey": "A.RENARD",
+            "driver": "A.RENARD",
+            "owner": "S.TORTIGER",
+            "weight": 65.5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

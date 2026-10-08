@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-01-04-2025_e77842befa_080bb4003f.txt",
-    "parsed_at": "2026-10-08T10:35:39.458644Z",
+    "parsed_at": "2026-10-08T23:52:10.709651Z",
     "date": "2025-04-01",
     "race": {
         "race_name": "PRIX DES GRANDES FONTAINES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "KAPANI",
-            "description": ""
+            "description": "",
+            "performance": "3.2.5.5.5",
+            "gains": 163060,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "H.MERAUD",
+            "weight": 60.5,
+            "draw": 2
         },
         {
             "number": 2,
             "horse": "TIC TAC",
-            "description": ""
+            "description": "",
+            "performance": "5.4.1.2.1",
+            "gains": 53087,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "PH.LASSEN",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 3,
             "horse": "BLACK HAWK",
-            "description": ""
+            "description": "",
+            "performance": "8.3.1.1.7",
+            "gains": 183320,
+            "sex": "H",
+            "age": 7,
+            "trainer": "T.BACHELOT",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "ANT .BOUCHER",
+            "weight": 59.5,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "SHELBY",
-            "description": ""
+            "description": "",
+            "performance": "4.3.9.4.0",
+            "gains": 95840,
+            "sex": "M",
+            "age": 5,
+            "trainer": "G.TROLLEY DE PREVAUX",
+            "jockey": "M.ALONSO ROLDAN",
+            "driver": "M.ALONSO ROLDAN",
+            "owner": "F.M-BARRIOS MADRAZO",
+            "weight": 59.0,
+            "draw": 1
         },
         {
             "number": 5,
             "horse": "SUNFAST",
-            "description": ""
+            "description": "",
+            "performance": "6.8.6.2.5",
+            "gains": 130860,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "GEST INVEST CAPITAL",
+            "weight": 59.0,
+            "draw": 8
         },
         {
             "number": 6,
             "horse": "SUPER ALEX",
-            "description": ""
+            "description": "",
+            "performance": "2.8.2.2.8",
+            "gains": 41650,
+            "sex": "H",
+            "age": 10,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "JPH .DUBOIS",
+            "driver": "JPH .DUBOIS",
+            "owner": "V.DUBOIS/J.DUBOIS",
+            "weight": 58.0,
+            "draw": 3
         },
         {
             "number": 7,
             "horse": "MORRADI",
-            "description": ""
+            "description": "",
+            "performance": "0.3.9.5.2",
+            "gains": 18448,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "F.BLICHFELDT",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "IL CAPO",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.6.2",
+            "gains": 50500,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.BOUTIN",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "EC.ED. MESSAOUD",
+            "weight": 56.5,
+            "draw": 7
         },
         {
             "number": 9,
             "horse": "ACT OF WISDOM",
-            "description": ""
+            "description": "",
+            "performance": "1.2.9.5.1",
+            "gains": 90389,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.GUYON",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "G.GIROUX",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 10,
             "horse": "LA TEMPLIERE",
-            "description": ""
+            "description": "",
+            "performance": "6.5.1.4.0",
+            "gains": 117750,
+            "sex": "F",
+            "age": 7,
+            "trainer": "S.CHUETTE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "F.PERREE",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "LORENZO DE MEDICI",
-            "description": ""
+            "description": "",
+            "performance": "4.1.3.8.3",
+            "gains": 99210,
+            "sex": "H",
+            "age": 6,
+            "trainer": "F.LEFEBVRE",
+            "jockey": "A.FOUASSIER",
+            "driver": "A.FOUASSIER",
+            "owner": "D.HUYCK",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "KINGDOM",
-            "description": ""
+            "description": "",
+            "performance": "1.1.7.8.0",
+            "gains": 116520,
+            "sex": "H",
+            "age": 6,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "RACING STARS",
+            "weight": 54.5,
+            "draw": 12
         },
         {
             "number": 13,
             "horse": "SPINELLO",
-            "description": ""
+            "description": "",
+            "performance": "3.5.4.6.0",
+            "gains": 41525,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "M.BARATTI",
+            "driver": "M.BARATTI",
+            "owner": "G.LAROCHE",
+            "weight": 54.5,
+            "draw": 4
         },
         {
             "number": 14,
             "horse": "GUINESS STAR",
-            "description": ""
+            "description": "",
+            "performance": "7.5.9.3.3",
+            "gains": 32130,
+            "sex": "M",
+            "age": 5,
+            "trainer": "F.VERON",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "SC THIERRY PIGEON",
+            "weight": 54.5,
+            "draw": 11
         },
         {
             "number": 15,
             "horse": "DAY OFF",
-            "description": ""
+            "description": "",
+            "performance": "9.5.6.1.0",
+            "gains": 63910,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "JESUS",
+            "driver": "JESUS",
+            "owner": "C.ARNAUD",
+            "weight": 53.5,
+            "draw": 9
         },
         {
             "number": 16,
             "horse": "AUTEUR",
-            "description": ""
+            "description": "",
+            "performance": "2.2.7.6.4",
+            "gains": 15100,
+            "sex": "M",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "P.BONNEFOY",
+            "weight": 53.0,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

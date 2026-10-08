@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_04-11-2024_a99b021ec3_79e0618411.txt",
-    "parsed_at": "2026-10-08T10:35:43.025943Z",
+    "parsed_at": "2026-10-08T23:52:15.744384Z",
     "date": "2024-11-04",
     "race": {
         "race_name": "PRIX ROLAND FOUGEDOIRE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "TORPEN",
-            "description": ""
+            "description": "",
+            "performance": "9.3.0.0.7",
+            "gains": 291740,
+            "sex": "H",
+            "age": 7,
+            "trainer": "T.TRULLIER",
+            "jockey": "R.SCHOOF",
+            "driver": "R.SCHOOF",
+            "owner": "R.SCHOOF",
+            "weight": 60.0,
+            "draw": 8
         },
         {
             "number": 2,
             "horse": "CORTADO",
-            "description": ""
+            "description": "",
+            "performance": "2.0.3.7.5",
+            "gains": 29750,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "A.SUBORICS",
+            "driver": "A.SUBORICS",
+            "owner": "ST.RITTERBUSCH",
+            "weight": 60.0,
+            "draw": 4
         },
         {
             "number": 3,
             "horse": "SCARFACE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.3.4",
+            "gains": 206100,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.EON",
+            "jockey": "C.BOUTIN",
+            "driver": "C.BOUTIN",
+            "owner": "SCU. MICOLO",
+            "weight": 59.5,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "KILOECHO",
-            "description": ""
+            "description": "",
+            "performance": "0.4.0.7.7",
+            "gains": 243160,
+            "sex": "H",
+            "age": 8,
+            "trainer": "T.PICCONE",
+            "jockey": "JV.TOUX",
+            "driver": "JV.TOUX",
+            "owner": "JV.TOUX",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 5,
             "horse": "IMPITOYABLE",
-            "description": ""
+            "description": "",
+            "performance": "0.6.5.5.4",
+            "gains": 141360,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D.SANTIAGO",
+            "jockey": "S.LANSLOTS",
+            "driver": "S.LANSLOTS",
+            "owner": "STAL VIE EN ROSE",
+            "weight": 58.5,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "BACCHILIDE",
-            "description": ""
+            "description": "",
+            "performance": "3.1.0.2.8",
+            "gains": 106740,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "M.GUARNIERI",
+            "driver": "M.GUARNIERI",
+            "owner": "P.FERRARIO",
+            "weight": 58.0,
+            "draw": 7
         },
         {
             "number": 7,
             "horse": "WILD WEST",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.0",
+            "gains": 70090,
+            "sex": "M",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "M.DEL.SANCHEZ",
+            "driver": "M.DEL.SANCHEZ",
+            "owner": "I.CORBANI",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "CIAO PA'",
-            "description": ""
+            "description": "",
+            "performance": "1.2.1.6.0",
+            "gains": 95380,
+            "sex": "M",
+            "age": 4,
+            "trainer": "H.BOUTIN",
+            "jockey": "C.BOUTIN",
+            "driver": "C.BOUTIN",
+            "owner": "SCU. MICOLO",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "PANAREA",
-            "description": ""
+            "description": "",
+            "performance": "0.7.6.4.4",
+            "gains": 14733,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 57.5,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "ROYALWOOD",
-            "description": ""
+            "description": "",
+            "performance": "4.1.1.5.7",
+            "gains": 79610,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "C.B. BARBE",
+            "driver": "C.B. BARBE",
+            "owner": "C.B. BARBE",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 11,
             "horse": "DROGO",
-            "description": ""
+            "description": "",
+            "performance": "9.7.9.0.8",
+            "gains": 127885,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "V.DISSAUX",
+            "driver": "V.DISSAUX",
+            "owner": "N.GIOVANNELLI",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 12,
             "horse": "AVRILOMANOIR",
-            "description": ""
+            "description": "",
+            "performance": "4.4.4.7.6",
+            "gains": 142147,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.GUYON",
+            "jockey": "S.LANSLOTS",
+            "driver": "S.LANSLOTS",
+            "owner": "STAL VIE EN ROSE",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 13,
             "horse": "KINGSWOOD FLYER",
-            "description": ""
+            "description": "",
+            "performance": "6.4.0.7.7",
+            "gains": 21013,
+            "sex": "M",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "M.ELDUBEBA",
+            "weight": 55.0,
+            "draw": 9
         },
         {
             "number": 14,
             "horse": "SIMPLY LOVELY",
-            "description": ""
+            "description": "",
+            "performance": "7.4.0.1.4",
+            "gains": 64370,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.FAVRIAUX",
+            "jockey": "JM.BEGUIGNE",
+            "driver": "JM.BEGUIGNE",
+            "owner": "SPARKLING STAR",
+            "weight": 54.5,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "BABA SIM",
-            "description": ""
+            "description": "",
+            "performance": "5.0.8.0.0",
+            "gains": 107680,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.LEMAITRE",
+            "jockey": "J.GOOSSENS",
+            "driver": "J.GOOSSENS",
+            "owner": "TRIPLE B. STABLES",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 16,
             "horse": "KING ROBBE",
-            "description": ""
+            "description": "",
+            "performance": "3.6.2.4.6",
+            "gains": 247360,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B.MARIE",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "B.DUTRUEL",
+            "weight": 53.0,
+            "draw": 16
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_02-12-2023_7b15e7c6c4_677455f602.txt",
-    "parsed_at": "2026-10-08T10:35:42.785347Z",
+    "parsed_at": "2026-10-08T23:52:15.406186Z",
     "date": "2023-12-02",
     "race": {
         "race_name": "PRIX DE SAINT-GEORGES DE DIDONNE",
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "HORTINO",
-            "description": ""
+            "description": "",
+            "performance": "3.D.1.9.2",
+            "gains": 118675,
+            "sex": "H",
+            "age": 6,
+            "trainer": "F. LAGADEUC",
+            "jockey": "CH.A. MARY",
+            "driver": "CH.A. MARY",
+            "owner": "C. BUGUET",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "HUNADORA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.3.5",
+            "gains": 122180,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F. LECANU",
+            "jockey": "N. DELAMARRE",
+            "driver": "N. DELAMARRE",
+            "owner": "G. CHERUBINI",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "GUELIZ",
-            "description": ""
+            "description": "",
+            "performance": "D.9.0.5.6",
+            "gains": 123350,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G. GELORMINI",
+            "jockey": "Théo RADOUX",
+            "driver": "Théo RADOUX",
+            "owner": "J. de MONDESIR",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "FRICHTI",
-            "description": ""
+            "description": "",
+            "performance": "0.D.1.D.0",
+            "gains": 124265,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J. VANMEERBECK",
+            "jockey": "J. VANMEERBECK",
+            "driver": "J. VANMEERBECK",
+            "owner": "J. VANMEERBECK",
+            "listed_chrono": "1.13.30",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "HERMES SMART",
-            "description": ""
+            "description": "",
+            "performance": "1.D.D.3.3",
+            "gains": 127285,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M. ABRIVARD",
+            "jockey": "Y. HENRY",
+            "driver": "Y. HENRY",
+            "owner": "EC. SMART",
+            "listed_chrono": "1.14.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "HYMNE DU GERS",
-            "description": ""
+            "description": "",
+            "performance": "1.3.0.9.5",
+            "gains": 194830,
+            "sex": "H",
+            "age": 6,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC. J.M.RANCOULE",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2875.M"
         },
         {
             "number": 7,
             "horse": "HEDIC GEMA",
-            "description": ""
+            "description": "",
+            "performance": "6.2.0.1.6",
+            "gains": 220840,
+            "sex": "H",
+            "age": 6,
+            "trainer": "B. ROCHARD",
+            "jockey": "M. SASSIER",
+            "driver": "M. SASSIER",
+            "owner": "EC. Marc SASSIER",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2875.M"
         },
         {
             "number": 8,
             "horse": "HURELLA",
-            "description": ""
+            "description": "",
+            "performance": "6.0.0.0.2",
+            "gains": 225230,
+            "sex": "F",
+            "age": 6,
+            "trainer": "N. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC. MOUREAUX AS",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 9,
             "horse": "HANNIBAL TUILERIE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.D.1",
+            "gains": 247015,
+            "sex": "H",
+            "age": 6,
+            "trainer": "J. BRUNEAU",
+            "jockey": "J. BRUNEAU",
+            "driver": "J. BRUNEAU",
+            "owner": "CH.M. BRUNEAU",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 10,
             "horse": "GUINESS D'HERFRAIE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.0.3",
+            "gains": 252090,
+            "sex": "F",
+            "age": 7,
+            "trainer": "D. THOMAIN",
+            "jockey": "CL. THOMAIN",
+            "driver": "CL. THOMAIN",
+            "owner": "EC. du HS. D'ERABLE",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 11,
             "horse": "HERADAMES",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.1.2",
+            "gains": 259420,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A. ABRIVARD",
+            "jockey": "CL. THOMAIN",
+            "driver": "CL. THOMAIN",
+            "owner": "EC. J.P. BARJON",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2875.M"
         },
         {
             "number": 12,
             "horse": "GHOSTBUSTER",
-            "description": ""
+            "description": "",
+            "performance": "6.D.2.3.4",
+            "gains": 272050,
+            "sex": "H",
+            "age": 7,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "S. RAIMOND",
+            "driver": "S. RAIMOND",
+            "owner": "EC. MOLINA",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2875.M"
         },
         {
             "number": 13,
             "horse": "HARIBO DU LOISIR",
-            "description": ""
+            "description": "",
+            "performance": "0.5.D.1.9",
+            "gains": 274440,
+            "sex": "M",
+            "age": 6,
+            "trainer": "LEO ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "J. COTTEL",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2875.M"
         },
         {
             "number": 14,
             "horse": "HAKIM DE CHENU",
-            "description": ""
+            "description": "",
+            "performance": "D.0.0.9.0",
+            "gains": 280200,
+            "sex": "H",
+            "age": 6,
+            "trainer": "P. PELLEROT",
+            "jockey": "P. PELLEROT",
+            "driver": "P. PELLEROT",
+            "owner": "EC. P.PELLEROT",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2875.M"
         },
         {
             "number": 15,
             "horse": "GAIA D'OCCAGNES",
-            "description": ""
+            "description": "",
+            "performance": "9.6.5.6.0",
+            "gains": 280700,
+            "sex": "F",
+            "age": 7,
+            "trainer": "A. BARRIER",
+            "jockey": "J.PH. RAFFEGEAU",
+            "driver": "J.PH. RAFFEGEAU",
+            "owner": "Thierry MASSICOT",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2875.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

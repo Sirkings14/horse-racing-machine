@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-23-12-2023_4d74f62005_f02cc19563.txt",
-    "parsed_at": "2026-10-08T10:35:41.667004Z",
+    "parsed_at": "2026-10-08T23:52:13.866346Z",
     "date": "2023-12-23",
     "race": {
         "race_name": "PRIX DE STRASBOURG",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "FALCO DES ROCHERS",
-            "description": ""
+            "description": "",
+            "performance": "1.2.5.0.4",
+            "gains": 297480,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. LENOIR",
+            "jockey": "A. LENOIR",
+            "driver": "A. LENOIR",
+            "owner": "P.A. SAUVAGET",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "EASTON OF MY LIFE",
-            "description": ""
+            "description": "",
+            "performance": "0.5.5.2.6",
+            "gains": 313090,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. GIARD",
+            "jockey": "F. GIARD",
+            "driver": "F. GIARD",
+            "owner": "J.M. BOURGEOIS",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "EUREKA VRIE",
-            "description": ""
+            "description": "",
+            "performance": "D.0.5.2.D",
+            "gains": 317160,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A. BARRIER",
+            "jockey": "TH. CHALON",
+            "driver": "TH. CHALON",
+            "owner": "TH. CHALON",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "FESTIF CHARMANT",
-            "description": ""
+            "description": "",
+            "performance": "0.4.2.1.8",
+            "gains": 325950,
+            "sex": "H",
+            "age": 8,
+            "trainer": "E. DE JESUS",
+            "jockey": "F. TERRY",
+            "driver": "F. TERRY",
+            "owner": "L. VINCENT",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "ECLAIR GOLD",
-            "description": ""
+            "description": "",
+            "performance": "9.1.6.5.0",
+            "gains": 326940,
+            "sex": "M",
+            "age": 9,
+            "trainer": "D. DULONG",
+            "jockey": "S. ROGER",
+            "driver": "S. ROGER",
+            "owner": "J. SEUX",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "DEGANAWIDAH",
-            "description": ""
+            "description": "",
+            "performance": "5.2.7.6.D",
+            "gains": 328355,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J. TRAVERS",
+            "jockey": "St. PROVOOST",
+            "driver": "St. PROVOOST",
+            "owner": "Ec. DANOVER",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "ESTEBAN JIEL",
-            "description": ""
+            "description": "",
+            "performance": "0.9.4.9.9",
+            "gains": 331890,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. LAGADEUC",
+            "jockey": "J.L. DERSOIR",
+            "driver": "J.L. DERSOIR",
+            "owner": "Ec. LUCK",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "EL PRESIDENTE",
-            "description": ""
+            "description": "",
+            "performance": "6.D.0.3.9",
+            "gains": 344680,
+            "sex": "H",
+            "age": 9,
+            "trainer": "F. NIVARD",
+            "jockey": "J.M. ROUBAUD",
+            "driver": "J.M. ROUBAUD",
+            "owner": "Ec. de ROUGEMONT",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "FAUBOURG",
-            "description": ""
+            "description": "",
+            "performance": "9.D.0.D.8",
+            "gains": 368080,
+            "sex": "M",
+            "age": 8,
+            "trainer": "P.Y. VERVA",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "Ec. de FAUBOURG",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "EDY DU POMMEREUX",
-            "description": ""
+            "description": "",
+            "performance": "6.7.7.8.0",
+            "gains": 405160,
+            "sex": "H",
+            "age": 9,
+            "trainer": "D. THOMAIN",
+            "jockey": "S. ROGER",
+            "driver": "S. ROGER",
+            "owner": "N. LOLIC",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "DROP DES DURIEZ",
-            "description": ""
+            "description": "",
+            "performance": "7.4.0.3.0",
+            "gains": 407050,
+            "sex": "H",
+            "age": 10,
+            "trainer": "B. ROCHARD",
+            "jockey": "G. RAFFESTIN",
+            "driver": "G. RAFFESTIN",
+            "owner": "M. GOBET",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "DJEMBE D'ORGERES",
-            "description": ""
+            "description": "",
+            "performance": "4.0.2.5.6",
+            "gains": 409670,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "G.R. HUGUET",
+            "driver": "G.R. HUGUET",
+            "owner": "Ec. LOUIS D'AUR",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "FACE TIME",
-            "description": ""
+            "description": "",
+            "performance": "1.1.D.0.0",
+            "gains": 424860,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. ABRIVARD",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "JPB HORSES",
+            "listed_chrono": "1.10.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 14,
             "horse": "FINE PERLE OF LOVE",
-            "description": ""
+            "description": "",
+            "performance": "5.6.0.4.4",
+            "gains": 427500,
+            "sex": "F",
+            "age": 8,
+            "trainer": "PH. MASSCHAELE",
+            "jockey": "E. VARIN",
+            "driver": "E. VARIN",
+            "owner": "Ec. E. VARIN",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 15,
             "horse": "FALCO D'HAVAROCHE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.7.0.0",
+            "gains": 428370,
+            "sex": "H",
+            "age": 8,
+            "trainer": "E. RAFFIN",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "Ec.J.M. BAUDOUIN",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 16,
             "horse": "EPSOM D'HERFRAIE",
-            "description": ""
+            "description": "",
+            "performance": "9.0.5.0.D",
+            "gains": 433150,
+            "sex": "H",
+            "age": 9,
+            "trainer": "L. BAUDOUIN",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "Ec. LE RIVAGE",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             13,

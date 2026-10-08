@@ -1,0 +1,91 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_08-10-2026_R2_e8b4d5afa1_612f82bc60.txt",
+    "parsed_at": "2026-10-08T23:52:22.018905Z",
+    "date": "2026-10-08",
+    "meeting": 2,
+    "track": "LA CAPELLE",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                8,
+                6,
+                7,
+                1
+            ],
+            "winner": 8,
+            "second": 6,
+            "third": 7,
+            "fourth": 1
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                10,
+                7,
+                12
+            ],
+            "winner": 10,
+            "second": 7,
+            "third": 12
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                12,
+                13,
+                7
+            ],
+            "winner": 12,
+            "second": 13,
+            "third": 7
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                5,
+                11,
+                14
+            ],
+            "winner": 5,
+            "second": 11,
+            "third": 14
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                3,
+                4,
+                14,
+                1
+            ],
+            "winner": 3,
+            "second": 4,
+            "third": 14,
+            "fourth": 1
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                6,
+                3,
+                1
+            ],
+            "winner": 6,
+            "second": 3,
+            "third": 1
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                1,
+                6,
+                13
+            ],
+            "winner": 1,
+            "second": 6,
+            "third": 13
+        }
+    ]
+}

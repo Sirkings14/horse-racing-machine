@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-24-02-2026_26433201e8_f999e060d0.txt",
-    "parsed_at": "2026-10-08T10:35:41.706489Z",
+    "parsed_at": "2026-10-08T23:52:13.920258Z",
     "date": "2026-02-24",
     "race": {
         "race_name": "PRIX RAUBA CAPEU",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "PRINCE DE MONTFORT",
-            "description": ""
+            "description": "",
+            "performance": "3.0.7.4.8",
+            "gains": 178474,
+            "sex": "H",
+            "age": 8,
+            "trainer": "D&P. PROD’HOMME",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "JM. VAUX",
+            "weight": 60.0,
+            "draw": 10
         },
         {
             "number": 2,
             "horse": "A BEAUREGARD",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.5.2",
+            "gains": 64363,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "THOUVENEL RACING",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "GRAND BALCON",
-            "description": ""
+            "description": "",
+            "performance": "1.3.9.6.0",
+            "gains": 171031,
+            "sex": "H",
+            "age": 7,
+            "trainer": "P. MONFORT",
+            "jockey": "A. CRASTUS",
+            "driver": "A. CRASTUS",
+            "owner": "BAIE DES ANGES",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 4,
             "horse": "CENTRICAL",
-            "description": ""
+            "description": "",
+            "performance": "2.0.6.1.9",
+            "gains": 114452,
+            "sex": "H",
+            "age": 8,
+            "trainer": "FX. WEISSMEIER",
+            "jockey": "T. BACHELOT",
+            "driver": "T. BACHELOT",
+            "owner": "U. KLEIN",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "SPANISH LIGHT",
-            "description": ""
+            "description": "",
+            "performance": "5.3.1.9.3",
+            "gains": 104270,
+            "sex": "H",
+            "age": 6,
+            "trainer": "RC. MONTENEGRO",
+            "jockey": "M.FOULON",
+            "driver": "M.FOULON",
+            "owner": "M.ALONSO GOMEZ",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 6,
             "horse": "EL CANEY",
-            "description": ""
+            "description": "",
+            "performance": "4.8.6.0.6",
+            "gains": 118767,
+            "sex": "H",
+            "age": 8,
+            "trainer": "JM. OSORIO BER. DE LIS",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "J. PARDO DE SANT. DUBOIS",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 7,
             "horse": "I'M A BELIEVER",
-            "description": ""
+            "description": "",
+            "performance": "2.0.7.4.4",
+            "gains": 147069,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.ESCUDER",
+            "jockey": "T. PICCONE",
+            "driver": "T. PICCONE",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 55.5,
+            "draw": 4
         },
         {
             "number": 8,
             "horse": "PAOLINO",
-            "description": ""
+            "description": "",
+            "performance": "7.0.8.5.6",
+            "gains": 17022,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D&P. PROD’HOMME",
+            "jockey": "S. PASQUIER",
+            "driver": "S. PASQUIER",
+            "owner": "A. KRAULIGER",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 9,
             "horse": "PARTENIT",
-            "description": ""
+            "description": "",
+            "performance": "0.4.4.6.0",
+            "gains": 148062,
+            "sex": "M",
+            "age": 8,
+            "trainer": "C.ESCUDER",
+            "jockey": "J. CLAUDIC",
+            "driver": "J. CLAUDIC",
+            "owner": "W. AMALRIC",
+            "weight": 55.0,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "IL CAPO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.9.4.0",
+            "gains": 64838,
+            "sex": "H",
+            "age": 5,
+            "trainer": "R. FRADET",
+            "jockey": "H. BESNIER",
+            "driver": "H. BESNIER",
+            "owner": "EC. EDGAR MESSAOUD",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "INCREMENTAL",
-            "description": ""
+            "description": "",
+            "performance": "5.5.5.0.5",
+            "gains": 43858,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N. CAULLERY",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "D.BREESE/BL.JONES",
+            "weight": 54.5,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "TIMBER CIRCLE",
-            "description": ""
+            "description": "",
+            "performance": "7.8.3.1",
+            "gains": 10213,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G. RARICK",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "N. NAGEL",
+            "weight": 54.5,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "LA MAZZI GOGO",
-            "description": ""
+            "description": "",
+            "performance": "0.4.1.1.1",
+            "gains": 66831,
+            "sex": "F",
+            "age": 5,
+            "trainer": "F. FORESI",
+            "jockey": "B. MARIE",
+            "driver": "B. MARIE",
+            "owner": "EC. KURA",
+            "weight": 54.0,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "WEEMAGATEE",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.2.3",
+            "gains": 53517,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J. ANDREU",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "H. BOUDOUAIA",
+            "weight": 54.0,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "PRINCESSE SAPHIR",
-            "description": ""
+            "description": "",
+            "performance": "5.7.8.5.1",
+            "gains": 136607,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A. BUDKA",
+            "jockey": "E. HARDOUIN",
+            "driver": "E. HARDOUIN",
+            "owner": "J. JULIAN",
+            "weight": 54.0,
+            "draw": 16
         },
         {
             "number": 16,
             "horse": "GOLD PLAYER",
-            "description": ""
+            "description": "",
+            "performance": "6.7.4.1.3",
+            "gains": 130870,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. FORESI",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "N. CARRIE-EYCHENNE",
+            "weight": 54.0,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

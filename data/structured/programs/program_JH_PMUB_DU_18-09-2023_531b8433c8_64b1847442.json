@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_18-09-2023_531b8433c8_64b1847442.txt",
-    "parsed_at": "2026-10-08T10:35:44.862242Z",
+    "parsed_at": "2026-10-08T23:52:18.361383Z",
     "date": "2023-09-18",
     "race": {
         "race_name": "PRIX DE COMPIEGNE CITE IMPERIALE",
@@ -16,74 +16,215 @@
         {
             "number": 1,
             "horse": "MOWGLI",
-            "description": ""
+            "description": "",
+            "performance": "6.1.0.2.3",
+            "gains": 56180,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "L.VANSKA",
+            "driver": "L.VANSKA",
+            "owner": "C.GUILBERT",
+            "weight": 60.0,
+            "draw": 4
         },
         {
             "number": 2,
             "horse": "MARELIE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.1.5.3",
+            "gains": 33250,
+            "sex": "F",
+            "age": 3,
+            "trainer": "F.VERON",
+            "jockey": "G.ALIMPINISIS",
+            "driver": "G.ALIMPINISIS",
+            "owner": "A.DIMITROPOULOS",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "NEKOLETO",
-            "description": ""
+            "description": "",
+            "performance": "0.3.6.1.3",
+            "gains": 22700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "R.MARINI",
+            "weight": 59.0,
+            "draw": 1
         },
         {
             "number": 4,
             "horse": "AUTHODIDACTE",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.3.8",
+            "gains": 32250,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "B.GIRAUDON",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "CLAIR DE LUNE",
-            "description": ""
+            "description": "",
+            "performance": "7.1.2.8.4",
+            "gains": 27850,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "ROY RACING LTD",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 6,
             "horse": "RUE DE L'AUDE",
-            "description": ""
+            "description": "",
+            "performance": "3.2.1.6.6",
+            "gains": 23650,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "EC. X",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "APALAIN",
-            "description": ""
+            "description": "",
+            "performance": "1.2.9.2.9",
+            "gains": 14100,
+            "sex": "M",
+            "age": 3,
+            "trainer": "O.ANDIGNE",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "H.MATHET",
+            "weight": 58.0,
+            "draw": 3
         },
         {
             "number": 8,
             "horse": "HELLES",
-            "description": ""
+            "description": "",
+            "performance": "2.9.4.1.2",
+            "gains": 31200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "M.LAGASSE",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 9,
             "horse": "MA LIBERTE",
-            "description": ""
+            "description": "",
+            "performance": "5.6.1.3.8",
+            "gains": 26900,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "J.CYGLER",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 10,
             "horse": "MR LE PHILOSOPHE",
-            "description": ""
+            "description": "",
+            "performance": "5.5.1.3.3",
+            "gains": 26550,
+            "sex": "M",
+            "age": 3,
+            "trainer": "G.MOSSE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "BARON ED.DE ROTHSCHILD",
+            "weight": 57.5,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "SWEEP AWAY",
-            "description": ""
+            "description": "",
+            "performance": "9.1.3.3",
+            "gains": 12850,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.PLANQUE",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "EC.4L/RPG BLOODSTOCK",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 12,
             "horse": "BAHAYRA",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.7.J",
+            "gains": 11420,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "S.A. AGA KHAN",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 13,
             "horse": "SQUASHA",
-            "description": ""
+            "description": "",
+            "performance": "1.5.6.2",
+            "gains": 10950,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "C.LAFFON-PARIAS",
+            "driver": "C.LAFFON-PARIAS",
+            "owner": "WERTHEIMER & FRERE",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 14,
             "horse": "PURE POWER",
-            "description": ""
+            "description": "",
+            "performance": "3.8.1.2.9",
+            "gains": 14700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "V.SEGUY",
+            "jockey": "M.WEBER",
+            "driver": "M.WEBER",
+            "owner": "BERIT & RIEKE WEBER",
+            "weight": 54.0,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-03-02-2024_dcc33ac1ef_428092e88c.txt",
-    "parsed_at": "2026-10-08T10:35:39.626456Z",
+    "parsed_at": "2026-10-08T23:52:10.940566Z",
     "date": "2024-02-03",
     "race": {
         "race_name": "PRIX DU TREPORT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CELESTIN",
-            "description": ""
+            "description": "",
+            "performance": "2.7.3.1.1",
+            "gains": 249053,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.DEMURO",
+            "jockey": "J.RESIMONT",
+            "driver": "J.RESIMONT",
+            "owner": "J.PEARSON-STUTTARD",
+            "weight": 62.0,
+            "draw": 15
         },
         {
             "number": 2,
             "horse": "ZAYA DE LA PLATA",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.1.7",
+            "gains": 115245,
+            "sex": "F",
+            "age": 7,
+            "trainer": "H.LEBOUC",
+            "jockey": "J.BOISNARD",
+            "driver": "J.BOISNARD",
+            "owner": "T.TAILLEUR",
+            "weight": 61.5,
+            "draw": 1
         },
         {
             "number": 3,
             "horse": "SWISS BANK",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.2.9",
+            "gains": 211870,
+            "sex": "H",
+            "age": 9,
+            "trainer": "E.HARDOUIN",
+            "jockey": "O. DE MONTZEY",
+            "driver": "O. DE MONTZEY",
+            "owner": "CO.CORRAL",
+            "weight": 61.0,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "LOVE IS GOLD",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.1.4",
+            "gains": 55400,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "PIER.MENARD",
+            "driver": "PIER.MENARD",
+            "owner": "SARL GROUPE KR",
+            "weight": 60.5,
+            "draw": 10
         },
         {
             "number": 5,
             "horse": "BAUHINIA RHAPSODY",
-            "description": ""
+            "description": "",
+            "performance": "3.1.5.6.5",
+            "gains": 20223,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "JV.TOUX",
+            "driver": "JV.TOUX",
+            "owner": "JV.TOUX",
+            "weight": 59.0,
+            "draw": 9
         },
         {
             "number": 6,
             "horse": "UZEL",
-            "description": ""
+            "description": "",
+            "performance": "5.3.4.3.2",
+            "gains": 148850,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.GUYON",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "S.AKNIN",
+            "weight": 58.5,
+            "draw": 6
         },
         {
             "number": 7,
             "horse": "NEPALAIS",
-            "description": ""
+            "description": "",
+            "performance": "6.0.8.0.0",
+            "gains": 131910,
+            "sex": "H",
+            "age": 6,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 8,
             "horse": "PINGO",
-            "description": ""
+            "description": "",
+            "performance": "9.0.0.4.0",
+            "gains": 81680,
+            "sex": "F",
+            "age": 6,
+            "trainer": "T.BACHELOT",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "G.AU.NORMAND",
+            "weight": 56.0,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "ROYAUMONT",
-            "description": ""
+            "description": "",
+            "performance": "3.5.6.6.1",
+            "gains": 162868,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.SOUMILLON",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 10,
             "horse": "JORDANELLA",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.2.4",
+            "gains": 37490,
+            "sex": "F",
+            "age": 5,
+            "trainer": "J.GUILLOCHON",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "S.GEFFRAY",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "MOUTARDE",
-            "description": ""
+            "description": "",
+            "performance": "6.0.5.0.0",
+            "gains": 38330,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.MADAMET",
+            "jockey": "X.BLANCHET",
+            "driver": "X.BLANCHET",
+            "owner": "EC. MOISE OHANA",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "YOUNG MAN",
-            "description": ""
+            "description": "",
+            "performance": "3.3.5.0.1",
+            "gains": 154035,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.BARON",
+            "jockey": "A.BARON",
+            "driver": "A.BARON",
+            "owner": "M.BARON/P.BLANC",
+            "weight": 55.5,
+            "draw": 12
         },
         {
             "number": 13,
             "horse": "AL KHAMSIN",
-            "description": ""
+            "description": "",
+            "performance": "0.8.4.0.9",
+            "gains": 140283,
+            "sex": "H",
+            "age": 7,
+            "trainer": "R.MANGIONE",
+            "jockey": "H. MENNE. MARTINEZ",
+            "driver": "H. MENNE. MARTINEZ",
+            "owner": "H. MENNE. MARTINEZ",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "CHANCE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.5.4",
+            "gains": 86187,
+            "sex": "H",
+            "age": 8,
+            "trainer": "D.PROVOST",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "EC.M. OFFENSTADT",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "BUMBLE BEE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.5.6.8",
+            "gains": 36550,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "F.BRESSON",
+            "driver": "F.BRESSON",
+            "owner": "A.BARATIN",
+            "weight": 53.5,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "ANOLINE",
-            "description": ""
+            "description": "",
+            "performance": "5.2.2.3.5",
+            "gains": 58620,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "C.LECRIVAIN",
+            "driver": "C.LECRIVAIN",
+            "owner": "EC. R.E.",
+            "weight": 52.5,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

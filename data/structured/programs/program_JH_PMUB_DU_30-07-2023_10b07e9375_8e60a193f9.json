@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_30-07-2023_10b07e9375_8e60a193f9.txt",
-    "parsed_at": "2026-10-08T10:35:46.458789Z",
+    "parsed_at": "2026-10-08T23:52:20.687422Z",
     "date": "2023-07-30",
     "race": {
         "race_name": "PRIX DES COLLECTIVITES LOCALES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "BOSIOH",
-            "description": ""
+            "description": "",
+            "performance": "1.2.9.4.6",
+            "gains": 205600,
+            "sex": "M",
+            "age": 6,
+            "trainer": "S.RUIS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N..TEMAM",
+            "weight": 62.5,
+            "draw": 12
         },
         {
             "number": 2,
             "horse": "NIGHTHAB",
-            "description": ""
+            "description": "",
+            "performance": "8.9.0.1.5",
+            "gains": 102840,
+            "sex": "M",
+            "age": 4,
+            "trainer": "P.BAZIRE",
+            "jockey": "V.SARTORI",
+            "driver": "V.SARTORI",
+            "owner": "LEGEND RACING CLUB",
+            "weight": 61.0,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "SAINT HELLIER",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.8.8",
+            "gains": 86470,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "M.NIKITAS",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "INDIAN PACIFIC",
-            "description": ""
+            "description": "",
+            "performance": "4.6.0.2.6",
+            "gains": 144394,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.BARZALONA",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "D.ALEXANDRE",
+            "weight": 58.5,
+            "draw": 14
         },
         {
             "number": 5,
             "horse": "NEPALAIS",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.2.6",
+            "gains": 130320,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 58.5,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "HOLLYHOCK",
-            "description": ""
+            "description": "",
+            "performance": "3.1.0.4.5",
+            "gains": 73970,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "M.NIGGE",
+            "driver": "M.NIGGE",
+            "owner": "EC. M. TSCHOPP",
+            "weight": 58.0,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "WHITE WHISKY",
-            "description": ""
+            "description": "",
+            "performance": "0.8.1.4.1",
+            "gains": 84180,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.CRUBLET",
+            "jockey": "G.ALIMPINISIS",
+            "driver": "G.ALIMPINISIS",
+            "owner": "R.SHAYKHUTDINOV",
+            "weight": 58.0,
+            "draw": 6
         },
         {
             "number": 8,
             "horse": "KHOCHENKO",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.4.1",
+            "gains": 255630,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.SOUMILLON",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "JL.BOUYENVAL",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "UZEL",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.1.1",
+            "gains": 116220,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.DEMURO",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "S.AKNIN",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "BAZOQUES",
-            "description": ""
+            "description": "",
+            "performance": "6.8.1.6.0",
+            "gains": 116220,
+            "sex": "F",
+            "age": 5,
+            "trainer": "T.TRULLIER",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "B.MOISSONNIER",
+            "weight": 57.0,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "SALDURO",
-            "description": ""
+            "description": "",
+            "performance": "3.0.1.3.0",
+            "gains": 48960,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "H.BLUME",
+            "driver": "H.BLUME",
+            "owner": "STALL LAHN-SIEG",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "ALERIO",
-            "description": ""
+            "description": "",
+            "performance": "0.8.8.3.1",
+            "gains": 35550,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "A.SCHUTZ",
+            "driver": "A.SCHUTZ",
+            "owner": "A.B RACING",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 13,
             "horse": "GREAT ROTATION",
-            "description": ""
+            "description": "",
+            "performance": "0.5.2.4.2",
+            "gains": 85455,
+            "sex": "M",
+            "age": 4,
+            "trainer": "B.MURZABAYEV",
+            "jockey": "H.GREWE",
+            "driver": "H.GREWE",
+            "owner": "E.SAUREN",
+            "weight": 55.5,
+            "draw": 2
         },
         {
             "number": 14,
             "horse": "DRAGONET",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.7.7",
+            "gains": 154892,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.CRASTUS",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 55.0,
+            "draw": 13
         },
         {
             "number": 15,
             "horse": "ANCTOT",
-            "description": ""
+            "description": "",
+            "performance": "0.8.0.1.2",
+            "gains": 43170,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "S.DEHEZ",
+            "driver": "S.DEHEZ",
+            "owner": "S.DEHEZ",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "LORENZO DE MEDICI",
-            "description": ""
+            "description": "",
+            "performance": "8.4.9.3.1",
+            "gains": 46900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "SCU. DEI DUEPI",
+            "weight": 55.0,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

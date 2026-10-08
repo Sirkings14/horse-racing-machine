@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-21-05-2024_baf97bc967_62ed2004cc.txt",
-    "parsed_at": "2026-10-08T10:35:41.449071Z",
+    "parsed_at": "2026-10-08T23:52:13.546909Z",
     "date": "2024-05-21",
     "race": {
         "race_name": "HANDICAP D'ANGERS LOIRE METROPOLE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "KALEO PALACE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.7.1.2",
+            "gains": 76020,
+            "sex": "H",
+            "age": 7,
+            "trainer": "L.POGGIONOVO",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "RAB. MARIE CLAUDE",
+            "weight": 60.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "CENTRICAL",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.0.0",
+            "gains": 71000,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.GUYON",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "K.STRANGEWAY",
+            "weight": 59.5,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "KLIFF BERE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.3.5.4",
+            "gains": 49830,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.MOUTARD",
+            "jockey": "B.AUDOUIN",
+            "driver": "B.AUDOUIN",
+            "owner": "L.MOUTARD",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "SHELBY",
-            "description": ""
+            "description": "",
+            "performance": "2.0.2.3.6",
+            "gains": 68220,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "M.ALONSO ROLDAN",
+            "driver": "M.ALONSO ROLDAN",
+            "owner": "F.M.BARRIOS MADRAZO",
+            "weight": 57.5,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "CHERGUI",
-            "description": ""
+            "description": "",
+            "performance": "8.2.6.0.5",
+            "gains": 66170,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.TROLLEY DE PREVAUX",
+            "jockey": "M.ALONSO ROLDAN",
+            "driver": "M.ALONSO ROLDAN",
+            "owner": "JB. IRURETA. PUERTAS",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 6,
             "horse": "PHILIPPO",
-            "description": ""
+            "description": "",
+            "performance": "5.4.4.2.1",
+            "gains": 25400,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "TJ.MARTINS NOVAIS",
+            "driver": "TJ.MARTINS NOVAIS",
+            "owner": "FINCA CAS SANT SL",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 7,
             "horse": "CANOUANN",
-            "description": ""
+            "description": "",
+            "performance": "5.5.0.1.3",
+            "gains": 18340,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "H.H. AGA KHAN",
+            "weight": 56.0,
+            "draw": 4
         },
         {
             "number": 8,
             "horse": "MON RICIN",
-            "description": ""
+            "description": "",
+            "performance": "5.1.1.2.9",
+            "gains": 44690,
+            "sex": "H",
+            "age": 5,
+            "trainer": "H.LEBOUC",
+            "jockey": "F.MONNIER",
+            "driver": "F.MONNIER",
+            "owner": "HYPERION SARL",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 9,
             "horse": "KARAKORUM",
-            "description": ""
+            "description": "",
+            "performance": "8.3.2.1.8",
+            "gains": 126065,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E.HARDOUIN",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "M.MARCADE",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "RIDWAAN",
-            "description": ""
+            "description": "",
+            "performance": "6.8.1.0.9",
+            "gains": 137915,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.WALDHAUSER",
+            "jockey": "C.MARTINON",
+            "driver": "C.MARTINON",
+            "owner": "S.GRANDIN",
+            "weight": 54.5,
+            "draw": 2
         },
         {
             "number": 11,
             "horse": "THIRD BATCH",
-            "description": ""
+            "description": "",
+            "performance": "5.5.7.3.1",
+            "gains": 27496,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "G.BRAEM",
+            "driver": "G.BRAEM",
+            "owner": "F.SULEMAN",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "CHELSEA DU NINIAN",
-            "description": ""
+            "description": "",
+            "performance": "0.6.5.8.1",
+            "gains": 101305,
+            "sex": "F",
+            "age": 6,
+            "trainer": "T.BACHELOT",
+            "jockey": "N.PAYSAN",
+            "driver": "N.PAYSAN",
+            "owner": "N.PAYSAN/MJP.GAUTIER",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "VEGA OF SAINTS",
-            "description": ""
+            "description": "",
+            "performance": "1.3.6.1.3",
+            "gains": 52430,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "HS DES PYRENEES",
+            "weight": 53.5,
+            "draw": 1
         },
         {
             "number": 14,
             "horse": "SAAM",
-            "description": ""
+            "description": "",
+            "performance": "9.0.0.3.4",
+            "gains": 167110,
+            "sex": "H",
+            "age": 8,
+            "trainer": "L.BAILS",
+            "jockey": "S.GOUYETTE",
+            "driver": "S.GOUYETTE",
+            "owner": "A.GLAZIOU",
+            "weight": 53.0,
+            "draw": 9
         },
         {
             "number": 15,
             "horse": "PULSE",
-            "description": ""
+            "description": "",
+            "performance": "8.1.0.5.1",
+            "gains": 59750,
+            "sex": "H",
+            "age": 7,
+            "trainer": "J.GUILLOCHON",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "WR.SWINBURN",
+            "weight": 52.5,
+            "draw": 12
         },
         {
             "number": 16,
             "horse": "RUE JONAS",
-            "description": ""
+            "description": "",
+            "performance": "1.9.7.5.6",
+            "gains": 81730,
+            "sex": "F",
+            "age": 6,
+            "trainer": "D.BOCHE",
+            "jockey": "N.PAYSAN",
+            "driver": "N.PAYSAN",
+            "owner": "D.HUYCK/P.DEVILLARD",
+            "weight": 52.5,
+            "draw": 7
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

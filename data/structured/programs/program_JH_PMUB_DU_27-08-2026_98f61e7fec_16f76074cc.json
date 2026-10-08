@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_27-08-2026_98f61e7fec_16f76074cc.txt",
-    "parsed_at": "2026-10-08T10:35:46.110752Z",
+    "parsed_at": "2026-10-08T23:52:20.167387Z",
     "date": "2026-08-27",
     "race": {
         "race_name": "PRIX DE LA VILLA LUCIE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ZELORO",
-            "description": ""
+            "description": "",
+            "performance": "6.1.4.4.2",
+            "gains": 81789,
+            "sex": "H",
+            "age": 5,
+            "trainer": "P&J.BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "STALL PERLEN AB",
+            "weight": 60.5,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "COLGAN SENORA",
-            "description": ""
+            "description": "",
+            "performance": "9.7.3.1.4",
+            "gains": 67384,
+            "sex": "H",
+            "age": 5,
+            "trainer": "Y.BARBEROT",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "EC. HS. DES SENORA",
+            "weight": 58.5,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "PRESA DIRETTA",
-            "description": ""
+            "description": "",
+            "performance": "3.4.3.0.0",
+            "gains": 137852,
+            "sex": "F",
+            "age": 7,
+            "trainer": "A.CARRA.SANCHEZ",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "CUA. MAZANTINNI",
+            "weight": 57.0,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "SEONA",
-            "description": ""
+            "description": "",
+            "performance": "3.5.4.4.0",
+            "gains": 105839,
+            "sex": "F",
+            "age": 4,
+            "trainer": "FR.MONFORT",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "A.GRAY",
+            "weight": 56.5,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "FEVE",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.0.0",
+            "gains": 82152,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.LEROY",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "EC.MESSICA",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 6,
             "horse": "JUST JIM",
-            "description": ""
+            "description": "",
+            "performance": "3.8.2.4.5",
+            "gains": 41634,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.COUETIL",
+            "jockey": "O.ANDIGNE",
+            "driver": "O.ANDIGNE",
+            "owner": "SC THIERRY PIGEON",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "FEARLESS CHEETAH",
-            "description": ""
+            "description": "",
+            "performance": "0.0.6.1.2",
+            "gains": 97439,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F.BRESSON",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "F.BRESSON",
+            "weight": 55.0,
+            "draw": 8
         },
         {
             "number": 8,
             "horse": "SAINT AQUILIN",
-            "description": ""
+            "description": "",
+            "performance": "5.1.9.4.1",
+            "gains": 120711,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.BRAEM",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "REPRO-ZAMAN",
+            "weight": 55.0,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "HERMES WOOD",
-            "description": ""
+            "description": "",
+            "performance": "0.4.3.4.1",
+            "gains": 78109,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.FEY",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "A.HEYNE",
+            "weight": 55.0,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "DARI RIVER",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.6.0",
+            "gains": 85961,
+            "sex": "F",
+            "age": 5,
+            "trainer": "Y.BARBEROT",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "R.SHEPARD",
+            "weight": 54.5,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "MELBORA",
-            "description": ""
+            "description": "",
+            "performance": "5.2.2.1.0",
+            "gains": 149997,
+            "sex": "F",
+            "age": 6,
+            "trainer": "E.MIKHALIDES",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "SANG.BLOODSTOCK",
+            "weight": 53.5,
+            "draw": 1
         },
         {
             "number": 12,
             "horse": "EAST GREY",
-            "description": ""
+            "description": "",
+            "performance": "3.1.8.0.8",
+            "gains": 37526,
+            "sex": "F",
+            "age": 4,
+            "trainer": "E.LIBAUD",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "L.BARBARIN",
+            "weight": 53.5,
+            "draw": 12
         },
         {
             "number": 13,
             "horse": "STRAKO",
-            "description": ""
+            "description": "",
+            "performance": "8.1.0.1.6",
+            "gains": 131467,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.WATTEL",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "A.WATTEL",
+            "weight": 53.0,
+            "draw": 5
         },
         {
             "number": 14,
             "horse": "RAQEEBB",
-            "description": ""
+            "description": "",
+            "performance": "3.1.2.9.8",
+            "gains": 76670,
+            "sex": "H",
+            "age": 6,
+            "trainer": "E.LIBAUD",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "AJ.DUFFIELD",
+            "weight": 53.0,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "WHEELER",
-            "description": ""
+            "description": "",
+            "performance": "5.2.0.0.1",
+            "gains": 20267,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.KARKOSA",
+            "jockey": "L.BAILS",
+            "driver": "L.BAILS",
+            "owner": "RACING STARS",
+            "weight": 52.5,
+            "draw": 13
         },
         {
             "number": 16,
             "horse": "ALKIDAN",
-            "description": ""
+            "description": "",
+            "performance": "4.3.2.5.6",
+            "gains": 50712,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.SPEICHER",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "EC. NICOLATO",
+            "weight": 51.5,
+            "draw": 11
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             1,

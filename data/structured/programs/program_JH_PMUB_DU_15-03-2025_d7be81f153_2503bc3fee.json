@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_15-03-2025_d7be81f153_2503bc3fee.txt",
-    "parsed_at": "2026-10-08T10:35:44.294275Z",
+    "parsed_at": "2026-10-08T23:52:17.549241Z",
     "date": "2025-03-15",
     "race": {
         "race_name": "PRIX GENERAL DE ROUGEMONT",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "SAINT CRYSTAL",
-            "description": ""
+            "description": "",
+            "performance": "4.1.A",
+            "gains": 23350,
+            "sex": "H",
+            "age": 4,
+            "trainer": "K.NABET",
+            "jockey": "D.BRESSOU",
+            "driver": "D.BRESSOU",
+            "owner": "EC. P. JOUBERT",
+            "weight": 70.0
         },
         {
             "number": 2,
             "horse": "DSCHINGIS VACANDA",
-            "description": ""
+            "description": "",
+            "performance": "2.0.1.1",
+            "gains": 30820,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.DUMOUCH",
+            "jockey": "GAB.LEENDERS",
+            "driver": "GAB.LEENDERS",
+            "owner": "AVATARA S.A.",
+            "weight": 69.5
         },
         {
             "number": 3,
             "horse": "LORENZO DU CHENET",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.3",
+            "gains": 34450,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D.UBEDA",
+            "jockey": "J.B. DE BALANDA",
+            "driver": "J.B. DE BALANDA",
+            "owner": "SEARCHING",
+            "weight": 69.0
         },
         {
             "number": 4,
             "horse": "REVIENT DU LARGE",
-            "description": ""
+            "description": "",
+            "performance": "6.3.5.8.1",
+            "gains": 35525,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.PHILIPPERON",
+            "jockey": "M.ROLLAND",
+            "driver": "M.ROLLAND",
+            "owner": "EC. L. FAGALDE",
+            "weight": 68.0
         },
         {
             "number": 5,
             "horse": "PIQUE DAME",
-            "description": ""
+            "description": "",
+            "performance": "1.2.6",
+            "gains": 27650,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.ZULIANI",
+            "jockey": "AS.PACAULT",
+            "driver": "AS.PACAULT",
+            "owner": "D.LUMET",
+            "weight": 68.0
         },
         {
             "number": 6,
             "horse": "GREY FIGHTER",
-            "description": ""
+            "description": "",
+            "performance": "4.1.3.0.6",
+            "gains": 16800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "B.GELHAY",
+            "jockey": "C.FEY",
+            "driver": "C.FEY",
+            "owner": "E.SAUREN",
+            "weight": 68.0
         },
         {
             "number": 7,
             "horse": "ELEKTRIX",
-            "description": ""
+            "description": "",
+            "performance": "4.A.4.A.1",
+            "gains": 56335,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.ZULIANI",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "CHAUV. GLO. EQUINE",
+            "weight": 67.5
         },
         {
             "number": 8,
             "horse": "AVITCHI",
-            "description": ""
+            "description": "",
+            "performance": "4.2.T.2.1",
+            "gains": 42295,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LELIEVRE",
+            "jockey": "JL.PELLETAN",
+            "driver": "JL.PELLETAN",
+            "owner": "S.PELLETAN",
+            "weight": 67.0
         },
         {
             "number": 9,
             "horse": "LE PETIT CHEVAL",
-            "description": ""
+            "description": "",
+            "performance": "T.1.4.0",
+            "gains": 12670,
+            "sex": "H",
+            "age": 4,
+            "trainer": "B.LE CLERC",
+            "jockey": "F.BELLEMERE",
+            "driver": "F.BELLEMERE",
+            "owner": "G.BLAIN",
+            "weight": 67.0
         },
         {
             "number": 10,
             "horse": "LE ROI LOTH",
-            "description": ""
+            "description": "",
+            "performance": "A.1.5.7.0",
+            "gains": 18230,
+            "sex": "H",
+            "age": 4,
+            "trainer": "J.CHARRON",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "Y.FOUIN",
+            "weight": 66.0
         },
         {
             "number": 11,
             "horse": "CARGO DE NUIT",
-            "description": ""
+            "description": "",
+            "performance": "7.1.3.2.6",
+            "gains": 36035,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.CHESNEAU",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "E.ROUSSEL",
+            "weight": 64.5
         },
         {
             "number": 12,
             "horse": "FATU HIVA",
-            "description": ""
+            "description": "",
+            "performance": "3.4.3.5.1",
+            "gains": 13340,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.BRECHET",
+            "jockey": "D.COTTIN",
+            "driver": "D.COTTIN",
+            "owner": "X.LEBARD",
+            "weight": 64.0
         },
         {
             "number": 13,
             "horse": "LA PAGAILLE",
-            "description": ""
+            "description": "",
+            "performance": "6.5.1",
+            "gains": 13680,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.SERVIER",
+            "jockey": "D.COTTIN",
+            "driver": "D.COTTIN",
+            "owner": "EC. DE MALEISSYE",
+            "weight": 64.0
         },
         {
             "number": 14,
             "horse": "KISSY",
-            "description": ""
+            "description": "",
+            "performance": "5.5.1.3.4",
+            "gains": 47815,
+            "sex": "F",
+            "age": 4,
+            "trainer": "E.BONNET",
+            "jockey": "D.ARTU",
+            "driver": "D.ARTU",
+            "owner": "D.ARTU",
+            "weight": 63.5
         },
         {
             "number": 15,
             "horse": "LOVELY MARIE",
-            "description": ""
+            "description": "",
+            "performance": "8.2.7.5.3",
+            "gains": 6795,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "F.BELLEMERE",
+            "driver": "F.BELLEMERE",
+            "owner": "F.BELLEMERE",
+            "weight": 63.5
         },
         {
             "number": 16,
             "horse": "JADE OR",
-            "description": ""
+            "description": "",
+            "performance": "2.2.5.2.2",
+            "gains": 32030,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.ANDRIEUX",
+            "jockey": "G.MENATO",
+            "driver": "G.MENATO",
+            "owner": "ML.BIFFI",
+            "weight": 63.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_29-09-2023_dfd66a0b78_b2782ceb54.txt",
-    "parsed_at": "2026-10-08T10:35:46.365803Z",
+    "parsed_at": "2026-10-08T23:52:20.544647Z",
     "date": "2023-09-29",
     "race": {
         "race_name": "PRIX AUSTRIA",
@@ -16,69 +16,200 @@
         {
             "number": 1,
             "horse": "GENIALISSIME",
-            "description": ""
+            "description": "",
+            "performance": "6.4.1.2.4",
+            "gains": 87055,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E. DE JESUS",
+            "jockey": "A. DE JESUS",
+            "driver": "A. DE JESUS",
+            "owner": "FABRICE CHARTIER",
+            "listed_chrono": "1.14.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "HURON",
-            "description": ""
+            "description": "",
+            "performance": "8.6.4.6.1",
+            "gains": 87060,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A. LAURENT",
+            "jockey": "A. LAURENT",
+            "driver": "A. LAURENT",
+            "owner": "EC. A. LAURENT",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "HASIR",
-            "description": ""
+            "description": "",
+            "performance": "1.D.4.0.D",
+            "gains": 90405,
+            "sex": "H",
+            "age": 6,
+            "trainer": "L. GARCIA",
+            "jockey": "L. GARCIA",
+            "driver": "L. GARCIA",
+            "owner": "M. BOUNIEUX",
+            "listed_chrono": "1.13.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "FALCO DE BELLANDE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.4.2.5",
+            "gains": 90550,
+            "sex": "H",
+            "age": 8,
+            "trainer": "P.Y. VERVA",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "CLAIRE RAMET",
+            "listed_chrono": "1.14.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "GALANT DE BRUYERE",
-            "description": ""
+            "description": "",
+            "performance": "D.1.1.2.7",
+            "gains": 91095,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E. RAFFIN",
+            "jockey": "Ch. DREUX",
+            "driver": "Ch. DREUX",
+            "owner": "EC. CHARLES DREUX",
+            "listed_chrono": "1.14.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "HUMOUR FESTIF",
-            "description": ""
+            "description": "",
+            "performance": "1.1.D.3.D",
+            "gains": 93585,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L. GARCIA",
+            "driver": "L. GARCIA",
+            "owner": "K. GARCIA",
+            "listed_chrono": "1.13.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "FRENCHY BERRY",
-            "description": ""
+            "description": "",
+            "performance": "5.4.5.5.4",
+            "gains": 94510,
+            "sex": "H",
+            "age": 8,
+            "trainer": "B. ROCHARD",
+            "jockey": "D.M. OLIVIER",
+            "driver": "D.M. OLIVIER",
+            "owner": "CH. DUCHIER",
+            "listed_chrono": "1.14.30",
+            "listed_distance": "2850.M"
         },
         {
             "number": 8,
             "horse": "GADSEM",
-            "description": ""
+            "description": "",
+            "performance": "4.0.7.3.D",
+            "gains": 94830,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. NIVARD",
+            "jockey": "L. LAUDREN",
+            "driver": "L. LAUDREN",
+            "owner": "L. LAUDREN",
+            "listed_chrono": "1.13.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 9,
             "horse": "HOUSTON TUILERIE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.D.D",
+            "gains": 136675,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D. THOMAIN",
+            "jockey": "CL. DESMONTILS",
+            "driver": "CL. DESMONTILS",
+            "owner": "CL. DESMONTILS",
+            "listed_chrono": "1.13.90",
+            "listed_distance": "2875.M"
         },
         {
             "number": 10,
             "horse": "ELVIS MADJI",
-            "description": ""
+            "description": "",
+            "performance": "4.1.1.4.1",
+            "gains": 177310,
+            "sex": "H",
+            "age": 9,
+            "trainer": "Y. LORIN",
+            "jockey": "Y. LORIN",
+            "driver": "Y. LORIN",
+            "owner": "D.CH. DELAUNAY",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 11,
             "horse": "HANNIBAL TUILERIE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.3.2.1",
+            "gains": 178615,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M. ABRIVARD",
+            "jockey": "J. BRUNEAU",
+            "driver": "J. BRUNEAU",
+            "owner": "CH.M. BRUNEAU",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2875.M"
         },
         {
             "number": 12,
             "horse": "HOVE PONT VAUTIER",
-            "description": ""
+            "description": "",
+            "performance": "D.2.3.3.5",
+            "gains": 179200,
+            "sex": "M",
+            "age": 6,
+            "trainer": "F. LAGADEUC",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "EC. LE TREMONT",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2875.M"
         },
         {
             "number": 13,
             "horse": "HAUTAIN",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.4.3",
+            "gains": 180900,
+            "sex": "M",
+            "age": 6,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "V. LEBARQUE",
+            "driver": "V. LEBARQUE",
+            "owner": "EC. CTE P.DE MONTESSON",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2875.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_05-10-2026_054f075f33_7bcf202e82.txt",
-    "parsed_at": "2026-10-08T10:35:46.741726Z",
+    "parsed_at": "2026-10-08T23:52:21.097923Z",
     "date": "2026-10-05",
     "race": {
         "race_name": "PRIX DES BUTTES CHAUMONT",
@@ -16,74 +16,173 @@
         {
             "number": 1,
             "horse": "FABIUS ORS",
-            "description": ""
+            "description": "",
+            "performance": "8.D.3.8.1",
+            "gains": 30596,
+            "trainer": "C. GODARD",
+            "jockey": "E. ALLARD",
+            "driver": "E. ALLARD",
+            "owner": "F. SORRENTINO",
+            "listed_chrono": "1.12.30"
         },
         {
             "number": 2,
             "horse": "FRISEE KB FONT",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.0.D",
+            "gains": 31718,
+            "trainer": "Vitale CIOTOLA",
+            "jockey": "L. BECCHETTI",
+            "driver": "L. BECCHETTI",
+            "owner": "Davide DI SARRA",
+            "listed_chrono": "1.14.20"
         },
         {
             "number": 3,
             "horse": "OLIVER SCHERMER",
-            "description": ""
+            "description": "",
+            "performance": "D.D.0.1.2",
+            "gains": 46411,
+            "trainer": "S. ROUSSELLE",
+            "jockey": "P.PH. PLOQUIN",
+            "driver": "P.PH. PLOQUIN",
+            "owner": "Tord OLSSON",
+            "listed_chrono": "0.00.00"
         },
         {
             "number": 4,
             "horse": "LOOK DE VALAILLES",
-            "description": ""
+            "description": "",
+            "performance": "0.8.D.7.3",
+            "gains": 52492,
+            "trainer": "A. TESSANDIER",
+            "jockey": "F. DESMIGNEUX",
+            "driver": "F. DESMIGNEUX",
+            "owner": "EC. MALVOISIE",
+            "listed_chrono": "1.12.30"
         },
         {
             "number": 5,
             "horse": "SOKRATES",
-            "description": ""
+            "description": "",
+            "performance": "4.1.3.2.6",
+            "gains": 54608,
+            "trainer": "R. GRAMULLER",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "M. LINDINGER",
+            "listed_chrono": "1.11.50"
         },
         {
             "number": 6,
             "horse": "LEAD ME ON",
-            "description": ""
+            "description": "",
+            "performance": "0.0.8.1.1",
+            "gains": 66020,
+            "trainer": "CH. MIRANDEL",
+            "jockey": "M. VERVA",
+            "driver": "M. VERVA",
+            "owner": "Régis GARCIA",
+            "listed_chrono": "1.11.40"
         },
         {
             "number": 7,
             "horse": "LUCIUS DE PUCH",
-            "description": ""
+            "description": "",
+            "performance": "7.0.D.D.1",
+            "gains": 66285,
+            "trainer": "F. CHARTIER",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "Michel CHATELAIN",
+            "listed_chrono": "1.13.70"
         },
         {
             "number": 8,
             "horse": "LORD ON WAY",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.3.1",
+            "gains": 67395,
+            "trainer": "B. MARIE",
+            "jockey": "M. LEGROS",
+            "driver": "M. LEGROS",
+            "owner": "EC. INITIAL",
+            "listed_chrono": "1.13.10"
         },
         {
             "number": 9,
             "horse": "BLACK HEUVELLAND",
-            "description": ""
+            "description": "",
+            "performance": "2.2.3.3.D",
+            "gains": 67592,
+            "trainer": "W. NIMCZYK",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "Hermann LEHNER",
+            "listed_chrono": "1.12.80"
         },
         {
             "number": 10,
             "horse": "LORD SUN DRALIAM",
-            "description": ""
+            "description": "",
+            "performance": "0.3.D.D.4",
+            "gains": 68150,
+            "trainer": "M. HELBERT",
+            "jockey": "A. ANDRE",
+            "driver": "A. ANDRE",
+            "owner": "P.R. MAILLARD",
+            "listed_chrono": "1.13.40"
         },
         {
             "number": 11,
             "horse": "LONGWOOD D'HERIPRE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.0.1",
+            "gains": 69650,
+            "trainer": "R. DERIEUX",
+            "jockey": "R. DERIEUX",
+            "driver": "R. DERIEUX",
+            "owner": "EC.d' HERIPRE",
+            "listed_chrono": "1.13.80"
         },
         {
             "number": 12,
             "horse": "TAURUS CROWN",
-            "description": ""
+            "description": "",
+            "performance": "2.4.3.0.8",
+            "gains": 70987,
+            "trainer": "L. CHARBONNEL",
+            "jockey": "E. RAFFIN",
+            "driver": "E. RAFFIN",
+            "owner": "Stephen FARRUGIA",
+            "listed_chrono": "1.11.80"
         },
         {
             "number": 13,
             "horse": "L'AS DES ISLES",
-            "description": ""
+            "description": "",
+            "performance": "1.2.0.0.3",
+            "gains": 71625,
+            "trainer": "S. BOURLIER",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "EC.Stép.BOURLIER",
+            "listed_chrono": "1.14.00"
         },
         {
             "number": 14,
             "horse": "L'INTOUCHABLE",
-            "description": ""
+            "description": "",
+            "performance": "D.0.8.5.5",
+            "gains": 71655,
+            "trainer": "TANGUY DEVOUASSOUX",
+            "jockey": "T.DEVOUASSOUX",
+            "driver": "T.DEVOUASSOUX",
+            "owner": "F. CLAVET",
+            "listed_chrono": "1.11.30"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

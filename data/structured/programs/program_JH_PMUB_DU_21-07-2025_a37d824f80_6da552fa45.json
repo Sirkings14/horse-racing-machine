@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_21-07-2025_a37d824f80_6da552fa45.txt",
-    "parsed_at": "2026-10-08T10:35:45.238497Z",
+    "parsed_at": "2026-10-08T23:52:18.912588Z",
     "date": "2025-07-21",
     "race": {
         "race_name": "PRIX DU CHATEAU DE PIERREFONDS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ALVA",
-            "description": ""
+            "description": "",
+            "performance": "2.1.5.5.6",
+            "gains": 108890,
+            "sex": "F",
+            "age": 5,
+            "trainer": "F.CHAPPET",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "A.GILIBERT",
+            "weight": 60.0,
+            "draw": 5
         },
         {
             "number": 2,
             "horse": "AGORIA",
-            "description": ""
+            "description": "",
+            "performance": "0.0.4.4.1",
+            "gains": 64280,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.FERLAND",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "H. STUD",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "SALALAH",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.4.4",
+            "gains": 83050,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.ANDREU",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "R.FOUQUET",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "LA MANDALA",
-            "description": ""
+            "description": "",
+            "performance": "1.8.0.8.5",
+            "gains": 48600,
+            "sex": "F",
+            "age": 4,
+            "trainer": "V.HEAD",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "F.HEAD",
+            "weight": 60.0,
+            "draw": 14
         },
         {
             "number": 5,
             "horse": "ALABAMA MOON",
-            "description": ""
+            "description": "",
+            "performance": "3.3.2.0.8",
+            "gains": 77710,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H.BLUME",
+            "jockey": "B.MARIE",
+            "driver": "B.MARIE",
+            "owner": "STL MACA-RONNI",
+            "weight": 58.5,
+            "draw": 9
         },
         {
             "number": 6,
             "horse": "ETEL DU NINIAN",
-            "description": ""
+            "description": "",
+            "performance": "5.8.8.0.0",
+            "gains": 104810,
+            "sex": "F",
+            "age": 7,
+            "trainer": "C.GUYON",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "C.GUYON",
+            "weight": 58.0,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "GUALDA",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.2.8",
+            "gains": 63450,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARATTI",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "N. PRODUCCIONES",
+            "weight": 57.5,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "AVERSA",
-            "description": ""
+            "description": "",
+            "performance": "0.4.6.6.4",
+            "gains": 145370,
+            "sex": "F",
+            "age": 5,
+            "trainer": "N.CAULLERY",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "JP.VANDEN HEEDE",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "TRUE VALUE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.1.9.0",
+            "gains": 91715,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.BARANDE BARBE",
+            "jockey": "M.MICHEL",
+            "driver": "M.MICHEL",
+            "owner": "C.BARANDE BARBE",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 10,
             "horse": "MODERN LIGHT",
-            "description": ""
+            "description": "",
+            "performance": "9.7.7.5.4",
+            "gains": 46515,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "J.MOUTARD",
+            "driver": "J.MOUTARD",
+            "owner": "SM.SMITH",
+            "weight": 57.0,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "MISS OXFORD",
-            "description": ""
+            "description": "",
+            "performance": "3.0.0.0.1",
+            "gains": 16341,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.KOBAYASHI",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "S.NOMURA",
+            "weight": 56.5,
+            "draw": 1
         },
         {
             "number": 12,
             "horse": "NOVA HOPE",
-            "description": ""
+            "description": "",
+            "performance": "8.1.0.1.1",
+            "gains": 39190,
+            "sex": "F",
+            "age": 4,
+            "trainer": "P&J.BRANDT",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "A.MOUKNASS",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 13,
             "horse": "MIELA",
-            "description": ""
+            "description": "",
+            "performance": "0.9.0.7.1",
+            "gains": 29360,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.SUBORICS",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "LEO HAMANN",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "BATESCA",
-            "description": ""
+            "description": "",
+            "performance": "1.6.0.3.2",
+            "gains": 54480,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.FOUASSIER",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "M.GHYS",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 15,
             "horse": "MANAROLA",
-            "description": ""
+            "description": "",
+            "performance": "7.5.0.4.6",
+            "gains": 155888,
+            "sex": "F",
+            "age": 8,
+            "trainer": "P.SIGAUD",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "P.SIGAUD",
+            "weight": 55.0,
+            "draw": 2
         },
         {
             "number": 16,
             "horse": "BLUE EYED KATE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.7.1.0",
+            "gains": 22520,
+            "sex": "F",
+            "age": 4,
+            "trainer": "I.ENDALTSEV",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "E.MELNYK",
+            "weight": 54.0,
+            "draw": 8
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             1,

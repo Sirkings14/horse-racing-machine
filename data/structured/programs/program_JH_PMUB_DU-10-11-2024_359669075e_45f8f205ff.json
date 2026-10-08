@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-10-11-2024_359669075e_45f8f205ff.txt",
-    "parsed_at": "2026-10-08T10:35:40.495382Z",
+    "parsed_at": "2026-10-08T23:52:12.175990Z",
     "date": "2024-11-10",
     "race": {
         "race_name": "PRIX DES BOUCLES DE LA SEINE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GALORD",
-            "description": ""
+            "description": "",
+            "performance": "6.1.6.1.2",
+            "gains": 129630,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "C.FEY",
+            "driver": "C.FEY",
+            "owner": "E.DECOSTER",
+            "weight": 61.0,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "SHORT FINAL",
-            "description": ""
+            "description": "",
+            "performance": "2.5.7.2.3",
+            "gains": 100230,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.GROSSO",
+            "jockey": "S.KOBAYASHI",
+            "driver": "S.KOBAYASHI",
+            "owner": "S.ALLOUCHE",
+            "weight": 59.5,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "AMEDRAS",
-            "description": ""
+            "description": "",
+            "performance": "3.6.9.5.5",
+            "gains": 230650,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.EON",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DRIDI",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 4,
             "horse": "HALF HALF",
-            "description": ""
+            "description": "",
+            "performance": "8.0.5.5.6",
+            "gains": 107883,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "M.FOUGY-SMAGA",
+            "weight": 59.5,
+            "draw": 14
         },
         {
             "number": 5,
             "horse": "TIGRR",
-            "description": ""
+            "description": "",
+            "performance": "6.4.4.6.3",
+            "gains": 174350,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "P.GROUALLE",
+            "driver": "P.GROUALLE",
+            "owner": "GOUSSERIE RACING",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "TUMBLER",
-            "description": ""
+            "description": "",
+            "performance": "2.0.5.2.4",
+            "gains": 96570,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "SCEA HS DES FORETS",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "PANDIA SELENE",
-            "description": ""
+            "description": "",
+            "performance": "0.2.1.8.0",
+            "gains": 99300,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "S.EGLOFF",
+            "weight": 56.0,
+            "draw": 4
         },
         {
             "number": 8,
             "horse": "JOH SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "1.3.5.8.5",
+            "gains": 85900,
+            "sex": "F",
+            "age": 5,
+            "trainer": "R.THOMAS",
+            "jockey": "P.SIGAUD",
+            "driver": "P.SIGAUD",
+            "owner": "P.SIGAUD",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 9,
             "horse": "AVENUE MONTAIGNE",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.2.3",
+            "gains": 54200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "GEMINI STUD",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 10,
             "horse": "BENIMARU",
-            "description": ""
+            "description": "",
+            "performance": "1.2.0.6.0",
+            "gains": 33900,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "S.PENOT",
+            "driver": "S.PENOT",
+            "owner": "CHAMALLOUIS SARL",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 11,
             "horse": "DIVINE CHRISNAT",
-            "description": ""
+            "description": "",
+            "performance": "3.8.4.6.1",
+            "gains": 68790,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R.PEHU",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "M.PEHU",
+            "weight": 55.0,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "MARZOUK",
-            "description": ""
+            "description": "",
+            "performance": "1.0.4.5.6",
+            "gains": 55700,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "F.BINGHESHAYAN",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "LORD SINCLAIR",
-            "description": ""
+            "description": "",
+            "performance": "6.1.4.5.3",
+            "gains": 30700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "F&O HINDERZE RACING",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "LA PELEMOISE",
-            "description": ""
+            "description": "",
+            "performance": "3.5.5.3.1",
+            "gains": 59450,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C.GROSBOIS",
+            "jockey": "G.JUILLET",
+            "driver": "G.JUILLET",
+            "owner": "J.JUILLET",
+            "weight": 54.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "PURPLE MOOD",
-            "description": ""
+            "description": "",
+            "performance": "9.8.3.1.7",
+            "gains": 51700,
+            "sex": "H",
+            "age": 3,
+            "trainer": "J.MARIEN",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "M.VIDIC",
+            "weight": 54.0,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "CONTENTIOUS SOUL",
-            "description": ""
+            "description": "",
+            "performance": "4.2.6.6.0",
+            "gains": 33950,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "P. DE CHEVIGNY",
+            "driver": "P. DE CHEVIGNY",
+            "owner": "I.CORBANI",
+            "weight": 54.0,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

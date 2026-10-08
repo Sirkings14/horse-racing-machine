@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-19-08-2024_9cb1deadcf_9682b57922.txt",
-    "parsed_at": "2026-10-08T10:35:41.291629Z",
+    "parsed_at": "2026-10-08T23:52:13.305101Z",
     "date": "2024-08-19",
     "race": {
         "race_name": "GRAND STEEPLE-CHASE DE LA VILLE DE DEAUVILLE",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "BOOSTER DU BERLAIS",
-            "description": ""
+            "description": "",
+            "performance": "1.6.1.1.T",
+            "gains": 60300,
+            "sex": "H",
+            "age": 6,
+            "trainer": "K.DUBOURG",
+            "jockey": "LAGENESTE & MACAIRE",
+            "driver": "LAGENESTE & MACAIRE",
+            "owner": "EC. HUGO ET PIERRE PIL",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "CHARMINO",
-            "description": ""
+            "description": "",
+            "performance": "3.4.5.A.2",
+            "gains": 218663,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M.CHAILLOLEAU",
+            "jockey": "P&C.PELTIER",
+            "driver": "P&C.PELTIER",
+            "owner": "X. HUET/PH. & C. PELTIER",
+            "weight": 71.5
         },
         {
             "number": 3,
             "horse": "MASTER NONANTAIS",
-            "description": ""
+            "description": "",
+            "performance": "2.1.5.0.6",
+            "gains": 201760,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.LEFEBVRE",
+            "jockey": "SOURD. DE BEAUREGARD",
+            "driver": "SOURD. DE BEAUREGARD",
+            "owner": "SA.BRAMALL",
+            "weight": 70.5
         },
         {
             "number": 4,
             "horse": "ECOUTE EN TETE",
-            "description": ""
+            "description": "",
+            "performance": "4.7.3.8.4",
+            "gains": 246160,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J.REVELEY",
+            "jockey": "P&C.PELTIER",
+            "driver": "P&C.PELTIER",
+            "owner": "ELEVAGE DES VALLONS",
+            "weight": 70.5
         },
         {
             "number": 5,
             "horse": "FORTUNES MELODY",
-            "description": ""
+            "description": "",
+            "performance": "4.2.4.2.5",
+            "gains": 296248,
+            "sex": "F",
+            "age": 7,
+            "trainer": "B.FROST",
+            "jockey": "D.BRESSOU",
+            "driver": "D.BRESSOU",
+            "owner": "S.MUNIR",
+            "weight": 70.5
         },
         {
             "number": 6,
             "horse": "GALOPIN DE BALME",
-            "description": ""
+            "description": "",
+            "performance": "6.4.0.8.1",
+            "gains": 171163,
+            "sex": "H",
+            "age": 8,
+            "trainer": "T.BEAURAIN",
+            "jockey": "P.LEBLANC",
+            "driver": "P.LEBLANC",
+            "owner": "A.DUPIL-HOLMEY",
+            "weight": 70.5
         },
         {
             "number": 7,
             "horse": "HARMONIE D'AINAY",
-            "description": ""
+            "description": "",
+            "performance": "1.4.7.T.1",
+            "gains": 111075,
+            "sex": "F",
+            "age": 7,
+            "trainer": "L.BRECHET",
+            "jockey": "GAB.LEENDERS",
+            "driver": "GAB.LEENDERS",
+            "owner": "EARL ELEVAGE D'AINAY",
+            "weight": 70.0
         },
         {
             "number": 8,
             "horse": "HERALISTE",
-            "description": ""
+            "description": "",
+            "performance": "3.7.1.1.6",
+            "gains": 127280,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G.MASURE",
+            "jockey": "A.CHAILLE-CHAILLE",
+            "driver": "A.CHAILLE-CHAILLE",
+            "owner": "G.JOULIE",
+            "weight": 70.0
         },
         {
             "number": 9,
             "horse": "MUHTALAD",
-            "description": ""
+            "description": "",
+            "performance": "2.A.1.2.1",
+            "gains": 134058,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.PRICHARD",
+            "jockey": "P.JOURNIAC",
+            "driver": "P.JOURNIAC",
+            "owner": "P.JOURNIAC",
+            "weight": 68.0
         },
         {
             "number": 10,
             "horse": "FLASH DAVIER",
-            "description": ""
+            "description": "",
+            "performance": "5.A.4.2.7",
+            "gains": 235585,
+            "sex": "F",
+            "age": 6,
+            "trainer": "B.LESTRADE",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "A.CLAVIER",
+            "weight": 68.0
         },
         {
             "number": 11,
             "horse": "KERIDA",
-            "description": ""
+            "description": "",
+            "performance": "3.2.6.4.T",
+            "gains": 31290,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.RUIZ GONZALEZ",
+            "jockey": "D.COTTIN",
+            "driver": "D.COTTIN",
+            "owner": "JPJ .DUBOIS",
+            "weight": 66.5
         },
         {
             "number": 12,
             "horse": "GOLDEN PARK",
-            "description": ""
+            "description": "",
+            "performance": "0.2.3.8.5",
+            "gains": 346119,
+            "sex": "F",
+            "age": 8,
+            "trainer": "A.ZULIANI",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "G.SEROR",
+            "weight": 66.0
         },
         {
             "number": 13,
             "horse": "HEROINE SMART",
-            "description": ""
+            "description": "",
+            "performance": "2.1.2.3.1",
+            "gains": 105475,
+            "sex": "F",
+            "age": 7,
+            "trainer": "T.CHEVILLARD",
+            "jockey": "N.PAYSAN",
+            "driver": "N.PAYSAN",
+            "owner": "D.HUYCK/E.LERAY",
+            "weight": 63.5
         },
         {
             "number": 14,
             "horse": "SPES ENERGICALL",
-            "description": ""
+            "description": "",
+            "performance": "6.2.A.6.4",
+            "gains": 136333,
+            "sex": "F",
+            "age": 7,
+            "trainer": "K.NABET",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "S.SUTTON",
+            "weight": 62.0
         },
         {
             "number": 15,
             "horse": "ZAPOROGUE",
-            "description": ""
+            "description": "",
+            "performance": "3.5.3.2.9",
+            "gains": 68600,
+            "sex": "H",
+            "age": 9,
+            "trainer": "L.BEAUBOIS",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "X.KEPA",
+            "weight": 62.0
         },
         {
             "number": 16,
             "horse": "BAT DRIM",
-            "description": ""
+            "description": "",
+            "performance": "6.7.J.8.0",
+            "gains": 43280,
+            "sex": "H",
+            "age": 6,
+            "trainer": "L.VANDAMME",
+            "jockey": "P.LEBLANC",
+            "driver": "P.LEBLANC",
+            "owner": "P.LEBLANC",
+            "weight": 62.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-28-04-2024_87dbd4291c_0b954bfbdb.txt",
-    "parsed_at": "2026-10-08T10:35:42.186062Z",
+    "parsed_at": "2026-10-08T23:52:14.582562Z",
     "date": "2024-04-28",
     "race": {
         "race_name": "PRIX DE CHEVILLY",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "AMEDRAS",
-            "description": ""
+            "description": "",
+            "performance": "8.1.2.6.8",
+            "gains": 221040,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.DEMURO",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DRIDI",
+            "weight": 60.5,
+            "draw": 16
         },
         {
             "number": 2,
             "horse": "KENDLY",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4.4.9",
+            "gains": 85460,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.MANGIONE",
+            "jockey": "P.SOGORB",
+            "driver": "P.SOGORB",
+            "owner": "G. AU.NORMAND",
+            "weight": 60.5,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "PEDRITO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.3.5.9",
+            "gains": 160530,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HA.PANTALL",
+            "weight": 58.0,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "APAX",
-            "description": ""
+            "description": "",
+            "performance": "9.6.3.7.2",
+            "gains": 87890,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "M.NIGGE",
+            "driver": "M.NIGGE",
+            "owner": "L.BONGEN",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "IZASTEP",
-            "description": ""
+            "description": "",
+            "performance": "5.1.7.7.2",
+            "gains": 78200,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "JC.SEROUL",
+            "weight": 57.5,
+            "draw": 8
         },
         {
             "number": 6,
             "horse": "BAILEYS BLUES",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.7.1",
+            "gains": 150215,
+            "sex": "H",
+            "age": 7,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "JV.TOUX",
+            "driver": "JV.TOUX",
+            "owner": "F.H. NASH LTD",
+            "weight": 57.5,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "TORPEN",
-            "description": ""
+            "description": "",
+            "performance": "9.8.6.1.0",
+            "gains": 270730,
+            "sex": "H",
+            "age": 7,
+            "trainer": "H.BESNIER",
+            "jockey": "R.SCHOOF",
+            "driver": "R.SCHOOF",
+            "owner": "R.SCHOOF",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 8,
             "horse": "ETATIQUE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.4.0.7",
+            "gains": 134690,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "A.WATRIGANT",
+            "driver": "A.WATRIGANT",
+            "owner": "J.SUZAN",
+            "weight": 56.0,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "ROYAL SHAKE",
-            "description": ""
+            "description": "",
+            "performance": "6.6.7.7.1",
+            "gains": 45100,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "ROY RACING LTD",
+            "weight": 56.0,
+            "draw": 1
         },
         {
             "number": 10,
             "horse": "WHITE PLATIN",
-            "description": ""
+            "description": "",
+            "performance": "6.2.0.4.3",
+            "gains": 152138,
+            "sex": "H",
+            "age": 6,
+            "trainer": "R.THOMAS",
+            "jockey": "C.BARANDE BARBE",
+            "driver": "C.BARANDE BARBE",
+            "owner": "D.SIEGENTHALER",
+            "weight": 55.0,
+            "draw": 15
         },
         {
             "number": 11,
             "horse": "TUMBLER",
-            "description": ""
+            "description": "",
+            "performance": "8.7.2.8.4",
+            "gains": 58410,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.TRULLIER",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "L.GRUSON",
+            "weight": 55.0,
+            "draw": 3
         },
         {
             "number": 12,
             "horse": "TIMES BOULEVARD",
-            "description": ""
+            "description": "",
+            "performance": "7.3.1",
+            "gains": 21000,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "A.BELSHAW",
+            "weight": 54.5,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "GALIK",
-            "description": ""
+            "description": "",
+            "performance": "0.1.2.3.9",
+            "gains": 105300,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.SANTIAGO",
+            "jockey": "J.GRASSICK",
+            "driver": "J.GRASSICK",
+            "owner": "J.GRASSICK",
+            "weight": 54.0,
+            "draw": 2
         },
         {
             "number": 14,
             "horse": "FREJA",
-            "description": ""
+            "description": "",
+            "performance": "5.2.8.2.2",
+            "gains": 72520,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 53.5,
+            "draw": 7
         },
         {
             "number": 15,
             "horse": "ETEL DU NINIAN",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.0.1",
+            "gains": 72700,
+            "sex": "F",
+            "age": 6,
+            "trainer": "H.LEBOUC",
+            "jockey": "C.GUYON",
+            "driver": "C.GUYON",
+            "owner": "C.GUYON",
+            "weight": 53.5,
+            "draw": 6
         },
         {
             "number": 16,
             "horse": "MURCIANO",
-            "description": ""
+            "description": "",
+            "performance": "9.5.1.2.3",
+            "gains": 55370,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "N.LE ROCH",
+            "driver": "N.LE ROCH",
+            "owner": "HS D'ETREHAM",
+            "weight": 52.5,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

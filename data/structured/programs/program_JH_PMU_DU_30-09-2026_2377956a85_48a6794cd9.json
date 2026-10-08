@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_30-09-2026_2377956a85_48a6794cd9.txt",
-    "parsed_at": "2026-10-08T10:35:47.087946Z",
+    "parsed_at": "2026-10-08T23:52:21.593256Z",
     "date": "2026-09-30",
     "race": {
         "race_name": "GRAND PRIX ANJOU-MAINE",
@@ -16,79 +16,185 @@
         {
             "number": 1,
             "horse": "LIGHT MY FIRE",
-            "description": ""
+            "description": "",
+            "performance": "D.7.0.3.3",
+            "gains": 317955,
+            "trainer": "S. GUARATO",
+            "jockey": "A. GUARATO",
+            "driver": "A. GUARATO",
+            "owner": "EC. ELAG",
+            "listed_chrono": "1.09.80"
         },
         {
             "number": 2,
             "horse": "KAMEHAMEHA",
-            "description": ""
+            "description": "",
+            "performance": "D.7.3.8.5",
+            "gains": 364000,
+            "trainer": "A. LHERETE",
+            "jockey": "A. LHERETE",
+            "driver": "A. LHERETE",
+            "owner": "Ec. ELEVAGE JC",
+            "listed_chrono": "1.11.00"
         },
         {
             "number": 3,
             "horse": "RIKITA JP",
-            "description": ""
+            "description": "",
+            "performance": "D.8.D.3.1",
+            "gains": 405723,
+            "trainer": "J. ROBERT",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "S. ROBERT",
+            "listed_chrono": "1.08.40"
         },
         {
             "number": 4,
             "horse": "HURRICANE CARTER",
-            "description": ""
+            "description": "",
+            "performance": "0.2.D.7.3",
+            "gains": 446120,
+            "trainer": "S. RAIMOND",
+            "jockey": "Y. LEBOURGEOIS",
+            "driver": "Y. LEBOURGEOIS",
+            "owner": "S. RAIMOND",
+            "listed_chrono": "1.09.7"
         },
         {
             "number": 5,
             "horse": "JILORD VIVA",
-            "description": ""
+            "description": "",
+            "performance": "1.9.3.3.5",
+            "gains": 459350,
+            "trainer": "J. RAFFESTIN",
+            "jockey": "E. RAFFIN",
+            "driver": "E. RAFFIN",
+            "owner": "P. VIEL",
+            "listed_chrono": "1.10.50"
         },
         {
             "number": 6,
             "horse": "INVICTUS MADIBA",
-            "description": ""
+            "description": "",
+            "performance": "2.3.0.4.4",
+            "gains": 481687,
+            "trainer": "CH.A. MARY",
+            "jockey": "D. BONNE",
+            "driver": "D. BONNE",
+            "owner": "EC. ELAG",
+            "listed_chrono": "1.09.30"
         },
         {
             "number": 7,
             "horse": "L'AS DESBOIS",
-            "description": ""
+            "description": "",
+            "performance": "3.3.0.2.3",
+            "gains": 484565,
+            "trainer": "W. BIGEON",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "J. SECHE",
+            "listed_chrono": "1.10.40"
         },
         {
             "number": 8,
             "horse": "HORATIUS D'ELA",
-            "description": ""
+            "description": "",
+            "performance": "8.8.2.7.5",
+            "gains": 487855,
+            "trainer": "M. SASSIER",
+            "jockey": "A. GENDROT",
+            "driver": "A. GENDROT",
+            "owner": "E. PIERRE",
+            "listed_chrono": "1.10.70"
         },
         {
             "number": 9,
             "horse": "IBISCUS MAN",
-            "description": ""
+            "description": "",
+            "performance": "D.8.1.0.3",
+            "gains": 494990,
+            "trainer": "R.CH. LARUE",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "D. LARUE",
+            "listed_chrono": "1.09.50"
         },
         {
             "number": 10,
             "horse": "GENDREEN",
-            "description": ""
+            "description": "",
+            "performance": "6.4.9.9.D",
+            "gains": 619940,
+            "trainer": "J. GRUMETZ",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "PH. GRUMETZ",
+            "listed_chrono": "1.10.60"
         },
         {
             "number": 11,
             "horse": "HANNIBAL TUILERIE",
-            "description": ""
+            "description": "",
+            "performance": "6.1.9.3.6",
+            "gains": 652005,
+            "trainer": "CH.M. BRUNEAU",
+            "jockey": "J. BRUNEAU",
+            "driver": "J. BRUNEAU",
+            "owner": "EC. BRUNEAU",
+            "listed_chrono": "1.11.30"
         },
         {
             "number": 12,
             "horse": "JABALPUR",
-            "description": ""
+            "description": "",
+            "performance": "9.6.9.2.5",
+            "gains": 662380,
+            "trainer": "A. CHAVATTE",
+            "jockey": "A.A. CHAVATTE",
+            "driver": "A.A. CHAVATTE",
+            "owner": "TRAMONTOM SRL",
+            "listed_chrono": "1.08.70"
         },
         {
             "number": 13,
             "horse": "HARLEY GEMA",
-            "description": ""
+            "description": "",
+            "performance": "5.6.4.3.7",
+            "gains": 708627,
+            "trainer": "M. SASSIER",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "EC. Marc SASSIER",
+            "listed_chrono": "1.08.90"
         },
         {
             "number": 14,
             "horse": "IDEAL LIGNERIES",
-            "description": ""
+            "description": "",
+            "performance": "2.2.7.7.2",
+            "gains": 857291,
+            "trainer": "J.PH. MONCLIN",
+            "jockey": "A. BARRIER",
+            "driver": "A. BARRIER",
+            "owner": "R. WIT. SPORTMANAG. E.K.",
+            "listed_chrono": "1.08.90"
         },
         {
             "number": 15,
             "horse": "INMAROSA",
-            "description": ""
+            "description": "",
+            "performance": "6.4.8.4.8",
+            "gains": 1191777,
+            "trainer": "L.CL. ABRIVARD",
+            "jockey": "LEO ABRIVARD",
+            "driver": "LEO ABRIVARD",
+            "owner": "J. COTTEL",
+            "listed_chrono": "1.08.40"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             7,

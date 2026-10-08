@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-26-02-2024_a48f44f79c_d70055a663.txt",
-    "parsed_at": "2026-10-08T10:35:41.969251Z",
+    "parsed_at": "2026-10-08T23:52:14.291245Z",
     "date": "2024-02-26",
     "race": {
         "race_name": "PRIX JACQUES GELIOT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "AMEDRAS",
-            "description": ""
+            "description": "",
+            "performance": "2.6.8.5.3",
+            "gains": 194540,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.DEMURO",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DRIDI",
+            "weight": 60.5,
+            "draw": 10
         },
         {
             "number": 2,
             "horse": "KHAMMA",
-            "description": ""
+            "description": "",
+            "performance": "1.0.4.3.3",
+            "gains": 148600,
+            "sex": "F",
+            "age": 5,
+            "trainer": "T.BACHELOT",
+            "jockey": "M.SCANDELLA-LACAILLE",
+            "driver": "M.SCANDELLA-LACAILLE",
+            "owner": "M.ARCH",
+            "weight": 60.0,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "BEMER",
-            "description": ""
+            "description": "",
+            "performance": "0.4.7.2.8",
+            "gains": 82950,
+            "sex": "M",
+            "age": 5,
+            "trainer": "H.BOUTIN",
+            "jockey": "A.SUBORICS",
+            "driver": "A.SUBORICS",
+            "owner": "AVATARA S.A.",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 4,
             "horse": "IT'S CHICO TIME",
-            "description": ""
+            "description": "",
+            "performance": "5.2.6.0.3",
+            "gains": 87105,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.BESNIER",
+            "jockey": "TJ.MARTINS NOVAIS",
+            "driver": "TJ.MARTINS NOVAIS",
+            "owner": "JM.PEREZ ARMAS",
+            "weight": 58.5,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "VILLAGE ANGLAIS",
-            "description": ""
+            "description": "",
+            "performance": "3.6.1.4.1",
+            "gains": 38910,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.ORANI",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "JC.SEROUL",
+            "weight": 57.5,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "PEACE WARRIOR",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.5.0",
+            "gains": 45525,
+            "sex": "M",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "R.COSTA-AGUILAR",
+            "driver": "R.COSTA-AGUILAR",
+            "owner": "R.COSTA-AGUILAR",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "ROSANNE DU GOUET",
-            "description": ""
+            "description": "",
+            "performance": "6.3.0.7.1",
+            "gains": 38780,
+            "sex": "F",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "AS.CROMBEZ",
+            "driver": "AS.CROMBEZ",
+            "owner": "J.COUVERCELLE",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "PASSALITO",
-            "description": ""
+            "description": "",
+            "performance": "1.4.7.9.4",
+            "gains": 122985,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M.EON",
+            "jockey": "S.GAVILAN",
+            "driver": "S.GAVILAN",
+            "owner": "L.DAVEIRA",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "GIFT OF THE G",
-            "description": ""
+            "description": "",
+            "performance": "7.1.5.8.8",
+            "gains": 119920,
+            "sex": "H",
+            "age": 6,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "J.SOUBAGNE",
+            "driver": "J.SOUBAGNE",
+            "owner": "X.SALLES",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 10,
             "horse": "BLUFF",
-            "description": ""
+            "description": "",
+            "performance": "5.0.8.1.0",
+            "gains": 38410,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.RUIS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "G.RASSEMI",
+            "weight": 55.0,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "WIND OF CHANGE",
-            "description": ""
+            "description": "",
+            "performance": "3.2.0.2.6",
+            "gains": 131350,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "J.PARIZE",
+            "driver": "J.PARIZE",
+            "owner": "P.WALTER",
+            "weight": 54.5,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "MANAROLA",
-            "description": ""
+            "description": "",
+            "performance": "5.4.4.1.8",
+            "gains": 114295,
+            "sex": "F",
+            "age": 7,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.SIGAUD",
+            "driver": "P.SIGAUD",
+            "owner": "P.SIGAUD",
+            "weight": 54.0,
+            "draw": 13
         },
         {
             "number": 13,
             "horse": "TILL WE DIE",
-            "description": ""
+            "description": "",
+            "performance": "0.6.9.0.1",
+            "gains": 118810,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C.PACAUT",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "N.RICIGNUOLO",
+            "weight": 54.0,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "MR CASSIOPE",
-            "description": ""
+            "description": "",
+            "performance": "6.5.9.9.5",
+            "gains": 54830,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "M.BIOTTEAU",
+            "weight": 54.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "SASSICA",
-            "description": ""
+            "description": "",
+            "performance": "4.0.5.7.3",
+            "gains": 61680,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "A.SUBORICS",
+            "driver": "A.SUBORICS",
+            "owner": "RENNS. NEUENHAGEN",
+            "weight": 54.0,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "RISING UP",
-            "description": ""
+            "description": "",
+            "performance": "5.0.0.6.3",
+            "gains": 85540,
+            "sex": "M",
+            "age": 4,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "B.GOUDOT",
+            "driver": "B.GOUDOT",
+            "owner": "JP.VANDEN HEEDE",
+            "weight": 53.5,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             1,

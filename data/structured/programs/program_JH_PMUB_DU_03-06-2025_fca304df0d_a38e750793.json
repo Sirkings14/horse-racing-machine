@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_03-06-2025_fca304df0d_a38e750793.txt",
-    "parsed_at": "2026-10-08T10:35:42.848068Z",
+    "parsed_at": "2026-10-08T23:52:15.498161Z",
     "date": "2025-06-01",
     "race": {
         "race_name": null,
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "LORENZO DE MEDICI",
-            "description": ""
+            "description": "",
+            "performance": "2.6.4.1.3",
+            "gains": 110870,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.FOUASSIER",
+            "jockey": "F.LEFEBVRE",
+            "driver": "F.LEFEBVRE",
+            "owner": "D.HUYCK",
+            "weight": 60.0,
+            "draw": 8
         },
         {
             "number": 2,
             "horse": "WIT PERD",
-            "description": ""
+            "description": "",
+            "performance": "0.7.0.2.4",
+            "gains": 35800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "N.CAULLERY",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "EC. TREIZE HEUREUX",
+            "weight": 60.0,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "LA TEMPLIERE",
-            "description": ""
+            "description": "",
+            "performance": "0.7.6.5.1",
+            "gains": 118810,
+            "sex": "F",
+            "age": 7,
+            "trainer": "M.DELZANGLES",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "F.PERREE",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "FREEZE",
-            "description": ""
+            "description": "",
+            "performance": "6.9.7.5.1",
+            "gains": 34360,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.BLUME",
+            "jockey": "B.MARIE",
+            "driver": "B.MARIE",
+            "owner": "ST. LIFE STYLE",
+            "weight": 60.0,
+            "draw": 1
         },
         {
             "number": 5,
             "horse": "CIRCEO",
-            "description": ""
+            "description": "",
+            "performance": "8.0.4.6.0",
+            "gains": 53435,
+            "sex": "M",
+            "age": 5,
+            "trainer": "J.SOUDAN",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "L.CACCIALUPI",
+            "weight": 60.0,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "SAPRISTI",
-            "description": ""
+            "description": "",
+            "performance": "2.2.0.3.1",
+            "gains": 57480,
+            "sex": "M",
+            "age": 5,
+            "trainer": "N.CAULLERY",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "GEST INVEST CAPITAL",
+            "weight": 59.5,
+            "draw": 2
         },
         {
             "number": 7,
             "horse": "TREATWOOD",
-            "description": ""
+            "description": "",
+            "performance": "6.6.5.5.7",
+            "gains": 50490,
+            "sex": "H",
+            "age": 5,
+            "trainer": "N.BELLANGER",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "HS DE LA HUDERIE",
+            "weight": 59.5,
+            "draw": 6
         },
         {
             "number": 8,
             "horse": "ZELZARI",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.7.8",
+            "gains": 12800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D.MELE",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "IKARUSRACING",
+            "weight": 59.5,
+            "draw": 11
         },
         {
             "number": 9,
             "horse": "MISS WHITE SOCKS",
-            "description": ""
+            "description": "",
+            "performance": "7.8.3.1.2",
+            "gains": 47950,
+            "sex": "F",
+            "age": 5,
+            "trainer": "D.ARTU",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "V.JUD-FREI",
+            "weight": 59.0,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "BEAUTIFUL MEMORY",
-            "description": ""
+            "description": "",
+            "performance": "2.4.0.0.0",
+            "gains": 75800,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C&G.HUE & TAUPIN",
+            "jockey": "G.SIAS",
+            "driver": "G.SIAS",
+            "owner": "K.LAMONARCA",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 11,
             "horse": "TURANIA",
-            "description": ""
+            "description": "",
+            "performance": "8.7.0.5.6",
+            "gains": 146429,
+            "sex": "H",
+            "age": 10,
+            "trainer": "N.CAULLERY",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "J.CAULLERY",
+            "weight": 57.5,
+            "draw": 3
         },
         {
             "number": 12,
             "horse": "ATHINEOS",
-            "description": ""
+            "description": "",
+            "performance": "2.5.8.0.2",
+            "gains": 101540,
+            "sex": "H",
+            "age": 6,
+            "trainer": "JESUS",
+            "jockey": "F.VALLE SKAR",
+            "driver": "F.VALLE SKAR",
+            "owner": "A.POULOPOULOS",
+            "weight": 57.5,
+            "draw": 12
         },
         {
             "number": 13,
             "horse": "OLYMPIC FLAMBEE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.3.7.8",
+            "gains": 20970,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DELZANGLES",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "L.GOELET",
+            "weight": 57.5,
+            "draw": 14
         },
         {
             "number": 14,
             "horse": "ONE POINT",
-            "description": ""
+            "description": "",
+            "performance": "4.4.9.9.4",
+            "gains": 67950,
+            "sex": "F",
+            "age": 5,
+            "trainer": "D&P.PROD'HOMME",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "V.SWIMBERGHE",
+            "weight": 57.5,
+            "draw": 5
         },
         {
             "number": 15,
             "horse": "FIRSTMAN",
-            "description": ""
+            "description": "",
+            "performance": "5.8.0.3.3",
+            "gains": 90025,
+            "sex": "H",
+            "age": 8,
+            "trainer": "FR.MONFORT",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "EC. MICHEL DOINEAU",
+            "weight": 57.5,
+            "draw": 7
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

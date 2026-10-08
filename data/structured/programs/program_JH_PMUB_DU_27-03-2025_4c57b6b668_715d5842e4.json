@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_27-03-2025_4c57b6b668_715d5842e4.txt",
-    "parsed_at": "2026-10-08T10:35:46.043385Z",
+    "parsed_at": "2026-10-08T23:52:20.071508Z",
     "date": "2025-03-27",
     "race": {
         "race_name": "PRIX JOCKER",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LORD OF WAR",
-            "description": ""
+            "description": "",
+            "performance": "1.4.9.6.0",
+            "gains": 77800,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N.TEMAM",
+            "weight": 60.0,
+            "draw": 12
         },
         {
             "number": 2,
             "horse": "BAUHINIA RHAPSODY",
-            "description": ""
+            "description": "",
+            "performance": "9.4.7.3.0",
+            "gains": 83483,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.LEMAITRE",
+            "jockey": "JV.TOUX",
+            "driver": "JV.TOUX",
+            "owner": "M.AUGER",
+            "weight": 59.5,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "LOST IN MUSIC",
-            "description": ""
+            "description": "",
+            "performance": "7.1.8.1.1",
+            "gains": 73272,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "G.VAZ",
+            "driver": "G.VAZ",
+            "owner": "DM.BAT.RIBEIRO",
+            "weight": 59.5,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "GREY TORNADO",
-            "description": ""
+            "description": "",
+            "performance": "6.9.9.7.5",
+            "gains": 141010,
+            "sex": "M",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "P.BOURIGAULT",
+            "weight": 59.5,
+            "draw": 6
         },
         {
             "number": 5,
             "horse": "GOLUPTIOUS",
-            "description": ""
+            "description": "",
+            "performance": "9.0.5.1.0",
+            "gains": 58120,
+            "sex": "M",
+            "age": 4,
+            "trainer": "H.MOUESAN",
+            "jockey": "JP.SILVA PEREIRA",
+            "driver": "JP.SILVA PEREIRA",
+            "owner": "HA.FER. MARQUES",
+            "weight": 59.0,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "STAR ROCK",
-            "description": ""
+            "description": "",
+            "performance": "1.3.5.6.0",
+            "gains": 82880,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "V.LUKA",
+            "driver": "V.LUKA",
+            "owner": "LERAM S.R.O.",
+            "weight": 59.0,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "GEORGES VILLE",
-            "description": ""
+            "description": "",
+            "performance": "0.7.5.0.5",
+            "gains": 56900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "JM.AU. DUMAND",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "SOUS LA NEIGE",
-            "description": ""
+            "description": "",
+            "performance": "7.4.5.2.9",
+            "gains": 58860,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "A.DON",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "NOBLEMAN",
-            "description": ""
+            "description": "",
+            "performance": "0.5.6.1.2",
+            "gains": 69300,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "JC.ROUGET",
+            "driver": "JC.ROUGET",
+            "owner": "J.ROMEL",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 10,
             "horse": "EVERSTAR",
-            "description": ""
+            "description": "",
+            "performance": "4.9.3.1.5",
+            "gains": 79850,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "L.GADBIN",
+            "driver": "L.GADBIN",
+            "owner": "V.GADBIN",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 11,
             "horse": "SHINNING OCEAN",
-            "description": ""
+            "description": "",
+            "performance": "7.0.0.6.0",
+            "gains": 169295,
+            "sex": "M",
+            "age": 8,
+            "trainer": "D.BREUX",
+            "jockey": "H.BLUME",
+            "driver": "H.BLUME",
+            "owner": "Y.MARIE-NELLY",
+            "weight": 57.0,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "WAPI",
-            "description": ""
+            "description": "",
+            "performance": "0.5.0.3.2",
+            "gains": 36100,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "EC.HS. CADRAN",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "DARI RIVER",
-            "description": ""
+            "description": "",
+            "performance": "6.0.2.0.9",
+            "gains": 44950,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H.JOURNIAC",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "R.SHEPARD",
+            "weight": 56.0,
+            "draw": 4
         },
         {
             "number": 14,
             "horse": "ZELORO",
-            "description": ""
+            "description": "",
+            "performance": "1.8.1.0.6",
+            "gains": 21000,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PLANQUE",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "STALL PERLEN",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "COSMO BEAU",
-            "description": ""
+            "description": "",
+            "performance": "1.7.1.6.7",
+            "gains": 97370,
+            "sex": "M",
+            "age": 5,
+            "trainer": "M.BARZALONA",
+            "jockey": "G.MOSSE",
+            "driver": "G.MOSSE",
+            "owner": "M.MOTSCHMANN",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 16,
             "horse": "BIG LOG",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.0.5",
+            "gains": 85720,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "B.LYNAM",
+            "weight": 55.5,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-08-04-2025_d53625a0fe_1c7154b7a1.txt",
-    "parsed_at": "2026-10-08T10:35:40.185288Z",
+    "parsed_at": "2026-10-08T23:52:11.734125Z",
     "date": "2025-04-08",
     "race": {
         "race_name": "PRIX DE L'OPERATION OVERLORD",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "AMERICAN LAWYER",
-            "description": ""
+            "description": "",
+            "performance": "2.2.5.0.2",
+            "gains": 52250,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.MANGIONE",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "P. ZAMBELLI",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 2,
             "horse": "AMERICAN FLAG",
-            "description": ""
+            "description": "",
+            "performance": "0.6.5.0.6",
+            "gains": 149125,
+            "sex": "H",
+            "age": 5,
+            "trainer": "H.JOURNIAC",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "Y.BARBEROT",
+            "weight": 60.0,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "DSCHINGIS DREAM",
-            "description": ""
+            "description": "",
+            "performance": "4.1.0.2.0",
+            "gains": 57550,
+            "sex": "M",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "P.BOURIGAULT",
+            "weight": 59.0,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "LOVE IS GOLD",
-            "description": ""
+            "description": "",
+            "performance": "2.6.2.7.7",
+            "gains": 87740,
+            "sex": "H",
+            "age": 5,
+            "trainer": "H.LEBOUC",
+            "jockey": "PIER.MENARD",
+            "driver": "PIER.MENARD",
+            "owner": "SARL GROUPE KR",
+            "weight": 58.0,
+            "draw": 10
         },
         {
             "number": 5,
             "horse": "ELDIO",
-            "description": ""
+            "description": "",
+            "performance": "3.1.2.5.5",
+            "gains": 42800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "M.SCAND.LACAILLE",
+            "driver": "M.SCAND.LACAILLE",
+            "owner": "HS ASSIRO",
+            "weight": 57.5,
+            "draw": 16
         },
         {
             "number": 6,
             "horse": "BOBBYMURPHY",
-            "description": ""
+            "description": "",
+            "performance": "2.1.9.1.0",
+            "gains": 139685,
+            "sex": "M",
+            "age": 7,
+            "trainer": "M.GUYON",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "W.AMALRIC",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "GATTOPARDO",
-            "description": ""
+            "description": "",
+            "performance": "4.2.1.0.1",
+            "gains": 59440,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "M.GUARNIERI",
+            "driver": "M.GUARNIERI",
+            "owner": "P.FERRARIO",
+            "weight": 56.5,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "STANGHELI",
-            "description": ""
+            "description": "",
+            "performance": "0.0.7.0.4",
+            "gains": 91160,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.MOSSE",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "Y.BURRUS",
+            "weight": 56.5,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "MODERN LIGHT",
-            "description": ""
+            "description": "",
+            "performance": "4.2.1.5.1",
+            "gains": 42275,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "G.MOSSE",
+            "driver": "G.MOSSE",
+            "owner": "SM.SMITH",
+            "weight": 55.0,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "ST ELVIRA",
-            "description": ""
+            "description": "",
+            "performance": "9.4.0.8.8",
+            "gains": 21325,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "A.SCHUTZ",
+            "driver": "A.SCHUTZ",
+            "owner": "M.HUBNER",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "VCTE DE JODELET",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.0.4",
+            "gains": 37410,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "BARON ED.DE ROTHSCHILD",
+            "weight": 54.5,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "VAL VELVET",
-            "description": ""
+            "description": "",
+            "performance": "5.9.1",
+            "gains": 11900,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "L.MINEO",
+            "weight": 54.5,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "CHICA DE CIUDAD",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.4.6",
+            "gains": 30650,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.MOLINS",
+            "jockey": "P. DE CHEVIGNY",
+            "driver": "P. DE CHEVIGNY",
+            "owner": "P.DE CHEVIGNY",
+            "weight": 54.0,
+            "draw": 1
         },
         {
             "number": 14,
             "horse": "HAVANA SIX",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.3.1",
+            "gains": 92025,
+            "sex": "F",
+            "age": 6,
+            "trainer": "E.HARDOUIN",
+            "jockey": "G.MOSSE",
+            "driver": "G.MOSSE",
+            "owner": "M.MOTSCHMANN",
+            "weight": 53.5,
+            "draw": 5
         },
         {
             "number": 15,
             "horse": "CORONADO",
-            "description": ""
+            "description": "",
+            "performance": "5.6.0.2.5",
+            "gains": 52600,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "G.PANNIER",
+            "driver": "G.PANNIER",
+            "owner": "J.MAHIQUES",
+            "weight": 53.5,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "TALK SHOW",
-            "description": ""
+            "description": "",
+            "performance": "7.8.1.7.0",
+            "gains": 47200,
+            "sex": "H",
+            "age": 5,
+            "trainer": "R.THOMAS",
+            "jockey": "G.BIETOLINI",
+            "driver": "G.BIETOLINI",
+            "owner": "GEMINI STUD",
+            "weight": 53.5,
+            "draw": 7
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

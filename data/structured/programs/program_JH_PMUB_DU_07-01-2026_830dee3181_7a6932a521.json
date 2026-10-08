@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_07-01-2026_830dee3181_7a6932a521.txt",
-    "parsed_at": "2026-10-08T10:35:43.325955Z",
+    "parsed_at": "2026-10-08T23:52:16.148783Z",
     "date": "2026-01-07",
     "race": {
         "race_name": "PRIX TEKIDE",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "VISION DU RHEU",
-            "description": ""
+            "description": "",
+            "performance": "1.T.1.A.6",
+            "gains": 229205,
+            "sex": "H",
+            "age": 7,
+            "trainer": "J.DELAUNAY",
+            "jockey": "C.LEFEBVRE",
+            "driver": "C.LEFEBVRE",
+            "owner": "J.DETRE",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "NEVER RISK",
-            "description": ""
+            "description": "",
+            "performance": "7.A.9.3.0",
+            "gains": 162900,
+            "sex": "M",
+            "age": 7,
+            "trainer": "H.MERIENNE",
+            "jockey": "G.MEUNIER",
+            "driver": "G.MEUNIER",
+            "owner": "SANG. BLOODSTOCK",
+            "weight": 70.5
         },
         {
             "number": 3,
             "horse": "EADREAM",
-            "description": ""
+            "description": "",
+            "performance": "8.3.5.1.4",
+            "gains": 154520,
+            "sex": "F",
+            "age": 8,
+            "trainer": "CH.HERPIN",
+            "jockey": "Q.DEFONTAINE",
+            "driver": "Q.DEFONTAINE",
+            "owner": "L.FLEURY",
+            "weight": 70.5
         },
         {
             "number": 4,
             "horse": "FUNWAY",
-            "description": ""
+            "description": "",
+            "performance": "5.7.1.4.5",
+            "gains": 200580,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P.LE GEAY",
+            "jockey": "J.REVELEY",
+            "driver": "J.REVELEY",
+            "owner": "P.LE GEAY",
+            "weight": 70.5
         },
         {
             "number": 5,
             "horse": "JONCOURT",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.2.9",
+            "gains": 13300,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.COUETIL",
+            "jockey": "T.BEAURAIN",
+            "driver": "T.BEAURAIN",
+            "owner": "COUETIL ELEVAGE",
+            "weight": 70.0
         },
         {
             "number": 6,
             "horse": "APANIIWA",
-            "description": ""
+            "description": "",
+            "performance": "0.8.4.6.9",
+            "gains": 169160,
+            "sex": "F",
+            "age": 6,
+            "trainer": "Y.FOUIN",
+            "jockey": "A.CHESNEAU",
+            "driver": "A.CHESNEAU",
+            "owner": "RACING 53",
+            "weight": 69.5
         },
         {
             "number": 7,
             "horse": "PABLO",
-            "description": ""
+            "description": "",
+            "performance": "3.A.8.5.1",
+            "gains": 48560,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.BONIN",
+            "jockey": "G.RICHARD",
+            "driver": "G.RICHARD",
+            "owner": "EC.DU TRIANGLE",
+            "weight": 69.5
         },
         {
             "number": 8,
             "horse": "DESERT STORM",
-            "description": ""
+            "description": "",
+            "performance": "8.4.7.6.4",
+            "gains": 27900,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.MELE",
+            "jockey": "A.ZULIANI",
+            "driver": "A.ZULIANI",
+            "owner": "M.RANDELLI",
+            "weight": 69.0
         },
         {
             "number": 9,
             "horse": "JOUVANCELLE",
-            "description": ""
+            "description": "",
+            "performance": "0.5.1.2.2",
+            "gains": 223440,
+            "sex": "F",
+            "age": 7,
+            "trainer": "M.SEROR",
+            "jockey": "B.FROST",
+            "driver": "B.FROST",
+            "owner": "C.LAGIER",
+            "weight": 68.5
         },
         {
             "number": 10,
             "horse": "BOOPER DU POUEY",
-            "description": ""
+            "description": "",
+            "performance": "4.1.3.6.A",
+            "gains": 29695,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.BONIN",
+            "jockey": "E.LABAISSE",
+            "driver": "E.LABAISSE",
+            "owner": "E.POUEY",
+            "weight": 67.5
         },
         {
             "number": 11,
             "horse": "ANTAIOS",
-            "description": ""
+            "description": "",
+            "performance": "1.1.T.7.1",
+            "gains": 27545,
+            "sex": "H",
+            "age": 9,
+            "trainer": "E.LERAY",
+            "jockey": "A.RENARD",
+            "driver": "A.RENARD",
+            "owner": "J.CHAINEAU",
+            "weight": 67.5
         },
         {
             "number": 12,
             "horse": "KOP DE BOULOGNE",
-            "description": ""
+            "description": "",
+            "performance": "3.4.7.A.4",
+            "gains": 50620,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.BOISBRUNET",
+            "jockey": "D.GALLON",
+            "driver": "D.GALLON",
+            "owner": "P.DE FRAGUIER",
+            "weight": 67.5
         },
         {
             "number": 13,
             "horse": "KIDNAPPEUR",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.7.1",
+            "gains": 65830,
+            "sex": "H",
+            "age": 6,
+            "trainer": "H.MERIENNE",
+            "jockey": "G.FAIVRE-PICON",
+            "driver": "G.FAIVRE-PICON",
+            "owner": "SANG. BLOODSTOCK",
+            "weight": 67.0
         },
         {
             "number": 14,
             "horse": "FURIOSO",
-            "description": ""
+            "description": "",
+            "performance": "5.3.A.7.T",
+            "gains": 82280,
+            "sex": "H",
+            "age": 9,
+            "trainer": "Y.FOUIN",
+            "jockey": "T.CHEVILLARD",
+            "driver": "T.CHEVILLARD",
+            "owner": "YA.BRIAND",
+            "weight": 66.5
         },
         {
             "number": 15,
             "horse": "KIMFLY",
-            "description": ""
+            "description": "",
+            "performance": "3.6.9.A.4",
+            "gains": 29835,
+            "sex": "F",
+            "age": 6,
+            "trainer": "E.GRALL",
+            "jockey": "R.MAYEUR",
+            "driver": "R.MAYEUR",
+            "owner": "G.BEAUNEZ",
+            "weight": 66.5
         },
         {
             "number": 16,
             "horse": "LE LASCAR",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.2.6",
+            "gains": 67180,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.BONIN",
+            "jockey": "M.CHAILLOLEAU",
+            "driver": "M.CHAILLOLEAU",
+            "owner": "C.BONIN",
+            "weight": 66.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             14,

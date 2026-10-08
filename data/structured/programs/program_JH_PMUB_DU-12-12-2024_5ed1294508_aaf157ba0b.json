@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-12-12-2024_5ed1294508_aaf157ba0b.txt",
-    "parsed_at": "2026-10-08T10:35:40.692322Z",
+    "parsed_at": "2026-10-08T23:52:12.468277Z",
     "date": "2024-12-12",
     "race": {
         "race_name": "PRIX DU JARDIN DES EAUX MINERALES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "KAPANI",
-            "description": ""
+            "description": "",
+            "performance": "5.4.1.6.9",
+            "gains": 150340,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "H.MERAUD",
+            "weight": 61.0,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "SHELBY",
-            "description": ""
+            "description": "",
+            "performance": "0.2.1.0.7",
+            "gains": 85980,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.GUTIERREZ VAL",
+            "jockey": "M.ALONSO ROLDAN",
+            "driver": "M.ALONSO ROLDAN",
+            "owner": "F.MA.BAR. MADRAZO",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "LEMPIRA",
-            "description": ""
+            "description": "",
+            "performance": "0.1.0.6.5",
+            "gains": 36420,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.ROUSSEL",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "F.RAOUL",
+            "weight": 58.5,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "CHESS",
-            "description": ""
+            "description": "",
+            "performance": "1.0.7.3.1",
+            "gains": 42800,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "P.BRANDT",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "MONA TREZY",
-            "description": ""
+            "description": "",
+            "performance": "1.6.4.1.1",
+            "gains": 52800,
+            "sex": "F",
+            "age": 4,
+            "trainer": "E.PUILLET-RODA",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "M.SAURET",
+            "weight": 57.0,
+            "draw": 6
         },
         {
             "number": 6,
             "horse": "BLACK HAWK",
-            "description": ""
+            "description": "",
+            "performance": "1.2.0.0.8",
+            "gains": 153560,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "ANT .BOUCHER",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "ALERIO",
-            "description": ""
+            "description": "",
+            "performance": "3.5.2.1.3",
+            "gains": 93720,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.LEFEBVRE",
+            "jockey": "G.COURBOT",
+            "driver": "G.COURBOT",
+            "owner": "EC. CROCODILE",
+            "weight": 56.0,
+            "draw": 1
         },
         {
             "number": 8,
             "horse": "SPANISH LIGHT",
-            "description": ""
+            "description": "",
+            "performance": "3.0.4.4.3",
+            "gains": 60300,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "RC.MONTENEGRO",
+            "driver": "RC.MONTENEGRO",
+            "owner": "M.ALONSO GOMEZ",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "ILUMINE PRECIEUSE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.1.0.0",
+            "gains": 34290,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "M.DESVAUX",
+            "driver": "M.DESVAUX",
+            "owner": "M.DESVAUX",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "SITJAR",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.3.3",
+            "gains": 26785,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.BERNARD",
+            "jockey": "E.GRALL",
+            "driver": "E.GRALL",
+            "owner": "EARL HS DE LA TUILERIE",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "JAZZMEN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.8.2",
+            "gains": 94642,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D.SANTIAGO",
+            "jockey": "C.PETERSCHMITT",
+            "driver": "C.PETERSCHMITT",
+            "owner": "C.PETERSCHMITT",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 12,
             "horse": "TURANIA",
-            "description": ""
+            "description": "",
+            "performance": "7.0.5.0.2",
+            "gains": 127089,
+            "sex": "H",
+            "age": 9,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "J.CAULLERY",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 13,
             "horse": "KLASSIC PRECIEUX",
-            "description": ""
+            "description": "",
+            "performance": "1.2.6.1.9",
+            "gains": 46260,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "M.DESVAUX",
+            "driver": "M.DESVAUX",
+            "owner": "M.DESVAUX",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 14,
             "horse": "ROSETTA STONE",
-            "description": ""
+            "description": "",
+            "performance": "6.0.4.1.3",
+            "gains": 92930,
+            "sex": "H",
+            "age": 5,
+            "trainer": "R.MANGIONE",
+            "jockey": "MF.WEISSMEIER",
+            "driver": "MF.WEISSMEIER",
+            "owner": "GAL.CL. RHEIN-MAIN",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "ACT OF WISDOM",
-            "description": ""
+            "description": "",
+            "performance": "5.1.2.4.1",
+            "gains": 69689,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.CRASTUS",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "G.GIROUX",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 16,
             "horse": "RUSSIAN TWIST",
-            "description": ""
+            "description": "",
+            "performance": "2.2.5.2.9",
+            "gains": 82970,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.BACHELOT",
+            "jockey": "L.HEB. DE VEYRINAS",
+            "driver": "L.HEB. DE VEYRINAS",
+            "owner": "JC.OBELLIANNE",
+            "weight": 55.0,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

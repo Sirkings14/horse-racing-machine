@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-21-05-2023_6215e4f29a_71837a8036.txt",
-    "parsed_at": "2026-10-08T10:35:41.443926Z",
+    "parsed_at": "2026-10-08T23:52:13.539083Z",
     "date": "2023-05-21",
     "race": {
         "race_name": "GRAND STEEPLE-CHASE DE PARIS",
@@ -16,94 +16,257 @@
         {
             "number": 1,
             "horse": "FRANCO DE PORT",
-            "description": ""
+            "description": "",
+            "performance": "3.3.5.4.5",
+            "gains": 353431,
+            "sex": "H",
+            "age": 8,
+            "trainer": "P.TOWNEND",
+            "jockey": "WP.MULLINS",
+            "driver": "WP.MULLINS",
+            "owner": "BRUTON STREET V",
+            "weight": 68.0
         },
         {
             "number": 2,
             "horse": "ROSARIO BARON",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.3.1",
+            "gains": 270907,
+            "sex": "H",
+            "age": 6,
+            "trainer": "J.CHARRON",
+            "jockey": "D.MELE",
+            "driver": "D.MELE",
+            "owner": "F.DE SOUSA",
+            "weight": 68.0
         },
         {
             "number": 3,
             "horse": "DOCTOR SQUEEZE",
-            "description": ""
+            "description": "",
+            "performance": "3.5.4.6.3",
+            "gains": 384120,
+            "sex": "H",
+            "age": 8,
+            "trainer": "T.CHEVILLARD",
+            "jockey": "D.BRESSOU",
+            "driver": "D.BRESSOU",
+            "owner": "H.DEVIN",
+            "weight": 68.0
         },
         {
             "number": 4,
             "horse": "CARRIACOU",
-            "description": ""
+            "description": "",
+            "performance": "1.7.T.2.3",
+            "gains": 1642717,
+            "sex": "H",
+            "age": 11,
+            "trainer": "G.MEUNIER",
+            "jockey": "I.PACAULT",
+            "driver": "I.PACAULT",
+            "owner": "EC. MIRANDE",
+            "weight": 68.0
         },
         {
             "number": 5,
             "horse": "METASEQUOIA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.2.3",
+            "gains": 213520,
+            "sex": "H",
+            "age": 6,
+            "trainer": "L.ZULIANI",
+            "jockey": "I.PACAULT",
+            "driver": "I.PACAULT",
+            "owner": "EC. PAPOT",
+            "weight": 68.0
         },
         {
             "number": 6,
             "horse": "IMPERIL",
-            "description": ""
+            "description": "",
+            "performance": "6.1.1.1.3",
+            "gains": 193858,
+            "sex": "H",
+            "age": 7,
+            "trainer": "J.QUINLAN",
+            "jockey": "NP.LITTMODEN",
+            "driver": "NP.LITTMODEN",
+            "owner": "G.CHESNEAU",
+            "weight": 68.0
         },
         {
             "number": 7,
             "horse": "BANDERO",
-            "description": ""
+            "description": "",
+            "performance": "1.9.5.4.3",
+            "gains": 302010,
+            "sex": "H",
+            "age": 8,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "AS.PACAULT",
+            "driver": "AS.PACAULT",
+            "owner": "HS DE BEAUVOIR",
+            "weight": 68.0
         },
         {
             "number": 8,
             "horse": "SPES MILITURF",
-            "description": ""
+            "description": "",
+            "performance": "5.1.T.1.1",
+            "gains": 173390,
+            "sex": "H",
+            "age": 6,
+            "trainer": "K.DUBOURG",
+            "jockey": "LAGENESTE & MACAIRE",
+            "driver": "LAGENESTE & MACAIRE",
+            "owner": "JAM.ELEVAGE DU CEL",
+            "weight": 68.0
         },
         {
             "number": 9,
             "horse": "DOCTOR KALEO",
-            "description": ""
+            "description": "",
+            "performance": "1.2.5.1.6",
+            "gains": 237281,
+            "sex": "H",
+            "age": 8,
+            "trainer": "T.BEAURAIN",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "E.LAFEU",
+            "weight": 68.0
         },
         {
             "number": 10,
             "horse": "GEX",
-            "description": ""
+            "description": "",
+            "performance": "1.4.2.1.8",
+            "gains": 566190,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B.LESTRADE",
+            "jockey": "E.CLAYEUX",
+            "driver": "E.CLAYEUX",
+            "owner": "LORD DARESBURY",
+            "weight": 68.0
         },
         {
             "number": 11,
             "horse": "CAREFULLY SELECTED",
-            "description": ""
+            "description": "",
+            "performance": "0.4.1.0.T",
+            "gains": 139208,
+            "sex": "H",
+            "age": 11,
+            "trainer": "D.E .MULLINS",
+            "jockey": "WP.MULLINS",
+            "driver": "WP.MULLINS",
+            "owner": "MA.MASTERSON",
+            "weight": 68.0
         },
         {
             "number": 12,
             "horse": "POLY GRANDCHAMP",
-            "description": ""
+            "description": "",
+            "performance": "1.7.3.3.3",
+            "gains": 1064445,
+            "sex": "H",
+            "age": 11,
+            "trainer": "T.LEMAGNEN",
+            "jockey": "F.NICOLLE",
+            "driver": "F.NICOLLE",
+            "owner": "P.PAPOT",
+            "weight": 68.0
         },
         {
             "number": 13,
             "horse": "GENERAL EN CHEF",
-            "description": ""
+            "description": "",
+            "performance": "6.3.6.5.5",
+            "gains": 328399,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F.GILES",
+            "jockey": "D.COTTIN",
+            "driver": "D.COTTIN",
+            "owner": "A.PEAKE",
+            "weight": 68.0
         },
         {
             "number": 14,
             "horse": "SUROIT",
-            "description": ""
+            "description": "",
+            "performance": "2.J.1.1.5",
+            "gains": 267544,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J.BARTOS",
+            "jockey": "J.VANA JR",
+            "driver": "J.VANA JR",
+            "owner": "SCU. AICHNER",
+            "weight": 68.0
         },
         {
             "number": 15,
             "horse": "NOBLE YEATS",
-            "description": ""
+            "description": "",
+            "performance": "4.4.3.1.1",
+            "gains": 817485,
+            "sex": "H",
+            "age": 8,
+            "trainer": "S.BOWEN",
+            "jockey": "E.MULLINS",
+            "driver": "E.MULLINS",
+            "owner": "R.WALEY-COHEN",
+            "weight": 68.0
         },
         {
             "number": 16,
             "horse": "STARLET DU MESNIL",
-            "description": ""
+            "description": "",
+            "performance": "4.4.4.2.3",
+            "gains": 406788,
+            "sex": "F",
+            "age": 6,
+            "trainer": "A.ZULIANI",
+            "jockey": "F.NICOLLE",
+            "driver": "F.NICOLLE",
+            "owner": "H.DEVIN",
+            "weight": 66.0
         },
         {
             "number": 17,
             "horse": "GESSY RAISELLE",
-            "description": ""
+            "description": "",
+            "performance": "7.5.1.1.3",
+            "gains": 253095,
+            "sex": "F",
+            "age": 5,
+            "trainer": "R.BLACKMORE",
+            "jockey": "D.COTTIN",
+            "driver": "D.COTTIN",
+            "owner": "P.DEGROOTE",
+            "weight": 64.0
         },
         {
             "number": 18,
             "horse": "ALTESSE DU BERLAIS",
-            "description": ""
+            "description": "",
+            "performance": "2.3.A.4.6",
+            "gains": 294100,
+            "sex": "F",
+            "age": 5,
+            "trainer": "B.LE CLERC",
+            "jockey": "LAGENESTE & MACAIRE",
+            "driver": "LAGENESTE & MACAIRE",
+            "owner": "G.CAGGIULA",
+            "weight": 64.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             10,

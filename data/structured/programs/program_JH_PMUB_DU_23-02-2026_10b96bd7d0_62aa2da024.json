@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_23-02-2026_10b96bd7d0_62aa2da024.txt",
-    "parsed_at": "2026-10-08T10:35:45.473852Z",
+    "parsed_at": "2026-10-08T23:52:19.261847Z",
     "date": "2026-02-23",
     "race": {
         "race_name": "PRIX ROSE LAUREL",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "ROMAN SKIES",
-            "description": ""
+            "description": "",
+            "performance": "8.6.1.4.6",
+            "gains": 37390,
+            "sex": "H",
+            "age": 4,
+            "trainer": "JV.CHAIGNON",
+            "jockey": "E.BURELLER",
+            "driver": "E.BURELLER",
+            "owner": "D.BURELLER",
+            "weight": 70.0
         },
         {
             "number": 2,
             "horse": "PASSIONATA",
-            "description": ""
+            "description": "",
+            "performance": "4.2.2.4.A",
+            "gains": 29745,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D.BRESSOU",
+            "jockey": "G.MEUNIER",
+            "driver": "G.MEUNIER",
+            "owner": "EC. SAGARA",
+            "weight": 70.0
         },
         {
             "number": 3,
             "horse": "RYGIA",
-            "description": ""
+            "description": "",
+            "performance": "A.4.0.1.7",
+            "gains": 21445,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D.WINDRIF",
+            "jockey": "T.CHEVILLARD",
+            "driver": "T.CHEVILLARD",
+            "owner": "M.CHAOUAT",
+            "weight": 70.0
         },
         {
             "number": 4,
             "horse": "EMSILORD",
-            "description": ""
+            "description": "",
+            "performance": "3.2.6.A.4",
+            "gains": 16800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.MERIENNE",
+            "jockey": "J.REVELEY",
+            "driver": "J.REVELEY",
+            "owner": "BDI RACING TEAM",
+            "weight": 70.0
         },
         {
             "number": 5,
             "horse": "FALCON JET",
-            "description": ""
+            "description": "",
+            "performance": "A.9.5",
+            "gains": 2610,
+            "sex": "H",
+            "age": 4,
+            "trainer": "N. GEORGE & A. ZETTERHOLM",
+            "jockey": "F.GILES",
+            "driver": "F.GILES",
+            "owner": "EC. DES POILUS",
+            "weight": 70.0
         },
         {
             "number": 6,
             "horse": "LADY DAHLIA",
-            "description": ""
+            "description": "",
+            "performance": "6.2.A",
+            "gains": 5400,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.SEROR",
+            "jockey": "A.ZULIANI",
+            "driver": "A.ZULIANI",
+            "owner": "H.DEVIN",
+            "weight": 69.0
         },
         {
             "number": 7,
             "horse": "RAFFLES PRINCESS",
-            "description": ""
+            "description": "",
+            "performance": "6.2.6.0",
+            "gains": 8470,
+            "sex": "F",
+            "age": 4,
+            "trainer": "Y.FOUIN",
+            "jockey": "B.FROST",
+            "driver": "B.FROST",
+            "owner": "S.MUNIR/ I.SOUEDE",
+            "weight": 68.5
         },
         {
             "number": 8,
             "horse": "BISTROT PARISIEN",
-            "description": ""
+            "description": "",
+            "performance": "A.A.7.6.4",
+            "gains": 8570,
+            "sex": "H",
+            "age": 4,
+            "trainer": "ROB.COLLET",
+            "jockey": "A.GAUTRON",
+            "driver": "A.GAUTRON",
+            "owner": "T. D'AVILLY ST LEON",
+            "weight": 68.0
         },
         {
             "number": 9,
             "horse": "FANFARON",
-            "description": ""
+            "description": "",
+            "performance": "5.4.6.4.8",
+            "gains": 13680,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.MERIENNE",
+            "jockey": "T.ANDRIEUX",
+            "driver": "T.ANDRIEUX",
+            "owner": "BDI RACING TEAM",
+            "weight": 68.0
         },
         {
             "number": 10,
             "horse": "CHEZ DOUCET",
-            "description": ""
+            "description": "",
+            "performance": "3.8.6",
+            "gains": 5440,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.SEROR",
+            "jockey": "B.LE CLERC",
+            "driver": "B.LE CLERC",
+            "owner": "A.SALAME",
+            "weight": 68.0
         },
         {
             "number": 11,
             "horse": "GABISON",
-            "description": ""
+            "description": "",
+            "performance": "6.8.7.J",
+            "gains": 765,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.ROLLAND",
+            "jockey": "L.PHILIPPERON",
+            "driver": "L.PHILIPPERON",
+            "owner": "F.BIANCO",
+            "weight": 68.0
         },
         {
             "number": 12,
             "horse": "MON SEUL DESIR",
-            "description": ""
+            "description": "",
+            "performance": "A.3.5.0.0",
+            "gains": 5600,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.SEROR",
+            "jockey": "J.PHELIPPE",
+            "driver": "J.PHELIPPE",
+            "owner": "D.BEN GHOUZI",
+            "weight": 67.0
         },
         {
             "number": 13,
             "horse": "LA PRODIGIEUSE",
-            "description": ""
+            "description": "",
+            "performance": "3.0.5",
+            "gains": 5360,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.SEROR",
+            "jockey": "C.LEFEBVRE",
+            "driver": "C.LEFEBVRE",
+            "owner": "G.LE BARON",
+            "weight": 67.0
         },
         {
             "number": 14,
             "horse": "MIRACLE DECIERGUES",
-            "description": ""
+            "description": "",
+            "performance": "4.5.A.2.0",
+            "gains": 7635,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.MENATO",
+            "jockey": "T.SERVIER",
+            "driver": "T.SERVIER",
+            "owner": "P.DEVILLARD",
+            "weight": 66.0
         },
         {
             "number": 15,
             "horse": "MURRAYFIELD PARK",
-            "description": ""
+            "description": "",
+            "performance": "2.A.0.A.J",
+            "gains": 7360,
+            "sex": "H",
+            "age": 4,
+            "trainer": "ROB.COLLET",
+            "jockey": "T.BEAURAIN",
+            "driver": "T.BEAURAIN",
+            "owner": "T. D'AVILLY ST LEON",
+            "weight": 66.0
         },
         {
             "number": 16,
             "horse": "L'ENCHANTE",
-            "description": ""
+            "description": "",
+            "performance": "3.A.6.6.5",
+            "gains": 5275,
+            "sex": "H",
+            "age": 4,
+            "trainer": "ROB.COLLET",
+            "jockey": "L.BRECHET",
+            "driver": "L.BRECHET",
+            "owner": "C.DUBUQUOI",
+            "weight": 66.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

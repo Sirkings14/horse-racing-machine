@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_14-05-2026_9cbda24d11_6b7f689d89.txt",
-    "parsed_at": "2026-10-08T10:35:44.187498Z",
+    "parsed_at": "2026-10-08T23:52:17.405886Z",
     "date": "2026-05-14",
     "race": {
         "race_name": "PRIX DU PALAIS DES GLACES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "OMICRONE",
-            "description": ""
+            "description": "",
+            "performance": "0.8.7.4.8",
+            "gains": 134700,
+            "sex": "F",
+            "age": 6,
+            "trainer": "P.GROUALLE",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "F.LE CORNO",
+            "weight": 62.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "MORGAN BAY",
-            "description": ""
+            "description": "",
+            "performance": "4.0.1.0.4",
+            "gains": 21889,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.MURPHY",
+            "jockey": "E.VERHESTRAETEN",
+            "driver": "E.VERHESTRAETEN",
+            "owner": "DON/MACAULIFFE",
+            "weight": 60.5,
+            "draw": 2
         },
         {
             "number": 3,
             "horse": "LA MANDALA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.5.0",
+            "gains": 67750,
+            "sex": "F",
+            "age": 5,
+            "trainer": "R.CHOTARD",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "B.GIRAUDON",
+            "weight": 60.0,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "SECRET WOOD",
-            "description": ""
+            "description": "",
+            "performance": "6.9.0.4.6",
+            "gains": 52039,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.BIETOLINI",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "M.SERAFINO",
+            "weight": 59.5,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "ZAKOSHA",
-            "description": ""
+            "description": "",
+            "performance": "1.0.1.2.6",
+            "gains": 60883,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "P.VAN BELLE",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "THE SHADOW",
-            "description": ""
+            "description": "",
+            "performance": "1.2.4.0.2",
+            "gains": 54811,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N.CAULLERY",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "C.WINGTANS",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "TIME GOES ON",
-            "description": ""
+            "description": "",
+            "performance": "9.5.0.1.6",
+            "gains": 30960,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.KOBAYASHI",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "AOSHIBA SHOJI CO.",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 8,
             "horse": "ISNEAUVILLE",
-            "description": ""
+            "description": "",
+            "performance": "3.6.5.0.5",
+            "gains": 16485,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.REYNIER",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "JC.SEROUL",
+            "weight": 56.5,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "DAY DREAMING",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.1.5",
+            "gains": 33343,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.HERNON",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "ROY RACING",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 10,
             "horse": "FREJA",
-            "description": ""
+            "description": "",
+            "performance": "9.5.3.1.4",
+            "gains": 143180,
+            "sex": "F",
+            "age": 7,
+            "trainer": "F.CHAPPET",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "A.GILIBERT",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "CITY BABE",
-            "description": ""
+            "description": "",
+            "performance": "9.8.5.5.5",
+            "gains": 7410,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "I.CORBANI",
+            "weight": 54.5,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "ELUSIVE BELARDO",
-            "description": ""
+            "description": "",
+            "performance": "4.8.4.0.0",
+            "gains": 45579,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N.CAULLERY",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "T.KEREFOFF",
+            "weight": 54.0,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "DARK ZEL",
-            "description": ""
+            "description": "",
+            "performance": "6.3.4.8.4",
+            "gains": 81602,
+            "sex": "F",
+            "age": 6,
+            "trainer": "N.CAULLERY",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "JF.SENET",
+            "weight": 52.5,
+            "draw": 6
         },
         {
             "number": 14,
             "horse": "PLACEHOLDER",
-            "description": ""
+            "description": "",
+            "performance": "0.9.1.6.5",
+            "gains": 51941,
+            "sex": "F",
+            "age": 5,
+            "trainer": "G.HERNON",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "RP.JONES",
+            "weight": 52.0,
+            "draw": 8
         },
         {
             "number": 15,
             "horse": "TANTOMILE",
-            "description": ""
+            "description": "",
+            "performance": "5.7.2.4.3",
+            "gains": 91315,
+            "sex": "F",
+            "age": 5,
+            "trainer": "N.CAULLERY",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "L.BOERMANS",
+            "weight": 51.5,
+            "draw": 12
         },
         {
             "number": 16,
             "horse": "ROMANCE MARINE",
-            "description": ""
+            "description": "",
+            "performance": "2.0.4.0.3",
+            "gains": 78565,
+            "sex": "F",
+            "age": 5,
+            "trainer": "D&P.PROD'HOMME",
+            "jockey": "L.PLOMMEE",
+            "driver": "L.PLOMMEE",
+            "owner": "B.GIRAUDON",
+            "weight": 51.0,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

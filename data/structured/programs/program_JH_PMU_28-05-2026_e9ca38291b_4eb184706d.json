@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_28-05-2026_e9ca38291b_4eb184706d.txt",
-    "parsed_at": "2026-10-08T10:35:46.594797Z",
+    "parsed_at": "2026-10-08T23:52:20.889299Z",
     "date": "2026-05-28",
     "race": {
         "race_name": "SOSAFE PRIX DES EPINETTES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "MUST BAY",
-            "description": ""
+            "description": "",
+            "performance": "1.3.3.5.2",
+            "gains": 39618,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "JC.SEROUL",
+            "weight": 62.0,
+            "draw": 2
         },
         {
             "number": 2,
             "horse": "REVE BLEU",
-            "description": ""
+            "description": "",
+            "performance": "5.7.1.3",
+            "gains": 18560,
+            "sex": "F",
+            "age": 3,
+            "trainer": "G.BIETOLINI",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "ARGE. RACING",
+            "weight": 59.0,
+            "draw": 8
         },
         {
             "number": 3,
             "horse": "LE FUTUR",
-            "description": ""
+            "description": "",
+            "performance": "9.1.6.1.8",
+            "gains": 18340,
+            "sex": "M",
+            "age": 3,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "PH.LASSEN",
+            "weight": 58.5,
+            "draw": 9
         },
         {
             "number": 4,
             "horse": "ANDEOL",
-            "description": ""
+            "description": "",
+            "performance": "7.1.4",
+            "gains": 12066,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.FERLAND",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "WERTH. & FRERE",
+            "weight": 58.5,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "ZARLAND",
-            "description": ""
+            "description": "",
+            "performance": "6.5.3.3",
+            "gains": 8899,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.WATTEL",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "R.BAGUENAULT",
+            "weight": 58.0,
+            "draw": 7
         },
         {
             "number": 6,
             "horse": "COSY BEAR",
-            "description": ""
+            "description": "",
+            "performance": "3.2.2.2.3",
+            "gains": 25389,
+            "sex": "H",
+            "age": 3,
+            "trainer": "P&J.BRANDT",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "F.BLICHFELDT",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "BOX OFFICER",
-            "description": ""
+            "description": "",
+            "performance": "3.1.4.2.0",
+            "gains": 23909,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "EC.NORMANDY SPIRIT",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 8,
             "horse": "ZELZARA",
-            "description": ""
+            "description": "",
+            "performance": "8.2.7.6.7",
+            "gains": 33809,
+            "sex": "F",
+            "age": 3,
+            "trainer": "Y.BARBEROT",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "J.MESTRALLET",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 9,
             "horse": "TI AMO BELLO",
-            "description": ""
+            "description": "",
+            "performance": "5.5.1.7.6",
+            "gains": 20544,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.PITART",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "EC.METAL",
+            "weight": 56.5,
+            "draw": 1
         },
         {
             "number": 10,
             "horse": "SOFT DREAM",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.6.6",
+            "gains": 25230,
+            "sex": "M",
+            "age": 3,
+            "trainer": "V.HEAD",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "EC. C. MARZOCCO",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 11,
             "horse": "TOO DARN QUICK",
-            "description": ""
+            "description": "",
+            "performance": "4.6.5.3.8",
+            "gains": 10176,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "B. ED.DE ROTHSCHILD",
+            "weight": 55.5,
+            "draw": 12
         },
         {
             "number": 12,
             "horse": "XTRAMOUR",
-            "description": ""
+            "description": "",
+            "performance": "6.5.1.4.3",
+            "gains": 17346,
+            "sex": "M",
+            "age": 3,
+            "trainer": "X.BLANCHET",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "X.DOUMEN",
+            "weight": 54.5,
+            "draw": 10
         },
         {
             "number": 13,
             "horse": "ENCORE RIDGE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.4.2",
+            "gains": 15672,
+            "sex": "H",
+            "age": 3,
+            "trainer": "L.GADBIN",
+            "jockey": "C.GROSBOIS",
+            "driver": "C.GROSBOIS",
+            "owner": "C.STEDMAN",
+            "weight": 54.0,
+            "draw": 16
         },
         {
             "number": 14,
             "horse": "NOTIONI FAL",
-            "description": ""
+            "description": "",
+            "performance": "1.5.3.3.6",
+            "gains": 23285,
+            "sex": "F",
+            "age": 3,
+            "trainer": "P.GROUALLE",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "FAL STUD SAS",
+            "weight": 53.5,
+            "draw": 11
         },
         {
             "number": 15,
             "horse": "MISTER BLACK",
-            "description": ""
+            "description": "",
+            "performance": "2.2.0.4.9",
+            "gains": 16694,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "O.GHRGHAR",
+            "weight": 53.5,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "BOURBON MOON",
-            "description": ""
+            "description": "",
+            "performance": "1.2.0.5.5",
+            "gains": 15722,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.DELZANGLES",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "M.MOTSCHMANN",
+            "weight": 52.5,
+            "draw": 14
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

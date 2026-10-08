@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_15-04-2026_7a339278bb_983f3838a8.txt",
-    "parsed_at": "2026-10-08T10:35:46.855798Z",
+    "parsed_at": "2026-10-08T23:52:21.258723Z",
     "date": "2026-04-13",
     "race": {
         "race_name": "PRIX DE LA COMMUNE DE CORDEMAIS",
@@ -16,84 +16,197 @@
         {
             "number": 1,
             "horse": "KOOL GEORGES",
-            "description": ""
+            "description": "",
+            "performance": "0.D.2.3.4",
+            "gains": 120270,
+            "trainer": "O. RAFFIN",
+            "jockey": "TH. RAFFIN",
+            "driver": "TH. RAFFIN",
+            "owner": "G.M. BRAMI",
+            "listed_chrono": "1.13.20"
         },
         {
             "number": 2,
             "horse": "KAKO GASCOGNE",
-            "description": ""
+            "description": "",
+            "performance": "4.0.9.3.1",
+            "gains": 123120,
+            "trainer": "W. BIGEON",
+            "jockey": "M. PEAN",
+            "driver": "M. PEAN",
+            "owner": "EC. W. BIGEON",
+            "listed_chrono": "1.11.60"
         },
         {
             "number": 3,
             "horse": "JIM D'ALOUETTE",
-            "description": ""
+            "description": "",
+            "performance": "0.4.2.1.1",
+            "gains": 124595,
+            "trainer": "A. CHAVATTE",
+            "jockey": "A.A.CHAVATTE",
+            "driver": "A.A.CHAVATTE",
+            "owner": "P. LEMONNIER",
+            "listed_chrono": "1.12.40"
         },
         {
             "number": 4,
             "horse": "KILOU D'YMER",
-            "description": ""
+            "description": "",
+            "performance": "4.2.0.7.3",
+            "gains": 130325,
+            "trainer": "Sté. Ent. Grégory THOREL",
+            "jockey": "L.M. DAVID",
+            "driver": "L.M. DAVID",
+            "owner": "Sté. Ent. Grégory THOREL",
+            "listed_chrono": "1.12.20"
         },
         {
             "number": 5,
             "horse": "KRAKEN CASTELETS",
-            "description": ""
+            "description": "",
+            "performance": "5.2.6.9.8",
+            "gains": 134710,
+            "trainer": "H.E. BONDO",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "EC. WAVE FRANCE",
+            "listed_chrono": "1.11.80"
         },
         {
             "number": 6,
             "horse": "ISIS DE SYVA",
-            "description": ""
+            "description": "",
+            "performance": "7.6.D.3.6",
+            "gains": 138455,
+            "trainer": "S. MARMION",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "EC. Sylvain MARMION",
+            "listed_chrono": "1.11.10"
         },
         {
             "number": 7,
             "horse": "KAPUSHA MIP",
-            "description": ""
+            "description": "",
+            "performance": "7.7.4.D.D",
+            "gains": 139420,
+            "trainer": "S. GUARATO",
+            "jockey": "H. MONTHULE",
+            "driver": "H. MONTHULE",
+            "owner": "EC. MIP",
+            "listed_chrono": "1.12.30"
         },
         {
             "number": 8,
             "horse": "JAG ROYAL",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.2.2",
+            "gains": 139810,
+            "trainer": "F. TERRY",
+            "jockey": "CEDRIC TERRY",
+            "driver": "CEDRIC TERRY",
+            "owner": "M. MAIGE",
+            "listed_chrono": "1.12.80"
         },
         {
             "number": 9,
             "horse": "JOLYDOLE",
-            "description": ""
+            "description": "",
+            "performance": "5.D.9.1.D",
+            "gains": 195020,
+            "trainer": "F BERTRAND",
+            "jockey": "P.PH. PLOQUIN",
+            "driver": "P.PH. PLOQUIN",
+            "owner": "F.BERTRAND",
+            "listed_chrono": "1.12.40"
         },
         {
             "number": 10,
             "horse": "HERMES SMART",
-            "description": ""
+            "description": "",
+            "performance": "D.7.D.1.2",
+            "gains": 203985,
+            "trainer": "J. DUBREIL",
+            "jockey": "J. DUBREIL",
+            "driver": "J. DUBREIL",
+            "owner": "J. DUBREIL",
+            "listed_chrono": "1.12.50"
         },
         {
             "number": 11,
             "horse": "HARIBO DU CARNOIS",
-            "description": ""
+            "description": "",
+            "performance": "D.3.0.0.5",
+            "gains": 225390,
+            "trainer": "E. LAMY",
+            "jockey": "A. LAMY",
+            "driver": "A. LAMY",
+            "owner": "E. LAMY",
+            "listed_chrono": "1.13.60"
         },
         {
             "number": 12,
             "horse": "GUMP DU PONCELET",
-            "description": ""
+            "description": "",
+            "performance": "1.D.1.8.D",
+            "gains": 252540,
+            "trainer": "D. KUMPEN",
+            "jockey": "J.B. LELIEVRE",
+            "driver": "J.B. LELIEVRE",
+            "owner": "D. KUMPEN",
+            "listed_chrono": "1.12.70"
         },
         {
             "number": 13,
             "horse": "ICARE WILLIAMS",
-            "description": ""
+            "description": "",
+            "performance": "2.1.5.D.3",
+            "gains": 254611,
+            "trainer": "M. ABRIVARD",
+            "jockey": "J.ET. ABRIVARD",
+            "driver": "J.ET. ABRIVARD",
+            "owner": "EC.LEOMY",
+            "listed_chrono": "1.10.40"
         },
         {
             "number": 14,
             "horse": "INDIEN DE FONTAINE",
-            "description": ""
+            "description": "",
+            "performance": "6.D.1.2.D",
+            "gains": 256920,
+            "trainer": "P. DANET",
+            "jockey": "E. RAFFIN",
+            "driver": "E. RAFFIN",
+            "owner": "P. DANET",
+            "listed_chrono": "1.11.00"
         },
         {
             "number": 15,
             "horse": "ILEO PIERJI",
-            "description": ""
+            "description": "",
+            "performance": "D.D.D.2.2",
+            "gains": 257935,
+            "trainer": "CH.A. MARY",
+            "jockey": "A. BARRIER",
+            "driver": "A. BARRIER",
+            "owner": "EC. JULIENNE",
+            "listed_chrono": "1.13.00"
         },
         {
             "number": 16,
             "horse": "GOLD D'ECROVILLE",
-            "description": ""
+            "description": "",
+            "performance": "D.D.4.2.5",
+            "gains": 260110,
+            "trainer": "B. MARIE",
+            "jockey": "M. LEGROS",
+            "driver": "M. LEGROS",
+            "owner": "R. JEAN",
+            "listed_chrono": "1.11.10"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             12,

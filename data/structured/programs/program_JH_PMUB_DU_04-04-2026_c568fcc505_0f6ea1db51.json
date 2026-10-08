@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_04-04-2026_c568fcc505_0f6ea1db51.txt",
-    "parsed_at": "2026-10-08T10:35:42.958518Z",
+    "parsed_at": "2026-10-08T23:52:15.656322Z",
     "date": "2026-04-02",
     "race": {
         "race_name": "PRIX KERJACQUES",
@@ -16,69 +16,161 @@
         {
             "number": 1,
             "horse": "KSAR",
-            "description": ""
+            "description": "",
+            "performance": "D.4.2.8.9",
+            "gains": 473250,
+            "trainer": "E. VARIN",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "EC. E. VARIN",
+            "listed_chrono": "1.10.00"
         },
         {
             "number": 2,
             "horse": "JAZZMAN DEBAILLEUL",
-            "description": ""
+            "description": "",
+            "performance": "7.0.0.D.0",
+            "gains": 498130,
+            "trainer": "E. SZIRMAY",
+            "jockey": "E. SZIRMAY",
+            "driver": "E. SZIRMAY",
+            "owner": "E. SZIRMAY",
+            "listed_chrono": "1.11.10"
         },
         {
             "number": 3,
             "horse": "COBRA KILLER GAR",
-            "description": ""
+            "description": "",
+            "performance": "3.D.1.2.1",
+            "gains": 543391,
+            "trainer": "H.E. BONDO",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "IN. DI DIEGO ROMEO",
+            "listed_chrono": "1.09.40"
         },
         {
             "number": 4,
             "horse": "EROS ZOLA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.2.1",
+            "gains": 563476,
+            "trainer": "TH. DUVALDESTIN",
+            "jockey": "THEO DUVALDESTIN",
+            "driver": "THEO DUVALDESTIN",
+            "owner": "CON. ADVISORY",
+            "listed_chrono": "1.09.30"
         },
         {
             "number": 5,
             "horse": "HULYSSE DIGEO",
-            "description": ""
+            "description": "",
+            "performance": "4.5.3.9.4",
+            "gains": 595190,
+            "trainer": "J.W. HALLAIS",
+            "jockey": "J.W. HALLAIS",
+            "driver": "J.W. HALLAIS",
+            "owner": "EC. J.CL. HALLAIS",
+            "listed_chrono": "1.10.30"
         },
         {
             "number": 6,
             "horse": "HANNIBAL TUILERIE",
-            "description": ""
+            "description": "",
+            "performance": "5.D.5.D.5",
+            "gains": 630685,
+            "trainer": "CH.M. BRUNEAU",
+            "jockey": "A. BARRIER",
+            "driver": "A. BARRIER",
+            "owner": "EC.BRUNEAU",
+            "listed_chrono": "1.11.50"
         },
         {
             "number": 7,
             "horse": "IROISE DE LA NOE",
-            "description": ""
+            "description": "",
+            "performance": "1.D.1.9.2",
+            "gains": 658300,
+            "trainer": "TH. LEVESQUE",
+            "jockey": "R. LAMY",
+            "driver": "R. LAMY",
+            "owner": "EC. Thomas LEVESQUE",
+            "listed_chrono": "1.09.40"
         },
         {
             "number": 8,
             "horse": "INO DU LUPIN",
-            "description": ""
+            "description": "",
+            "performance": "1.5.D.2.1",
+            "gains": 857930,
+            "trainer": "J.P. MARMION",
+            "jockey": "A. WIELS",
+            "driver": "A. WIELS",
+            "owner": "EC. J. P. MARMION",
+            "listed_chrono": "1.11.10"
         },
         {
             "number": 9,
             "horse": "JOSH POWER",
-            "description": ""
+            "description": "",
+            "performance": "D.2.0.0.1",
+            "gains": 1151370,
+            "trainer": "S. ERNAULT",
+            "jockey": "S. ERNAULT",
+            "driver": "S. ERNAULT",
+            "owner": "EC. BG TROT",
+            "listed_chrono": "1.09.90"
         },
         {
             "number": 10,
             "horse": "INEXESS BLEU",
-            "description": ""
+            "description": "",
+            "performance": "6.2.1.1.D",
+            "gains": 1274520,
+            "trainer": "L.CL. ABRIVARD",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "M. GALLIER",
+            "listed_chrono": "1.10.30"
         },
         {
             "number": 11,
             "horse": "HOKKAIDO JIEL",
-            "description": ""
+            "description": "",
+            "performance": "D.8.1.4.6",
+            "gains": 1504780,
+            "trainer": "J.L. DERSOIR",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "EC. LUCK",
+            "listed_chrono": "1.09.10"
         },
         {
             "number": 12,
             "horse": "HOOKER BERRY",
-            "description": ""
+            "description": "",
+            "performance": "5.9.6.0.D",
+            "gains": 1849003,
+            "trainer": "Antoine LHERETE",
+            "jockey": "A. LHERETE",
+            "driver": "A. LHERETE",
+            "owner": "M. ALADENISE",
+            "listed_chrono": "1.08.60"
         },
         {
             "number": 13,
             "horse": "IDAO DE TILLARD",
-            "description": ""
+            "description": "",
+            "performance": "7.4.3.6.1",
+            "gains": 2947568,
+            "trainer": "TH. DUVALDESTIN",
+            "jockey": "CL. DUVALDESTIN",
+            "driver": "CL. DUVALDESTIN",
+            "owner": "C. SEVESTRE",
+            "listed_chrono": "1.09.40"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             10,

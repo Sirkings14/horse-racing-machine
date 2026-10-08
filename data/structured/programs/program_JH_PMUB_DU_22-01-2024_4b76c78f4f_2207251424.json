@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_22-01-2024_4b76c78f4f_2207251424.txt",
-    "parsed_at": "2026-10-08T10:35:45.308404Z",
+    "parsed_at": "2026-10-08T23:52:19.023987Z",
     "date": "2024-01-22",
     "race": {
         "race_name": "PRIX EQUIDIA",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "FAN D'APPLE'S",
-            "description": ""
+            "description": "",
+            "performance": "1.9.1.2.1",
+            "gains": 222654,
+            "sex": "H",
+            "age": 9,
+            "trainer": "L.ZULIANI",
+            "jockey": "P.QUINTON",
+            "driver": "P.QUINTON",
+            "owner": "EC. DES M",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "ZUREKIN",
-            "description": ""
+            "description": "",
+            "performance": "A.2.5.9.J",
+            "gains": 265644,
+            "sex": "H",
+            "age": 8,
+            "trainer": "J.REVELEY",
+            "jockey": "L.CARBERRY",
+            "driver": "L.CARBERRY",
+            "owner": "J.FINCH",
+            "weight": 69.5
         },
         {
             "number": 3,
             "horse": "MISHKA DES MOTTES",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.5.5",
+            "gains": 125475,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.CHAILLOLEAU",
+            "jockey": "P&C.PELTIER",
+            "driver": "P&C.PELTIER",
+            "owner": "D.JOSSET/PELTIER",
+            "weight": 69.5
         },
         {
             "number": 4,
             "horse": "JORDANS",
-            "description": ""
+            "description": "",
+            "performance": "2.4.4.1.1",
+            "gains": 44610,
+            "sex": "H",
+            "age": 5,
+            "trainer": "K.NABET",
+            "jockey": "D.MELE",
+            "driver": "D.MELE",
+            "owner": "IKARUSRACING",
+            "weight": 69.0
         },
         {
             "number": 5,
             "horse": "NUMERUS BORGET",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4.A.3",
+            "gains": 115680,
+            "sex": "H",
+            "age": 6,
+            "trainer": "B.LESTRADE",
+            "jockey": "D.SATALIA",
+            "driver": "D.SATALIA",
+            "owner": "J.N.TEMAM/D.SATALIA",
+            "weight": 69.0
         },
         {
             "number": 6,
             "horse": "ABERDEEN STREET",
-            "description": ""
+            "description": "",
+            "performance": "4.1.1.T.A",
+            "gains": 50660,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.ZULIANI",
+            "jockey": "F.NICOLLE",
+            "driver": "F.NICOLLE",
+            "owner": "TH. LOHEST RACING&BRE",
+            "weight": 69.0
         },
         {
             "number": 7,
             "horse": "GET VINGT SEPT",
-            "description": ""
+            "description": "",
+            "performance": "1.A.7.2.1",
+            "gains": 46185,
+            "sex": "H",
+            "age": 8,
+            "trainer": "T.BEAURAIN",
+            "jockey": "F.FOUCHER",
+            "driver": "F.FOUCHER",
+            "owner": "B. FLEURY/P. LABOUE",
+            "weight": 68.5
         },
         {
             "number": 8,
             "horse": "HERMITAGE",
-            "description": ""
+            "description": "",
+            "performance": "3.2.3.1.2",
+            "gains": 124065,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F.GILES",
+            "jockey": "GAB.LEENDERS",
+            "driver": "GAB.LEENDERS",
+            "owner": "EC.M. LYNNE MACLE",
+            "weight": 68.0
         },
         {
             "number": 9,
             "horse": "HYJIE",
-            "description": ""
+            "description": "",
+            "performance": "4.2.1.4.5",
+            "gains": 136895,
+            "sex": "F",
+            "age": 7,
+            "trainer": "G.MEUNIER",
+            "jockey": "I.PACAULT",
+            "driver": "I.PACAULT",
+            "owner": "EC. MIRANDE",
+            "weight": 68.0
         },
         {
             "number": 10,
             "horse": "FREE LORD D'ANJOU",
-            "description": ""
+            "description": "",
+            "performance": "5.6.0.0.7",
+            "gains": 73010,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G.RE",
+            "jockey": "S.DUFRESNE",
+            "driver": "S.DUFRESNE",
+            "owner": "S.DUFRESNE",
+            "weight": 67.0
         },
         {
             "number": 11,
             "horse": "JOSHUA MOON",
-            "description": ""
+            "description": "",
+            "performance": "A.1.5.1.7",
+            "gains": 63810,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.RIOU",
+            "jockey": "P&C.PELTIER",
+            "driver": "P&C.PELTIER",
+            "owner": "J. FINCH/D. MAUGHAN",
+            "weight": 66.5
         },
         {
             "number": 12,
             "horse": "LE LASCAR",
-            "description": ""
+            "description": "",
+            "performance": "3.A.1.1",
+            "gains": 29630,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.GALLON",
+            "jockey": "C.BONIN",
+            "driver": "C.BONIN",
+            "owner": "EC. BERND & TORSTEN RA",
+            "weight": 66.0
         },
         {
             "number": 13,
             "horse": "J'AI LA COTE",
-            "description": ""
+            "description": "",
+            "performance": "3.J.2.2.7",
+            "gains": 70990,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.CHEVILLARD",
+            "jockey": "N.PAYSAN",
+            "driver": "N.PAYSAN",
+            "owner": "D.HUYCK/C.HOGG",
+            "weight": 65.5
         },
         {
             "number": 14,
             "horse": "GILOU JAGUEN",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.A.3",
+            "gains": 52255,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.LEFEBVRE",
+            "jockey": "L.CARBERRY",
+            "driver": "L.CARBERRY",
+            "owner": "J.BENNETT",
+            "weight": 65.0
         },
         {
             "number": 15,
             "horse": "HOTEL DIEU",
-            "description": ""
+            "description": "",
+            "performance": "7.5.5.8.2",
+            "gains": 40200,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G.RICHARD",
+            "jockey": "D.MESLIN",
+            "driver": "D.MESLIN",
+            "owner": "D.MESLIN",
+            "weight": 64.5
         },
         {
             "number": 16,
             "horse": "INVITE DE MARQUE",
-            "description": ""
+            "description": "",
+            "performance": "6.5.3.A.A",
+            "gains": 102100,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "AS.PACAULT",
+            "driver": "AS.PACAULT",
+            "owner": "COLLETTE/DELIBEROS",
+            "weight": 64.5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

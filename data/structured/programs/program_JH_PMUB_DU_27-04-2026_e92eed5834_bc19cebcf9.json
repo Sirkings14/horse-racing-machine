@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_27-04-2026_e92eed5834_bc19cebcf9.txt",
-    "parsed_at": "2026-10-08T10:35:46.052198Z",
+    "parsed_at": "2026-10-08T23:52:20.082816Z",
     "date": "2026-04-25",
     "race": {
         "race_name": "HANDICAP DE BORDEAUX",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "MR FLEURANT",
-            "description": ""
+            "description": "",
+            "performance": "1.1.4.5.0",
+            "gains": 79964,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.WATRIGANT",
+            "jockey": "A.WERLE",
+            "driver": "A.WERLE",
+            "owner": "C.MARCELLIN",
+            "weight": 60.0,
+            "draw": 11
         },
         {
             "number": 2,
             "horse": "CREW DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.6.1",
+            "gains": 321280,
+            "sex": "H",
+            "age": 9,
+            "trainer": "C.BOUTIN",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "EC.NICOLATO",
+            "weight": 59.5,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "LE MATELOT",
-            "description": ""
+            "description": "",
+            "performance": "2.7.6.2.6",
+            "gains": 24890,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D.WATRIGANT",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "COEUR DE GALOP",
+            "weight": 59.5,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "TOIMY SON",
-            "description": ""
+            "description": "",
+            "performance": "2.5.5.1.5",
+            "gains": 245545,
+            "sex": "H",
+            "age": 7,
+            "trainer": "C.HERISSON DE BEAUVOIR",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "MAND. RACING STABLE",
+            "weight": 59.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "GRANDPA CEN",
-            "description": ""
+            "description": "",
+            "performance": "5.1.1.3.3",
+            "gains": 33290,
+            "sex": "M",
+            "age": 4,
+            "trainer": "P.OLA. VALDIVIELSO",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "YEG. CENTURION",
+            "weight": 58.5,
+            "draw": 6
         },
         {
             "number": 6,
             "horse": "APOGEO",
-            "description": ""
+            "description": "",
+            "performance": "0.7.0.3.6",
+            "gains": 69345,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GUARNIERI",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "G.VELLUCCI",
+            "weight": 58.0,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "GEORGES VILLE",
-            "description": ""
+            "description": "",
+            "performance": "8.0.4.5.0",
+            "gains": 75141,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.HERISSON DE BEAUVOIR",
+            "jockey": "C.MERILLE",
+            "driver": "C.MERILLE",
+            "owner": "JR.POWELL",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "ZELMAN",
-            "description": ""
+            "description": "",
+            "performance": "5.5.5.2.0",
+            "gains": 118434,
+            "sex": "H",
+            "age": 5,
+            "trainer": "AS&D.ALLARD",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "AS&D.ALLARD",
+            "weight": 57.5,
+            "draw": 14
         },
         {
             "number": 9,
             "horse": "GENTLEMAN BEAUTY",
-            "description": ""
+            "description": "",
+            "performance": "3.8.6.6.0",
+            "gains": 77499,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.JIMENEZ ALVAREZ",
+            "jockey": "R.SOUSA FERREIRA",
+            "driver": "R.SOUSA FERREIRA",
+            "owner": "E.FERN. DE VEGA",
+            "weight": 57.5,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "SIR CRATER",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.2.0",
+            "gains": 57522,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.GAVILAN",
+            "jockey": "D.SANTIAGO",
+            "driver": "D.SANTIAGO",
+            "owner": "B.SANTIAGO",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 11,
             "horse": "ROMAN FORUM",
-            "description": ""
+            "description": "",
+            "performance": "3.5.0.2.5",
+            "gains": 26108,
+            "sex": "H",
+            "age": 4,
+            "trainer": "CH.GOURDAIN",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "R.NG",
+            "weight": 56.5,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "SOUVENIR D'ECAJEUL",
-            "description": ""
+            "description": "",
+            "performance": "5.8.0.4.0",
+            "gains": 150402,
+            "sex": "M",
+            "age": 5,
+            "trainer": "G.ARIZ.ELOSEGUI",
+            "jockey": "A.GUTIERREZ VAL",
+            "driver": "A.GUTIERREZ VAL",
+            "owner": "HORSES & BERRIES SL",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "GRECIAN STAR",
-            "description": ""
+            "description": "",
+            "performance": "1.0.7.9.1",
+            "gains": 145860,
+            "sex": "M",
+            "age": 6,
+            "trainer": "K.PLISSON",
+            "jockey": "L.PLOMMEE",
+            "driver": "L.PLOMMEE",
+            "owner": "F.CHARBIT",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 14,
             "horse": "GOLUPTIOUS",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.5.5",
+            "gains": 70251,
+            "sex": "M",
+            "age": 5,
+            "trainer": "A.MACEDO DA SILVA",
+            "jockey": "P.REMOUE",
+            "driver": "P.REMOUE",
+            "owner": "AJ.SILVA SOARES",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "MIKEY",
-            "description": ""
+            "description": "",
+            "performance": "0.0.6.4.6",
+            "gains": 47856,
+            "sex": "M",
+            "age": 4,
+            "trainer": "AJ.BAPT. RIB. DE ABREU",
+            "jockey": "M.FOREST",
+            "driver": "M.FOREST",
+            "owner": "J.DA SIL. RIB. CARDOSO",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 16,
             "horse": "WELLINGTON PREMIER",
-            "description": ""
+            "description": "",
+            "performance": "8.2.2.0.3",
+            "gains": 45874,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.ALONSO ROLDAN",
+            "jockey": "S.LE QUILLEUC",
+            "driver": "S.LE QUILLEUC",
+            "owner": "CUA. RIO CUBAS",
+            "weight": 55.0,
+            "draw": 4
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

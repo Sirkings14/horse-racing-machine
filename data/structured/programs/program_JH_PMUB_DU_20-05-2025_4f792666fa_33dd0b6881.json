@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_20-05-2025_4f792666fa_33dd0b6881.txt",
-    "parsed_at": "2026-10-08T10:35:45.085827Z",
+    "parsed_at": "2026-10-08T23:52:18.697452Z",
     "date": "2025-05-20",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "SPLENDINO",
-            "description": ""
+            "description": "",
+            "performance": "2.0.3.0.2",
+            "gains": 109850,
+            "sex": "H",
+            "age": 5,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "JC.SEROUL",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "DIAMOND VENDOME",
-            "description": ""
+            "description": "",
+            "performance": "0.7.5.0.2",
+            "gains": 398484,
+            "sex": "H",
+            "age": 10,
+            "trainer": "CH.PLISSON",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "CH.PLISSON",
+            "weight": 60.0,
+            "draw": 1
         },
         {
             "number": 3,
             "horse": "RAGNAR CITY",
-            "description": ""
+            "description": "",
+            "performance": "4.6.9.7.1",
+            "gains": 43430,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.COUETIL",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "SC TH. PIGEON",
+            "weight": 59.0,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "MOOR MALPIC",
-            "description": ""
+            "description": "",
+            "performance": "8.7.3.8.4",
+            "gains": 47000,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BRASME",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "P.PASQUET",
+            "weight": 58.5,
+            "draw": 16
         },
         {
             "number": 5,
             "horse": "O'WOOD",
-            "description": ""
+            "description": "",
+            "performance": "2.4.3.2.1",
+            "gains": 66250,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.LIBAUD",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "LES GALOPINS",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 6,
             "horse": "VERITABLE",
-            "description": ""
+            "description": "",
+            "performance": "4.4.0.1.0",
+            "gains": 99680,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.GAVILAN",
+            "jockey": "G.GUEDJ-GAY",
+            "driver": "G.GUEDJ-GAY",
+            "owner": "L.MOUTOUSSAMY",
+            "weight": 58.0,
+            "draw": 6
         },
         {
             "number": 7,
             "horse": "COLGAN SENORA",
-            "description": ""
+            "description": "",
+            "performance": "9.2.1",
+            "gains": 11750,
+            "sex": "H",
+            "age": 4,
+            "trainer": "Y.BARBEROT",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "EC. HS DES SENORA",
+            "weight": 57.0,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "DJHANSY",
-            "description": ""
+            "description": "",
+            "performance": "8.8.4.2.0",
+            "gains": 25450,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.COUETIL",
+            "jockey": "O.ANDIGNE",
+            "driver": "O.ANDIGNE",
+            "owner": "JJ.HAMON",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 9,
             "horse": "MOTION",
-            "description": ""
+            "description": "",
+            "performance": "1.0.1.5.3",
+            "gains": 22000,
+            "sex": "H",
+            "age": 5,
+            "trainer": "H.GREWE",
+            "jockey": "L.WOLFF",
+            "driver": "L.WOLFF",
+            "owner": "D.CENGIZ",
+            "weight": 56.5,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "GET SET",
-            "description": ""
+            "description": "",
+            "performance": "2.4.0.3.9",
+            "gains": 197950,
+            "sex": "H",
+            "age": 8,
+            "trainer": "L.GADBIN",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "C.VIDEMENT",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 11,
             "horse": "NEPALAIS",
-            "description": ""
+            "description": "",
+            "performance": "0.1.0.3.7",
+            "gains": 176540,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F.CHAPPET",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "A.GILIBERT",
+            "weight": 55.5,
+            "draw": 7
         },
         {
             "number": 12,
             "horse": "EQUUS VINCIT",
-            "description": ""
+            "description": "",
+            "performance": "4.6.3.7.2",
+            "gains": 117545,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E.LIBAUD",
+            "jockey": "L.ROUSSEL",
+            "driver": "L.ROUSSEL",
+            "owner": "T.JOIRE",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 13,
             "horse": "MIYALAA",
-            "description": ""
+            "description": "",
+            "performance": "0.0.2.5.9",
+            "gains": 39750,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "EC.VICT. DREAMS",
+            "weight": 54.5,
+            "draw": 13
         },
         {
             "number": 14,
             "horse": "XILOFONO",
-            "description": ""
+            "description": "",
+            "performance": "6.3.1.2.1",
+            "gains": 54290,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.ARIZK. ELOSEGUI",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "A.GARCIA FERRER",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "REVALITE",
-            "description": ""
+            "description": "",
+            "performance": "2.0.0.0.0",
+            "gains": 44620,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.GADBIN",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "J.BERTHELOT",
+            "weight": 54.0,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "MASAIYA",
-            "description": ""
+            "description": "",
+            "performance": "3.4.1.2.6",
+            "gains": 34770,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.KARKOSA",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "F.KAHRAMAN",
+            "weight": 54.0,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             5,

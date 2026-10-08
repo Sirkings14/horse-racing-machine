@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-04-09-2025_1d3e8d985b_cb19d9af2c.txt",
-    "parsed_at": "2026-10-08T10:35:39.794616Z",
+    "parsed_at": "2026-10-08T23:52:11.169029Z",
     "date": "2025-09-04",
     "race": {
         "race_name": "PRIX DE LA GALERIE DES V ARIÉTÉS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LAITH",
-            "description": ""
+            "description": "",
+            "performance": "3.8.1.1.0",
+            "gains": 82642,
+            "sex": "M",
+            "age": 3,
+            "trainer": "J.REYNIER",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "SANG. BLOODSTOCK.LTD",
+            "weight": 60.0,
+            "draw": 16
         },
         {
             "number": 2,
             "horse": "RASTRELLARE",
-            "description": ""
+            "description": "",
+            "performance": "1.6.7.1.1",
+            "gains": 51450,
+            "sex": "H",
+            "age": 3,
+            "trainer": "J.SOUDAN",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "AG.KAVANAGH",
+            "weight": 60.0,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "DROPSHOT",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.3.2",
+            "gains": 41750,
+            "sex": "H",
+            "age": 3,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "WATHNAN. RACING",
+            "weight": 59.0,
+            "draw": 1
         },
         {
             "number": 4,
             "horse": "ACTO",
-            "description": ""
+            "description": "",
+            "performance": "0.2.1.6.7",
+            "gains": 54482,
+            "sex": "H",
+            "age": 3,
+            "trainer": "F.CHAPPET",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "L.MINEO",
+            "weight": 57.5,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "OUT OF AFRICA",
-            "description": ""
+            "description": "",
+            "performance": "4.5.1.2.2",
+            "gains": 60810,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J.BOISNARD",
+            "jockey": "H.LEBOUC",
+            "driver": "H.LEBOUC",
+            "owner": "ELEVAGE. P.LEVESQUE",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "PRINCE AUBOIS",
-            "description": ""
+            "description": "",
+            "performance": "7.8.0.4.1",
+            "gains": 50156,
+            "sex": "H",
+            "age": 3,
+            "trainer": "S.PENOT",
+            "jockey": "J.MOUTARD",
+            "driver": "J.MOUTARD",
+            "owner": "C.PENOT",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 7,
             "horse": "SWOLLEN SHOOT",
-            "description": ""
+            "description": "",
+            "performance": "0.5.4.4.2",
+            "gains": 33600,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.DEL.SANCHEZ",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "B.VAN DALFSEN",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 8,
             "horse": "NOFIX",
-            "description": ""
+            "description": "",
+            "performance": "3.5.5.2.2",
+            "gains": 41679,
+            "sex": "H",
+            "age": 3,
+            "trainer": "ED.MONFORT",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "WERTHEIMER & FRERE",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 9,
             "horse": "MELLOW YELLOW",
-            "description": ""
+            "description": "",
+            "performance": "6.0.1.0.3",
+            "gains": 46974,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.WATTEL",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "I.CORBANI",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "O SOLE MIO",
-            "description": ""
+            "description": "",
+            "performance": "4.4.0.7.3",
+            "gains": 42220,
+            "sex": "H",
+            "age": 3,
+            "trainer": "PIER.MENARD",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "SARL GROUPE KR",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "DREAM OP FAL",
-            "description": ""
+            "description": "",
+            "performance": "3.1.9.1.4",
+            "gains": 37465,
+            "sex": "M",
+            "age": 3,
+            "trainer": "G.HERNON",
+            "jockey": "B.MARIE",
+            "driver": "B.MARIE",
+            "owner": "FAL STUD SAS",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "HEMEVEZ",
-            "description": ""
+            "description": "",
+            "performance": "5.0.0.5.1",
+            "gains": 29936,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.DEL.SANCHEZ",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "LC.OLIV.FERNANDES",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "LICHTSTERN",
-            "description": ""
+            "description": "",
+            "performance": "0.5.1.3.5",
+            "gains": 24955,
+            "sex": "H",
+            "age": 3,
+            "trainer": "W.HICKST",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "ST GOLD. STERN",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 14,
             "horse": "LOVER SONG",
-            "description": ""
+            "description": "",
+            "performance": "9.1.T.8.5",
+            "gains": 31350,
+            "sex": "M",
+            "age": 3,
+            "trainer": "S.LABATE",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "L.MIRTO",
+            "weight": 55.5,
+            "draw": 2
         },
         {
             "number": 15,
             "horse": "JOVIALITE",
-            "description": ""
+            "description": "",
+            "performance": "8.2.4.6.1",
+            "gains": 25400,
+            "sex": "F",
+            "age": 3,
+            "trainer": "PE.DUBOIS",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "EC. COURANT FRANCE",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "SEND WOOD",
-            "description": ""
+            "description": "",
+            "performance": "0.3.7.6.2",
+            "gains": 43344,
+            "sex": "F",
+            "age": 3,
+            "trainer": "G.FOURRIER",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "EC. R.E.",
+            "weight": 55.0,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

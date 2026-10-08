@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-23-12-2025_0efd91715f_baf03efe28.txt",
-    "parsed_at": "2026-10-08T10:35:41.680675Z",
+    "parsed_at": "2026-10-08T23:52:13.884817Z",
     "date": "2025-12-23",
     "race": {
         "race_name": "PRIX DE GIVERNY",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CELESTIAL",
-            "description": ""
+            "description": "",
+            "performance": "1.0.0.4.9",
+            "gains": 59031,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "A. DU MONDE ENTIER",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 2,
             "horse": "CICCIO BOY",
-            "description": ""
+            "description": "",
+            "performance": "7.8.5.7.8",
+            "gains": 284643,
+            "sex": "M",
+            "age": 7,
+            "trainer": "M.JUSTUM",
+            "jockey": "M.JUSTUM",
+            "driver": "M.JUSTUM",
+            "owner": "JM.ANGLES",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "RUSSIPANT FAL",
-            "description": ""
+            "description": "",
+            "performance": "3.2.5.1.0",
+            "gains": 224763,
+            "sex": "M",
+            "age": 6,
+            "trainer": "N.CAULLERY",
+            "jockey": "P.BAZIRE",
+            "driver": "P.BAZIRE",
+            "owner": "T.KEREFOFF",
+            "weight": 58.5,
+            "draw": 7
         },
         {
             "number": 4,
             "horse": "LOVE IS GOLD",
-            "description": ""
+            "description": "",
+            "performance": "3.1.5.3.1",
+            "gains": 114208,
+            "sex": "H",
+            "age": 5,
+            "trainer": "PER.MENARD",
+            "jockey": "Y.ROUSSET",
+            "driver": "Y.ROUSSET",
+            "owner": "SARL GROUPE KR",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "DARI RIVER",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.5.7",
+            "gains": 83926,
+            "sex": "F",
+            "age": 4,
+            "trainer": "Y.BARBEROT",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "R.SHEPARD",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "ZVAROSHKA",
-            "description": ""
+            "description": "",
+            "performance": "0.6.6.4.1",
+            "gains": 108444,
+            "sex": "F",
+            "age": 5,
+            "trainer": "S.WATTEL",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "A.JATHIERE",
+            "weight": 58.0,
+            "draw": 16
         },
         {
             "number": 7,
             "horse": "DIVIDE AND RULE",
-            "description": ""
+            "description": "",
+            "performance": "7.4.2.5.6",
+            "gains": 85342,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JP.GAUVIN",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "J.ROHR",
+            "weight": 57.5,
+            "draw": 3
         },
         {
             "number": 8,
             "horse": "ZELMAN",
-            "description": ""
+            "description": "",
+            "performance": "5.6.5.2.5",
+            "gains": 111602,
+            "sex": "H",
+            "age": 4,
+            "trainer": "AS&D.ALLARD",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "AS&D.AS&D.ALLARD",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 9,
             "horse": "SOUS LA NEIGE",
-            "description": ""
+            "description": "",
+            "performance": "7.9.7.4.0",
+            "gains": 87407,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.HERNON",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "A.DON/D.MACAULIFFE",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 10,
             "horse": "CENTRAL PARK WEST",
-            "description": ""
+            "description": "",
+            "performance": "3.6.2.1.0",
+            "gains": 319448,
+            "sex": "H",
+            "age": 7,
+            "trainer": "JUL .PHELIPPON",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "HORSEMOOD",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "ALLURRE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.0.5.9",
+            "gains": 130786,
+            "sex": "F",
+            "age": 6,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "M.RISI/JC.RAVIER",
+            "weight": 56.0,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "AQUILA VOLANTE",
-            "description": ""
+            "description": "",
+            "performance": "5.0.1.5.7",
+            "gains": 90232,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.PANNIER",
+            "jockey": "L.ROUSSEL",
+            "driver": "L.ROUSSEL",
+            "owner": "J.MAHIQUES",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 13,
             "horse": "SIYOUKING",
-            "description": ""
+            "description": "",
+            "performance": "2.4.6.0.1",
+            "gains": 68819,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.ROHAUT",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "S.BOUCHERON",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 14,
             "horse": "SOEUR",
-            "description": ""
+            "description": "",
+            "performance": "2.8.1.7.3",
+            "gains": 49912,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "JL.PARIENTE",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 15,
             "horse": "GAILLARD",
-            "description": ""
+            "description": "",
+            "performance": "9.4.6.1.2",
+            "gains": 72816,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.BARON",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "J.VAUTRIN",
+            "weight": 53.5,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "BRAMANS",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.8.9",
+            "gains": 63822,
+            "sex": "H",
+            "age": 4,
+            "trainer": "HA.PANTALL",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "C.CAPOCASALE",
+            "weight": 52.5,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

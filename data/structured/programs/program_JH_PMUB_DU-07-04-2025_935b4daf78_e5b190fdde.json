@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-07-04-2025_935b4daf78_e5b190fdde.txt",
-    "parsed_at": "2026-10-08T10:35:40.079991Z",
+    "parsed_at": "2026-10-08T23:52:11.577091Z",
     "date": "2025-04-07",
     "race": {
         "race_name": "PRIX DE LA ROCHELLE",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "JINGLE DENUO",
-            "description": ""
+            "description": "",
+            "performance": "8.1.6.1.9",
+            "gains": 144510,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.RIOU",
+            "jockey": "J.DELAUNAY",
+            "driver": "J.DELAUNAY",
+            "owner": "L.DENUAULT",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "IL Y A",
-            "description": ""
+            "description": "",
+            "performance": "2.T.2.T.2",
+            "gains": 131670,
+            "sex": "F",
+            "age": 5,
+            "trainer": "K.DUBOURG",
+            "jockey": "LAGENESTE & MACAIRE",
+            "driver": "LAGENESTE & MACAIRE",
+            "owner": "EC.H. ET P. PIL",
+            "weight": 72.0
         },
         {
             "number": 3,
             "horse": "CELTIC WARRIOR",
-            "description": ""
+            "description": "",
+            "performance": "5.4.1.5.2",
+            "gains": 69955,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.ZULIANI",
+            "jockey": "SOURD. DE BEAUREGARD",
+            "driver": "SOURD. DE BEAUREGARD",
+            "owner": "H.DEVIN",
+            "weight": 71.0
         },
         {
             "number": 4,
             "horse": "ALERIC",
-            "description": ""
+            "description": "",
+            "performance": "3.6.1.0.2",
+            "gains": 77475,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.BEAURAIN",
+            "jockey": "F.FOUCHER",
+            "driver": "F.FOUCHER",
+            "owner": "EC. R.E.",
+            "weight": 71.0
         },
         {
             "number": 5,
             "horse": "JANE DE LA BRUNIE",
-            "description": ""
+            "description": "",
+            "performance": "4.1.7.1.2",
+            "gains": 167725,
+            "sex": "F",
+            "age": 6,
+            "trainer": "L.ZULIANI",
+            "jockey": "LAGENESTE & MACAIRE",
+            "driver": "LAGENESTE & MACAIRE",
+            "owner": "J.CROUZILLAC",
+            "weight": 71.0
         },
         {
             "number": 6,
             "horse": "GIACOSA",
-            "description": ""
+            "description": "",
+            "performance": "1.2.7.0.3",
+            "gains": 67082,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "N. GEORGE & A. ZETTERHOLM",
+            "driver": "N. GEORGE & A. ZETTERHOLM",
+            "owner": "N.HALSALL",
+            "weight": 71.0
         },
         {
             "number": 7,
             "horse": "FILE AU POTEAU",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.1.8",
+            "gains": 173820,
+            "sex": "H",
+            "age": 7,
+            "trainer": "L.PHILIPPERON",
+            "jockey": "M.ROLLAND",
+            "driver": "M.ROLLAND",
+            "owner": "H.DEVIN",
+            "weight": 70.0
         },
         {
             "number": 8,
             "horse": "KIROGA",
-            "description": ""
+            "description": "",
+            "performance": "7.6.7.1.1",
+            "gains": 76905,
+            "sex": "F",
+            "age": 5,
+            "trainer": "O.JOUIN",
+            "jockey": "SOURD. DE BEAUREGARD",
+            "driver": "SOURD. DE BEAUREGARD",
+            "owner": "C.BAEYENS",
+            "weight": 69.5
         },
         {
             "number": 9,
             "horse": "STERNKRANZ",
-            "description": ""
+            "description": "",
+            "performance": "A.3.9.1.0",
+            "gains": 248435,
+            "sex": "H",
+            "age": 11,
+            "trainer": "J.BARTOS",
+            "jockey": "J.VANA JR",
+            "driver": "J.VANA JR",
+            "owner": "SCU. AICHNER",
+            "weight": 69.0
         },
         {
             "number": 10,
             "horse": "KINGPARK",
-            "description": ""
+            "description": "",
+            "performance": "6.1.2.2.1",
+            "gains": 63345,
+            "sex": "H",
+            "age": 5,
+            "trainer": "J.REVELEY",
+            "jockey": "JPH .DUBOIS",
+            "driver": "JPH .DUBOIS",
+            "owner": "V.DUBOIS",
+            "weight": 68.5
         },
         {
             "number": 11,
             "horse": "INSIDE MONTLIOUX",
-            "description": ""
+            "description": "",
+            "performance": "2.4.1.5.0",
+            "gains": 304233,
+            "sex": "H",
+            "age": 8,
+            "trainer": "T.CHEVILLARD",
+            "jockey": "BR.BEAUNEZ",
+            "driver": "BR.BEAUNEZ",
+            "owner": "C.BEAUNEZ",
+            "weight": 68.0
         },
         {
             "number": 12,
             "horse": "IORANA VALLIS",
-            "description": ""
+            "description": "",
+            "performance": "6.1.A.9.8",
+            "gains": 195140,
+            "sex": "F",
+            "age": 7,
+            "trainer": "D.THOMAS",
+            "jockey": "L.CARBERRY",
+            "driver": "L.CARBERRY",
+            "owner": "AN.DUTERTRE",
+            "weight": 68.0
         },
         {
             "number": 13,
             "horse": "KEED D'AMIS",
-            "description": ""
+            "description": "",
+            "performance": "6.8.4.1.9",
+            "gains": 68640,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.RE",
+            "jockey": "CHAILLE-CHAILLE & PAMART",
+            "driver": "CHAILLE-CHAILLE & PAMART",
+            "owner": "L.TROTIGNON",
+            "weight": 68.0
         },
         {
             "number": 14,
             "horse": "HIPSTER PARADISE",
-            "description": ""
+            "description": "",
+            "performance": "2.0.8.4.T",
+            "gains": 157935,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A.CHESNEAU",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "SCEA DES SENS",
+            "weight": 68.0
         },
         {
             "number": 15,
             "horse": "DREAMMY BELL",
-            "description": ""
+            "description": "",
+            "performance": "T.1.5.6.A",
+            "gains": 99130,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F.GILES",
+            "jockey": "P.QUINTON",
+            "driver": "P.QUINTON",
+            "owner": "EC. DES DUNES",
+            "weight": 68.0
         },
         {
             "number": 16,
             "horse": "INSTAR DE REVE",
-            "description": ""
+            "description": "",
+            "performance": "A.3.8.5.8",
+            "gains": 176435,
+            "sex": "H",
+            "age": 7,
+            "trainer": "T.ANDRIEUX",
+            "jockey": "N. GEORGE & A. ZETTERHOLM",
+            "driver": "N. GEORGE & A. ZETTERHOLM",
+            "owner": "EC. HIGH HEELS RACING",
+            "weight": 66.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

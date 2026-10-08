@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-26_-12-2023_7f4646bc90_a6fa8b23c7.txt",
-    "parsed_at": "2026-10-08T10:35:42.059376Z",
+    "parsed_at": "2026-10-08T23:52:14.415754Z",
     "date": "2023-12-26",
     "race": {
         "race_name": "PRIX DE LA SUISSE NORMANDE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "BAILEYS BLUES",
-            "description": ""
+            "description": "",
+            "performance": "1.3.0.0.2",
+            "gains": 147805,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.CRASTUS",
+            "jockey": "JV.TOUX",
+            "driver": "JV.TOUX",
+            "owner": "G.R. BAILEY LTD",
+            "weight": 61.0,
+            "draw": 4
         },
         {
             "number": 2,
             "horse": "ZAYA DE LA PLATA",
-            "description": ""
+            "description": "",
+            "performance": "0.1.7.1.1",
+            "gains": 115245,
+            "sex": "F",
+            "age": 6,
+            "trainer": "T.BLANCHOUIN",
+            "jockey": "J.BOISNARD",
+            "driver": "J.BOISNARD",
+            "owner": "T.TAILLEUR",
+            "weight": 61.0,
+            "draw": 11
         },
         {
             "number": 3,
             "horse": "PEDRITO",
-            "description": ""
+            "description": "",
+            "performance": "9.1.3.6.2",
+            "gains": 150990,
+            "sex": "H",
+            "age": 4,
+            "trainer": "L.ROUSSEAU",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "HA.PANTALL",
+            "weight": 60.0,
+            "draw": 8
         },
         {
             "number": 4,
             "horse": "PTIT PEDRO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.4.2",
+            "gains": 74030,
+            "sex": "M",
+            "age": 4,
+            "trainer": "H.LEBOUC",
+            "jockey": "J.BOISNARD",
+            "driver": "J.BOISNARD",
+            "owner": "A.PRUDENT",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "INVESTISSEUR",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.2.4",
+            "gains": 78010,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "S.GRANDIN",
+            "weight": 57.0,
+            "draw": 16
         },
         {
             "number": 6,
             "horse": "SAHARA SPRING",
-            "description": ""
+            "description": "",
+            "performance": "2.6.6.6.4",
+            "gains": 49350,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "I.CORBANI",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "MAGIC VATI",
-            "description": ""
+            "description": "",
+            "performance": "6.4.9.7.4",
+            "gains": 157282,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.DELALANDE",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "S.WATTEL",
+            "weight": 56.5,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "FREJA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.6.6.2",
+            "gains": 66770,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.PLANQUE",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.GILIBERT",
+            "weight": 56.0,
+            "draw": 1
         },
         {
             "number": 9,
             "horse": "TORPEN",
-            "description": ""
+            "description": "",
+            "performance": "0.7.0.0.0",
+            "gains": 244230,
+            "sex": "H",
+            "age": 6,
+            "trainer": "H.BESNIER",
+            "jockey": "R.SCHOOF",
+            "driver": "R.SCHOOF",
+            "owner": "R.SCHOOF",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "MAJOR OAK",
-            "description": ""
+            "description": "",
+            "performance": "6.4.2.9.5",
+            "gains": 41070,
+            "sex": "H",
+            "age": 3,
+            "trainer": "D.BOCHE",
+            "jockey": "L.GADBIN",
+            "driver": "L.GADBIN",
+            "owner": "EC.LOUIS D'AUR",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 11,
             "horse": "CREW DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "8.2.6.3.5",
+            "gains": 132807,
+            "sex": "H",
+            "age": 6,
+            "trainer": "P.CHEYER",
+            "jockey": "A.FOUASSIER",
+            "driver": "A.FOUASSIER",
+            "owner": "VDA TRAN. SOLUTIONS",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 12,
             "horse": "KIZMAMBO",
-            "description": ""
+            "description": "",
+            "performance": "3.1.6.2.6",
+            "gains": 35950,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "P.DECOUZ",
+            "driver": "P.DECOUZ",
+            "owner": "EC. GRIEZMANN",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 13,
             "horse": "CHARLOTTE BAY",
-            "description": ""
+            "description": "",
+            "performance": "9.1.2.5.7",
+            "gains": 33190,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MOSSE",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "SUC. O'REILLY",
+            "weight": 55.5,
+            "draw": 6
         },
         {
             "number": 14,
             "horse": "FEEL YOUR POWER",
-            "description": ""
+            "description": "",
+            "performance": "7.4.0.5.0",
+            "gains": 64350,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "G.KERN",
+            "weight": 55.5,
+            "draw": 13
         },
         {
             "number": 15,
             "horse": "TERRITORYWAR",
-            "description": ""
+            "description": "",
+            "performance": "7.5.6.0.1",
+            "gains": 43020,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "CU. MEDITERRANEO",
+            "weight": 54.0,
+            "draw": 12
         },
         {
             "number": 16,
             "horse": "DJENNE",
-            "description": ""
+            "description": "",
+            "performance": "0.6.2.1.1",
+            "gains": 41075,
+            "sex": "F",
+            "age": 3,
+            "trainer": "R.MANGIONE",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "A.GRAY",
+            "weight": 53.5,
+            "draw": 7
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

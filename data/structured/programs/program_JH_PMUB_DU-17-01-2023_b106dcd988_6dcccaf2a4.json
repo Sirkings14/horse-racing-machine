@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-17-01-2023_b106dcd988_6dcccaf2a4.txt",
-    "parsed_at": "2026-10-08T10:35:41.051831Z",
+    "parsed_at": "2026-10-08T23:52:12.978549Z",
     "date": "2023-01-15",
     "race": {
         "race_name": "PRIX DE BRIONNE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "KILIMANJARO",
-            "description": ""
+            "description": "",
+            "performance": "1.5.4.5.4",
+            "gains": 118435,
+            "sex": "M",
+            "age": 6,
+            "trainer": "R. BAKKER",
+            "jockey": "P. HAGOORT",
+            "driver": "P. HAGOORT",
+            "owner": "Léo SCHALKOORT",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "GRINGO SAVA",
-            "description": ""
+            "description": "",
+            "performance": "8.D.4.4.3",
+            "gains": 124960,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. NIVARD",
+            "jockey": "JULIEN RAFFESTIN",
+            "driver": "JULIEN RAFFESTIN",
+            "owner": "A. HODENT",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "DEVS DEFINITIF",
-            "description": ""
+            "description": "",
+            "performance": "5.D.4.2.3",
+            "gains": 125734,
+            "sex": "M",
+            "age": 6,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "T. MALMQVIST",
+            "driver": "T. MALMQVIST",
+            "owner": "Stall FAGELSJO HB",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "MATEO DE REVE",
-            "description": ""
+            "description": "",
+            "performance": "2.D.1.2.2",
+            "gains": 128978,
+            "sex": "M",
+            "age": 7,
+            "trainer": "D. THOMAIN",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "Y. DESMET",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "HERADAMES",
-            "description": ""
+            "description": "",
+            "performance": "2.8.5.2.4",
+            "gains": 141300,
+            "sex": "M",
+            "age": 6,
+            "trainer": "CL. THOMAIN",
+            "jockey": "CL. THOMAIN",
+            "driver": "CL. THOMAIN",
+            "owner": "EC. J.P. BARJON",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "GUI D'ERABLE",
-            "description": ""
+            "description": "",
+            "performance": "D.1.6.6.7",
+            "gains": 143120,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "CL. THOMAIN",
+            "driver": "CL. THOMAIN",
+            "owner": "EC. du HS. D'ERABLE",
+            "listed_chrono": "1.12.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "GENERAL DE LOIRON",
-            "description": ""
+            "description": "",
+            "performance": "6.0.4.0.2",
+            "gains": 147000,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. LAGADEUC",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "J. COTTEL",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "HECTOR DES CHAMPS",
-            "description": ""
+            "description": "",
+            "performance": "D.0.0.6.0",
+            "gains": 157030,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A. ABRIVARD",
+            "jockey": "B. BOURGOIN",
+            "driver": "B. BOURGOIN",
+            "owner": "M. AGOSTINI",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "HOBBES",
-            "description": ""
+            "description": "",
+            "performance": "D.8.D.D.D",
+            "gains": 158690,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "Frédéric POPOT",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "ZINKO TOP",
-            "description": ""
+            "description": "",
+            "performance": "5.4.D.6.3",
+            "gains": 160687,
+            "sex": "M",
+            "age": 8,
+            "trainer": "D. LOCQUENEUX",
+            "jockey": "A. GOCCIADORO",
+            "driver": "A. GOCCIADORO",
+            "owner": "S. IOVENE",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "GINO VIVA",
-            "description": ""
+            "description": "",
+            "performance": "3.6.2.1.3",
+            "gains": 164170,
+            "sex": "H",
+            "age": 7,
+            "trainer": "J.W. HALLAIS",
+            "jockey": "D. LOCQUENEUX",
+            "driver": "D. LOCQUENEUX",
+            "owner": "Anna KARLSSON",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "HULYSSE DIGEO",
-            "description": ""
+            "description": "",
+            "performance": "1.6.2.5.1",
+            "gains": 168720,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G. GELORMINI",
+            "jockey": "J.W. HALLAIS",
+            "driver": "J.W. HALLAIS",
+            "owner": "EC. J.CL. HALLAIS",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "GARDNER SHAW",
-            "description": ""
+            "description": "",
+            "performance": "0.0.6.3.2",
+            "gains": 169209,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. LAMY",
+            "jockey": "J. WESTHOLM",
+            "driver": "J. WESTHOLM",
+            "owner": "Stall COURANT",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 14,
             "horse": "M.T.OSCAR",
-            "description": ""
+            "description": "",
+            "performance": "0.5.1.5.D",
+            "gains": 169513,
+            "sex": "M",
+            "age": 7,
+            "trainer": "E. RAFFIN",
+            "jockey": "T. MALMQVIST",
+            "driver": "T. MALMQVIST",
+            "owner": "Stall HYGGLO",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 15,
             "horse": "HARMONIOUSLY",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.0.4",
+            "gains": 174160,
+            "sex": "H",
+            "age": 6,
+            "trainer": "B. GOOP",
+            "jockey": "A. RIPOLL RIGO",
+            "driver": "A. RIPOLL RIGO",
+            "owner": "M. BOUCHAKOUR",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 16,
             "horse": "SAM THE MAN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.1.1",
+            "gains": 174193,
+            "sex": "M",
+            "age": 8,
+            "trainer": "JULIEN RAFFESTIN",
+            "jockey": "B. GOOP",
+            "driver": "B. GOOP",
+            "owner": "Stall HOLT RACING",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

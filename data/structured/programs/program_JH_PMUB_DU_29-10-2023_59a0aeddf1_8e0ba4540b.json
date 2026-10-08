@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_29-10-2023_59a0aeddf1_8e0ba4540b.txt",
-    "parsed_at": "2026-10-08T10:35:46.382806Z",
+    "parsed_at": "2026-10-08T23:52:20.571859Z",
     "date": "2023-10-29",
     "race": {
         "race_name": "PRIX RIEUSSEC",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ALWAYS WELCOME",
-            "description": ""
+            "description": "",
+            "performance": "3.6.5.4.2",
+            "gains": 167700,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.GUYON",
+            "jockey": "L.BAUDRON",
+            "driver": "L.BAUDRON",
+            "owner": "L.BAUDRON",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "MY CHARMING PRINCE",
-            "description": ""
+            "description": "",
+            "performance": "9.2.6.3.3",
+            "gains": 189230,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M.GRANDIN",
+            "jockey": "R.FRADET",
+            "driver": "R.FRADET",
+            "owner": "S.GRANDIN",
+            "weight": 57.0,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "DECBOU",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.5.6",
+            "gains": 151712,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.VELON",
+            "jockey": "F.FORESI",
+            "driver": "F.FORESI",
+            "owner": "N.CARRIE-EYCHENNE",
+            "weight": 57.0,
+            "draw": 5
         },
         {
             "number": 4,
             "horse": "WOOT CITY",
-            "description": ""
+            "description": "",
+            "performance": "0.4.2.1.8",
+            "gains": 148221,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "L.DISARO",
+            "weight": 56.5,
+            "draw": 7
         },
         {
             "number": 5,
             "horse": "MYKISS",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.2.9",
+            "gains": 164009,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "G.BATISTIC",
+            "driver": "G.BATISTIC",
+            "owner": "STALL SIMCA",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "BLUES ROCK",
-            "description": ""
+            "description": "",
+            "performance": "5.0.3.7.1",
+            "gains": 56800,
+            "sex": "M",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "J.CYGLER",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 7,
             "horse": "UTAMARO",
-            "description": ""
+            "description": "",
+            "performance": "3.3.5.2.3",
+            "gains": 160130,
+            "sex": "M",
+            "age": 5,
+            "trainer": "M.FOREST",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "STALL CIMBA",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "MATAURI GOLD",
-            "description": ""
+            "description": "",
+            "performance": "0.2.7.6.4",
+            "gains": 46480,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F.VERON",
+            "jockey": "M.BRASME",
+            "driver": "M.BRASME",
+            "owner": "EC.TYGALY",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "BERKANE",
-            "description": ""
+            "description": "",
+            "performance": "0.6.3.2.4",
+            "gains": 104430,
+            "sex": "M",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "EC.PANDORA RACING",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 10,
             "horse": "SAINT GERAN",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.4.7",
+            "gains": 53245,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "A.WATTEL",
+            "driver": "A.WATTEL",
+            "owner": "EC.J.P. MICHOLET",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "LORNE",
-            "description": ""
+            "description": "",
+            "performance": "6.3.5.1.6",
+            "gains": 66310,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "M.BARATTI",
+            "driver": "M.BARATTI",
+            "owner": "OTI MANAG. PTY LTD",
+            "weight": 54.5,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "PALAIMON",
-            "description": ""
+            "description": "",
+            "performance": "7.0.6.1.0",
+            "gains": 43860,
+            "sex": "M",
+            "age": 6,
+            "trainer": "R.MANGIONE",
+            "jockey": "M.MUNCH",
+            "driver": "M.MUNCH",
+            "owner": "E.SCHWAIGER",
+            "weight": 54.5,
+            "draw": 11
         },
         {
             "number": 13,
             "horse": "HOMO DEUS",
-            "description": ""
+            "description": "",
+            "performance": "0.8.0.6.8",
+            "gains": 95360,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.CRASTUS",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "J.LISCIA",
+            "weight": 53.5,
+            "draw": 1
         },
         {
             "number": 14,
             "horse": "BARBADIN",
-            "description": ""
+            "description": "",
+            "performance": "6.2.0.0.0",
+            "gains": 135576,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.POUCHIN",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "ASCOT CLUB",
+            "weight": 53.0,
+            "draw": 8
         },
         {
             "number": 15,
             "horse": "SAAM",
-            "description": ""
+            "description": "",
+            "performance": "4.4.1.3.2",
+            "gains": 157310,
+            "sex": "H",
+            "age": 7,
+            "trainer": "L.BAILS",
+            "jockey": "S.GOUYETTE",
+            "driver": "S.GOUYETTE",
+            "owner": "A.GLAZIOU",
+            "weight": 52.0,
+            "draw": 6
         },
         {
             "number": 16,
             "horse": "AHA",
-            "description": ""
+            "description": "",
+            "performance": "6.5.3.0.2",
+            "gains": 58430,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D.PROVOST",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "B.LEMAIRE",
+            "weight": 51.0,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             7,

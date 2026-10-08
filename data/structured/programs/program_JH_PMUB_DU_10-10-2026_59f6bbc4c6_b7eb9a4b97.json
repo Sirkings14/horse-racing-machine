@@ -1,0 +1,356 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMUB_DU_10-10-2026_59f6bbc4c6_b7eb9a4b97.txt",
+    "parsed_at": "2026-10-08T23:52:16.746608Z",
+    "date": "2026-10-10",
+    "race": {
+        "race_name": "PRIX DE LA VILLE DE CAEN",
+        "track": "CAEN",
+        "race_number": 4,
+        "race_type": "ATTELE",
+        "runners_count": 18,
+        "distance": 2450,
+        "prize_euros": 40000
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "HORUS DE VAL",
+            "description": "",
+            "performance": "1.1.5.D.2",
+            "gains": 184972,
+            "trainer": "E. LAMBERTZ",
+            "jockey": "E. LAMBERTZ",
+            "driver": "E. LAMBERTZ",
+            "owner": "E. LAMBERTZ",
+            "listed_chrono": "1.11.10"
+        },
+        {
+            "number": 2,
+            "horse": "KASSYA",
+            "description": "",
+            "performance": "1.2.5.1.D",
+            "gains": 185580,
+            "trainer": "D. LOCQUENEUX",
+            "jockey": "Y. LEBOURGEOIS",
+            "driver": "Y. LEBOURGEOIS",
+            "owner": "EC. des CHARMES",
+            "listed_chrono": "1.11.00"
+        },
+        {
+            "number": 3,
+            "horse": "KORONA DELADOU",
+            "description": "",
+            "performance": "4.3.4.6.5",
+            "gains": 187210,
+            "trainer": "E. LETOUZE",
+            "jockey": "G. MARTIN",
+            "driver": "G. MARTIN",
+            "owner": "E. DUFOUR",
+            "listed_chrono": "1.11.00"
+        },
+        {
+            "number": 4,
+            "horse": "KALINE DU LOCHEUR",
+            "description": "",
+            "performance": "1.1.1.2.3",
+            "gains": 190500,
+            "trainer": "D. BROHIER",
+            "jockey": "D. BROHIER",
+            "driver": "D. BROHIER",
+            "owner": "D. BROHIER",
+            "listed_chrono": "1.12.10"
+        },
+        {
+            "number": 5,
+            "horse": "KALITA D'HENINEL",
+            "description": "",
+            "performance": "5.3.3.2.D",
+            "gains": 190995,
+            "trainer": "J.G. VAN EECKHAUTE",
+            "jockey": "J.G. VAN EECKHAUTE",
+            "driver": "J.G. VAN EECKHAUTE",
+            "owner": "EC. du COJEUL",
+            "listed_chrono": "1.10.40"
+        },
+        {
+            "number": 6,
+            "horse": "IL PLEUT BERGERE",
+            "description": "",
+            "performance": "5.4.6.2.3",
+            "gains": 193865,
+            "trainer": "G. VERVA",
+            "jockey": "M. VERVA",
+            "driver": "M. VERVA",
+            "owner": "E. NOISETTE",
+            "listed_chrono": "1.12.20"
+        },
+        {
+            "number": 7,
+            "horse": "IASELMA",
+            "description": "",
+            "performance": "6.1.5.3.3",
+            "gains": 193965,
+            "trainer": "J. GOSSELIN",
+            "jockey": "J. GOSSELIN",
+            "driver": "J. GOSSELIN",
+            "owner": "J. GOSSELIN",
+            "listed_chrono": "1.12.10"
+        },
+        {
+            "number": 8,
+            "horse": "ISIA DU CHENE",
+            "description": "",
+            "performance": "D.0.D.D.2",
+            "gains": 195780,
+            "trainer": "J. LE MER",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "Y. GUEDJ",
+            "listed_chrono": "1.11.60"
+        },
+        {
+            "number": 9,
+            "horse": "KNOCKONWOOD",
+            "description": "",
+            "performance": "D.D.D.5.6",
+            "gains": 196200,
+            "trainer": "R.CH. LARUE",
+            "jockey": "R. LAMY",
+            "driver": "R. LAMY",
+            "owner": "EC. de WINDCUT",
+            "listed_chrono": "1.11.10"
+        },
+        {
+            "number": 10,
+            "horse": "KASH DES CAILLONS",
+            "description": "",
+            "performance": "2.7.4.1.4",
+            "gains": 196945,
+            "trainer": "Anthonin FAVRIS",
+            "jockey": "A. FAVRIS",
+            "driver": "A. FAVRIS",
+            "owner": "Anthonin FAVRIS",
+            "listed_chrono": "1.10.00"
+        },
+        {
+            "number": 11,
+            "horse": "JAMAIS",
+            "description": "",
+            "performance": "1.2.6.1.D",
+            "gains": 196950,
+            "trainer": "F. TERRY",
+            "jockey": "C. TERRY",
+            "driver": "C. TERRY",
+            "owner": "Philipe RENNESSON",
+            "listed_chrono": "1.12.30"
+        },
+        {
+            "number": 12,
+            "horse": "JUDY MATIDY",
+            "description": "",
+            "performance": "9.9.3.0.7",
+            "gains": 199985,
+            "trainer": "D. LECROQ",
+            "jockey": "A. ANDRE",
+            "driver": "A. ANDRE",
+            "owner": "Cécilia LEFEBVRE",
+            "listed_chrono": "1.12.20"
+        },
+        {
+            "number": 13,
+            "horse": "JANE AIMEE",
+            "description": "",
+            "performance": "3.9.6.1.8",
+            "gains": 271140,
+            "trainer": "Sté. Ent. Christophe CLIN",
+            "jockey": "CH. CLIN",
+            "driver": "CH. CLIN",
+            "owner": "M. HULMEL",
+            "listed_chrono": "1.10.60"
+        },
+        {
+            "number": 14,
+            "horse": "INDICE DELADOU",
+            "description": "",
+            "performance": "7.4.2.6.1",
+            "gains": 274450,
+            "trainer": "CH. HESLOUIN",
+            "jockey": "E. ALLARD",
+            "driver": "E. ALLARD",
+            "owner": "EC. INITIAL",
+            "listed_chrono": "1.11.60"
+        },
+        {
+            "number": 15,
+            "horse": "IGUANE DE CAPONET",
+            "description": "",
+            "performance": "D.2.1.5.8",
+            "gains": 338880,
+            "trainer": "C. RAIMBAUD",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "C. RAIMBAUD",
+            "listed_chrono": "1.11.20"
+        },
+        {
+            "number": 16,
+            "horse": "HABIT DE SOIREE",
+            "description": "",
+            "performance": "9.6.5.0.0",
+            "gains": 347445,
+            "trainer": "F. SENET",
+            "jockey": "F. OUVRIE",
+            "driver": "F. OUVRIE",
+            "owner": "M. STIHL",
+            "listed_chrono": "1.10.90"
+        },
+        {
+            "number": 17,
+            "horse": "GINO VIVA",
+            "description": "",
+            "performance": "0.9.0.9.0",
+            "gains": 373510,
+            "trainer": "D. LOCQUENEUX",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "Anna KARLSSON",
+            "listed_chrono": "1.10.40"
+        },
+        {
+            "number": 18,
+            "horse": "KAPTAIN DU LIAMONE",
+            "description": "",
+            "performance": "1.4.4.1.9",
+            "gains": 403900,
+            "trainer": "FREDERIC PRAT",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "Flavien PRAT",
+            "listed_chrono": "1.10.90"
+        }
+    ],
+    "program_table_mapping_status": "mapped",
+    "rankings": {
+        "favorites": [
+            1,
+            2,
+            4,
+            9,
+            10,
+            11,
+            3
+        ],
+        "form": [
+            4,
+            18,
+            2,
+            1,
+            11
+        ],
+        "class": [
+            10,
+            3,
+            7,
+            6,
+            15
+        ],
+        "progress": [
+            12,
+            8,
+            9,
+            15,
+            10
+        ],
+        "regularity": [
+            18,
+            3,
+            4,
+            2,
+            1
+        ]
+    },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "3/1",
+                "decimal": 4.0
+            },
+            "2": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "3": {
+                "fractional": "17/1",
+                "decimal": 18.0
+            },
+            "4": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "5": {
+                "fractional": "97/1",
+                "decimal": 98.0
+            },
+            "6": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "7": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "8": {
+                "fractional": "14/1",
+                "decimal": 15.0
+            },
+            "9": {
+                "fractional": "25/1",
+                "decimal": 26.0
+            },
+            "10": {
+                "fractional": "22/1",
+                "decimal": 23.0
+            },
+            "11": {
+                "fractional": "45/1",
+                "decimal": 46.0
+            },
+            "12": {
+                "fractional": "43/1",
+                "decimal": 44.0
+            },
+            "13": {
+                "fractional": "20/1",
+                "decimal": 21.0
+            },
+            "14": {
+                "fractional": "27/1",
+                "decimal": 28.0
+            },
+            "15": {
+                "fractional": "58/1",
+                "decimal": 59.0
+            },
+            "16": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "17": {
+                "fractional": "6/1",
+                "decimal": 7.0
+            },
+            "18": {
+                "fractional": "4/1",
+                "decimal": 5.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
+    "published_arrival": [
+        1,
+        5,
+        8,
+        4
+    ]
+}

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_12-09-2024_25ac9e6352_29f1811cde.txt",
-    "parsed_at": "2026-10-08T10:35:43.942250Z",
+    "parsed_at": "2026-10-08T23:52:17.054648Z",
     "date": "2024-09-12",
     "race": {
         "race_name": "PRIX DE LONGCHAMP",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LA GUERCHE",
-            "description": ""
+            "description": "",
+            "performance": "3.3.3.5.1",
+            "gains": 18150,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.SUBIAS",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "EC. MICHEL DOINEAU",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "LA HARENGERE",
-            "description": ""
+            "description": "",
+            "performance": "8.2.1.1.6",
+            "gains": 25200,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.CRASTUS",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "G.AU.NORMAND",
+            "weight": 59.0,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "ZERAFA",
-            "description": ""
+            "description": "",
+            "performance": "1.8.2.3.3",
+            "gains": 20800,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "S.A. AGA KHAN",
+            "weight": 59.0,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "MARTIN",
-            "description": ""
+            "description": "",
+            "performance": "1.7.4.2",
+            "gains": 24700,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "CU. MEDITERRANEO",
+            "weight": 58.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "NEWLOOK",
-            "description": ""
+            "description": "",
+            "performance": "0.3.2.3.3",
+            "gains": 15450,
+            "sex": "H",
+            "age": 3,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "EC. DES CHARMES",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 6,
             "horse": "RAYBIYA",
-            "description": ""
+            "description": "",
+            "performance": "4.1.3.3.3",
+            "gains": 25050,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "S.A. AGA KHAN",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "DAY TRADER",
-            "description": ""
+            "description": "",
+            "performance": "9.5.4.5.1",
+            "gains": 41770,
+            "sex": "H",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "AMIS DU MONDE ENTIER",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "WIT PERD",
-            "description": ""
+            "description": "",
+            "performance": "2.4.5.3.6",
+            "gains": 35800,
+            "sex": "M",
+            "age": 3,
+            "trainer": "P.BAZIRE",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "EC. TREIZE HEUREUX",
+            "weight": 56.5,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "CHESS",
-            "description": ""
+            "description": "",
+            "performance": "7.3.1.4.4",
+            "gains": 30300,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "P&J.BRANDT",
+            "driver": "P&J.BRANDT",
+            "owner": "P.BRANDT",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 10,
             "horse": "MOOSBEERE",
-            "description": ""
+            "description": "",
+            "performance": "9.7.9.1.3",
+            "gains": 22850,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "STALL GRAFENBERG",
+            "weight": 56.5,
+            "draw": 1
         },
         {
             "number": 11,
             "horse": "GANASS",
-            "description": ""
+            "description": "",
+            "performance": "6.3.0.1.5",
+            "gains": 49700,
+            "sex": "M",
+            "age": 3,
+            "trainer": "J.MOUTARD",
+            "jockey": "H.GHABRI",
+            "driver": "H.GHABRI",
+            "owner": "H.GHABRI",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 12,
             "horse": "JEAN PIC",
-            "description": ""
+            "description": "",
+            "performance": "6.1.5.3",
+            "gains": 20550,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "HF.DEVIN",
+            "driver": "HF.DEVIN",
+            "owner": "JP.BERVOETS",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "AQUILAE",
-            "description": ""
+            "description": "",
+            "performance": "3.1.7.7.5",
+            "gains": 13600,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.TRULLIER",
+            "jockey": "P.GROUALLE",
+            "driver": "P.GROUALLE",
+            "owner": "BEAUMELLES RACING",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 14,
             "horse": "VILLA DES ARTS",
-            "description": ""
+            "description": "",
+            "performance": "5.1.2.2.0",
+            "gains": 30120,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "A.KARKOSA",
+            "driver": "A.KARKOSA",
+            "owner": "K.GOZDZIALSKI",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 15,
             "horse": "MONTEBELYO",
-            "description": ""
+            "description": "",
+            "performance": "1.5.7.5.3",
+            "gains": 16200,
+            "sex": "H",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A.TAMAGNI-BODMER",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 16,
             "horse": "DIALLA",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.7",
+            "gains": 12500,
+            "sex": "F",
+            "age": 3,
+            "trainer": "H.JOURNIAC",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "H.H. AGA KHAN",
+            "weight": 55.0,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-25-05-2024_9bd0d0cabb_d31290db73.txt",
-    "parsed_at": "2026-10-08T10:35:41.871538Z",
+    "parsed_at": "2026-10-08T23:52:14.150501Z",
     "date": "2024-05-25",
     "race": {
         "race_name": "ATTELE",
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "HURELLA",
-            "description": ""
+            "description": "",
+            "performance": "3.0.0.1.4",
+            "gains": 324130,
+            "sex": "F",
+            "age": 7,
+            "trainer": "CH. MARTENS",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC.MOUREAUX AS",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2150.M"
         },
         {
             "number": 2,
             "horse": "GOLD VOICE",
-            "description": ""
+            "description": "",
+            "performance": "3.5.7.8.0",
+            "gains": 350880,
+            "sex": "F",
+            "age": 8,
+            "trainer": "F. NIVARD",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "D. BENCHETRIT",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2150.M"
         },
         {
             "number": 3,
             "horse": "FELIX DU BOURG",
-            "description": ""
+            "description": "",
+            "performance": "2.4.6.5.D",
+            "gains": 350970,
+            "sex": "M",
+            "age": 9,
+            "trainer": "B. MARIE",
+            "jockey": "B. MARIE",
+            "driver": "B. MARIE",
+            "owner": "EC.D L",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2150.M"
         },
         {
             "number": 4,
             "horse": "HEADING REFERENCE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.R.3",
+            "gains": 328950,
+            "sex": "H",
+            "age": 10,
+            "trainer": "C. PARYS",
+            "jockey": "CÉDRIC PARYS",
+            "driver": "CÉDRIC PARYS",
+            "owner": "KLV HOLDING AB",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2150.M"
         },
         {
             "number": 5,
             "horse": "FONZY D'HERIPRE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.D.D",
+            "gains": 350030,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "D. FRICAUX",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2150.M"
         },
         {
             "number": 6,
             "horse": "GOLD DAIRPET",
-            "description": ""
+            "description": "",
+            "performance": "9.2.4.D.2",
+            "gains": 334980,
+            "sex": "H",
+            "age": 8,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "C. CHENU",
+            "driver": "C. CHENU",
+            "owner": "R. COHEN",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2150.M"
         },
         {
             "number": 7,
             "horse": "FASHION TOUCH",
-            "description": ""
+            "description": "",
+            "performance": "8.3.0.5.4",
+            "gains": 329360,
+            "sex": "F",
+            "age": 9,
+            "trainer": "A. BARRIER",
+            "jockey": "P.L. DESAUNETTE",
+            "driver": "P.L. DESAUNETTE",
+            "owner": "P. LEBRAULT",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2150.M"
         },
         {
             "number": 8,
             "horse": "GIROLAMO",
-            "description": ""
+            "description": "",
+            "performance": "2.0.8.5.0",
+            "gains": 325000,
+            "sex": "M",
+            "age": 8,
+            "trainer": "J. DUBOIS",
+            "jockey": "PIERRICK LE MOEL",
+            "driver": "PIERRICK LE MOEL",
+            "owner": "E. MZ",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2150.M"
         },
         {
             "number": 9,
             "horse": "GARDNER SHAW",
-            "description": ""
+            "description": "",
+            "performance": "4.D.1.3.5",
+            "gains": 314259,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. LAGADEUC",
+            "jockey": "Y. HENRY",
+            "driver": "Y. HENRY",
+            "owner": "JÉRÔME LARQUET",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2150.M"
         },
         {
             "number": 10,
             "horse": "BOLERO GAR",
-            "description": ""
+            "description": "",
+            "performance": "D.D.1.2.4",
+            "gains": 240148,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. OUVRIE",
+            "jockey": "VITALE CIOTOLA",
+            "driver": "VITALE CIOTOLA",
+            "owner": "J. CACHIA",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2150.M"
         },
         {
             "number": 11,
             "horse": "HANNIBAL TUILERIE",
-            "description": ""
+            "description": "",
+            "performance": "8.5.1.1.3",
+            "gains": 320785,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D. THOMAIN",
+            "jockey": "J. BRUNEAU",
+            "driver": "J. BRUNEAU",
+            "owner": "CH.M. BRUNEAU",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2150.M"
         },
         {
             "number": 12,
             "horse": "GARDON",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.2.2",
+            "gains": 194490,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. IONESCU",
+            "jockey": "R. DERIEUX",
+            "driver": "R. DERIEUX",
+            "owner": "MAURICETTE DE SOUSA",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2150.M"
         },
         {
             "number": 13,
             "horse": "GOLD MENCOURT",
-            "description": ""
+            "description": "",
+            "performance": "4.4.0.0.4",
+            "gains": 287660,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A. LAMY",
+            "jockey": "N. BINET",
+            "driver": "N. BINET",
+            "owner": "EC. J-P.R. VILAULT",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2150.M"
         },
         {
             "number": 14,
             "horse": "GIRL DE BASSIERE",
-            "description": ""
+            "description": "",
+            "performance": "6.5.8.7.2",
+            "gains": 315700,
+            "sex": "F",
+            "age": 8,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "C. CHENU",
+            "driver": "C. CHENU",
+            "owner": "J.L. DUCATEL",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2150.M"
         },
         {
             "number": 15,
             "horse": "FAVORI DE L'ITON",
-            "description": ""
+            "description": "",
+            "performance": "1.5.0.9.1",
+            "gains": 323430,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P.Y. VERVA",
+            "jockey": "P.L. DESAUNETTE",
+            "driver": "P.L. DESAUNETTE",
+            "owner": "EC. INITIAL",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2150.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

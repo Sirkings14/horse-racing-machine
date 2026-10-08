@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_DU_07-05-2026_a5b691ceaa_6e7f014e01.txt",
-    "parsed_at": "2026-10-08T10:35:47.112757Z",
+    "parsed_at": "2026-10-08T23:52:21.627370Z",
     "date": "2026-05-05",
     "race": {
         "race_name": "PRIX DE LA CONCORDE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ZULU WARRIOR",
-            "description": ""
+            "description": "",
+            "performance": "6.4.9.1.1",
+            "gains": 143832,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "A.FABRE",
+            "weight": 61.5,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "MON RICIN",
-            "description": ""
+            "description": "",
+            "performance": "3.3.3.6.1",
+            "gains": 133474,
+            "sex": "H",
+            "age": 7,
+            "trainer": "TIM.DONWORTH",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "SANG.BLOODSTOCK",
+            "weight": 60.0,
+            "draw": 5
         },
         {
             "number": 3,
             "horse": "ZILYA",
-            "description": ""
+            "description": "",
+            "performance": "1.6.4.1.1",
+            "gains": 132944,
+            "sex": "F",
+            "age": 7,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "EC.BONARDEL",
+            "weight": 59.0,
+            "draw": 6
         },
         {
             "number": 4,
             "horse": "EL CANEY",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.0.4",
+            "gains": 128367,
+            "sex": "H",
+            "age": 8,
+            "trainer": "D.ARTU",
+            "jockey": "P.BAZIRE",
+            "driver": "P.BAZIRE",
+            "owner": "D.ARTU",
+            "weight": 58.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "REMBRAND TO GO",
-            "description": ""
+            "description": "",
+            "performance": "2.3.5.4.2",
+            "gains": 41162,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.RULEC",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "C.BOCKELMANN",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 6,
             "horse": "MOST GLAMOROUS",
-            "description": ""
+            "description": "",
+            "performance": "5.4.0.1.4",
+            "gains": 38023,
+            "sex": "F",
+            "age": 4,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "M.SABATINE",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 7,
             "horse": "MARINALEDA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.3.7.5",
+            "gains": 36472,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARATTI",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "G.BAJETTI",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 8,
             "horse": "MISTER GATZ",
-            "description": ""
+            "description": "",
+            "performance": "2.4.0.7.0",
+            "gains": 74425,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.NIGGE",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "G.AU.NORMAND",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 9,
             "horse": "SENORITO",
-            "description": ""
+            "description": "",
+            "performance": "4.0.5.6.3",
+            "gains": 33650,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P.SOGORB",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "J.N.TEMAM",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "PRINCESSE D'AMOUR",
-            "description": ""
+            "description": "",
+            "performance": "1.0.9.2.5",
+            "gains": 68844,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "EC.VICT. DREAMS",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 11,
             "horse": "SAPRISTI",
-            "description": ""
+            "description": "",
+            "performance": "0.0.2.9.3",
+            "gains": 110848,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N.CAULLERY",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "GEST INVEST CAPITAL",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "ZILRAK",
-            "description": ""
+            "description": "",
+            "performance": "9.9.4.4.0",
+            "gains": 115967,
+            "sex": "H",
+            "age": 6,
+            "trainer": "BUTEL & BEAUNEZ",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "HS. DE COUELY",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 13,
             "horse": "DEMPY",
-            "description": ""
+            "description": "",
+            "performance": "3.4.5.7.7",
+            "gains": 91131,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D.BONILLA",
+            "jockey": "P.REMOUE",
+            "driver": "P.REMOUE",
+            "owner": "P.WATTANAVRANGKUL",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "RAM SEA",
-            "description": ""
+            "description": "",
+            "performance": "5.8.2.5.2",
+            "gains": 25512,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D.MELE",
+            "jockey": "L.BRECHET",
+            "driver": "L.BRECHET",
+            "owner": "D. MELE",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "INCREMENTAL",
-            "description": ""
+            "description": "",
+            "performance": "4.0.4.5.5",
+            "gains": 49825,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.ARTU",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "D.BREESE",
+            "weight": 54.5,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "SHEEMA'S ROSE",
-            "description": ""
+            "description": "",
+            "performance": "7.6.8.2.7",
+            "gains": 55142,
+            "sex": "F",
+            "age": 5,
+            "trainer": "G.NAKOUZI",
+            "jockey": "D.SANTIAGO",
+            "driver": "D.SANTIAGO",
+            "owner": "A.CLAIRE",
+            "weight": 53.5,
+            "draw": 12
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

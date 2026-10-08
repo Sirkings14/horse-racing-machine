@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_08-06-2026_d444510b09_95e4d5c4ed.txt",
-    "parsed_at": "2026-10-08T10:35:43.498980Z",
+    "parsed_at": "2026-10-08T23:52:16.390292Z",
     "date": "2026-06-08",
     "race": {
         "race_name": "HANDICAP D'ANGERS LOIRE METROPOLE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LOVE IS GOLD",
-            "description": ""
+            "description": "",
+            "performance": "1.4.0.7.5",
+            "gains": 128335,
+            "sex": "H",
+            "age": 6,
+            "trainer": "PIER.MENARD",
+            "jockey": "P. REMOUE",
+            "driver": "P. REMOUE",
+            "owner": "SARL GROUPE KR",
+            "weight": 60.5,
+            "draw": 8
         },
         {
             "number": 2,
             "horse": "ZULU WARRIOR",
-            "description": ""
+            "description": "",
+            "performance": "0.6.4.9.1",
+            "gains": 143832,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A. FABRE",
+            "jockey": "A. POUCHIN",
+            "driver": "A. POUCHIN",
+            "owner": "A. FABRE",
+            "weight": 60.0,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "ZILYA",
-            "description": ""
+            "description": "",
+            "performance": "0.1.6.4.1",
+            "gains": 132944,
+            "sex": "F",
+            "age": 7,
+            "trainer": "M.CESANDRI",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "EC.BONARDEL/JC.RAVIER",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "SEONA",
-            "description": ""
+            "description": "",
+            "performance": "4.0.2.6.2",
+            "gains": 92096,
+            "sex": "F",
+            "age": 4,
+            "trainer": "FR. MONFORT",
+            "jockey": "M. GUYON",
+            "driver": "M. GUYON",
+            "owner": "A. GRAY",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "STORMY DONALD",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.0.1",
+            "gains": 52290,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F. CHAPPET",
+            "jockey": "T. PICCONE",
+            "driver": "T. PICCONE",
+            "owner": "EC. DAVID R. LAYANI FA",
+            "weight": 57.5,
+            "draw": 5
         },
         {
             "number": 6,
             "horse": "DARK SECRET",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.4.3",
+            "gains": 32323,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A. COUETIL",
+            "jockey": "O. ANDIGNE",
+            "driver": "O. ANDIGNE",
+            "owner": "M.NELMES-CROCKER",
+            "weight": 57.0,
+            "draw": 7
         },
         {
             "number": 7,
             "horse": "SAN SEBASTIAN",
-            "description": ""
+            "description": "",
+            "performance": "1.3.7.4.6",
+            "gains": 54817,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G. ARIZK. ELOSEGUI",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "LOKO TRANS",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 8,
             "horse": "MISTERWINNER",
-            "description": ""
+            "description": "",
+            "performance": "4.7.3.2.1",
+            "gains": 54802,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.LOTOUX",
+            "jockey": "A. BARON",
+            "driver": "A. BARON",
+            "owner": "JY. AUBAUD/EC. F.BOUCEY",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "KING TREZY",
-            "description": ""
+            "description": "",
+            "performance": "3.A.7.2.3",
+            "gains": 95818,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C&Y. LERNER",
+            "jockey": "M. LERNER",
+            "driver": "M. LERNER",
+            "owner": "O. GHRGHAR",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "BRITANIA",
-            "description": ""
+            "description": "",
+            "performance": "5.5.3.2.1",
+            "gains": 66508,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F. ROHAUT",
+            "jockey": "I. MENDIZABAL",
+            "driver": "I. MENDIZABAL",
+            "owner": "F.F. ROHAUT",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "MARINALEDA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.3.7",
+            "gains": 46144,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARATTI",
+            "jockey": "C. DEMURO",
+            "driver": "C. DEMURO",
+            "owner": "G. BAJETTI",
+            "weight": 56.0,
+            "draw": 11
         },
         {
             "number": 12,
             "horse": "VERITABLE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.0.2.6",
+            "gains": 136415,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S. GAVILAN",
+            "jockey": "G. GUEDJ-GAY",
+            "driver": "G. GUEDJ-GAY",
+            "owner": "L.MOUTOUSSAMY",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "SUNSHINE BABY",
-            "description": ""
+            "description": "",
+            "performance": "1.4.9.7.7",
+            "gains": 13684,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BERTO",
+            "jockey": "A. HAMELIN",
+            "driver": "A. HAMELIN",
+            "owner": "K. HOFMANN",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 14,
             "horse": "XILOFONO",
-            "description": ""
+            "description": "",
+            "performance": "2.2.0.0.0",
+            "gains": 77442,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G. ARIZK. ELOSEGUI",
+            "jockey": "C. LECOEUVRE",
+            "driver": "C. LECOEUVRE",
+            "owner": "A. GARCIA FERRER",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 15,
             "horse": "RAM SEA",
-            "description": ""
+            "description": "",
+            "performance": "3.5.8.2.5",
+            "gains": 32638,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D.MELE",
+            "jockey": "L. BRECHET",
+            "driver": "L. BRECHET",
+            "owner": "D.D. MELE",
+            "weight": 54.0,
+            "draw": 1
         },
         {
             "number": 16,
             "horse": "MR TEE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.6",
+            "gains": 15100,
+            "sex": "H",
+            "age": 4,
+            "trainer": "ED. MONFORT",
+            "jockey": "A. MADAMET",
+            "driver": "A. MADAMET",
+            "owner": "EC. MAGNIEN",
+            "weight": 54.0,
+            "draw": 13
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             11,

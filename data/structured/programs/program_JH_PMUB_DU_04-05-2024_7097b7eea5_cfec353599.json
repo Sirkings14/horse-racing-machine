@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_04-05-2024_7097b7eea5_cfec353599.txt",
-    "parsed_at": "2026-10-08T10:35:42.972641Z",
+    "parsed_at": "2026-10-08T23:52:15.675545Z",
     "date": "2024-05-04",
     "race": {
         "race_name": "PRIX ALBERT DEMARCQ",
@@ -16,74 +16,215 @@
         {
             "number": 1,
             "horse": "JASMINE DE VAU",
-            "description": ""
+            "description": "",
+            "performance": "4.3.6.0.5",
+            "gains": 98080,
+            "sex": "F",
+            "age": 5,
+            "trainer": "CH. DREUX",
+            "jockey": "CH. DREUX",
+            "driver": "CH. DREUX",
+            "owner": "EC. CHARLES DREUX",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "JOCONDE SIBEY",
-            "description": ""
+            "description": "",
+            "performance": "2.6.1.1.2",
+            "gains": 175980,
+            "sex": "F",
+            "age": 5,
+            "trainer": "L. BAUDOUIN",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "Y. DESMET",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "JANGO VICI",
-            "description": ""
+            "description": "",
+            "performance": "5.6.1.D.9",
+            "gains": 187250,
+            "sex": "M",
+            "age": 5,
+            "trainer": "B. ROCHARD",
+            "jockey": "A. RIPOLL RIGO",
+            "driver": "A. RIPOLL RIGO",
+            "owner": "CUA. HER. INIGUEZ",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "JIOSCO DE PHYT'S",
-            "description": ""
+            "description": "",
+            "performance": "D.0.1.4.1",
+            "gains": 190670,
+            "sex": "M",
+            "age": 5,
+            "trainer": "E. RAFFIN",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "EC. OSTHEIMER",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "JASON",
-            "description": ""
+            "description": "",
+            "performance": "3.7.3.1.1",
+            "gains": 205240,
+            "sex": "M",
+            "age": 5,
+            "trainer": "TH. LEVESQUE",
+            "jockey": "P. LEVESQUE",
+            "driver": "P. LEVESQUE",
+            "owner": "EC. PIERRE LEVESQUE",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "JAZZMAN DEBAILLEUL",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.1.2",
+            "gains": 216130,
+            "sex": "M",
+            "age": 5,
+            "trainer": "F. NIVARD",
+            "jockey": "E. SZIRMAY",
+            "driver": "E. SZIRMAY",
+            "owner": "E. SZIRMAY",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "JOUMBA DE GUEZ",
-            "description": ""
+            "description": "",
+            "performance": "0.1.D.3.D",
+            "gains": 227620,
+            "sex": "F",
+            "age": 5,
+            "trainer": "N. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC. VAUTORS",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 8,
             "horse": "JASPER DES CHARMES",
-            "description": ""
+            "description": "",
+            "performance": "8.1.1.2.D",
+            "gains": 278750,
+            "sex": "M",
+            "age": 5,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC. DES CHARMES",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 9,
             "horse": "JACK TONIC",
-            "description": ""
+            "description": "",
+            "performance": "1.8.0.5.8",
+            "gains": 349350,
+            "sex": "M",
+            "age": 5,
+            "trainer": "THEO DUVALDESTIN",
+            "jockey": "TH. DUVALDESTIN",
+            "driver": "TH. DUVALDESTIN",
+            "owner": "HS. DES QUATRE VENTS",
+            "listed_chrono": "1.10.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 10,
             "horse": "JAG STRYCK",
-            "description": ""
+            "description": "",
+            "performance": "2.4.4.8.7",
+            "gains": 371280,
+            "sex": "M",
+            "age": 5,
+            "trainer": "F. LAGADEUC",
+            "jockey": "C. BUHIGNE",
+            "driver": "C. BUHIGNE",
+            "owner": "MARC CARTIER",
+            "listed_chrono": "1.10.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 11,
             "horse": "J'AIME LE FOOT",
-            "description": ""
+            "description": "",
+            "performance": "4.5.3.5.D",
+            "gains": 381250,
+            "sex": "M",
+            "age": 5,
+            "trainer": "A. LHERETE",
+            "jockey": "ANTOINE LHERETE",
+            "driver": "ANTOINE LHERETE",
+            "owner": "EC.E OLIVIER MOREL",
+            "listed_chrono": "1.10.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 12,
             "horse": "JUNINHO DRY",
-            "description": ""
+            "description": "",
+            "performance": "7.0.D.D.6",
+            "gains": 530220,
+            "sex": "M",
+            "age": 5,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "S. GUARATO",
+            "driver": "S. GUARATO",
+            "owner": "EC. DRY",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 13,
             "horse": "JUST LOVE YOU",
-            "description": ""
+            "description": "",
+            "performance": "9.3.1.0.3",
+            "gains": 564450,
+            "sex": "F",
+            "age": 5,
+            "trainer": "L.CL. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "M. BLIARD",
+            "listed_chrono": "1.10.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 14,
             "horse": "JUST A GIGOLO",
-            "description": ""
+            "description": "",
+            "performance": "D.6.0.4.2",
+            "gains": 1162710,
+            "sex": "M",
+            "age": 5,
+            "trainer": "G. GELORMINI",
+            "jockey": "PH. ALLAIRE",
+            "driver": "PH. ALLAIRE",
+            "owner": "PH. ALLAIRE",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2850.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

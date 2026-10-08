@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-19-05-2023_ec81b5df44_3a901ceef6.txt",
-    "parsed_at": "2026-10-08T10:35:41.260002Z",
+    "parsed_at": "2026-10-08T23:52:13.263717Z",
     "date": "2023-05-19",
     "race": {
         "race_name": null,
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "JURELLA",
-            "description": ""
+            "description": "",
+            "performance": "1.7.0.0.1",
+            "gains": 29240,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "EC. MOUREAUX AS",
+            "listed_chrono": "1.14.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "JOLLY LADY",
-            "description": ""
+            "description": "",
+            "performance": "8.9.0.D.1",
+            "gains": 35310,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M. ABRIVARD",
+            "jockey": "LEO ABRIVARD",
+            "driver": "LEO ABRIVARD",
+            "owner": "J. COTTEL",
+            "listed_chrono": "1.15.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "JALNA DE TOUCHYVON",
-            "description": ""
+            "description": "",
+            "performance": "7.D.D.3.2",
+            "gains": 39310,
+            "sex": "F",
+            "age": 4,
+            "trainer": "W. BIGEON",
+            "jockey": "W. BIGEON",
+            "driver": "W. BIGEON",
+            "owner": "EC. J.P. BARJON",
+            "listed_chrono": "1.14.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "JOY DU CHERISAY",
-            "description": ""
+            "description": "",
+            "performance": "6.0.7.1.3",
+            "gains": 39910,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D. THOMAIN",
+            "jockey": "D. DELAROCHE",
+            "driver": "D. DELAROCHE",
+            "owner": "J.M. BANSARD",
+            "listed_chrono": "1.14.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "JOIE TOTALE",
-            "description": ""
+            "description": "",
+            "performance": "9.0.D.6.D",
+            "gains": 41400,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G. GELORMINI",
+            "jockey": "J. DUBOIS",
+            "driver": "J. DUBOIS",
+            "owner": "J. DUBOIS",
+            "listed_chrono": "1.15.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "JALAPA DU BUISSON",
-            "description": ""
+            "description": "",
+            "performance": "D.2.D.1.3",
+            "gains": 42360,
+            "sex": "F",
+            "age": 4,
+            "trainer": "E. RAFFIN",
+            "jockey": "TH. RAFFEGEAU",
+            "driver": "TH. RAFFEGEAU",
+            "owner": "EC.TH. RAFFEGEAU",
+            "listed_chrono": "1.13.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "JEZABEL HAUFOR",
-            "description": ""
+            "description": "",
+            "performance": "1.D.1.1.1",
+            "gains": 45500,
+            "sex": "F",
+            "age": 4,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "Y. LEBOURGEOIS",
+            "driver": "Y. LEBOURGEOIS",
+            "owner": "EC.CHRISTIAN BIGEON",
+            "listed_chrono": "1.13.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "JYLVIE DE GUEUDE",
-            "description": ""
+            "description": "",
+            "performance": "5.7.7.6.3",
+            "gains": 45570,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.CH. PITON",
+            "jockey": "F. BOISMARTEL",
+            "driver": "F. BOISMARTEL",
+            "owner": "CH. ALMIN",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "JOYCE DREAM",
-            "description": ""
+            "description": "",
+            "performance": "D.4.2.7.D",
+            "gains": 46940,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.M. DAVID",
+            "jockey": "L.M. DAVID",
+            "driver": "L.M. DAVID",
+            "owner": "EC. L.M. DAVID",
+            "listed_chrono": "1.13.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "JONGLEUSE DE LUNE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.1.1.2",
+            "gains": 48800,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F. NIVARD",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "F. LEBLANC",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "JAVA D'ANAMA",
-            "description": ""
+            "description": "",
+            "performance": "1.D.D.1.7",
+            "gains": 49590,
+            "sex": "F",
+            "age": 4,
+            "trainer": "F. GENCE",
+            "jockey": "J. DUBREIL",
+            "driver": "J. DUBREIL",
+            "owner": "EC. LA CHARMELIERE",
+            "listed_chrono": "1.14.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "JANGA FLIGNY",
-            "description": ""
+            "description": "",
+            "performance": "5.0.8.1.D",
+            "gains": 51880,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A. BARRIER",
+            "jockey": "A.H. ROBIN",
+            "driver": "A.H. ROBIN",
+            "owner": "EC.LA PINSONNIERE",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "JEXELLE LUGUI",
-            "description": ""
+            "description": "",
+            "performance": "3.4.9.6.6",
+            "gains": 53020,
+            "sex": "F",
+            "age": 4,
+            "trainer": "GUILLAUME MARTIN",
+            "jockey": "L.B. MARTIN",
+            "driver": "L.B. MARTIN",
+            "owner": "L.B. MARTIN",
+            "listed_chrono": "1.13.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 14,
             "horse": "JOCONDE DE COLMINE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.8.2.9",
+            "gains": 54162,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M. MOTTIER",
+            "jockey": "M.A. BOVAY",
+            "driver": "M.A. BOVAY",
+            "owner": "M. BOVAY",
+            "listed_chrono": "1.14.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 15,
             "horse": "JILETTY GRIFF",
-            "description": ""
+            "description": "",
+            "performance": "5.D.0.1.5",
+            "gains": 54570,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "EC. GRIFF",
+            "listed_chrono": "1.13.70",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             7,

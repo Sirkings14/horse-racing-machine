@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-23-07-2024_c5f8c83b6c_d7b9508f98.txt",
-    "parsed_at": "2026-10-08T10:35:41.640328Z",
+    "parsed_at": "2026-10-08T23:52:13.827237Z",
     "date": "2024-07-23",
     "race": {
         "race_name": "PRIX DE SUSSEX",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "WILD PANSY",
-            "description": ""
+            "description": "",
+            "performance": "0.7.2.6.5",
+            "gains": 77217,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 2,
             "horse": "NASSANDRES",
-            "description": ""
+            "description": "",
+            "performance": "5.7.2.3.1",
+            "gains": 22100,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R.THOMAS",
+            "jockey": "P.DECOUZ",
+            "driver": "P.DECOUZ",
+            "owner": "G.AU.NORMAND",
+            "weight": 60.0,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "LOOKING AT ME",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.4.4",
+            "gains": 92440,
+            "sex": "F",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "P.DE CHEVIGNY",
+            "driver": "P.DE CHEVIGNY",
+            "owner": "EC.LE CERCLE",
+            "weight": 58.0,
+            "draw": 1
         },
         {
             "number": 4,
             "horse": "RIKA DE LA VIS",
-            "description": ""
+            "description": "",
+            "performance": "6.1.1.9.3",
+            "gains": 52250,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "M.BARATTI",
+            "driver": "M.BARATTI",
+            "owner": "L.DOULAYRAM",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "SALT FLAKE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.1.1.2",
+            "gains": 36400,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "E.LIBAUD",
+            "driver": "E.LIBAUD",
+            "owner": "A.KURTH",
+            "weight": 57.5,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "CENTORINA",
-            "description": ""
+            "description": "",
+            "performance": "0.5.2.9.0",
+            "gains": 65990,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "GL RACING",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "TARAJAL",
-            "description": ""
+            "description": "",
+            "performance": "9.6.0.0.0",
+            "gains": 73170,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N..TEMAM",
+            "weight": 56.5,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "LORNE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.3.8.2",
+            "gains": 109210,
+            "sex": "F",
+            "age": 5,
+            "trainer": "J.NICOLEAU",
+            "jockey": "A.FOUASSIER",
+            "driver": "A.FOUASSIER",
+            "owner": "EC.DUPONT SEBASTIEN",
+            "weight": 56.5,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "MATAURI GOLD",
-            "description": ""
+            "description": "",
+            "performance": "0.2.6.6.2",
+            "gains": 56860,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.MADAMET",
+            "jockey": "P&F.ADDA & RENAUT",
+            "driver": "P&F.ADDA & RENAUT",
+            "owner": "AK.COOPER",
+            "weight": 56.0,
+            "draw": 16
         },
         {
             "number": 10,
             "horse": "CLAIR DE LUNE",
-            "description": ""
+            "description": "",
+            "performance": "5.6.3.7.1",
+            "gains": 37950,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "ROY RACING LTD",
+            "weight": 56.0,
+            "draw": 14
         },
         {
             "number": 11,
             "horse": "ALSIMRYA",
-            "description": ""
+            "description": "",
+            "performance": "6.6.0.1.5",
+            "gains": 20990,
+            "sex": "F",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "AL SHAQAB RACING",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "COSTA EDITA",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.2.3",
+            "gains": 58970,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "H.BLUME",
+            "driver": "H.BLUME",
+            "owner": "STALL TEE-TIME",
+            "weight": 55.5,
+            "draw": 4
         },
         {
             "number": 13,
             "horse": "DIANE'STAR",
-            "description": ""
+            "description": "",
+            "performance": "3.0.1.7.7",
+            "gains": 58920,
+            "sex": "F",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "C.BERTI",
+            "weight": 54.0,
+            "draw": 9
         },
         {
             "number": 14,
             "horse": "JOLI CORBEAU",
-            "description": ""
+            "description": "",
+            "performance": "9.3.3.4.8",
+            "gains": 29150,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.VOGT",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "B.WEBER",
+            "weight": 54.0,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "RODAINAH",
-            "description": ""
+            "description": "",
+            "performance": "5.2.4.0.1",
+            "gains": 29150,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "SALABI RACING",
+            "weight": 54.0,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "DSCHINGIS GALI",
-            "description": ""
+            "description": "",
+            "performance": "0.9.0.9.1",
+            "gains": 38200,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.GAUBERT",
+            "jockey": "JP.LETREGUILLY",
+            "driver": "JP.LETREGUILLY",
+            "owner": "JP.LETREGUILLY",
+            "weight": 53.5,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

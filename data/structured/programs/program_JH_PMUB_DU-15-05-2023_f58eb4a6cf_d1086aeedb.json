@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-15-05-2023_f58eb4a6cf_d1086aeedb.txt",
-    "parsed_at": "2026-10-08T10:35:40.909810Z",
+    "parsed_at": "2026-10-08T23:52:12.771011Z",
     "date": "2023-05-15",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GEANT SARTHOIS",
-            "description": ""
+            "description": "",
+            "performance": "D.9.2.1.D",
+            "gains": 127070,
+            "sex": "H",
+            "age": 7,
+            "trainer": "S. PELTIER",
+            "jockey": "G.R. HUGUET",
+            "driver": "G.R. HUGUET",
+            "owner": "EC. SIDERE",
+            "listed_chrono": "1.12.60",
+            "listed_distance": "2950.M"
         },
         {
             "number": 2,
             "horse": "GIBUS DARCHE",
-            "description": ""
+            "description": "",
+            "performance": "2.D.1.D.D",
+            "gains": 128590,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. COLLETTE",
+            "jockey": "E. VARIN",
+            "driver": "E. VARIN",
+            "owner": "EC.DARCHE",
+            "listed_chrono": "1.13.90",
+            "listed_distance": "2950.M"
         },
         {
             "number": 3,
             "horse": "FLORA SCOTIA",
-            "description": ""
+            "description": "",
+            "performance": "2.9.D.4.6",
+            "gains": 129390,
+            "sex": "F",
+            "age": 8,
+            "trainer": "A.A. CHAVATTE",
+            "jockey": "A. CHAVATTE",
+            "driver": "A. CHAVATTE",
+            "owner": "L.R. RICHARD",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2950.M"
         },
         {
             "number": 4,
             "horse": "FLASH MONEY",
-            "description": ""
+            "description": "",
+            "performance": "0.2.1.1.4",
+            "gains": 138120,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. TINTILLIER",
+            "jockey": "A. TINTILLIER",
+            "driver": "A. TINTILLIER",
+            "owner": "B. GATHERON",
+            "listed_chrono": "1.13.20",
+            "listed_distance": "2950.M"
         },
         {
             "number": 5,
             "horse": "ESPRIT DE BELFONDS",
-            "description": ""
+            "description": "",
+            "performance": "4.D.0.D.0",
+            "gains": 141190,
+            "sex": "H",
+            "age": 9,
+            "trainer": "CL. GUILLON",
+            "jockey": "J. CHEVREUX",
+            "driver": "J. CHEVREUX",
+            "owner": "J. CHEVREUX",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2950.M"
         },
         {
             "number": 6,
             "horse": "GIRL PETTEVINIERE",
-            "description": ""
+            "description": "",
+            "performance": "1.4.0.5.D",
+            "gains": 141950,
+            "sex": "F",
+            "age": 7,
+            "trainer": "D. BEKAERT",
+            "jockey": "S. ROGER",
+            "driver": "S. ROGER",
+            "owner": "EC. LA PETTEVINIERE",
+            "listed_chrono": "1.12.70",
+            "listed_distance": "2950.M"
         },
         {
             "number": 7,
             "horse": "GINKGO THELOIS",
-            "description": ""
+            "description": "",
+            "performance": "D.1.2.D.D",
+            "gains": 145390,
+            "sex": "H",
+            "age": 7,
+            "trainer": "K. LEBLANC",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "EC.ANDRÉ CARREE",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2950.M"
         },
         {
             "number": 8,
             "horse": "DIDJI DU MESSI",
-            "description": ""
+            "description": "",
+            "performance": "0.4.5.4.8",
+            "gains": 145980,
+            "sex": "H",
+            "age": 10,
+            "trainer": "Q. CHAUVE-LAFFAY",
+            "jockey": "Y. LE BRIS",
+            "driver": "Y. LE BRIS",
+            "owner": "Y. LE BRIS",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2950.M"
         },
         {
             "number": 9,
             "horse": "ETOILE ROUGE",
-            "description": ""
+            "description": "",
+            "performance": "9.D.0.4.3",
+            "gains": 224470,
+            "sex": "F",
+            "age": 9,
+            "trainer": "M. ABRIVARD",
+            "jockey": "E. VARIN",
+            "driver": "E. VARIN",
+            "owner": "EC. E. VARIN",
+            "listed_chrono": "1.13.20",
+            "listed_distance": "2975.M"
         },
         {
             "number": 10,
             "horse": "EMPEREUR DU CEBE",
-            "description": ""
+            "description": "",
+            "performance": "4.3.9.7.D",
+            "gains": 231850,
+            "sex": "M",
+            "age": 9,
+            "trainer": "L. VERRIERE",
+            "jockey": "Bastien CLAIRET",
+            "driver": "Bastien CLAIRET",
+            "owner": "EC. CLAIRET",
+            "listed_chrono": "1.10.10",
+            "listed_distance": "2975.M"
         },
         {
             "number": 11,
             "horse": "ELIXIR DU RABUTIN",
-            "description": ""
+            "description": "",
+            "performance": "D.D.3.0.1",
+            "gains": 247005,
+            "sex": "H",
+            "age": 9,
+            "trainer": "J. CUOQ",
+            "jockey": "G.R. HUGUET",
+            "driver": "G.R. HUGUET",
+            "owner": "EC. SIDERE",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2975.M"
         },
         {
             "number": 12,
             "horse": "EROS DU FOSSE",
-            "description": ""
+            "description": "",
+            "performance": "7.0.0.7.6",
+            "gains": 247620,
+            "sex": "H",
+            "age": 9,
+            "trainer": "MICKAEL CORMY",
+            "jockey": "MICKAEL CORMY",
+            "driver": "MICKAEL CORMY",
+            "owner": "EC.GINKGO",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2975.M"
         },
         {
             "number": 13,
             "horse": "FORMI",
-            "description": ""
+            "description": "",
+            "performance": "7.1.8.8.0",
+            "gains": 254295,
+            "sex": "M",
+            "age": 8,
+            "trainer": "CH.A. MARY",
+            "jockey": "CH.A. MARY",
+            "driver": "CH.A. MARY",
+            "owner": "HERVÉ CHENET",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2975.M"
         },
         {
             "number": 14,
             "horse": "DAY DE BELLOUET",
-            "description": ""
+            "description": "",
+            "performance": "6.7.9.D.D",
+            "gains": 259090,
+            "sex": "H",
+            "age": 10,
+            "trainer": "GUILLAUME MARTIN",
+            "jockey": "J. CHEVREUX",
+            "driver": "J. CHEVREUX",
+            "owner": "J. CHEVREUX",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2975.M"
         },
         {
             "number": 15,
             "horse": "FLORINE DE VIETTE",
-            "description": ""
+            "description": "",
+            "performance": "0.9.D.D.1",
+            "gains": 261880,
+            "sex": "F",
+            "age": 8,
+            "trainer": "MARTIN CORMY",
+            "jockey": "MICKAEL CORMY",
+            "driver": "MICKAEL CORMY",
+            "owner": "EC. DU VIEUX CHENE",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2975.M"
         },
         {
             "number": 16,
             "horse": "GOLD RIVER",
-            "description": ""
+            "description": "",
+            "performance": "6.7.0.D.5",
+            "gains": 268940,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "PH. THIRIONET",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2975.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             16,

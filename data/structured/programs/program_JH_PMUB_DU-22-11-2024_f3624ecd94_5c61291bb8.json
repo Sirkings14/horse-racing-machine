@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-22-11-2024_f3624ecd94_5c61291bb8.txt",
-    "parsed_at": "2026-10-08T10:35:41.561373Z",
+    "parsed_at": "2026-10-08T23:52:13.713308Z",
     "date": "2024-11-22",
     "race": {
         "race_name": "PRIX TRITON",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "HANACK DE VIVOIN",
-            "description": ""
+            "description": "",
+            "performance": "3.5.4.7.8",
+            "gains": 114995,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M. MOTTIER",
+            "jockey": "J.J. BEAUSSE",
+            "driver": "J.J. BEAUSSE",
+            "owner": "J.J. BEAUSSE",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "INSTANT D'HAUFOR",
-            "description": ""
+            "description": "",
+            "performance": "7.0.D.5.9",
+            "gains": 131230,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D. BONNE",
+            "jockey": "CH. BIGEON",
+            "driver": "CH. BIGEON",
+            "owner": "EC.CH. BIGEON",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "HAIKIDO",
-            "description": ""
+            "description": "",
+            "performance": "D.8.0.1.4",
+            "gains": 137205,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. NIVARD",
+            "jockey": "G. BEAUFILS",
+            "driver": "G. BEAUFILS",
+            "owner": "J.CL. LAUVRIERE",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "IQUEM",
-            "description": ""
+            "description": "",
+            "performance": "7.D.D.7.7",
+            "gains": 137750,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A. LAMY",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "EC. DU HS D'ERABLE",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "INSIGHT SPOKEN",
-            "description": ""
+            "description": "",
+            "performance": "6.4.5.0.D",
+            "gains": 142250,
+            "sex": "M",
+            "age": 6,
+            "trainer": "B. ROCHARD",
+            "jockey": "LOIC GROUSSARD",
+            "driver": "LOIC GROUSSARD",
+            "owner": "LOIC GROUSSARD",
+            "listed_chrono": "1.13.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "INFERNO PIPER",
-            "description": ""
+            "description": "",
+            "performance": "5.2.4.1.9",
+            "gains": 142310,
+            "sex": "H",
+            "age": 6,
+            "trainer": "CH. MARTENS",
+            "jockey": "V. MARTENS",
+            "driver": "V. MARTENS",
+            "owner": "EC. PIPER",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "INSTINCTIF",
-            "description": ""
+            "description": "",
+            "performance": "7.5.3.2.9",
+            "gains": 149010,
+            "sex": "H",
+            "age": 6,
+            "trainer": "B. ROBIN",
+            "jockey": "J.L. BIGEON",
+            "driver": "J.L. BIGEON",
+            "owner": "J. SECHE",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "HELECHO",
-            "description": ""
+            "description": "",
+            "performance": "1.7.2.D.1",
+            "gains": 149570,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G. PORZIO",
+            "jockey": "H. LE BEC",
+            "driver": "H. LE BEC",
+            "owner": "EC. MANTARO",
+            "listed_chrono": "1.12.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "INHERIT",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.6.2",
+            "gains": 149625,
+            "sex": "H",
+            "age": 6,
+            "trainer": "P.Y. VERVA",
+            "jockey": "G. BEAUFILS",
+            "driver": "G. BEAUFILS",
+            "owner": "EC. J.C.G. BEAUFILS",
+            "listed_chrono": "1.13.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "GOGO DES MALBERAUX",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.9.0",
+            "gains": 150345,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. ABRIVARD",
+            "jockey": "D. DELAROCHE",
+            "driver": "D. DELAROCHE",
+            "owner": "M. PIGAUT",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "I STILL LOVING YOU",
-            "description": ""
+            "description": "",
+            "performance": "0.0.6.9.D",
+            "gains": 150770,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "EC. A. ABRIVARD",
+            "listed_chrono": "1.13.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "IGGYPOP D'HERFRAIE",
-            "description": ""
+            "description": "",
+            "performance": "7.7.4.4.0",
+            "gains": 151410,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D. THOMAIN",
+            "jockey": "CL. THOMAIN",
+            "driver": "CL. THOMAIN",
+            "owner": "EC. DU HS D'ERABLE",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "INVICTUS DE HOERDT",
-            "description": ""
+            "description": "",
+            "performance": "0.D.0.1.4",
+            "gains": 151465,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G.A. POU POU",
+            "jockey": "G.A. POU POU",
+            "driver": "G.A. POU POU",
+            "owner": "LILIANE JUNG",
+            "listed_chrono": "1.12.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 14,
             "horse": "IDEAL GREEN",
-            "description": ""
+            "description": "",
+            "performance": "0.9.5.9.D",
+            "gains": 152815,
+            "sex": "H",
+            "age": 6,
+            "trainer": "F. LAGADEUC",
+            "jockey": "CH. HESLOUIN",
+            "driver": "CH. HESLOUIN",
+            "owner": "J.L. COLOMBIER",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 15,
             "horse": "IDEAL BOY",
-            "description": ""
+            "description": "",
+            "performance": "0.7.3.5.1",
+            "gains": 152975,
+            "sex": "H",
+            "age": 6,
+            "trainer": "Y. DREUX",
+            "jockey": "Y. DREUX",
+            "driver": "Y. DREUX",
+            "owner": "Y. DREUX",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 16,
             "horse": "GOLD DE CHIMAY",
-            "description": ""
+            "description": "",
+            "performance": "3.3.7.0.8",
+            "gains": 153060,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A. LAURENT",
+            "jockey": "A. LAURENT",
+            "driver": "A. LAURENT",
+            "owner": "EC. A. LAURENT",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

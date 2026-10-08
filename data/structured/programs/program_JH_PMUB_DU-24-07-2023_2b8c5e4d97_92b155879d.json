@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-24-07-2023_2b8c5e4d97_92b155879d.txt",
-    "parsed_at": "2026-10-08T10:35:41.765240Z",
+    "parsed_at": "2026-10-08T23:52:13.999576Z",
     "date": "2023-07-24",
     "race": {
         "race_name": "PRIX DES HAUTS-DE-FRANCE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "FREJA",
-            "description": ""
+            "description": "",
+            "performance": "7.1.9.7.5",
+            "gains": 44850,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "A. GILIBERT",
+            "weight": 60.0,
+            "draw": 2
         },
         {
             "number": 2,
             "horse": "PINGO",
-            "description": ""
+            "description": "",
+            "performance": "5.5.1.1.6",
+            "gains": 77440,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "D.SMAGA",
+            "driver": "D.SMAGA",
+            "owner": "G.AU.NORMAND",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "TUT TUT",
-            "description": ""
+            "description": "",
+            "performance": "8.6.5.0.1",
+            "gains": 64560,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "FR.MONFORT",
+            "driver": "FR.MONFORT",
+            "owner": "S.BUCKLEY",
+            "weight": 59.0,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "MISSALIA",
-            "description": ""
+            "description": "",
+            "performance": "0.3.4.6.6",
+            "gains": 44830,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "C.WINGTANS",
+            "weight": 58.5,
+            "draw": 11
         },
         {
             "number": 5,
             "horse": "PRIVATE LOUNGE",
-            "description": ""
+            "description": "",
+            "performance": "9.4.7.1.4",
+            "gains": 20440,
+            "sex": "F",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "F.CHAPPET",
+            "driver": "F.CHAPPET",
+            "owner": "HS DE SAINT JULIEN",
+            "weight": 58.0,
+            "draw": 6
         },
         {
             "number": 6,
             "horse": "SASSICA",
-            "description": ""
+            "description": "",
+            "performance": "2.3.9.7.5",
+            "gains": 47400,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.SEIDL",
+            "jockey": "A.SUBORICS",
+            "driver": "A.SUBORICS",
+            "owner": "RENNS.NEUENHAGEN",
+            "weight": 56.5,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "GHRAINNE",
-            "description": ""
+            "description": "",
+            "performance": "4.9.4.7.9",
+            "gains": 34340,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.VELON",
+            "jockey": "F.GUYADER",
+            "driver": "F.GUYADER",
+            "owner": "T.MARNANE",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 8,
             "horse": "FASTER",
-            "description": ""
+            "description": "",
+            "performance": "3.3.6.9.6",
+            "gains": 73290,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D.SANTIAGO",
+            "jockey": "G.RARICK",
+            "driver": "G.RARICK",
+            "owner": "B.GUSDAL",
+            "weight": 54.5,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "MADAME DE SAXE",
-            "description": ""
+            "description": "",
+            "performance": "9.0.5.1.5",
+            "gains": 11950,
+            "sex": "F",
+            "age": 3,
+            "trainer": "J.CLAUDIC",
+            "jockey": "R.LE DREN DOLEUZE",
+            "driver": "R.LE DREN DOLEUZE",
+            "owner": "P.FELLOUS",
+            "weight": 54.0,
+            "draw": 7
         },
         {
             "number": 10,
             "horse": "ALATHEA",
-            "description": ""
+            "description": "",
+            "performance": "5.2.4.8.6",
+            "gains": 14350,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "L.GOELET",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 11,
             "horse": "SNOWFINCH",
-            "description": ""
+            "description": "",
+            "performance": "6.1.3",
+            "gains": 13650,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "H.A.PANTALL",
+            "driver": "H.A.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 53.5,
+            "draw": 1
         },
         {
             "number": 12,
             "horse": "IKEN",
-            "description": ""
+            "description": "",
+            "performance": "6.2.4.0.1",
+            "gains": 42560,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.TRULLIER",
+            "jockey": "J.SOUDAN",
+            "driver": "J.SOUDAN",
+            "owner": "C.DE MOUBRAY",
+            "weight": 53.5,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "CHARLOTTE BAY",
-            "description": ""
+            "description": "",
+            "performance": "7.1.5.9.7",
+            "gains": 11750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.MOSSE",
+            "jockey": "A.FABRE",
+            "driver": "A.FABRE",
+            "owner": "LADY O'REILLY",
+            "weight": 52.5,
+            "draw": 3
         },
         {
             "number": 14,
             "horse": "PRESA DIRETTA",
-            "description": ""
+            "description": "",
+            "performance": "4.8.0.6.4",
+            "gains": 51345,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R.MANGIONE",
+            "jockey": "M.GUARNIERI",
+            "driver": "M.GUARNIERI",
+            "owner": "M.GUARNIERI",
+            "weight": 52.5,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "DARK ZEL",
-            "description": ""
+            "description": "",
+            "performance": "6.9.6.6.2",
+            "gains": 5600,
+            "sex": "F",
+            "age": 3,
+            "trainer": "H.JOURNIAC",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "JF.SENET",
+            "weight": 52.5,
+            "draw": 9
         },
         {
             "number": 16,
             "horse": "HENOUVILLE",
-            "description": ""
+            "description": "",
+            "performance": "3.3.0.9.4",
+            "gains": 48750,
+            "sex": "F",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "ROD.COLLET",
+            "driver": "ROD.COLLET",
+            "owner": "G.AU.NORMAND",
+            "weight": 51.5,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             13,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-27-12-2023_75f3d289c8_97513a2b13.txt",
-    "parsed_at": "2026-10-08T10:35:42.150217Z",
+    "parsed_at": "2026-10-08T23:52:14.529425Z",
     "date": "2023-12-27",
     "race": {
         "race_name": "PRIX DE LA BOURGOGNE",
@@ -16,74 +16,201 @@
         {
             "number": 1,
             "horse": "TONNERRE DE DIEU",
-            "description": ""
+            "description": "",
+            "performance": "8.2.6.5.6",
+            "gains": 35920,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.ANDRIEUX",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "G.CODRE",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "FOX CHALLENGER",
-            "description": ""
+            "description": "",
+            "performance": "6.0.7.A.A",
+            "gains": 38680,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D.UBEDA",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "MP.REICHSTEIN",
+            "weight": 71.5
         },
         {
             "number": 3,
             "horse": "HALITE",
-            "description": ""
+            "description": "",
+            "performance": "J.2.6.A.6",
+            "gains": 77580,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.BEAURAIN",
+            "jockey": "BUTEL & BEAUNEZ",
+            "driver": "BUTEL & BEAUNEZ",
+            "owner": "PASSION RACING CLUB",
+            "weight": 71.0
         },
         {
             "number": 4,
             "horse": "DEPENDE",
-            "description": ""
+            "description": "",
+            "performance": "T.1.1.2.2",
+            "gains": 63320,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G.RE",
+            "jockey": "E.GRALL",
+            "driver": "E.GRALL",
+            "owner": "L.FERTILLET-LERAY",
+            "weight": 70.5
         },
         {
             "number": 5,
             "horse": "FOU DU BRESIL",
-            "description": ""
+            "description": "",
+            "performance": "5.6.A.1.4",
+            "gains": 218910,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A.CHESNEAU",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "Y.FOUIN",
+            "weight": 70.5
         },
         {
             "number": 6,
             "horse": "JOSHUA'S SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "9.A.6.0.8",
+            "gains": 19990,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.FAIVRE-PICON",
+            "jockey": "D.SATALIA",
+            "driver": "D.SATALIA",
+            "owner": "SUC. S.RAFFAELLO",
+            "weight": 70.5
         },
         {
             "number": 7,
             "horse": "CAPIVARI",
-            "description": ""
+            "description": "",
+            "performance": "5.2.2.2.3",
+            "gains": 588853,
+            "sex": "H",
+            "age": 11,
+            "trainer": "B.MARCHAND",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "S.TUBIANA",
+            "weight": 70.0
         },
         {
             "number": 8,
             "horse": "FRED",
-            "description": ""
+            "description": "",
+            "performance": "4.7.4.2.J",
+            "gains": 99789,
+            "sex": "H",
+            "age": 8,
+            "trainer": "N.FERREIRA",
+            "jockey": "S.DEHEZ",
+            "driver": "S.DEHEZ",
+            "owner": "S.DEHEZ",
+            "weight": 70.0
         },
         {
             "number": 9,
             "horse": "VOLKOV JELOIS",
-            "description": ""
+            "description": "",
+            "performance": "5.7.9.3.1",
+            "gains": 159588,
+            "sex": "H",
+            "age": 7,
+            "trainer": "O.RYZHAK",
+            "jockey": "J.VANA JR",
+            "driver": "J.VANA JR",
+            "owner": "SCU. AICHNER SRL",
+            "weight": 70.0
         },
         {
             "number": 10,
             "horse": "HENRI GIL",
-            "description": ""
+            "description": "",
+            "performance": "A.8.8.1.2",
+            "gains": 15120,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.THOMAS",
+            "jockey": "T.POCHE",
+            "driver": "T.POCHE",
+            "owner": "T.POCHE",
+            "weight": 70.0
         },
         {
             "number": 11,
             "horse": "CHATEAU YOGHURT",
-            "description": ""
+            "description": "",
+            "performance": "4.5.4.A.8",
+            "gains": 19545,
+            "sex": "H",
+            "age": 5,
+            "trainer": "JB.BRETON",
+            "jockey": "JR.BRETON",
+            "driver": "JR.BRETON",
+            "owner": "FRONTERO P",
+            "weight": 69.5
         },
         {
             "number": 12,
             "horse": "NORMANDE",
-            "description": ""
+            "description": "",
+            "performance": "2.1.1.4.8",
+            "gains": 81880,
+            "sex": "F",
+            "age": 6,
+            "trainer": "N.HOWIE",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "D.MAUGHAN",
+            "weight": 69.0
         },
         {
             "number": 13,
             "horse": "BEST BOWL",
-            "description": ""
+            "description": "",
+            "performance": "2.3.A.T.5",
+            "gains": 43935,
+            "sex": "H",
+            "age": 7,
+            "trainer": "J.COYER",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "C.MILLIERE",
+            "weight": 69.0
         },
         {
             "number": 14,
             "horse": "ZINOA",
-            "description": ""
+            "description": "",
+            "performance": "3.6.9.2.5",
+            "gains": 38835,
+            "sex": "F",
+            "age": 5,
+            "trainer": "S.BOULET",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "H.GORECKI",
+            "weight": 69.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             9,

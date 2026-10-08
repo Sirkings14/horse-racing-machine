@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-20-02-2023_f7e3d85412_fed3149c84.txt",
-    "parsed_at": "2026-10-08T10:35:41.317147Z",
+    "parsed_at": "2026-10-08T23:52:13.355581Z",
     "date": "2023-02-18",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GRAND MARABOUT",
-            "description": ""
+            "description": "",
+            "performance": "8.2.5.0.6",
+            "gains": 104950,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. GARANDEAU",
+            "jockey": "A. GARANDEAU",
+            "driver": "A. GARANDEAU",
+            "owner": "EC. EN AVANT GOUDIG",
+            "listed_chrono": "1.12.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "HYPER FAST",
-            "description": ""
+            "description": "",
+            "performance": "3.8.6.0.7",
+            "gains": 110990,
+            "sex": "M",
+            "age": 6,
+            "trainer": "F. NIVARD",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "EC. A.B RACING",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "MISTER DONALD",
-            "description": ""
+            "description": "",
+            "performance": "0.4.0.6.3",
+            "gains": 118604,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B. GOOP",
+            "jockey": "B. GOOP",
+            "driver": "B. GOOP",
+            "owner": "EC. J.P. BARJON",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "BAROLO ROC",
-            "description": ""
+            "description": "",
+            "performance": "9.8.2.0.6",
+            "gains": 119279,
+            "sex": "M",
+            "age": 6,
+            "trainer": "G. GELORMINI",
+            "jockey": "FILIPPO ROCCA",
+            "driver": "FILIPPO ROCCA",
+            "owner": "EC. QUICK STAR",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "HOWDY QUICK",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.D.8",
+            "gains": 122252,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A. ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "FLAATA STABLE AS",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "HULKEN SISU",
-            "description": ""
+            "description": "",
+            "performance": "1.0.5.9.1",
+            "gains": 130443,
+            "sex": "M",
+            "age": 6,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "BACKSTAGE STABLE",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "MAIN STAGE",
-            "description": ""
+            "description": "",
+            "performance": "2.2.1.2.3",
+            "gains": 134310,
+            "sex": "M",
+            "age": 7,
+            "trainer": "S. RAITALA",
+            "jockey": "T. MALMQVIST",
+            "driver": "T. MALMQVIST",
+            "owner": "D. BROCHON",
+            "listed_chrono": "0.00.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 8,
             "horse": "FOKKER DE BAILLY",
-            "description": ""
+            "description": "",
+            "performance": "6.D.1.2.D",
+            "gains": 137930,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. LAGADEUC",
+            "jockey": "B. BOURGOIN",
+            "driver": "B. BOURGOIN",
+            "owner": "CH. ERIKSSON AB",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 9,
             "horse": "HURRICANE RIVER",
-            "description": ""
+            "description": "",
+            "performance": "4.5.D.2.0",
+            "gains": 139940,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. OUVRIE",
+            "jockey": "CH. ERIKSSON",
+            "driver": "CH. ERIKSSON",
+            "owner": "EC. SOMOLLI",
+            "listed_chrono": "1.11.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 10,
             "horse": "HELIOS SOMOLLI",
-            "description": ""
+            "description": "",
+            "performance": "3.7.6.4.5",
+            "gains": 142920,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M. DUDOUIT",
+            "jockey": "J.P. FICHAUX",
+            "driver": "J.P. FICHAUX",
+            "owner": "E. VANDEWEGHE",
+            "listed_chrono": "1.12.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 11,
             "horse": "MELLBY GLADER",
-            "description": ""
+            "description": "",
+            "performance": "0.D.0.D.7",
+            "gains": 143713,
+            "sex": "H",
+            "age": 8,
+            "trainer": "P.Y. VERVA",
+            "jockey": "J. CORBANIE",
+            "driver": "J. CORBANIE",
+            "owner": "EC. J.P. BARJON",
+            "listed_chrono": "1.11.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 12,
             "horse": "HERADAMES",
-            "description": ""
+            "description": "",
+            "performance": "6.4.2.8.5",
+            "gains": 146560,
+            "sex": "M",
+            "age": 6,
+            "trainer": "D. THOMAIN",
+            "jockey": "CL. THOMAIN",
+            "driver": "CL. THOMAIN",
+            "owner": "STALL FAGELSJO HB",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 13,
             "horse": "DEVS DEFINITIF",
-            "description": ""
+            "description": "",
+            "performance": "3.2.5.D.4",
+            "gains": 146744,
+            "sex": "M",
+            "age": 6,
+            "trainer": "A. LAMY",
+            "jockey": "T. MALMQVIST",
+            "driver": "T. MALMQVIST",
+            "owner": "EASY KB",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 14,
             "horse": "READLY LAVEC",
-            "description": ""
+            "description": "",
+            "performance": "1.3.2.0.1",
+            "gains": 147782,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M. MOTTIER",
+            "jockey": "O.J. ANDERSSON",
+            "driver": "O.J. ANDERSSON",
+            "owner": "C. BEILEARD MOTTIER",
+            "listed_chrono": "1.13.20",
+            "listed_distance": "2850.M"
         },
         {
             "number": 15,
             "horse": "GRAAL DU TRESOR",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.2.D",
+            "gains": 148560,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "EC. LE TREMONT",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 16,
             "horse": "HOVE PONT VAUTIER",
-            "description": ""
+            "description": "",
+            "performance": "D.4.D.D.9",
+            "gains": 150490,
+            "sex": "M",
+            "age": 6,
+            "trainer": "O.J. ANDERSSON",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "SCU.SANT' EUSEBIO SNC",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2850.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             14,

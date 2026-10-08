@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-05-05-2024_7112269ab9_14da82f6ce.txt",
-    "parsed_at": "2026-10-08T10:35:39.886033Z",
+    "parsed_at": "2026-10-08T23:52:11.294655Z",
     "date": "2024-05-05",
     "race": {
         "race_name": "PRIX DU PASSAGE SAINTE-ANNE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ZELINA",
-            "description": ""
+            "description": "",
+            "performance": "9.3.3.4.5",
+            "gains": 49050,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "S.CERULIS/TROIS MILLE",
+            "weight": 60.0,
+            "draw": 10
         },
         {
             "number": 2,
             "horse": "ALISTO KING",
-            "description": ""
+            "description": "",
+            "performance": "3.7.7.6.9",
+            "gains": 16375,
+            "sex": "M",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "JP.CARVALHO",
+            "driver": "JP.CARVALHO",
+            "owner": "D..KUBICA",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "HERMANO",
-            "description": ""
+            "description": "",
+            "performance": "4.2.1.5.4",
+            "gains": 45800,
+            "sex": "M",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "A.FOUASSIER",
+            "driver": "A.FOUASSIER",
+            "owner": "EC. BUCEPHALE",
+            "weight": 59.5,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "AL ALAALI",
-            "description": ""
+            "description": "",
+            "performance": "5.1.4.0.4",
+            "gains": 43215,
+            "sex": "H",
+            "age": 4,
+            "trainer": "H.JOURNIAC",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "E.HEBERT",
+            "weight": 59.5,
+            "draw": 13
         },
         {
             "number": 5,
             "horse": "SAKARI",
-            "description": ""
+            "description": "",
+            "performance": "8.4.0.1.8",
+            "gains": 28950,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "C.LECRIVAIN",
+            "driver": "C.LECRIVAIN",
+            "owner": "AM.ROUX",
+            "weight": 59.5,
+            "draw": 16
         },
         {
             "number": 6,
             "horse": "COGNAC",
-            "description": ""
+            "description": "",
+            "performance": "0.9.5.4.6",
+            "gains": 30960,
+            "sex": "H",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "BUTEL & BEAUNEZ",
+            "driver": "BUTEL & BEAUNEZ",
+            "owner": "G.REILLE-VILLEDEY",
+            "weight": 59.5,
+            "draw": 2
         },
         {
             "number": 7,
             "horse": "KAPETANIOS",
-            "description": ""
+            "description": "",
+            "performance": "6.1.2.4.2",
+            "gains": 60910,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BRUNELLI",
+            "jockey": "M.SCANDELLA-LACAILLE",
+            "driver": "M.SCANDELLA-LACAILLE",
+            "owner": "E.LACAILLE",
+            "weight": 59.0,
+            "draw": 1
         },
         {
             "number": 8,
             "horse": "GOLDYWAY DE SAON",
-            "description": ""
+            "description": "",
+            "performance": "0.8.5.5.5",
+            "gains": 39440,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "A.TINCHON",
+            "driver": "A.TINCHON",
+            "owner": "A.DUPONT",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 9,
             "horse": "MELBORA",
-            "description": ""
+            "description": "",
+            "performance": "0.8.6.0.0",
+            "gains": 35150,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.BOISSEAU",
+            "jockey": "G.RARICK",
+            "driver": "G.RARICK",
+            "owner": "J. BELL/S.L BORN",
+            "weight": 59.0,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "PANGAEA",
-            "description": ""
+            "description": "",
+            "performance": "2.5.3.1.2",
+            "gains": 40780,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "P.GROUALLE",
+            "driver": "P.GROUALLE",
+            "owner": "GOUSSERIE RACING",
+            "weight": 58.5,
+            "draw": 12
         },
         {
             "number": 11,
             "horse": "DARK ZEL",
-            "description": ""
+            "description": "",
+            "performance": "0.1.8.7.4",
+            "gains": 22550,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R.THOMAS",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "JF.SENET/S.DUMONT",
+            "weight": 58.5,
+            "draw": 8
         },
         {
             "number": 12,
             "horse": "ALVALDI",
-            "description": ""
+            "description": "",
+            "performance": "9.1.3.4.0",
+            "gains": 11575,
+            "sex": "F",
+            "age": 4,
+            "trainer": "O.ANDIGNE",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "WR.SWINBURN",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "STYLE D'EMIRS",
-            "description": ""
+            "description": "",
+            "performance": "0.6.6.3.6",
+            "gains": 4725,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "Y.FOUIN",
+            "driver": "Y.FOUIN",
+            "owner": "EC.THOMAS SIVADIER",
+            "weight": 58.0,
+            "draw": 4
         },
         {
             "number": 14,
             "horse": "AMERICANO",
-            "description": ""
+            "description": "",
+            "performance": "7.4.2.0.3",
+            "gains": 51500,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "J.ANDREU",
+            "driver": "J.ANDREU",
+            "owner": "L.L.LEMIERE",
+            "weight": 57.5,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "SAANEN",
-            "description": ""
+            "description": "",
+            "performance": "1.4.6.7.2",
+            "gains": 29055,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.NICOLEAU",
+            "jockey": "A.KARKOSA",
+            "driver": "A.KARKOSA",
+            "owner": "R.ZIELINSKI",
+            "weight": 57.5,
+            "draw": 11
         },
         {
             "number": 16,
             "horse": "LODOVICO",
-            "description": ""
+            "description": "",
+            "performance": "9.5.8.0.0",
+            "gains": 22550,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "STARS OF FORTUNE",
+            "weight": 57.5,
+            "draw": 7
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

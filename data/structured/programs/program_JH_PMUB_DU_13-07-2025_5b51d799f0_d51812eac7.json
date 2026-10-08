@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_13-07-2025_5b51d799f0_d51812eac7.txt",
-    "parsed_at": "2026-10-08T10:35:44.057995Z",
+    "parsed_at": "2026-10-08T23:52:17.222407Z",
     "date": "2025-07-13",
     "race": {
         "race_name": "CYGAMES HANDICAP DE LA FETE NATIONALE",
@@ -16,74 +16,215 @@
         {
             "number": 1,
             "horse": "MOTION",
-            "description": ""
+            "description": "",
+            "performance": "0.1.3.1.0",
+            "gains": 55920,
+            "sex": "H",
+            "age": 5,
+            "trainer": "H.GREWE",
+            "jockey": "T. BACHELOT",
+            "driver": "T. BACHELOT",
+            "owner": "D.CENGIZ",
+            "weight": 60.5,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "SOUS LA NEIGE",
-            "description": ""
+            "description": "",
+            "performance": "5.8.2.6.7",
+            "gains": 81518,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G. HERNON",
+            "jockey": "T. PICCONE",
+            "driver": "T. PICCONE",
+            "owner": "A.DON",
+            "weight": 59.5,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "HARRY WAY",
-            "description": ""
+            "description": "",
+            "performance": "3.4.0.3.6",
+            "gains": 185210,
+            "sex": "H",
+            "age": 5,
+            "trainer": "N. PERRET",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "GOUSSERIE RACING",
+            "weight": 59.0,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "ETERNEL'S BEAUTE",
-            "description": ""
+            "description": "",
+            "performance": "1.5.2.8.8",
+            "gains": 87560,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.PANNIER",
+            "jockey": "A. MOLINS",
+            "driver": "A. MOLINS",
+            "owner": "J. MAHIQUES",
+            "weight": 58.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "HAVOC",
-            "description": ""
+            "description": "",
+            "performance": "2.6.0.8.8",
+            "gains": 200268,
+            "sex": "M",
+            "age": 7,
+            "trainer": "FX.WEISSMEIER",
+            "jockey": "C.BERGE",
+            "driver": "C.BERGE",
+            "owner": "KEVIN FRIDERICH",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 6,
             "horse": "GANASS",
-            "description": ""
+            "description": "",
+            "performance": "2.0.0.4.8",
+            "gains": 113150,
+            "sex": "M",
+            "age": 4,
+            "trainer": "H.GHABRI",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "H. GHABRI",
+            "weight": 57.5,
+            "draw": 3
         },
         {
             "number": 7,
             "horse": "OLYMPIC GOAL",
-            "description": ""
+            "description": "",
+            "performance": "5.5.4.3.1",
+            "gains": 25770,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F. MONNIER",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "HYPERION SARL",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 8,
             "horse": "DEEP SEA",
-            "description": ""
+            "description": "",
+            "performance": "4.5.1.5.D",
+            "gains": 110615,
+            "sex": "F",
+            "age": 7,
+            "trainer": "F.BELLEMERE",
+            "jockey": "D.SANTIAGO",
+            "driver": "D.SANTIAGO",
+            "owner": "ME. UZAN",
+            "weight": 56.5,
+            "draw": 6
         },
         {
             "number": 9,
             "horse": "RAQEEBB",
-            "description": ""
+            "description": "",
+            "performance": "0.4.3.5.0",
+            "gains": 45358,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E. LIBAUD",
+            "jockey": "A. POUCHIN",
+            "driver": "A. POUCHIN",
+            "owner": "AJ. DUFFIELD",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "AL AMEED",
-            "description": ""
+            "description": "",
+            "performance": "2.2.1.3.5",
+            "gains": 31760,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A. MURPHY",
+            "jockey": "E. VERHESTRAETEN",
+            "driver": "E. VERHESTRAETEN",
+            "owner": "RAC. TO PROF. SYNDICATE",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "ZILRAK",
-            "description": ""
+            "description": "",
+            "performance": "1.3.7.4.1",
+            "gains": 90815,
+            "sex": "H",
+            "age": 5,
+            "trainer": "BUTEL & BEAUNEZ",
+            "jockey": "A. CRASTUS",
+            "driver": "A. CRASTUS",
+            "owner": "HS DE COUELY",
+            "weight": 54.5,
+            "draw": 5
         },
         {
             "number": 12,
             "horse": "NARCOS",
-            "description": ""
+            "description": "",
+            "performance": "8.7.2.0.1",
+            "gains": 281925,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A. BUDKA",
+            "jockey": "E. HARDOUIN",
+            "driver": "E. HARDOUIN",
+            "owner": "M.VARIN",
+            "weight": 53.5,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "ROI DE L'AIR",
-            "description": ""
+            "description": "",
+            "performance": "7.8.5.5.1",
+            "gains": 70090,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.BOUTIN",
+            "jockey": "R. MANGIONE",
+            "driver": "R. MANGIONE",
+            "owner": "G.BEN LASSIN",
+            "weight": 52.0,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "SWEEP AWAY",
-            "description": ""
+            "description": "",
+            "performance": "1.3.1.8.0",
+            "gains": 46670,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.PITART",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "J.N..TEMAM",
+            "weight": 52.0,
+            "draw": 10
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

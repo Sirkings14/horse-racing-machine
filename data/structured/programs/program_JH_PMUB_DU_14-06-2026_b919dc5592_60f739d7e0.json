@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_14-06-2026_b919dc5592_60f739d7e0.txt",
-    "parsed_at": "2026-10-08T10:35:44.196796Z",
+    "parsed_at": "2026-10-08T23:52:17.420804Z",
     "date": "2026-06-14",
     "race": {
         "race_name": "GRAND HANDICAP DE LAMORLAYE LONGINES",
@@ -16,94 +16,275 @@
         {
             "number": 1,
             "horse": "MANEKI",
-            "description": ""
+            "description": "",
+            "performance": "9.3.1.7.1",
+            "gains": 67000,
+            "sex": "M",
+            "age": 4,
+            "trainer": "JC.ROUGET",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "W.SPANNER",
+            "weight": 60.0,
+            "draw": 1
         },
         {
             "number": 2,
             "horse": "CALAS",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.1.5",
+            "gains": 136200,
+            "sex": "H",
+            "age": 6,
+            "trainer": "P&J.BRANDT",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "BUCK RACING",
+            "weight": 59.5,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "TIEGO THE FIRST",
-            "description": ""
+            "description": "",
+            "performance": "2.8.8.0.2",
+            "gains": 92594,
+            "sex": "M",
+            "age": 4,
+            "trainer": "P&J.BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "Stall Perlen",
+            "weight": 59.0,
+            "draw": 14
         },
         {
             "number": 4,
             "horse": "CHAUMIERE DE PRE",
-            "description": ""
+            "description": "",
+            "performance": "6.1.1.5.7",
+            "gains": 100243,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.BIETOLINI",
+            "jockey": "PC.BOUDOT",
+            "driver": "PC.BOUDOT",
+            "owner": "KL.RAMSEY",
+            "weight": 58.5,
+            "draw": 12
         },
         {
             "number": 5,
             "horse": "DIVINE CHRISNAT",
-            "description": ""
+            "description": "",
+            "performance": "0.5.4.9.0",
+            "gains": 190218,
+            "sex": "F",
+            "age": 6,
+            "trainer": "CH.PLISSON",
+            "jockey": "A.SUBIAS",
+            "driver": "A.SUBIAS",
+            "owner": "M.PEHU",
+            "weight": 57.5,
+            "draw": 16
         },
         {
             "number": 6,
             "horse": "MERKUR",
-            "description": ""
+            "description": "",
+            "performance": "2.7.6.8.4",
+            "gains": 103489,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M.RULEC",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "C.BOCKELMANN",
+            "weight": 57.0,
+            "draw": 10
         },
         {
             "number": 7,
             "horse": "HALF HALF",
-            "description": ""
+            "description": "",
+            "performance": "2.1.5.2.3",
+            "gains": 169938,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.SMAGA",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "M.FOUGY-SMAGA",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 8,
             "horse": "PUMALIN PARK",
-            "description": ""
+            "description": "",
+            "performance": "0.8.4.4.1",
+            "gains": 84979,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G.MOSSE",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "R.NG",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 9,
             "horse": "SIYOUKING",
-            "description": ""
+            "description": "",
+            "performance": "7.3.1.2.4",
+            "gains": 97972,
+            "sex": "H",
+            "age": 5,
+            "trainer": "Z.KOPLIK",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "IDEA COMUNICATIVE S.R.O.",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "AL MAX",
-            "description": ""
+            "description": "",
+            "performance": "2.5.3.1.9",
+            "gains": 51879,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P.DECOUZ",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "MJ RACING",
+            "weight": 55.5,
+            "draw": 18
         },
         {
             "number": 11,
             "horse": "SAUCEPOT",
-            "description": ""
+            "description": "",
+            "performance": "3.6.1.2",
+            "gains": 19808,
+            "sex": "F",
+            "age": 4,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "AL ASAYL FRANCE",
+            "weight": 55.5,
+            "draw": 17
         },
         {
             "number": 12,
             "horse": "BIG LOG",
-            "description": ""
+            "description": "",
+            "performance": "3.3.1.0.5",
+            "gains": 181750,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D&P.PROD'HOMME",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "B.LYNAM",
+            "weight": 54.5,
+            "draw": 2
         },
         {
             "number": 13,
             "horse": "WAPI",
-            "description": ""
+            "description": "",
+            "performance": "1.2.5.2.0",
+            "gains": 81951,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "AL.JACQ/C.BERQUIER",
+            "weight": 54.5,
+            "draw": 9
         },
         {
             "number": 14,
             "horse": "DOUBLE UP",
-            "description": ""
+            "description": "",
+            "performance": "6.9.0.7.1",
+            "gains": 32675,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "I.CORBANI",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "LA BONNE ETOILE",
-            "description": ""
+            "description": "",
+            "performance": "9.0.4.0.9",
+            "gains": 29330,
+            "sex": "F",
+            "age": 4,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "A.ADAMIAN",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 16,
             "horse": "FEARLESS CHEETAH",
-            "description": ""
+            "description": "",
+            "performance": "1.2.6.8.1",
+            "gains": 95639,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F.BRESSON",
+            "jockey": "J.CLAUDIC",
+            "driver": "J.CLAUDIC",
+            "owner": "F.F.BRESSON",
+            "weight": 53.0,
+            "draw": 8
         },
         {
             "number": 17,
             "horse": "STAR ROCK",
-            "description": ""
+            "description": "",
+            "performance": "6.0.9.2.5",
+            "gains": 122165,
+            "sex": "H",
+            "age": 7,
+            "trainer": "V.LUKA",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "LERAM S.R.O.",
+            "weight": 53.0,
+            "draw": 13
         },
         {
             "number": 18,
             "horse": "LAKOTA BEAU",
-            "description": ""
+            "description": "",
+            "performance": "0.8.8.1.1",
+            "gains": 34600,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.HERNON",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "V.KHOSLA",
+            "weight": 53.0,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             11,

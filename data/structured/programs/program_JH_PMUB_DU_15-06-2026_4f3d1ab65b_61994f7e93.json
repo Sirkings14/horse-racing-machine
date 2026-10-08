@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_15-06-2026_4f3d1ab65b_61994f7e93.txt",
-    "parsed_at": "2026-10-08T10:35:44.335362Z",
+    "parsed_at": "2026-10-08T23:52:17.608167Z",
     "date": "2026-06-15",
     "race": {
         "race_name": "PRIX DU PETIT PRE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "MAX VERST",
-            "description": ""
+            "description": "",
+            "performance": "6.3.8.7.8",
+            "gains": 202797,
+            "sex": "H",
+            "age": 7,
+            "trainer": "R.FRADET",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "GOUSSERIE RACING",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "TRUE TEDESCO",
-            "description": ""
+            "description": "",
+            "performance": "7.0.0.0.8",
+            "gains": 135820,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.SUBORICS",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "ST. MYDLINGHOVEN",
+            "weight": 60.0,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "AMEDRAS",
-            "description": ""
+            "description": "",
+            "performance": "4.4.4.9.2",
+            "gains": 283785,
+            "sex": "H",
+            "age": 9,
+            "trainer": "L.SALTON",
+            "jockey": "A.MOLINS",
+            "driver": "A.MOLINS",
+            "owner": "L.SALTON",
+            "weight": 60.0,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "DARI RIVER",
-            "description": ""
+            "description": "",
+            "performance": "0.8.6.0.0",
+            "gains": 85961,
+            "sex": "F",
+            "age": 5,
+            "trainer": "Y.BARBEROT",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "R.SHEPARD",
+            "weight": 60.0,
+            "draw": 7
         },
         {
             "number": 5,
             "horse": "MEMPHIS TENNESSEE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.1.2",
+            "gains": 77611,
+            "sex": "M",
+            "age": 5,
+            "trainer": "Y.BONNEFOY",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "LUGD. RACING 3",
+            "weight": 60.0,
+            "draw": 5
         },
         {
             "number": 6,
             "horse": "MONONOF",
-            "description": ""
+            "description": "",
+            "performance": "5.5.3.8.2",
+            "gains": 69890,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S.KOBAYASHI",
+            "jockey": "A.SUGAWARA",
+            "driver": "A.SUGAWARA",
+            "owner": "S.UZZAN",
+            "weight": 60.0,
+            "draw": 1
         },
         {
             "number": 7,
             "horse": "ACTO",
-            "description": ""
+            "description": "",
+            "performance": "3.0.0.0.2",
+            "gains": 68037,
+            "sex": "H",
+            "age": 4,
+            "trainer": "MONT. V. SWIJNDREGT",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "R.KERCKHAERT",
+            "weight": 59.5,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "HERMES WOOD",
-            "description": ""
+            "description": "",
+            "performance": "4.1.6.4.4",
+            "gains": 66402,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.FEY",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "A.HEYNE",
+            "weight": 59.5,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "EL CANEY",
-            "description": ""
+            "description": "",
+            "performance": "0.9.0.0.0",
+            "gains": 128367,
+            "sex": "H",
+            "age": 8,
+            "trainer": "D.ARTU",
+            "jockey": "C.PACAUT",
+            "driver": "C.PACAUT",
+            "owner": "D.D.ARTU",
+            "weight": 59.0,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "STANGHELI",
-            "description": ""
+            "description": "",
+            "performance": "5.0.0.0.2",
+            "gains": 121422,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.FABRE",
+            "jockey": "PC.BOUDOT",
+            "driver": "PC.BOUDOT",
+            "owner": "Y.BURRUS",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 11,
             "horse": "BAD DESIRE",
-            "description": ""
+            "description": "",
+            "performance": "8.8.5.5.3",
+            "gains": 19567,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C&Y.LERNER",
+            "jockey": "M.LERNER",
+            "driver": "M.LERNER",
+            "owner": "O.GHRGHAR",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 12,
             "horse": "MONTGAUDRY",
-            "description": ""
+            "description": "",
+            "performance": "8.3.1.2.5",
+            "gains": 89669,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.SMAGA",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "G.AU. NORMAND",
+            "weight": 58.5,
+            "draw": 6
         },
         {
             "number": 13,
             "horse": "EL PEQUENIO",
-            "description": ""
+            "description": "",
+            "performance": "8.0.9.0.7",
+            "gains": 87184,
+            "sex": "H",
+            "age": 4,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "EC. HDBB",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 14,
             "horse": "HAPPY SAXON",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.6.8",
+            "gains": 35827,
+            "sex": "F",
+            "age": 5,
+            "trainer": "G.HERNON",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "ROY RACING LTD",
+            "weight": 58.0,
+            "draw": 16
         },
         {
             "number": 15,
             "horse": "FEVE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.6",
+            "gains": 55550,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J.LEROY",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "EC. MESSICA",
+            "weight": 57.5,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "PESTACLE",
-            "description": ""
+            "description": "",
+            "performance": "4.7.1.7.0",
+            "gains": 73295,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.FORESI",
+            "jockey": "D.BREUX",
+            "driver": "D.BREUX",
+            "owner": "JP.ARIOTTI",
+            "weight": 57.5,
+            "draw": 4
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             13,

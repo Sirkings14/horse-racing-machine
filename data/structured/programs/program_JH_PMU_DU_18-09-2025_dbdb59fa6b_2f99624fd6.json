@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_18-09-2025_dbdb59fa6b_2f99624fd6.txt",
-    "parsed_at": "2026-10-08T10:35:46.891671Z",
+    "parsed_at": "2026-10-08T23:52:21.313053Z",
     "date": "2025-09-18",
     "race": {
         "race_name": "PRIX BERNARD LE QUELLEC",
@@ -16,79 +16,185 @@
         {
             "number": 1,
             "horse": "JAMAICA BROWN",
-            "description": ""
+            "description": "",
+            "performance": "1.2.0.0.1",
+            "gains": 118880,
+            "trainer": "N. BAZIRE",
+            "jockey": "R. CONGARD",
+            "driver": "R. CONGARD",
+            "owner": "Ch. DRIESSEN",
+            "listed_chrono": "1.11.00"
         },
         {
             "number": 2,
             "horse": "DIVA DEL RONCO",
-            "description": ""
+            "description": "",
+            "performance": "8.9.6.D.6",
+            "gains": 141668,
+            "trainer": "S. MINOPOLI",
+            "jockey": "MARCO BASILE",
+            "driver": "MARCO BASILE",
+            "owner": "Sc. ALLE. TEAM MINOPOLI",
+            "listed_chrono": "1.09.70"
         },
         {
             "number": 3,
             "horse": "DIE HARD",
-            "description": ""
+            "description": "",
+            "performance": "D.1.1.0.1",
+            "gains": 158882,
+            "trainer": "P.L. DESAUNETTE",
+            "jockey": "F. LAGADEUC",
+            "driver": "F. LAGADEUC",
+            "owner": "G. SARFATI",
+            "listed_chrono": "1.10.20"
         },
         {
             "number": 4,
             "horse": "DESTINY DI POGGIO",
-            "description": ""
+            "description": "",
+            "performance": "D.1.3.2.D",
+            "gains": 174460,
+            "trainer": "N. BAZIRE",
+            "jockey": "T. OUVRIE",
+            "driver": "T. OUVRIE",
+            "owner": "Scu. MISTERO",
+            "listed_chrono": "1.10.10"
         },
         {
             "number": 5,
             "horse": "JIBI DU FRUITIER",
-            "description": ""
+            "description": "",
+            "performance": "3.3.5.9.3",
+            "gains": 191985,
+            "trainer": "CH.M. BRUNEAU",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "M. BRUNEAU",
+            "listed_chrono": "1.10.30"
         },
         {
             "number": 6,
             "horse": "IMPERIAL DURABUTIN",
-            "description": ""
+            "description": "",
+            "performance": "D.1.8.1.2",
+            "gains": 238225,
+            "trainer": "J.R. DELLIAUX",
+            "jockey": "F. OUVRIE",
+            "driver": "F. OUVRIE",
+            "owner": "EC. du DAMIER",
+            "listed_chrono": "1.11.20"
         },
         {
             "number": 7,
             "horse": "JAPPELOUP TURGOT",
-            "description": ""
+            "description": "",
+            "performance": "5.2.1.4.4",
+            "gains": 258195,
+            "trainer": "M. ABRIVARD",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "EC. TURGOT",
+            "listed_chrono": "1.11.50"
         },
         {
             "number": 8,
             "horse": "GERICAULT",
-            "description": ""
+            "description": "",
+            "performance": "7.9.D.7.6",
+            "gains": 262542,
+            "trainer": "V. MARTENS",
+            "jockey": "CH. MARTENS",
+            "driver": "CH. MARTENS",
+            "owner": "EC.BLACK AND WHITE",
+            "listed_chrono": "1.10.10"
         },
         {
             "number": 9,
             "horse": "COLBERT WF",
-            "description": ""
+            "description": "",
+            "performance": "D.1.1.3.2",
+            "gains": 265976,
+            "trainer": "H.E. BONDO",
+            "jockey": "E. RAFFIN",
+            "driver": "E. RAFFIN",
+            "owner": "Sc. MY HORSE",
+            "listed_chrono": "1.10.90"
         },
         {
             "number": 10,
             "horse": "ASTRONASCENTE ZAC",
-            "description": ""
+            "description": "",
+            "performance": "8.3.1.5.2",
+            "gains": 267685,
+            "trainer": "J. CORBANIE",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "M. BRUYNEEL",
+            "listed_chrono": "1.11.50"
         },
         {
             "number": 11,
             "horse": "FAKIR DE L'AULNE",
-            "description": ""
+            "description": "",
+            "performance": "0.8.7.9.3",
+            "gains": 282010,
+            "trainer": "D. KUMPEN",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "D. KUMPEN",
+            "listed_chrono": "1.12.90"
         },
         {
             "number": 12,
             "horse": "CANTO DEI VENTI",
-            "description": ""
+            "description": "",
+            "performance": "9.2.5.3.5",
+            "gains": 282696,
+            "trainer": "H.E. BONDO",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "CUMANA GROUP",
+            "listed_chrono": "1.10.40"
         },
         {
             "number": 13,
             "horse": "DANGER BI",
-            "description": ""
+            "description": "",
+            "performance": "0.0.7.3.2",
+            "gains": 293958,
+            "trainer": "H.E. BONDO",
+            "jockey": "D. BONNE",
+            "driver": "D. BONNE",
+            "owner": "Az. Agri. BIASUZZI",
+            "listed_chrono": "1.12.10"
         },
         {
             "number": 14,
             "horse": "FURIOSO FLIGNY",
-            "description": ""
+            "description": "",
+            "performance": "6.0.3.1.9",
+            "gains": 302640,
+            "trainer": "A. DE JESUS",
+            "jockey": "E. DE JESUS",
+            "driver": "E. DE JESUS",
+            "owner": "EC. Des AULNAIES",
+            "listed_chrono": "1.10.20"
         },
         {
             "number": 15,
             "horse": "INDY DARK",
-            "description": ""
+            "description": "",
+            "performance": "2.7.2.1.3",
+            "gains": 303205,
+            "trainer": "J.F. MARY",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "J.F. MARY",
+            "listed_chrono": "1.11.80"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             15,

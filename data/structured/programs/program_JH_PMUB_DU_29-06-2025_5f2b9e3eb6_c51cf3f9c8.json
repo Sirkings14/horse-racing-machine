@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_29-06-2025_5f2b9e3eb6_c51cf3f9c8.txt",
-    "parsed_at": "2026-10-08T10:35:46.330946Z",
+    "parsed_at": "2026-10-08T23:52:20.492950Z",
     "date": "2025-06-29",
     "race": {
         "race_name": "HANDICAP D'ETE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CHESS",
-            "description": ""
+            "description": "",
+            "performance": "7.2.1.1.0",
+            "gains": 74700,
+            "sex": "M",
+            "age": 4,
+            "trainer": "P&J.BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "P.BRANDT",
+            "weight": 60.5,
+            "draw": 10
         },
         {
             "number": 2,
             "horse": "ZOOM CHOP",
-            "description": ""
+            "description": "",
+            "performance": "1.2.4.1.3",
+            "gains": 118160,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.SPEICHER",
+            "jockey": "H.JOURNIAC",
+            "driver": "H.JOURNIAC",
+            "owner": "S.TOUSSAINT",
+            "weight": 58.0,
+            "draw": 9
         },
         {
             "number": 3,
             "horse": "RAGNAR CITY",
-            "description": ""
+            "description": "",
+            "performance": "4.4.6.9.7",
+            "gains": 47670,
+            "sex": "M",
+            "age": 4,
+            "trainer": "A.COUETIL",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "SC TH. PIGEON",
+            "weight": 57.5,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "NEPALAIS",
-            "description": ""
+            "description": "",
+            "performance": "0.1.0.1.0",
+            "gains": 203040,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F.CHAPPET",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "A.GILIBERT",
+            "weight": 57.0,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "O'WOOD",
-            "description": ""
+            "description": "",
+            "performance": "5.2.4.3.2",
+            "gains": 68370,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.LIBAUD",
+            "jockey": "L.ROUSSEL",
+            "driver": "L.ROUSSEL",
+            "owner": "LES GALOPINS",
+            "weight": 56.5,
+            "draw": 5
         },
         {
             "number": 6,
             "horse": "VENUS OCEANE",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.4.1",
+            "gains": 34775,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "EC.ADES HAZAN",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "KING TREZY",
-            "description": ""
+            "description": "",
+            "performance": "3.2.4.4.3",
+            "gains": 82420,
+            "sex": "M",
+            "age": 4,
+            "trainer": "C&Y.LERNER",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "O.GHRGHAR",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 8,
             "horse": "TILILA",
-            "description": ""
+            "description": "",
+            "performance": "5.0.1.0.5",
+            "gains": 71500,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "A.FABRE",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 9,
             "horse": "SHEEMA'S ROSE",
-            "description": ""
+            "description": "",
+            "performance": "4.8.0.7.9",
+            "gains": 40690,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.TINCHON",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "A.CLAIRE",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 10,
             "horse": "MASSIMO MERIDIO",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.2.9",
+            "gains": 31450,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GUARNIERI",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "M.ALSHEHHI",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "TIGER ROCK",
-            "description": ""
+            "description": "",
+            "performance": "4.6.3.0.3",
+            "gains": 28790,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "CH. RACING",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 12,
             "horse": "MAIA STAR",
-            "description": ""
+            "description": "",
+            "performance": "7.5.8.8.2",
+            "gains": 28280,
+            "sex": "F",
+            "age": 4,
+            "trainer": "JPH .DUBOIS",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "EC. VICT. DREAMS",
+            "weight": 55.0,
+            "draw": 14
         },
         {
             "number": 13,
             "horse": "LOUVAGNY",
-            "description": ""
+            "description": "",
+            "performance": "4.4.1.6.0",
+            "gains": 31550,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.DELZANGLES",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "G.AU.NORMAND",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 14,
             "horse": "DREAMS",
-            "description": ""
+            "description": "",
+            "performance": "1.9.3.5.0",
+            "gains": 137910,
+            "sex": "M",
+            "age": 7,
+            "trainer": "S.PECORARO",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "N.RUGANI",
+            "weight": 53.5,
+            "draw": 3
         },
         {
             "number": 15,
             "horse": "STEP MORNING",
-            "description": ""
+            "description": "",
+            "performance": "4.8.1.1.0",
+            "gains": 96155,
+            "sex": "H",
+            "age": 7,
+            "trainer": "L.HEB. DE VEYRINAS",
+            "jockey": "A.VILCHIEN",
+            "driver": "A.VILCHIEN",
+            "owner": "G.BEILVERT",
+            "weight": 53.0,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "CIRCEO",
-            "description": ""
+            "description": "",
+            "performance": "2.8.0.4.6",
+            "gains": 63505,
+            "sex": "M",
+            "age": 5,
+            "trainer": "J.SOUDAN",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "L.CACCIALUPI",
+            "weight": 51.5,
+            "draw": 8
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             7,

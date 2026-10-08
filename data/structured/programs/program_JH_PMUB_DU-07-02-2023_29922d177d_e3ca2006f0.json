@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-07-02-2023_29922d177d_e3ca2006f0.txt",
-    "parsed_at": "2026-10-08T10:35:40.058787Z",
+    "parsed_at": "2026-10-08T23:52:11.538424Z",
     "date": "2023-02-05",
     "race": {
         "race_name": null,
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "BYFORD",
-            "description": ""
+            "description": "",
+            "performance": "1.5.0.7.7",
+            "gains": 56656,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.TRULLIER",
+            "jockey": "Y.BONNEFOY",
+            "driver": "Y.BONNEFOY",
+            "owner": "L.BAUDRON",
+            "weight": 60.0,
+            "draw": 5
         },
         {
             "number": 2,
             "horse": "PICNIC ROYAL",
-            "description": ""
+            "description": "",
+            "performance": "7.7.2.3.2",
+            "gains": 189042,
+            "sex": "H",
+            "age": 7,
+            "trainer": "T.PICCONE",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "L.HAASE",
+            "weight": 59.0,
+            "draw": 13
         },
         {
             "number": 3,
             "horse": "ELECTRON LIBRE",
-            "description": ""
+            "description": "",
+            "performance": "8.6.0.6.4",
+            "gains": 192412,
+            "sex": "H",
+            "age": 8,
+            "trainer": "A.LEMAITRE",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "EC. DU SUD",
+            "weight": 58.5,
+            "draw": 15
         },
         {
             "number": 4,
             "horse": "ALWAYS WELCOME",
-            "description": ""
+            "description": "",
+            "performance": "3.2.1.1.2",
+            "gains": 107700,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.GUYON",
+            "jockey": "L.BAUDRON",
+            "driver": "L.BAUDRON",
+            "owner": "P.WALTER",
+            "weight": 58.0,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "GLACIER PEAK",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.8.6",
+            "gains": 69570,
+            "sex": "M",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.RICHTER",
+            "driver": "S.RICHTER",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "HELIOPOLIS",
-            "description": ""
+            "description": "",
+            "performance": "5.3.1.6.2",
+            "gains": 46810,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GRANDIN",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "L.FLOC'H",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 7,
             "horse": "JOLI COUP",
-            "description": ""
+            "description": "",
+            "performance": "2.5.4.6.0",
+            "gains": 106750,
+            "sex": "H",
+            "age": 4,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "J.PARIZE",
+            "driver": "J.PARIZE",
+            "owner": "N.OZGULER",
+            "weight": 56.0,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "GIPSY JET SEPT",
-            "description": ""
+            "description": "",
+            "performance": "3.0.2.3.1",
+            "gains": 133240,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.CRASTUS",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "M. KOUTSOMYTIS",
+            "weight": 56.0,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "BENE BENE",
-            "description": ""
+            "description": "",
+            "performance": "1.3.3.8.7",
+            "gains": 151290,
+            "sex": "H",
+            "age": 6,
+            "trainer": "H.BOUTIN",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "R.BONAVENTURE",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "HAPPY HARRY",
-            "description": ""
+            "description": "",
+            "performance": "9.4.0.7.6",
+            "gains": 58950,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GERMAIN",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "G.COHEN",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 11,
             "horse": "NAISHAN",
-            "description": ""
+            "description": "",
+            "performance": "5.3.4.4.3",
+            "gains": 170109,
+            "sex": "H",
+            "age": 9,
+            "trainer": "B.MARIE",
+            "jockey": "G.ALIMPINISIS",
+            "driver": "G.ALIMPINISIS",
+            "owner": "B.LYNAM",
+            "weight": 55.0,
+            "draw": 4
         },
         {
             "number": 12,
             "horse": "MY LENNY",
-            "description": ""
+            "description": "",
+            "performance": "8.6.2.5.9",
+            "gains": 150600,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.VELON",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "JC.SEROUL",
+            "weight": 55.0,
+            "draw": 11
         },
         {
             "number": 13,
             "horse": "RANDONNEUR",
-            "description": ""
+            "description": "",
+            "performance": "0.7.4.1",
+            "gains": 13800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "P.WIDLOECHER",
+            "weight": 55.0,
+            "draw": 3
         },
         {
             "number": 14,
             "horse": "SHAMSABAD",
-            "description": ""
+            "description": "",
+            "performance": "6.7.9.2.0",
+            "gains": 214055,
+            "sex": "H",
+            "age": 8,
+            "trainer": "C.DEMURO",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "D&P.PROD'HOMME",
+            "weight": 54.5,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "HILLARANTE",
-            "description": ""
+            "description": "",
+            "performance": "9.1.2.5.1",
+            "gains": 51850,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.ORANI",
+            "jockey": "C.ARNAUD",
+            "driver": "C.ARNAUD",
+            "owner": "D&P.PROD'HOMME",
+            "weight": 54.5,
+            "draw": 6
         },
         {
             "number": 16,
             "horse": "AKYO",
-            "description": ""
+            "description": "",
+            "performance": "2.0.0.3.6",
+            "gains": 162805,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.PACAUT",
+            "jockey": "G.DUCA",
+            "driver": "G.DUCA",
+            "owner": "J.LEFRANCOISFRANCOIS",
+            "weight": 54.0,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             4,

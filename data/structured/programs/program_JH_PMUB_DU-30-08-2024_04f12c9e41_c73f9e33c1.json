@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-30-08-2024_04f12c9e41_c73f9e33c1.txt",
-    "parsed_at": "2026-10-08T10:35:42.461163Z",
+    "parsed_at": "2026-10-08T23:52:14.955365Z",
     "date": "2024-08-30",
     "race": {
         "race_name": "PRIX DIOTIMA",
@@ -16,69 +16,200 @@
         {
             "number": 1,
             "horse": "HELIOS DJEMA",
-            "description": ""
+            "description": "",
+            "performance": "2.2.6.1.1",
+            "gains": 137320,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. ABRIVARD",
+            "jockey": "A. PLARD",
+            "driver": "A. PLARD",
+            "owner": "A. PLARD",
+            "listed_chrono": "1.13.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "HAMLET DU VIVIER",
-            "description": ""
+            "description": "",
+            "performance": "4.D.4.0.0",
+            "gains": 139000,
+            "sex": "H",
+            "age": 7,
+            "trainer": "D. THOMAIN",
+            "jockey": "E.M. FOURNIER",
+            "driver": "E.M. FOURNIER",
+            "owner": "EC. MINIER",
+            "listed_chrono": "1.13.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "GAGNANT DE BRIKVIL",
-            "description": ""
+            "description": "",
+            "performance": "D.5.D.D.7",
+            "gains": 143260,
+            "sex": "H",
+            "age": 8,
+            "trainer": "G. GELORMINI",
+            "jockey": "AUDE LEMOINE",
+            "driver": "AUDE LEMOINE",
+            "owner": "F. LEMOINE",
+            "listed_chrono": "1.13.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "HEAD OF STATE",
-            "description": ""
+            "description": "",
+            "performance": "D.1.1.3.3",
+            "gains": 146680,
+            "sex": "H",
+            "age": 7,
+            "trainer": "THEO DUVALDESTIN",
+            "jockey": "TH. DUVALDESTIN",
+            "driver": "TH. DUVALDESTIN",
+            "owner": "EC. UNION-STORY",
+            "listed_chrono": "1.13.20",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "GAMINE DE RIBEAU",
-            "description": ""
+            "description": "",
+            "performance": "1.4.3.0.D",
+            "gains": 150580,
+            "sex": "F",
+            "age": 8,
+            "trainer": "F. OUVRIE",
+            "jockey": "P. GODEY",
+            "driver": "P. GODEY",
+            "owner": "EC. DES MOREAUX",
+            "listed_chrono": "1.13.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "HERMES D'ECROVILLE",
-            "description": ""
+            "description": "",
+            "performance": "1.7.6.9.8",
+            "gains": 151365,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B. MARIE",
+            "jockey": "B. MARIE",
+            "driver": "B. MARIE",
+            "owner": "R. JEAN",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "HARENA DE MARZY",
-            "description": ""
+            "description": "",
+            "performance": "3.D.1.5.4",
+            "gains": 154020,
+            "sex": "F",
+            "age": 7,
+            "trainer": "E. RAFFIN",
+            "jockey": "A. THOMAS",
+            "driver": "A. THOMAS",
+            "owner": "EC. DELTO",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "HAZILYS",
-            "description": ""
+            "description": "",
+            "performance": "4.D.6.3.3",
+            "gains": 157295,
+            "sex": "F",
+            "age": 7,
+            "trainer": "A. DABOUIS",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "D. MOTTIER",
+            "listed_chrono": "1.13.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "GADSEM",
-            "description": ""
+            "description": "",
+            "performance": "1.2.D.8.3",
+            "gains": 157590,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. NIVARD",
+            "jockey": "L. LAUDREN",
+            "driver": "L. LAUDREN",
+            "owner": "L. LAUDREN",
+            "listed_chrono": "1.12.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "GIGA DES PLAINES",
-            "description": ""
+            "description": "",
+            "performance": "7.0.9.5.4",
+            "gains": 158320,
+            "sex": "F",
+            "age": 8,
+            "trainer": "A. LAMY",
+            "jockey": "B. MARIE",
+            "driver": "B. MARIE",
+            "owner": "M. BESANA",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "GLOUGLOU D'EMI",
-            "description": ""
+            "description": "",
+            "performance": "4.3.5.9.4",
+            "gains": 159445,
+            "sex": "H",
+            "age": 8,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "St. PROVOOST",
+            "driver": "St. PROVOOST",
+            "owner": "EC. DANOVER",
+            "listed_chrono": "1.12.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "HASHTAG CHAMANT",
-            "description": ""
+            "description": "",
+            "performance": "7.2.5.3.2",
+            "gains": 161041,
+            "sex": "H",
+            "age": 7,
+            "trainer": "P.Y. VERVA",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "P.D. PAILLOT",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "GEDEON DAIRPET",
-            "description": ""
+            "description": "",
+            "performance": "D.1.D.D.D",
+            "gains": 161565,
+            "sex": "H",
+            "age": 8,
+            "trainer": "F. LAGADEUC",
+            "jockey": "M. VARIN",
+            "driver": "M. VARIN",
+            "owner": "EC. DECOOPMAN",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

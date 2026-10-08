@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_23-03-2024_586e6ef3ac_41c2f219dd.txt",
-    "parsed_at": "2026-10-08T10:35:46.981218Z",
+    "parsed_at": "2026-10-08T23:52:21.445412Z",
     "date": "2024-03-23",
     "race": {
         "race_name": "PRIX DU BOIS DE VINCENNES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "JIOSCO DE PHYT'S",
-            "description": ""
+            "description": "",
+            "performance": "1.4.1.0.D",
+            "gains": 190670,
+            "sex": "M",
+            "age": 5,
+            "trainer": "R. MARTY",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "EC.OSTHEIMER",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 2,
             "horse": "DESIDERIO D'ESI",
-            "description": ""
+            "description": "",
+            "performance": "3.D.3.4.5",
+            "gains": 244536,
+            "sex": "M",
+            "age": 5,
+            "trainer": "M. STEFANI",
+            "jockey": "M. BARONCINI",
+            "driver": "M. BARONCINI",
+            "owner": "FRAN. GRAZIA.BIASIA",
+            "listed_chrono": "1.10.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 3,
             "horse": "FOUGUE DU DOLLAR",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.3.2",
+            "gains": 438325,
+            "sex": "F",
+            "age": 9,
+            "trainer": "D. THOMAIN",
+            "jockey": "S. ROGER",
+            "driver": "S. ROGER",
+            "owner": "L. LEDOYEN",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2850.M"
         },
         {
             "number": 4,
             "horse": "EPSOM D'HERFRAIE",
-            "description": ""
+            "description": "",
+            "performance": "1.1.5.2.9",
+            "gains": 518500,
+            "sex": "H",
+            "age": 10,
+            "trainer": "L. BAUDOUIN",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "EC. LE RIVAGE",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 5,
             "horse": "GAMAY DE L'ITON",
-            "description": ""
+            "description": "",
+            "performance": "1.9.0.2.3",
+            "gains": 551530,
+            "sex": "M",
+            "age": 8,
+            "trainer": "F. LAGADEUC",
+            "jockey": "HUGHES LEVESQUE",
+            "driver": "HUGHES LEVESQUE",
+            "owner": "EC. DE L' ITON",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2850.M"
         },
         {
             "number": 6,
             "horse": "IDEAL LIGNERIES",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.D.2",
+            "gains": 551850,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M. MOTTIER",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "EC. LE TREMONT",
+            "listed_chrono": "1.09.80",
+            "listed_distance": "2850.M"
         },
         {
             "number": 7,
             "horse": "FIGARO DE LARRE",
-            "description": ""
+            "description": "",
+            "performance": "0.5.D.4.4",
+            "gains": 557480,
+            "sex": "H",
+            "age": 9,
+            "trainer": "D. DULONG",
+            "jockey": "S. ROGER",
+            "driver": "S. ROGER",
+            "owner": "EC. LA PETTEVINIERE",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 8,
             "horse": "HAPPY VALLEY",
-            "description": ""
+            "description": "",
+            "performance": "7.4.5.3.8",
+            "gains": 575710,
+            "sex": "F",
+            "age": 7,
+            "trainer": "J.PH. DUBOIS",
+            "jockey": "PH. MOULIN",
+            "driver": "PH. MOULIN",
+            "owner": "EC. VICT. DREAMS",
+            "listed_chrono": "1.09.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 9,
             "horse": "GASPAR DE BRION",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.2.1",
+            "gains": 593340,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. ABRIVARD",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "EC. LD-M. ABRIVARD",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2850.M"
         },
         {
             "number": 10,
             "horse": "USAIN TOLL",
-            "description": ""
+            "description": "",
+            "performance": "4.4.D.8.8",
+            "gains": 615021,
+            "sex": "H",
+            "age": 8,
+            "trainer": "B. ROCHARD",
+            "jockey": "G. CASILLO",
+            "driver": "G. CASILLO",
+            "owner": "SCU. SANTESE SRL",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 11,
             "horse": "GASPAR D'ANGIS",
-            "description": ""
+            "description": "",
+            "performance": "5.D.1.2.1",
+            "gains": 617160,
+            "sex": "H",
+            "age": 8,
+            "trainer": "E. RAFFIN",
+            "jockey": "J.M. BAUDOUIN",
+            "driver": "J.M. BAUDOUIN",
+            "owner": "EC. J.M. BAUDOUIN",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2850.M"
         },
         {
             "number": 12,
             "horse": "ERIC THE EEL",
-            "description": ""
+            "description": "",
+            "performance": "7.3.3.2.8",
+            "gains": 619215,
+            "sex": "M",
+            "age": 8,
+            "trainer": "F. OUVRIE",
+            "jockey": "T. MALMQVIST",
+            "driver": "T. MALMQVIST",
+            "owner": "STALL PANA. RACING",
+            "listed_chrono": "1.08.60",
+            "listed_distance": "2850.M"
         },
         {
             "number": 13,
             "horse": "ECHO DE CHANLECY",
-            "description": ""
+            "description": "",
+            "performance": "6.0.4.6.9",
+            "gains": 657710,
+            "sex": "H",
+            "age": 10,
+            "trainer": "J.M. BAZIRE",
+            "jockey": "E.G. BLOT",
+            "driver": "E.G. BLOT",
+            "owner": "E.G. BLOT",
+            "listed_chrono": "1.10.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 14,
             "horse": "HORSY DREAM",
-            "description": ""
+            "description": "",
+            "performance": "2.D.5.D.3",
+            "gains": 718170,
+            "sex": "M",
+            "age": 7,
+            "trainer": "P. BELLOCHE",
+            "jockey": "P. BELLOCHE",
+            "driver": "P. BELLOCHE",
+            "owner": "EC. DU CLOSET",
+            "listed_chrono": "1.10.10",
+            "listed_distance": "2850.M"
         },
         {
             "number": 15,
             "horse": "FAKIR DU LORAULT",
-            "description": ""
+            "description": "",
+            "performance": "4.0.D.D.4",
+            "gains": 720550,
+            "sex": "M",
+            "age": 9,
+            "trainer": "F. LECANU",
+            "jockey": "M. CHARUEL",
+            "driver": "M. CHARUEL",
+            "owner": "JOËLLE LAIGNEL",
+            "listed_chrono": "1.09.70",
+            "listed_distance": "2850.M"
         },
         {
             "number": 16,
             "horse": "EMERAUDE DE BAIS",
-            "description": ""
+            "description": "",
+            "performance": "2.4.8.2.4",
+            "gains": 788260,
+            "sex": "F",
+            "age": 10,
+            "trainer": "F. NIVARD",
+            "jockey": "B. GOETZ",
+            "driver": "B. GOETZ",
+            "owner": "HERVÉ CARLUS",
+            "listed_chrono": "1.08.30",
+            "listed_distance": "2850.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-25-07-2024_30c1199db2_ffd744abb8.txt",
-    "parsed_at": "2026-10-08T10:35:41.892338Z",
+    "parsed_at": "2026-10-08T23:52:14.179068Z",
     "date": "2024-07-25",
     "race": {
         "race_name": "GCH-PX GUILLAUME D'ORNANO",
@@ -16,84 +16,229 @@
         {
             "number": 1,
             "horse": "ILTONE",
-            "description": ""
+            "description": "",
+            "performance": "1.0.0.1.1",
+            "gains": 106320,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N.GAUFFENIC",
+            "jockey": "N. GEORGE & A. ZETTERHOLM",
+            "driver": "N. GEORGE & A. ZETTERHOLM",
+            "owner": "THE FRA. PARTNERSHIP",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "BOJAK",
-            "description": ""
+            "description": "",
+            "performance": "2.6.4.6.6",
+            "gains": 56852,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.LEFEBVRE",
+            "jockey": "S.LEECH",
+            "driver": "S.LEECH",
+            "owner": "B.HALSALL",
+            "weight": 71.5
         },
         {
             "number": 3,
             "horse": "NORMANDE",
-            "description": ""
+            "description": "",
+            "performance": "5.A.1.1.2",
+            "gains": 131580,
+            "sex": "F",
+            "age": 7,
+            "trainer": "A.ZULIANI",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "D.MAUGHAN",
+            "weight": 71.0
         },
         {
             "number": 4,
             "horse": "MCGROARTY",
-            "description": ""
+            "description": "",
+            "performance": "3.0.8.1.1",
+            "gains": 237259,
+            "sex": "H",
+            "age": 13,
+            "trainer": "J.REVELEY",
+            "jockey": "S.LEECH",
+            "driver": "S.LEECH",
+            "owner": "THE HAS BEEN'S",
+            "weight": 70.5
         },
         {
             "number": 5,
             "horse": "DENTOR DES OBEAUX",
-            "description": ""
+            "description": "",
+            "performance": "8.4.2.6.9",
+            "gains": 290071,
+            "sex": "H",
+            "age": 8,
+            "trainer": "O.JOUIN",
+            "jockey": "P.QUINTON",
+            "driver": "P.QUINTON",
+            "owner": "N.DEVILDER",
+            "weight": 70.0
         },
         {
             "number": 6,
             "horse": "GROOM BOY",
-            "description": ""
+            "description": "",
+            "performance": "1.6.0.A.2",
+            "gains": 244870,
+            "sex": "H",
+            "age": 8,
+            "trainer": "G.MEUNIER",
+            "jockey": "S.EVENO",
+            "driver": "S.EVENO",
+            "owner": "F.LESCOT",
+            "weight": 69.5
         },
         {
             "number": 7,
             "horse": "GOLDEN PARK",
-            "description": ""
+            "description": "",
+            "performance": "2.3.8.5.1",
+            "gains": 346119,
+            "sex": "F",
+            "age": 8,
+            "trainer": "N.HOWIE",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "G.SEROR",
+            "weight": 69.5
         },
         {
             "number": 8,
             "horse": "HALITE",
-            "description": ""
+            "description": "",
+            "performance": "1.3.1.1.D",
+            "gains": 166030,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.UBEDA",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "N.PACHA",
+            "weight": 68.5
         },
         {
             "number": 9,
             "horse": "PANAREA",
-            "description": ""
+            "description": "",
+            "performance": "1.T.1.5.2",
+            "gains": 33450,
+            "sex": "F",
+            "age": 5,
+            "trainer": "C.PRICHARD",
+            "jockey": "F.NICOLLE",
+            "driver": "F.NICOLLE",
+            "owner": "EC. TEAM SPIRIT",
+            "weight": 68.5
         },
         {
             "number": 10,
             "horse": "TONERRE DU TEMPS",
-            "description": ""
+            "description": "",
+            "performance": "1.2.6.0.5",
+            "gains": 126195,
+            "sex": "F",
+            "age": 5,
+            "trainer": "E.BONNET",
+            "jockey": "D.COTTIN",
+            "driver": "D.COTTIN",
+            "owner": "X.LEBARD",
+            "weight": 68.0
         },
         {
             "number": 11,
             "horse": "ROCK AND ROLL",
-            "description": ""
+            "description": "",
+            "performance": "0.9.4.6.5",
+            "gains": 193140,
+            "sex": "H",
+            "age": 6,
+            "trainer": "B.LE CLERC",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "J.ANXO",
+            "weight": 68.0
         },
         {
             "number": 12,
             "horse": "TRANSATLANTIC",
-            "description": ""
+            "description": "",
+            "performance": "3.6.7.2.6",
+            "gains": 77861,
+            "sex": "H",
+            "age": 7,
+            "trainer": "L.BRECHET",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "D.MAUGHAN",
+            "weight": 66.5
         },
         {
             "number": 13,
             "horse": "CENTLOU AA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.2.2",
+            "gains": 30590,
+            "sex": "H",
+            "age": 6,
+            "trainer": "L.ZULIANI",
+            "jockey": "L.CADOT",
+            "driver": "L.CADOT",
+            "owner": "B.LOUSTAUD",
+            "weight": 66.5
         },
         {
             "number": 14,
             "horse": "DINOZAURE",
-            "description": ""
+            "description": "",
+            "performance": "A.1.7.5.6",
+            "gains": 85910,
+            "sex": "H",
+            "age": 7,
+            "trainer": "L.PHILIPPERON",
+            "jockey": "M.ROLLAND",
+            "driver": "M.ROLLAND",
+            "owner": "A.GILIBERT",
+            "weight": 64.5
         },
         {
             "number": 15,
             "horse": "INZEO DU GOUET",
-            "description": ""
+            "description": "",
+            "performance": "3.3.2.7.1",
+            "gains": 162710,
+            "sex": "H",
+            "age": 6,
+            "trainer": "K.NABET",
+            "jockey": "M.SEROR",
+            "driver": "M.SEROR",
+            "owner": "S. SUTTON",
+            "weight": 64.0
         },
         {
             "number": 16,
             "horse": "HADDEXA DES OBEAUX",
-            "description": ""
+            "description": "",
+            "performance": "3.5.7.1.0",
+            "gains": 141263,
+            "sex": "F",
+            "age": 7,
+            "trainer": "G.RICHARD",
+            "jockey": "N.DEVILDER",
+            "driver": "N.DEVILDER",
+            "owner": "N.DEVILDER",
+            "weight": 63.5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

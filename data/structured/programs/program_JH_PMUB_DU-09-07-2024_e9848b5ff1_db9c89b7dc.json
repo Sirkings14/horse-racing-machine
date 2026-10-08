@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-09-07-2024_e9848b5ff1_db9c89b7dc.txt",
-    "parsed_at": "2026-10-08T10:35:40.363883Z",
+    "parsed_at": "2026-10-08T23:52:11.989844Z",
     "date": "2024-07-09",
     "race": {
         "race_name": "PRIX DU CHÂTEAU DE PIERREFONDS",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "JUST LIGHT",
-            "description": ""
+            "description": "",
+            "performance": "7.2.5.3.6",
+            "gains": 123680,
+            "sex": "M",
+            "age": 7,
+            "trainer": "O.ANDIGNE",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "COUETIL ELEVAGE",
+            "weight": 60.0,
+            "draw": 14
         },
         {
             "number": 2,
             "horse": "KANESHYA",
-            "description": ""
+            "description": "",
+            "performance": "3.2.2.1.6",
+            "gains": 72316,
+            "sex": "M",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "WEST. RACE HORSES",
+            "weight": 59.5,
+            "draw": 7
         },
         {
             "number": 3,
             "horse": "BOSIOH",
-            "description": ""
+            "description": "",
+            "performance": "8.2.4.0.0",
+            "gains": 217540,
+            "sex": "M",
+            "age": 7,
+            "trainer": "A.CRASTUS",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "J.N..TEMAM",
+            "weight": 59.0,
+            "draw": 8
         },
         {
             "number": 4,
             "horse": "SANTURIN",
-            "description": ""
+            "description": "",
+            "performance": "1.0.2.0.8",
+            "gains": 109582,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A.MOLINS",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "I.OTTEN",
+            "weight": 58.5,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "MATAURI GOLD",
-            "description": ""
+            "description": "",
+            "performance": "2.6.6.2.0",
+            "gains": 56860,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.LEMAITRE",
+            "jockey": "P&F.ADDA & RENAUT",
+            "driver": "P&F.ADDA & RENAUT",
+            "owner": "AK.COOPER",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "ROBINIE",
-            "description": ""
+            "description": "",
+            "performance": "8.0.1.4.7",
+            "gains": 48300,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "STALL GRAFENBERG",
+            "weight": 57.5,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "LORENZO DE MEDICI",
-            "description": ""
+            "description": "",
+            "performance": "0.4.6.4.0",
+            "gains": 79360,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.SOUMILLON",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "SCUDERIA DEI DUEPI",
+            "weight": 57.0,
+            "draw": 6
         },
         {
             "number": 8,
             "horse": "TRES ROCK WOMEN",
-            "description": ""
+            "description": "",
+            "performance": "2.4.1.8.1",
+            "gains": 55510,
+            "sex": "F",
+            "age": 5,
+            "trainer": "A.MADAMET",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "STALL GRAFENBERG",
+            "weight": 56.5,
+            "draw": 16
         },
         {
             "number": 9,
             "horse": "HAVOC",
-            "description": ""
+            "description": "",
+            "performance": "5.1.5.3.2",
+            "gains": 143748,
+            "sex": "M",
+            "age": 6,
+            "trainer": "T.BACHELOT",
+            "jockey": "S.PECORARO",
+            "driver": "S.PECORARO",
+            "owner": "N.RUGANI",
+            "weight": 56.5,
+            "draw": 11
         },
         {
             "number": 10,
             "horse": "HOLLYWOOD AFRICANS",
-            "description": ""
+            "description": "",
+            "performance": "2.0.7.1.7",
+            "gains": 115390,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "J.N.TEMAM",
+            "weight": 55.5,
+            "draw": 3
         },
         {
             "number": 11,
             "horse": "CHEEK TO CHEEK",
-            "description": ""
+            "description": "",
+            "performance": "3.3.3.0.3",
+            "gains": 67630,
+            "sex": "F",
+            "age": 5,
+            "trainer": "H.BESNIER",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "F.RAOUL",
+            "weight": 55.5,
+            "draw": 1
         },
         {
             "number": 12,
             "horse": "KAHRAMAN",
-            "description": ""
+            "description": "",
+            "performance": "9.9.0.6.8",
+            "gains": 24681,
+            "sex": "M",
+            "age": 4,
+            "trainer": "J.NICOLEAU",
+            "jockey": "A.KARKOSA",
+            "driver": "A.KARKOSA",
+            "owner": "F.KAHRAMAN",
+            "weight": 55.5,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "RODAINAH",
-            "description": ""
+            "description": "",
+            "performance": "2.4.0.1.1",
+            "gains": 27030,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "SALABI RACING",
+            "weight": 54.5,
+            "draw": 12
         },
         {
             "number": 14,
             "horse": "ILUMINE PRECIEUSE",
-            "description": ""
+            "description": "",
+            "performance": "6.5.4.0.0",
+            "gains": 650,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F.VALLE SKAR",
+            "jockey": "M.DESVAUX",
+            "driver": "M.DESVAUX",
+            "owner": "M.DESVAUX",
+            "weight": 54.5,
+            "draw": 9
         },
         {
             "number": 15,
             "horse": "JACKSUN",
-            "description": ""
+            "description": "",
+            "performance": "4.5.3.0.0",
+            "gains": 252439,
+            "sex": "H",
+            "age": 10,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "M.FIGGE",
+            "driver": "M.FIGGE",
+            "owner": "EC.PREMIERE CLASSE",
+            "weight": 53.5,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "BAHAYRA",
-            "description": ""
+            "description": "",
+            "performance": "4.2.0.2.1",
+            "gains": 27570,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.TRULLIER",
+            "jockey": "P.GROUALLE",
+            "driver": "P.GROUALLE",
+            "owner": "A.FONTAINE",
+            "weight": 53.0,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-26-01-2026_18bd7011da_8b485ba6c8.txt",
-    "parsed_at": "2026-10-08T10:35:41.956320Z",
+    "parsed_at": "2026-10-08T23:52:14.273083Z",
     "date": "2026-01-26",
     "race": {
         "race_name": "PRIX DE MARSEILLE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "BAYAMOON",
-            "description": ""
+            "description": "",
+            "performance": "1.1.6.6.3",
+            "gains": 85004,
+            "sex": "M",
+            "age": 5,
+            "trainer": "J.REYNIER",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "UNDER BLUE SKY",
+            "weight": 60.5,
+            "draw": 7
         },
         {
             "number": 2,
             "horse": "LORD OF WAR",
-            "description": ""
+            "description": "",
+            "performance": "8.1.7.0.8",
+            "gains": 108570,
+            "sex": "M",
+            "age": 5,
+            "trainer": "N.PERRET",
+            "jockey": "S.RUIS",
+            "driver": "S.RUIS",
+            "owner": "J.N.TEMAM",
+            "weight": 60.5,
+            "draw": 16
         },
         {
             "number": 3,
             "horse": "WESTMINSTER NIGHT",
-            "description": ""
+            "description": "",
+            "performance": "6.4.0.1.5",
+            "gains": 162560,
+            "sex": "H",
+            "age": 7,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "WEST. RACE HORSES",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "CREW DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "1.2.4.3.3",
+            "gains": 284897,
+            "sex": "H",
+            "age": 9,
+            "trainer": "C.BOUTIN",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "EC.NICOLATO",
+            "weight": 59.0,
+            "draw": 11
         },
         {
             "number": 5,
             "horse": "GILDED DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "8.2.2.5.0",
+            "gains": 86840,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.PITART",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "EC. P. MBAPPE",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 6,
             "horse": "AMEDRAS",
-            "description": ""
+            "description": "",
+            "performance": "0.1.0.0.0",
+            "gains": 273600,
+            "sex": "H",
+            "age": 9,
+            "trainer": "C.ESCUDER",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "A.DRIDI",
+            "weight": 56.0,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "RIASSOU",
-            "description": ""
+            "description": "",
+            "performance": "1.7.1.2.6",
+            "gains": 39155,
+            "sex": "F",
+            "age": 5,
+            "trainer": "P.SIGAUD",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "P.SIGAUD",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "HALF HALF",
-            "description": ""
+            "description": "",
+            "performance": "0.7.3.9.8",
+            "gains": 112678,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.SMAGA",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "M.FOUGY-SMAGA",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 9,
             "horse": "JOH SPIRIT",
-            "description": ""
+            "description": "",
+            "performance": "4.0.1.9.6",
+            "gains": 131347,
+            "sex": "F",
+            "age": 7,
+            "trainer": "P.SIGAUD",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "P.SIGAUD",
+            "weight": 55.5,
+            "draw": 4
         },
         {
             "number": 10,
             "horse": "CASARES",
-            "description": ""
+            "description": "",
+            "performance": "0.2.3.1.3",
+            "gains": 70720,
+            "sex": "H",
+            "age": 5,
+            "trainer": "D&P.PROD'HOMME",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "B.GIRAUDON",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 11,
             "horse": "BREIZH MOON",
-            "description": ""
+            "description": "",
+            "performance": "0.8.1.5.1",
+            "gains": 58443,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F.FORESI",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "S.DUROT",
+            "weight": 54.0,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "REVE DE VALLARSA",
-            "description": ""
+            "description": "",
+            "performance": "0.0.6.6.2",
+            "gains": 109888,
+            "sex": "M",
+            "age": 6,
+            "trainer": "TJ.MARTINS NOVAIS",
+            "jockey": "BA.PAIVA LOPES",
+            "driver": "BA.PAIVA LOPES",
+            "owner": "TF.VIEIRA TEIXEIRA",
+            "weight": 54.0,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "WAZIERS",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.3.3",
+            "gains": 117492,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F.FORESI",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "EC. CH.BRIDAULT",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 14,
             "horse": "JUGANDO",
-            "description": ""
+            "description": "",
+            "performance": "0.4.8.5.1",
+            "gains": 107042,
+            "sex": "H",
+            "age": 6,
+            "trainer": "TJ.MARTINS NOVAIS",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "FC.MAR. DE CASTRO",
+            "weight": 54.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "MANGAKEN",
-            "description": ""
+            "description": "",
+            "performance": "4.5.7.5.1",
+            "gains": 62721,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.SANCHEZ-MARTIN",
+            "jockey": "R.DUBORD",
+            "driver": "R.DUBORD",
+            "owner": "M.PEREZ CARLOS",
+            "weight": 53.0,
+            "draw": 2
         },
         {
             "number": 16,
             "horse": "CHIRIMIRI",
-            "description": ""
+            "description": "",
+            "performance": "8.2.1.0.5",
+            "gains": 182835,
+            "sex": "H",
+            "age": 8,
+            "trainer": "X.BLANCHET",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "S.GILIBERT",
+            "weight": 53.0,
+            "draw": 3
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_29-07-2024_18645d95f8_bf0264f447.txt",
-    "parsed_at": "2026-10-08T10:35:46.345018Z",
+    "parsed_at": "2026-10-08T23:52:20.512263Z",
     "date": "2024-07-29",
     "race": {
         "race_name": "PLAT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "LOVERS DAY",
-            "description": ""
+            "description": "",
+            "performance": "5.7.0.1.4",
+            "gains": 67750,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.BACHELOT",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "A.DRIDRI",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 2,
             "horse": "AQUILA VOLANTE",
-            "description": ""
+            "description": "",
+            "performance": "8.4.3.1.5",
+            "gains": 57850,
+            "sex": "M",
+            "age": 3,
+            "trainer": "L.NOMIS",
+            "jockey": "G.PANNIER",
+            "driver": "G.PANNIER",
+            "owner": "J.MAHIQUES",
+            "weight": 58.0,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "KEEN APPROACH",
-            "description": ""
+            "description": "",
+            "performance": "6.6.5.3.1",
+            "gains": 30250,
+            "sex": "F",
+            "age": 3,
+            "trainer": "S.PASQUIER",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "P.BONNIFAIT",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "BENIMARU",
-            "description": ""
+            "description": "",
+            "performance": "0.1.3.6",
+            "gains": 13650,
+            "sex": "M",
+            "age": 3,
+            "trainer": "M.DELALANDE",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "TOLMI RACING",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 5,
             "horse": "ELEGANT FRIEND",
-            "description": ""
+            "description": "",
+            "performance": "1.1.4.1.4",
+            "gains": 27850,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.BARZALONA",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 56.5,
+            "draw": 16
         },
         {
             "number": 6,
             "horse": "PRINCE OF CLOUDS",
-            "description": ""
+            "description": "",
+            "performance": "7.7.0.1.2",
+            "gains": 21500,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.SOUMILLON",
+            "jockey": "M.DEL. SANCHEZ",
+            "driver": "M.DEL. SANCHEZ",
+            "owner": "I.CORBANI",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 7,
             "horse": "FUTURE FATE",
-            "description": ""
+            "description": "",
+            "performance": "4.1.4.3",
+            "gains": 19450,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.MADAMET",
+            "jockey": "TIM.DONWORTH",
+            "driver": "TIM.DONWORTH",
+            "owner": "LNJ FOXWOODS",
+            "weight": 56.5,
+            "draw": 8
         },
         {
             "number": 8,
             "horse": "CONCERTATION",
-            "description": ""
+            "description": "",
+            "performance": "3.4.6.4.2",
+            "gains": 41650,
+            "sex": "F",
+            "age": 3,
+            "trainer": "M.GUYON",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "FAMILLE MOUSSAC",
+            "weight": 56.0,
+            "draw": 10
         },
         {
             "number": 9,
             "horse": "ON THE CLOUDS",
-            "description": ""
+            "description": "",
+            "performance": "0.1.0",
+            "gains": 4750,
+            "sex": "F",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "GODOLPHIN SNC",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 10,
             "horse": "STAR OF THE NIGHT",
-            "description": ""
+            "description": "",
+            "performance": "8.2.1.1.2",
+            "gains": 34250,
+            "sex": "F",
+            "age": 3,
+            "trainer": "A.POUCHIN",
+            "jockey": "P. DE CHEVIGNY",
+            "driver": "P. DE CHEVIGNY",
+            "owner": "I.CORBANI",
+            "weight": 54.0,
+            "draw": 11
         },
         {
             "number": 11,
             "horse": "MEHLANGO",
-            "description": ""
+            "description": "",
+            "performance": "9.1.5.3.2",
+            "gains": 30420,
+            "sex": "M",
+            "age": 3,
+            "trainer": "A.LEMAITRE",
+            "jockey": "F.JOLIVET",
+            "driver": "F.JOLIVET",
+            "owner": "F.JOLIVET",
+            "weight": 54.0,
+            "draw": 3
         },
         {
             "number": 12,
             "horse": "INTISAR",
-            "description": ""
+            "description": "",
+            "performance": "6.1.2.8.7",
+            "gains": 11900,
+            "sex": "H",
+            "age": 3,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "F.BINGHESHAYAN",
+            "weight": 53.5,
+            "draw": 5
         },
         {
             "number": 13,
             "horse": "STARZO FAL",
-            "description": ""
+            "description": "",
+            "performance": "3.2.2.2.2",
+            "gains": 53790,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.DEMURO",
+            "jockey": "M.BARATTI",
+            "driver": "M.BARATTI",
+            "owner": "FAL STUD SAS",
+            "weight": 53.0,
+            "draw": 2
         },
         {
             "number": 14,
             "horse": "CARLSTON",
-            "description": ""
+            "description": "",
+            "performance": "1.7.0",
+            "gains": 8500,
+            "sex": "H",
+            "age": 3,
+            "trainer": "C.PACAUT",
+            "jockey": "C.ESCUDER",
+            "driver": "C.ESCUDER",
+            "owner": "L.COHEN",
+            "weight": 53.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "KOWALSKI",
-            "description": ""
+            "description": "",
+            "performance": "0.2.7",
+            "gains": 5400,
+            "sex": "H",
+            "age": 3,
+            "trainer": "E.HARDOUIN",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "G.BARBARIN",
+            "weight": 53.0,
+            "draw": 4
         },
         {
             "number": 16,
             "horse": "MON FLAMANT",
-            "description": ""
+            "description": "",
+            "performance": "5.3.6.1.8",
+            "gains": 15540,
+            "sex": "H",
+            "age": 3,
+            "trainer": "R.MANGIONE",
+            "jockey": "A&G.BOTTI",
+            "driver": "A&G.BOTTI",
+            "owner": "L. DASSAULT",
+            "weight": 52.5,
+            "draw": 6
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

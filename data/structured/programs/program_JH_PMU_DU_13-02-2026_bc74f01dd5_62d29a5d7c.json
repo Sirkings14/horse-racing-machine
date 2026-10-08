@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMU_DU_13-02-2026_bc74f01dd5_62d29a5d7c.txt",
-    "parsed_at": "2026-10-08T10:35:46.838955Z",
+    "parsed_at": "2026-10-08T23:52:21.235012Z",
     "date": "2026-02-13",
     "race": {
         "race_name": null,
@@ -16,84 +16,197 @@
         {
             "number": 1,
             "horse": "CHITCHAT",
-            "description": ""
+            "description": "",
+            "performance": "1.1.0.3.1",
+            "gains": 252782,
+            "trainer": "D.WAJERSTEN",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "St. SOFO",
+            "listed_chrono": "1.10.80"
         },
         {
             "number": 2,
             "horse": "HALO AM",
-            "description": ""
+            "description": "",
+            "performance": "0.6.3.1.2",
+            "gains": 259660,
+            "trainer": "D. LOCQUENEUX",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "EC. GER. RECYCLING",
+            "listed_chrono": "1.10.50"
         },
         {
             "number": 3,
             "horse": "COMBAT FIGHTER",
-            "description": ""
+            "description": "",
+            "performance": "5.4.8.3.1",
+            "gains": 262939,
+            "trainer": "A.OJANPERA",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "Team KOMPPIS",
+            "listed_chrono": "1.10.60"
         },
         {
             "number": 4,
             "horse": "IMPERIAL DURABUTIN",
-            "description": ""
+            "description": "",
+            "performance": "1.0.4.2.D",
+            "gains": 275895,
+            "trainer": "J.R. DELLIAUX",
+            "jockey": "F. OUVRIE",
+            "driver": "F. OUVRIE",
+            "owner": "EC. du DAMIER",
+            "listed_chrono": "1.11.20"
         },
         {
             "number": 5,
             "horse": "INSHOT JOSSELYN",
-            "description": ""
+            "description": "",
+            "performance": "D.5.5.D.5",
+            "gains": 280690,
+            "trainer": "A. DE JESUS",
+            "jockey": "S.E. PASQUIER",
+            "driver": "S.E. PASQUIER",
+            "owner": "F. CHARTIER",
+            "listed_chrono": "1.10.70"
         },
         {
             "number": 6,
             "horse": "INFERNO PIPER",
-            "description": ""
+            "description": "",
+            "performance": "1.8.3.0.3",
+            "gains": 288570,
+            "trainer": "V. MARTENS",
+            "jockey": "CH. MARTENS",
+            "driver": "CH. MARTENS",
+            "owner": "EC. PIPER",
+            "listed_chrono": "1.12.00"
         },
         {
             "number": 7,
             "horse": "JASON GINYU",
-            "description": ""
+            "description": "",
+            "performance": "3.2.2.6.0",
+            "gains": 307070,
+            "trainer": "ARNAUD DESMOTTES",
+            "jockey": "ARNAUD DESMOTTES",
+            "driver": "ARNAUD DESMOTTES",
+            "owner": "Cath. EMELIN",
+            "listed_chrono": "1.10.60"
         },
         {
             "number": 8,
             "horse": "CANTO DEI VENTI",
-            "description": ""
+            "description": "",
+            "performance": "5.1.4.4.7",
+            "gains": 312706,
+            "trainer": "H.E. BONDO",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "CU. GROUP",
+            "listed_chrono": "1.10.40"
         },
         {
             "number": 9,
             "horse": "GAZ D'OCCAGNES",
-            "description": ""
+            "description": "",
+            "performance": "4.6.0.4.4",
+            "gains": 315680,
+            "trainer": "G. CURENS",
+            "jockey": "J.CH. PITON",
+            "driver": "J.CH. PITON",
+            "owner": "PH. JOYEUX",
+            "listed_chrono": "1.10.80"
         },
         {
             "number": 10,
             "horse": "COLBERT WF",
-            "description": ""
+            "description": "",
+            "performance": "D.5.D.2.D",
+            "gains": 317246,
+            "trainer": "H.E. BONDO",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "Sc. MY HORSE",
+            "listed_chrono": "1.10.90"
         },
         {
             "number": 11,
             "horse": "GALANT DE CAREL",
-            "description": ""
+            "description": "",
+            "performance": "5.0.9.5.D",
+            "gains": 327760,
+            "trainer": "C. GAZENGEL",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "EC. CHAMPIE",
+            "listed_chrono": "1.11.60"
         },
         {
             "number": 12,
             "horse": "HABIT DE SOIREE",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.3.4",
+            "gains": 328445,
+            "trainer": "F. SENET",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "M. STIHL",
+            "listed_chrono": "1.10.90"
         },
         {
             "number": 13,
             "horse": "HOCHE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.7.0.A",
+            "gains": 329900,
+            "trainer": "R. LAGADEUC",
+            "jockey": "F. LAGADEUC",
+            "driver": "F. LAGADEUC",
+            "owner": "EC. CHEFFREVILLE",
+            "listed_chrono": "1.10.40"
         },
         {
             "number": 14,
             "horse": "HAMONET DE CHOISEL",
-            "description": ""
+            "description": "",
+            "performance": "8.D.0.1.4",
+            "gains": 330055,
+            "trainer": "S.G. DUPONT",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "J.G. VIOL",
+            "listed_chrono": "1.10.80"
         },
         {
             "number": 15,
             "horse": "HOLD UP DU SAPTEL",
-            "description": ""
+            "description": "",
+            "performance": "5.0.4.0.5",
+            "gains": 334150,
+            "trainer": "M. MOTTIER",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "E. CHENET",
+            "listed_chrono": "1.11.00"
         },
         {
             "number": 16,
             "horse": "GORDON MIJACK",
-            "description": ""
+            "description": "",
+            "performance": "9.9.D.0.3",
+            "gains": 337370,
+            "trainer": "A. DE JESUS",
+            "jockey": "E. DE JESUS",
+            "driver": "E. DE JESUS",
+            "owner": "Steph. CALLICO",
+            "listed_chrono": "1.11.40"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             7,

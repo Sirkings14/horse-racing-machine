@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-23-02-2023_0e360e21a9_1feb2f8c5e.txt",
-    "parsed_at": "2026-10-08T10:35:41.595647Z",
+    "parsed_at": "2026-10-08T23:52:13.757227Z",
     "date": "2023-03-23",
     "race": {
         "race_name": null,
@@ -16,79 +16,230 @@
         {
             "number": 1,
             "horse": "SIR GEORGE",
-            "description": ""
+            "description": "",
+            "performance": "4.6.0.3.6",
+            "gains": 115634,
+            "sex": "M",
+            "age": 7,
+            "trainer": "C.SOUMILLON",
+            "jockey": "N.PAYSAN",
+            "driver": "N.PAYSAN",
+            "owner": "R.GROSBOIS",
+            "weight": 62.0,
+            "draw": 1
         },
         {
             "number": 2,
             "horse": "SRIFANELOGREEN",
-            "description": ""
+            "description": "",
+            "performance": "2.2.2.1.5",
+            "gains": 113070,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.PICCONE",
+            "jockey": "B.AUDOUIN",
+            "driver": "B.AUDOUIN",
+            "owner": "J.GILBERT",
+            "weight": 60.0,
+            "draw": 3
         },
         {
             "number": 3,
             "horse": "JOEY UP",
-            "description": ""
+            "description": "",
+            "performance": "6.1.9.1.5",
+            "gains": 79840,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.GUYON",
+            "jockey": "J.CARAYON",
+            "driver": "J.CARAYON",
+            "owner": "C.PHILIPPART",
+            "weight": 60.0,
+            "draw": 11
         },
         {
             "number": 4,
             "horse": "LETTYT FIGHT",
-            "description": ""
+            "description": "",
+            "performance": "7.5.1.1.0",
+            "gains": 161118,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "TROIS MILLE",
+            "weight": 59.5,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "PICNIC ROYAL",
-            "description": ""
+            "description": "",
+            "performance": "0.2.7.7.2",
+            "gains": 198542,
+            "sex": "H",
+            "age": 7,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "G.DUCA",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 6,
             "horse": "WOOT CITY",
-            "description": ""
+            "description": "",
+            "performance": "6.3.8.2.4",
+            "gains": 107411,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "F.VERMEULEN",
+            "driver": "F.VERMEULEN",
+            "owner": "L.DISARO",
+            "weight": 58.0,
+            "draw": 2
         },
         {
             "number": 7,
             "horse": "NAISHAN",
-            "description": ""
+            "description": "",
+            "performance": "1.4.5.3.4",
+            "gains": 186609,
+            "sex": "H",
+            "age": 9,
+            "trainer": "B.MARIE",
+            "jockey": "G.ALIMPINISIS",
+            "driver": "G.ALIMPINISIS",
+            "owner": "M. KOUTSOMYTIS",
+            "weight": 57.5,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "LEPTI PRINSADI",
-            "description": ""
+            "description": "",
+            "performance": "2.3.5.1.4",
+            "gains": 85539,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "JF.GRIBOMONT",
+            "weight": 57.5,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "MOON WOLF",
-            "description": ""
+            "description": "",
+            "performance": "2.1.3.0.6",
+            "gains": 65705,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.POUCHIN",
+            "jockey": "S.WATTEL",
+            "driver": "S.WATTEL",
+            "owner": "EC. ASCOT",
+            "weight": 57.5,
+            "draw": 14
         },
         {
             "number": 10,
             "horse": "MYKISS",
-            "description": ""
+            "description": "",
+            "performance": "5.4.2.1.6",
+            "gains": 127439,
+            "sex": "H",
+            "age": 6,
+            "trainer": "T.BACHELOT",
+            "jockey": "G.BATISTIC",
+            "driver": "G.BATISTIC",
+            "owner": "STALL BRASILIEN",
+            "weight": 57.5,
+            "draw": 4
         },
         {
             "number": 11,
             "horse": "BREATH OF FIRE",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.3.2",
+            "gains": 229140,
+            "sex": "H",
+            "age": 8,
+            "trainer": "R.THOMAS",
+            "jockey": "C&Y.LERNER",
+            "driver": "C&Y.LERNER",
+            "owner": "J.I.VILLAR",
+            "weight": 55.0,
+            "draw": 5
         },
         {
             "number": 12,
             "horse": "SHAMSABAD",
-            "description": ""
+            "description": "",
+            "performance": "2.2.8.6.7",
+            "gains": 222655,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.BARZALONA",
+            "jockey": "D&P.PROD'HOMME",
+            "driver": "D&P.PROD'HOMME",
+            "owner": "B.LYNAM",
+            "weight": 54.0,
+            "draw": 6
         },
         {
             "number": 13,
             "horse": "MORISOT",
-            "description": ""
+            "description": "",
+            "performance": "6.5.1.2.1",
+            "gains": 27310,
+            "sex": "F",
+            "age": 5,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "P.DE CHEVIGNY",
+            "driver": "P.DE CHEVIGNY",
+            "owner": "I. CORBANI",
+            "weight": 54.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "KARAKORUM",
-            "description": ""
+            "description": "",
+            "performance": "1.2.4.0.9",
+            "gains": 81145,
+            "sex": "H",
+            "age": 6,
+            "trainer": "E.HARDOUIN",
+            "jockey": "A.BUDKA",
+            "driver": "A.BUDKA",
+            "owner": "M.MARCADE",
+            "weight": 53.5,
+            "draw": 8
         },
         {
             "number": 15,
             "horse": "SADANORI",
-            "description": ""
+            "description": "",
+            "performance": "8.6.4.5.1",
+            "gains": 47975,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.MADAMET",
+            "jockey": "W.HICKST",
+            "driver": "W.HICKST",
+            "owner": "STALL DUBAI",
+            "weight": 52.5,
+            "draw": 10
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             8,

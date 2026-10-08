@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_21-01-2024_7abc231d27_9f1375662a.txt",
-    "parsed_at": "2026-10-08T10:35:45.163986Z",
+    "parsed_at": "2026-10-08T23:52:18.806450Z",
     "date": "2024-01-21",
     "race": {
         "race_name": "MONTÉ",
@@ -16,94 +16,275 @@
         {
             "number": 1,
             "horse": "HALFA",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.6.2",
+            "gains": 207430,
+            "sex": "F",
+            "age": 7,
+            "trainer": "A. GENDROT",
+            "jockey": "S. LEVOY",
+            "driver": "S. LEVOY",
+            "owner": "EC. S. LEVOY",
+            "listed_chrono": "1.12.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 2,
             "horse": "HANNAH",
-            "description": ""
+            "description": "",
+            "performance": "2.9.4.4.5",
+            "gains": 246617,
+            "sex": "F",
+            "age": 7,
+            "trainer": "F. DESMIGNEUX",
+            "jockey": "J.F. SENET",
+            "driver": "J.F. SENET",
+            "owner": "EC. JS",
+            "listed_chrono": "1.11.30",
+            "listed_distance": "2700.M"
         },
         {
             "number": 3,
             "horse": "IBIKI DE HOUELLE",
-            "description": ""
+            "description": "",
+            "performance": "1.7.1.7.0",
+            "gains": 323360,
+            "sex": "M",
+            "age": 6,
+            "trainer": "E. RAFFIN",
+            "jockey": "F. LEBLANC",
+            "driver": "F. LEBLANC",
+            "owner": "D. AUGEREAU",
+            "listed_chrono": "1.11.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 4,
             "horse": "GOLD VOICE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.4.8.D",
+            "gains": 334930,
+            "sex": "F",
+            "age": 8,
+            "trainer": "B. ROCHARD",
+            "jockey": "F. SOULOY",
+            "driver": "F. SOULOY",
+            "owner": "D. BENCHETRIT",
+            "listed_chrono": "1.11.70",
+            "listed_distance": "2700.M"
         },
         {
             "number": 5,
             "horse": "GEORGICA GEDE",
-            "description": ""
+            "description": "",
+            "performance": "6.0.R.0.7",
+            "gains": 371480,
+            "sex": "F",
+            "age": 8,
+            "trainer": "GUILLAUME MARTIN",
+            "jockey": "A. PILLON",
+            "driver": "A. PILLON",
+            "owner": "EC. A. PILLON",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 6,
             "horse": "FINE PERLE OF LOVE",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.6.0",
+            "gains": 427500,
+            "sex": "F",
+            "age": 9,
+            "trainer": "P.Y. VERVA",
+            "jockey": "E. VARIN",
+            "driver": "E. VARIN",
+            "owner": "EC.E. VARIN",
+            "listed_chrono": "1.10.50",
+            "listed_distance": "2700.M"
         },
         {
             "number": 7,
             "horse": "GEISHA SPEED",
-            "description": ""
+            "description": "",
+            "performance": "6.2.7.5.1",
+            "gains": 437830,
+            "sex": "F",
+            "age": 8,
+            "trainer": "A. BARRIER",
+            "jockey": "J.PH. MONCLIN",
+            "driver": "J.PH. MONCLIN",
+            "owner": "J.M. MONCLIN",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 8,
             "horse": "FOUGUE DU DOLLAR",
-            "description": ""
+            "description": "",
+            "performance": "0.3.2.0.D",
+            "gains": 438325,
+            "sex": "F",
+            "age": 9,
+            "trainer": "D. THOMAIN",
+            "jockey": "S. ROGER",
+            "driver": "S. ROGER",
+            "owner": "L. LEDOYEN",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 9,
             "horse": "EDITION GEMA",
-            "description": ""
+            "description": "",
+            "performance": "6.4.6.4.1",
+            "gains": 458705,
+            "sex": "F",
+            "age": 10,
+            "trainer": "G. GODARD",
+            "jockey": "M. SASSIER",
+            "driver": "M. SASSIER",
+            "owner": "EC. MARC SASSIER",
+            "listed_chrono": "1.12.10",
+            "listed_distance": "2700.M"
         },
         {
             "number": 10,
             "horse": "DYNASTY PEJI",
-            "description": ""
+            "description": "",
+            "performance": "D.6.6.0.0",
+            "gains": 497640,
+            "sex": "F",
+            "age": 11,
+            "trainer": "D. BONNE",
+            "jockey": "D. BONNE",
+            "driver": "D. BONNE",
+            "owner": "EC. D. BONNE",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 11,
             "horse": "VAPRIO",
-            "description": ""
+            "description": "",
+            "performance": "4.5.D.0.3",
+            "gains": 521576,
+            "sex": "M",
+            "age": 10,
+            "trainer": "N. HENRY",
+            "jockey": "A. GOCCIADORO",
+            "driver": "A. GOCCIADORO",
+            "owner": "SCU. INDAL SRL",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 12,
             "horse": "ESPERANZA IDOLE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.3.0.0",
+            "gains": 538230,
+            "sex": "F",
+            "age": 10,
+            "trainer": "J.Y. RICART",
+            "jockey": "N. LANGLOIS",
+            "driver": "N. LANGLOIS",
+            "owner": "EC. N. LANGLOIS",
+            "listed_chrono": "1.12.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 13,
             "horse": "INA DU RIB",
-            "description": ""
+            "description": "",
+            "performance": "8.1.2.1.2",
+            "gains": 616460,
+            "sex": "F",
+            "age": 6,
+            "trainer": "J.L.CL. DERSOIR",
+            "jockey": "JOEL HALLAIS",
+            "driver": "JOEL HALLAIS",
+            "owner": "EC. RIB",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 14,
             "horse": "HIRONDELLE DU RIB",
-            "description": ""
+            "description": "",
+            "performance": "7.4.5.3.D",
+            "gains": 726910,
+            "sex": "F",
+            "age": 7,
+            "trainer": "N. PERRON",
+            "jockey": "JOEL HALLAIS",
+            "driver": "JOEL HALLAIS",
+            "owner": "EC. RIB",
+            "listed_chrono": "1.10.60",
+            "listed_distance": "2700.M"
         },
         {
             "number": 15,
             "horse": "IDEALE DU CHENE",
-            "description": ""
+            "description": "",
+            "performance": "D.2.1.5.3",
+            "gains": 826050,
+            "sex": "F",
+            "age": 6,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "J. LE MER",
+            "driver": "J. LE MER",
+            "owner": "Y. GUEDJ",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2700.M"
         },
         {
             "number": 16,
             "horse": "HANNA DES MOLLES",
-            "description": ""
+            "description": "",
+            "performance": "6.0.0.0.1",
+            "gains": 893220,
+            "sex": "F",
+            "age": 7,
+            "trainer": "F. LAGADEUC",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "J.L. BERAUD",
+            "listed_chrono": "1.10.40",
+            "listed_distance": "2700.M"
         },
         {
             "number": 17,
             "horse": "GRANVILLAISE BLEUE",
-            "description": ""
+            "description": "",
+            "performance": "5.8.0.0.1",
+            "gains": 1257260,
+            "sex": "F",
+            "age": 8,
+            "trainer": "C. LEVESQUE",
+            "jockey": "P. LEVESQUE",
+            "driver": "P. LEVESQUE",
+            "owner": "M. GALLIER",
+            "listed_chrono": "1.09.90",
+            "listed_distance": "2700.M"
         },
         {
             "number": 18,
             "horse": "FLAMME DU GOUTIER",
-            "description": ""
+            "description": "",
+            "performance": "7.0.D.2.6",
+            "gains": 1601955,
+            "sex": "F",
+            "age": 9,
+            "trainer": "M. MOTTIER",
+            "jockey": "TH. DUVALDESTIN",
+            "driver": "TH. DUVALDESTIN",
+            "owner": "EC. SAINT MARTIN",
+            "listed_chrono": "1.09.70",
+            "listed_distance": "2700.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

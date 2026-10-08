@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_13-09-2024_30151e49d2_37ffe3cc0a.txt",
-    "parsed_at": "2026-10-08T10:35:44.094673Z",
+    "parsed_at": "2026-10-08T23:52:17.268654Z",
     "date": "2024-09-13",
     "race": {
         "race_name": "ATTELE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ALONE",
-            "description": ""
+            "description": "",
+            "performance": "6.D.0.D.5",
+            "gains": 200897,
+            "sex": "H",
+            "age": 9,
+            "trainer": "S. ERNAULT",
+            "jockey": "R. KUIPER",
+            "driver": "R. KUIPER",
+            "owner": "TRAVKOM. ST. AB",
+            "listed_chrono": "1.13.90",
+            "listed_distance": "2100.M"
         },
         {
             "number": 2,
             "horse": "FISTON A PAPA",
-            "description": ""
+            "description": "",
+            "performance": "D.3.0.3.0",
+            "gains": 203825,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A. BARRIER",
+            "jockey": "P.L. DESAUNETTE",
+            "driver": "P.L. DESAUNETTE",
+            "owner": "EC. CELLA",
+            "listed_chrono": "1.12.20",
+            "listed_distance": "2100.M"
         },
         {
             "number": 3,
             "horse": "HELIOS SOMOLLI",
-            "description": ""
+            "description": "",
+            "performance": "7.6.2.1.0",
+            "gains": 197440,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M. DUDOUIT",
+            "jockey": "J.P. FICHAUX",
+            "driver": "J.P. FICHAUX",
+            "owner": "EC. SOMOLLI",
+            "listed_chrono": "1.12.70",
+            "listed_distance": "2100.M"
         },
         {
             "number": 4,
             "horse": "FAVICI PASMARICK",
-            "description": ""
+            "description": "",
+            "performance": "3.5.1.1.6",
+            "gains": 200700,
+            "sex": "H",
+            "age": 9,
+            "trainer": "P.Y. VERVA",
+            "jockey": "P. DANET",
+            "driver": "P. DANET",
+            "owner": "J.CL. BALLARDIN",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2100.M"
         },
         {
             "number": 5,
             "horse": "GOLDORACK",
-            "description": ""
+            "description": "",
+            "performance": "8.D.D.8.0",
+            "gains": 203520,
+            "sex": "H",
+            "age": 8,
+            "trainer": "P.PH. PLOQUIN",
+            "jockey": "V. LEBARQUE",
+            "driver": "V. LEBARQUE",
+            "owner": "EC. CTE. DE MONTESSON",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2100.M"
         },
         {
             "number": 6,
             "horse": "HYPER FAST",
-            "description": ""
+            "description": "",
+            "performance": "0.0.7.2.7",
+            "gains": 202590,
+            "sex": "M",
+            "age": 7,
+            "trainer": "Y. LEBOURGEOIS",
+            "jockey": "M. BUSSET",
+            "driver": "M. BUSSET",
+            "owner": "YVES DEVEAUX",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2100.M"
         },
         {
             "number": 7,
             "horse": "GERSHWIN DE CHENU",
-            "description": ""
+            "description": "",
+            "performance": "0.4.5.D.8",
+            "gains": 204990,
+            "sex": "H",
+            "age": 8,
+            "trainer": "D. THOMAIN",
+            "jockey": "P. PELLEROT",
+            "driver": "P. PELLEROT",
+            "owner": "EC. P. PELLEROT",
+            "listed_chrono": "1.11.10",
+            "listed_distance": "2100.M"
         },
         {
             "number": 8,
             "horse": "KIMI DI QUATTRO",
-            "description": ""
+            "description": "",
+            "performance": "2.1.5.2.4",
+            "gains": 201236,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. ABRIVARD",
+            "jockey": "MARKUS B SVEDBERG",
+            "driver": "MARKUS B SVEDBERG",
+            "owner": "EC. OLOF BRODIN",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2100.M"
         },
         {
             "number": 9,
             "horse": "HARISON DU PLESSIS",
-            "description": ""
+            "description": "",
+            "performance": "9.2.1.2.D",
+            "gains": 202390,
+            "sex": "H",
+            "age": 7,
+            "trainer": "E. RAFFIN",
+            "jockey": "PH. BOUTIN",
+            "driver": "PH. BOUTIN",
+            "owner": "PH. ROULIERE",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2100.M"
         },
         {
             "number": 10,
             "horse": "HOLD UP RANAIS",
-            "description": ""
+            "description": "",
+            "performance": "2.6.5.0.5",
+            "gains": 196660,
+            "sex": "H",
+            "age": 7,
+            "trainer": "B. ROCHARD",
+            "jockey": "M. BEZIER",
+            "driver": "M. BEZIER",
+            "owner": "H. BESSON",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2100.M"
         },
         {
             "number": 11,
             "horse": "NICE PRESENT",
-            "description": ""
+            "description": "",
+            "performance": "3.5.9.2.1",
+            "gains": 193636,
+            "sex": "H",
+            "age": 7,
+            "trainer": "R. DERIEUX",
+            "jockey": "PAVEL TAMSIN",
+            "driver": "PAVEL TAMSIN",
+            "owner": "F. GRISEZ",
+            "listed_chrono": "1.10.90",
+            "listed_distance": "2100.M"
         },
         {
             "number": 12,
             "horse": "BITCOIND'ARC",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.2.1",
+            "gains": 185803,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F. LAGADEUC",
+            "jockey": "H.E. BONDO",
+            "driver": "H.E. BONDO",
+            "owner": "EC. HOR. BREE. IN SWE.",
+            "listed_chrono": "1.11.00",
+            "listed_distance": "2100.M"
         },
         {
             "number": 13,
             "horse": "HORTINO",
-            "description": ""
+            "description": "",
+            "performance": "8.2.4.4.8",
+            "gains": 190635,
+            "sex": "H",
+            "age": 7,
+            "trainer": "THEO DUVALDESTIN",
+            "jockey": "CH.A. MARY",
+            "driver": "CH.A. MARY",
+            "owner": "C. BUGUET",
+            "listed_chrono": "1.11.90",
+            "listed_distance": "2100.M"
         },
         {
             "number": 14,
             "horse": "GAGNEUR",
-            "description": ""
+            "description": "",
+            "performance": "8.0.0.2.7",
+            "gains": 179560,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M. ABRIVARD",
+            "jockey": "F. GENCE",
+            "driver": "F. GENCE",
+            "owner": "EC. J. MOUCHARD",
+            "listed_chrono": "1.12.30",
+            "listed_distance": "2100.M"
         },
         {
             "number": 15,
             "horse": "HAMIRAL NELSON",
-            "description": ""
+            "description": "",
+            "performance": "3.8.0.0.4",
+            "gains": 182540,
+            "sex": "M",
+            "age": 7,
+            "trainer": "LEO ABRIVARD",
+            "jockey": "L.CL. ABRIVARD",
+            "driver": "L.CL. ABRIVARD",
+            "owner": "G. CHAMPIE",
+            "listed_chrono": "1.11.50",
+            "listed_distance": "2100.M"
         },
         {
             "number": 16,
             "horse": "FAUCON DE L'ALBA",
-            "description": ""
+            "description": "",
+            "performance": "3.6.3.5.4",
+            "gains": 195100,
+            "sex": "H",
+            "age": 9,
+            "trainer": "A. REBECHE",
+            "jockey": "JULIEN RAFFESTIN",
+            "driver": "JULIEN RAFFESTIN",
+            "owner": "EC. WARRIORS",
+            "listed_chrono": "1.11.60",
+            "listed_distance": "2100.M"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

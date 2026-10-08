@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-03-02-2025_a80a118f08_8974a7861f.txt",
-    "parsed_at": "2026-10-08T10:35:39.630699Z",
+    "parsed_at": "2026-10-08T23:52:10.947582Z",
     "date": "2025-02-03",
     "race": {
         "race_name": "PRIX DE GRASSE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CEDRUS",
-            "description": ""
+            "description": "",
+            "performance": "8.5.4.5.3",
+            "gains": 23900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "JP.GAUVIN",
+            "driver": "JP.GAUVIN",
+            "owner": "EC. BERTRAND MILLIERE",
+            "weight": 60.5,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "BLACK GANGSTER",
-            "description": ""
+            "description": "",
+            "performance": "7.1.4.7.1",
+            "gains": 54738,
+            "sex": "M",
+            "age": 4,
+            "trainer": "G.GUEDJ-GAY",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "T.JONES",
+            "weight": 60.0,
+            "draw": 1
         },
         {
             "number": 3,
             "horse": "INSTANTANEMENT",
-            "description": ""
+            "description": "",
+            "performance": "5.2.1.6.0",
+            "gains": 48100,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H.BOUTIN",
+            "jockey": "J.ANDREU",
+            "driver": "J.ANDREU",
+            "owner": "H.BOUDOUAIA",
+            "weight": 59.0,
+            "draw": 8
         },
         {
             "number": 4,
             "horse": "FINE ANYWAY",
-            "description": ""
+            "description": "",
+            "performance": "5.2.1.1.6",
+            "gains": 52268,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.BACHELOT",
+            "jockey": "I.JANA.KOPLIKOVA",
+            "driver": "I.JANA.KOPLIKOVA",
+            "owner": "J.DUFKOVA",
+            "weight": 58.5,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "PESTACLE",
-            "description": ""
+            "description": "",
+            "performance": "7.1.3.2.7",
+            "gains": 32600,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.GUYON",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "JP.ARIOTTI",
+            "weight": 58.5,
+            "draw": 9
         },
         {
             "number": 6,
             "horse": "AMERICAN GLORY",
-            "description": ""
+            "description": "",
+            "performance": "3.1.1.3.7",
+            "gains": 36050,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "A.REN",
+            "weight": 58.0,
+            "draw": 12
         },
         {
             "number": 7,
             "horse": "SINBOULD",
-            "description": ""
+            "description": "",
+            "performance": "8.1.6.4.4",
+            "gains": 16650,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "EC. DE LA VERTE VALLEE",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 8,
             "horse": "KIND OF STAR",
-            "description": ""
+            "description": "",
+            "performance": "6.4.7.4.8",
+            "gains": 45490,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "B.RE-SCANDELLA",
+            "driver": "B.RE-SCANDELLA",
+            "owner": "D.MORDENTI",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 9,
             "horse": "LUNA ROCK",
-            "description": ""
+            "description": "",
+            "performance": "3.3.6.7.7",
+            "gains": 31425,
+            "sex": "F",
+            "age": 4,
+            "trainer": "T.PICCONE",
+            "jockey": "L.BAUDRON",
+            "driver": "L.BAUDRON",
+            "owner": "L.L.BAUDRON",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 10,
             "horse": "LAVENDIN",
-            "description": ""
+            "description": "",
+            "performance": "2.1.3.2.2",
+            "gains": 28200,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "M.PITART",
+            "driver": "M.PITART",
+            "owner": "EC. DU SUD",
+            "weight": 56.5,
+            "draw": 5
         },
         {
             "number": 11,
             "horse": "TERRE BLANCHE",
-            "description": ""
+            "description": "",
+            "performance": "0.4.2.5.3",
+            "gains": 49940,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.CRASTUS",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "EC. GRIBOMONT",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 12,
             "horse": "PROBABLY ME",
-            "description": ""
+            "description": "",
+            "performance": "9.2.2.4.4",
+            "gains": 35200,
+            "sex": "M",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "N.CAULLERY",
+            "driver": "N.CAULLERY",
+            "owner": "P.DEMERCASTEL",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 13,
             "horse": "COCKTAIL DRESS",
-            "description": ""
+            "description": "",
+            "performance": "1.5.6.6.3",
+            "gains": 24405,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.GERMAIN",
+            "jockey": "J.REYNIER",
+            "driver": "J.REYNIER",
+            "owner": "R.PHILIPPS",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "BELLE DE SABA",
-            "description": ""
+            "description": "",
+            "performance": "6.7.3.0.6",
+            "gains": 45000,
+            "sex": "F",
+            "age": 4,
+            "trainer": "H.BESNIER",
+            "jockey": "N.PERRET",
+            "driver": "N.PERRET",
+            "owner": "C.LAHMI",
+            "weight": 55.0,
+            "draw": 10
         },
         {
             "number": 15,
             "horse": "MEASTER OWEN",
-            "description": ""
+            "description": "",
+            "performance": "9.6.7.5.2",
+            "gains": 31750,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.ORANI",
+            "jockey": "JP.GAUVIN",
+            "driver": "JP.GAUVIN",
+            "owner": "N.RICIGNUOLO",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "MARKER",
-            "description": ""
+            "description": "",
+            "performance": "6.0.6.4.1",
+            "gains": 26250,
+            "sex": "H",
+            "age": 4,
+            "trainer": "B.MARIE",
+            "jockey": "P.COTTIER",
+            "driver": "P.COTTIER",
+            "owner": "AM.ROUX",
+            "weight": 52.0,
+            "draw": 6
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

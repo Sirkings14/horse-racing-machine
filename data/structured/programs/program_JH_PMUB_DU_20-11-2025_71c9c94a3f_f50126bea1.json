@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_20-11-2025_71c9c94a3f_f50126bea1.txt",
-    "parsed_at": "2026-10-08T10:35:45.148870Z",
+    "parsed_at": "2026-10-08T23:52:18.785924Z",
     "date": "2025-11-20",
     "race": {
         "race_name": "PRIX DE SILLE LE GUILLAUME",
@@ -16,79 +16,185 @@
         {
             "number": 1,
             "horse": "GO AWAY BIRD",
-            "description": ""
+            "description": "",
+            "performance": "0.9.3.0.9",
+            "gains": 197440,
+            "trainer": "J. GUELPA",
+            "jockey": "F. DESMIGNEUX",
+            "driver": "F. DESMIGNEUX",
+            "owner": "ED. COUBARD-MEUNIER",
+            "listed_chrono": "1.11.90"
         },
         {
             "number": 2,
             "horse": "FERVENTE",
-            "description": ""
+            "description": "",
+            "performance": "0.6.5.0.1",
+            "gains": 197690,
+            "trainer": "B. ROBIN",
+            "jockey": "A. BOURGOIN-TIMBERT",
+            "driver": "A. BOURGOIN-TIMBERT",
+            "owner": "B. ROBIN",
+            "listed_chrono": "1.12.50"
         },
         {
             "number": 3,
             "horse": "DOZEN OF OYSTERS",
-            "description": ""
+            "description": "",
+            "performance": "9.1.6.5",
+            "gains": 223180,
+            "trainer": "Antti OJANPERA",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "SEAFOOD STABLE",
+            "listed_chrono": "0.00.00"
         },
         {
             "number": 4,
             "horse": "L.A.BOKO",
-            "description": ""
+            "description": "",
+            "performance": "6.8.5.3.D",
+            "gains": 225864,
+            "trainer": "D.LOCQUENEUX",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "Stall YNWA AB",
+            "listed_chrono": "1.11.70"
         },
         {
             "number": 5,
             "horse": "FOGO PICO",
-            "description": ""
+            "description": "",
+            "performance": "D.3.4.D.D",
+            "gains": 232420,
+            "trainer": "P.Y. ROCHARD",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "Th. BOURGAIN",
+            "listed_chrono": "1.11.10"
         },
         {
             "number": 6,
             "horse": "HUGO OCCAGNES",
-            "description": ""
+            "description": "",
+            "performance": "7.3.7.4.9",
+            "gains": 256850,
+            "trainer": "M. VARIN",
+            "jockey": "F. GUERINEAU",
+            "driver": "F. GUERINEAU",
+            "owner": "Ph.RENNESSON",
+            "listed_chrono": "1.12.30"
         },
         {
             "number": 7,
             "horse": "HALMA D'AMER",
-            "description": ""
+            "description": "",
+            "performance": "D.6.6.8.9",
+            "gains": 259875,
+            "trainer": "Ch. DREUX",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "G. TANGUY",
+            "listed_chrono": "1.12.10"
         },
         {
             "number": 8,
             "horse": "IVANOF",
-            "description": ""
+            "description": "",
+            "performance": "0.7.D.5.D",
+            "gains": 271380,
+            "trainer": "A. PEREIRA",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "A. PEREIRA",
+            "listed_chrono": "1.11.70"
         },
         {
             "number": 9,
             "horse": "ICARE DU BERYL",
-            "description": ""
+            "description": "",
+            "performance": "4.3.D.3.7",
+            "gains": 271675,
+            "trainer": "Y. LACOMBE",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "G. LACOMBE",
+            "listed_chrono": "1.11.80"
         },
         {
             "number": 10,
             "horse": "POWER DOC",
-            "description": ""
+            "description": "",
+            "performance": "1.1.D.1.9",
+            "gains": 273893,
+            "trainer": "Markus B SVEDBERG",
+            "jockey": "F. OUVRIE",
+            "driver": "F. OUVRIE",
+            "owner": "St. Ake LINDBLOM AB",
+            "listed_chrono": "1.10.40"
         },
         {
             "number": 11,
             "horse": "HARDI CROWN",
-            "description": ""
+            "description": "",
+            "performance": "5.6.D.3.8",
+            "gains": 274855,
+            "trainer": "D. LOCQUENEUX",
+            "jockey": "P.PH. PLOQUIN",
+            "driver": "P.PH. PLOQUIN",
+            "owner": "EC. LUCKY 8 RACING",
+            "listed_chrono": "1.11.20"
         },
         {
             "number": 12,
             "horse": "GANGSTER DAVANESS",
-            "description": ""
+            "description": "",
+            "performance": "9.4.D.0.8",
+            "gains": 276490,
+            "trainer": "N. DEVIGNE",
+            "jockey": "G. MONNIER",
+            "driver": "G. MONNIER",
+            "owner": "N. DEVIGNE",
+            "listed_chrono": "1.12.30"
         },
         {
             "number": 13,
             "horse": "HOCHE",
-            "description": ""
+            "description": "",
+            "performance": "0.A.3.3.8",
+            "gains": 278470,
+            "trainer": "R. LAGADEUC",
+            "jockey": "F. LAGADEUC",
+            "driver": "F. LAGADEUC",
+            "owner": "EC.CHEFFREVILLE",
+            "listed_chrono": "1.10.40"
         },
         {
             "number": 14,
             "horse": "IMPERATOR D'ELA",
-            "description": ""
+            "description": "",
+            "performance": "3.0.D.D.0",
+            "gains": 282195,
+            "trainer": "M. VARIN",
+            "jockey": "A. BARRIER",
+            "driver": "A. BARRIER",
+            "owner": "EC. Hervé GUERIN",
+            "listed_chrono": "1.11.90"
         },
         {
             "number": 15,
             "horse": "COLBERT WF",
-            "description": ""
+            "description": "",
+            "performance": "D.3.3.D.1",
+            "gains": 285996,
+            "trainer": "H.E. BONDO",
+            "jockey": "E. RAFFIN",
+            "driver": "E. RAFFIN",
+            "owner": "Sc. MY HORSE",
+            "listed_chrono": "1.10.90"
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             10,

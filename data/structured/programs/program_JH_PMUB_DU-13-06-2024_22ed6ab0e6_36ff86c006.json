@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-13-06-2024_22ed6ab0e6_36ff86c006.txt",
-    "parsed_at": "2026-10-08T10:35:40.727762Z",
+    "parsed_at": "2026-10-08T23:52:12.518837Z",
     "date": "2024-06-13",
     "race": {
         "race_name": "PRIX DE LA COUR CARREE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "DEVIL IN THE SKY",
-            "description": ""
+            "description": "",
+            "performance": "0.6.5.7.7",
+            "gains": 47050,
+            "sex": "H",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "P.ALLAIRE",
+            "weight": 60.0,
+            "draw": 14
         },
         {
             "number": 2,
             "horse": "LILI BLUE",
-            "description": ""
+            "description": "",
+            "performance": "8.5.6.0.0",
+            "gains": 155558,
+            "sex": "F",
+            "age": 9,
+            "trainer": "J.MOUTARD",
+            "jockey": "B.AUDOUIN",
+            "driver": "B.AUDOUIN",
+            "owner": "C.LE LAY",
+            "weight": 57.5,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "ROBINIE",
-            "description": ""
+            "description": "",
+            "performance": "0.1.4.7.1",
+            "gains": 48300,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.MADAMET",
+            "jockey": "S.SMRCZEK",
+            "driver": "S.SMRCZEK",
+            "owner": "STALL GRAFENBERG",
+            "weight": 57.5,
+            "draw": 16
         },
         {
             "number": 4,
             "horse": "EQUINOXE",
-            "description": ""
+            "description": "",
+            "performance": "0.3.4.7.5",
+            "gains": 92140,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.POUCHIN",
+            "jockey": "E.LIBAUD",
+            "driver": "E.LIBAUD",
+            "owner": "EC.PRUNIER/E.LIBAUD",
+            "weight": 57.5,
+            "draw": 5
         },
         {
             "number": 5,
             "horse": "CORTEZ BANK",
-            "description": ""
+            "description": "",
+            "performance": "6.3.0.4.1",
+            "gains": 88600,
+            "sex": "H",
+            "age": 5,
+            "trainer": "J.MOBIAN",
+            "jockey": "E.MIKHALIDES",
+            "driver": "E.MIKHALIDES",
+            "owner": "D.SINGARIN",
+            "weight": 57.0,
+            "draw": 4
         },
         {
             "number": 6,
             "horse": "ONLY THE BRAVE",
-            "description": ""
+            "description": "",
+            "performance": "4.9.0.5.2",
+            "gains": 149235,
+            "sex": "M",
+            "age": 7,
+            "trainer": "L.DELOZIER",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "E.BLAISSE",
+            "weight": 57.0,
+            "draw": 13
         },
         {
             "number": 7,
             "horse": "KATHINA",
-            "description": ""
+            "description": "",
+            "performance": "6.3.1.3.2",
+            "gains": 23000,
+            "sex": "F",
+            "age": 4,
+            "trainer": "L.POGGIONOVO",
+            "jockey": "A.COUETIL",
+            "driver": "A.COUETIL",
+            "owner": "COUETIL ELEVAGE",
+            "weight": 57.0,
+            "draw": 3
         },
         {
             "number": 8,
             "horse": "GET SET",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.3.5",
+            "gains": 133750,
+            "sex": "H",
+            "age": 7,
+            "trainer": "T.BACHELOT",
+            "jockey": "L.GADBIN",
+            "driver": "L.GADBIN",
+            "owner": "C.VIDEMENT",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "HAVOC",
-            "description": ""
+            "description": "",
+            "performance": "1.5.3.2.D",
+            "gains": 141628,
+            "sex": "M",
+            "age": 6,
+            "trainer": "C.SOUMILLON",
+            "jockey": "S.PECORARO",
+            "driver": "S.PECORARO",
+            "owner": "N.RUGANI",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 10,
             "horse": "PALAIMON",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.0.7",
+            "gains": 54510,
+            "sex": "M",
+            "age": 7,
+            "trainer": "L.BOISSEAU",
+            "jockey": "M.MUNCH",
+            "driver": "M.MUNCH",
+            "owner": "E.SCHWAIGER",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 11,
             "horse": "KAHRAMAN",
-            "description": ""
+            "description": "",
+            "performance": "9.0.6.8.5",
+            "gains": 24681,
+            "sex": "M",
+            "age": 4,
+            "trainer": "T.TRULLIER",
+            "jockey": "A.KARKOSA",
+            "driver": "A.KARKOSA",
+            "owner": "F.KAHRAMAN",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 12,
             "horse": "HOLLYWOOD AFRICANS",
-            "description": ""
+            "description": "",
+            "performance": "7.1.7.8.8",
+            "gains": 111590,
+            "sex": "H",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "L.PONTOIR",
+            "driver": "L.PONTOIR",
+            "owner": "J.N.TEMAM",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 13,
             "horse": "CANOUANN",
-            "description": ""
+            "description": "",
+            "performance": "0.5.5.0.1",
+            "gains": 18340,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PASQUIER",
+            "jockey": "FH.GRAFFARD",
+            "driver": "FH.GRAFFARD",
+            "owner": "H. AGA KHAN",
+            "weight": 55.5,
+            "draw": 15
         },
         {
             "number": 14,
             "horse": "MYKISS",
-            "description": ""
+            "description": "",
+            "performance": "8.0.4.3.0",
+            "gains": 171099,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.BARZALONA",
+            "jockey": "G.BATISTIC",
+            "driver": "G.BATISTIC",
+            "owner": "STALL SIMCA",
+            "weight": 55.0,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "LE BUGISTE",
-            "description": ""
+            "description": "",
+            "performance": "1.2.6.5.7",
+            "gains": 28740,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.THOMAS",
+            "jockey": "P.DECOUZ",
+            "driver": "P.DECOUZ",
+            "owner": "D.PELTIER/O.DE SEYSSEL",
+            "weight": 55.0,
+            "draw": 9
         },
         {
             "number": 16,
             "horse": "CHEEK TO CHEEK",
-            "description": ""
+            "description": "",
+            "performance": "3.3.0.3.5",
+            "gains": 60210,
+            "sex": "F",
+            "age": 5,
+            "trainer": "M.GUYON",
+            "jockey": "ED.MONFORT",
+            "driver": "ED.MONFORT",
+            "owner": "F.RAOUL",
+            "weight": 55.0,
+            "draw": 11
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [],
         "form": [],

@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_27-08-2025_0ed12fe2e2_75166f8854.txt",
-    "parsed_at": "2026-10-08T10:35:46.106859Z",
+    "parsed_at": "2026-10-08T23:52:20.160967Z",
     "date": "2025-08-27",
     "race": {
         "race_name": "GRAND STEEPLE-CHASE DE LA VILLE DE DEAUVILLE",
@@ -16,69 +16,187 @@
         {
             "number": 1,
             "horse": "MOTU FAREONE",
-            "description": ""
+            "description": "",
+            "performance": "8.A.3.1.2",
+            "gains": 431530,
+            "sex": "F",
+            "age": 9,
+            "trainer": "D.WINDRIF",
+            "jockey": "T.BEAURAIN",
+            "driver": "T.BEAURAIN",
+            "owner": "EC. DE MALEISSYE",
+            "weight": 72.0
         },
         {
             "number": 2,
             "horse": "CHARMINO",
-            "description": ""
+            "description": "",
+            "performance": "0.1.3.3.2",
+            "gains": 258703,
+            "sex": "H",
+            "age": 10,
+            "trainer": "P&C.PELTIER",
+            "jockey": "F.GILES",
+            "driver": "F.GILES",
+            "owner": "X. HUET/PH. & C. PELTIER",
+            "weight": 70.5
         },
         {
             "number": 3,
             "horse": "SHOWLY",
-            "description": ""
+            "description": "",
+            "performance": "1.6.8.0.J",
+            "gains": 241625,
+            "sex": "H",
+            "age": 7,
+            "trainer": "CHAILLE-CHAILLE & PAMART",
+            "jockey": "F.BAYLE",
+            "driver": "F.BAYLE",
+            "owner": "G.ROCTON",
+            "weight": 69.0
         },
         {
             "number": 4,
             "horse": "FOLLY FOOT",
-            "description": ""
+            "description": "",
+            "performance": "3.1.7.A.A",
+            "gains": 351224,
+            "sex": "H",
+            "age": 10,
+            "trainer": "RENAUT & ADDA",
+            "jockey": "C.LEFEBVRE",
+            "driver": "C.LEFEBVRE",
+            "owner": "EC. JAECKIN",
+            "weight": 69.0
         },
         {
             "number": 5,
             "horse": "KEASY STORM",
-            "description": ""
+            "description": "",
+            "performance": "1.1.A.1.3",
+            "gains": 54290,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.LE CLERC",
+            "jockey": "E.MEUNIER",
+            "driver": "E.MEUNIER",
+            "owner": "JL.DERRE",
+            "weight": 68.0
         },
         {
             "number": 6,
             "horse": "THE LIKELY LAD",
-            "description": ""
+            "description": "",
+            "performance": "0.2.3.4.1",
+            "gains": 69301,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N. GEORGE & A. ZETTERHOLM",
+            "jockey": "J.REVELEY",
+            "driver": "J.REVELEY",
+            "owner": "J.URQUHART",
+            "weight": 67.5
         },
         {
             "number": 7,
             "horse": "FAN D'APPLE'S",
-            "description": ""
+            "description": "",
+            "performance": "5.3.0.1.1",
+            "gains": 333604,
+            "sex": "H",
+            "age": 10,
+            "trainer": "P.QUINTON",
+            "jockey": "L.ZULIANI",
+            "driver": "L.ZULIANI",
+            "owner": "EC. DES M",
+            "weight": 67.5
         },
         {
             "number": 8,
             "horse": "JOUVANCELLE",
-            "description": ""
+            "description": "",
+            "performance": "2.6.5.1.7",
+            "gains": 178340,
+            "sex": "F",
+            "age": 6,
+            "trainer": "M.SEROR",
+            "jockey": "B.FROST",
+            "driver": "B.FROST",
+            "owner": "C.LAGIER",
+            "weight": 66.5
         },
         {
             "number": 9,
             "horse": "DEAR WEAVER",
-            "description": ""
+            "description": "",
+            "performance": "1.1.1.A.5",
+            "gains": 130860,
+            "sex": "F",
+            "age": 5,
+            "trainer": "H.MERIENNE",
+            "jockey": "G.MEUNIER",
+            "driver": "G.MEUNIER",
+            "owner": "C. THOROUGHBREDS",
+            "weight": 66.0
         },
         {
             "number": 10,
             "horse": "GOLDEN PARK",
-            "description": ""
+            "description": "",
+            "performance": "1.3.4.6.6",
+            "gains": 409274,
+            "sex": "F",
+            "age": 9,
+            "trainer": "M.SEROR",
+            "jockey": "A.ZULIANI",
+            "driver": "A.ZULIANI",
+            "owner": "G.SEROR",
+            "weight": 65.5
         },
         {
             "number": 11,
             "horse": "J'AI LA COTE",
-            "description": ""
+            "description": "",
+            "performance": "3.7.2.2.0",
+            "gains": 97340,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N.PAYSAN",
+            "jockey": "K.NABET",
+            "driver": "K.NABET",
+            "owner": "D.HUYCK/C.HOGG",
+            "weight": 65.0
         },
         {
             "number": 12,
             "horse": "L'ARRABIATO",
-            "description": ""
+            "description": "",
+            "performance": "4.0.3.4.0",
+            "gains": 86950,
+            "sex": "H",
+            "age": 6,
+            "trainer": "CHAILLE-CHAILLE & PAMART",
+            "jockey": "G.MASURE",
+            "driver": "G.MASURE",
+            "owner": "D.JOSSET",
+            "weight": 64.5
         },
         {
             "number": 13,
             "horse": "JOYVOL",
-            "description": ""
+            "description": "",
+            "performance": "3.4.T.1.J",
+            "gains": 47360,
+            "sex": "H",
+            "age": 6,
+            "trainer": "CHAILLE-CHAILLE & PAMART",
+            "jockey": "C.PRICHARD",
+            "driver": "C.PRICHARD",
+            "owner": "D.PECOUT",
+            "weight": 62.0
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             1,

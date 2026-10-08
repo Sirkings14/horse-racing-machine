@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_23-08-2025_e17ca8598e_91cec09e3f.txt",
-    "parsed_at": "2026-10-08T10:35:45.565326Z",
+    "parsed_at": "2026-10-08T23:52:19.385873Z",
     "date": "2025-08-23",
     "race": {
         "race_name": "PRIX DE JUMIEGES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "MISS SUPERNOVA",
-            "description": ""
+            "description": "",
+            "performance": "5.1.1.1.4",
+            "gains": 53818,
+            "sex": "F",
+            "age": 5,
+            "trainer": "E.LIBAUD",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "KEM. STUD LTD",
+            "weight": 60.0,
+            "draw": 1
         },
         {
             "number": 2,
             "horse": "GOGUEN SPAISE",
-            "description": ""
+            "description": "",
+            "performance": "5.9.4.1.2",
+            "gains": 70721,
+            "sex": "H",
+            "age": 5,
+            "trainer": "ED.MONFORT",
+            "jockey": "L.ROUSSEL",
+            "driver": "L.ROUSSEL",
+            "owner": "C.GUEZET",
+            "weight": 60.0,
+            "draw": 14
         },
         {
             "number": 3,
             "horse": "HENRY THE LION",
-            "description": ""
+            "description": "",
+            "performance": "5.4.0.2.5",
+            "gains": 71406,
+            "sex": "H",
+            "age": 5,
+            "trainer": "J.REYNIER",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "E.WARE",
+            "weight": 60.0,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "GAYLOR SENORA",
-            "description": ""
+            "description": "",
+            "performance": "2.5.5.1.6",
+            "gains": 59765,
+            "sex": "M",
+            "age": 6,
+            "trainer": "S.CERULIS",
+            "jockey": "R.MANGIONE",
+            "driver": "R.MANGIONE",
+            "owner": "EC. HS. DES SENORA",
+            "weight": 60.0,
+            "draw": 16
         },
         {
             "number": 5,
             "horse": "CHARLESQUINT",
-            "description": ""
+            "description": "",
+            "performance": "2.7.2.7.3",
+            "gains": 272076,
+            "sex": "H",
+            "age": 8,
+            "trainer": "M.BOUTIN",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "EC. NICOLATO",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "NARCOS",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.8.7",
+            "gains": 286846,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A.BUDKA",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "M.VARIN",
+            "weight": 59.0,
+            "draw": 7
         },
         {
             "number": 7,
             "horse": "SOEUR",
-            "description": ""
+            "description": "",
+            "performance": "3.1.2.5.5",
+            "gains": 24526,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "JL.PARIENTE",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 8,
             "horse": "KER WELEN",
-            "description": ""
+            "description": "",
+            "performance": "3.2.4.6.7",
+            "gains": 144770,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N.LEENDERS",
+            "jockey": "S.SAADI",
+            "driver": "S.SAADI",
+            "owner": "F.PEREZ GONZALEZ",
+            "weight": 59.0,
+            "draw": 13
         },
         {
             "number": 9,
             "horse": "HONEY BADGER",
-            "description": ""
+            "description": "",
+            "performance": "5.0.1.8.3",
+            "gains": 45720,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.WATTEL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "JP.MENVILLE",
+            "weight": 59.0,
+            "draw": 6
         },
         {
             "number": 10,
             "horse": "STRAKO",
-            "description": ""
+            "description": "",
+            "performance": "6.1.2.7.4",
+            "gains": 97317,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.WATTEL",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "A.WATTEL",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 11,
             "horse": "NOOTKA BAY",
-            "description": ""
+            "description": "",
+            "performance": "9.0.0.2.3",
+            "gains": 36905,
+            "sex": "H",
+            "age": 4,
+            "trainer": "JESUS",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "A.WAUTHIJ",
+            "weight": 58.5,
+            "draw": 11
         },
         {
             "number": 12,
             "horse": "BRAMANS",
-            "description": ""
+            "description": "",
+            "performance": "1.0.0.0.4",
+            "gains": 41940,
+            "sex": "H",
+            "age": 4,
+            "trainer": "HA.PANTALL",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "C.CAPOCASALE",
+            "weight": 58.5,
+            "draw": 3
         },
         {
             "number": 13,
             "horse": "WINDBURN",
-            "description": ""
+            "description": "",
+            "performance": "6.3.1.6.6",
+            "gains": 38753,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.HERNON",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "ROY RACING LTD",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 14,
             "horse": "MISS CLAVEL",
-            "description": ""
+            "description": "",
+            "performance": "4.8.3.2.2",
+            "gains": 15802,
+            "sex": "F",
+            "age": 3,
+            "trainer": "C&Y.LERNER",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "P.R.BRADLEY III",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 15,
             "horse": "CHIAREGGIO",
-            "description": ""
+            "description": "",
+            "performance": "0.6.5.3.9",
+            "gains": 79247,
+            "sex": "H",
+            "age": 5,
+            "trainer": "Y.BONNEFOY",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "P.WULK",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "ROYAL RIGHT",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.0",
+            "gains": 131166,
+            "sex": "H",
+            "age": 7,
+            "trainer": "R.BOUCKHUYT",
+            "jockey": "M.GERMAIN",
+            "driver": "M.GERMAIN",
+            "owner": "EC. AVANT-GARDE",
+            "weight": 57.0,
+            "draw": 4
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

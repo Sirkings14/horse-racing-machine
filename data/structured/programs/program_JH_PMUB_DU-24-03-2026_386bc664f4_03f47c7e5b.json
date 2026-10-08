@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-24-03-2026_386bc664f4_03f47c7e5b.txt",
-    "parsed_at": "2026-10-08T10:35:41.724759Z",
+    "parsed_at": "2026-10-08T23:52:13.946373Z",
     "date": "2026-03-24",
     "race": {
         "race_name": "PRIX DE LA MAISON DES JARDIES",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "BELLANO",
-            "description": ""
+            "description": "",
+            "performance": "0.1.4.6.8",
+            "gains": 91608,
+            "sex": "M",
+            "age": 5,
+            "trainer": "G.MOSSE",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "M.MOTSCHMANN",
+            "weight": 62.0,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "DIVINE CHRISNAT",
-            "description": ""
+            "description": "",
+            "performance": "0.0.2.1.4",
+            "gains": 178308,
+            "sex": "F",
+            "age": 6,
+            "trainer": "CH.PLISSON",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "M.PEHU",
+            "weight": 61.0,
+            "draw": 15
         },
         {
             "number": 3,
             "horse": "CLAVUS",
-            "description": ""
+            "description": "",
+            "performance": "2.6.2.7.6",
+            "gains": 145463,
+            "sex": "M",
+            "age": 5,
+            "trainer": "P&J.BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "F.BLICHFELDT",
+            "weight": 61.0,
+            "draw": 2
         },
         {
             "number": 4,
             "horse": "COLONEL MITCH",
-            "description": ""
+            "description": "",
+            "performance": "2.1.7.1.2",
+            "gains": 82728,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.FRADET",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "EC. ED. MESSAOUD",
+            "weight": 60.5,
+            "draw": 8
         },
         {
             "number": 5,
             "horse": "CREW DRAGON",
-            "description": ""
+            "description": "",
+            "performance": "6.1.4.2.1",
+            "gains": 317822,
+            "sex": "H",
+            "age": 9,
+            "trainer": "C.BOUTIN",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "EC. NICOLATO",
+            "weight": 60.0,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "OLYMPIC MESSAGE",
-            "description": ""
+            "description": "",
+            "performance": "6.3.4.2.4",
+            "gains": 119480,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N.PERRET",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "R. RABA",
+            "weight": 59.0,
+            "draw": 9
         },
         {
             "number": 7,
             "horse": "LORD OF WAR",
-            "description": ""
+            "description": "",
+            "performance": "0.7.8.1.7",
+            "gains": 109333,
+            "sex": "M",
+            "age": 5,
+            "trainer": "N.PERRET",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "J.N.TEMAM",
+            "weight": 58.5,
+            "draw": 13
         },
         {
             "number": 8,
             "horse": "ANTHORUS",
-            "description": ""
+            "description": "",
+            "performance": "7.3.4.6.4",
+            "gains": 190170,
+            "sex": "H",
+            "age": 7,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "HA.PANTALL",
+            "weight": 58.5,
+            "draw": 5
         },
         {
             "number": 9,
             "horse": "DOUBLE UP",
-            "description": ""
+            "description": "",
+            "performance": "1.3.4.1.0",
+            "gains": 30640,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.WATTEL",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "I. CORBANI",
+            "weight": 57.5,
+            "draw": 1
         },
         {
             "number": 10,
             "horse": "JENILAT BRIGHT",
-            "description": ""
+            "description": "",
+            "performance": "0.0.0.0.9",
+            "gains": 21024,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.NIESLANIK",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "E. NIESLANIKOVA",
+            "weight": 57.5,
+            "draw": 16
         },
         {
             "number": 11,
             "horse": "ACTO",
-            "description": ""
+            "description": "",
+            "performance": "2.5.0.0.2",
+            "gains": 66266,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.CHAPPET",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "L. MINEO",
+            "weight": 56.5,
+            "draw": 7
         },
         {
             "number": 12,
             "horse": "FELIX AUX ORMES",
-            "description": ""
+            "description": "",
+            "performance": "8.3.2.5.0",
+            "gains": 78486,
+            "sex": "M",
+            "age": 4,
+            "trainer": "Y.BARBEROT",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "Y. LENOIR",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 13,
             "horse": "MISS OXFORD",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.3.0",
+            "gains": 41791,
+            "sex": "F",
+            "age": 5,
+            "trainer": "S.KOBAYASHI",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "S. NOMURA",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 14,
             "horse": "MIGHTY BOY",
-            "description": ""
+            "description": "",
+            "performance": "7.7.7.0.0",
+            "gains": 44944,
+            "sex": "H",
+            "age": 4,
+            "trainer": "CLEMENT & HERMANS",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "S.SANGSTER",
+            "weight": 54.5,
+            "draw": 12
         },
         {
             "number": 15,
             "horse": "SELF SOLUTION",
-            "description": ""
+            "description": "",
+            "performance": "1.1.4.6.0",
+            "gains": 41921,
+            "sex": "H",
+            "age": 5,
+            "trainer": "S.RICHTER",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "GEST.PASCHBERG",
+            "weight": 53.5,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "WAPI",
-            "description": ""
+            "description": "",
+            "performance": "2.0.9.2.4",
+            "gains": 49543,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C&Y.LERNER",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "AL. JACQ/C. BERQUIER",
+            "weight": 53.5,
+            "draw": 4
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             3,

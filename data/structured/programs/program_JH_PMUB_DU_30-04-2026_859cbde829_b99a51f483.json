@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_30-04-2026_859cbde829_b99a51f483.txt",
-    "parsed_at": "2026-10-08T10:35:46.425791Z",
+    "parsed_at": "2026-10-08T23:52:20.637451Z",
     "date": "2026-04-28",
     "race": {
         "race_name": "PRIX DE CHEVILLY",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "TORTISAMBERT",
-            "description": ""
+            "description": "",
+            "performance": "1.2.8.3.3",
+            "gains": 148099,
+            "sex": "H",
+            "age": 5,
+            "trainer": "F.CHAPPET",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "G.AU.NORMAND",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 2,
             "horse": "FERRARI FEVER",
-            "description": ""
+            "description": "",
+            "performance": "5.4.2.2.8",
+            "gains": 198237,
+            "sex": "H",
+            "age": 5,
+            "trainer": "JUL .PHELIPPON",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "EC. FORET JAUNE",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 3,
             "horse": "TEN HORNS",
-            "description": ""
+            "description": "",
+            "performance": "3.2.2.4.2",
+            "gains": 201812,
+            "sex": "M",
+            "age": 5,
+            "trainer": "P.COTTIER",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "AU. NORMAND",
+            "weight": 58.5,
+            "draw": 13
         },
         {
             "number": 4,
             "horse": "SKYLIGHT BROCHARD",
-            "description": ""
+            "description": "",
+            "performance": "0.4.5.2.0",
+            "gains": 155598,
+            "sex": "H",
+            "age": 5,
+            "trainer": "TIM.DONWORTH",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "TIM.TIM .DONWORTH",
+            "weight": 58.5,
+            "draw": 2
         },
         {
             "number": 5,
             "horse": "APAX",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.6.4",
+            "gains": 200475,
+            "sex": "H",
+            "age": 6,
+            "trainer": "S.GAVILAN",
+            "jockey": "M.BARZALONA",
+            "driver": "M.BARZALONA",
+            "owner": "L.MOUTOUSSAMY",
+            "weight": 58.5,
+            "draw": 3
         },
         {
             "number": 6,
             "horse": "JUSEARTH FAL",
-            "description": ""
+            "description": "",
+            "performance": "7.4.2.5.8",
+            "gains": 27008,
+            "sex": "H",
+            "age": 4,
+            "trainer": "TIM.DONWORTH",
+            "jockey": "G.TROLLEY DE PREVAUX",
+            "driver": "G.TROLLEY DE PREVAUX",
+            "owner": "FAL STUD SAS",
+            "weight": 58.5,
+            "draw": 5
         },
         {
             "number": 7,
             "horse": "PUMALIN PARK",
-            "description": ""
+            "description": "",
+            "performance": "4.4.1.9.1",
+            "gains": 84979,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G.MOSSE",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "R.NG",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 8,
             "horse": "TALENTUOSO",
-            "description": ""
+            "description": "",
+            "performance": "3.2.3.1.2",
+            "gains": 96567,
+            "sex": "H",
+            "age": 5,
+            "trainer": "PE.DUBOIS",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "BLU RACING",
+            "weight": 56.5,
+            "draw": 14
         },
         {
             "number": 9,
             "horse": "KRASKHOV",
-            "description": ""
+            "description": "",
+            "performance": "3.4.1.0.2",
+            "gains": 49901,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "A.JATHIERE",
+            "weight": 55.5,
+            "draw": 12
         },
         {
             "number": 10,
             "horse": "SCHUMAN",
-            "description": ""
+            "description": "",
+            "performance": "0.4.6.7.1",
+            "gains": 38020,
+            "sex": "M",
+            "age": 4,
+            "trainer": "F.MONNIER",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "HYPERION SARL",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 11,
             "horse": "NO LIMIT DREAM",
-            "description": ""
+            "description": "",
+            "performance": "8.2.7.5.7",
+            "gains": 165231,
+            "sex": "H",
+            "age": 6,
+            "trainer": "G.MOSSE",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "M.ANDRIA",
+            "weight": 55.0,
+            "draw": 16
         },
         {
             "number": 12,
             "horse": "ABELARD F",
-            "description": ""
+            "description": "",
+            "performance": "7.1.5.5.7",
+            "gains": 148771,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A.KARKOSA",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "Y.POPELIER",
+            "weight": 54.5,
+            "draw": 4
         },
         {
             "number": 13,
             "horse": "PRINCE AUBOIS",
-            "description": ""
+            "description": "",
+            "performance": "9.3.0.2.5",
+            "gains": 68888,
+            "sex": "H",
+            "age": 4,
+            "trainer": "S.PENOT",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "C.PENOT",
+            "weight": 54.5,
+            "draw": 7
         },
         {
             "number": 14,
             "horse": "HALF HALF",
-            "description": ""
+            "description": "",
+            "performance": "6.2.3.0.7",
+            "gains": 131876,
+            "sex": "H",
+            "age": 6,
+            "trainer": "D.SMAGA",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "M.FOUGY-SMAGA",
+            "weight": 54.5,
+            "draw": 11
         },
         {
             "number": 15,
             "horse": "ROYALWOOD",
-            "description": ""
+            "description": "",
+            "performance": "1.4.0.3.9",
+            "gains": 162306,
+            "sex": "F",
+            "age": 6,
+            "trainer": "C.BARANDE BARBE",
+            "jockey": "F.VALLE SKAR",
+            "driver": "F.VALLE SKAR",
+            "owner": "C.BARANDE BARBE",
+            "weight": 54.0,
+            "draw": 1
         },
         {
             "number": 16,
             "horse": "ALPARSLAN",
-            "description": ""
+            "description": "",
+            "performance": "8.6.0.2.1",
+            "gains": 63282,
+            "sex": "H",
+            "age": 4,
+            "trainer": "JP.CARVALHO",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "A.SEN",
+            "weight": 54.0,
+            "draw": 15
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             6,

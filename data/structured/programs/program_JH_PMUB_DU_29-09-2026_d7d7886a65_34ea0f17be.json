@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_29-09-2026_d7d7886a65_34ea0f17be.txt",
-    "parsed_at": "2026-10-08T10:35:46.378355Z",
+    "parsed_at": "2026-10-08T23:52:20.564746Z",
     "date": "2026-09-29",
     "race": {
         "race_name": "PRIX DE LA CHAMBRE DU DUC",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "ANSSIO",
-            "description": ""
+            "description": "",
+            "performance": "2.2.3.5.1",
+            "gains": 78504,
+            "sex": "H",
+            "age": 4,
+            "trainer": "N.BELLANGER",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "P.GIRAUD",
+            "weight": 60.0,
+            "draw": 15
         },
         {
             "number": 2,
             "horse": "ZELORO",
-            "description": ""
+            "description": "",
+            "performance": "2.6.1.4.4",
+            "gains": 91461,
+            "sex": "H",
+            "age": 5,
+            "trainer": "P&J. BRANDT",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "STALL PERLEN AB",
+            "weight": 60.0,
+            "draw": 8
         },
         {
             "number": 3,
             "horse": "ROCK BLANC",
-            "description": ""
+            "description": "",
+            "performance": "0.0.3.5.2",
+            "gains": 351443,
+            "sex": "H",
+            "age": 9,
+            "trainer": "M.DELZANGLES",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "M.LEURSON",
+            "weight": 58.5,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "CENTRAL PARK WEST",
-            "description": ""
+            "description": "",
+            "performance": "3.1.0.0.5",
+            "gains": 383037,
+            "sex": "H",
+            "age": 8,
+            "trainer": "JUL. PHELIPPON",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "HORSEMOOD",
+            "weight": 58.0,
+            "draw": 5
         },
         {
             "number": 5,
             "horse": "OPALUS ROAD",
-            "description": ""
+            "description": "",
+            "performance": "0.1.3.8",
+            "gains": 109170,
+            "sex": "H",
+            "age": 7,
+            "trainer": "JM. BEGUIGNE",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "SPARKLING STAR",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 6,
             "horse": "AL MAX",
-            "description": ""
+            "description": "",
+            "performance": "9.0.2.5.3",
+            "gains": 51879,
+            "sex": "H",
+            "age": 4,
+            "trainer": "P. DECOUZ",
+            "jockey": "PC.BOUDOT",
+            "driver": "PC.BOUDOT",
+            "owner": "MJ RACING",
+            "weight": 57.5,
+            "draw": 14
         },
         {
             "number": 7,
             "horse": "BOTICELLI",
-            "description": ""
+            "description": "",
+            "performance": "4.0.9.2.1",
+            "gains": 72334,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.RULEC",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "S. MOLKS",
+            "weight": 57.0,
+            "draw": 1
         },
         {
             "number": 8,
             "horse": "DOURIANN",
-            "description": ""
+            "description": "",
+            "performance": "0.4.4.1.2",
+            "gains": 170128,
+            "sex": "H",
+            "age": 7,
+            "trainer": "G. PANNIER",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "EC. INITIAL",
+            "weight": 56.5,
+            "draw": 12
         },
         {
             "number": 9,
             "horse": "PRESA DIRETTA",
-            "description": ""
+            "description": "",
+            "performance": "3.3.4.3.0",
+            "gains": 144978,
+            "sex": "F",
+            "age": 7,
+            "trainer": "A. CARRA. SANCHEZ",
+            "jockey": "A. LEMAITRE",
+            "driver": "A. LEMAITRE",
+            "owner": "CUA. MAZANTINNI",
+            "weight": 56.5,
+            "draw": 2
         },
         {
             "number": 10,
             "horse": "FEVE",
-            "description": ""
+            "description": "",
+            "performance": "0.4.5.1.0",
+            "gains": 86733,
+            "sex": "F",
+            "age": 4,
+            "trainer": "J. LEROY",
+            "jockey": "T. PICCONE",
+            "driver": "T. PICCONE",
+            "owner": "EC. MESSICA",
+            "weight": 56.0,
+            "draw": 7
         },
         {
             "number": 11,
             "horse": "FEARLESS CHEETAH",
-            "description": ""
+            "description": "",
+            "performance": "6.0.0.6.1",
+            "gains": 98711,
+            "sex": "F",
+            "age": 6,
+            "trainer": "F. BRESSON",
+            "jockey": "S. PASQUIER",
+            "driver": "S. PASQUIER",
+            "owner": "F. BRESSON",
+            "weight": 54.5,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "TRUE TEDESCO",
-            "description": ""
+            "description": "",
+            "performance": "2.8.0.7.0",
+            "gains": 145492,
+            "sex": "H",
+            "age": 7,
+            "trainer": "A. SUBORICS",
+            "jockey": "B. MARIE",
+            "driver": "B. MARIE",
+            "owner": "ST. MYDLINGHOVEN",
+            "weight": 53.5,
+            "draw": 3
         },
         {
             "number": 13,
             "horse": "STAR ROCK",
-            "description": ""
+            "description": "",
+            "performance": "1.0.7.0.6",
+            "gains": 132953,
+            "sex": "H",
+            "age": 7,
+            "trainer": "V.LUKA",
+            "jockey": "A. MADAMET",
+            "driver": "A. MADAMET",
+            "owner": "LERAM S.R.O.",
+            "weight": 53.5,
+            "draw": 10
         },
         {
             "number": 14,
             "horse": "ALMAROMY",
-            "description": ""
+            "description": "",
+            "performance": "1.3.0.5.3",
+            "gains": 71797,
+            "sex": "F",
+            "age": 4,
+            "trainer": "D.BONILLA",
+            "jockey": "E. HARDOUIN",
+            "driver": "E. HARDOUIN",
+            "owner": "M.LABEUR",
+            "weight": 53.0,
+            "draw": 6
         },
         {
             "number": 15,
             "horse": "SPEEDY GREEN",
-            "description": ""
+            "description": "",
+            "performance": "1.9.1.6.0",
+            "gains": 37705,
+            "sex": "H",
+            "age": 4,
+            "trainer": "D.BONILLA",
+            "jockey": "C.GROSBOIS",
+            "driver": "C.GROSBOIS",
+            "owner": "P. CAROSSO",
+            "weight": 53.0,
+            "draw": 16
         },
         {
             "number": 16,
             "horse": "JENILAT BRIGHT",
-            "description": ""
+            "description": "",
+            "performance": "7.A.0.0.8",
+            "gains": 21340,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.NIESLANIK",
+            "jockey": "S. MOKROSOVA",
+            "driver": "S. MOKROSOVA",
+            "owner": "E. NIESLANIKOVA",
+            "weight": 53.0,
+            "draw": 9
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

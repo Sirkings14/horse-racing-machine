@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-05-06-2025_b97984ee08_c7b0f8d968.txt",
-    "parsed_at": "2026-10-08T10:35:39.897710Z",
+    "parsed_at": "2026-10-08T23:52:11.310810Z",
     "date": "2025-06-05",
     "race": {
         "race_name": "PRIX DE LA PLACE VENDOME",
@@ -16,74 +16,215 @@
         {
             "number": 1,
             "horse": "GAMESTARS",
-            "description": ""
+            "description": "",
+            "performance": "3.8.0.1.1",
+            "gains": 52000,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.FABRE",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "WERTH . & FRERE",
+            "weight": 62.0,
+            "draw": 3
         },
         {
             "number": 2,
             "horse": "ALMIRO",
-            "description": ""
+            "description": "",
+            "performance": "2.1.0.9.7",
+            "gains": 65800,
+            "sex": "H",
+            "age": 5,
+            "trainer": "P.DECOUZ",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "EC. GRIEZMANN",
+            "weight": 59.0,
+            "draw": 11
         },
         {
             "number": 3,
             "horse": "ZRYAN",
-            "description": ""
+            "description": "",
+            "performance": "9.4.1.9.1",
+            "gains": 43800,
+            "sex": "H",
+            "age": 4,
+            "trainer": "FH.GRAFFARD",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "AL ASAYL FRANCE",
+            "weight": 58.0,
+            "draw": 1
         },
         {
             "number": 4,
             "horse": "GANASS",
-            "description": ""
+            "description": "",
+            "performance": "0.4.8.4.5",
+            "gains": 98900,
+            "sex": "M",
+            "age": 4,
+            "trainer": "H.GHABRI",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "H.GHABRI",
+            "weight": 56.5,
+            "draw": 4
         },
         {
             "number": 5,
             "horse": "SWIFT FLIGHT",
-            "description": ""
+            "description": "",
+            "performance": "6.7.5.1.1",
+            "gains": 106845,
+            "sex": "H",
+            "age": 7,
+            "trainer": "S.CERULIS",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "L.COHEN",
+            "weight": 56.0,
+            "draw": 2
         },
         {
             "number": 6,
             "horse": "GRAND BALCON",
-            "description": ""
+            "description": "",
+            "performance": "2.6.4.6.2",
+            "gains": 136120,
+            "sex": "H",
+            "age": 6,
+            "trainer": "J.CARAYON",
+            "jockey": "C.SOUMILLON",
+            "driver": "C.SOUMILLON",
+            "owner": "BAIE DES ANGES",
+            "weight": 56.0,
+            "draw": 6
         },
         {
             "number": 7,
             "horse": "MOTION",
-            "description": ""
+            "description": "",
+            "performance": "3.1.0.1.5",
+            "gains": 29420,
+            "sex": "H",
+            "age": 5,
+            "trainer": "H.GREWE",
+            "jockey": "L.WOLFF",
+            "driver": "L.WOLFF",
+            "owner": "D.CENGIZ",
+            "weight": 55.5,
+            "draw": 8
         },
         {
             "number": 8,
             "horse": "DEEP SEA",
-            "description": ""
+            "description": "",
+            "performance": "1.5.1.7.9",
+            "gains": 114360,
+            "sex": "F",
+            "age": 7,
+            "trainer": "F.BELLEMERE",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "ME.UZAN",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 9,
             "horse": "RAQEEBB",
-            "description": ""
+            "description": "",
+            "performance": "4.3.5.0.2",
+            "gains": 45358,
+            "sex": "H",
+            "age": 5,
+            "trainer": "E.LIBAUD",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "AJ.DUFFIELD",
+            "weight": 55.0,
+            "draw": 12
         },
         {
             "number": 10,
             "horse": "LOUVAGNY",
-            "description": ""
+            "description": "",
+            "performance": "4.1.6.0.7",
+            "gains": 27310,
+            "sex": "H",
+            "age": 6,
+            "trainer": "M.DELZANGLES",
+            "jockey": "D.BREUX",
+            "driver": "D.BREUX",
+            "owner": "G.AU.NORMAND",
+            "weight": 55.0,
+            "draw": 13
         },
         {
             "number": 11,
             "horse": "ALATHEA",
-            "description": ""
+            "description": "",
+            "performance": "6.1.2.5.4",
+            "gains": 83575,
+            "sex": "F",
+            "age": 6,
+            "trainer": "CH.PLISSON",
+            "jockey": "R.PEHU",
+            "driver": "R.PEHU",
+            "owner": "M.PEHU",
+            "weight": 54.5,
+            "draw": 10
         },
         {
             "number": 12,
             "horse": "LE FREINAY",
-            "description": ""
+            "description": "",
+            "performance": "0.1.5.0.8",
+            "gains": 78300,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.BIETOLINI",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "EC. DELLOYE",
+            "weight": 54.0,
+            "draw": 9
         },
         {
             "number": 13,
             "horse": "NARCOS",
-            "description": ""
+            "description": "",
+            "performance": "2.0.1.0.3",
+            "gains": 280865,
+            "sex": "M",
+            "age": 8,
+            "trainer": "A.BUDKA",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "M.VARIN",
+            "weight": 52.5,
+            "draw": 5
         },
         {
             "number": 14,
             "horse": "ROI DE L'AIR",
-            "description": ""
+            "description": "",
+            "performance": "5.5.1.2.4",
+            "gains": 69030,
+            "sex": "M",
+            "age": 5,
+            "trainer": "C.BOUTIN",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "G.BEN LASSIN",
+            "weight": 51.5,
+            "draw": 14
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             1,

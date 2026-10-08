@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_10-07-2023_05d46c24db_499af5bac3.txt",
-    "parsed_at": "2026-10-08T10:35:43.685268Z",
+    "parsed_at": "2026-10-08T23:52:16.668666Z",
     "date": "2023-07-08",
     "race": {
         "race_name": "PLAT",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "PANJAMAN",
-            "description": ""
+            "description": "",
+            "performance": "5.8.0.4.0",
+            "gains": 126525,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.LEMAITRE",
+            "jockey": "S.CERULIS",
+            "driver": "S.CERULIS",
+            "owner": "JP.MENVILLE",
+            "weight": 60.0,
+            "draw": 13
         },
         {
             "number": 2,
             "horse": "THUNDERSPEED",
-            "description": ""
+            "description": "",
+            "performance": "2.5.7.8.0",
+            "gains": 159620,
+            "sex": "M",
+            "age": 6,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "EC. GRIBOMONT",
+            "weight": 59.5,
+            "draw": 4
         },
         {
             "number": 3,
             "horse": "DREAMS",
-            "description": ""
+            "description": "",
+            "performance": "7.2.3.2.1",
+            "gains": 75580,
+            "sex": "M",
+            "age": 5,
+            "trainer": "R.MANGIONE",
+            "jockey": "L.MACELI",
+            "driver": "L.MACELI",
+            "owner": "P.FLORE",
+            "weight": 59.0,
+            "draw": 5
         },
         {
             "number": 4,
             "horse": "FORCE DE L'AUBE",
-            "description": ""
+            "description": "",
+            "performance": "0.4.4.3.1",
+            "gains": 66450,
+            "sex": "F",
+            "age": 4,
+            "trainer": "C.GUITRAUD",
+            "jockey": "Y.BARBEROT",
+            "driver": "Y.BARBEROT",
+            "owner": "G.POULSEN-ALLAIRE",
+            "weight": 59.0,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "ANCTOT",
-            "description": ""
+            "description": "",
+            "performance": "8.0.1.2.5",
+            "gains": 43170,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.SOUMILLON",
+            "jockey": "S.DEHEZ",
+            "driver": "S.DEHEZ",
+            "owner": "S.S.DEHEZ",
+            "weight": 59.0,
+            "draw": 10
         },
         {
             "number": 6,
             "horse": "ALERIO",
-            "description": ""
+            "description": "",
+            "performance": "0.8.8.3.1",
+            "gains": 35550,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.BARZALONA",
+            "jockey": "A.SCHUTZ",
+            "driver": "A.SCHUTZ",
+            "owner": "A.B RACING",
+            "weight": 59.0,
+            "draw": 3
         },
         {
             "number": 7,
             "horse": "SANTURIN",
-            "description": ""
+            "description": "",
+            "performance": "2.0.2.6.1",
+            "gains": 87102,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.MOLINS",
+            "jockey": "C.BOCSKAI",
+            "driver": "C.BOCSKAI",
+            "owner": "I.OTTEN",
+            "weight": 58.0,
+            "draw": 7
         },
         {
             "number": 8,
             "horse": "IDEAL KING",
-            "description": ""
+            "description": "",
+            "performance": "6.0.6.4.1",
+            "gains": 72130,
+            "sex": "H",
+            "age": 6,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "V.LUKA",
+            "driver": "V.LUKA",
+            "owner": "LERAM S.R.O.",
+            "weight": 58.0,
+            "draw": 11
         },
         {
             "number": 9,
             "horse": "KOSAKENZIPFEL",
-            "description": ""
+            "description": "",
+            "performance": "5.0.1.2.2",
+            "gains": 23920,
+            "sex": "H",
+            "age": 4,
+            "trainer": "R.PIECHULEK",
+            "jockey": "S.STEINBERG",
+            "driver": "S.STEINBERG",
+            "owner": "STALL WO LAUFEN SIE DENN",
+            "weight": 58.0,
+            "draw": 12
         },
         {
             "number": 10,
             "horse": "FLATTEN THE CURVE",
-            "description": ""
+            "description": "",
+            "performance": "8.4.0.1.2",
+            "gains": 82980,
+            "sex": "H",
+            "age": 4,
+            "trainer": "E.HARDOUIN",
+            "jockey": "C.FEY",
+            "driver": "C.FEY",
+            "owner": "E.SAUREN",
+            "weight": 57.5,
+            "draw": 2
         },
         {
             "number": 11,
             "horse": "LEPTI PRINSADI",
-            "description": ""
+            "description": "",
+            "performance": "7.9.2.0.2",
+            "gains": 96669,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.DEMURO",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "JF.GRIBOMONT",
+            "weight": 57.5,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "VEULES",
-            "description": ""
+            "description": "",
+            "performance": "0.2.8.8.2",
+            "gains": 21870,
+            "sex": "F",
+            "age": 4,
+            "trainer": "G.MOSSE",
+            "jockey": "M.DELZANGLES",
+            "driver": "M.DELZANGLES",
+            "owner": "G.AU.NORMAND",
+            "weight": 57.5,
+            "draw": 6
         },
         {
             "number": 13,
             "horse": "VALENTINO",
-            "description": ""
+            "description": "",
+            "performance": "1.5.1.2.3",
+            "gains": 79545,
+            "sex": "H",
+            "age": 7,
+            "trainer": "S.PASQUIER",
+            "jockey": "G.BARBEDETTE",
+            "driver": "G.BARBEDETTE",
+            "owner": "JC.BLONDEAU",
+            "weight": 57.0,
+            "draw": 9
         },
         {
             "number": 14,
             "horse": "NORTH HUNTER",
-            "description": ""
+            "description": "",
+            "performance": "1.1.2.5.2",
+            "gains": 100400,
+            "sex": "H",
+            "age": 8,
+            "trainer": "H.BESNIER",
+            "jockey": "E.MADER",
+            "driver": "E.MADER",
+            "owner": "STALL RAMON",
+            "weight": 57.0,
+            "draw": 16
         },
         {
             "number": 15,
             "horse": "AGILE",
-            "description": ""
+            "description": "",
+            "performance": "9.2.2.5.3",
+            "gains": 28520,
+            "sex": "F",
+            "age": 4,
+            "trainer": "M.VELON",
+            "jockey": "JM.BEGUIGNE",
+            "driver": "JM.BEGUIGNE",
+            "owner": "SUC. N.PHARAON",
+            "weight": 57.0,
+            "draw": 8
         },
         {
             "number": 16,
             "horse": "THROUGH THE MIST",
-            "description": ""
+            "description": "",
+            "performance": "2.9.8.8.6",
+            "gains": 60830,
+            "sex": "F",
+            "age": 5,
+            "trainer": "T.PICCONE",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "ROY RACING LTD",
+            "weight": 57.0,
+            "draw": 1
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             2,

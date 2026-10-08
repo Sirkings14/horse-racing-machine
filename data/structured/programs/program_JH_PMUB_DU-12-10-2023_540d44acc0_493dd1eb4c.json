@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU-12-10-2023_540d44acc0_493dd1eb4c.txt",
-    "parsed_at": "2026-10-08T10:35:40.673556Z",
+    "parsed_at": "2026-10-08T23:52:12.440494Z",
     "date": "2023-10-12",
     "race": {
         "race_name": "PRIX DE LA VIERGE DE LORETTE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "CHIRIMIRI",
-            "description": ""
+            "description": "",
+            "performance": "1.2.7.3.6",
+            "gains": 121735,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.GUYON",
+            "jockey": "C.FERLAND",
+            "driver": "C.FERLAND",
+            "owner": "JAMES OR. BLOODSTOCK L",
+            "weight": 60.0,
+            "draw": 9
         },
         {
             "number": 2,
             "horse": "O TRASNO",
-            "description": ""
+            "description": "",
+            "performance": "5.2.9.1.4",
+            "gains": 168460,
+            "sex": "M",
+            "age": 5,
+            "trainer": "E.HARDOUIN",
+            "jockey": "B.MONTZEY",
+            "driver": "B.MONTZEY",
+            "owner": "BLOKE EUR.MOBILIARIO",
+            "weight": 60.0,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "OZAN",
-            "description": ""
+            "description": "",
+            "performance": "8.0.2.6.1",
+            "gains": 109550,
+            "sex": "H",
+            "age": 5,
+            "trainer": "G.MOSSE",
+            "jockey": "G.DOLEUZE",
+            "driver": "G.DOLEUZE",
+            "owner": "C.STEPHENSON",
+            "weight": 60.0,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "TORPEN",
-            "description": ""
+            "description": "",
+            "performance": "0.0.1.0.6",
+            "gains": 243170,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.POUCHIN",
+            "jockey": "R.SCHOOF",
+            "driver": "R.SCHOOF",
+            "owner": "R.SCHOOF",
+            "weight": 59.5,
+            "draw": 15
         },
         {
             "number": 5,
             "horse": "LIVE",
-            "description": ""
+            "description": "",
+            "performance": "5.1.0.4.2",
+            "gains": 138420,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.LECOEUVRE",
+            "jockey": "V.LUKA",
+            "driver": "V.LUKA",
+            "owner": "LERAM S.R.O.",
+            "weight": 59.5,
+            "draw": 13
         },
         {
             "number": 6,
             "horse": "SASSY RASCAL",
-            "description": ""
+            "description": "",
+            "performance": "9.1.6.7.3",
+            "gains": 48140,
+            "sex": "F",
+            "age": 4,
+            "trainer": "S.VOGT",
+            "jockey": "E.MADER",
+            "driver": "E.MADER",
+            "owner": "STALL WALZERTRAUM",
+            "weight": 57.5,
+            "draw": 11
         },
         {
             "number": 7,
             "horse": "DROIT DE PAROLE",
-            "description": ""
+            "description": "",
+            "performance": "4.6.4.4.7",
+            "gains": 205878,
+            "sex": "M",
+            "age": 7,
+            "trainer": "H.BOUTIN",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "L.BAUDOUIN",
+            "weight": 56.5,
+            "draw": 3
         },
         {
             "number": 8,
             "horse": "HOLLYHOCK",
-            "description": ""
+            "description": "",
+            "performance": "0.2.0.0.3",
+            "gains": 84040,
+            "sex": "H",
+            "age": 4,
+            "trainer": "A.LEMAITRE",
+            "jockey": "M.NIGGE",
+            "driver": "M.NIGGE",
+            "owner": "EC. M. TSCHOPP",
+            "weight": 56.5,
+            "draw": 1
         },
         {
             "number": 9,
             "horse": "ISMAEL PAINT",
-            "description": ""
+            "description": "",
+            "performance": "0.6.4.1.1",
+            "gains": 90625,
+            "sex": "H",
+            "age": 5,
+            "trainer": "M.VELON",
+            "jockey": "CH.PLISSON",
+            "driver": "CH.PLISSON",
+            "owner": "CH.PLISSON",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 10,
             "horse": "FURIOSO",
-            "description": ""
+            "description": "",
+            "performance": "0.5.8.0.1",
+            "gains": 32270,
+            "sex": "M",
+            "age": 3,
+            "trainer": "T.PICCONE",
+            "jockey": "HA.PANTALL",
+            "driver": "HA.PANTALL",
+            "owner": "G.KERN",
+            "weight": 55.5,
+            "draw": 10
         },
         {
             "number": 11,
             "horse": "SIMONS KING",
-            "description": ""
+            "description": "",
+            "performance": "7.7.3.0.0",
+            "gains": 57420,
+            "sex": "H",
+            "age": 5,
+            "trainer": "I.MENDIZABAL",
+            "jockey": "J.GOOSSENS",
+            "driver": "J.GOOSSENS",
+            "owner": "TRIPLE B. STABLES",
+            "weight": 55.5,
+            "draw": 14
         },
         {
             "number": 12,
             "horse": "KHAN",
-            "description": ""
+            "description": "",
+            "performance": "2.4.1.3.7",
+            "gains": 102910,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.LEFEBVRE",
+            "jockey": "C.O'HALLORAN",
+            "driver": "C.O'HALLORAN",
+            "owner": "C.O'HALLORAN",
+            "weight": 55.0,
+            "draw": 7
         },
         {
             "number": 13,
             "horse": "BACCHILIDE",
-            "description": ""
+            "description": "",
+            "performance": "0.6.4.0.7",
+            "gains": 52060,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.EON",
+            "jockey": "M.GUARNIERI",
+            "driver": "M.GUARNIERI",
+            "owner": "P.FERRARIO",
+            "weight": 54.0,
+            "draw": 5
         },
         {
             "number": 14,
             "horse": "WOFF",
-            "description": ""
+            "description": "",
+            "performance": "8.6.4.0.0",
+            "gains": 64560,
+            "sex": "H",
+            "age": 5,
+            "trainer": "L.BOISSEAU",
+            "jockey": "M.BOUTIN",
+            "driver": "M.BOUTIN",
+            "owner": "H.BOUTIN",
+            "weight": 53.5,
+            "draw": 16
         },
         {
             "number": 15,
             "horse": "BABA SIM",
-            "description": ""
+            "description": "",
+            "performance": "7.0.2.8.8",
+            "gains": 74900,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.DEMURO",
+            "jockey": "J.GOOSSENS",
+            "driver": "J.GOOSSENS",
+            "owner": "TRIPLE B. STABLES",
+            "weight": 53.0,
+            "draw": 6
         },
         {
             "number": 16,
             "horse": "SIYOUANGEL",
-            "description": ""
+            "description": "",
+            "performance": "6.9.3.5.5",
+            "gains": 34580,
+            "sex": "F",
+            "age": 4,
+            "trainer": "R.MANGIONE",
+            "jockey": "G.HERNON",
+            "driver": "G.HERNON",
+            "owner": "ROY RACING LTD",
+            "weight": 52.5,
+            "draw": 2
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             16,

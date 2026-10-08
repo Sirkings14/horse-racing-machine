@@ -1,7 +1,7 @@
 {
     "document_type": "program",
     "source_file": "program_JH_PMUB_DU_21-06-2025_d59d293c5a_1fb60e4d03.txt",
-    "parsed_at": "2026-10-08T10:35:45.224513Z",
+    "parsed_at": "2026-10-08T23:52:18.893569Z",
     "date": "2025-06-21",
     "race": {
         "race_name": "PRIX RACE AND CARE",
@@ -16,84 +16,245 @@
         {
             "number": 1,
             "horse": "GALEGO STAR",
-            "description": ""
+            "description": "",
+            "performance": "8.6.3.6.5",
+            "gains": 95610,
+            "sex": "H",
+            "age": 6,
+            "trainer": "L.PONTOIR",
+            "jockey": "T.BACHELOT",
+            "driver": "T.BACHELOT",
+            "owner": "M.ARIAS",
+            "weight": 60.0,
+            "draw": 6
         },
         {
             "number": 2,
             "horse": "ZULU WARRIOR",
-            "description": ""
+            "description": "",
+            "performance": "6.8.2.2.3",
+            "gains": 107375,
+            "sex": "H",
+            "age": 5,
+            "trainer": "A.FABRE",
+            "jockey": "A.POUCHIN",
+            "driver": "A.POUCHIN",
+            "owner": "E A.FABRE",
+            "weight": 59.0,
+            "draw": 12
         },
         {
             "number": 3,
             "horse": "ROCK JOYEUX",
-            "description": ""
+            "description": "",
+            "performance": "2.3.4.1.6",
+            "gains": 156600,
+            "sex": "H",
+            "age": 7,
+            "trainer": "N.PERRET",
+            "jockey": "M.GUYON",
+            "driver": "M.GUYON",
+            "owner": "J.N.TEMAM",
+            "weight": 58.5,
+            "draw": 4
         },
         {
             "number": 4,
             "horse": "PENTAOUR",
-            "description": ""
+            "description": "",
+            "performance": "2.9.4.1.6",
+            "gains": 117030,
+            "sex": "H",
+            "age": 6,
+            "trainer": "A.BUDKA",
+            "jockey": "J.MOUTARD",
+            "driver": "J.MOUTARD",
+            "owner": "EC. N. FORGEARD",
+            "weight": 58.0,
+            "draw": 10
         },
         {
             "number": 5,
             "horse": "KAPANI",
-            "description": ""
+            "description": "",
+            "performance": "0.0.5.3.2",
+            "gains": 165180,
+            "sex": "H",
+            "age": 7,
+            "trainer": "M.PITART",
+            "jockey": "J.CLAUDIC",
+            "driver": "J.CLAUDIC",
+            "owner": "H.MERAUD",
+            "weight": 57.5,
+            "draw": 7
         },
         {
             "number": 6,
             "horse": "TIC TAC",
-            "description": ""
+            "description": "",
+            "performance": "0.8.0.5.4",
+            "gains": 53087,
+            "sex": "H",
+            "age": 4,
+            "trainer": "HA.PANTALL",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "PH.LASSEN",
+            "weight": 56.0,
+            "draw": 8
         },
         {
             "number": 7,
             "horse": "SHEEMA'S ROSE",
-            "description": ""
+            "description": "",
+            "performance": "8.0.7.9.5",
+            "gains": 36450,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.TINCHON",
+            "jockey": "M.FAVRIAUX",
+            "driver": "M.FAVRIAUX",
+            "owner": "A.CLAIRE",
+            "weight": 56.0,
+            "draw": 15
         },
         {
             "number": 8,
             "horse": "SILLABUB",
-            "description": ""
+            "description": "",
+            "performance": "1.1.7.6.4",
+            "gains": 69700,
+            "sex": "F",
+            "age": 4,
+            "trainer": "FR.MONFORT",
+            "jockey": "C.LECOEUVRE",
+            "driver": "C.LECOEUVRE",
+            "owner": "EC. M. DOINEAU",
+            "weight": 55.5,
+            "draw": 11
         },
         {
             "number": 9,
             "horse": "SUPER ALEX",
-            "description": ""
+            "description": "",
+            "performance": "5.3.2.8.2",
+            "gains": 51190,
+            "sex": "H",
+            "age": 10,
+            "trainer": "A.PEAN",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "V.DUBOIS",
+            "weight": 55.5,
+            "draw": 9
         },
         {
             "number": 10,
             "horse": "EARENDEL",
-            "description": ""
+            "description": "",
+            "performance": "2.7.9.2.5",
+            "gains": 26450,
+            "sex": "F",
+            "age": 4,
+            "trainer": "A.FABRE",
+            "jockey": "C.DEMURO",
+            "driver": "C.DEMURO",
+            "owner": "FLAX.STABLES IRE.",
+            "weight": 55.5,
+            "draw": 16
         },
         {
             "number": 11,
             "horse": "SAPRISTI",
-            "description": ""
+            "description": "",
+            "performance": "1.2.2.0.3",
+            "gains": 83980,
+            "sex": "M",
+            "age": 5,
+            "trainer": "N.CAULLERY",
+            "jockey": "R.THOMAS",
+            "driver": "R.THOMAS",
+            "owner": "G. INVEST CAPITAL",
+            "weight": 55.0,
+            "draw": 13
         },
         {
             "number": 12,
             "horse": "MYKISS",
-            "description": ""
+            "description": "",
+            "performance": "3.7.6.0.0",
+            "gains": 221169,
+            "sex": "H",
+            "age": 8,
+            "trainer": "G.BATISTIC",
+            "jockey": "A.MADAMET",
+            "driver": "A.MADAMET",
+            "owner": "S. RENZ U.A.",
+            "weight": 55.0,
+            "draw": 2
         },
         {
             "number": 13,
             "horse": "ROUDOUDOU",
-            "description": ""
+            "description": "",
+            "performance": "0.3.0.2.3",
+            "gains": 63230,
+            "sex": "M",
+            "age": 4,
+            "trainer": "E.THUEUX",
+            "jockey": "D.BREUX",
+            "driver": "D.BREUX",
+            "owner": "D.MIQUEL",
+            "weight": 54.5,
+            "draw": 3
         },
         {
             "number": 14,
             "horse": "HATIM",
-            "description": ""
+            "description": "",
+            "performance": "0.1.1.2.2",
+            "gains": 36100,
+            "sex": "H",
+            "age": 4,
+            "trainer": "F.ROHAUT",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "S.A. A.AL THANI",
+            "weight": 54.5,
+            "draw": 1
         },
         {
             "number": 15,
             "horse": "MOZART DES BRIERES",
-            "description": ""
+            "description": "",
+            "performance": "5.1.4.9.4",
+            "gains": 79510,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.ESCUDER",
+            "jockey": "A.LEMAITRE",
+            "driver": "A.LEMAITRE",
+            "owner": "C.MONETA",
+            "weight": 54.0,
+            "draw": 14
         },
         {
             "number": 16,
             "horse": "MARTIN",
-            "description": ""
+            "description": "",
+            "performance": "4.0.0.8.4",
+            "gains": 29040,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.DEL. SANCHEZ",
+            "jockey": "G.MEURY",
+            "driver": "G.MEURY",
+            "owner": "CUA. MEDITERRANEO",
+            "weight": 54.0,
+            "draw": 5
         }
     ],
+    "program_table_mapping_status": "mapped",
     "rankings": {
         "favorites": [
             14,
