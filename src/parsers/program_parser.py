@@ -305,15 +305,34 @@ def _forward_program_table_fields(after, horses, expected):
     cursor = expected
     optional = {}
 
-    for label, predicate in (
-        ("weight", _is_weight_block),
-        ("draw", _is_integer_block),
-        ("distance_listed", _is_distance_block),
-        ("chrono", _is_chrono_block),
-    ):
+    block = tail[cursor:cursor + expected]
+    if _is_weight_block(block, expected):
+        optional["weight"] = block
+        cursor += expected
         block = tail[cursor:cursor + expected]
-        if predicate(block, expected):
-            optional[label] = block
+        if _is_integer_block(block, expected):
+            optional["draw"] = block
+            cursor += expected
+    elif _is_integer_block(block, expected):
+        optional["draw"] = block
+        cursor += expected
+        block = tail[cursor:cursor + expected]
+        if _is_weight_block(block, expected):
+            optional["weight"] = block
+            cursor += expected
+    elif _is_distance_block(block, expected):
+        optional["distance_listed"] = block
+        cursor += expected
+        block = tail[cursor:cursor + expected]
+        if _is_chrono_block(block, expected):
+            optional["chrono"] = block
+            cursor += expected
+    elif _is_chrono_block(block, expected):
+        optional["chrono"] = block
+        cursor += expected
+        block = tail[cursor:cursor + expected]
+        if _is_distance_block(block, expected):
+            optional["distance_listed"] = block
             cursor += expected
 
     performance = tail[cursor:cursor + expected]
@@ -406,15 +425,32 @@ def extract_program_table_fields(text, horses, expected_runners=None):
         return {"status": "unmapped", "fields": {}}
 
     optional = {}
-    for label, predicate in (
-        ("weight", _is_weight_block),
-        ("draw", _is_integer_block),
-        ("chrono", _is_chrono_block),
-        ("distance_listed", _is_distance_block),
-    ):
-        block, next_cursor = take_before(cursor, predicate)
+    block, next_cursor = take_before(cursor, _is_weight_block)
+    if block is not None:
+        optional["weight"] = block
+        cursor = next_cursor
+        block, next_cursor = take_before(cursor, _is_integer_block)
         if block is not None:
-            optional[label] = block
+            optional["draw"] = block
+            cursor = next_cursor
+    else:
+        block, next_cursor = take_before(cursor, _is_integer_block)
+        if block is not None:
+            optional["draw"] = block
+            cursor = next_cursor
+            block, next_cursor = take_before(cursor, _is_weight_block)
+            if block is not None:
+                optional["weight"] = block
+                cursor = next_cursor
+
+    block, next_cursor = take_before(cursor, _is_chrono_block)
+    if block is not None:
+        optional["chrono"] = block
+        cursor = next_cursor
+    else:
+        block, next_cursor = take_before(cursor, _is_distance_block)
+        if block is not None:
+            optional["distance_listed"] = block
             cursor = next_cursor
 
     sex_age, next_cursor = take_before(cursor, _is_sex_age_block)
