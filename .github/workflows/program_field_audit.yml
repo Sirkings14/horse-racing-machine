@@ -4,6 +4,7 @@ on:
   push:
     branches: [main, "feat/program-field-audit"]
     paths:
+      - ".github/workflows/program_field_audit.yml"
       - "src/dataset/program_field_audit.py"
       - "data/processed/programs/**"
       - "data/structured/programs/**"
