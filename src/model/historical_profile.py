@@ -19,6 +19,16 @@ class HorseHistory:
     course_stats:dict[str,list[int]]=field(default_factory=dict)
     distance_stats:dict[int,list[int]]=field(default_factory=dict)
 
+
+@dataclass
+class ParticipantHistory:
+    starts:int=0
+    wins:int=0
+    top3:int=0
+    top5:int=0
+    rated_starts:int=0
+    course_stats:dict[str,list[int]]=field(default_factory=dict)
+
 def _date_value(row:dict[str,Any])->date|None:
     try:return date.fromisoformat(str(row.get("date") or "")[:10])
     except ValueError:return None
@@ -44,6 +54,28 @@ def _horse_key(row:dict[str,Any])->str:
 
 def horse_identity_source(row:dict[str,Any])->str:
     return "stable_id" if any(row.get(k) not in (None,"") for k in _ID_FIELDS) else "normalized_name"
+
+def _participant_key(row:dict[str,Any], fields:tuple[str,...])->str:
+    for field_name in fields:
+        value=_clean_name(row.get(field_name))
+        if value:
+            return value
+    return ""
+
+
+def _participant_rates(history:ParticipantHistory, track:str|None):
+    course=history.course_stats.get(str(track or "").upper(),[0,0,0,0])
+    denominator=history.rated_starts
+    course_denominator=course[3]
+    return {
+        "starts":history.starts,
+        "win_rate":history.wins/denominator if denominator else 0.0,
+        "top3_rate":history.top3/denominator if denominator else 0.0,
+        "top5_rate":history.top5/denominator if denominator else 0.0,
+        "course_win_rate":course[1]/course_denominator if course_denominator else 0.0,
+        "course_top3_rate":course[2]/course_denominator if course_denominator else 0.0,
+    }
+
 
 def _distance(row):
     try:
@@ -85,6 +117,9 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
     ):
         ordered.sort(key=lambda item:(_date_key(item[1]),str(item[1].get("race_key") or ""),item[0]))
     histories:dict[str,HorseHistory]=defaultdict(HorseHistory)
+    trainer_histories:dict[str,ParticipantHistory]=defaultdict(ParticipantHistory)
+    driver_histories:dict[str,ParticipantHistory]=defaultdict(ParticipantHistory)
+    seen_participant_rows:set[tuple[str,int,str,str]]=set()
     output=[]; index=0
     while index<len(ordered):
         current_date=_date_key(ordered[index][1]); end=index
@@ -94,6 +129,14 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
             h=histories[key]; recent=h.recent_finishes[-5:]
             course,ds,dt,dt5,drated=_stats(h,row.get("track"),_distance(row))
             recent_avg=sum(recent)/len(recent) if recent else None
+            trainer_key=_participant_key(row,("trainer","entraineur"))
+            driver_key=_participant_key(row,("driver","jockey"))
+            trainer_stats=_participant_rates(trainer_histories[trainer_key],row.get("track")) if trainer_key else {
+                "starts":0,"win_rate":0.0,"top3_rate":0.0,"top5_rate":0.0,"course_win_rate":0.0,"course_top3_rate":0.0
+            }
+            driver_stats=_participant_rates(driver_histories[driver_key],row.get("track")) if driver_key else {
+                "starts":0,"win_rate":0.0,"top3_rate":0.0,"top5_rate":0.0,"course_win_rate":0.0,"course_top3_rate":0.0
+            }
             output.append({**row,
                 "horse_identity_source":horse_identity_source(row),
                 "history_starts":h.starts,
@@ -111,6 +154,18 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
                 "distance_top3_rate":dt/drated if drated else 0.0,
                 "distance_top5_rate":dt5/drated if drated else 0.0,
                 "days_since_last_run":((_date_value(row)-h.last_date).days if _date_value(row) and h.last_date else None),
+                "trainer_starts":trainer_stats["starts"],
+                "trainer_win_rate":trainer_stats["win_rate"],
+                "trainer_top3_rate":trainer_stats["top3_rate"],
+                "trainer_top5_rate":trainer_stats["top5_rate"],
+                "trainer_course_win_rate":trainer_stats["course_win_rate"],
+                "trainer_course_top3_rate":trainer_stats["course_top3_rate"],
+                "driver_starts":driver_stats["starts"],
+                "driver_win_rate":driver_stats["win_rate"],
+                "driver_top3_rate":driver_stats["top3_rate"],
+                "driver_top5_rate":driver_stats["top5_rate"],
+                "driver_course_win_rate":driver_stats["course_win_rate"],
+                "driver_course_top3_rate":driver_stats["course_top3_rate"],
                 "data_completeness": sum(row.get(k) not in (None, "") for k in ("date", "track", "distance", "runners_count", "horse_number", "horse_name")) / 6.0,
             })
         for _,row in ordered[index:end]:
@@ -128,6 +183,33 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
             if track:
                 s=h.course_stats.setdefault(track,[0,0,0,0]); s[0]+=1
                 if finish is not None: s[1]+=finish<=3; s[2]+=finish<=5; s[3]+=1
+
+            race_key=str(row.get("race_key") or "")
+            horse_number=int(row.get("horse_number") or 0)
+            for entity_name, registry, fields in (
+                ("trainer", trainer_histories, ("trainer","entraineur")),
+                ("driver", driver_histories, ("driver","jockey")),
+            ):
+                participant_key=_participant_key(row,fields)
+                if not participant_key:
+                    continue
+                seen_key=(race_key,horse_number,entity_name,participant_key)
+                if seen_key in seen_participant_rows:
+                    continue
+                seen_participant_rows.add(seen_key)
+                participant=registry[participant_key]
+                participant.starts+=1
+                if finish is not None:
+                    participant.rated_starts+=1
+                    participant.wins+=finish==1
+                    participant.top3+=finish<=3
+                    participant.top5+=finish<=5
+                    if track:
+                        s=participant.course_stats.setdefault(track,[0,0,0,0])
+                        s[0]+=1
+                        s[1]+=finish==1
+                        s[2]+=finish<=3
+                        s[3]+=1
             bucket=_bucket(distance)
             if bucket is not None:
                 s=h.distance_stats.setdefault(bucket,[0,0,0,0]); s[0]+=1
