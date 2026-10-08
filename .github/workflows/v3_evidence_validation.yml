@@ -52,10 +52,10 @@ jobs:
           print(f"Dataset rows={len(d)} races={len({r.get('race_key') for r in d})}")
           PY
           python -m src.model.v3_backtest
-      - name: Run historical press-odds benchmark
-        run: python -m src.model.press_odds_benchmark
       - name: Train V3 model bundle
         run: python -m src.model.v3_train
+      - name: Run historical press-odds benchmark
+        run: python -m src.model.press_odds_benchmark
       - name: Verify economic safety gate
         run: |
           python -m src.model.autopilot_guard
