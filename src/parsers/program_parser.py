@@ -231,8 +231,7 @@ def _is_distance_block(lines, expected):
     if len(lines) != expected:
         return False
     return all(
-        re.fullmatch(r"\d+(?:\s+\d+)*\.?[A-Z]?", line, re.IGNORECASE)
-        and "." in line
+        re.fullmatch(r"\d+(?:\s+\d+)*\.[A-Z]", line, re.IGNORECASE)
         for line in lines
     )
 
