@@ -1,0 +1,234 @@
+{
+  "document_type": "program",
+  "source_file": "live_program_JH_PMUB_DU_10-10-2026_ff43b711c1.pdf",
+  "parsed_at": "2026-10-08T16:26:42.629869Z",
+  "date": "2026-10-10",
+  "race": {
+    "race_name": "PRIX DE LA VILLE DE CAEN",
+    "track": "CAEN",
+    "race_number": 4,
+    "race_type": "ATTELE",
+    "runners_count": 18,
+    "distance": 2450,
+    "prize_euros": 40000
+  },
+  "horses": [
+    {
+      "number": 1,
+      "horse": "HORUS DE VAL",
+      "description": ""
+    },
+    {
+      "number": 2,
+      "horse": "KASSYA",
+      "description": ""
+    },
+    {
+      "number": 3,
+      "horse": "KORONA DELADOU",
+      "description": ""
+    },
+    {
+      "number": 4,
+      "horse": "KALINE DU LOCHEUR",
+      "description": ""
+    },
+    {
+      "number": 5,
+      "horse": "KALITA D'HENINEL",
+      "description": ""
+    },
+    {
+      "number": 6,
+      "horse": "IL PLEUT BERGERE",
+      "description": ""
+    },
+    {
+      "number": 7,
+      "horse": "IASELMA",
+      "description": ""
+    },
+    {
+      "number": 8,
+      "horse": "ISIA DU CHENE",
+      "description": ""
+    },
+    {
+      "number": 9,
+      "horse": "KNOCKONWOOD",
+      "description": ""
+    },
+    {
+      "number": 10,
+      "horse": "KASH DES CAILLONS",
+      "description": ""
+    },
+    {
+      "number": 11,
+      "horse": "JAMAIS",
+      "description": ""
+    },
+    {
+      "number": 12,
+      "horse": "JUDY MATIDY",
+      "description": ""
+    },
+    {
+      "number": 13,
+      "horse": "JANE AIMEE",
+      "description": ""
+    },
+    {
+      "number": 14,
+      "horse": "INDICE DELADOU",
+      "description": ""
+    },
+    {
+      "number": 15,
+      "horse": "IGUANE DE CAPONET",
+      "description": ""
+    },
+    {
+      "number": 16,
+      "horse": "HABIT DE SOIREE",
+      "description": ""
+    },
+    {
+      "number": 17,
+      "horse": "GINO VIVA",
+      "description": ""
+    },
+    {
+      "number": 18,
+      "horse": "KAPTAIN DU LIAMONE",
+      "description": ""
+    }
+  ],
+  "rankings": {
+    "favorites": [
+      1,
+      2,
+      4,
+      9,
+      10,
+      11,
+      3
+    ],
+    "form": [
+      4,
+      18,
+      2,
+      1,
+      11
+    ],
+    "class": [
+      10,
+      3,
+      7,
+      6,
+      15
+    ],
+    "progress": [
+      12,
+      8,
+      9,
+      15,
+      10
+    ],
+    "regularity": [
+      18,
+      3,
+      4,
+      2,
+      1
+    ]
+  },
+  "press_odds": {
+    "tierce_magazine": {
+      "1": {
+        "fractional": "3/1",
+        "decimal": 4.0
+      },
+      "2": {
+        "fractional": "7/1",
+        "decimal": 8.0
+      },
+      "3": {
+        "fractional": "17/1",
+        "decimal": 18.0
+      },
+      "4": {
+        "fractional": "13/1",
+        "decimal": 14.0
+      },
+      "5": {
+        "fractional": "97/1",
+        "decimal": 98.0
+      },
+      "6": {
+        "fractional": "11/1",
+        "decimal": 12.0
+      },
+      "7": {
+        "fractional": "12/1",
+        "decimal": 13.0
+      },
+      "8": {
+        "fractional": "14/1",
+        "decimal": 15.0
+      },
+      "9": {
+        "fractional": "25/1",
+        "decimal": 26.0
+      },
+      "10": {
+        "fractional": "22/1",
+        "decimal": 23.0
+      },
+      "11": {
+        "fractional": "45/1",
+        "decimal": 46.0
+      },
+      "12": {
+        "fractional": "43/1",
+        "decimal": 44.0
+      },
+      "13": {
+        "fractional": "20/1",
+        "decimal": 21.0
+      },
+      "14": {
+        "fractional": "27/1",
+        "decimal": 28.0
+      },
+      "15": {
+        "fractional": "58/1",
+        "decimal": 59.0
+      },
+      "16": {
+        "fractional": "19/1",
+        "decimal": 20.0
+      },
+      "17": {
+        "fractional": "6/1",
+        "decimal": 7.0
+      },
+      "18": {
+        "fractional": "4/1",
+        "decimal": 5.0
+      }
+    }
+  },
+  "press_odds_status": "observed_in_program",
+  "published_arrival": [
+    1,
+    5,
+    8,
+    4
+  ],
+  "source_url": "https://lonab.bf/sites/default/files/2026-10/JH_PMUB_DU_10-10-2026.pdf",
+  "source_domain": "lonab.bf",
+  "source_sha256": "a8d57694ca389ff067da22ac92a76d681ef293c75168c1b070f3477f404a42a6",
+  "validation_status": "validated",
+  "validation_reason": "validated"
+}
