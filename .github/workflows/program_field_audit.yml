@@ -1,5 +1,5 @@
 name: Program field audit
-# Parser-mapping validation run (debug flat mapping)
+# Parser-mapping validation run (strict parser tests)
 
 on:
   push:
