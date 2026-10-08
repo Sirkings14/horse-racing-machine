@@ -24,7 +24,7 @@ jobs:
           python-version: "3.11"
       - run: python -m pip install --upgrade pip
       - run: pip install pytest
-      - run: pytest -q tests/test_program_field_audit.py
+      - run: pytest -q tests/test_program_field_audit.py tests/test_program_table_fields.py
       - run: python -m src.parsers.program_parser
       - run: python -m src.dataset.program_field_audit > program_field_audit.json
       - uses: actions/upload-artifact@v4
