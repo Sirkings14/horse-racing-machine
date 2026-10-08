@@ -32,6 +32,7 @@ def test_flat_table_maps_sex_age_draw_weight_and_people():
     CHEVAUX DRIVERS ENTRAINEURS PROPRIETAIRES
     """
     result = extract_program_table_fields(text, _horses(names), expected_runners=2)
+    print("FLAT RESULT", result)
     assert result["status"] == "mapped"
     assert result["fields"][1]["sex"] == "H"
     assert result["fields"][1]["age"] == 5
