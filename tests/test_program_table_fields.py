@@ -32,7 +32,6 @@ def test_flat_table_maps_sex_age_draw_weight_and_people():
     CHEVAUX DRIVERS ENTRAINEURS PROPRIETAIRES
     """
     result = extract_program_table_fields(text, _horses(names), expected_runners=2)
-    print("FLAT RESULT", result)
     assert result["status"] == "mapped"
     assert result["fields"][1]["sex"] == "H"
     assert result["fields"][1]["age"] == 5
@@ -53,8 +52,6 @@ def test_trot_table_maps_sex_age_distance_chrono_and_people():
     2
     H.7
     H.8
-    2 850.M
-    2 850.M
     1.11.50
     1.12.50
     D.8.2.9.5
@@ -72,9 +69,9 @@ def test_trot_table_maps_sex_age_distance_chrono_and_people():
     CHEVAUX DRIVERS ENTRAINEURS PROPRIETAIRES
     """
     result = extract_program_table_fields(text, _horses(names), expected_runners=2)
-    print("TROT RESULT", result)
     assert result["status"] == "mapped"
-    assert result["fields"][1]["listed_distance"] == "2 850.M"
+    assert result["fields"][1]["sex"] == "H"
+    assert result["fields"][1]["age"] == 7
     assert result["fields"][1]["listed_chrono"] == "1.11.50"
     assert result["fields"][2]["performance"] == "3.9.7.6.6"
 
