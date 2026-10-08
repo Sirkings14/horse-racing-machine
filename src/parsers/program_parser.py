@@ -336,37 +336,40 @@ def extract_program_table_fields(text, horses, expected_runners=None):
             cursor = next_cursor
 
     sex_age, next_cursor = take_before(cursor, _is_sex_age_block)
-    if sex_age is None:
-        return {"status": "unmapped", "fields": {}}
-    cursor = next_cursor
+    if sex_age is not None:
+        cursor = next_cursor
 
-    number_block = before[max(0, cursor - expected):cursor]
-    if number_block != [str(n) for n in range(1, expected + 1)] and number_block != [f"{n:02d}" for n in range(1, expected + 1)]:
-        return {"status": "unmapped", "fields": {}}
-
-    if len(after) < expected * 3:
-        return {"status": "unmapped", "fields": {}}
-    trainer = after[:expected]
-    driver = after[expected:expected * 2]
-    owner = after[expected * 2:expected * 3]
-
-    if any(not value or value in {"CHEVAUX", "DRIVERS", "ENTRAINEURS", "PROPRIETAIRES"} for value in trainer + driver + owner):
-        return {"status": "unmapped", "fields": {}}
+    people_mapped = False
+    trainer = driver = owner = None
+    if len(after) >= expected * 3:
+        candidate_trainer = after[:expected]
+        candidate_driver = after[expected:expected * 2]
+        candidate_owner = after[expected * 2:expected * 3]
+        if not any(
+            not value or value in {"CHEVAUX", "DRIVERS", "ENTRAINEURS", "PROPRIETAIRES"}
+            for value in candidate_trainer + candidate_driver + candidate_owner
+        ):
+            trainer, driver, owner = candidate_trainer, candidate_driver, candidate_owner
+            people_mapped = True
 
     fields = {}
     for idx, horse in enumerate(horses):
         number = int(horse["number"])
-        sex, age = _split_sex_age(sex_age[idx])
         row = {
-            "sex": sex,
-            "age": age,
             "performance": performance[idx],
             "gains": _parse_numeric_gain(gains[idx]),
-            "trainer": trainer[idx],
-            "jockey": driver[idx],
-            "driver": driver[idx],
-            "owner": owner[idx],
         }
+        if sex_age is not None:
+            sex, age = _split_sex_age(sex_age[idx])
+            row["sex"] = sex
+            row["age"] = age
+        if people_mapped:
+            row.update({
+                "trainer": trainer[idx],
+                "jockey": driver[idx],
+                "driver": driver[idx],
+                "owner": owner[idx],
+            })
         if "weight" in optional:
             row["weight"] = _parse_weight(optional["weight"][idx])
         if "draw" in optional:
@@ -377,7 +380,10 @@ def extract_program_table_fields(text, horses, expected_runners=None):
             row["listed_distance"] = optional["distance_listed"][idx]
         fields[number] = row
 
-    return {"status": "mapped", "fields": fields}
+    return {
+        "status": "mapped" if people_mapped else "core_mapped",
+        "fields": fields,
+    }
 
 def extract_number_list(text, label):
     match = re.search(rf"{re.escape(label)}\s*:\s*([^\n\r]+)", text, re.IGNORECASE)
