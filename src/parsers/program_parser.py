@@ -282,6 +282,74 @@ def _parse_numeric_gain(value):
         return None
 
 
+
+def _forward_program_table_fields(after, horses, expected):
+    if len(after) < expected * 4:
+        return None
+
+    trainer = after[:expected]
+    driver = after[expected:expected * 2]
+    owner = after[expected * 2:expected * 3]
+    if any(
+        not value or value in {"CHEVAUX", "DRIVERS", "ENTRAINEURS", "PROPRIETAIRES"}
+        for value in trainer + driver + owner
+    ):
+        return None
+
+    tail = after[expected * 3:]
+    if len(tail) < expected:
+        return None
+    sex_age = tail[:expected]
+    if not _is_sex_age_block(sex_age, expected):
+        return None
+    cursor = expected
+    optional = {}
+
+    for label, predicate in (
+        ("weight", _is_weight_block),
+        ("draw", _is_integer_block),
+        ("distance_listed", _is_distance_block),
+        ("chrono", _is_chrono_block),
+    ):
+        block = tail[cursor:cursor + expected]
+        if predicate(block, expected):
+            optional[label] = block
+            cursor += expected
+
+    performance = tail[cursor:cursor + expected]
+    if not _is_performance_block(performance, expected):
+        return None
+    cursor += expected
+
+    gains = tail[cursor:cursor + expected]
+    if not _is_gains_block(gains, expected):
+        return None
+
+    fields = {}
+    for idx, horse in enumerate(horses):
+        row = {
+            "performance": performance[idx],
+            "gains": _parse_numeric_gain(gains[idx]),
+            "sex": _split_sex_age(sex_age[idx])[0],
+            "age": _split_sex_age(sex_age[idx])[1],
+            "trainer": trainer[idx],
+            "jockey": driver[idx],
+            "driver": driver[idx],
+            "owner": owner[idx],
+        }
+        if "weight" in optional:
+            row["weight"] = _parse_weight(optional["weight"][idx])
+        if "draw" in optional:
+            row["draw"] = int(optional["draw"][idx])
+        if "chrono" in optional:
+            row["listed_chrono"] = optional["chrono"][idx]
+        if "distance_listed" in optional:
+            row["listed_distance"] = optional["distance_listed"][idx]
+        fields[int(horse["number"])] = row
+
+    return {"status": "mapped", "fields": fields}
+
+
 def extract_program_table_fields(text, horses, expected_runners=None):
     """Extract pre-race runner fields from the LONAB table only.
 
@@ -314,6 +382,10 @@ def extract_program_table_fields(text, horses, expected_runners=None):
 
     before = lines[:horse_start]
     after = lines[horse_start + expected:]
+
+    forward = _forward_program_table_fields(after, horses, expected)
+    if forward is not None:
+        return forward
 
     def take_before(cursor, predicate):
         start = cursor - expected
