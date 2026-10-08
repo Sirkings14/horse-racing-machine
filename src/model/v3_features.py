@@ -15,7 +15,12 @@ FEATURE_NAMES=[
 "weight_norm","draw_norm","history_win_relative","history_top3_relative",
 "history_top5_relative","recent_top3_relative","recent_top5_relative",
 "recent_finish_relative","course_top3_relative","distance_top3_relative",
-"weight_relative","experience_relative"
+"weight_relative","experience_relative",
+"trainer_starts_norm","trainer_win_rate","trainer_top3_rate","trainer_top5_rate",
+"trainer_course_win_rate","trainer_course_top3_rate","driver_starts_norm","driver_win_rate",
+"driver_top3_rate","driver_top5_rate","driver_course_win_rate","driver_course_top3_rate",
+"trainer_win_relative","trainer_top3_relative","driver_win_relative","driver_top3_relative",
+"trainer_course_top3_relative","driver_course_top3_relative"
 ]
 
 def _float(value:Any,default:float=0.0)->float:
@@ -67,7 +72,19 @@ def _base_features(row:dict[str,Any])->list[float]:
         1.0 if race_type=="PLAT" else 0.0,
         1.0 if race_type in {"ATTELE","MONTE"} else 0.0,
         1.0 if race_type in {"OBSTACLE","HAIES","STEEPLE-CHASE"} else 0.0,
-        completeness,weight_norm,draw_norm
+        completeness,weight_norm,draw_norm,
+        _clamp(_float(row.get("trainer_starts"))/50.0),
+        _clamp(_float(row.get("trainer_win_rate"))),
+        _clamp(_float(row.get("trainer_top3_rate"))),
+        _clamp(_float(row.get("trainer_top5_rate"))),
+        _clamp(_float(row.get("trainer_course_win_rate"))),
+        _clamp(_float(row.get("trainer_course_top3_rate"))),
+        _clamp(_float(row.get("driver_starts"))/50.0),
+        _clamp(_float(row.get("driver_win_rate"))),
+        _clamp(_float(row.get("driver_top3_rate"))),
+        _clamp(_float(row.get("driver_top5_rate"))),
+        _clamp(_float(row.get("driver_course_win_rate"))),
+        _clamp(_float(row.get("driver_course_top3_rate"))),
     ]
 
 def _relative(rows:Sequence[dict[str,Any]])->np.ndarray:
@@ -76,12 +93,15 @@ def _relative(rows:Sequence[dict[str,Any]])->np.ndarray:
     # Percentile-like relative strength within the race. A zero-history horse
     # is not treated as weak: its raw prior-history values remain zero while
     # these relative features expose only observed differences.
-    cols=[1,2,3,4,5,6,8,11,24,0]
+    cols=[1,2,3,4,5,6,8,11,24,0,26,27,32,33,30,28]
     selected=base[:,cols]
     means=selected.mean(axis=0)
     stds=selected.std(axis=0)
     safe_stds=np.where(stds>1e-9,stds,1.0)
-    return (selected-means)/safe_stds
+    rel=(selected-means)/safe_stds
+    # Map the 16 selected columns into the six explicit participant-relative slots.
+    extra=rel[:,10:16]
+    return np.concatenate([rel[:,:10],extra],axis=1)
 
 def row_to_v3_features(row:dict[str,Any])->list[float]:
     base=_base_features(row)
