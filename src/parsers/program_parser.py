@@ -195,7 +195,7 @@ def _clean_table_line(line):
 
 def _is_sex_age_block(lines, expected):
     return len(lines) == expected and all(
-        re.fullmatch(r"[HFM]\\.?\d{1,2}", line, re.IGNORECASE) for line in lines
+        re.fullmatch(r"[HFM]\.?\d{1,2}", line, re.IGNORECASE) for line in lines
     )
 
 
