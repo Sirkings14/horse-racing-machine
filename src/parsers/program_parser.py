@@ -239,7 +239,7 @@ def _is_performance_block(lines, expected):
     if len(lines) != expected:
         return False
     return all(
-        re.fullmatch(r"[0-9DAA]+(?:\.[0-9DAA]+){2,6}", line, re.IGNORECASE)
+        re.fullmatch(r"[0-9A-Z]+(?:\.[0-9A-Z]+){2,6}", line, re.IGNORECASE)
         for line in lines
     )
 
