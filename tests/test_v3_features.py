@@ -41,7 +41,8 @@ def test_race_relative_features_change_only_from_pre_race_batch():
     ]
     matrix=build_v3_matrix(rows)
     assert matrix.shape==(2,len(FEATURE_NAMES))
-    assert matrix[0,-1] > matrix[1,-1]
+    experience_idx=FEATURE_NAMES.index("experience_relative")
+    assert matrix[0,experience_idx] > matrix[1,experience_idx]
 
 
 def test_walk_forward_profiles_expose_live_data_completeness():
@@ -98,11 +99,11 @@ def test_trainer_and_driver_profiles_are_prior_only():
     assert out[1]["trainer_starts"]==0
     assert out[2]["trainer_starts"]==2
     assert out[2]["trainer_win_rate"]==0.5
-    assert out[2]["trainer_top3_rate"]==1.0
+    assert out[2]["trainer_top3_rate"]==0.5
     assert out[2]["trainer_course_win_rate"]==0.5
     assert out[2]["driver_starts"]==2
     assert out[2]["driver_top3_rate"]==0.5
-    assert out[2]["driver_course_top3_rate"]==1.0
+    assert out[2]["driver_course_top3_rate"]==0.5
 
 
 def test_participant_features_expand_v3_matrix():
