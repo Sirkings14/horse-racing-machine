@@ -14,6 +14,7 @@ class HorseHistory:
     top5:int=0
     finish_sum:float=0.0
     recent_finishes:list[int]=field(default_factory=list)
+    rated_starts:int=0
     last_date:date|None=None
     course_stats:dict[str,list[int]]=field(default_factory=dict)
     distance_stats:dict[int,list[int]]=field(default_factory=dict)
@@ -96,10 +97,10 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
             output.append({**row,
                 "horse_identity_source":horse_identity_source(row),
                 "history_starts":h.starts,
-                "history_win_rate":h.wins/h.starts if h.starts else 0.0,
-                "history_top3_rate":h.top3/h.starts if h.starts else 0.0,
-                "history_top5_rate":h.top5/h.starts if h.starts else 0.0,
-                "history_avg_finish":h.finish_sum/h.starts if h.starts else None,
+                "history_win_rate":h.wins/h.rated_starts if h.rated_starts else 0.0,
+                "history_top3_rate":h.top3/h.rated_starts if h.rated_starts else 0.0,
+                "history_top5_rate":h.top5/h.rated_starts if h.rated_starts else 0.0,
+                "history_avg_finish":h.finish_sum/h.rated_starts if h.rated_starts else None,
                 "history_recent_top3_rate":sum(x<=3 for x in recent)/len(recent) if recent else 0.0,
                 "history_recent_top5_rate":sum(x<=5 for x in recent)/len(recent) if recent else 0.0,
                 "history_recent_avg_finish":recent_avg,
@@ -113,16 +114,23 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
                 "data_completeness": sum(row.get(k) not in (None, "") for k in ("date", "track", "distance", "runners_count", "horse_number", "horse_name")) / 6.0,
             })
         for _,row in ordered[index:end]:
-            key=_horse_key(row); finish=_finish(row)
-            if not key or finish is None:continue
+            key=_horse_key(row)
+            if not key:continue
+            finish=_finish(row)
             h=histories[key]; track=str(row.get("track") or "").upper(); distance=_distance(row); d=_date_value(row)
-            h.starts+=1; h.wins+=finish==1; h.top3+=finish<=3; h.top5+=finish<=5; h.finish_sum+=finish
-            h.recent_finishes=(h.recent_finishes+[finish])[-10:]
+            # Count every verified program start, but only verified finishes
+            # contribute to performance rates and finish-based recent form.
+            h.starts+=1
+            if finish is not None:
+                h.rated_starts+=1; h.wins+=finish==1; h.top3+=finish<=3; h.top5+=finish<=5; h.finish_sum+=finish
+                h.recent_finishes=(h.recent_finishes+[finish])[-10:]
             if d:h.last_date=d
             if track:
-                s=h.course_stats.setdefault(track,[0,0,0]); s[0]+=1; s[1]+=finish<=3; s[2]+=finish<=5
+                s=h.course_stats.setdefault(track,[0,0,0]); s[0]+=1
+                if finish is not None: s[1]+=finish<=3; s[2]+=finish<=5
             bucket=_bucket(distance)
             if bucket is not None:
-                s=h.distance_stats.setdefault(bucket,[0,0,0]); s[0]+=1; s[1]+=finish<=3; s[2]+=finish<=5
+                s=h.distance_stats.setdefault(bucket,[0,0,0]); s[0]+=1
+                if finish is not None: s[1]+=finish<=3; s[2]+=finish<=5
         index=end
     return output
