@@ -72,6 +72,7 @@ def test_trot_table_maps_sex_age_distance_chrono_and_people():
     CHEVAUX DRIVERS ENTRAINEURS PROPRIETAIRES
     """
     result = extract_program_table_fields(text, _horses(names), expected_runners=2)
+    print("TROT RESULT", result)
     assert result["status"] == "mapped"
     assert result["fields"][1]["listed_distance"] == "2 850.M"
     assert result["fields"][1]["listed_chrono"] == "1.11.50"
