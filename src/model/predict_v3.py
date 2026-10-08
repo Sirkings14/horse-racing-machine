@@ -98,7 +98,14 @@ def main():
     history_coverage=sum(1 for r in current_profile if int(r.get("history_starts") or 0)>0)/len(current_profile) if current_profile else 0.0
     course_coverage=sum(1 for r in current_profile if int(r.get("course_starts") or 0)>0)/len(current_profile) if current_profile else 0.0
     distance_coverage=sum(1 for r in current_profile if int(r.get("distance_starts") or 0)>0)/len(current_profile) if current_profile else 0.0
-    feature_health={"runners":len(current_profile),"history_coverage":round(history_coverage,3),"course_coverage":round(course_coverage,3),"distance_coverage":round(distance_coverage,3),"complete_rows":round(sum(float(r.get("data_completeness") or 0.0) for r in current_profile)/len(current_profile),3) if current_profile else 0.0}
+    identity_sources={}
+    for r in current_profile:
+        source=str(r.get("horse_identity_source") or "unknown")
+        identity_sources[source]=identity_sources.get(source,0)+1
+    history_start_counts=sorted(int(r.get("history_starts") or 0) for r in current_profile)
+    distance_start_counts=sorted(int(r.get("distance_starts") or 0) for r in current_profile)
+    feature_health={"runners":len(current_profile),"history_coverage":round(history_coverage,3),"course_coverage":round(course_coverage,3),"distance_coverage":round(distance_coverage,3),"complete_rows":round(sum(float(r.get("data_completeness") or 0.0) for r in current_profile)/len(current_profile),3) if current_profile else 0.0,
+        "identity_sources":identity_sources,"history_starts_sorted":history_start_counts,"distance_starts_sorted":distance_start_counts}
     p1=models["winner"].predict_proba(current_profile)
     p3=models["top3"].predict_proba(current_profile)
     p5=models["top5"].predict_proba(current_profile)
