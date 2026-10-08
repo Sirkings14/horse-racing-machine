@@ -7,6 +7,7 @@ import random
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_model import fit_v3_model
 from src.model.calibration import calibration_metrics
+from src.dataset.program_history import load_program_history
 
 def _key(row): return str(row.get("race_key") or "")
 def _sort(row): return (str(row.get("date") or "")[:10],_key(row))
@@ -45,9 +46,11 @@ def _bootstrap_mean(values,seed=17,iterations=1000):
 
 def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=365,max_train_rows:int=25000,epochs:int=20,max_eval_races:int=3000)->dict[str,Any]:
     rows=_valid_rows(rows)
-    profiled = rows if rows and "history_starts" in rows[0] else build_walk_forward_profiles(rows)
+    history_rows = load_program_history(exclude_on_or_after=str(max((r.get("date") or "") for r in rows))[:10]) if rows else []
+    profiled = rows if rows and "history_starts" in rows[0] else build_walk_forward_profiles(history_rows + rows)
     groups=defaultdict(list)
-    for row in profiled: groups[_key(row)].append(row)
+    for row in profiled:
+        if not row.get("_program_only_history"): groups[_key(row)].append(row)
     keys=sorted(groups,key=lambda k:min(_sort(r) for r in groups[k]))
     # Keep validation chronological but bounded. All earlier races remain
     # available for training; only the final holdout window is scored.

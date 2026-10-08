@@ -1,5 +1,7 @@
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_features import build_v3_matrix, FEATURE_NAMES
+import json
+import src.dataset.program_history as program_history
 
 def test_profiles_are_prior_only_on_same_date():
     rows=[
@@ -63,3 +65,19 @@ def test_program_only_start_counts_as_experience_without_fake_result():
     assert out[1]["distance_starts"]==1
     assert out[1]["distance_top3_rate"]==0.0
     assert out[1]["days_since_last_run"]==1
+
+
+def test_program_history_loader_excludes_cutoff_and_has_no_targets(tmp_path, monkeypatch):
+    payload={
+      "date":"2026-01-01",
+      "race":{"track":"A","race_number":1,"race_name":"R","race_type":"PLAT","distance":2000,"runners_count":2},
+      "horses":[{"number":1,"horse":"X","description":""},{"number":2,"horse":"Y","description":""}],
+    }
+    path=tmp_path/"race.json"
+    path.write_text(json.dumps(payload),encoding="utf-8")
+    monkeypatch.setattr(program_history,"PROGRAMS_DIR",tmp_path)
+    rows=program_history.load_program_history("2026-01-02")
+    assert len(rows)==2
+    assert all(r["_program_only_history"] is True for r in rows)
+    assert all("won" not in r and "finish_position" not in r for r in rows)
+    assert program_history.load_program_history("2026-01-01")==[]
