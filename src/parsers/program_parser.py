@@ -215,7 +215,7 @@ def _is_integer_block(lines, expected):
         if not re.fullmatch(r"\d{1,3}", line):
             return False
         values.append(int(line))
-    return all(1 <= value <= expected for value in values)
+    return all(1 <= value <= 99 for value in values)
 
 
 def _is_weight_block(lines, expected):
