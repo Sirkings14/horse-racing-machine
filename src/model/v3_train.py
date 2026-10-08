@@ -8,6 +8,7 @@ from src.model.calibration import fit_sigmoid_calibrator, apply_sigmoid_calibrat
 from src.model.v3_backtest import run as run_v3_backtest
 from src.model.backtest import run_backtest as run_legacy_backtest  # legacy benchmark is informational
 from src.model.economic_validation import evaluate_value_strategy
+from src.dataset.program_history import load_program_history
 
 BASE_DIR=Path(__file__).resolve().parents[2]
 DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
@@ -34,17 +35,18 @@ def _promotion_decision(v3m:dict, n_races:int, calibration_gate:dict|None=None)-
 def main():
     rows=json.loads(DATASET_FILE.read_text(encoding="utf-8"))
     if not isinstance(rows,list) or not rows: raise ValueError("Verified training dataset is empty.")
-    profiled=build_walk_forward_profiles(rows)
+    history_rows = load_program_history(exclude_on_or_after=str(rows[-1].get("date") or "")[:10])
+    profiled=build_walk_forward_profiles(history_rows + rows)
     groups=defaultdict(list)
     for row in profiled:
-        if row.get("race_key"): groups[str(row["race_key"])].append(row)
+        if row.get("race_key") and not row.get("_program_only_history"): groups[str(row["race_key"])].append(row)
     keys=sorted(groups,key=lambda k:min((str(r.get("date") or "")[:10],k) for r in groups[k]))
     split=max(1,int(len(keys)*0.8))
     train_rows=[r for k in keys[:split] for r in groups[k]]
     cal_rows=[r for k in keys[split:] for r in groups[k]]
     # Keep final fitting bounded; validation remains full walk-forward and unchanged.
     fit_rows=train_rows[-25000:]
-    final_rows=profiled[-25000:]
+    final_rows=final_rows = [r for r in profiled if not r.get("_program_only_history")][-25000:]
     models={}
     calibration_reports={}
     calibration_validation_reports={}
