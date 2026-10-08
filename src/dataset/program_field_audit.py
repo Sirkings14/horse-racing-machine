@@ -107,7 +107,7 @@ def audit() -> dict[str, Any]:
         "structured_nonempty_keys": dict(structured_key_counts),
         "race_level_coverage": {
             "program_table_mapped": round(
-                sum(r.get("program_table_mapping_status") == "mapped" for r in reports) / n, 4
+                sum(r.get("program_table_mapping_status") in {"mapped", "core_mapped"} for r in reports) / n, 4
             ) if n else 0.0,
             "sex_age_exact": race_rate("sex_age_exact"),
             "performance_exact_or_more": race_rate("performance_exact_or_more"),
