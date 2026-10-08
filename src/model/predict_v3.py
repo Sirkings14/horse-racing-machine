@@ -30,10 +30,33 @@ def _key(program):
 
 def _live_rows(program):
     m=_meta(program); key=_key(program); rows=[]
+    race=program.get("race") or {}
+    race_fields={"prize_euros":race.get("prize_euros")}
     for horse in program.get("horses") or []:
         try: number=int(horse.get("number"))
         except (TypeError,ValueError): continue
-        rows.append({"race_key":key,"date":m["date"],"track":m["track"],"race_number":m["race_number"],"race_name":m["race_name"],"race_type":m["race_type"],"distance":m["distance"],"runners_count":m["runners_count"],"horse_number":number,"horse_name":horse.get("horse")})
+        # Preserve only fields supplied by the live program. This keeps the
+        # prediction path schema-compatible with historical rows without
+        # inventing horse attributes or importing post-race information.
+        row={
+            "race_key":key,"date":m["date"],"track":m["track"],
+            "race_number":m["race_number"],"race_name":m["race_name"],
+            "race_type":m["race_type"],"distance":m["distance"],
+            "runners_count":m["runners_count"],**race_fields,
+            "horse_number":number,"horse_name":horse.get("horse"),
+        }
+        for field_name in (
+            "horse_id","horseId","horse_uid","horseUid","idCheval","id_cheval",
+            "identifiantCheval","identifiant_cheval","weight","poids",
+            "carried_weight","draw","stall","gate","box","jockey","driver",
+            "trainer","entraineur","form_rank","recent_form_rank","forme_rank",
+            "class_rank","classe_rank","favorite_rank","odds_rank","market_rank",
+            "progress_rank","improvement_rank","regularity_rank","consistency_rank",
+            "horse_description","description",
+        ):
+            if field_name in horse:
+                row[field_name]=horse.get(field_name)
+        rows.append(row)
     return rows
 
 def _save(result):
