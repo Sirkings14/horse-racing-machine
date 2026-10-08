@@ -89,11 +89,11 @@ def _base_features(row:dict[str,Any])->list[float]:
 
 def _relative(rows:Sequence[dict[str,Any]])->np.ndarray:
     base=np.asarray([_base_features(r) for r in rows],dtype=float)
-    if len(base)==0:return np.empty((0,10),dtype=float)
+    if len(base)==0:return np.empty((0,16),dtype=float)
     # Percentile-like relative strength within the race. A zero-history horse
     # is not treated as weak: its raw prior-history values remain zero while
     # these relative features expose only observed differences.
-    cols=[1,2,3,4,5,6,8,11,24,0,26,27,32,33,30,28]
+    cols=[1,2,3,4,5,6,8,11,24,0,27,28,33,34,31,37]
     selected=base[:,cols]
     means=selected.mean(axis=0)
     stds=selected.std(axis=0)
@@ -107,7 +107,7 @@ def row_to_v3_features(row:dict[str,Any])->list[float]:
     base=_base_features(row)
     # Individual-row API keeps relative fields neutral. build_v3_matrix is
     # the production path and computes race-relative features from the batch.
-    return base+[0.0]*10
+    return base+[0.0]*16
 
 def build_v3_matrix(rows:Sequence[dict[str,Any]])->np.ndarray:
     if not rows:return np.empty((0,len(FEATURE_NAMES)),dtype=float)
