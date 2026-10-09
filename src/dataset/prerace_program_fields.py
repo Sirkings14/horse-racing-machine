@@ -143,7 +143,9 @@ def merge_program_fields(
             "listed_distance",
         ):
             value = candidate.get(field_name)
-            if value not in (None, ""):
+            # Keep the source dataset's participant record as primary evidence;
+            # use program extraction only to fill gaps, never to overwrite it.
+            if value not in (None, "") and row.get(field_name) in (None, ""):
                 row[field_name] = value
         matched += 1
 

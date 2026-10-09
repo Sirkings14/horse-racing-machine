@@ -40,6 +40,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest
+      - name: Snapshot champion walk-forward metrics
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path("data/model/v3_backtest_report.json").read_text(encoding="utf-8"))
+          metrics=report.get("metrics", report)
+          Path("/tmp/v3_champion_metrics.json").write_text(json.dumps(metrics), encoding="utf-8")
+          print("Snapshotted champion metrics:", {k: metrics.get(k) for k in (
+              "winner_hit_rate_at_3",
+              "average_actual_top3_covered_by_predicted_top3",
+              "average_actual_top3_covered_by_predicted_top5",
+              "brier_top3",
+              "log_loss_top3",
+          )})
+          PY
       - name: Rebuild structured pre-race LONAB programs
         run: python -m src.parsers.program_parser
       - name: Build verified historical dataset
@@ -55,6 +71,48 @@ jobs:
           print(f"Dataset rows={len(d)} races={len({r.get('race_key') for r in d})}")
           PY
           python -m src.model.v3_backtest
+      - name: Enforce challenger improvement over champion
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          baseline=json.loads(Path("/tmp/v3_champion_metrics.json").read_text(encoding="utf-8"))
+          candidate_report=json.loads(Path("data/model/v3_backtest_report.json").read_text(encoding="utf-8"))
+          candidate=candidate_report.get("metrics", candidate_report)
+          keys=(
+              "winner_hit_rate_at_3",
+              "average_actual_top3_covered_by_predicted_top3",
+              "average_actual_top3_covered_by_predicted_top5",
+              "brier_top3",
+              "log_loss_top3",
+          )
+          def val(d,k):
+              return float(d[k])
+          delta={k: round(val(candidate,k)-val(baseline,k),6) for k in keys}
+          no_material_regression=(
+              val(candidate,"winner_hit_rate_at_3") >= val(baseline,"winner_hit_rate_at_3") - 0.005
+              and val(candidate,"average_actual_top3_covered_by_predicted_top3") >= val(baseline,"average_actual_top3_covered_by_predicted_top3") - 0.01
+              and val(candidate,"average_actual_top3_covered_by_predicted_top5") >= val(baseline,"average_actual_top3_covered_by_predicted_top5") - 0.01
+              and val(candidate,"brier_top3") <= val(baseline,"brier_top3") + 0.005
+              and val(candidate,"log_loss_top3") <= val(baseline,"log_loss_top3") + 0.015
+          )
+          material_gain=(
+              delta["winner_hit_rate_at_3"] >= 0.01
+              or delta["average_actual_top3_covered_by_predicted_top3"] >= 0.02
+              or delta["average_actual_top3_covered_by_predicted_top5"] >= 0.02
+              or delta["brier_top3"] <= -0.003
+              or delta["log_loss_top3"] <= -0.01
+          )
+          print(json.dumps({"champion":{k:baseline[k] for k in keys},
+                            "challenger":{k:candidate[k] for k in keys},
+                            "delta":delta,
+                            "no_material_regression":no_material_regression,
+                            "material_gain":material_gain},indent=2))
+          if not no_material_regression:
+              raise SystemExit("Challenger rejected: material regression against champion.")
+          if not material_gain:
+              raise SystemExit("Challenger rejected: no material walk-forward improvement over champion.")
+          PY
       - name: Train V3 model bundle
         run: python -m src.model.v3_train
       - name: Run historical press-odds benchmark
