@@ -1,0 +1,99 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_09-10-2026_R1_8ddf657a0f_3348b4cf6c.txt",
+    "parsed_at": "2026-10-09T23:25:43.312544Z",
+    "date": "2026-10-09",
+    "meeting": 1,
+    "track": "PARIS-VINCENNES",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                15,
+                10,
+                3
+            ],
+            "winner": 15,
+            "second": 10,
+            "third": 3
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                7,
+                4,
+                16
+            ],
+            "winner": 7,
+            "second": 4,
+            "third": 16
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                6,
+                10,
+                11
+            ],
+            "winner": 6,
+            "second": 10,
+            "third": 11
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                14,
+                6,
+                15,
+                1
+            ],
+            "winner": 14,
+            "second": 6,
+            "third": 15,
+            "fourth": 1
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                10,
+                6,
+                1
+            ],
+            "winner": 10,
+            "second": 6,
+            "third": 1
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                5,
+                3,
+                6
+            ],
+            "winner": 5,
+            "second": 3,
+            "third": 6
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                6,
+                7
+            ],
+            "winner": 6,
+            "second": 7,
+            "third": null
+        },
+        {
+            "race_number": 8,
+            "arrival": [
+                15,
+                12,
+                1
+            ],
+            "winner": 15,
+            "second": 12,
+            "third": 1
+        }
+    ]
+}

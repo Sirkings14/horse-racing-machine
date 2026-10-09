@@ -1,7 +1,7 @@
 {
   "memory_version": 1,
-  "race_count": 433,
-  "horse_row_count": 6815,
+  "race_count": 434,
+  "horse_row_count": 6830,
   "races": [
     {
       "race_key": "2023-05-09|CHANTILLY|8",
@@ -8766,6 +8766,27 @@
         1,
         5,
         8
+      ]
+    },
+    {
+      "race_key": "2026-10-09|PARIS-VINCENNES NOCTURNE|4",
+      "winner": 14,
+      "top3": [
+        14,
+        6,
+        15
+      ],
+      "top4": [
+        14,
+        6,
+        15,
+        1
+      ],
+      "top5": [
+        14,
+        6,
+        15,
+        1
       ]
     }
   ]
