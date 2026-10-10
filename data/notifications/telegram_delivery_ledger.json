@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "notifications": {
+    "2026-10-10|CAEN|4": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          11,
+          16,
+          17,
+          6,
+          8
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-10-10T19:36:33.254197+00:00",
+      "prediction_id": "2026-10-10|CAEN|4|2026-10-10T19:36:32.726282+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 233
+    }
+  }
+}
