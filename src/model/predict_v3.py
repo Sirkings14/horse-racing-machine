@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Any
 import numpy as np
 from src.live.registry import eligible_races, LIVE_DIR
-from src.model.historical_profile import build_walk_forward_profiles
+from src.model.historical_profile import build_walk_forward_profiles, merge_program_history_rows
 from src.model.truth_gate import validate_program
 from src.model.v3_model import V3LogisticModel
 from src.model.v3_scoring import rank_disagreement, weighted_outcome_score
@@ -94,7 +94,8 @@ def main():
     if not key or len(current)!=int((_meta(program)["runners_count"] or 0)): return no_prediction("live_program_runner_data_incomplete",race_key=key,truth_gate=gate)
 
     prior_programs=load_program_history(exclude_on_or_after=str(_meta(program).get("date") or "")[:10])
-    profiled=build_walk_forward_profiles(history+prior_programs+current)
+    profile_rows, program_history_audit = merge_program_history_rows(history + current, prior_programs)
+    profiled=build_walk_forward_profiles(profile_rows)
     current_profile=[r for r in profiled if r.get("race_key")==key]
     if len(current_profile)!=len(current): return no_prediction("current_profile_incomplete",race_key=key)
 
@@ -108,7 +109,7 @@ def main():
     history_start_counts=sorted(int(r.get("history_starts") or 0) for r in current_profile)
     distance_start_counts=sorted(int(r.get("distance_starts") or 0) for r in current_profile)
     feature_health={"runners":len(current_profile),"history_coverage":round(history_coverage,3),"course_coverage":round(course_coverage,3),"distance_coverage":round(distance_coverage,3),"complete_rows":round(sum(float(r.get("data_completeness") or 0.0) for r in current_profile)/len(current_profile),3) if current_profile else 0.0,
-        "identity_sources":identity_sources,"history_starts_sorted":history_start_counts,"distance_starts_sorted":distance_start_counts}
+        "identity_sources":identity_sources,"history_starts_sorted":history_start_counts,"distance_starts_sorted":distance_start_counts,"program_history_audit":program_history_audit}
     p1=models["winner"].predict_proba(current_profile)
     p3=models["top3"].predict_proba(current_profile)
     p5=models["top5"].predict_proba(current_profile)

@@ -1,4 +1,4 @@
-from src.model.historical_profile import build_walk_forward_profiles
+from src.model.historical_profile import build_walk_forward_profiles, merge_program_history_rows
 from src.model.v3_features import build_v3_matrix, FEATURE_NAMES
 import json
 import src.dataset.program_history as program_history
@@ -93,6 +93,28 @@ def test_program_only_start_counts_as_experience_without_fake_result():
     assert out[1]["distance_starts"]==1
     assert out[1]["distance_top3_rate"]==0.0
     assert out[1]["days_since_last_run"]==1
+
+
+
+def test_program_history_rows_overlapping_outcomes_are_deduplicated():
+    outcome=[
+      {"date":"2026-01-01","race_key":"2026-01-01_R1_C1","track":"VINCENNES","race_number":1,"horse_number":7,"horse_name":"CHEVAL D'ÉTÉ","finish_position":2},
+      {"date":"2026-01-02","race_key":"2026-01-02_R1_C1","track":"VINCENNES","race_number":1,"horse_number":1,"horse_name":"OTHER HORSE","finish_position":1},
+    ]
+    programs=[
+      {"date":"2026-01-01","race_key":"2026-01-01|VINCENNES|1","track":"VINCENNES","race_number":1,"horse_number":7,"horse_name":"Cheval d’ete","_program_only_history":True},
+      {"date":"2026-01-03","race_key":"2026-01-03|VINCENNES|1","track":"VINCENNES","race_number":1,"horse_number":7,"horse_name":"CHEVAL D ETE","_program_only_history":True},
+      {"date":"2026-01-03","race_key":"another-copy","track":"VINCENNES","race_number":1,"horse_number":9,"horse_name":"OTHER NEW HORSE","_program_only_history":True},
+      {"date":"2026-01-03","race_key":"yet-another-copy","track":"VINCENNES","race_number":2,"horse_number":4,"horse_name":"Other New Horse","_program_only_history":True},
+    ]
+    combined,audit=merge_program_history_rows(outcome,programs)
+    kept=[r for r in combined if r.get("_program_only_history")]
+    assert len(kept)==2
+    assert {r["horse_name"] for r in kept}=={"CHEVAL D ETE","OTHER NEW HORSE"}
+    assert audit["overlapping_program_rows_dropped"]==1
+    assert audit["duplicate_program_rows_dropped"]==1
+    assert audit["program_rows_kept"]==2
+    assert len([r for r in combined if not r.get("_program_only_history")])==2
 
 
 def test_program_history_loader_excludes_cutoff_and_has_no_targets(tmp_path, monkeypatch):
