@@ -4,6 +4,7 @@ from collections import defaultdict
 from pathlib import Path
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_model import fit_v3_model
+from src.model.v3_features import FEATURE_PIPELINE_VERSION
 from src.model.calibration import fit_sigmoid_calibrator, apply_sigmoid_calibrator, calibration_metrics
 from src.model.v3_backtest import run as run_v3_backtest
 from src.model.backtest import run_backtest as run_legacy_backtest  # legacy benchmark is informational
@@ -97,6 +98,7 @@ def main():
     # treated as proof of betting profitability without historical prices/dividends.
     payload={
         "model_version":"v4-evidence-no-press",
+        "feature_pipeline_version":FEATURE_PIPELINE_VERSION,
         "press_dependency":False,
         "post_race_feature_policy":"hard_exclusion",
         "calibration_method":"out_of_sample_sigmoid",
