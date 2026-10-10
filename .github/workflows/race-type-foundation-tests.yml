@@ -46,3 +46,10 @@ jobs:
         run: python -m pytest -q
       - name: Audit race type and pre-race field coverage
         run: python scripts/audit_race_type_coverage.py
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: race-type-pre-race-field-coverage
+          path: data/evaluation/race_type_coverage.json
+          if-no-files-found: error
+          retention-days: 30
