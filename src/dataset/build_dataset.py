@@ -7,6 +7,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+from src.model.race_type import canonical_race_type
+
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 
@@ -251,13 +253,26 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
                 "track": track,
                 "race_number": safe_int(race_number),
                 "race_name": race.get("race_name"),
-                "race_type": race.get("race_type"),
+                "race_type": canonical_race_type(race.get("race_type")),
                 "distance": safe_int(race.get("distance")),
                 "runners_count": safe_int(race.get("runners_count")),
                 "prize_euros": safe_float(race.get("prize_euros")),
                 "horse_number": horse_number,
                 "horse_name": horse.get("horse"),
                 "horse_description": horse.get("description"),
+                # Preserve verified pre-race program fields for shared feature engineering.
+                "sex": horse.get("sex"),
+                "age": safe_int(horse.get("age")),
+                "weight": safe_float(horse.get("weight")),
+                "draw": safe_int(horse.get("draw")),
+                "performance": horse.get("performance"),
+                "gains": safe_float(horse.get("gains")),
+                "listed_chrono": horse.get("listed_chrono"),
+                "listed_distance": horse.get("listed_distance"),
+                "trainer": horse.get("trainer"),
+                "jockey": horse.get("jockey"),
+                "driver": horse.get("driver"),
+                "owner": horse.get("owner"),
                 **ranking_values,
                 "ranking_average": ranking_average,
                 "ranking_presence": len(ranking_numbers),
@@ -324,7 +339,9 @@ def write_csv(rows: List[Dict[str, Any]]) -> None:
     fieldnames = [
         "race_key", "date", "track", "race_number", "race_name", "race_type",
         "distance", "runners_count", "prize_euros", "horse_number", "horse_name",
-        "horse_description", "favorites_rank", "form_rank", "class_rank",
+        "horse_description", "sex", "age", "weight", "draw", "performance", "gains",
+        "listed_chrono", "listed_distance", "trainer", "jockey", "driver", "owner",
+        "favorites_rank", "form_rank", "class_rank",
         "progress_rank", "regularity_rank", "ranking_average", "ranking_presence",
         "press_paris_turf_fractional", "press_paris_turf_decimal",
         "press_tierce_magazine_fractional", "press_tierce_magazine_decimal", "press_odds_status",
