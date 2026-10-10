@@ -47,7 +47,8 @@ def test_live_row_preserves_same_pre_race_fields_as_historical_row():
         "race": {
             "track": "VINCENNES", "race_number": 1, "race_name": "TEST",
             "race_type": "MONTÉ", "distance": 2700, "runners_count": 1,
-            "prize_euros": 50000,
+            "prize_euros": 50000, "going": "SOUPLE", "surface": "HERBE",
+            "start_method": "AUTOSTART",
         },
         "horses": [{
             "number": 7, "horse": "HORSE A", "sex": "H", "age": 6,
