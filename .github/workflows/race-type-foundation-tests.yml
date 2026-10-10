@@ -6,6 +6,7 @@ on:
     paths:
       - "src/model/race_type.py"
       - "src/model/v3_features.py"
+      - "src/model/v3_train.py"
       - "src/model/race_strategy.py"
       - "src/model/form_analysis.py"
       - "src/notifications/telegram.py"
