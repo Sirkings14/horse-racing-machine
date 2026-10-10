@@ -12,6 +12,7 @@ from src.model.autopilot_guard import build_autopilot_guard
 from src.model.opportunity import score_race_opportunity
 from src.dataset.program_history import load_program_history
 from src.model.race_type import canonical_race_type
+from src.model.v3_features import FEATURE_PIPELINE_VERSION
 from src.model.race_strategy import build_race_strategy
 
 BASE_DIR=Path(__file__).resolve().parents[2]
@@ -94,6 +95,14 @@ def main():
     if not gate["valid"]: return no_prediction("live_program_truth_gate_failed",truth_gate=gate)
     current=_live_rows(program); key=_key(program)
     if not key or len(current)!=int((_meta(program)["runners_count"] or 0)): return no_prediction("live_program_runner_data_incomplete",race_key=key,truth_gate=gate)
+    if bundle.get("feature_pipeline_version") != FEATURE_PIPELINE_VERSION:
+        return no_prediction(
+            "v3_feature_pipeline_version_mismatch",
+            race_key=key,
+            race=_meta(program),
+            expected_feature_pipeline_version=FEATURE_PIPELINE_VERSION,
+            model_feature_pipeline_version=bundle.get("feature_pipeline_version"),
+        )
 
     prior_programs=load_program_history(exclude_on_or_after=str(_meta(program).get("date") or "")[:10])
     profiled=build_walk_forward_profiles(history+prior_programs+current)
