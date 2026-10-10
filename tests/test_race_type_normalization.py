@@ -13,6 +13,9 @@ def test_french_accents_and_aliases_are_normalized():
     assert canonical_race_type("flat racing") == "PLAT"
     assert canonical_race_type("steeple chase") == "STEEPLE-CHASE"
     assert canonical_race_type("hurdles") == "HAIES"
+    assert canonical_race_type("TROT_ATTELE") == "ATTELE"
+    assert canonical_race_type("TROT_MONTE") == "MONTE"
+    assert canonical_race_type("TROT_MONTÉ") == "MONTE"
 
 
 def test_unknown_race_type_is_preserved_and_not_misclassified():

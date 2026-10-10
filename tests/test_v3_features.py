@@ -1,6 +1,6 @@
 import numpy as np
 from src.model.historical_profile import build_walk_forward_profiles
-from src.model.v3_features import build_v3_matrix, FEATURE_NAMES
+from src.model.v3_features import build_v3_matrix, FEATURE_NAMES, tail_complete_races
 import json
 import src.dataset.program_history as program_history
 
@@ -104,3 +104,16 @@ def test_relative_feature_pipeline_version_is_explicit():
     assert feature_pipeline_compatible({"feature_pipeline_version": FEATURE_PIPELINE_VERSION})
     assert not feature_pipeline_compatible({})
     assert not feature_pipeline_compatible({"feature_pipeline_version": "old"})
+
+def test_training_row_limit_never_splits_a_race_field():
+    rows = [
+        *[{"race_key":"A","horse_number":i} for i in range(1,4)],
+        *[{"race_key":"B","horse_number":i} for i in range(1,5)],
+        *[{"race_key":"C","horse_number":i} for i in range(1,3)],
+    ]
+    selected = tail_complete_races(rows, 5)
+    counts = {}
+    for row in selected:
+        counts[row["race_key"]] = counts.get(row["race_key"], 0) + 1
+    assert counts == {"B": 4, "C": 2}
+    assert len(selected) == 6
