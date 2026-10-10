@@ -9,7 +9,7 @@ def test_historical_row_preserves_validated_pre_race_program_fields():
         "race": {
             "track": "VINCENNES", "race_number": 1, "race_name": "TEST",
             "race_type": "TROT MONTÉ", "distance": 2700,
-            "runners_count": 1, "prize_euros": 50000,
+            "runners_count": 1, "prize_euros": 50000, "going": "SOUPLE", "surface": "HERBE", "start_method": "AUTOSTART",
         },
         "horses": [{
             "number": 7, "horse": "HORSE A", "sex": "H", "age": 6,
@@ -36,6 +36,9 @@ def test_historical_row_preserves_validated_pre_race_program_fields():
     assert row["age"] == 6
     assert row["trainer"] == "TRAINER A"
     assert row["driver"] == "DRIVER A"
+    assert row["going"] == "SOUPLE"
+    assert row["surface"] == "HERBE"
+    assert row["start_method"] == "AUTOSTART"
 
 
 def test_live_row_preserves_same_pre_race_fields_as_historical_row():
@@ -57,6 +60,9 @@ def test_live_row_preserves_same_pre_race_fields_as_historical_row():
     rows = _live_rows(program)
     assert len(rows) == 1
     assert rows[0]["race_type"] == "MONTE"
+    assert rows[0]["going"] == "SOUPLE"
+    assert rows[0]["surface"] == "HERBE"
+    assert rows[0]["start_method"] == "AUTOSTART"
     for field in ("performance", "gains", "listed_chrono", "listed_distance", "sex", "age", "trainer", "driver"):
         assert rows[0][field] == program["horses"][0][field]
 
