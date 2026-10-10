@@ -98,5 +98,8 @@ def test_relative_features_do_not_depend_on_unrelated_races():
 
 
 def test_relative_feature_pipeline_version_is_explicit():
-    from src.model.v3_features import FEATURE_PIPELINE_VERSION
+    from src.model.v3_features import FEATURE_PIPELINE_VERSION, feature_pipeline_compatible
     assert FEATURE_PIPELINE_VERSION == "v3-race-aware-features-2026-10-10"
+    assert feature_pipeline_compatible({"feature_pipeline_version": FEATURE_PIPELINE_VERSION})
+    assert not feature_pipeline_compatible({})
+    assert not feature_pipeline_compatible({"feature_pipeline_version": "old"})
