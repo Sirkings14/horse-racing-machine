@@ -202,6 +202,17 @@ def send_latest_prediction() -> bool:
             "Race intelligence — Top 5:",
         ]
 
+    strategy = payload.get("race_strategy") or {}
+    discipline = strategy.get("discipline_label") or race.get("race_type") or "unclassified"
+    lines.insert(6, f"Discipline: {discipline} | Data: {strategy.get('evidence_status', 'not assessed')}")
+    gaps = strategy.get("critical_data_gaps") or []
+    if gaps:
+        gap_text = ", ".join(
+            f"{item.get('field')} {float(item.get('coverage', 0.0)):.0%}"
+            for item in gaps[:3]
+        )
+        lines.insert(7, f"Evidence gaps: {gap_text}")
+
     for horse in ranked[:5]:
         if not isinstance(horse, dict):
             continue
