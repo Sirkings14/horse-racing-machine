@@ -23,12 +23,18 @@ def canonical_key(date: Any, track: Any, race_number: Any) -> str | None:
 
 
 def build_program_runner_index() -> dict[str, dict[str, Any]]:
-    """Build the authoritative horse-number universe from parsed race programs."""
-    index: dict[str, dict[str, Any]] = {}
-    if not PROGRAMS_DIR.exists():
-        return index
+    """Build an authoritative roster index, failing closed on conflicting copies.
 
-    for path in PROGRAMS_DIR.glob("*.json"):
+    The repository can contain multiple parses/copies of the same program. Never
+    let filesystem iteration order decide which runner list becomes truth.
+    Identical rosters are collapsed; conflicting rosters are explicitly marked
+    unusable for result verification.
+    """
+    candidates: dict[str, list[dict[str, Any]]] = {}
+    if not PROGRAMS_DIR.exists():
+        return {}
+
+    for path in sorted(PROGRAMS_DIR.glob("*.json")):
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except Exception:
@@ -55,14 +61,33 @@ def build_program_runner_index() -> dict[str, dict[str, Any]]:
                 horse_numbers.add(number)
 
         if horse_numbers:
-            index[key] = {
+            candidates.setdefault(key, []).append({
                 "horse_numbers": horse_numbers,
                 "runners_count": len(horse_numbers),
                 "source_file": path.name,
+            })
+
+    index: dict[str, dict[str, Any]] = {}
+    for key, copies in candidates.items():
+        roster_signatures = {tuple(sorted(item["horse_numbers"])) for item in copies}
+        if len(roster_signatures) == 1:
+            # Stable source attribution is useful for audits and reproducibility.
+            selected = min(copies, key=lambda item: item["source_file"])
+            index[key] = {
+                **selected,
+                "source_count": len(copies),
+                "conflict": False,
             }
-
+        else:
+            index[key] = {
+                "horse_numbers": set(),
+                "runners_count": 0,
+                "source_file": None,
+                "source_count": len(copies),
+                "conflict": True,
+                "conflicting_sources": sorted(item["source_file"] for item in copies),
+            }
     return index
-
 
 def validate_arrival(
     race_key: str,
@@ -82,6 +107,15 @@ def validate_arrival(
             "reason": "program_roster_unavailable",
             "race_key": race_key,
             "arrival_positions_available": len(arrival),
+        }
+
+    if meta.get("conflict"):
+        return {
+            "accepted_for_learning": False,
+            "reason": "conflicting_program_rosters",
+            "race_key": race_key,
+            "arrival_positions_available": len(arrival),
+            "conflicting_sources": meta.get("conflicting_sources", []),
         }
 
     expected = meta["horse_numbers"]
