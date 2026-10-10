@@ -4,6 +4,11 @@ import numpy as np
 
 # Bump whenever live/training feature semantics change, even if dimensions stay equal.
 FEATURE_PIPELINE_VERSION = "v3-race-aware-features-2026-10-10"
+
+
+def feature_pipeline_compatible(bundle: Any) -> bool:
+    """Fail closed when a saved model was trained under different semantics."""
+    return isinstance(bundle, dict) and bundle.get("feature_pipeline_version") == FEATURE_PIPELINE_VERSION
 from src.model.race_type import race_type_feature_groups
 
 # All features are pre-race and press-independent. Race-relative fields are
