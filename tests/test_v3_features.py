@@ -42,11 +42,11 @@ def test_program_history_rows_overlapping_outcomes_are_deduplicated():
     ]
     combined,audit=merge_program_history_rows(outcome,programs)
     kept=[r for r in combined if r.get("_program_only_history")]
-    assert len(kept)==1
-    assert kept[0]["horse_name"]=="CHEVAL D ETE"
+    assert len(kept)==2
+    assert {r["horse_name"] for r in kept}=={"CHEVAL D ETE","OTHER NEW HORSE"}
     assert audit["overlapping_program_rows_dropped"]==1
     assert audit["duplicate_program_rows_dropped"]==1
-    assert audit["program_rows_kept"]==1
+    assert audit["program_rows_kept"]==2
     assert len([r for r in combined if not r.get("_program_only_history")])==2
 
 
