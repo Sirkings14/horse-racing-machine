@@ -15,6 +15,7 @@ OUTPUT = BASE / "data" / "evaluation" / "race_type_coverage.json"
 FIELD_NAMES = (
     "performance", "gains", "listed_chrono", "listed_distance",
     "sex", "age", "weight", "draw", "trainer", "jockey", "driver",
+    "going", "surface", "start_method", "track_condition",
 )
 
 
@@ -39,7 +40,10 @@ def _add_program(payload: dict[str, Any], source: str, types: Counter, races: se
             continue
         runners[(source, label)] += 1
         for field in FIELD_NAMES:
-            if horse.get(field) not in (None, ""):
+            value = horse.get(field)
+            if value in (None, ""):
+                value = race.get(field)
+            if value not in (None, ""):
                 fields[(source, label)][field] += 1
 
 
