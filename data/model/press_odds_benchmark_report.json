@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-08T19:21:45.306892+00:00",
+  "generated_at": "2026-10-10T19:44:14.178405+00:00",
   "status": "benchmark_available",
   "method": "out_of_sample_v4_scoring_on_stored_lonab_programs_vs_published_press_prices",
   "training_history_end_date": "2026-05-05",
   "programs_found_before_cutoff": 155,
-  "benchmark_races": 23,
+  "benchmark_races": 25,
   "market_evidence_gate_unlocked": false,
   "press_prices_are_market_evidence": false,
   "policy": {
@@ -46,17 +46,17 @@
     },
     "tierce_magazine": {
       "label": "Tierce Magazine",
-      "priced_races": 23,
+      "priced_races": 25,
       "priced_race_coverage": 1.0,
       "all_top5_accounting": {
-        "bets": 115,
-        "wins": 14,
-        "win_rate": 0.1217,
-        "total_stake": 115.0,
-        "total_return": 464.0,
-        "profit": 349.0,
-        "roi": 3.0348,
-        "average_probability_edge": 0.0809,
+        "bets": 125,
+        "wins": 15,
+        "win_rate": 0.12,
+        "total_stake": 125.0,
+        "total_return": 489.0,
+        "profit": 364.0,
+        "roi": 2.912,
+        "average_probability_edge": 0.0808,
         "maximum_drawdown_units": 15.0,
         "chronological": [
           {
@@ -311,18 +311,40 @@
               18
             ],
             "profit": -5.0
+          },
+          {
+            "race_key": "2026-10-08|SAINT-CLOUD|1",
+            "selected": [
+              12,
+              2,
+              9,
+              3,
+              6
+            ],
+            "profit": -5.0
+          },
+          {
+            "race_key": "2026-10-09|PARIS-VINCENNES NOCTURNE|4",
+            "selected": [
+              6,
+              13,
+              15,
+              14,
+              5
+            ],
+            "profit": 20.0
           }
         ]
       },
       "value_filtered_accounting": {
-        "bets": 65,
-        "wins": 9,
-        "win_rate": 0.1385,
-        "total_stake": 65.0,
-        "total_return": 393.0,
-        "profit": 328.0,
-        "roi": 5.0462,
-        "average_probability_edge": 0.1208,
+        "bets": 71,
+        "wins": 10,
+        "win_rate": 0.1408,
+        "total_stake": 71.0,
+        "total_return": 418.0,
+        "profit": 347.0,
+        "roi": 4.8873,
+        "average_probability_edge": 0.1202,
         "maximum_drawdown_units": 20.0,
         "chronological": [
           {
@@ -527,6 +549,24 @@
               15
             ],
             "profit": -3.0
+          },
+          {
+            "race_key": "2026-10-08|SAINT-CLOUD|1",
+            "selected": [
+              12,
+              2,
+              9
+            ],
+            "profit": -3.0
+          },
+          {
+            "race_key": "2026-10-09|PARIS-VINCENNES NOCTURNE|4",
+            "selected": [
+              6,
+              15,
+              14
+            ],
+            "profit": 22.0
           }
         ]
       }
@@ -3219,6 +3259,240 @@
           "probability_top3": 0.309009,
           "probability_top5": 0.525273,
           "ensemble_score": 0.28189
+        }
+      ]
+    },
+    {
+      "race_key": "2026-10-08|SAINT-CLOUD|1",
+      "date": "2026-10-08",
+      "winner": 1,
+      "press_odds": {
+        "tierce_magazine": {
+          "1": {
+            "fractional": "8/1",
+            "decimal": 9.0
+          },
+          "2": {
+            "fractional": "33/1",
+            "decimal": 34.0
+          },
+          "3": {
+            "fractional": "9/1",
+            "decimal": 10.0
+          },
+          "4": {
+            "fractional": "21/1",
+            "decimal": 22.0
+          },
+          "5": {
+            "fractional": "15/1",
+            "decimal": 16.0
+          },
+          "6": {
+            "fractional": "14/1",
+            "decimal": 15.0
+          },
+          "7": {
+            "fractional": "33/1",
+            "decimal": 34.0
+          },
+          "8": {
+            "fractional": "18/1",
+            "decimal": 19.0
+          },
+          "9": {
+            "fractional": "28/1",
+            "decimal": 29.0
+          },
+          "10": {
+            "fractional": "48/1",
+            "decimal": 49.0
+          },
+          "11": {
+            "fractional": "29/1",
+            "decimal": 30.0
+          },
+          "12": {
+            "fractional": "11/1",
+            "decimal": 12.0
+          },
+          "13": {
+            "fractional": "37/1",
+            "decimal": 38.0
+          },
+          "14": {
+            "fractional": "10/1",
+            "decimal": 11.0
+          },
+          "15": {
+            "fractional": "5/1",
+            "decimal": 6.0
+          },
+          "16": {
+            "fractional": "30/1",
+            "decimal": 31.0
+          }
+        }
+      },
+      "complete_top5_prices": {
+        "paris_turf": false,
+        "tierce_magazine": true
+      },
+      "top5": [
+        {
+          "horse_number": 12,
+          "horse_name": "DERAWAR",
+          "probability_winner": 0.185803,
+          "probability_top3": 0.406282,
+          "probability_top5": 0.648215,
+          "ensemble_score": 0.376965
+        },
+        {
+          "horse_number": 2,
+          "horse_name": "CHILL Y FLAMA",
+          "probability_winner": 0.181619,
+          "probability_top3": 0.394457,
+          "probability_top5": 0.630897,
+          "ensemble_score": 0.366662
+        },
+        {
+          "horse_number": 9,
+          "horse_name": "FAOLIO",
+          "probability_winner": 0.125943,
+          "probability_top3": 0.334637,
+          "probability_top5": 0.560178,
+          "ensemble_score": 0.306281
+        },
+        {
+          "horse_number": 3,
+          "horse_name": "LAPENTY",
+          "probability_winner": 0.121132,
+          "probability_top3": 0.332811,
+          "probability_top5": 0.556799,
+          "ensemble_score": 0.303213
+        },
+        {
+          "horse_number": 6,
+          "horse_name": "SAGARMATHA",
+          "probability_winner": 0.119419,
+          "probability_top3": 0.330532,
+          "probability_top5": 0.560522,
+          "ensemble_score": 0.302169
+        }
+      ]
+    },
+    {
+      "race_key": "2026-10-09|PARIS-VINCENNES NOCTURNE|4",
+      "date": "2026-10-09",
+      "winner": 14,
+      "press_odds": {
+        "tierce_magazine": {
+          "1": {
+            "fractional": "137/1",
+            "decimal": 138.0
+          },
+          "2": {
+            "fractional": "22/1",
+            "decimal": 23.0
+          },
+          "3": {
+            "fractional": "37/1",
+            "decimal": 38.0
+          },
+          "4": {
+            "fractional": "48/1",
+            "decimal": 49.0
+          },
+          "5": {
+            "fractional": "7/1",
+            "decimal": 8.0
+          },
+          "6": {
+            "fractional": "38/1",
+            "decimal": 39.0
+          },
+          "7": {
+            "fractional": "10/1",
+            "decimal": 11.0
+          },
+          "8": {
+            "fractional": "83/1",
+            "decimal": 84.0
+          },
+          "9": {
+            "fractional": "13/1",
+            "decimal": 14.0
+          },
+          "10": {
+            "fractional": "12/1",
+            "decimal": 13.0
+          },
+          "11": {
+            "fractional": "11/1",
+            "decimal": 12.0
+          },
+          "12": {
+            "fractional": "14/1",
+            "decimal": 15.0
+          },
+          "13": {
+            "fractional": "8/1",
+            "decimal": 9.0
+          },
+          "14": {
+            "fractional": "24/1",
+            "decimal": 25.0
+          },
+          "15": {
+            "fractional": "26/1",
+            "decimal": 27.0
+          }
+        }
+      },
+      "complete_top5_prices": {
+        "paris_turf": false,
+        "tierce_magazine": true
+      },
+      "top5": [
+        {
+          "horse_number": 6,
+          "horse_name": "JANNIG D'EREVAN",
+          "probability_winner": 0.160892,
+          "probability_top3": 0.372957,
+          "probability_top5": 0.60708,
+          "ensemble_score": 0.345007
+        },
+        {
+          "horse_number": 13,
+          "horse_name": "I STILL LOVING YOU",
+          "probability_winner": 0.158803,
+          "probability_top3": 0.371672,
+          "probability_top5": 0.605098,
+          "ensemble_score": 0.343339
+        },
+        {
+          "horse_number": 15,
+          "horse_name": "ILEO PIERJI",
+          "probability_winner": 0.145196,
+          "probability_top3": 0.356452,
+          "probability_top5": 0.589616,
+          "ensemble_score": 0.328598
+        },
+        {
+          "horse_number": 14,
+          "horse_name": "INDIEN DE FONTAINE",
+          "probability_winner": 0.132909,
+          "probability_top3": 0.346286,
+          "probability_top5": 0.57782,
+          "ensemble_score": 0.317457
+        },
+        {
+          "horse_number": 5,
+          "horse_name": "JYTRACE DE HOUELLE",
+          "probability_winner": 0.127025,
+          "probability_top3": 0.336216,
+          "probability_top5": 0.56478,
+          "ensemble_score": 0.308228
         }
       ]
     }
