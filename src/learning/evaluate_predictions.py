@@ -51,6 +51,7 @@ def result_records(program_index: dict[str, dict[str, Any]]) -> tuple[dict[str, 
         "rejection_reason_counts_are_nonexclusive": True,
     }
     candidates: dict[str, list[dict[str, Any]]] = {}
+    records: dict[str, dict[str, Any]] = {}
 
     def reject(reason: str) -> None:
         audit["rejected"] += 1
