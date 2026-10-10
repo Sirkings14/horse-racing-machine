@@ -35,9 +35,31 @@ def canonical_key(value: str) -> str:
     return f"{parts[0][:10]}|{normalize_track(parts[1])}|{number}"
 
 
-def result_records(program_index: dict[str, dict[str, Any]]) -> tuple[dict[str, dict[str, Any]], dict[str, int]]:
+def result_records(program_index: dict[str, dict[str, Any]]) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
+    """Return only unique, non-conflicting result truth matched to an unambiguous roster."""
+    audit: dict[str, Any] = {
+        "result_races_seen": 0,
+        "accepted": 0,
+        "rejected": 0,
+        "validated_result_documents": 0,
+        "duplicate_result_documents": 0,
+        "conflicting_result_races": 0,
+        "conflicting_result_documents": 0,
+        "unidentifiable_result_races": 0,
+        "program_roster_conflicts": sum(1 for meta in program_index.values() if meta.get("conflict")),
+        "rejection_reasons": {},
+        "rejection_reason_counts_are_nonexclusive": True,
+    }
+    candidates: dict[str, list[dict[str, Any]]] = {}
     records: dict[str, dict[str, Any]] = {}
-    audit = {"result_races_seen": 0, "accepted": 0, "rejected": 0}
+
+    def reject(reason: str) -> None:
+        audit["rejected"] += 1
+        reason_counts = audit["rejection_reasons"]
+        for reason_item in str(reason or "unknown_rejection_reason").split(";"):
+            normalized = reason_item.strip() or "unknown_rejection_reason"
+            reason_counts[normalized] = reason_counts.get(normalized, 0) + 1
+
     for path in sorted(RESULTS_DIR.glob("*.json")):
         try:
             payload = load_json(path)
@@ -53,35 +75,80 @@ def result_records(program_index: dict[str, dict[str, Any]]) -> tuple[dict[str, 
             try:
                 number = int(race.get("race_number"))
             except (TypeError, ValueError):
+                reject("invalid_race_number")
+                audit["unidentifiable_result_races"] += 1
                 continue
             if not race_date or not track:
+                reject("missing_race_date_or_track")
+                audit["unidentifiable_result_races"] += 1
                 continue
-            key = f"{race_date}|{track}|{number}"
-            arrival = []
-            for value in race.get("arrival") or []:
+
+            raw_arrival = race.get("arrival")
+            if not isinstance(raw_arrival, list):
+                reject("invalid_arrival_format")
+                continue
+            arrival: list[int] = []
+            invalid_arrival = False
+            for value in raw_arrival:
                 try:
-                    arrival.append(int(value))
-                except (TypeError, ValueError):
-                    pass
+                    if isinstance(value, bool):
+                        raise ValueError("boolean is not a horse number")
+                    parsed = int(value)
+                    if isinstance(value, float) and value != parsed:
+                        raise ValueError("fractional arrival number")
+                    arrival.append(parsed)
+                except (TypeError, ValueError, OverflowError):
+                    invalid_arrival = True
+                    break
+            if invalid_arrival:
+                reject("invalid_arrival_values")
+                continue
+
+            key = f"{race_date}|{track}|{number}"
             truth = validate_arrival(key, arrival, program_index)
             if not truth["accepted_for_learning"]:
-                audit["rejected"] += 1
+                reject(str(truth.get("reason") or "result_truth_validation_failed"))
                 print(f"Skipping untrusted result {key}: {truth['reason']}")
                 continue
-            audit["accepted"] += 1
-            records[key] = {
-                "race_key": key,
-                "date": race_date,
-                "track": track,
-                "race_number": number,
-                "arrival": arrival,
-                "winner": arrival[0],
-                "second": arrival[1],
-                "third": arrival[2],
-                "truth_validation": truth,
-            }
-    return records, audit
 
+            candidates.setdefault(key, []).append({
+                "source_file": path.name,
+                "record": {
+                    "race_key": key,
+                    "date": race_date,
+                    "track": track,
+                    "race_number": number,
+                    "arrival": arrival,
+                    "winner": arrival[0],
+                    "second": arrival[1],
+                    "third": arrival[2],
+                    "truth_validation": truth,
+                },
+            })
+
+    for key, copies in sorted(candidates.items()):
+        audit["validated_result_documents"] += len(copies)
+        arrivals = {tuple(item["record"]["arrival"]) for item in copies}
+        if len(arrivals) > 1:
+            # A result race with multiple distinct, roster-valid arrivals is not
+            # safe to learn from. Quarantine the whole race instead of choosing
+            # whichever file happens to be processed last.
+            audit["conflicting_result_races"] += 1
+            audit["conflicting_result_documents"] += len(copies)
+            audit["rejected"] += len(copies)
+            reasons = audit["rejection_reasons"]
+            reasons["conflicting_result_arrivals"] = (
+                reasons.get("conflicting_result_arrivals", 0) + len(copies)
+            )
+            print(f"Quarantining conflicting result records for {key}: {len(arrivals)} different arrivals.")
+            continue
+
+        selected = min(copies, key=lambda item: item["source_file"])
+        records[key] = selected["record"]
+        audit["accepted"] += 1
+        audit["duplicate_result_documents"] += max(0, len(copies) - 1)
+
+    return records, audit
 
 def load_existing(program_index: dict[str, dict[str, Any]]) -> tuple[dict[str, dict[str, Any]], int]:
     if not EVALUATION_FILE.exists():
