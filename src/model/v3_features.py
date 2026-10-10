@@ -1,6 +1,9 @@
 from __future__ import annotations
 from typing import Any, Sequence
 import numpy as np
+
+# Bump whenever live/training feature semantics change, even if dimensions stay equal.
+FEATURE_PIPELINE_VERSION = "v3-race-aware-features-2026-10-10"
 from src.model.race_type import race_type_feature_groups
 
 # All features are pre-race and press-independent. Race-relative fields are
@@ -69,18 +72,32 @@ def _base_features(row:dict[str,Any])->list[float]:
         completeness,weight_norm,draw_norm
     ]
 
-def _relative(rows:Sequence[dict[str,Any]])->np.ndarray:
-    base=np.asarray([_base_features(r) for r in rows],dtype=float)
+def _relative(rows:Sequence[dict[str,Any]],base:np.ndarray|None=None)->np.ndarray:
+    """Normalize relative features independently inside each race.
+
+    Training passes many races at once, while live inference normally passes a
+    single race. Grouping by race_key guarantees unrelated races cannot change
+    relative features. Rows without a race key are isolated conservatively.
+    """
+    if base is None:
+        base=np.asarray([_base_features(r) for r in rows],dtype=float)
     if len(base)==0:return np.empty((0,10),dtype=float)
-    # Percentile-like relative strength within the race. A zero-history horse
-    # is not treated as weak: its raw prior-history values remain zero while
-    # these relative features expose only observed differences.
     cols=[1,2,3,4,5,6,8,11,24,0]
-    selected=base[:,cols]
-    means=selected.mean(axis=0)
-    stds=selected.std(axis=0)
-    safe_stds=np.where(stds>1e-9,stds,1.0)
-    return (selected-means)/safe_stds
+    relative=np.zeros((len(base),len(cols)),dtype=float)
+    groups:dict[str,list[int]]={}
+    for index,row in enumerate(rows):
+        key=str(row.get("race_key") or "").strip()
+        if not key:
+            key=f"__row_without_race_key__:{index}"
+        groups.setdefault(key,[]).append(index)
+    for indices in groups.values():
+        # These are within-race standardized values; single-runner races stay neutral.
+        selected=base[indices][:,cols]
+        means=selected.mean(axis=0)
+        stds=selected.std(axis=0)
+        safe_stds=np.where(stds>1e-9,stds,1.0)
+        relative[indices]=(selected-means)/safe_stds
+    return relative
 
 def row_to_v3_features(row:dict[str,Any])->list[float]:
     base=_base_features(row)
@@ -91,5 +108,5 @@ def row_to_v3_features(row:dict[str,Any])->list[float]:
 def build_v3_matrix(rows:Sequence[dict[str,Any]])->np.ndarray:
     if not rows:return np.empty((0,len(FEATURE_NAMES)),dtype=float)
     base=np.asarray([_base_features(r) for r in rows],dtype=float)
-    rel=_relative(rows)
+    rel=_relative(rows,base=base)
     return np.concatenate([base,rel],axis=1)
