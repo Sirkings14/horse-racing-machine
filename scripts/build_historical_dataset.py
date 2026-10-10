@@ -159,6 +159,10 @@ def main():
             "runners_count": int(_num(_pick(r, ["nombreDeclaresPartants", "runners_count"], 0)) or 0),
             "prize_euros": _num(_pick(r, ["montantPrix", "prize_euros", "allocation_eur"])),
             "race_type": canonical_race_type(_pick(r, ["specialite", "discipline", "race_type"], "")),
+            "going": _pick(r, ["going", "terrain", "track_condition", "etatPiste"]),
+            "surface": _pick(r, ["surface", "piste", "surface_type"]),
+            "start_method": _pick(r, ["start_method", "modeDepart", "autostart", "typeDepart"]),
+            "track_condition": _pick(r, ["track_condition", "etatPiste", "going", "terrain"]),
             "arrival": arr,
         }
         if i and i % 25000 == 0:
@@ -215,7 +219,8 @@ def main():
             "race_key": key, "date": meta["date"], "track": meta["track"],
             "race_number": meta["race_number"], "distance": meta["distance"],
             "runners_count": meta["runners_count"], "prize_euros": meta["prize_euros"],
-            "race_type": meta["race_type"], "horse_number": horse_number,
+            "race_type": meta["race_type"], "going": meta.get("going"), "surface": meta.get("surface"),
+            "start_method": meta.get("start_method"), "track_condition": meta.get("track_condition"), "horse_number": horse_number,
             "horse_name": horse_name, "horse_id": horse_id, "finish_position": pos, "won": int(pos == 1),
             "top3": int(pos <= 3), "top5": int(pos <= 5),
             "weight": _num(_pick(p, ["poids", "weight", "carried_weight", "poidsporte"])),
