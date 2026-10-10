@@ -1,0 +1,33 @@
+name: V3 per-race relative feature tests
+
+on:
+  push:
+    branches: [fix/race-relative-feature-grouping]
+    paths:
+      - "src/model/v3_features.py"
+      - "tests/test_v3_features.py"
+      - ".github/workflows/v3_relative_features_safety.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/model/v3_features.py"
+      - "tests/test_v3_features.py"
+      - ".github/workflows/v3_relative_features_safety.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  relative-features:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install numerical dependency
+        run: python -m pip install numpy
+      - name: Compile source and tests
+        run: python -m compileall -q src tests
+      - name: Run V3 feature regression tests
+        run: python -m unittest discover -s tests -p "test_v3_features.py" -v
