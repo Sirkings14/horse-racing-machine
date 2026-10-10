@@ -36,8 +36,8 @@ def test_commentary_cannot_change_v3_features():
 
 def test_race_relative_features_change_only_from_pre_race_batch():
     rows=[
-      {"horse_name":"A","history_win_rate":0.8,"history_top3_rate":0.8,"history_top5_rate":0.9,"history_recent_top3_rate":0.8,"history_recent_top5_rate":0.9,"history_recent_avg_finish":2,"course_top3_rate":0.8,"distance_top3_rate":0.8,"history_starts":10,"distance":2400,"runners_count":10},
-      {"horse_name":"B","history_win_rate":0.2,"history_top3_rate":0.2,"history_top5_rate":0.3,"history_recent_top3_rate":0.2,"history_recent_top5_rate":0.3,"history_recent_avg_finish":7,"course_top3_rate":0.2,"distance_top3_rate":0.2,"history_starts":2,"distance":2400,"runners_count":10},
+      {"race_key":"2026-01-01|A|1","horse_name":"A","history_win_rate":0.8,"history_top3_rate":0.8,"history_top5_rate":0.9,"history_recent_top3_rate":0.8,"history_recent_top5_rate":0.9,"history_recent_avg_finish":2,"course_top3_rate":0.8,"distance_top3_rate":0.8,"history_starts":10,"distance":2400,"runners_count":10},
+      {"race_key":"2026-01-01|A|1","horse_name":"B","history_win_rate":0.2,"history_top3_rate":0.2,"history_top5_rate":0.3,"history_recent_top3_rate":0.2,"history_recent_top5_rate":0.3,"history_recent_avg_finish":7,"course_top3_rate":0.2,"distance_top3_rate":0.2,"history_starts":2,"distance":2400,"runners_count":10},
     ]
     matrix=build_v3_matrix(rows)
     assert matrix.shape==(2,len(FEATURE_NAMES))
@@ -81,3 +81,22 @@ def test_program_history_loader_excludes_cutoff_and_has_no_targets(tmp_path, mon
     assert all(r["_program_only_history"] is True for r in rows)
     assert all("won" not in r and "finish_position" not in r for r in rows)
     assert program_history.load_program_history("2026-01-01")==[]
+
+def test_relative_features_do_not_depend_on_unrelated_races():
+    race_a = [
+        {"race_key":"A","horse_name":"A1","history_win_rate":0.9,"history_top3_rate":0.9,"history_top5_rate":0.9,"history_recent_top3_rate":0.9,"history_recent_top5_rate":0.9,"history_recent_avg_finish":1,"course_top3_rate":0.9,"distance_top3_rate":0.9,"history_starts":20,"distance":2400,"runners_count":2},
+        {"race_key":"A","horse_name":"A2","history_win_rate":0.1,"history_top3_rate":0.1,"history_top5_rate":0.1,"history_recent_top3_rate":0.1,"history_recent_top5_rate":0.1,"history_recent_avg_finish":9,"course_top3_rate":0.1,"distance_top3_rate":0.1,"history_starts":1,"distance":2400,"runners_count":2},
+    ]
+    race_b = [
+        {"race_key":"B","horse_name":"B1","history_win_rate":0.99,"history_top3_rate":0.99,"history_top5_rate":0.99,"history_recent_top3_rate":0.99,"history_recent_top5_rate":0.99,"history_recent_avg_finish":1,"course_top3_rate":0.99,"distance_top3_rate":0.99,"history_starts":30,"distance":1800,"runners_count":16},
+        {"race_key":"B","horse_name":"B2","history_win_rate":0.98,"history_top3_rate":0.98,"history_top5_rate":0.98,"history_recent_top3_rate":0.98,"history_recent_top5_rate":0.98,"history_recent_avg_finish":2,"course_top3_rate":0.98,"distance_top3_rate":0.98,"history_starts":25,"distance":1800,"runners_count":16},
+    ]
+    a_only = build_v3_matrix(race_a)
+    mixed = build_v3_matrix(race_a + race_b)[:len(race_a)]
+    assert np.allclose(a_only, mixed)
+    assert a_only[0, -1] > a_only[1, -1]
+
+
+def test_relative_feature_pipeline_version_is_explicit():
+    from src.model.v3_features import FEATURE_PIPELINE_VERSION
+    assert FEATURE_PIPELINE_VERSION == "v3-race-aware-features-2026-10-10"
