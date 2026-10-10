@@ -22,6 +22,9 @@ def test_strategy_selects_mounted_trot_checks_and_reports_input_gaps():
     assert any("mounted-trot" in item.lower() for item in plan["checks"])
     assert "start_method" in [item["field"] for item in plan["critical_data_gaps"]]
     assert plan["prior_history_coverage"]["history_starts"] == 1.0
+    assert plan["form_diagnostics"]["coverage"] == 1.0
+    assert plan["runner_form_analysis"][0]["valid_finish_count"] == 5
+    assert plan["form_diagnostics"]["policy"] == "diagnostic_only_not_used_in_model_score"
     assert plan["model_policy"]["checklist_overrides_betting_guard"] is False
 
 
