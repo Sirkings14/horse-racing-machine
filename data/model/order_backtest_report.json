@@ -1,25 +1,18 @@
 {
   "method": "walk_forward_pairwise_finishing_order",
-  "dataset_races": 434,
+  "dataset_races": 435,
   "warmup_races": 217,
-  "evaluated_races": 217,
+  "evaluated_races": 218,
   "metrics": {
-    "pairwise_order_accuracy": 0.6039,
-    "top5_position_accuracy": 0.3492,
-    "exact_top3_order_rate": 0.1244,
-    "exact_top5_order_rate": 0.1244
+    "pairwise_order_accuracy": 0.6013,
+    "top5_position_accuracy": 0.3474,
+    "exact_top3_order_rate": 0.1239,
+    "exact_top5_order_rate": 0.1239
   },
   "baseline": {
     "pairwise_random_accuracy": 0.5
   },
   "per_race": [
-    {
-      "race_key": "2026-02-06|PARIS-VINCENNES NOCTURNE|8",
-      "pairwise_accuracy": 0.3333,
-      "top5_position_accuracy": 0.0,
-      "exact_top3": false,
-      "exact_top5": false
-    },
     {
       "race_key": "2026-02-10|PARIS-VINCENNES|1",
       "pairwise_accuracy": 0.3333,
@@ -710,6 +703,13 @@
       "race_key": "2026-10-09|PARIS-VINCENNES NOCTURNE|4",
       "pairwise_accuracy": 0.8333,
       "top5_position_accuracy": 0.5,
+      "exact_top3": false,
+      "exact_top5": false
+    },
+    {
+      "race_key": "2026-10-10|CAEN|4",
+      "pairwise_accuracy": 0.1667,
+      "top5_position_accuracy": 0.0,
       "exact_top3": false,
       "exact_top5": false
     }

@@ -1,7 +1,7 @@
 {
   "memory_version": 1,
-  "race_count": 434,
-  "horse_row_count": 6830,
+  "race_count": 435,
+  "horse_row_count": 6848,
   "races": [
     {
       "race_key": "2023-05-09|CHANTILLY|8",
@@ -8786,6 +8786,27 @@
         14,
         6,
         15,
+        1
+      ]
+    },
+    {
+      "race_key": "2026-10-10|CAEN|4",
+      "winner": 9,
+      "top3": [
+        9,
+        10,
+        4
+      ],
+      "top4": [
+        9,
+        10,
+        4,
+        1
+      ],
+      "top5": [
+        9,
+        10,
+        4,
         1
       ]
     }

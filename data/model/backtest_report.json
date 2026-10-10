@@ -1,36 +1,36 @@
 {
   "method": "walk_forward_logistic_top3",
-  "dataset_races": 434,
-  "dataset_rows": 6830,
+  "dataset_races": 435,
+  "dataset_rows": 6848,
   "minimum_training_races": 5,
-  "evaluated_races": 429,
+  "evaluated_races": 430,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1492,
-    "winner_hit_rate_at_3": 0.373,
-    "average_actual_top3_covered_by_predicted_top3": 0.8788,
-    "average_actual_top3_covered_by_predicted_top5": 1.373,
-    "brier_score_top3": 0.149885,
-    "log_loss_top3": 0.474212,
-    "expected_calibration_error_top3": 0.011159
+    "winner_hit_rate_at_1": 0.1488,
+    "winner_hit_rate_at_3": 0.3721,
+    "average_actual_top3_covered_by_predicted_top3": 0.8791,
+    "average_actual_top3_covered_by_predicted_top5": 1.3721,
+    "brier_score_top3": 0.149816,
+    "log_loss_top3": 0.474007,
+    "expected_calibration_error_top3": 0.011152
   },
   "baselines": {
     "favorites": {
-      "winner_hit_rate_at_1": 0.1538,
-      "winner_hit_rate_at_3": 0.3823,
-      "average_actual_top3_covered_by_predicted_top3": 0.9044,
-      "average_actual_top3_covered_by_predicted_top5": 1.3683
+      "winner_hit_rate_at_1": 0.1535,
+      "winner_hit_rate_at_3": 0.3814,
+      "average_actual_top3_covered_by_predicted_top3": 0.9047,
+      "average_actual_top3_covered_by_predicted_top5": 1.3721
     },
     "form": {
-      "winner_hit_rate_at_1": 0.1072,
-      "winner_hit_rate_at_3": 0.3054,
-      "average_actual_top3_covered_by_predicted_top3": 0.7599,
-      "average_actual_top3_covered_by_predicted_top5": 1.2587
+      "winner_hit_rate_at_1": 0.107,
+      "winner_hit_rate_at_3": 0.3047,
+      "average_actual_top3_covered_by_predicted_top3": 0.7605,
+      "average_actual_top3_covered_by_predicted_top5": 1.2581
     }
   },
   "calibration": {
-    "brier_score": 0.149885,
-    "log_loss": 0.474212,
-    "ece": 0.011159,
+    "brier_score": 0.149816,
+    "log_loss": 0.474007,
+    "ece": 0.011152,
     "calibration_bins": [
       {
         "lower": 0.0,
@@ -42,23 +42,23 @@
       {
         "lower": 0.1,
         "upper": 0.2,
-        "count": 4595,
-        "mean_probability": 0.144936,
-        "observed_rate": 0.150598
+        "count": 4609,
+        "mean_probability": 0.144927,
+        "observed_rate": 0.150575
       },
       {
         "lower": 0.2,
         "upper": 0.3,
-        "count": 1384,
-        "mean_probability": 0.246458,
-        "observed_rate": 0.242052
+        "count": 1385,
+        "mean_probability": 0.246427,
+        "observed_rate": 0.241877
       },
       {
         "lower": 0.3,
         "upper": 0.4,
-        "count": 696,
-        "mean_probability": 0.338708,
-        "observed_rate": 0.350575
+        "count": 699,
+        "mean_probability": 0.338594,
+        "observed_rate": 0.350501
       },
       {
         "lower": 0.4,
@@ -84,9 +84,9 @@
       {
         "lower": 0.9,
         "upper": 1.0,
-        "count": 6749,
-        "mean_probability": 0.186958,
-        "observed_rate": 0.190695
+        "count": 6767,
+        "mean_probability": 0.186923,
+        "observed_rate": 0.190631
       }
     ]
   },
@@ -17250,6 +17250,46 @@
         }
       },
       "race_key": "2026-10-09|PARIS-VINCENNES NOCTURNE|4"
+    },
+    {
+      "winner": 9,
+      "predicted_top1": 1,
+      "winner_hit_at_1": false,
+      "winner_hit_at_3": false,
+      "actual_top3": [
+        4,
+        9,
+        10
+      ],
+      "predicted_top3": [
+        1,
+        2,
+        4
+      ],
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        1,
+        4,
+        2,
+        11,
+        3
+      ],
+      "baselines": {
+        "favorites": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 3
+        },
+        "form": {
+          "winner_hit_at_1": false,
+          "winner_hit_at_3": false,
+          "top3_coverage_by_top3": 1,
+          "top3_coverage_by_top5": 1
+        }
+      },
+      "race_key": "2026-10-10|CAEN|4"
     }
   ]
 }

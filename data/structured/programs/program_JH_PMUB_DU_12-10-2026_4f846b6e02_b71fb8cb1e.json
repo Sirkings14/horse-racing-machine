@@ -1,0 +1,371 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMUB_DU_12-10-2026_4f846b6e02_b71fb8cb1e.txt",
+    "parsed_at": "2026-10-10T22:49:52.730666Z",
+    "date": "2026-10-12",
+    "race": {
+        "race_name": "PRIX JACQUES ROSSI",
+        "track": "MARSEILLE-BORELY",
+        "race_number": 4,
+        "race_type": "PLAT",
+        "runners_count": 16,
+        "distance": 2100,
+        "prize_euros": 50900
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "BAYAMOON",
+            "description": "",
+            "performance": "2.0.8.1.1",
+            "gains": 103244,
+            "sex": "M",
+            "age": 5,
+            "trainer": "J.REYNIER",
+            "jockey": "F.VERON",
+            "driver": "F.VERON",
+            "owner": "UNDER BLUE SKY",
+            "weight": 60.5,
+            "draw": 7
+        },
+        {
+            "number": 2,
+            "horse": "WINDFLOWER",
+            "description": "",
+            "performance": "4.7.5.2.1",
+            "gains": 68314,
+            "sex": "F",
+            "age": 4,
+            "trainer": "P.COTTIER",
+            "jockey": "H.BESNIER",
+            "driver": "H.BESNIER",
+            "owner": "EC. GRIBOMONT/EC. DU SUD",
+            "weight": 60.0,
+            "draw": 10
+        },
+        {
+            "number": 3,
+            "horse": "MORPHEWAN",
+            "description": "",
+            "performance": "6.1.4.7.0",
+            "gains": 258728,
+            "sex": "M",
+            "age": 6,
+            "trainer": "P.COTTIER",
+            "jockey": "T.PICCONE",
+            "driver": "T.PICCONE",
+            "owner": "D.DUMOULIN",
+            "weight": 59.5,
+            "draw": 8
+        },
+        {
+            "number": 4,
+            "horse": "PLATA D OCTOBRE",
+            "description": "",
+            "performance": "1.5.1.1.4",
+            "gains": 53773,
+            "sex": "F",
+            "age": 4,
+            "trainer": "N.SIGAUD",
+            "jockey": "H.BOUTIN",
+            "driver": "H.BOUTIN",
+            "owner": "N.SIGAUD",
+            "weight": 56.5,
+            "draw": 2
+        },
+        {
+            "number": 5,
+            "horse": "LINFASOMMER",
+            "description": "",
+            "performance": "6.3.9.1.5",
+            "gains": 143212,
+            "sex": "F",
+            "age": 6,
+            "trainer": "M.PITART",
+            "jockey": "A.HAMELIN",
+            "driver": "A.HAMELIN",
+            "owner": "JP.ROMAN",
+            "weight": 56.5,
+            "draw": 4
+        },
+        {
+            "number": 6,
+            "horse": "BOOGIE",
+            "description": "",
+            "performance": "0.2.1.9.3",
+            "gains": 140893,
+            "sex": "H",
+            "age": 8,
+            "trainer": "N.PERRET",
+            "jockey": "A.CRASTUS",
+            "driver": "A.CRASTUS",
+            "owner": "H.GUILLET",
+            "weight": 56.5,
+            "draw": 16
+        },
+        {
+            "number": 7,
+            "horse": "SOUS INFLUENCE",
+            "description": "",
+            "performance": "2.2.4.1.1",
+            "gains": 122429,
+            "sex": "H",
+            "age": 5,
+            "trainer": "C.ESCUDER",
+            "jockey": "M.VELON",
+            "driver": "M.VELON",
+            "owner": "A.DE LANFRANCHI",
+            "weight": 56.0,
+            "draw": 3
+        },
+        {
+            "number": 8,
+            "horse": "AMEDRAS",
+            "description": "",
+            "performance": "1.0.4.8.4",
+            "gains": 295563,
+            "sex": "H",
+            "age": 9,
+            "trainer": "L.SALTON",
+            "jockey": "D.PROVOST",
+            "driver": "D.PROVOST",
+            "owner": "L.SALTON",
+            "weight": 56.0,
+            "draw": 15
+        },
+        {
+            "number": 9,
+            "horse": "STARNBERG",
+            "description": "",
+            "performance": "0.8.5.5.6",
+            "gains": 85946,
+            "sex": "H",
+            "age": 4,
+            "trainer": "C.ESCUDER",
+            "jockey": "J.NICOLEAU",
+            "driver": "J.NICOLEAU",
+            "owner": "B.GIRAUDON",
+            "weight": 56.0,
+            "draw": 13
+        },
+        {
+            "number": 10,
+            "horse": "COMME QUOI",
+            "description": "",
+            "performance": "9.0.5.5.2",
+            "gains": 98761,
+            "sex": "H",
+            "age": 5,
+            "trainer": "N.PERRET",
+            "jockey": "S.PASQUIER",
+            "driver": "S.PASQUIER",
+            "owner": "JC.SEROUL",
+            "weight": 56.0,
+            "draw": 6
+        },
+        {
+            "number": 11,
+            "horse": "LOHENGREEN",
+            "description": "",
+            "performance": "3.0.0.3.6",
+            "gains": 30328,
+            "sex": "M",
+            "age": 3,
+            "trainer": "C.ESCUDER",
+            "jockey": "M.GRANDIN",
+            "driver": "M.GRANDIN",
+            "owner": "B.GIRAUDON",
+            "weight": 55.0,
+            "draw": 5
+        },
+        {
+            "number": 12,
+            "horse": "MAX VERST",
+            "description": "",
+            "performance": "3.0.3.5.8",
+            "gains": 219097,
+            "sex": "H",
+            "age": 7,
+            "trainer": "R.FRADET",
+            "jockey": "A.ORANI",
+            "driver": "A.ORANI",
+            "owner": "GOUSSERIE RACING",
+            "weight": 55.0,
+            "draw": 9
+        },
+        {
+            "number": 13,
+            "horse": "GOLD PLAYER",
+            "description": "",
+            "performance": "0.3.0.8.0",
+            "gains": 163446,
+            "sex": "H",
+            "age": 7,
+            "trainer": "F.FORESI",
+            "jockey": "I.MENDIZABAL",
+            "driver": "I.MENDIZABAL",
+            "owner": "N.CARRIE-EYCHENNE",
+            "weight": 54.5,
+            "draw": 12
+        },
+        {
+            "number": 14,
+            "horse": "METS LE FEU",
+            "description": "",
+            "performance": "5.7.8.0.0",
+            "gains": 28691,
+            "sex": "H",
+            "age": 4,
+            "trainer": "M.PITART",
+            "jockey": "E.HARDOUIN",
+            "driver": "E.HARDOUIN",
+            "owner": "HS DE SAINT-VOIR",
+            "weight": 54.0,
+            "draw": 14
+        },
+        {
+            "number": 15,
+            "horse": "NOUS Y SOMMES",
+            "description": "",
+            "performance": "3.0.8.6.7",
+            "gains": 28767,
+            "sex": "H",
+            "age": 4,
+            "trainer": "N.PERRET",
+            "jockey": "T.TRULLIER",
+            "driver": "T.TRULLIER",
+            "owner": "JC.SEROUL",
+            "weight": 54.0,
+            "draw": 1
+        },
+        {
+            "number": 16,
+            "horse": "TREATWOOD",
+            "description": "",
+            "performance": "9.9.1.4.1",
+            "gains": 102706,
+            "sex": "H",
+            "age": 6,
+            "trainer": "N.BELLANGER",
+            "jockey": "L.BOISSEAU",
+            "driver": "L.BOISSEAU",
+            "owner": "HS.DE LA HUDERIE",
+            "weight": 53.0,
+            "draw": 11
+        }
+    ],
+    "program_table_mapping_status": "mapped",
+    "rankings": {
+        "favorites": [
+            3,
+            10,
+            15,
+            11,
+            1,
+            9,
+            2
+        ],
+        "form": [
+            1,
+            2,
+            15,
+            3,
+            10
+        ],
+        "class": [
+            11,
+            4,
+            7,
+            12,
+            8
+        ],
+        "progress": [
+            9,
+            10,
+            5,
+            8,
+            11
+        ],
+        "regularity": [
+            7,
+            4,
+            2,
+            10,
+            14
+        ]
+    },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "2": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "3": {
+                "fractional": "8/1",
+                "decimal": 9.0
+            },
+            "4": {
+                "fractional": "25/1",
+                "decimal": 26.0
+            },
+            "5": {
+                "fractional": "27/1",
+                "decimal": 28.0
+            },
+            "6": {
+                "fractional": "16/1",
+                "decimal": 17.0
+            },
+            "7": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            },
+            "8": {
+                "fractional": "14/1",
+                "decimal": 15.0
+            },
+            "9": {
+                "fractional": "21/1",
+                "decimal": 22.0
+            },
+            "10": {
+                "fractional": "34/1",
+                "decimal": 35.0
+            },
+            "11": {
+                "fractional": "29/1",
+                "decimal": 30.0
+            },
+            "12": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "13": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "14": {
+                "fractional": "23/1",
+                "decimal": 24.0
+            },
+            "15": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "16": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
+    "published_arrival": [
+        9,
+        10,
+        4
+    ]
+}
