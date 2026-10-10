@@ -8,6 +8,7 @@ from src.matching.race_matcher import normalize_track
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 PROGRAMS_DIR = BASE_DIR / "data" / "structured" / "programs"
+HISTORICAL_ROSTERS_FILE = BASE_DIR / "data" / "rosters" / "historical_rosters.json"
 
 
 def canonical_key(date: Any, track: Any, race_number: Any) -> str | None:
@@ -31,10 +32,7 @@ def build_program_runner_index() -> dict[str, dict[str, Any]]:
     unusable for result verification.
     """
     candidates: dict[str, list[dict[str, Any]]] = {}
-    if not PROGRAMS_DIR.exists():
-        return {}
-
-    for path in sorted(PROGRAMS_DIR.glob("*.json")):
+        for path in sorted(PROGRAMS_DIR.glob("*.json")):
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except Exception:
@@ -65,14 +63,62 @@ def build_program_runner_index() -> dict[str, dict[str, Any]]:
                 "horse_numbers": horse_numbers,
                 "runners_count": len(horse_numbers),
                 "source_file": path.name,
+                "source_type": "structured_program",
+            })
+
+    historical_conflicts: dict[str, list[str]] = {}
+    try:
+        historical_payload = json.loads(HISTORICAL_ROSTERS_FILE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        historical_payload = {}
+    historical_races = historical_payload.get("races", {}) if isinstance(historical_payload, dict) else {}
+    if isinstance(historical_races, dict):
+        for raw_key, record in historical_races.items():
+            parts = str(raw_key).split("|")
+            if len(parts) != 3 or not isinstance(record, dict):
+                continue
+            key = canonical_key(parts[0], parts[1], parts[2])
+            if not key:
+                continue
+            if record.get("conflict"):
+                historical_conflicts[key] = [
+                    "historical_rosters.json:" + str(value)
+                    for value in (record.get("conflicting_source_meta_keys") or [])
+                ] or ["historical_rosters.json:conflicting_complete_rosters"]
+                continue
+            try:
+                expected = int(record.get("runners_count") or 0)
+                numbers = {int(value) for value in record.get("horse_numbers") or [] if int(value) > 0}
+            except (TypeError, ValueError):
+                continue
+            if expected <= 0 or len(numbers) != expected:
+                continue
+            candidates.setdefault(key, []).append({
+                "horse_numbers": numbers,
+                "runners_count": expected,
+                "source_file": "historical_rosters.json",
+                "source_type": "historical_participant_roster",
             })
 
     index: dict[str, dict[str, Any]] = {}
-    for key, copies in candidates.items():
+    for key in sorted(set(candidates) | set(historical_conflicts)):
+        copies = candidates.get(key, [])
+        if key in historical_conflicts:
+            index[key] = {
+                "horse_numbers": set(),
+                "runners_count": 0,
+                "source_file": None,
+                "source_count": len(copies) + 1,
+                "conflict": True,
+                "conflicting_sources": sorted(
+                    [item["source_file"] for item in copies] + historical_conflicts[key]
+                ),
+            }
+            continue
         roster_signatures = {tuple(sorted(item["horse_numbers"])) for item in copies}
         if len(roster_signatures) == 1:
             # Stable source attribution is useful for audits and reproducibility.
-            selected = min(copies, key=lambda item: item["source_file"])
+            selected = min(copies, key=lambda item: (0 if item.get("source_type") == "structured_program" else 1, item["source_file"]))
             index[key] = {
                 **selected,
                 "source_count": len(copies),

@@ -27,6 +27,12 @@ jobs:
             data/model
             data/matched
             data/processed/programs
+            data/structured/programs
+            data/structured/results
+            data/predictions
+            data/evaluation
+            data/live
+            data/rosters
             requirements.txt
             scripts
             src
@@ -43,6 +49,22 @@ jobs:
         run: python scripts/build_historical_dataset.py
       - name: Run V3 tests
         run: python -m pytest -q
+      - name: Audit result truth using validated historical rosters
+        run: |
+          python -m src.learning.evaluate_predictions
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path("data/evaluation/result_truth_audit.json").read_text(encoding="utf-8"))
+          print(json.dumps({key: report.get(key) for key in (
+              "result_races_seen", "accepted", "rejected",
+              "validated_result_documents", "duplicate_result_documents",
+              "conflicting_result_races", "conflicting_result_documents",
+              "program_roster_conflicts", "stored_evaluations_quarantined",
+              "stored_verified_evaluations_after_quarantine", "v4_verified_races",
+              "rejection_reasons",
+          )}, indent=2, ensure_ascii=False))
+          PY
       - name: Run V3 walk-forward backtest
         run: |
           python - <<'PY'
@@ -82,7 +104,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/model/v3_models.json data/model/v3_backtest_report.json data/model/press_odds_benchmark_report.json
+          git add data/model/v3_models.json data/model/v3_backtest_report.json data/model/press_odds_benchmark_report.json data/rosters/historical_rosters.json
           if git diff --cached --quiet; then
             echo "No model artifact changes to commit"
             exit 0

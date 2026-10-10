@@ -20,13 +20,64 @@ class ResultConflictQuarantineTests(unittest.TestCase):
                     "horses": [{"number": number} for number in numbers],
                 }
                 (root / name).write_text(json.dumps(payload), encoding="utf-8")
-            with patch("src.learning.result_truth.PROGRAMS_DIR", root):
+            with patch("src.learning.result_truth.PROGRAMS_DIR", root), patch(
+                "src.learning.result_truth.HISTORICAL_ROSTERS_FILE", root / "missing_rosters.json"
+            ):
                 index = build_program_runner_index()
         key = "2026-10-10|AUTEUIL|1"
         self.assertTrue(index[key]["conflict"])
         truth = validate_arrival(key, [1, 2, 3], index)
         self.assertFalse(truth["accepted_for_learning"])
         self.assertEqual(truth["reason"], "conflicting_program_rosters")
+
+    def test_complete_historical_roster_is_used_when_program_pdf_is_missing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            historical = root / "historical_rosters.json"
+            historical.write_text(json.dumps({
+                "schema_version": 1,
+                "target_fields_included": False,
+                "races": {
+                    "2024-04-01|AUTEUIL|1": {
+                        "horse_numbers": [1, 2, 3, 4],
+                        "runners_count": 4,
+                        "conflict": False,
+                        "source_meta_keys": ["2024-04-01_R1_C1"],
+                    }
+                },
+            }), encoding="utf-8")
+            with patch("src.learning.result_truth.PROGRAMS_DIR", root / "no_programs"), patch(
+                "src.learning.result_truth.HISTORICAL_ROSTERS_FILE", historical
+            ):
+                index = build_program_runner_index()
+
+        truth = validate_arrival("2024-04-01|AUTEUIL|1", [1, 2, 3], index)
+        self.assertTrue(truth["accepted_for_learning"])
+        self.assertEqual(truth["program_source"], "historical_rosters.json")
+
+    def test_conflicting_historical_rosters_fail_closed(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            historical = root / "historical_rosters.json"
+            historical.write_text(json.dumps({
+                "races": {
+                    "2024-04-01|AUTEUIL|1": {
+                        "horse_numbers": [],
+                        "runners_count": 0,
+                        "conflict": True,
+                        "conflicting_source_meta_keys": ["raw-a", "raw-b"],
+                    }
+                }
+            }), encoding="utf-8")
+            with patch("src.learning.result_truth.PROGRAMS_DIR", root / "no_programs"), patch(
+                "src.learning.result_truth.HISTORICAL_ROSTERS_FILE", historical
+            ):
+                index = build_program_runner_index()
+
+        truth = validate_arrival("2024-04-01|AUTEUIL|1", [1, 2, 3], index)
+        self.assertFalse(truth["accepted_for_learning"])
+        self.assertEqual(truth["reason"], "conflicting_program_rosters")
+
 
     def test_conflicting_valid_result_documents_quarantine_whole_race(self):
         key = "2026-10-10|AUTEUIL|1"
