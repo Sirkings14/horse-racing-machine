@@ -5,6 +5,7 @@ import math
 import random
 
 from src.model.historical_profile import build_walk_forward_profiles
+from src.model.v3_scoring import weighted_outcome_score
 from src.model.v3_model import fit_v3_model
 from src.model.calibration import calibration_metrics
 from src.dataset.program_history import load_program_history
@@ -83,7 +84,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
                 continue
             test=groups[key]
             p1=models["winner"].predict_proba(test); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
-            ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1,p3,p5)]
+            ensemble=[weighted_outcome_score(a,b,c) for a,b,c in zip(p1,p3,p5)]
             ranked=sorted((dict(r,ensemble_score=float(s),p_winner=float(a),p_top3=float(b),p_top5=float(c)) for r,a,b,c,s in zip(test,p1,p3,p5,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
             ev=_evaluate(ranked); ev["race_key"]=key; ev["field_size"]=len(ranked)
             ev["top5_candidates"]=[{

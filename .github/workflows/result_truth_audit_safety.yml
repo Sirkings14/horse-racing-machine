@@ -1,0 +1,83 @@
+name: Result truth integrity audit
+
+on:
+  push:
+    branches: [fix/telegram-idempotency-result-truth-audit, fix/integrated-machine-guardrails]
+    paths:
+      - "src/learning/result_truth.py"
+      - "src/learning/evaluate_predictions.py"
+      - "tests/test_result_conflict_quarantine.py"
+      - "tests/test_result_truth.py"
+      - "tests/test_result_parser_truth.py"
+      - ".github/workflows/result_truth_audit_safety.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/learning/result_truth.py"
+      - "src/learning/evaluate_predictions.py"
+      - "tests/test_result_conflict_quarantine.py"
+      - "tests/test_result_truth.py"
+      - "tests/test_result_parser_truth.py"
+      - ".github/workflows/result_truth_audit_safety.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  truth-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            requirements.txt
+            src
+            tests
+            data/structured/programs
+            data/structured/results
+            data/predictions
+            data/evaluation
+            data/live
+            data/rosters
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Compile source
+        run: python -m compileall -q src tests
+      - name: Run result-truth regression tests
+        run: |
+          python -m unittest discover -s tests -p "test_result_conflict_quarantine.py" -v
+          python -m unittest discover -s tests -p "test_result_truth.py" -v
+          python -m unittest discover -s tests -p "test_result_parser_truth.py" -v
+      - name: Audit repository result truth and archived predictions
+        run: |
+          python -m src.learning.evaluate_predictions
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          audit = json.loads(Path("data/evaluation/result_truth_audit.json").read_text(encoding="utf-8"))
+          summary = {
+              key: audit.get(key)
+              for key in (
+                  "result_races_seen",
+                  "accepted",
+                  "rejected",
+                  "validated_result_documents",
+                  "duplicate_result_documents",
+                  "conflicting_result_races",
+                  "conflicting_result_documents",
+                  "program_roster_conflicts",
+                  "stored_evaluations_quarantined",
+                  "stored_verified_evaluations_after_quarantine",
+                  "v4_verified_races",
+                  "rejection_reasons",
+              )
+          }
+          print(json.dumps(summary, indent=2, ensure_ascii=False))
+          print("Policy: conflicts are quarantined; this audit never relaxes the live economic gate.")
+          PY
