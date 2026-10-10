@@ -14,7 +14,7 @@ BASE_DIR=Path(__file__).resolve().parents[2]
 DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
 OUTPUT_FILE=BASE_DIR/"data/model/v3_models.json"
 
-def _promotion_decision(v3m:dict, n_races:int, calibration_gate:dict|None=None)->tuple[bool,list[str]]:
+def _promotion_decision(v3m:dict, n_races:int, calibration_gate:dict|None=None, paired_comparison:dict|None=None)->tuple[bool,list[str]]:
     reasons=[]
     if n_races<100: reasons.append("too_few_walk_forward_races")
     if v3m.get("winner_hit_rate_at_3",0.0)<0.25: reasons.append("winner_top3_below_minimum")
@@ -30,6 +30,11 @@ def _promotion_decision(v3m:dict, n_races:int, calibration_gate:dict|None=None)-
         overall=float(v3m.get("average_actual_top3_covered_by_predicted_top3",0.0))
         if sum(x>=overall*0.80 for x in block_cov)/len(block_cov)<0.75:
             reasons.append("time_instability")
+    paired=paired_comparison or {}
+    if paired.get("non_regression_pass") is not True:
+        reasons.append("incumbent_reference_non_regression_failed")
+    if paired.get("material_uplift_pass") is not True:
+        reasons.append("no_material_uplift_over_legacy_feature_reference")
     return not reasons,reasons
 
 def main():
@@ -93,7 +98,8 @@ def main():
         legacy_report={"metrics":{}, "status":"not_recomputed_in_v4_validation"}
     v3m=v3_report["metrics"]; lm=legacy_report["metrics"]
     calibration_gate=calibration_validation_reports.get("top3") or {}
-    approved,reasons=_promotion_decision(v3m,len(v3_report.get("race_results") or []),calibration_gate=calibration_gate)
+    paired_comparison=v3_report.get("paired_comparison") or {}
+    approved,reasons=_promotion_decision(v3m,len(v3_report.get("race_results") or []),calibration_gate=calibration_gate,paired_comparison=paired_comparison)
     # Economic validation is intentionally separate. Predictive accuracy is not
     # treated as proof of betting profitability without historical prices/dividends.
     payload={
@@ -115,6 +121,7 @@ def main():
             "calibration_reports":calibration_reports,
             "calibration_validation_reports":calibration_validation_reports,
             "calibration_gate":calibration_gate,
+            "paired_comparison":paired_comparison,
             "required":["minimum_100_holdout_races","winner_top3_minimum","top3_lift_vs_random","brier_beats_constant_baseline","ece_under_0.10","temporal_stability"]
         },
         "models":models

@@ -106,6 +106,25 @@ def row_to_v3_features(row:dict[str,Any])->list[float]:
     # the production path and computes race-relative features from the batch.
     return base+[0.0]*10
 
+def build_legacy_batch_matrix(rows:Sequence[dict[str,Any]])->np.ndarray:
+    """Reproduce the previous training-time transform for paired ablation tests.
+
+    Historical V3 fit standardized selected relative features over the entire
+    training batch, but inference passed one race and standardized only that
+    race. This helper exists only for a controlled reference model in the
+    paired walk-forward audit; production inference must use build_v3_matrix.
+    """
+    if not rows:return np.empty((0,len(FEATURE_NAMES)),dtype=float)
+    base=np.asarray([_base_features(r) for r in rows],dtype=float)
+    cols=[1,2,3,4,5,6,8,11,24,0]
+    selected=base[:,cols]
+    means=selected.mean(axis=0)
+    stds=selected.std(axis=0)
+    safe_stds=np.where(stds>1e-9,stds,1.0)
+    rel=(selected-means)/safe_stds
+    return np.concatenate([base,rel],axis=1)
+
+
 def build_v3_matrix(rows:Sequence[dict[str,Any]])->np.ndarray:
     if not rows:return np.empty((0,len(FEATURE_NAMES)),dtype=float)
     base=np.asarray([_base_features(r) for r in rows],dtype=float)

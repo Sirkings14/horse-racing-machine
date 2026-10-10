@@ -1,7 +1,33 @@
 from src.model.historical_profile import build_walk_forward_profiles, merge_program_history_rows
-from src.model.v3_features import build_v3_matrix, FEATURE_NAMES
+from src.model.v3_features import build_v3_matrix, build_legacy_batch_matrix, FEATURE_NAMES
+from src.model.v3_model import fit_v3_model
 import json
 import src.dataset.program_history as program_history
+
+
+def test_paired_reference_uses_legacy_batch_transform_but_same_race_scoring():
+    race_a=[
+      {"race_key":"2026-02-01|A|1","horse_number":1,"horse_name":"A1","history_win_rate":0.8,"history_top3_rate":0.9,"history_top5_rate":0.9,"history_recent_top3_rate":0.8,"history_recent_top5_rate":0.9,"history_recent_avg_finish":2,"course_top3_rate":0.7,"distance_top3_rate":0.8,"history_starts":20,"weight":60,"distance":2000,"runners_count":3,"won":1,"top3":1},
+      {"race_key":"2026-02-01|A|1","horse_number":2,"horse_name":"A2","history_win_rate":0.4,"history_top3_rate":0.5,"history_top5_rate":0.6,"history_recent_top3_rate":0.4,"history_recent_top5_rate":0.6,"history_recent_avg_finish":5,"course_top3_rate":0.4,"distance_top3_rate":0.5,"history_starts":8,"weight":55,"distance":2000,"runners_count":3,"won":0,"top3":1},
+      {"race_key":"2026-02-01|A|1","horse_number":3,"horse_name":"A3","history_win_rate":0.1,"history_top3_rate":0.2,"history_top5_rate":0.3,"history_recent_top3_rate":0.1,"history_recent_top5_rate":0.3,"history_recent_avg_finish":9,"course_top3_rate":0.1,"distance_top3_rate":0.2,"history_starts":1,"weight":50,"distance":2000,"runners_count":3,"won":0,"top3":0},
+    ]
+    race_b=[
+      {"race_key":"2026-02-01|B|1","horse_number":1,"horse_name":"B1","history_win_rate":0.0,"history_top3_rate":0.0,"history_top5_rate":0.0,"history_recent_top3_rate":0.0,"history_recent_top5_rate":0.0,"history_recent_avg_finish":20,"course_top3_rate":0.0,"distance_top3_rate":0.0,"history_starts":0,"weight":80,"distance":5000,"runners_count":16,"won":0,"top3":0},
+      {"race_key":"2026-02-01|B|1","horse_number":2,"horse_name":"B2","history_win_rate":0.0,"history_top3_rate":0.0,"history_top5_rate":0.0,"history_recent_top3_rate":0.0,"history_recent_top5_rate":0.0,"history_recent_avg_finish":20,"course_top3_rate":0.0,"distance_top3_rate":0.0,"history_starts":0,"weight":80,"distance":5000,"runners_count":16,"won":0,"top3":0},
+    ]
+    import numpy as np
+    candidate_alone=build_v3_matrix(race_a)
+    candidate_combined=build_v3_matrix(race_a+race_b)
+    legacy_alone=build_legacy_batch_matrix(race_a)
+    legacy_combined=build_legacy_batch_matrix(race_a+race_b)
+    assert np.allclose(candidate_alone[:,-10:],candidate_combined[:len(race_a),-10:])
+    assert not np.allclose(legacy_alone[:,-10:],legacy_combined[:len(race_a),-10:])
+    model=fit_v3_model(
+      race_a, target_field="won", epochs=2,
+      feature_matrix=legacy_alone,
+    )
+    assert model.predict_proba(race_a).shape==(len(race_a),)
+
 
 def test_program_history_rows_overlapping_outcomes_are_deduplicated():
     outcome=[

@@ -35,9 +35,13 @@ class V3LogisticModel:
     def from_dict(cls, payload: dict[str, Any]) -> "V3LogisticModel":
         return cls(list(payload["feature_names"]), list(payload["mean"]), list(payload["std"]), float(payload["intercept"]), list(payload["coefficients"]), float(payload.get("positive_weight",1.0)),payload.get("calibration"))
 
-def fit_v3_model(rows: Sequence[dict[str, Any]], target_field: str="top3", epochs: int=900, learning_rate: float=0.03, l2: float=1.5) -> V3LogisticModel:
+def fit_v3_model(rows: Sequence[dict[str, Any]], target_field: str="top3", epochs: int=900, learning_rate: float=0.03, l2: float=1.5, feature_matrix: np.ndarray | None = None) -> V3LogisticModel:
     if not rows: raise ValueError("Cannot train V3 on empty rows.")
-    x=build_v3_matrix(rows)
+    x=build_v3_matrix(rows) if feature_matrix is None else np.asarray(feature_matrix,dtype=float)
+    if x.ndim != 2 or x.shape != (len(rows), len(FEATURE_NAMES)):
+        raise ValueError("Precomputed feature matrix has an invalid shape.")
+    if not np.isfinite(x).all():
+        raise ValueError("Training feature matrix contains non-finite values.")
     y=np.asarray([1.0 if int(row.get(target_field,0))==1 else 0.0 for row in rows],dtype=float)
     positive=float(y.sum()); negative=float(len(y)-positive)
     if positive<=0 or negative<=0: raise ValueError("V3 training data needs positive and negative examples.")
