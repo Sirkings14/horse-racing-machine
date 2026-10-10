@@ -32,7 +32,7 @@ def build_program_runner_index() -> dict[str, dict[str, Any]]:
     unusable for result verification.
     """
     candidates: dict[str, list[dict[str, Any]]] = {}
-        for path in sorted(PROGRAMS_DIR.glob("*.json")):
+    for path in sorted(PROGRAMS_DIR.glob("*.json")):
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
         except Exception:
