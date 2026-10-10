@@ -12,7 +12,9 @@ import sys
 BASE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BASE))
 from src.model.historical_profile import build_walk_forward_profiles
+from src.learning.result_truth import canonical_key
 OUT = BASE / "data" / "dataset" / "training_dataset_clean.json"
+ROSTER_OUT = BASE / "data" / "rosters" / "historical_rosters.json"
 SOURCE = "annaelmoussa/horse-racing-france"
 
 def _pick(d: dict[str, Any], names: list[str], default=None):
@@ -43,6 +45,71 @@ def _participant_key(p: dict[str, Any]) -> str:
     if date and reunion is not None and course is not None:
         return f"{date}_R{int(reunion)}_C{int(course)}"
     return ""
+
+def _validated_historical_rosters(candidates: dict[str, dict[str, dict[str, Any]]]) -> tuple[dict[str, dict[str, Any]], dict[str, int]]:
+    """Keep only historical participant rosters that match declared field size.
+
+    This helper deliberately does not read or store arrival/finish targets.
+    Incomplete rosters are omitted; conflicting complete rosters are marked so
+    the result-truth validator can fail closed.
+    """
+    races: dict[str, dict[str, Any]] = {}
+    runner_count_mismatches = 0
+    conflicting_complete_rosters = 0
+
+    for race_key, source_groups in sorted(candidates.items()):
+        complete: list[tuple[str, int, set[int]]] = []
+        for source_key, source_record in sorted(source_groups.items()):
+            try:
+                expected = int(source_record.get("expected_count") or 0)
+            except (TypeError, ValueError):
+                expected = 0
+            numbers: set[int] = set()
+            for value in source_record.get("horse_numbers") or []:
+                try:
+                    number = int(value)
+                except (TypeError, ValueError):
+                    continue
+                if number > 0:
+                    numbers.add(number)
+            if expected <= 0 or len(numbers) != expected:
+                runner_count_mismatches += 1
+                continue
+            complete.append((source_key, expected, numbers))
+
+        if not complete:
+            continue
+
+        signatures = {
+            (expected, tuple(sorted(numbers)))
+            for _, expected, numbers in complete
+        }
+        if len(signatures) > 1:
+            races[race_key] = {
+                "horse_numbers": [],
+                "runners_count": 0,
+                "conflict": True,
+                "conflicting_source_meta_keys": sorted(source_key for source_key, _, _ in complete),
+            }
+            conflicting_complete_rosters += 1
+            continue
+
+        source_keys = sorted(source_key for source_key, _, _ in complete)
+        _, expected, numbers = complete[0]
+        races[race_key] = {
+            "horse_numbers": sorted(numbers),
+            "runners_count": expected,
+            "conflict": False,
+            "source_meta_keys": source_keys,
+        }
+
+    return races, {
+        "candidate_races": len(candidates),
+        "validated_rosters": sum(not item.get("conflict", False) for item in races.values()),
+        "conflicting_complete_rosters": conflicting_complete_rosters,
+        "runner_count_mismatches": runner_count_mismatches,
+    }
+
 
 def _arrival(v):
     if v is None:
@@ -100,19 +167,42 @@ def main():
     participants = load_dataset(SOURCE, "participants", split="train", streaming=True)
     rows, columns_seen = [], set()
     matched_meta = matched_arrival = matched_number = 0
+    roster_candidates: dict[str, dict[str, dict[str, Any]]] = {}
+
     for i, p in enumerate(participants):
         columns_seen.update(p.keys())
         key = _participant_key(p)
         meta = race_meta.get(key)
         if meta:
             matched_meta += 1
+
+        raw_horse_number = _num(_pick(p, ["numero", "num", "numeroPmu", "numPmu", "horse_number", "program_number"]))
+        horse_number = (
+            int(raw_horse_number)
+            if raw_horse_number is not None and raw_horse_number > 0 and raw_horse_number.is_integer()
+            else None
+        )
+
+        # Build roster candidates from all participants before consulting arrival.
+        # This is an independent roster source, not a result-derived finisher list.
+        if (
+            meta and meta.get("date") and meta.get("track")
+            and int(meta.get("race_number") or 0) > 0 and horse_number is not None
+        ):
+            roster_key = canonical_key(meta["date"], meta["track"], meta["race_number"])
+            if roster_key:
+                sources = roster_candidates.setdefault(roster_key, {})
+                source = sources.setdefault(key, {
+                    "expected_count": int(meta.get("runners_count") or 0),
+                    "horse_numbers": set(),
+                })
+                source["horse_numbers"].add(horse_number)
+
         if not meta or not meta["date"] or not meta["arrival"]:
             continue
         matched_arrival += 1
-        horse_number = _num(_pick(p, ["numero", "num", "numeroPmu", "numPmu", "horse_number", "program_number"]))
         if horse_number is None:
             continue
-        horse_number = int(horse_number)
         try:
             pos = meta["arrival"].index(horse_number) + 1
         except ValueError:
@@ -146,6 +236,19 @@ def main():
 
     if not rows:
         raise RuntimeError("No rows built after participant/race join")
+
+    historical_rosters, roster_stats = _validated_historical_rosters(roster_candidates)
+    ROSTER_OUT.parent.mkdir(parents=True, exist_ok=True)
+    ROSTER_OUT.write_text(json.dumps({
+        "schema_version": 1,
+        "source": SOURCE,
+        "roster_semantics": "participant numbers joined to race metadata before arrival-target filtering",
+        "target_fields_included": False,
+        "races": historical_rosters,
+        "coverage": roster_stats,
+    }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(json.dumps({"historical_roster_index": str(ROSTER_OUT.relative_to(BASE)), **roster_stats}, indent=2))
+
     rows.sort(key=lambda x: (x["date"], x["race_key"], x["horse_number"]))
     rows = build_walk_forward_profiles(rows)
     OUT.parent.mkdir(parents=True, exist_ok=True)
