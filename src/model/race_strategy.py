@@ -56,7 +56,7 @@ STRATEGIES = {
         "label": "unclassified discipline",
         "required_inputs": ("performance",),
         "checks": [
-            "Do not apply a discipline-specific scoring rule until the type is identified.",
+            "The discipline type is not identified, so do not apply a specialist scoring rule.",
             "Use only validated generic history and race metadata; flag the classification gap.",
             "Keep the shared model as the fallback and surface the missing evidence.",
         ],
