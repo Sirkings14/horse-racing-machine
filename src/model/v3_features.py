@@ -1,6 +1,7 @@
 from __future__ import annotations
 from typing import Any, Sequence
 import numpy as np
+from src.model.race_type import race_type_feature_groups
 
 # All features are pre-race and press-independent. Race-relative fields are
 # calculated only from other runners' pre-race features in the same race.
@@ -40,7 +41,7 @@ def _base_features(row:dict[str,Any])->list[float]:
     recent_avg_norm=0.0 if recent_avg is None else _clamp(1.0-(_float(recent_avg)-1.0)/19.0)
     days=_float(row.get("days_since_last_run"))
     days_norm=0.0 if days<=0 else _clamp(1.0-abs(days-21.0)/60.0)
-    race_type=str(row.get("race_type") or "").upper()
+    race_type_flat,race_type_trot,race_type_jump=race_type_feature_groups(row.get("race_type"))
     completeness=sum(row.get(k) not in (None,"") for k in (
         "date","track","distance","runners_count","horse_number","horse_name"
     ))/6.0
@@ -64,9 +65,7 @@ def _base_features(row:dict[str,Any])->list[float]:
         _clamp(_float(row.get("distance_top5_rate"))),
         avg_norm,days_norm,_clamp(distance/3500.0),distance_valid,
         _clamp(runners/20.0),_clamp(prize/100000.0),_clamp(race_number/12.0),
-        1.0 if race_type=="PLAT" else 0.0,
-        1.0 if race_type in {"ATTELE","MONTE"} else 0.0,
-        1.0 if race_type in {"OBSTACLE","HAIES","STEEPLE-CHASE"} else 0.0,
+        race_type_flat,race_type_trot,race_type_jump,
         completeness,weight_norm,draw_norm
     ]
 
