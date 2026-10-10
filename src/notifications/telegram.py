@@ -111,7 +111,7 @@ def send_latest_prediction() -> bool:
     if payload is None:
         return False
 
-    if payload.get("mode") not in {"v3_evidence_no_press", "v5_market_opportunity_layer"}:
+    if payload.get("mode") not in {"v3_evidence_no_press", "v4_evidence_no_press", "v5_market_opportunity_layer"}:
         print(f"Telegram skipped: unsupported prediction mode {payload.get('mode')!r}.")
         return False
 
