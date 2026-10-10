@@ -61,6 +61,7 @@ class TelegramDeliveryLedgerTests(unittest.TestCase):
 
     def test_changed_candidate_order_sends_an_update(self):
         changed = dict(self.payload)
+        changed["mode"] = "v4_evidence_no_press"
         changed["ranked_horses"] = [
             {"horse_number": 2, "horse_name": "CHEVAL B", "probability_top3": 0.31},
             {"horse_number": 7, "horse_name": "CHEVAL A", "probability_top3": 0.30},
