@@ -4,10 +4,13 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
+import sys
+
+BASE = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(BASE))
 
 from src.model.race_type import canonical_race_type, race_type_family
 
-BASE = Path(__file__).resolve().parents[1]
 OUTPUT = BASE / "data" / "evaluation" / "race_type_coverage.json"
 FIELD_NAMES = (
     "performance", "gains", "listed_chrono", "listed_distance",
