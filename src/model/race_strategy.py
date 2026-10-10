@@ -9,6 +9,7 @@ from __future__ import annotations
 from typing import Any, Sequence
 
 from src.model.race_type import canonical_race_type, race_type_family
+from src.model.form_analysis import analyze_form
 
 
 STRATEGIES = {
@@ -106,6 +107,36 @@ def build_race_strategy(race_type: Any, rows: Sequence[dict[str, Any]]) -> dict[
         "partial_inputs" if raw_average >= 0.50 else "weak_inputs"
     )
 
+    form_rows = []
+    for row in runner_rows:
+        raw_form = row.get("performance") or row.get("musique") or row.get("recent_form")
+        form = analyze_form(raw_form, canonical)
+        form["horse_number"] = row.get("horse_number", row.get("horse_no", row.get("number")))
+        form["horse_name"] = row.get("horse_name") or row.get("horse")
+        form_rows.append(form)
+
+    parsed_form_rows = [
+        item for item in form_rows
+        if item.get("valid_finish_count", 0) > 0
+    ]
+    form_rates = [
+        float(item["top3_rate_among_numeric_finishes"])
+        for item in parsed_form_rows
+        if item.get("top3_rate_among_numeric_finishes") is not None
+    ]
+    trend_rows = [
+        item for item in form_rows
+        if item.get("recent_vs_older_finish_delta") is not None
+    ]
+    form_diagnostics = {
+        "runner_count": n,
+        "runners_with_numeric_form": len(parsed_form_rows),
+        "coverage": round(len(parsed_form_rows) / n, 4) if n else 0.0,
+        "runners_with_recent_vs_older_trend": len(trend_rows),
+        "mean_runner_top3_form_rate": round(sum(form_rates) / len(form_rates), 4) if form_rates else None,
+        "policy": "diagnostic_only_not_used_in_model_score",
+    }
+
     return {
         "schema_version": 1,
         "canonical_race_type": canonical or "UNKNOWN",
@@ -117,6 +148,8 @@ def build_race_strategy(race_type: Any, rows: Sequence[dict[str, Any]]) -> dict[
         "critical_data_gaps": gaps,
         "prior_history_coverage": history,
         "evidence_status": evidence_status,
+        "form_diagnostics": form_diagnostics,
+        "runner_form_analysis": form_rows,
         "model_policy": {
             "current_model": "shared_v3_model",
             "discipline_specific_model": False,
