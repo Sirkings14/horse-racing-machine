@@ -43,8 +43,8 @@ def analyze_form(value: Any, race_type: Any = None) -> dict[str, Any]:
     """Produce recent-form diagnostics with no imputation and no betting score.
 
     Convention: program form strings are assumed to list the most recent start
-    first, as on the supported French program cards. A trend is only emitted
-    when at least four numeric finishing positions are available.
+    first, as on the supported French program cards. A trend is emitted only
+    when there are at least four start tokens and numeric finishes on both sides.
     """
     from src.model.race_type import canonical_race_type, race_type_family
 
@@ -73,14 +73,23 @@ def analyze_form(value: Any, race_type: Any = None) -> dict[str, Any]:
     top3 = sum(position <= 3 for position in finishes)
     top5 = sum(position <= 5 for position in finishes)
     wins = sum(position == 1 for position in finishes)
-    recent = finishes[:3]
+    def token_finish(token: str) -> int | None:
+        match = _FINISH_TOKEN.fullmatch(token)
+        if not match:
+            return None
+        position = int(match.group(1))
+        return position if 1 <= position <= 99 else None
+
+    # Keep incident/status tokens in their original positions. Compressing
+    # them away can incorrectly shift an older result into the recent window.
+    recent = [position for token in tokens[:3] if (position := token_finish(token)) is not None]
+    older = [position for token in tokens[3:] if (position := token_finish(token)) is not None]
     recent_top3 = sum(position <= 3 for position in recent)
-    older = finishes[3:]
 
     trend = None
-    if len(finishes) >= 4 and older:
-        # Positive values mean the first, newer results have lower/better
-        # finishing positions than the older results in the displayed string.
+    if len(tokens) >= 4 and recent and older:
+        # Positive means the numeric results among the newer first three
+        # tokens have lower/better finishing positions than older results.
         trend = round(sum(older) / len(older) - sum(recent) / len(recent), 4)
 
     canonical = canonical_race_type(race_type)
