@@ -64,6 +64,18 @@ def rows_from_program(program):
         "prize_euros": race.get("prize_euros"),
         "horse_number": int(h["number"]),
         "horse_name": h.get("horse"),
+        "weight": h.get("weight"),
+        "draw": h.get("draw"),
+        "sex": h.get("sex"),
+        "age": h.get("age"),
+        "trainer": h.get("trainer") or h.get("entraineur"),
+        "driver": h.get("driver") or h.get("jockey"),
+        "jockey": h.get("jockey") or h.get("driver"),
+        "owner": h.get("owner") or h.get("proprietaire"),
+        "performance": h.get("performance"),
+        "gains": h.get("gains"),
+        "listed_chrono": h.get("listed_chrono"),
+        "listed_distance": h.get("listed_distance"),
     } for h in program.get("horses", []) if str(h.get("number", "")).isdigit()]
 
 

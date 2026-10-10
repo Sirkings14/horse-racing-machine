@@ -12,6 +12,7 @@ import sys
 BASE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BASE))
 from src.model.historical_profile import build_walk_forward_profiles
+from src.dataset.prerace_program_fields import build_program_field_index, merge_program_fields
 OUT = BASE / "data" / "dataset" / "training_dataset_clean.json"
 SOURCE = "annaelmoussa/horse-racing-france"
 
@@ -129,6 +130,14 @@ def main():
             "top3": int(pos <= 3), "top5": int(pos <= 5),
             "weight": _num(_pick(p, ["poids", "weight", "carried_weight", "poidsporte"])),
             "draw": _num(_pick(p, ["corde", "draw", "stall", "numCorde", "placeCorde"])),
+            "trainer": _pick(p, ["entraineur", "trainer", "trainer_name"]),
+            "driver": _pick(p, ["driver", "driver_name", "jockey", "jockey_name"]),
+            "jockey": _pick(p, ["jockey", "jockey_name", "driver", "driver_name"]),
+            "owner": _pick(p, ["proprietaire", "owner", "owner_name"]),
+            "sex": _pick(p, ["sexe", "sex"]),
+            "age": _num(_pick(p, ["age"])),
+            "performance": _pick(p, ["musique", "performance", "recent_form", "form"]),
+            "gains": _num(_pick(p, ["gainsCarriere", "gains_carriere", "career_earnings", "earnings"])),
             "win_odds_decimal": _num(_pick(p, [
                 "cotePMU", "cotePmu", "cote_pmu", "odds", "odds_decimal",
                 "coteGagnant", "starting_price", "starting_price_decimal"
@@ -147,6 +156,26 @@ def main():
     if not rows:
         raise RuntimeError("No rows built after participant/race join")
     rows.sort(key=lambda x: (x["date"], x["race_key"], x["horse_number"]))
+
+    # Enrich historical rows only from pre-race LONAB program fields. The join
+    # uses date + normalized horse name + program number and fails closed on
+    # ambiguous matches, so no post-race target is imported from this corpus.
+    program_dir = BASE / "data" / "structured" / "programs"
+    field_index = build_program_field_index(program_dir)
+    program_field_matches, program_field_ambiguous = merge_program_fields(rows, field_index)
+    print(json.dumps({
+        "lonab_program_field_index_keys": len(field_index),
+        "program_field_matches": program_field_matches,
+        "program_field_ambiguous": program_field_ambiguous,
+    }, indent=2))
+
+    field_names = ("trainer", "driver", "jockey", "owner", "sex", "age", "weight", "draw", "performance", "gains")
+    field_coverage = {
+        name: round(sum(row.get(name) not in (None, "") for row in rows) / len(rows), 4)
+        for name in field_names
+    }
+    print(json.dumps({"pre_race_field_coverage": field_coverage}, indent=2))
+
     rows = build_walk_forward_profiles(rows)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
