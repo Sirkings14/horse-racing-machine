@@ -2,7 +2,7 @@ name: V3 evidence brain validation
 
 on:
   push:
-    branches: [main, v3-evidence-brain, v4-production-edge, v4-press-odds-benchmark, press-odds-benchmark-engine, press-odds-cleanup-v2, v5-market-opportunity-layer]
+    branches: [main, v3-evidence-brain, v4-production-edge, v4-press-odds-benchmark, press-odds-benchmark-engine, press-odds-cleanup-v2, v5-market-opportunity-layer, experiment/full-starter-target-labels]
   workflow_dispatch:
 
 # Generated model-artifact commits must not start another validation cycle.
@@ -41,6 +41,24 @@ jobs:
           pip install pytest
       - name: Build verified historical dataset
         run: python scripts/build_historical_dataset.py
+      - name: Verify full-starter training cohort
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          audit=json.loads(Path("data/dataset/training_dataset_audit.json").read_text(encoding="utf-8"))
+          assert audit.get("cohort_schema_version") == 2, "Unexpected training-cohort schema."
+          assert audit.get("training_rows", 0) > 0, "Training cohort is empty."
+          assert audit.get("training_races", 0) >= 100, "Too few finalized races survived roster validation."
+          print(json.dumps({key:audit.get(key) for key in (
+              "cohort_schema_version", "eligible_finalized_races",
+              "non_finalized_races", "finalized_races_without_valid_arrival",
+              "incomplete_or_duplicate_rosters", "arrival_numbers_outside_roster",
+              "candidate_rows_before_complete_roster_filter", "training_rows",
+              "training_races", "placed_starter_rows", "unplaced_starter_rows",
+              "explicit_win_odds_rows", "target_policy", "dead_heat_policy",
+          )}, indent=2, ensure_ascii=False))
+          PY
       - name: Run V3 tests
         run: python -m pytest -q
       - name: Run V3 walk-forward backtest
