@@ -257,6 +257,10 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
                 "distance": safe_int(race.get("distance")),
                 "runners_count": safe_int(race.get("runners_count")),
                 "prize_euros": safe_float(race.get("prize_euros")),
+                "going": race.get("going"),
+                "surface": race.get("surface"),
+                "start_method": race.get("start_method") or race.get("start_type"),
+                "track_condition": race.get("track_condition"),
                 "horse_number": horse_number,
                 "horse_name": horse.get("horse"),
                 "horse_description": horse.get("description"),
@@ -338,7 +342,7 @@ def write_csv(rows: List[Dict[str, Any]]) -> None:
 
     fieldnames = [
         "race_key", "date", "track", "race_number", "race_name", "race_type",
-        "distance", "runners_count", "prize_euros", "horse_number", "horse_name",
+        "distance", "runners_count", "prize_euros", "going", "surface", "start_method", "track_condition", "horse_number", "horse_name",
         "horse_description", "sex", "age", "weight", "draw", "performance", "gains",
         "listed_chrono", "listed_distance", "trainer", "jockey", "driver", "owner",
         "favorites_rank", "form_rank", "class_rank",
