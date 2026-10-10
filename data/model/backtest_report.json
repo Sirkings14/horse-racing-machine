@@ -5,10 +5,10 @@
   "minimum_training_races": 5,
   "evaluated_races": 429,
   "metrics": {
-    "winner_hit_rate_at_1": 0.1469,
-    "winner_hit_rate_at_3": 0.3706,
+    "winner_hit_rate_at_1": 0.1492,
+    "winner_hit_rate_at_3": 0.373,
     "average_actual_top3_covered_by_predicted_top3": 0.8788,
-    "average_actual_top3_covered_by_predicted_top5": 1.3706,
+    "average_actual_top3_covered_by_predicted_top5": 1.373,
     "brier_score_top3": 0.149885,
     "log_loss_top3": 0.474212,
     "expected_calibration_error_top3": 0.011159
@@ -5293,7 +5293,7 @@
     },
     {
       "winner": 9,
-      "predicted_top1": 13,
+      "predicted_top1": 1,
       "winner_hit_at_1": false,
       "winner_hit_at_3": false,
       "actual_top3": [
@@ -5303,17 +5303,17 @@
       ],
       "predicted_top3": [
         1,
-        13,
-        14
-      ],
-      "top3_coverage_by_top3": 1,
-      "top3_coverage_by_top5": 1,
-      "model_ranking": [
-        13,
-        14,
-        1,
         2,
         3
+      ],
+      "top3_coverage_by_top3": 0,
+      "top3_coverage_by_top5": 1,
+      "model_ranking": [
+        1,
+        2,
+        3,
+        4,
+        5
       ],
       "baselines": {
         "favorites": {
@@ -6373,27 +6373,27 @@
     },
     {
       "winner": 13,
-      "predicted_top1": 1,
-      "winner_hit_at_1": false,
-      "winner_hit_at_3": false,
+      "predicted_top1": 13,
+      "winner_hit_at_1": true,
+      "winner_hit_at_3": true,
       "actual_top3": [
         7,
         11,
         13
       ],
       "predicted_top3": [
-        1,
-        2,
-        3
+        13,
+        14,
+        15
       ],
-      "top3_coverage_by_top3": 0,
-      "top3_coverage_by_top5": 0,
+      "top3_coverage_by_top3": 1,
+      "top3_coverage_by_top5": 1,
       "model_ranking": [
+        13,
+        14,
+        15,
         1,
-        2,
-        3,
-        4,
-        5
+        2
       ],
       "baselines": {
         "favorites": {
