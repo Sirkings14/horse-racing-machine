@@ -1,14 +1,14 @@
 from src.model.champion_comparison import compare_reports
 
 
-def _report(races, coverage=2.0, winner_top3=0.50, brier=0.20, log_loss=0.60, ece=0.05):
+def _report(races, coverage=2.0, winner_top3=0.50, top3_coverage=1.0, brier=0.20, log_loss=0.60, ece=0.05):
     rows = []
     for i in range(races):
         rows.append({
             "race_key": f"2025-01-{(i % 28) + 1:02d}|TRACK|{i}",
             "winner_hit_at_1": False,
             "winner_hit_at_3": bool(i % 2 == 0) if winner_top3 == 0.50 else i < int(races * winner_top3),
-            "top3_coverage_by_top3": 1,
+            "top3_coverage_by_top3": top3_coverage,
             "top3_coverage_by_top5": coverage,
             "field_size": 12,
         })
@@ -64,3 +64,10 @@ def test_comparison_requires_sufficient_paired_race_keys():
     result = compare_reports(candidate, reference)
     assert result["approved"] is False
     assert "insufficient_paired_champion_races" in result["reasons"]
+
+def test_top5_gain_cannot_hide_top3_selection_coverage_regression():
+    reference = _report(1000, coverage=2.0, top3_coverage=1.4)
+    candidate = _report(1000, coverage=2.2, top3_coverage=1.2)
+    result = compare_reports(candidate, reference)
+    assert result["approved"] is False
+    assert "top3_coverage_regression_exceeds_tolerance" in result["reasons"]
