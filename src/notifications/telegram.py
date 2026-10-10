@@ -205,13 +205,18 @@ def send_latest_prediction() -> bool:
     strategy = payload.get("race_strategy") or {}
     discipline = strategy.get("discipline_label") or race.get("race_type") or "unclassified"
     lines.insert(6, f"Discipline: {discipline} | Data: {strategy.get('evidence_status', 'not assessed')}")
+    form_diagnostics = strategy.get("form_diagnostics") or {}
+    form_total = int(form_diagnostics.get("runner_count") or 0)
+    form_covered = int(form_diagnostics.get("runners_with_numeric_form") or 0)
+    if form_total:
+        lines.insert(7, f"Recent form parsed: {form_covered}/{form_total} runners (diagnostic only; not in model score)")
     gaps = strategy.get("critical_data_gaps") or []
     if gaps:
         gap_text = ", ".join(
             f"{item.get('field')} {float(item.get('coverage', 0.0)):.0%}"
             for item in gaps[:3]
         )
-        lines.insert(7, f"Evidence gaps: {gap_text}")
+        lines.insert(8 if form_total else 7, f"Evidence gaps: {gap_text}")
 
     for horse in ranked[:5]:
         if not isinstance(horse, dict):
