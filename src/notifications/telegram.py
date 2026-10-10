@@ -111,7 +111,7 @@ def send_latest_prediction() -> bool:
     if payload is None:
         return False
 
-    if payload.get("mode") not in {"v3_evidence_no_press", "v4_evidence_no_press", "v5_market_opportunity_layer"}:
+    if payload.get("mode") not in {"v3_evidence_no_press", "v4_evidence_no_press", "v5_market_opportunity_layer", "v3_unavailable"}:
         print(f"Telegram skipped: unsupported prediction mode {payload.get('mode')!r}.")
         return False
 
@@ -133,6 +133,7 @@ def send_latest_prediction() -> bool:
         print("Telegram skipped: prediction is missing its canonical race key.")
         return False
 
+    unavailable_mode = payload.get("mode") == "v3_unavailable"
     ranked = payload.get("ranked_horses") or []
     candidates = [
         item.get("horse_number")
@@ -141,19 +142,22 @@ def send_latest_prediction() -> bool:
     ]
     if not candidates:
         candidates = payload.get("recommended_numbers") or []
-    if not candidates:
+    if not candidates and not unavailable_mode:
         print("Telegram skipped: prediction contains no ranked candidates.")
         return False
 
     guard = payload.get("autopilot_guard") or {}
     decision = payload.get("live_decision")
     if not decision:
-        decision = "NO_BET" if guard.get("decision") == "PASS" else "PLAY_CANDIDATE"
+        decision = "NO_BET" if unavailable_mode or guard.get("decision") == "PASS" else "PLAY_CANDIDATE"
     gate_reasons = []
     if decision == "NO_BET":
-        gate_reasons = guard.get("gate_reasons") or payload.get("no_bet_reason") or [
-            "autopilot guard blocked live play"
-        ]
+        if unavailable_mode:
+            gate_reasons = [str(payload.get("reason") or "prediction_unavailable")]
+        else:
+            gate_reasons = guard.get("gate_reasons") or payload.get("no_bet_reason") or [
+                "autopilot guard blocked live play"
+            ]
 
     signature = _semantic_signature(candidates, decision, gate_reasons)
     if _same_notification_already_sent(race_key, signature):
@@ -174,8 +178,8 @@ def send_latest_prediction() -> bool:
             f"Track: {race.get('track')}",
             f"Race: {race.get('race_name') or 'N/A'}",
             f"Distance: {race.get('distance')}m",
-            "🛑 NO BET — V4 evidence gate blocked live play",
-            f"🧪 Model candidates (NOT CLEARED): {' - '.join(map(str, candidates))}",
+            ("🛑 NO BET — prediction unavailable; validation blocked ranking" if unavailable_mode else "🛑 NO BET — V4 evidence gate blocked live play"),
+            ("🧪 No candidate ranking generated." if unavailable_mode else f"🧪 Model candidates (NOT CLEARED): {' - '.join(map(str, candidates))}"),
             f"🧠 Model agreement: {agreement}",
             f"Model: {model_label}",
             "",
@@ -201,6 +205,22 @@ def send_latest_prediction() -> bool:
             "",
             "Race intelligence — Top 5:",
         ]
+
+    strategy = payload.get("race_strategy") or {}
+    discipline = strategy.get("discipline_label") or race.get("race_type") or "unclassified"
+    lines.insert(6, f"Discipline: {discipline} | Data: {strategy.get('evidence_status', 'not assessed')}")
+    form_diagnostics = strategy.get("form_diagnostics") or {}
+    form_total = int(form_diagnostics.get("runner_count") or 0)
+    form_covered = int(form_diagnostics.get("runners_with_numeric_form") or 0)
+    if form_total:
+        lines.insert(7, f"Recent form parsed: {form_covered}/{form_total} runners (diagnostic only; not in model score)")
+    gaps = strategy.get("critical_data_gaps") or []
+    if gaps:
+        gap_text = ", ".join(
+            f"{item.get('field')} {float(item.get('coverage', 0.0)):.0%}"
+            for item in gaps[:3]
+        )
+        lines.insert(8 if form_total else 7, f"Evidence gaps: {gap_text}")
 
     for horse in ranked[:5]:
         if not isinstance(horse, dict):

@@ -12,6 +12,7 @@ import sys
 BASE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BASE))
 from src.model.historical_profile import build_walk_forward_profiles
+from src.model.race_type import canonical_race_type
 from src.learning.result_truth import canonical_key
 OUT = BASE / "data" / "dataset" / "training_dataset_clean.json"
 ROSTER_OUT = BASE / "data" / "rosters" / "historical_rosters.json"
@@ -157,7 +158,11 @@ def main():
             "distance": int(_num(_pick(r, ["distance"], 0)) or 0),
             "runners_count": int(_num(_pick(r, ["nombreDeclaresPartants", "runners_count"], 0)) or 0),
             "prize_euros": _num(_pick(r, ["montantPrix", "prize_euros", "allocation_eur"])),
-            "race_type": str(_pick(r, ["specialite", "discipline", "race_type"], "") or ""),
+            "race_type": canonical_race_type(_pick(r, ["specialite", "discipline", "race_type"], "")),
+            "going": _pick(r, ["going", "terrain", "track_condition", "etatPiste"]),
+            "surface": _pick(r, ["surface", "piste", "surface_type"]),
+            "start_method": _pick(r, ["start_method", "modeDepart", "autostart", "typeDepart"]),
+            "track_condition": _pick(r, ["track_condition", "etatPiste", "going", "terrain"]),
             "arrival": arr,
         }
         if i and i % 25000 == 0:
@@ -214,11 +219,22 @@ def main():
             "race_key": key, "date": meta["date"], "track": meta["track"],
             "race_number": meta["race_number"], "distance": meta["distance"],
             "runners_count": meta["runners_count"], "prize_euros": meta["prize_euros"],
-            "race_type": meta["race_type"], "horse_number": horse_number,
+            "race_type": meta["race_type"], "going": meta.get("going"), "surface": meta.get("surface"),
+            "start_method": meta.get("start_method"), "track_condition": meta.get("track_condition"), "horse_number": horse_number,
             "horse_name": horse_name, "horse_id": horse_id, "finish_position": pos, "won": int(pos == 1),
             "top3": int(pos <= 3), "top5": int(pos <= 5),
             "weight": _num(_pick(p, ["poids", "weight", "carried_weight", "poidsporte"])),
             "draw": _num(_pick(p, ["corde", "draw", "stall", "numCorde", "placeCorde"])),
+            # Additional source fields are preserved for future pre-race candidates.
+            # The current V3 feature matrix does not consume all of these yet.
+            "sex": _pick(p, ["sexe", "sex"]),
+            "age": _num(_pick(p, ["age", "ageCheval"])),
+            "performance": _pick(p, ["musique", "performance", "forme", "historiquePerformance"]),
+            "gains": _num(_pick(p, ["gains", "gainsCarriere", "gainCarriere", "earnings"])),
+            "trainer": _pick(p, ["entraineur", "nomEntraineur", "trainer"]),
+            "jockey": _pick(p, ["jockey", "nomJockey", "driver", "nomDriver"]),
+            "driver": _pick(p, ["driver", "nomDriver", "jockey", "nomJockey"]),
+            "owner": _pick(p, ["proprietaire", "owner", "nomProprietaire"]),
             "win_odds_decimal": _num(_pick(p, [
                 "cotePMU", "cotePmu", "cote_pmu", "odds", "odds_decimal",
                 "coteGagnant", "starting_price", "starting_price_decimal"

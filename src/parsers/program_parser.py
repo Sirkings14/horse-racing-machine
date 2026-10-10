@@ -2,6 +2,8 @@ import json
 import re
 import unicodedata
 from datetime import datetime
+
+from src.model.race_type import canonical_race_type
 from pathlib import Path
 
 PROGRAMS_FOLDER = Path("data/processed/programs")
@@ -98,7 +100,7 @@ def extract_race_info(text):
 
     for race_type in ("STEEPLE-CHASE", "ATTELE", "MONTÉ", "MONTE", "PLAT", "OBSTACLE", "HAIES"):
         if re.search(rf"\b{re.escape(race_type)}\b", text, re.IGNORECASE):
-            race["race_type"] = race_type
+            race["race_type"] = canonical_race_type(race_type)
             break
 
     match = re.search(r"(\d[\d\s]*)\s+EUROS", text, re.IGNORECASE)

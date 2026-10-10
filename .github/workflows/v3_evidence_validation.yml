@@ -2,7 +2,7 @@ name: V3 evidence brain validation
 
 on:
   push:
-    branches: [main, v3-evidence-brain, v4-production-edge, v4-press-odds-benchmark, press-odds-benchmark-engine, press-odds-cleanup-v2, v5-market-opportunity-layer, fix/telegram-idempotency-result-truth-audit, fix/result-truth-telegram-safety]
+    branches: [main, v3-evidence-brain, v4-production-edge, v4-press-odds-benchmark, press-odds-benchmark-engine, press-odds-cleanup-v2, v5-market-opportunity-layer, fix/telegram-idempotency-result-truth-audit, fix/result-truth-telegram-safety, feat/race-type-taxonomy-pre-race-fields]
   workflow_dispatch:
 
 # Generated model-artifact commits must not start another validation cycle.
@@ -65,6 +65,8 @@ jobs:
               "rejection_reasons",
           )}, indent=2, ensure_ascii=False))
           PY
+      - name: Freeze pre-change V3 champion reference once
+        run: python -m src.model.champion_comparison --preserve-reference
       - name: Run V3 walk-forward backtest
         run: |
           python - <<'PY'
@@ -99,12 +101,24 @@ jobs:
               raise SystemExit('V3 promotion gate FAILED: challenger is not approved for production')
           print('V3 promotion gate PASSED')
           PY
+      - name: Upload V3 challenger evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v3-challenger-evidence
+          path: |
+            data/model/v3_champion_reference.json
+            data/model/v3_backtest_report.json
+            data/model/v3_models.json
+            data/model/champion_comparison_report.json
+          if-no-files-found: warn
+          retention-days: 30
       - name: Commit V3 model artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/model/v3_models.json data/model/v3_backtest_report.json data/model/press_odds_benchmark_report.json data/rosters/historical_rosters.json
+          git add data/model/v3_models.json data/model/v3_backtest_report.json data/model/press_odds_benchmark_report.json data/rosters/historical_rosters.json data/model/v3_champion_reference.json data/model/champion_comparison_report.json
           if git diff --cached --quiet; then
             echo "No model artifact changes to commit"
             exit 0

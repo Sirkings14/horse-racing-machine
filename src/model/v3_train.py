@@ -4,6 +4,8 @@ from collections import defaultdict
 from pathlib import Path
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_model import fit_v3_model
+from src.model.v3_features import FEATURE_PIPELINE_VERSION, tail_complete_races
+from src.model.champion_comparison import compare_reports
 from src.model.calibration import fit_sigmoid_calibrator, apply_sigmoid_calibrator, calibration_metrics
 from src.model.v3_backtest import run as run_v3_backtest
 from src.model.backtest import run_backtest as run_legacy_backtest  # legacy benchmark is informational
@@ -13,6 +15,8 @@ from src.dataset.program_history import load_program_history
 BASE_DIR=Path(__file__).resolve().parents[2]
 DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
 OUTPUT_FILE=BASE_DIR/"data/model/v3_models.json"
+CHAMPION_REFERENCE_FILE=BASE_DIR/"data/model/v3_champion_reference.json"
+CHAMPION_COMPARISON_FILE=BASE_DIR/"data/model/champion_comparison_report.json"
 
 def _promotion_decision(v3m:dict, n_races:int, calibration_gate:dict|None=None)->tuple[bool,list[str]]:
     reasons=[]
@@ -41,20 +45,36 @@ def main():
     for row in profiled:
         if row.get("race_key") and not row.get("_program_only_history"): groups[str(row["race_key"])].append(row)
     keys=sorted(groups,key=lambda k:min((str(r.get("date") or "")[:10],k) for r in groups[k]))
-    split=max(1,int(len(keys)*0.8))
-    train_rows=[r for k in keys[:split] for r in groups[k]]
-    cal_rows=[r for k in keys[split:] for r in groups[k]]
-    # Keep final fitting bounded; validation remains full walk-forward and unchanged.
-    fit_rows=train_rows[-25000:]
-    final_rows=[r for r in profiled if not r.get("_program_only_history")][-25000:]
+    # Split by whole calendar dates so races from the same day cannot cross the
+    # training/calibration boundary.
+    date_by_key={k:min(str(r.get("date") or "")[:10] for r in groups[k]) for k in keys}
+    unique_dates=sorted(set(date_by_key.values()))
+    if len(unique_dates)<2:
+        raise ValueError("V3 training requires at least two distinct race dates.")
+    date_split=max(1,min(len(unique_dates)-1,int(len(unique_dates)*0.8)))
+    train_dates=set(unique_dates[:date_split])
+    calibration_dates=set(unique_dates[date_split:])
+    train_keys=[k for k in keys if date_by_key[k] in train_dates]
+    cal_keys=[k for k in keys if date_by_key[k] in calibration_dates]
+    train_rows=[r for k in train_keys for r in groups[k]]
+    cal_rows=[r for k in cal_keys for r in groups[k]]
+    # Row limits must never cut a race field in half.
+    fit_rows=tail_complete_races(train_rows,25000)
+    final_rows=tail_complete_races([r for r in profiled if not r.get("_program_only_history")],25000)
     models={}
     calibration_reports={}
     calibration_validation_reports={}
-    # Evaluate calibration on a chronological sample that was not used to fit
-    # the calibrator. Bound the calibration samples to keep CI practical.
-    cal_split=max(30,int(len(cal_rows)*0.70))
-    cal_fit_rows=cal_rows[:cal_split][-60000:]
-    cal_eval_rows=cal_rows[cal_split:][-60000:]
+    # Fit and evaluate calibration on separate chronological date blocks.
+    calibration_date_list=sorted(calibration_dates)
+    cal_split=max(1,min(len(calibration_date_list)-1,int(len(calibration_date_list)*0.70))) if len(calibration_date_list)>1 else 1
+    cal_fit_dates=set(calibration_date_list[:cal_split])
+    cal_eval_dates=set(calibration_date_list[cal_split:])
+    cal_fit_keys=[k for k in cal_keys if date_by_key[k] in cal_fit_dates]
+    cal_eval_keys=[k for k in cal_keys if date_by_key[k] in cal_eval_dates]
+    cal_fit_rows=tail_complete_races([r for k in cal_fit_keys for r in groups[k]],60000)
+    cal_eval_rows=tail_complete_races([r for k in cal_eval_keys for r in groups[k]],60000)
+    if not cal_fit_rows or not cal_eval_rows:
+        raise ValueError("Chronological calibration split produced an empty fit or evaluation sample.")
     for name,target in (("winner","won"),("top3","top3"),("top5","top5")):
         base=fit_v3_model(fit_rows,target_field=target,epochs=20)
         raw_fit=base.predict_proba(cal_fit_rows)
@@ -93,14 +113,32 @@ def main():
     v3m=v3_report["metrics"]; lm=legacy_report["metrics"]
     calibration_gate=calibration_validation_reports.get("top3") or {}
     approved,reasons=_promotion_decision(v3m,len(v3_report.get("race_results") or []),calibration_gate=calibration_gate)
+    if CHAMPION_REFERENCE_FILE.exists():
+        champion_reference=json.loads(CHAMPION_REFERENCE_FILE.read_text(encoding="utf-8"))
+        champion_comparison=compare_reports(v3_report,champion_reference)
+    else:
+        champion_comparison={
+            "schema_version":1,
+            "status":"rejected",
+            "approved":False,
+            "reasons":["champion_reference_missing"],
+            "paired_races":0,
+            "policy":{"predictive_approval_is_not_profitability_approval":True},
+        }
+    CHAMPION_COMPARISON_FILE.parent.mkdir(parents=True,exist_ok=True)
+    CHAMPION_COMPARISON_FILE.write_text(json.dumps(champion_comparison,indent=2,ensure_ascii=False),encoding="utf-8")
+    if not champion_comparison.get("approved"):
+        approved=False
+        reasons.extend("champion_comparison:"+str(reason) for reason in champion_comparison.get("reasons",[]))
     # Economic validation is intentionally separate. Predictive accuracy is not
     # treated as proof of betting profitability without historical prices/dividends.
     payload={
         "model_version":"v4-evidence-no-press",
+        "feature_pipeline_version":FEATURE_PIPELINE_VERSION,
         "press_dependency":False,
         "post_race_feature_policy":"hard_exclusion",
         "calibration_method":"out_of_sample_sigmoid",
-        "calibration_races":len(keys)-split,
+        "calibration_races":len(cal_keys),
         "production_approved":approved,
         "economic_validation_status":economic_report.get("status"),
         "economic_validation_report":economic_report,
@@ -113,12 +151,13 @@ def main():
             "calibration_reports":calibration_reports,
             "calibration_validation_reports":calibration_validation_reports,
             "calibration_gate":calibration_gate,
-            "required":["minimum_100_holdout_races","winner_top3_minimum","top3_lift_vs_random","brier_beats_constant_baseline","ece_under_0.10","temporal_stability"]
+            "champion_comparison_gate":champion_comparison,
+            "required":["minimum_100_holdout_races","winner_top3_minimum","top3_lift_vs_random","brier_beats_constant_baseline","ece_under_0.10","temporal_stability","paired_champion_top5_coverage_uplift","winner_top3_noninferiority","no_material_calibration_regression"]
         },
         "models":models
     }
     OUTPUT_FILE.parent.mkdir(parents=True,exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(payload,indent=2,ensure_ascii=False),encoding="utf-8")
-    print(json.dumps({"production_approved":approved,"reasons":reasons,"metrics":v3m},indent=2))
+    print(json.dumps({"production_approved":approved,"reasons":reasons,"metrics":v3m,"champion_comparison":{"approved":champion_comparison.get("approved"),"reasons":champion_comparison.get("reasons"),"paired_races":champion_comparison.get("paired_races"),"top5_coverage_paired_delta":champion_comparison.get("top5_coverage_paired_delta")}},indent=2))
 
 if __name__=="__main__":main()

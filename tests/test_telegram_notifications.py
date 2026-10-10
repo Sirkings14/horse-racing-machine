@@ -77,6 +77,35 @@ class TelegramDeliveryLedgerTests(unittest.TestCase):
             self.assertTrue(telegram.send_latest_prediction())
             self.assertEqual(post.call_count, 2)
 
+    def test_unavailable_prediction_sends_safe_no_bet_alert(self):
+        unavailable = {
+            "prediction_id": None,
+            "mode": "v3_unavailable",
+            "model_version": None,
+            "race_key": f"{self.today}|VINCENNES|1",
+            "race": {
+                "date": self.today, "track": "VINCENNES", "race_number": 1,
+                "race_name": "TEST TROT", "race_type": "MONTE", "distance": 2700,
+            },
+            "reason": "v3_feature_pipeline_version_mismatch",
+            "recommended_numbers": [],
+            "ranked_horses": [],
+        }
+        with (
+            patch.dict(os.environ, {"TELEGRAM_BOT_TOKEN": "token", "TELEGRAM_CHAT_ID": "chat"}),
+            patch.object(telegram, "LEDGER_FILE", self.ledger_path),
+            patch.object(telegram, "_load_prediction", return_value=unavailable),
+            patch("src.notifications.telegram.requests.post") as post,
+        ):
+            self.configure_post(post)
+            self.assertTrue(telegram.send_latest_prediction())
+            text_sent = post.call_args.kwargs["json"]["text"]
+            self.assertIn("prediction unavailable", text_sent.lower())
+            self.assertIn("v3_feature_pipeline_version_mismatch", text_sent)
+            self.assertIn("NO BET", text_sent)
+        ledger = json.loads(self.ledger_path.read_text(encoding="utf-8"))
+        self.assertIn(unavailable["race_key"], ledger["notifications"])
+
     def test_api_ok_false_does_not_record_delivery(self):
         with (
             patch.dict(os.environ, {"TELEGRAM_BOT_TOKEN": "token", "TELEGRAM_CHAT_ID": "chat"}),
