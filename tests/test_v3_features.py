@@ -1,3 +1,4 @@
+import numpy as np
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_features import build_v3_matrix, FEATURE_NAMES
 import json
