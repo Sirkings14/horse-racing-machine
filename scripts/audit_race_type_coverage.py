@@ -106,6 +106,7 @@ def main() -> dict[str, Any]:
         "program_files_audited": report["program_files_audited"],
         "unique_source_races": report["unique_source_races"],
         "race_types": report["race_types"],
+        "pre_race_field_coverage": report["pre_race_field_coverage"],
         "output": str(OUTPUT.relative_to(BASE)),
     }, indent=2, ensure_ascii=False))
     return report
