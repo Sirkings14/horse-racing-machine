@@ -1,0 +1,36 @@
+name: V3 scoring parity tests
+
+on:
+  push:
+    branches: [fix/v3-scoring-parity-rank-disagreement]
+    paths:
+      - "src/model/v3_scoring.py"
+      - "src/model/predict_v3.py"
+      - "src/model/v3_backtest.py"
+      - "src/model/autopilot_guard.py"
+      - "tests/test_v3_scoring.py"
+      - ".github/workflows/v3_scoring_safety.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/model/v3_scoring.py"
+      - "src/model/predict_v3.py"
+      - "src/model/v3_backtest.py"
+      - "src/model/autopilot_guard.py"
+      - "tests/test_v3_scoring.py"
+
+permissions:
+  contents: read
+
+jobs:
+  scoring-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install numerical dependency
+        run: python -m pip install numpy
+      - name: Run scoring consistency tests
+        run: python -m unittest discover -s tests -p "test_v3_scoring.py" -v

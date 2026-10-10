@@ -8,6 +8,7 @@ from src.live.registry import eligible_races, LIVE_DIR
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.truth_gate import validate_program
 from src.model.v3_model import V3LogisticModel
+from src.model.v3_scoring import rank_disagreement, weighted_outcome_score
 from src.model.autopilot_guard import build_autopilot_guard
 from src.model.opportunity import score_race_opportunity
 from src.dataset.program_history import load_program_history
@@ -111,14 +112,17 @@ def main():
     p1=models["winner"].predict_proba(current_profile)
     p3=models["top3"].predict_proba(current_profile)
     p5=models["top5"].predict_proba(current_profile)
+    horse_numbers=[int(row["horse_number"]) for row in current_profile]
+    disagreement_by_horse=rank_disagreement((p1,p3,p5),horse_numbers)
     ranked=[]
-    for row,a,b,c in zip(current_profile,p1,p3,p5):
-        completeness=float(row.get("data_completeness") or 0.0) 
-        raw_score=0.25*float(a)+0.50*float(b)+0.25*float(c)
-        disagreement=float(np.std([a,b,c]))
-        score=max(0.0,raw_score-0.15*disagreement)
-        ranked.append({"race_key":key,"horse_number":int(row["horse_number"]),"horse_name":row.get("horse_name"),"probability_winner":round(float(a),6),"probability_top3":round(float(b),6),"probability_top5":round(float(c),6),"ensemble_score":round(score,6),"model_disagreement":round(disagreement,6),"data_completeness":round(completeness,3)})
-    ranked.sort(key=lambda x:(-x["ensemble_score"],-x["probability_top3"],x["horse_number"]))
+    for row,a,b,c,disagreement in zip(current_profile,p1,p3,p5,disagreement_by_horse):
+        completeness=float(row.get("data_completeness") or 0.0)
+        # These models predict different events (winner, Top 3, Top 5): compare
+        # their within-race rank orders for disagreement, not raw probability scale.
+        # Keep the weighted score identical to the walk-forward backtest.
+        score=weighted_outcome_score(a,b,c)
+        ranked.append({"race_key":key,"horse_number":int(row["horse_number"]),"horse_name":row.get("horse_name"),"probability_winner":round(float(a),6),"probability_top3":round(float(b),6),"probability_top5":round(float(c),6),"ensemble_score":round(score,6),"model_disagreement":round(float(disagreement),6),"data_completeness":round(completeness,3)})
+    ranked.sort(key=lambda x:(-x["ensemble_score"],x["horse_number"]))
     for i,item in enumerate(ranked,1): item["predicted_rank"]=i
 
     top_scores=[x["ensemble_score"] for x in ranked[:5]]
