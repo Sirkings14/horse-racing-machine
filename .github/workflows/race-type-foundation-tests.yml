@@ -7,6 +7,7 @@ on:
       - "src/model/race_type.py"
       - "src/model/v3_features.py"
       - "src/model/race_strategy.py"
+      - "src/model/form_analysis.py"
       - "src/notifications/telegram.py"
       - "src/parsers/program_parser.py"
       - "src/dataset/build_dataset.py"
