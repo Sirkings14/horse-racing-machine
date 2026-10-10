@@ -12,6 +12,7 @@ from src.model.autopilot_guard import build_autopilot_guard
 from src.model.opportunity import score_race_opportunity
 from src.dataset.program_history import load_program_history
 from src.model.race_type import canonical_race_type
+from src.model.race_strategy import build_race_strategy
 
 BASE_DIR=Path(__file__).resolve().parents[2]
 DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
@@ -23,7 +24,7 @@ def _json(path): return json.loads(path.read_text(encoding="utf-8"))
 
 def _meta(program):
     race=program.get("race") or {}
-    return {"date":program.get("date"),"track":race.get("track"),"race_number":race.get("race_number"),"race_name":race.get("race_name"),"race_type":canonical_race_type(race.get("race_type")),"distance":race.get("distance"),"runners_count":race.get("runners_count")}
+    return {"date":program.get("date"),"track":race.get("track"),"race_number":race.get("race_number"),"race_name":race.get("race_name"),"race_type":canonical_race_type(race.get("race_type")),"distance":race.get("distance"),"runners_count":race.get("runners_count"),"going":race.get("going"),"surface":race.get("surface"),"start_method":race.get("start_method") or race.get("start_type"),"track_condition":race.get("track_condition")}
 
 def _key(program):
     m=_meta(program)
@@ -33,7 +34,7 @@ def _key(program):
 def _live_rows(program):
     m=_meta(program); key=_key(program); rows=[]
     race=program.get("race") or {}
-    race_fields={"prize_euros":race.get("prize_euros")}
+    race_fields={"prize_euros":race.get("prize_euros"),"going":race.get("going"),"surface":race.get("surface"),"start_method":race.get("start_method") or race.get("start_type"),"track_condition":race.get("track_condition")}
     for horse in program.get("horses") or []:
         try: number=int(horse.get("number"))
         except (TypeError,ValueError): continue
@@ -128,7 +129,7 @@ def main():
     disagreement=float(np.mean([x["model_disagreement"] for x in ranked[:5]])) if ranked else 1.0
     confidence="high" if margin>=0.08 and disagreement<0.06 else "medium" if margin>=0.03 and disagreement<0.10 else "low"
     opportunity=score_race_opportunity(ranked)
-    result={"prediction_id":f"{key}|{datetime.now(timezone.utc).isoformat()}","generated_at":datetime.now(timezone.utc).isoformat(),"model_version":bundle.get("model_version"),"mode":"v5_market_opportunity_layer","race_key":key,"race":_meta(program),"truth_gate":gate,"press_dependency":False,"post_race_feature_policy":"hard_exclusion","feature_health":feature_health,"confidence":confidence,"model_agreement":"high" if disagreement<0.06 else "medium" if disagreement<0.10 else "low","recommended_numbers":[x["horse_number"] for x in ranked[:5]],"final_five":[x["horse_number"] for x in ranked[:5]],"ranked_horses":ranked,"race_opportunity":opportunity,"selection_policy":"independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity"}
+    result={"prediction_id":f"{key}|{datetime.now(timezone.utc).isoformat()}","generated_at":datetime.now(timezone.utc).isoformat(),"model_version":bundle.get("model_version"),"mode":"v5_market_opportunity_layer","race_key":key,"race":_meta(program),"race_strategy":build_race_strategy(_meta(program).get("race_type"),current_profile),"truth_gate":gate,"press_dependency":False,"post_race_feature_policy":"hard_exclusion","feature_health":feature_health,"confidence":confidence,"model_agreement":"high" if disagreement<0.06 else "medium" if disagreement<0.10 else "low","recommended_numbers":[x["horse_number"] for x in ranked[:5]],"final_five":[x["horse_number"] for x in ranked[:5]],"ranked_horses":ranked,"race_opportunity":opportunity,"selection_policy":"independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity"}
     guard=build_autopilot_guard({"ranked_horses":ranked,"monitoring":{"agreement":result["model_agreement"]},"difficulty":{}})
     result["autopilot_guard"]=guard
     if guard.get("decision")=="PASS":
