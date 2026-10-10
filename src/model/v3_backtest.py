@@ -4,7 +4,8 @@ from typing import Any
 import math
 import random
 
-from src.model.historical_profile import build_walk_forward_profiles
+from src.model.historical_profile import build_walk_forward_profiles, merge_program_history_rows
+from src.model.v3_scoring import weighted_outcome_score
 from src.model.v3_model import fit_v3_model
 from src.model.calibration import calibration_metrics
 from src.dataset.program_history import load_program_history
@@ -47,7 +48,11 @@ def _bootstrap_mean(values,seed=17,iterations=1000):
 def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=365,max_train_rows:int=25000,epochs:int=20,max_eval_races:int=3000)->dict[str,Any]:
     rows=_valid_rows(rows)
     history_rows = load_program_history(exclude_on_or_after=str(max((r.get("date") or "") for r in rows))[:10]) if rows else []
-    profiled = rows if rows and "history_starts" in rows[0] else build_walk_forward_profiles(history_rows + rows)
+    profile_rows, program_history_audit = merge_program_history_rows(rows, history_rows)
+    # Recompute chronological features after overlap/duplicate removal so the
+    # backtest sees exactly the available pre-race history, not stale profiles
+    # that were built without the supplemental program-only corpus.
+    profiled = build_walk_forward_profiles(profile_rows)
     groups=defaultdict(list)
     for row in profiled:
         if not row.get("_program_only_history"): groups[_key(row)].append(row)
@@ -83,7 +88,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
                 continue
             test=groups[key]
             p1=models["winner"].predict_proba(test); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
-            ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1,p3,p5)]
+            ensemble=[weighted_outcome_score(a,b,c) for a,b,c in zip(p1,p3,p5)]
             ranked=sorted((dict(r,ensemble_score=float(s),p_winner=float(a),p_top3=float(b),p_top5=float(c)) for r,a,b,c,s in zip(test,p1,p3,p5,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
             ev=_evaluate(ranked); ev["race_key"]=key; ev["field_size"]=len(ranked)
             ev["top5_candidates"]=[{
@@ -133,6 +138,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
         "evaluated_races":n,
         "press_dependency":False,
         "post_race_feature_policy":"hard_exclusion",
+        "program_history_audit":program_history_audit,
         "metrics":{
             "winner_hit_rate_at_1":round(sum(winner1)/n,4),
             "winner_hit_rate_at_3":round(sum(winner3)/n,4),
