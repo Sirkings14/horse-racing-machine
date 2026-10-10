@@ -5,6 +5,7 @@ from pathlib import Path
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_model import fit_v3_model
 from src.model.v3_features import FEATURE_PIPELINE_VERSION
+from src.model.champion_comparison import compare_reports
 from src.model.calibration import fit_sigmoid_calibrator, apply_sigmoid_calibrator, calibration_metrics
 from src.model.v3_backtest import run as run_v3_backtest
 from src.model.backtest import run_backtest as run_legacy_backtest  # legacy benchmark is informational
@@ -14,6 +15,8 @@ from src.dataset.program_history import load_program_history
 BASE_DIR=Path(__file__).resolve().parents[2]
 DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
 OUTPUT_FILE=BASE_DIR/"data/model/v3_models.json"
+CHAMPION_REFERENCE_FILE=BASE_DIR/"data/model/v3_champion_reference.json"
+CHAMPION_COMPARISON_FILE=BASE_DIR/"data/model/champion_comparison_report.json"
 
 def _promotion_decision(v3m:dict, n_races:int, calibration_gate:dict|None=None)->tuple[bool,list[str]]:
     reasons=[]
@@ -94,6 +97,23 @@ def main():
     v3m=v3_report["metrics"]; lm=legacy_report["metrics"]
     calibration_gate=calibration_validation_reports.get("top3") or {}
     approved,reasons=_promotion_decision(v3m,len(v3_report.get("race_results") or []),calibration_gate=calibration_gate)
+    if CHAMPION_REFERENCE_FILE.exists():
+        champion_reference=json.loads(CHAMPION_REFERENCE_FILE.read_text(encoding="utf-8"))
+        champion_comparison=compare_reports(v3_report,champion_reference)
+    else:
+        champion_comparison={
+            "schema_version":1,
+            "status":"rejected",
+            "approved":False,
+            "reasons":["champion_reference_missing"],
+            "paired_races":0,
+            "policy":{"predictive_approval_is_not_profitability_approval":True},
+        }
+    CHAMPION_COMPARISON_FILE.parent.mkdir(parents=True,exist_ok=True)
+    CHAMPION_COMPARISON_FILE.write_text(json.dumps(champion_comparison,indent=2,ensure_ascii=False),encoding="utf-8")
+    if not champion_comparison.get("approved"):
+        approved=False
+        reasons.extend("champion_comparison:"+str(reason) for reason in champion_comparison.get("reasons",[]))
     # Economic validation is intentionally separate. Predictive accuracy is not
     # treated as proof of betting profitability without historical prices/dividends.
     payload={
@@ -115,12 +135,13 @@ def main():
             "calibration_reports":calibration_reports,
             "calibration_validation_reports":calibration_validation_reports,
             "calibration_gate":calibration_gate,
-            "required":["minimum_100_holdout_races","winner_top3_minimum","top3_lift_vs_random","brier_beats_constant_baseline","ece_under_0.10","temporal_stability"]
+            "champion_comparison_gate":champion_comparison,
+            "required":["minimum_100_holdout_races","winner_top3_minimum","top3_lift_vs_random","brier_beats_constant_baseline","ece_under_0.10","temporal_stability","paired_champion_top5_coverage_uplift","winner_top3_noninferiority","no_material_calibration_regression"]
         },
         "models":models
     }
     OUTPUT_FILE.parent.mkdir(parents=True,exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(payload,indent=2,ensure_ascii=False),encoding="utf-8")
-    print(json.dumps({"production_approved":approved,"reasons":reasons,"metrics":v3m},indent=2))
+    print(json.dumps({"production_approved":approved,"reasons":reasons,"metrics":v3m,"champion_comparison":{"approved":champion_comparison.get("approved"),"reasons":champion_comparison.get("reasons"),"paired_races":champion_comparison.get("paired_races"),"top5_coverage_paired_delta":champion_comparison.get("top5_coverage_paired_delta")}},indent=2))
 
 if __name__=="__main__":main()
