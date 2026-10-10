@@ -23,7 +23,7 @@ def _read(path: Path) -> Any:
 
 
 def _add_program(payload: dict[str, Any], source: str, types: Counter, races: set,
-                 runners: Counter, fields: dict[str, Counter]) -> None:
+                 runners: Counter, fields: dict[tuple[str, str], Counter]) -> None:
     race = payload.get("race") or {}
     label = canonical_race_type(race.get("race_type")) or "UNKNOWN"
     types[(source, label, race_type_family(label))] += 1
