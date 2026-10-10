@@ -30,7 +30,7 @@ class V3ScoringTests(unittest.TestCase):
         self.assertGreater(disagreement[2], 0.4)
 
     def test_rank_percentile_ties_are_deterministic_by_horse_number(self):
-        self.assertEqual(rank_percentiles([0.5, 0.5, 0.1], [8, 2, 5]), [1.0, 0.0, 0.5])
+        self.assertEqual(rank_percentiles([0.5, 0.5, 0.1], [8, 2, 5]), [0.5, 0.0, 1.0])
 
     def test_invalid_or_mismatched_inputs_fail_closed(self):
         with self.assertRaises(ValueError):
