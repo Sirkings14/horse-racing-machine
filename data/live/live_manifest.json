@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-10T15:19:59.412026+00:00",
+  "updated_at": "2026-10-10T17:24:59.578233+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -587,10 +587,10 @@
       "structured_file": "structured/2026-10-10_CAEN_4.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-10T15:19:59.411845+00:00",
+      "discovered_at": "2026-10-10T17:24:59.577995+00:00",
       "result_status": "pending",
       "created_at": "2026-10-08T16:26:29.697802+00:00",
-      "updated_at": "2026-10-10T15:19:59.412017+00:00"
+      "updated_at": "2026-10-10T17:24:59.578216+00:00"
     },
     {
       "race_key": "2026-10-11|AUTEUIL|3",
@@ -607,10 +607,30 @@
       "structured_file": "structured/2026-10-11_AUTEUIL_3.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-10T15:19:59.197138+00:00",
+      "discovered_at": "2026-10-10T17:24:59.397703+00:00",
       "result_status": "pending",
       "created_at": "2026-10-09T18:27:05.072978+00:00",
-      "updated_at": "2026-10-10T15:19:59.197303+00:00"
+      "updated_at": "2026-10-10T17:24:59.397951+00:00"
+    },
+    {
+      "race_key": "2026-10-12|MARSEILLE-BORELY|4",
+      "date": "2026-10-12",
+      "track": "MARSEILLE-BORELY",
+      "race_number": 4,
+      "race_name": "PRIX JACQUES ROSSI",
+      "race_type": "PLAT",
+      "distance": 2100,
+      "runners_count": 16,
+      "horse_count": 16,
+      "source_url": "https://lonab.bf/sites/default/files/2026-10/JH_PMUB_DU_12-10-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_12-10-2026_4f846b6e02.pdf",
+      "structured_file": "structured/2026-10-12_MARSEILLE-BORELY_4.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-10-10T17:24:59.185238+00:00",
+      "result_status": "pending",
+      "created_at": "2026-10-10T17:24:54.950286+00:00",
+      "updated_at": "2026-10-10T17:24:59.185469+00:00"
     }
   ]
 }
