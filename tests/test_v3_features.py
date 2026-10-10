@@ -36,12 +36,40 @@ def test_commentary_cannot_change_v3_features():
 
 def test_race_relative_features_change_only_from_pre_race_batch():
     rows=[
-      {"horse_name":"A","history_win_rate":0.8,"history_top3_rate":0.8,"history_top5_rate":0.9,"history_recent_top3_rate":0.8,"history_recent_top5_rate":0.9,"history_recent_avg_finish":2,"course_top3_rate":0.8,"distance_top3_rate":0.8,"history_starts":10,"distance":2400,"runners_count":10},
-      {"horse_name":"B","history_win_rate":0.2,"history_top3_rate":0.2,"history_top5_rate":0.3,"history_recent_top3_rate":0.2,"history_recent_top5_rate":0.3,"history_recent_avg_finish":7,"course_top3_rate":0.2,"distance_top3_rate":0.2,"history_starts":2,"distance":2400,"runners_count":10},
+      {"race_key":"2026-01-01|A|1","horse_name":"A","history_win_rate":0.8,"history_top3_rate":0.8,"history_top5_rate":0.9,"history_recent_top3_rate":0.8,"history_recent_top5_rate":0.9,"history_recent_avg_finish":2,"course_top3_rate":0.8,"distance_top3_rate":0.8,"history_starts":10,"distance":2400,"runners_count":10},
+      {"race_key":"2026-01-01|A|1","horse_name":"B","history_win_rate":0.2,"history_top3_rate":0.2,"history_top5_rate":0.3,"history_recent_top3_rate":0.2,"history_recent_top5_rate":0.3,"history_recent_avg_finish":7,"course_top3_rate":0.2,"distance_top3_rate":0.2,"history_starts":2,"distance":2400,"runners_count":10},
     ]
     matrix=build_v3_matrix(rows)
     assert matrix.shape==(2,len(FEATURE_NAMES))
     assert matrix[0,-1] > matrix[1,-1]
+
+
+
+def test_race_relative_features_are_independent_of_unrelated_races():
+    race_a=[
+      {"race_key":"2026-02-01|A|1","horse_number":1,"horse_name":"A1","history_win_rate":0.8,"history_top3_rate":0.9,"history_top5_rate":0.9,"history_recent_top3_rate":0.8,"history_recent_top5_rate":0.9,"history_recent_avg_finish":2,"course_top3_rate":0.7,"distance_top3_rate":0.8,"history_starts":20,"weight":60,"distance":2000,"runners_count":3},
+      {"race_key":"2026-02-01|A|1","horse_number":2,"horse_name":"A2","history_win_rate":0.4,"history_top3_rate":0.5,"history_top5_rate":0.6,"history_recent_top3_rate":0.4,"history_recent_top5_rate":0.6,"history_recent_avg_finish":5,"course_top3_rate":0.4,"distance_top3_rate":0.5,"history_starts":8,"weight":55,"distance":2000,"runners_count":3},
+      {"race_key":"2026-02-01|A|1","horse_number":3,"horse_name":"A3","history_win_rate":0.1,"history_top3_rate":0.2,"history_top5_rate":0.3,"history_recent_top3_rate":0.1,"history_recent_top5_rate":0.3,"history_recent_avg_finish":9,"course_top3_rate":0.1,"distance_top3_rate":0.2,"history_starts":1,"weight":50,"distance":2000,"runners_count":3},
+    ]
+    race_b=[
+      {"race_key":"2026-02-01|B|1","horse_number":1,"horse_name":"B1","history_win_rate":0.0,"history_top3_rate":0.0,"history_top5_rate":0.0,"history_recent_top3_rate":0.0,"history_recent_top5_rate":0.0,"history_recent_avg_finish":20,"course_top3_rate":0.0,"distance_top3_rate":0.0,"history_starts":0,"weight":80,"distance":5000,"runners_count":16},
+      {"race_key":"2026-02-01|B|1","horse_number":2,"horse_name":"B2","history_win_rate":0.0,"history_top3_rate":0.0,"history_top5_rate":0.0,"history_recent_top3_rate":0.0,"history_recent_top5_rate":0.0,"history_recent_avg_finish":20,"course_top3_rate":0.0,"distance_top3_rate":0.0,"history_starts":0,"weight":80,"distance":5000,"runners_count":16},
+    ]
+    import numpy as np
+    alone=build_v3_matrix(race_a)
+    combined=build_v3_matrix(race_a+race_b)
+    assert np.allclose(combined[:len(race_a),-10:],alone[:,-10:])
+    assert np.allclose(combined[len(race_a):,-10:].mean(axis=0),0.0)
+    assert np.allclose(alone[:,-10:].mean(axis=0),0.0)
+
+
+def test_rows_without_race_keys_are_not_grouped_together():
+    rows=[
+      {"horse_name":"A","history_win_rate":0.9,"history_top3_rate":0.9,"history_starts":20},
+      {"horse_name":"B","history_win_rate":0.1,"history_top3_rate":0.1,"history_starts":1},
+    ]
+    matrix=build_v3_matrix(rows)
+    assert (matrix[:,-10:] == 0.0).all()
 
 
 def test_walk_forward_profiles_expose_live_data_completeness():
