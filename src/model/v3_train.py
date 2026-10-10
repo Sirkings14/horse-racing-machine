@@ -2,7 +2,7 @@ from __future__ import annotations
 import json
 from collections import defaultdict
 from pathlib import Path
-from src.model.historical_profile import build_walk_forward_profiles
+from src.model.historical_profile import build_walk_forward_profiles, merge_program_history_rows
 from src.model.v3_model import fit_v3_model
 from src.model.calibration import fit_sigmoid_calibrator, apply_sigmoid_calibrator, calibration_metrics
 from src.model.v3_backtest import run as run_v3_backtest
@@ -36,7 +36,8 @@ def main():
     rows=json.loads(DATASET_FILE.read_text(encoding="utf-8"))
     if not isinstance(rows,list) or not rows: raise ValueError("Verified training dataset is empty.")
     history_rows = load_program_history(exclude_on_or_after=str(rows[-1].get("date") or "")[:10])
-    profiled=build_walk_forward_profiles(history_rows + rows)
+    profile_rows, program_history_audit = merge_program_history_rows(rows, history_rows)
+    profiled=build_walk_forward_profiles(profile_rows)
     groups=defaultdict(list)
     for row in profiled:
         if row.get("race_key") and not row.get("_program_only_history"): groups[str(row["race_key"])].append(row)
@@ -100,6 +101,7 @@ def main():
         "press_dependency":False,
         "post_race_feature_policy":"hard_exclusion",
         "calibration_method":"out_of_sample_sigmoid",
+        "program_history_merge_audit":program_history_audit,
         "calibration_races":len(keys)-split,
         "production_approved":approved,
         "economic_validation_status":economic_report.get("status"),

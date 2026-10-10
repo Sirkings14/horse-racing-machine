@@ -45,6 +45,72 @@ def _horse_key(row:dict[str,Any])->str:
 def horse_identity_source(row:dict[str,Any])->str:
     return "stable_id" if any(row.get(k) not in (None,"") for k in _ID_FIELDS) else "normalized_name"
 
+
+def merge_program_history_rows(
+    outcome_rows: Iterable[dict[str, Any]],
+    program_rows: Iterable[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], dict[str, int]]:
+    """Merge program-only starts without double-counting horse/date overlaps.
+
+    Program archives often contain a pre-race copy of a race already present
+    in the supervised participant dataset. Race identifiers and track labels
+    can differ between sources, so deduplication uses normalized horse name
+    and calendar date. A horse is not expected to start twice on the same day;
+    when outcome data exists for that horse/date, it is the preferred record.
+    Remaining duplicate program-only records for the same horse/date collapse
+    deterministically. Outcomes are never synthesized from program-only rows.
+    """
+    outcome_list = [dict(row) for row in outcome_rows]
+    known_outcome_starts: set[tuple[str, str]] = set()
+    for row in outcome_list:
+        if row.get("_program_only_history"):
+            continue
+        d = _date_key(row)
+        name = _clean_name(row.get("horse_name") or row.get("horse"))
+        if d and name:
+            known_outcome_starts.add((d, name))
+
+    kept_program_rows: list[dict[str, Any]] = []
+    seen_program_starts: set[tuple[str, str]] = set()
+    overlapping_program_rows_dropped = 0
+    duplicate_program_rows_dropped = 0
+    invalid_program_rows_dropped = 0
+    ordered_program_rows = sorted(
+        (dict(row) for row in program_rows),
+        key=lambda row: (
+            _date_key(row),
+            _clean_name(row.get("horse_name") or row.get("horse")),
+            str(row.get("race_key") or ""),
+            int(row.get("horse_number") or 0) if str(row.get("horse_number") or "").lstrip("-").isdigit() else 0,
+        ),
+    )
+    for row in ordered_program_rows:
+        d = _date_key(row)
+        name = _clean_name(row.get("horse_name") or row.get("horse"))
+        if not d or not name:
+            invalid_program_rows_dropped += 1
+            continue
+        key = (d, name)
+        if key in known_outcome_starts:
+            overlapping_program_rows_dropped += 1
+            continue
+        if key in seen_program_starts:
+            duplicate_program_rows_dropped += 1
+            continue
+        seen_program_starts.add(key)
+        row["_program_only_history"] = True
+        kept_program_rows.append(row)
+
+    audit = {
+        "outcome_rows": len(outcome_list),
+        "program_rows_seen": len(ordered_program_rows),
+        "overlapping_program_rows_dropped": overlapping_program_rows_dropped,
+        "duplicate_program_rows_dropped": duplicate_program_rows_dropped,
+        "invalid_program_rows_dropped": invalid_program_rows_dropped,
+        "program_rows_kept": len(kept_program_rows),
+    }
+    return outcome_list + kept_program_rows, audit
+
 def _distance(row):
     try:
         value=int(float(row.get("distance")))
