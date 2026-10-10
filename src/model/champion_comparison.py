@@ -21,6 +21,7 @@ OUTPUT_FILE = BASE_DIR / "data" / "model" / "champion_comparison_report.json"
 MIN_PAIRED_RACES = 1000
 MIN_MEAN_TOP5_COVERAGE_LIFT = 0.05
 MAX_WINNER_TOP3_REGRESSION = 0.01
+MAX_TOP3_COVERAGE_REGRESSION = 0.05
 MAX_BRIER_REGRESSION = 0.003
 MAX_LOG_LOSS_REGRESSION = 0.01
 MAX_ECE_REGRESSION = 0.01
@@ -188,6 +189,8 @@ def compare_reports(
         reasons.append("top5_coverage_uplift_not_confidently_positive")
     if winner3_ci["mean"] is None or winner3_ci["mean"] < -MAX_WINNER_TOP3_REGRESSION:
         reasons.append("winner_in_top3_regression_exceeds_tolerance")
+    if top3_ci["mean"] is None or top3_ci["mean"] < -MAX_TOP3_COVERAGE_REGRESSION:
+        reasons.append("top3_coverage_regression_exceeds_tolerance")
 
     candidate_metrics = candidate.get("metrics") or {}
     reference_metrics = reference.get("metrics") or {}
@@ -232,6 +235,7 @@ def compare_reports(
             "minimum_mean_top5_coverage_lift": MIN_MEAN_TOP5_COVERAGE_LIFT,
             "top5_coverage_lower_95_ci_must_exceed": 0.0,
             "maximum_winner_in_top3_regression": MAX_WINNER_TOP3_REGRESSION,
+            "maximum_top3_coverage_regression": MAX_TOP3_COVERAGE_REGRESSION,
             "maximum_brier_regression": MAX_BRIER_REGRESSION,
             "maximum_log_loss_regression": MAX_LOG_LOSS_REGRESSION,
             "maximum_ece_regression": MAX_ECE_REGRESSION,
