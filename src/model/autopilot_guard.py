@@ -113,7 +113,7 @@ def build_autopilot_guard(prediction: dict[str, Any] | None = None) -> dict[str,
         ranked = prediction.get("ranked_horses") or []
         if len(ranked) >= 2:
             margin = float(ranked[0].get("probability_top3", 0.0)) - float(ranked[1].get("probability_top3", 0.0))
-        if agreement == "strong_agreement" and margin >= 0.05:
+        if agreement in {"strong_agreement", "high"} and margin >= 0.05:
             confidence = "high"
         elif margin < 0.02:
             confidence = "low"

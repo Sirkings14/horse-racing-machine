@@ -5,9 +5,10 @@ from pathlib import Path
 from typing import Any
 import numpy as np
 from src.live.registry import eligible_races, LIVE_DIR
-from src.model.historical_profile import build_walk_forward_profiles
+from src.model.historical_profile import build_walk_forward_profiles, merge_program_history_rows
 from src.model.truth_gate import validate_program
 from src.model.v3_model import V3LogisticModel
+from src.model.v3_scoring import rank_disagreement, weighted_outcome_score
 from src.model.autopilot_guard import build_autopilot_guard
 from src.model.opportunity import score_race_opportunity
 from src.dataset.program_history import load_program_history
@@ -93,7 +94,8 @@ def main():
     if not key or len(current)!=int((_meta(program)["runners_count"] or 0)): return no_prediction("live_program_runner_data_incomplete",race_key=key,truth_gate=gate)
 
     prior_programs=load_program_history(exclude_on_or_after=str(_meta(program).get("date") or "")[:10])
-    profiled=build_walk_forward_profiles(history+prior_programs+current)
+    profile_rows, program_history_audit = merge_program_history_rows(history + current, prior_programs)
+    profiled=build_walk_forward_profiles(profile_rows)
     current_profile=[r for r in profiled if r.get("race_key")==key]
     if len(current_profile)!=len(current): return no_prediction("current_profile_incomplete",race_key=key)
 
@@ -107,18 +109,21 @@ def main():
     history_start_counts=sorted(int(r.get("history_starts") or 0) for r in current_profile)
     distance_start_counts=sorted(int(r.get("distance_starts") or 0) for r in current_profile)
     feature_health={"runners":len(current_profile),"history_coverage":round(history_coverage,3),"course_coverage":round(course_coverage,3),"distance_coverage":round(distance_coverage,3),"complete_rows":round(sum(float(r.get("data_completeness") or 0.0) for r in current_profile)/len(current_profile),3) if current_profile else 0.0,
-        "identity_sources":identity_sources,"history_starts_sorted":history_start_counts,"distance_starts_sorted":distance_start_counts}
+        "identity_sources":identity_sources,"history_starts_sorted":history_start_counts,"distance_starts_sorted":distance_start_counts,"program_history_audit":program_history_audit}
     p1=models["winner"].predict_proba(current_profile)
     p3=models["top3"].predict_proba(current_profile)
     p5=models["top5"].predict_proba(current_profile)
+    horse_numbers=[int(row["horse_number"]) for row in current_profile]
+    disagreement_by_horse=rank_disagreement((p1,p3,p5),horse_numbers)
     ranked=[]
-    for row,a,b,c in zip(current_profile,p1,p3,p5):
-        completeness=float(row.get("data_completeness") or 0.0) 
-        raw_score=0.25*float(a)+0.50*float(b)+0.25*float(c)
-        disagreement=float(np.std([a,b,c]))
-        score=max(0.0,raw_score-0.15*disagreement)
-        ranked.append({"race_key":key,"horse_number":int(row["horse_number"]),"horse_name":row.get("horse_name"),"probability_winner":round(float(a),6),"probability_top3":round(float(b),6),"probability_top5":round(float(c),6),"ensemble_score":round(score,6),"model_disagreement":round(disagreement,6),"data_completeness":round(completeness,3)})
-    ranked.sort(key=lambda x:(-x["ensemble_score"],-x["probability_top3"],x["horse_number"]))
+    for row,a,b,c,disagreement in zip(current_profile,p1,p3,p5,disagreement_by_horse):
+        completeness=float(row.get("data_completeness") or 0.0)
+        # These models predict different events (winner, Top 3, Top 5): compare
+        # their within-race rank orders for disagreement, not raw probability scale.
+        # Keep the weighted score identical to the walk-forward backtest.
+        score=weighted_outcome_score(a,b,c)
+        ranked.append({"race_key":key,"horse_number":int(row["horse_number"]),"horse_name":row.get("horse_name"),"probability_winner":round(float(a),6),"probability_top3":round(float(b),6),"probability_top5":round(float(c),6),"ensemble_score":round(score,6),"model_disagreement":round(float(disagreement),6),"data_completeness":round(completeness,3)})
+    ranked.sort(key=lambda x:(-x["ensemble_score"],x["horse_number"]))
     for i,item in enumerate(ranked,1): item["predicted_rank"]=i
 
     top_scores=[x["ensemble_score"] for x in ranked[:5]]
