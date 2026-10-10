@@ -29,3 +29,9 @@ def test_missing_and_unrecognized_form_remain_explicit():
     assert missing["numeric_finishes"] == []
     assert odd["unknown_tokens"] == ["XYZ"]
     assert odd["availability"] == "parsed"
+
+def test_trend_keeps_status_markers_in_their_original_start_window():
+    result = analyze_form("1.1.D.2.2", "ATTELE")
+    assert result["recent3_numeric_finishes"] == [1, 1]
+    assert result["recent3_top3_rate"] == 1.0
+    assert result["recent_vs_older_finish_delta"] == 1.0
