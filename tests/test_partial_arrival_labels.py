@@ -1,3 +1,9 @@
+import importlib.util
+import json
+import sys
+import types
+from pathlib import Path
+
 from src.dataset.build_dataset import extract_race_rows
 from src.model.v3_model import fit_v3_model, known_binary_targets, evaluation_labels_complete
 
@@ -75,3 +81,38 @@ def test_training_fails_closed_when_no_labels_are_known():
 def test_backtest_requires_complete_labels_for_evaluation():
     assert evaluation_labels_complete([{"won": 1, "top3": 1}, {"won": 0, "top3": 0}])
     assert not evaluation_labels_complete([{"won": 1, "top3": 1}, {"won": 0, "top3": None}])
+
+
+def test_production_historical_builder_keeps_unlisted_runners_with_unknown_cutoff_labels(tmp_path, monkeypatch):
+    courses = [{
+        "raceKey": "R1", "date": "2026-06-01", "hippodrome": "CAEN",
+        "numCourse": 1, "nombreDeclaresPartants": 6, "ordreArrivee": [1, 2, 3],
+        "distance": 1600, "specialite": "PLAT", "montantPrix": 10000,
+    }]
+    participants = [
+        {"raceKey": "R1", "numero": number, "cheval": f"HORSE {number}", "cotePMU": 3.0 + number}
+        for number in range(1, 7)
+    ]
+    fake_datasets = types.ModuleType("datasets")
+    fake_datasets.load_dataset = lambda source, config, **kwargs: iter(courses if config == "courses" else participants)
+    monkeypatch.setitem(sys.modules, "datasets", fake_datasets)
+
+    script_path = Path(__file__).resolve().parents[1] / "scripts" / "build_historical_dataset.py"
+    spec = importlib.util.spec_from_file_location("test_build_historical_dataset", script_path)
+    module = importlib.util.module_from_spec(spec)
+    monkeypatch.setitem(sys.modules, spec.name, module)
+    spec.loader.exec_module(module)
+    module.OUT = tmp_path / "training_dataset_clean.json"
+    module.ROSTER_OUT = tmp_path / "historical_rosters.json"
+    module.load_dataset = fake_datasets.load_dataset
+    module.main()
+
+    rows = json.loads(module.OUT.read_text(encoding="utf-8"))
+    by_number = {row["horse_number"]: row for row in rows}
+    assert len(rows) == 6
+    assert by_number[4]["finish_position"] is None
+    assert by_number[4]["top3"] == 0
+    assert by_number[4]["top4"] is None
+    assert by_number[4]["top5"] is None
+    assert by_number[1]["top5"] == 1
+    assert by_number[4]["target_top5_known"] is False
