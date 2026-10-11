@@ -83,6 +83,35 @@ def _relative(rows:Sequence[dict[str,Any]])->np.ndarray:
     safe_stds=np.where(stds>1e-9,stds,1.0)
     return (selected-means)/safe_stds
 
+def tail_complete_races(rows:Sequence[dict[str,Any]],max_rows:int)->list[dict[str,Any]]:
+    """Keep the newest complete race groups when bounding training memory.
+
+    The returned row count may exceed max_rows by one race field. Rows without
+    a race key are isolated rather than accidentally grouped together.
+    """
+    if max_rows <= 0 or not rows:
+        return []
+    groups:dict[str,list[dict[str,Any]]]={}
+    order:list[str]=[]
+    for index,row in enumerate(rows):
+        key=str(row.get("race_key") or "").strip()
+        if not key:
+            key=f"__row_without_race_key__:{index}"
+        if key not in groups:
+            groups[key]=[]
+            order.append(key)
+        groups[key].append(row)
+    selected:list[list[dict[str,Any]]]=[]
+    count=0
+    for key in reversed(order):
+        if selected and count >= max_rows:
+            break
+        group=groups[key]
+        selected.append(group)
+        count += len(group)
+    return [row for group in reversed(selected) for row in group]
+
+
 def row_to_v3_features(row:dict[str,Any])->list[float]:
     base=_base_features(row)
     # Individual-row API keeps relative fields neutral. build_v3_matrix is
