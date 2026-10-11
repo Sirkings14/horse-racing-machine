@@ -103,6 +103,7 @@ def test_production_historical_builder_keeps_unlisted_runners_with_unknown_cutof
     module = importlib.util.module_from_spec(spec)
     monkeypatch.setitem(sys.modules, spec.name, module)
     spec.loader.exec_module(module)
+    module.BASE = tmp_path
     module.OUT = tmp_path / "training_dataset_clean.json"
     module.ROSTER_OUT = tmp_path / "historical_rosters.json"
     module.load_dataset = fake_datasets.load_dataset
