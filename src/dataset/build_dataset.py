@@ -122,8 +122,9 @@ def extract_arrival(result: Dict[str, Any]) -> List[int]:
 
     for value in arrival:
         number = safe_int(value)
-        if number is not None and number > 0:
-            output.append(number)
+        if number is None or number <= 0:
+            return []
+        output.append(number)
 
     return output
 
