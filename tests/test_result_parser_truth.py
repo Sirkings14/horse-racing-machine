@@ -1,6 +1,7 @@
 import unittest
+from pathlib import Path
 
-from src.parsers.results_parser import extract_arrival_from_line
+from src.parsers.results_parser import extract_arrival_from_line, parse_result_file
 
 
 class ResultParserTruthTests(unittest.TestCase):
@@ -27,6 +28,21 @@ class ResultParserTruthTests(unittest.TestCase):
         result = extract_arrival_from_line(line)
         self.assertIsNotNone(result)
         self.assertEqual(result["arrival"], [14, 6, 15])
+
+
+    def test_actual_caen_result_text_does_not_read_payout_digit_as_fourth_horse(self):
+        path = Path("data/processed/results/result_ECD_10-10-2026_R1_b166221896_4d03a7985e.txt")
+        self.assertTrue(path.exists(), f"expected repository fixture missing: {path}")
+        payload = parse_result_file(path)
+        race = next(item for item in payload["races"] if item["race_number"] == 4)
+        self.assertEqual(race["arrival"], [9, 10, 4])
+
+    def test_actual_vincennes_result_text_does_not_read_payout_digit_as_fourth_horse(self):
+        path = Path("data/processed/results/result_ECD_09-10-2026_R1_31914dd826_3ab2c3af4c.txt")
+        self.assertTrue(path.exists(), f"expected repository fixture missing: {path}")
+        payload = parse_result_file(path)
+        race = next(item for item in payload["races"] if item["race_number"] == 4)
+        self.assertEqual(race["arrival"], [14, 6, 15])
 
     def test_first_arrival_sequence_stops_before_later_payout_combinations(self):
         line = "1ère 5 - 6 - 9 6 1\\u202f100 3 5 - 6 2\\u202f400 62"
