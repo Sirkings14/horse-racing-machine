@@ -131,9 +131,12 @@ def _arrival(v):
         vals = item if isinstance(item, list) else [item]
         for x in vals:
             try:
-                out.append(int(x))
-            except Exception:
-                pass
+                number = int(x)
+            except (TypeError, ValueError, OverflowError):
+                return []
+            if number <= 0:
+                return []
+            out.append(number)
     return out
 
 def main():
@@ -170,6 +173,7 @@ def main():
     matched_meta = matched_arrival = matched_number = 0
     roster_candidates: dict[str, dict[str, dict[str, Any]]] = {}
     participant_numbers_by_key: dict[str, set[int]] = {}
+    participant_number_occurrences_by_key: dict[str, list[int]] = {}
 
     for i, p in enumerate(participants):
         columns_seen.update(p.keys())
@@ -187,6 +191,7 @@ def main():
 
         if meta and horse_number is not None:
             participant_numbers_by_key.setdefault(key, set()).add(horse_number)
+            participant_number_occurrences_by_key.setdefault(key, []).append(horse_number)
 
         # Build roster candidates from all participants before consulting arrival.
         # This is an independent roster source, not a result-derived finisher list.
@@ -246,7 +251,12 @@ def main():
         if not arrival:
             continue
         roster_numbers = participant_numbers_by_key.get(race_key, set())
-        if len(arrival) != len(set(arrival)) or not set(arrival).issubset(roster_numbers):
+        occurrences = participant_number_occurrences_by_key.get(race_key, [])
+        if (
+            len(arrival) != len(set(arrival))
+            or not set(arrival).issubset(roster_numbers)
+            or len(occurrences) != len(set(occurrences))
+        ):
             invalid_arrival_races.add(race_key)
     if invalid_arrival_races:
         before = len(rows)
