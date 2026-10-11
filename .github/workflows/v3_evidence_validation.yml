@@ -76,6 +76,8 @@ jobs:
           print(f"Dataset rows={len(d)} races={len({r.get('race_key') for r in d})}")
           PY
           python -m src.model.v3_backtest
+      - name: Run discipline-specific walk-forward challenger
+        run: python -m src.model.v3_discipline_backtest
       - name: Run historical press-odds benchmark
         run: python -m src.model.press_odds_benchmark
       - name: Train V3 model bundle
@@ -111,6 +113,8 @@ jobs:
             data/model/v3_backtest_report.json
             data/model/v3_models.json
             data/model/champion_comparison_report.json
+            data/model/v3_discipline_backtest_report.json
+            data/model/discipline_champion_comparison_report.json
           if-no-files-found: warn
           retention-days: 30
       - name: Commit V3 model artifact

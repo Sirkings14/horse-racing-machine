@@ -8,6 +8,7 @@ on:
       - "src/model/v3_features.py"
       - "src/model/v3_train.py"
       - "src/model/champion_comparison.py"
+      - "src/model/v3_discipline_backtest.py"
       - "src/model/race_strategy.py"
       - "src/model/form_analysis.py"
       - "src/notifications/telegram.py"
