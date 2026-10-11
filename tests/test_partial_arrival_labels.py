@@ -1,5 +1,5 @@
 from src.dataset.build_dataset import extract_race_rows
-from src.model.v3_model import fit_v3_model, known_binary_targets
+from src.model.v3_model import fit_v3_model, known_binary_targets, evaluation_labels_complete
 
 
 def _matched_record(arrival):
@@ -103,3 +103,24 @@ def test_model_training_fails_closed_if_no_labels_are_known():
         assert "No known binary labels" in str(error)
     else:
         raise AssertionError("Expected unknown-label-only training to fail closed")
+
+
+
+def test_backtest_rejects_incomplete_winner_or_top3_label_sets():
+    complete = [
+        {"won": 1, "top3": 1},
+        {"won": 0, "top3": 1},
+        {"won": 0, "top3": 0},
+    ]
+    incomplete = [
+        {"won": 1, "top3": 1},
+        {"won": 0, "top3": 1},
+        {"won": 0, "top3": None},
+    ]
+    missing_winner = [
+        {"won": 1, "top3": 1},
+        {"won": None, "top3": 0},
+    ]
+    assert evaluation_labels_complete(complete) is True
+    assert evaluation_labels_complete(incomplete) is False
+    assert evaluation_labels_complete(missing_winner) is False

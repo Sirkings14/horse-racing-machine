@@ -61,6 +61,19 @@ def known_binary_targets(rows: Sequence[dict[str, Any]], target_field: str) -> t
     return indices, labels
 
 
+def evaluation_labels_complete(
+    rows: Sequence[dict[str, Any]],
+    required_targets: Sequence[str] = ("won", "top3"),
+) -> bool:
+    """True only when every runner has every target required for race scoring."""
+    if not rows:
+        return False
+    return all(
+        len(known_binary_targets(rows, target)[0]) == len(rows)
+        for target in required_targets
+    )
+
+
 def fit_v3_model(rows: Sequence[dict[str, Any]], target_field: str="top3", epochs: int=900, learning_rate: float=0.03, l2: float=1.5) -> V3LogisticModel:
     if not rows: raise ValueError("Cannot train V3 on empty rows.")
     # Build features across complete race fields before masking labels, so an
