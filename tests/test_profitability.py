@@ -18,6 +18,10 @@ class ProfitabilityTests(unittest.TestCase):
 
     def test_economic_gate_requires_verified_pre_race_provenance(self):
         base = {
+            "race_key": "2026-10-12|AUTEUIL|1",
+            "source": "example-market",
+            "market_type": "winner",
+            "odds": {"1": 4.5, "2": 5.0},
             "observed": True,
             "evidence_grade": "verified_pre_race_market_odds",
             "source_type": "bookmaker_win",
@@ -30,6 +34,9 @@ class ProfitabilityTests(unittest.TestCase):
         self.assertFalse(_economic_snapshot({**base, "evidence_grade": "legacy"}))
         self.assertFalse(_economic_snapshot({**base, "captured_at": "2026-10-12T10:16:00Z"}))
         self.assertFalse(_economic_snapshot({**base, "source_type": "press_estimate"}))
+        self.assertFalse(_economic_snapshot({**base, "odds": {"1": 1.0}}))
+        self.assertFalse(_economic_snapshot({**base, "race_key": "unknown-race"}))
+        self.assertFalse(_economic_snapshot({**base, "source": ""}))
 
 
 if __name__ == "__main__":

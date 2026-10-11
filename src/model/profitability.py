@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from src.model.market_evidence import load_ledger
+from src.model.market_evidence import load_ledger, normalize_snapshot
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
@@ -67,7 +67,8 @@ def _economic_snapshot(row: Any) -> bool:
             return False
     except (KeyError, TypeError, ValueError):
         return False
-    return True
+    # Reuse the canonical validator so hand-edited or malformed ledger rows cannot enter ROI.
+    return normalize_snapshot(row) is not None
 
 
 def main() -> dict[str, Any]:
