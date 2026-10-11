@@ -41,6 +41,27 @@
       "prediction_id": "2026-10-11|AUTEUIL|3|2026-10-11T16:21:42.327711+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 235
+    },
+    "2026-10-12|MARSEILLE-BORELY|4": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          2,
+          5,
+          13,
+          8,
+          1
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-10-11T23:33:30.600543+00:00",
+      "prediction_id": "2026-10-12|MARSEILLE-BORELY|4|2026-10-11T23:33:30.075716+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 236
     }
   }
 }
