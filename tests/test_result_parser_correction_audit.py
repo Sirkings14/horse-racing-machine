@@ -23,7 +23,6 @@ class ResultParserCorrectionAuditTests(unittest.TestCase):
             text_file = processed / "result_sample.txt"
             legacy_file = structured / "result_sample.json"
 
-            # Use a true narrow no-break space, matching the PDF extraction.
             payout_space = chr(0x202F)
             text_file.write_text(
                 "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\\n"
