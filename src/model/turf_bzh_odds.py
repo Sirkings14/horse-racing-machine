@@ -31,6 +31,7 @@ def build_snapshot(
     race_key: str,
     race_off_at: str,
     source_url: str,
+    expected_course_code: str,
     expected_runner_numbers: set[int],
     captured_at: str | None = None,
 ) -> dict[str, Any] | None:
@@ -39,6 +40,8 @@ def build_snapshot(
     if not isinstance(data, dict) or not isinstance(data.get("partants"), list):
         return None
     if data.get("source") != "pmu":
+        return None
+    if str(data.get("code_course") or "").upper() != expected_course_code.upper():
         return None
 
     response_date = str(data.get("date") or "")
@@ -115,6 +118,7 @@ def fetch_snapshot(
         race_key=race_key,
         race_off_at=race_off_at,
         source_url=url,
+        expected_course_code=course_code,
         expected_runner_numbers=expected_runner_numbers,
     )
     if snapshot is None:
