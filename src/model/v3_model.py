@@ -35,10 +35,40 @@ class V3LogisticModel:
     def from_dict(cls, payload: dict[str, Any]) -> "V3LogisticModel":
         return cls(list(payload["feature_names"]), list(payload["mean"]), list(payload["std"]), float(payload["intercept"]), list(payload["coefficients"]), float(payload.get("positive_weight",1.0)),payload.get("calibration"))
 
+def known_binary_targets(rows: Sequence[dict[str, Any]], target_field: str) -> tuple[list[int], list[int]]:
+    """Return row indices and labels only where the target is explicitly known.
+
+    Missing or invalid targets are masked. In particular, an unknown Top-5
+    label from a partial official arrival must never be converted into a loss.
+    """
+    indices: list[int] = []
+    labels: list[int] = []
+    for index, row in enumerate(rows):
+        value = row.get(target_field)
+        if isinstance(value, bool):
+            label = int(value)
+        else:
+            try:
+                numeric = float(value)
+            except (TypeError, ValueError, OverflowError):
+                continue
+            if not np.isfinite(numeric) or numeric not in (0.0, 1.0):
+                continue
+            label = int(numeric)
+        indices.append(index)
+        labels.append(label)
+    return indices, labels
+
+
 def fit_v3_model(rows: Sequence[dict[str, Any]], target_field: str="top3", epochs: int=900, learning_rate: float=0.03, l2: float=1.5) -> V3LogisticModel:
     if not rows: raise ValueError("Cannot train V3 on empty rows.")
-    x=build_v3_matrix(rows)
-    y=np.asarray([1.0 if int(row.get(target_field,0))==1 else 0.0 for row in rows],dtype=float)
+    # Build features on the complete runner fields first. Masking labels after
+    # matrix construction preserves each race's full-field relative features.
+    x_all=build_v3_matrix(rows)
+    indices,known_labels=known_binary_targets(rows,target_field)
+    if not indices: raise ValueError(f"No known binary labels available for target {target_field}.")
+    x=x_all[indices]
+    y=np.asarray(known_labels,dtype=float)
     positive=float(y.sum()); negative=float(len(y)-positive)
     if positive<=0 or negative<=0: raise ValueError("V3 training data needs positive and negative examples.")
     mean=x.mean(axis=0); std=np.where(x.std(axis=0)<1e-9,1.0,x.std(axis=0)); z=(x-mean)/std

@@ -153,8 +153,9 @@ def extract_arrival_from_line(
         r"e"
         r")"
         r"\s*"
-        r"(?P<arrival>.+?)"
-        r"\s*$",
+        # Capture the initial runner sequence only. Payout amounts/counts
+        # can continue on the same OCR line but are not arrival positions.
+        r"(?P<arrival>\d+(?:\s*[-;/]\s*\d+)+)",
         re.IGNORECASE,
     )
 

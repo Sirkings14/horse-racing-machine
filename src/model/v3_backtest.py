@@ -6,6 +6,7 @@ import random
 
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_model import fit_v3_model
+from src.model.v3_features import tail_complete_races
 from src.model.calibration import calibration_metrics
 from src.dataset.program_history import load_program_history
 
@@ -70,7 +71,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
             prior_keys=[k for d in dates[:di] for k in date_to_keys[d]]
             train=[r for k in prior_keys for r in groups[k]]
             if len(train) > max_train_rows:
-                train = train[-max_train_rows:]
+                train = tail_complete_races(train,max_train_rows)
             models={}
             try:
                 models["winner"]=fit_v3_model(train,target_field="won",epochs=epochs)

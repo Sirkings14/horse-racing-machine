@@ -133,6 +133,26 @@ def accounting(races, source, value_only=False):
     }
 
 
+def benchmark_availability(report):
+    """Separate missing comparison data from code/evaluation errors.
+
+    An unavailable press benchmark is not economic evidence and must never
+    unlock betting, but it should not abort unrelated predictive validation.
+    """
+    sources = report.get("sources") or {}
+    priced = {
+        name: int((data or {}).get("priced_races") or 0)
+        for name, data in sources.items()
+    }
+    available = report.get("status") == "benchmark_available" and any(value > 0 for value in priced.values())
+    return {
+        "available": available,
+        "status": "available" if available else "awaiting_comparable_program_prices",
+        "priced_races_by_source": priced,
+        "market_evidence_gate_unlocked": False,
+    }
+
+
 def main():
     history = load(HISTORY_FILE)
     bundle = load(MODEL_FILE)
@@ -243,8 +263,16 @@ def main():
         },
         "market_evidence_gate_unlocked": False,
     }, indent=2))
-    if report["status"] != "benchmark_available" or not any(x["priced_races"] for x in report["sources"].values()):
-        raise SystemExit("No usable published press-price benchmark found.")
+    availability = benchmark_availability(report)
+    print(json.dumps({
+        "benchmark_availability": availability,
+        "training_history_end_date": report.get("training_history_end_date"),
+        "programs_found_before_cutoff": report.get("programs_found_before_cutoff"),
+        "benchmark_races": report.get("benchmark_races", 0),
+        "policy": "missing press prices are not market evidence; predictive validation continues and the economic gate remains locked",
+    }, indent=2))
+    # No benchmark is an evidence gap, not a software crash. Genuine parsing,
+    # model-loading, and data-integrity exceptions still fail the step normally.
 
 
 if __name__ == "__main__":
