@@ -25,8 +25,9 @@ class ResultParserCorrectionAuditTests(unittest.TestCase):
 
             payout_space = chr(0x202F)
             text_file.write_text(
-                "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\n"
-                f"4ième 9 - 10 - 4 10 1{payout_space}400 74 9 - 4 10 700\n",
+                "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\\n"
+                f"4ième 9 - 10 - 4 10 1{payout_space}400 74 9 - 4 10 700\\n"
+                f"8ième 3 1{payout_space}400 5 8 - 5 9{payout_space}200 93\\n",
                 encoding="utf-8",
             )
             legacy = {
@@ -34,7 +35,10 @@ class ResultParserCorrectionAuditTests(unittest.TestCase):
                 "date": "2026-10-10",
                 "meeting": 1,
                 "track": "CAEN",
-                "races": [{"race_number": 4, "arrival": [9, 10, 4, 1]}],
+                "races": [
+                    {"race_number": 4, "arrival": [9, 10, 4, 1]},
+                    {"race_number": 8, "arrival": [3, 1]},
+                ],
             }
             legacy_file.write_text(json.dumps(legacy), encoding="utf-8")
             original = legacy_file.read_text(encoding="utf-8")
@@ -53,6 +57,12 @@ class ResultParserCorrectionAuditTests(unittest.TestCase):
             self.assertEqual(report["legacy_has_extra_trailing_values"], 1)
             self.assertEqual(report["changed_race_samples"][0]["legacy_arrival"], [9, 10, 4, 1])
             self.assertEqual(report["changed_race_samples"][0]["reparsed_arrival"], [9, 10, 4])
+            self.assertEqual(report["legacy_only_races"], 1)
+            legacy_only = report["legacy_only_race_samples"][0]
+            self.assertTrue(legacy_only["manual_review_required"])
+            self.assertEqual(legacy_only["race_number"], 8)
+            self.assertEqual(legacy_only["manual_review_reason"], "single_number_without_hyphen_separator_payout_ambiguous")
+            self.assertIn("8ième 3 1", legacy_only["source_line_evidence"][0]["raw_line"])
             self.assertFalse(report["policy"]["rewrites_structured_results"])
             self.assertEqual(report["candidate_races_checked_against_roster"], 1)
             self.assertEqual(report["roster_valid_correction_candidates"], 1)
