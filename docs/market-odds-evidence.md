@@ -6,7 +6,15 @@ The official LONAB PMU'B program pages provide race programs and results/dividen
 
 ### Free source investigated: Open PMU API
 
-The public Open PMU API is accessible without an API key and provides historical race results. Its documented response includes a `cotes` array and derived statistics such as minimum, maximum, average, median, and favourite rank for runners. However, the published schema does not clearly establish the meaning and timestamp of each price in that array, nor prove that the prices were captured and available before the race started. Therefore these fields may be useful for exploratory historical analysis after their semantics are verified, but they are **not accepted as verified pre-race economic evidence** by the profitability engine.
+The public Open PMU API is accessible without an API key and provides historical race results. Its documented response includes a `cotes` array and derived statistics such as minimum, maximum, average, median, and favourite rank. In the documented example, the detailed horse records are nested under `arrivee_details` and cover the official finishers, rather than a complete pre-race field. The API schema does not clearly establish the meaning and timestamp of each price in the array. Therefore this is **not sufficient for complete-field, pre-race odds evidence or a reliable strategy ROI calculation**.
+
+We added an isolated audit tool to inspect the actual response shape for a selected date. It reports the number of detailed runner rows, whether `cotes` arrays exist, their lengths, and whether explicit timestamp fields are present. It never writes to the market-evidence ledger or interprets these values as pre-race prices.
+
+Run from the repository root:
+
+    python scripts/audit_open_pmu_cotes.py --date 09/29/2026
+
+The tool needs network access to the public endpoint. A successful response only describes the API data returned for that date; it does not upgrade the data to verified pre-race evidence. The endpoint does not document a rate limit or service-level guarantee, so avoid broad repeated queries.
 
 Documentation: https://github.com/open-pmu-api/open-pmu-api and https://open-pmu-api.vercel.app/api/arrivees
 
