@@ -1,14 +1,30 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 LEDGER_FILE = BASE_DIR / "data" / "evaluation" / "market_evidence.json"
 
 SUPPORTED_MARKETS = {"winner", "place", "exacta", "trifecta", "quartet", "quinte"}
+SUPPORTED_PRICE_SOURCES = {"bookmaker_win", "tote_win", "exchange_win"}
+RACE_KEY_RE = re.compile(r"^\d{4}-\d{2}-\d{2}\|[^|]+\|\d{1,2}$")
+
+
+def _parse_aware_timestamp(value: Any) -> datetime | None:
+    if not isinstance(value, str) or not value.strip():
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.strip().replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None or parsed.utcoffset() is None:
+        return None
+    return parsed.astimezone(timezone.utc)
 
 
 def _positive_float(value: Any) -> float | None:
@@ -20,12 +36,36 @@ def _positive_float(value: Any) -> float | None:
 
 
 def normalize_snapshot(snapshot: dict[str, Any]) -> dict[str, Any] | None:
-    """Accept only explicitly observed market prices; never infer them."""
+    """Validate independently observed, source-attributed pre-race prices.
+
+    Press estimates, model probabilities, result-time prices, and snapshots
+    without an auditable source/timestamp are not economic market evidence.
+    """
+    if not isinstance(snapshot, dict):
+        return None
+
     race_key = str(snapshot.get("race_key") or "").strip()
     source = str(snapshot.get("source") or "").strip()
+    source_type = str(snapshot.get("source_type") or "").strip().lower()
     market = str(snapshot.get("market_type") or "winner").strip().lower()
-    captured_at = str(snapshot.get("captured_at") or "").strip()
-    if not race_key or not source or market not in SUPPORTED_MARKETS or not captured_at:
+    source_url = str(snapshot.get("source_url") or snapshot.get("raw_reference") or "").strip()
+
+    captured = _parse_aware_timestamp(snapshot.get("captured_at"))
+    priced = _parse_aware_timestamp(snapshot.get("price_timestamp"))
+    race_off = _parse_aware_timestamp(snapshot.get("race_off_at"))
+
+    if not RACE_KEY_RE.fullmatch(race_key):
+        return None
+    if not source or source_type not in SUPPORTED_PRICE_SOURCES:
+        return None
+    if market not in SUPPORTED_MARKETS:
+        return None
+    parsed_url = urlparse(source_url)
+    if parsed_url.scheme not in {"http", "https"} or not parsed_url.netloc:
+        return None
+    if captured is None or priced is None or race_off is None:
+        return None
+    if priced > captured or captured > race_off or priced > race_off:
         return None
 
     prices: dict[int, float] = {}
@@ -37,20 +77,24 @@ def normalize_snapshot(snapshot: dict[str, Any]) -> dict[str, Any] | None:
             except (TypeError, ValueError):
                 continue
             price = _positive_float(value)
-            if price is not None:
+            if horse > 0 and price is not None:
                 prices[horse] = price
     if not prices:
         return None
 
     return {
         "race_key": race_key,
-        "captured_at": captured_at,
+        "captured_at": captured.isoformat(),
         "source": source,
+        "source_type": source_type,
         "market_type": market,
         "odds": prices,
         "official_dividends": snapshot.get("official_dividends") or {},
-        "price_timestamp": snapshot.get("price_timestamp"),
-        "raw_reference": snapshot.get("raw_reference"),
+        "price_timestamp": priced.isoformat(),
+        "race_off_at": race_off.isoformat(),
+        "source_url": source_url,
+        "raw_reference": snapshot.get("raw_reference") or source_url,
+        "evidence_grade": "verified_pre_race_market_odds",
         "observed": True,
     }
 
@@ -61,6 +105,7 @@ def observed_snapshots_for_race(race_key: str, market_type: str = "winner") -> l
         row for row in load_ledger()
         if isinstance(row, dict)
         and row.get("observed") is True
+        and row.get("evidence_grade") == "verified_pre_race_market_odds"
         and row.get("race_key") == race_key
         and row.get("market_type", "winner") == market_type
     ]
@@ -88,11 +133,15 @@ def append_snapshot(snapshot: dict[str, Any]) -> bool:
     identity = (
         normalized["race_key"],
         normalized["source"],
+        normalized["source_type"],
         normalized["market_type"],
         normalized["captured_at"],
     )
     if any(
-        (row.get("race_key"), row.get("source"), row.get("market_type"), row.get("captured_at")) == identity
+        (
+            row.get("race_key"), row.get("source"), row.get("source_type"),
+            row.get("market_type"), row.get("captured_at"),
+        ) == identity
         for row in rows if isinstance(row, dict)
     ):
         return False
@@ -108,6 +157,7 @@ def build_unavailable_record(race_key: str, captured_at: str | None = None) -> d
         "race_key": race_key,
         "captured_at": captured_at or datetime.now(timezone.utc).isoformat(),
         "source": None,
+        "source_type": None,
         "market_type": "winner",
         "odds": {},
         "observed": False,
@@ -115,5 +165,6 @@ def build_unavailable_record(race_key: str, captured_at: str | None = None) -> d
         "policy": {
             "never_invent_odds": True,
             "probabilities_are_not_prices": True,
+            "press_estimates_are_not_market_odds": True,
         },
     }

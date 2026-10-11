@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from src.model.market_evidence import load_ledger
+from src.model.market_evidence import load_ledger, normalize_snapshot
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
@@ -19,45 +19,6 @@ def load_json(path: Path, default: Any) -> Any:
         return json.loads(path.read_text(encoding="utf-8"))
     except Exception:
         return default
-
-
-def extract_market_odds(prediction: dict[str, Any]) -> dict[int, float]:
-    """Read explicit market prices when a source provides them.
-
-    We deliberately do not manufacture odds from model probabilities. A
-    profitability claim requires an independently observed market price.
-    """
-    candidates = [
-        prediction.get("market_odds"),
-        prediction.get("odds"),
-        prediction.get("prices"),
-    ]
-    ranked = prediction.get("ranked_horses") or []
-
-    for candidate in candidates:
-        if isinstance(candidate, dict):
-            output: dict[int, float] = {}
-            for number, value in candidate.items():
-                try:
-                    output[int(number)] = float(value)
-                except (TypeError, ValueError):
-                    continue
-            if output:
-                return output
-
-    output: dict[int, float] = {}
-    for horse in ranked:
-        if not isinstance(horse, dict):
-            continue
-        number = horse.get("horse_number")
-        for key in ("market_odds", "odds", "price", "cote"):
-            try:
-                if number is not None and horse.get(key) is not None:
-                    output[int(number)] = float(horse[key])
-                    break
-            except (TypeError, ValueError):
-                continue
-    return output
 
 
 def evaluate_fixed_stake(
@@ -84,6 +45,32 @@ def evaluate_fixed_stake(
     }
 
 
+def _economic_snapshot(row: Any) -> bool:
+    """Only strict, timestamped pre-race evidence can enter ROI calculations."""
+    if not isinstance(row, dict):
+        return False
+    if row.get("observed") is not True:
+        return False
+    if row.get("evidence_grade") != "verified_pre_race_market_odds":
+        return False
+    if row.get("source_type") not in {"bookmaker_win", "tote_win", "exchange_win"}:
+        return False
+    if not row.get("source_url") or not row.get("price_timestamp") or not row.get("race_off_at"):
+        return False
+    try:
+        price_time = datetime.fromisoformat(str(row["price_timestamp"]).replace("Z", "+00:00"))
+        off_time = datetime.fromisoformat(str(row["race_off_at"]).replace("Z", "+00:00"))
+        captured_time = datetime.fromisoformat(str(row["captured_at"]).replace("Z", "+00:00"))
+        if any(value.tzinfo is None or value.utcoffset() is None for value in (price_time, off_time, captured_time)):
+            return False
+        if price_time > captured_time or price_time > off_time or captured_time > off_time:
+            return False
+    except (KeyError, TypeError, ValueError):
+        return False
+    # Reuse the canonical validator so hand-edited or malformed ledger rows cannot enter ROI.
+    return normalize_snapshot(row) is not None
+
+
 def main() -> dict[str, Any]:
     evaluations = load_json(EVALUATION_FILE, [])
     if not isinstance(evaluations, list):
@@ -95,39 +82,47 @@ def main() -> dict[str, Any]:
     ledger = load_ledger()
     ledger_by_race = {}
     for row in ledger:
-        if not isinstance(row, dict) or row.get("observed") is not True:
+        if not _economic_snapshot(row):
             continue
         key = (row.get("race_key"), row.get("market_type", "winner"))
-        ledger_by_race[key] = row
+        previous = ledger_by_race.get(key)
+        if previous is None or str(row.get("captured_at", "")) > str(previous.get("captured_at", "")):
+            ledger_by_race[key] = row
 
     for item in evaluations:
         if not isinstance(item, dict):
             continue
         prediction = item.get("prediction") or {}
-        odds = extract_market_odds(prediction)
-        # Historical evaluation files currently do not preserve market odds.
-        # Check the archived prediction separately when available.
         race_key = item.get("race_key")
-        archived = {}
-        if race_key:
-            safe = "".join(ch if ch.isalnum() or ch in "_.-" else "_" for ch in str(race_key))
-            archived = load_json(PREDICTIONS_DIR / f"{safe}.json", {})
-            if isinstance(archived, dict):
-                odds = extract_market_odds(archived) or odds
-
-        # Prefer a separately captured, source-attributed market snapshot.
         snapshot = ledger_by_race.get((race_key, "winner"))
-        if snapshot:
-            odds = {int(k): float(v) for k, v in (snapshot.get("odds") or {}).items()}
-        if not odds:
+        if not snapshot:
             continue
 
-        priced_predictions += 1
+        try:
+            odds = {int(k): float(v) for k, v in (snapshot.get("odds") or {}).items()}
+        except (TypeError, ValueError):
+            continue
         recommendations = [int(x) for x in prediction.get("recommended_numbers") or []]
-        winner = (item.get("result") or {}).get("winner")
+        # Partial price coverage is not enough to claim a comparable strategy ROI.
+        if not recommendations or any(number not in odds or odds[number] <= 1 for number in recommendations):
+            continue
+
+        winner_value = (item.get("result") or {}).get("winner")
+        try:
+            winner = int(winner_value) if winner_value is not None else None
+        except (TypeError, ValueError):
+            winner = None
+
+        priced_predictions += 1
+        accounting = evaluate_fixed_stake(recommendations, winner, odds)
         paper_rows.append({
             "race_key": race_key,
-            "accounting": evaluate_fixed_stake(recommendations, winner, odds),
+            "source": snapshot.get("source"),
+            "source_type": snapshot.get("source_type"),
+            "captured_at": snapshot.get("captured_at"),
+            "price_timestamp": snapshot.get("price_timestamp"),
+            "race_off_at": snapshot.get("race_off_at"),
+            "accounting": accounting,
         })
 
     total_stake = sum(row["accounting"]["stake"] for row in paper_rows)
@@ -138,7 +133,7 @@ def main() -> dict[str, Any]:
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "status": "pricing_ready" if priced_predictions else "awaiting_market_odds",
         "total_verified_predictions": total_predictions,
-        "predictions_with_observed_market_odds": priced_predictions,
+        "predictions_with_complete_pre_race_market_odds": priced_predictions,
         "pricing_coverage": (priced_predictions / total_predictions if total_predictions else 0.0),
         "paper_accounting": {
             "stake_per_selection": 1.0,
@@ -150,11 +145,13 @@ def main() -> dict[str, Any]:
         "rows": paper_rows,
         "market_evidence": {
             "ledger_path": str(LEDGER_FILE),
-            "observed_snapshot_count": sum(1 for row in ledger if isinstance(row, dict) and row.get("observed") is True),
+            "verified_pre_race_snapshot_count": sum(1 for row in ledger if _economic_snapshot(row)),
             "source_attributed_prices_only": True,
+            "complete_recommendation_price_coverage_required": True,
         },
         "requirements_for_real_edge_measurement": [
-            "capture market odds at prediction time",
+            "capture actual market odds before the race starts",
+            "store source identity, source URL, price timestamp, capture timestamp, and race-off time",
             "store the bet type and exact stake rule",
             "store official payout/dividend for the same bet type",
             "calculate ROI and maximum drawdown on chronological out-of-sample predictions",
@@ -162,6 +159,9 @@ def main() -> dict[str, Any]:
         ],
         "policy": {
             "never_invent_odds": True,
+            "press_estimates_are_not_market_odds": True,
+            "post-race_prices_are_rejected": True,
+            "partial_recommendation_price_coverage_is_excluded": True,
             "no_profitability_claim_without_observed_prices": True,
             "paper_results_are_not_live_betting_results": True,
         },
@@ -170,7 +170,7 @@ def main() -> dict[str, Any]:
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Profitability status: {report['status']}")
-    print(f"Observed market-price coverage: {report['pricing_coverage']:.1%}")
+    print(f"Verified pre-race market-price coverage: {report['pricing_coverage']:.1%}")
     return report
 
 
