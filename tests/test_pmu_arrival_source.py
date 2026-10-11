@@ -57,22 +57,19 @@ def test_valid_top5_with_local_fourth_place_match_is_shadow_only():
     assert result["policy"]["odds_and_market_fields_ignored"] is True
 
 
-def test_top3_match_with_later_local_place_conflict_is_flagged_not_reconciled():
+def test_visible_local_fourth_place_conflict_is_rejected():
     result = validate_pmu_payload(
         _payload(order=(9, 10, 4, 7, 5)),
         {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
         [9, 10, 4, 1],
     )
-    assert result["accepted"] is True
-    assert result["local_top3_match"] is True
-    assert result["local_tail_match"] is False
-    assert result["reason"] == "corrected_local_arrival_conflict_requires_manual_resolution"
-    assert result["local_tail_conflicts"] == [{
+    assert result["accepted"] is False
+    assert result["reason"] == "pmu_arrival_disagrees_with_corrected_local_prefix"
+    assert result["first_mismatch"] == {
         "rank": 4,
         "local_number": 1,
         "pmu_number": 7,
-        "requires_manual_resolution": True,
-    }]
+    }
     assert result["source_approved_for_training"] is False
 
 
@@ -99,7 +96,7 @@ def test_runner_outside_roster_is_rejected():
 def test_local_prefix_mismatch_is_rejected():
     result = validate_pmu_payload(_payload(), {1, 2, 3, 4, 5, 9, 10}, [9, 10, 5, 1])
     assert result["accepted"] is False
-    assert result["reason"] == "pmu_top3_disagrees_with_local_result_prefix"
+    assert result["reason"] == "pmu_arrival_disagrees_with_corrected_local_prefix"
 
 
 def test_local_evidence_requires_exact_roster_and_local_result_prefix(tmp_path: Path):
@@ -187,7 +184,6 @@ def test_corrected_raw_result_prefix_removes_legacy_payout_digit_before_pmu_chec
     program = {
         "document_type": "program",
         "date": "2026-10-10",
-        "race": {"track": "CAEN", "race_number": 4, "race_type": "ATTELE", "runners_count": 5},
         "race": {"track": "CAEN", "race_number": 4, "race_type": "ATTELE", "runners_count": 10},
         "horses": [{"number": number, "horse": f"H{number}"} for number in range(1, 11)],
     }
@@ -198,8 +194,8 @@ def test_corrected_raw_result_prefix_removes_legacy_payout_digit_before_pmu_chec
         "meeting": 1,
         "races": [{"race_number": 4, "arrival": [9, 10, 4, 1]}],
     }
-    # This local roster fixture is intentionally insufficient for 9 and 10;
-    # local parsing is checked separately and PMU roster validation must reject it.
+    # The ten-runner roster includes every listed horse; the legacy fourth-place
+    # value is intentionally wrong and must be removed using corrected raw text.
     (programs / "program.json").write_text(json.dumps(program), encoding="utf-8")
     (results / "result.json").write_text(json.dumps(legacy), encoding="utf-8")
     (processed / "result.txt").write_text(
