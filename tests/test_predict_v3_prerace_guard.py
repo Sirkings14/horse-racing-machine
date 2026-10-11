@@ -1,4 +1,7 @@
+import json
+import tempfile
 import unittest
+from pathlib import Path
 from unittest.mock import patch
 
 from src.model import predict_v3
@@ -14,12 +17,55 @@ class PreraceProgramSelectionTests(unittest.TestCase):
             "today.json": {"date": "2026-10-11", "published_arrival": [8, 13, 12, 7, 4]},
             "tomorrow.json": {"date": "2026-10-12", "published_arrival": []},
         }
+        self.temp_dir = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp_dir.cleanup)
+        self.predictions_dir = Path(self.temp_dir.name) / "predictions"
+        self.predictions_dir.mkdir()
+        self.ledger_file = Path(self.temp_dir.name) / "telegram_delivery_ledger.json"
+
+    def _write_notified_snapshot(self, horse_numbers):
+        race_key = "2026-10-11|AUTEUIL|3"
+        reasons = ["economic_validation_unavailable", "insufficient_verified_history"]
+        payload = {
+            "generated_at": "2026-10-11T16:21:42.327711+00:00",
+            "race_key": race_key,
+            "mode": "v5_market_opportunity_layer",
+            "live_decision": "NO_BET",
+            "ranked_horses": [{"horse_number": number} for number in horse_numbers],
+            "autopilot_guard": {"decision": "PASS", "gate_reasons": reasons},
+        }
+        safe_key = "2026-10-11_AUTEUIL_3"
+        (self.predictions_dir / f"{safe_key}_v3.json").write_text(
+            json.dumps(payload), encoding="utf-8"
+        )
+        signature = {
+            "decision": "NO_BET",
+            "candidates_in_order": [int(number) for number in horse_numbers],
+            "gate_reasons": sorted(reasons),
+        }
+        self.ledger_file.write_text(
+            json.dumps({
+                "schema_version": 1,
+                "notifications": {
+                    race_key: {
+                        "signature": signature,
+                        "sent_at": "2026-10-11T16:21:42.705918+00:00",
+                        "prediction_id": "test-prediction",
+                        "model_version": "v4-evidence-no-press",
+                        "telegram_message_id": 235,
+                    }
+                },
+            }),
+            encoding="utf-8",
+        )
 
     def _fake_load(self, path):
         return self.programs[path.name]
 
     def test_skips_race_with_published_arrival_and_selects_next_race(self):
-        with patch.object(predict_v3, "_json", side_effect=self._fake_load):
+        with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
+             patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
+             patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
             entry, program = predict_v3._first_unfinished_program(self.races)
 
         self.assertEqual(entry["race_key"], "2026-10-12|MARSEILLE-BORELY|4")
@@ -35,7 +81,58 @@ class PreraceProgramSelectionTests(unittest.TestCase):
 
     def test_selects_first_race_when_no_arrival_is_published(self):
         self.programs["today.json"]["published_arrival"] = []
-        with patch.object(predict_v3, "_json", side_effect=self._fake_load):
+        with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
+             patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
+             patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
+            entry, program = predict_v3._first_unfinished_program(self.races)
+
+        self.assertEqual(entry["race_key"], "2026-10-11|AUTEUIL|3")
+        self.assertEqual(program["date"], "2026-10-11")
+
+    def test_skips_identical_same_day_snapshot_after_confirmed_telegram_delivery(self):
+        self.programs["today.json"]["published_arrival"] = []
+        self._write_notified_snapshot([1, 16, 14, 13, 2])
+
+        with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
+             patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
+             patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
+            entry, program = predict_v3._first_unfinished_program(self.races)
+
+        self.assertEqual(entry["race_key"], "2026-10-12|MARSEILLE-BORELY|4")
+        self.assertEqual(program["date"], "2026-10-12")
+
+    def test_keeps_same_day_race_eligible_when_snapshot_changes_for_update(self):
+        self.programs["today.json"]["published_arrival"] = []
+        self._write_notified_snapshot([1, 16, 14, 13, 2])
+        snapshot_path = self.predictions_dir / "2026-10-11_AUTEUIL_3_v3.json"
+        payload = json.loads(snapshot_path.read_text(encoding="utf-8"))
+        payload["ranked_horses"] = [{"horse_number": number} for number in [5, 16, 14, 13, 2]]
+        snapshot_path.write_text(json.dumps(payload), encoding="utf-8")
+
+        with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
+             patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
+             patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
+            entry, program = predict_v3._first_unfinished_program(self.races)
+
+        self.assertEqual(entry["race_key"], "2026-10-11|AUTEUIL|3")
+        self.assertEqual(program["date"], "2026-10-11")
+
+    def test_keeps_same_day_race_eligible_when_delivery_was_not_confirmed(self):
+        self.programs["today.json"]["published_arrival"] = []
+        snapshot_path = self.predictions_dir / "2026-10-11_AUTEUIL_3_v3.json"
+        snapshot_path.write_text(json.dumps({
+            "generated_at": "2026-10-11T16:21:42.327711+00:00",
+            "live_decision": "NO_BET",
+            "ranked_horses": [{"horse_number": number} for number in [1, 16, 14, 13, 2]],
+            "autopilot_guard": {
+                "decision": "PASS",
+                "gate_reasons": ["economic_validation_unavailable", "insufficient_verified_history"],
+            },
+        }), encoding="utf-8")
+
+        with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
+             patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
+             patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
             entry, program = predict_v3._first_unfinished_program(self.races)
 
         self.assertEqual(entry["race_key"], "2026-10-11|AUTEUIL|3")

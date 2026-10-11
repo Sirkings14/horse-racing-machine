@@ -17,6 +17,7 @@ DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
 MODEL_FILE=BASE_DIR/"data/model/v3_models.json"
 OUTPUT_FILE=BASE_DIR/"data/model/latest_v3_prediction.json"
 PREDICTIONS_DIR=BASE_DIR/"data/predictions"
+NOTIFICATION_LEDGER_FILE=BASE_DIR/"data/notifications/telegram_delivery_ledger.json"
 
 def _json(path): return json.loads(path.read_text(encoding="utf-8"))
 
@@ -70,17 +71,114 @@ def _save(result):
 def no_prediction(reason,**extra):
     result={"prediction_id":None,"generated_at":datetime.now(timezone.utc).isoformat(),"model_version":None,"mode":"v3_unavailable","reason":reason,"recommended_numbers":[],"ranked_horses":[],**extra}; _save(result); return result
 
-def _first_unfinished_program(races):
-    """Select the earliest current/future race that has no published result.
+def _notification_signature(payload: dict[str, Any]) -> dict[str, Any]:
+    """Build the same semantic signature used by the Telegram delivery ledger."""
+    ranked = payload.get("ranked_horses") or []
+    candidates = [
+        item.get("horse_number")
+        for item in ranked[:5]
+        if isinstance(item, dict) and item.get("horse_number") is not None
+    ]
+    if not candidates:
+        candidates = payload.get("recommended_numbers") or []
 
-    A race-day PDF can be updated with its official arrival after the event.
-    Such a document must not be treated as a fresh pre-race opportunity.
-    """
+    normalized_candidates: list[int | str] = []
+    for value in candidates:
+        try:
+            normalized_candidates.append(int(value))
+        except (TypeError, ValueError):
+            normalized_candidates.append(str(value))
+
+    guard = payload.get("autopilot_guard") or {}
+    decision = payload.get("live_decision")
+    if not decision:
+        decision = "NO_BET" if guard.get("decision") == "PASS" else "PLAY_CANDIDATE"
+
+    gate_reasons = []
+    if decision == "NO_BET":
+        gate_reasons = guard.get("gate_reasons") or payload.get("no_bet_reason") or [
+            "autopilot guard blocked live play"
+        ]
+
+    return {
+        "decision": str(decision),
+        "candidates_in_order": normalized_candidates,
+        "gate_reasons": sorted({str(reason) for reason in gate_reasons if str(reason).strip()}),
+    }
+
+
+def _read_json_mapping(path: Path) -> dict[str, Any] | None:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    return payload if isinstance(payload, dict) else None
+
+
+def _already_notified_for_same_day_snapshot(race_key: str, race_date: str) -> bool:
+    """Skip a race only when its current-date snapshot matches confirmed Telegram delivery."""
+    try:
+        target_date = date.fromisoformat(str(race_date)[:10])
+    except (TypeError, ValueError):
+        return False
+
+    safe_key = re.sub(r"[^A-Za-z0-9_.-]+", "_", str(race_key))
+    snapshot_path = PREDICTIONS_DIR / f"{safe_key}_v3.json"
+    snapshot = _read_json_mapping(snapshot_path)
+    if snapshot is None:
+        return False
+
+    try:
+        generated_at = datetime.fromisoformat(str(snapshot.get("generated_at") or "").replace("Z", "+00:00"))
+        if generated_at.tzinfo is None:
+            generated_at = generated_at.replace(tzinfo=timezone.utc)
+        generated_date = generated_at.astimezone(timezone.utc).date()
+    except (TypeError, ValueError):
+        return False
+    if generated_date != target_date:
+        return False
+
+    ledger = _read_json_mapping(NOTIFICATION_LEDGER_FILE)
+    notifications = (ledger or {}).get("notifications")
+    if not isinstance(notifications, dict):
+        return False
+    delivery = notifications.get(race_key)
+    if not isinstance(delivery, dict) or not isinstance(delivery.get("signature"), dict):
+        return False
+
+    # A matching old ledger entry is not enough: its confirmed delivery must
+    # belong to this race date as well as matching the current snapshot.
+    try:
+        sent_at = datetime.fromisoformat(str(delivery.get("sent_at") or "").replace("Z", "+00:00"))
+        if sent_at.tzinfo is None:
+            sent_at = sent_at.replace(tzinfo=timezone.utc)
+        sent_date = sent_at.astimezone(timezone.utc).date()
+    except (TypeError, ValueError):
+        return False
+    if sent_date != target_date:
+        return False
+
+    return delivery["signature"] == _notification_signature(snapshot)
+
+
+def _first_unfinished_program(races):
+    """Select the earliest eligible race not already completed or identically notified."""
     for entry in races:
         program = _json(LIVE_DIR / str(entry["structured_file"]))
+        race_key = str(entry.get("race_key") or "")
+        race_date = str(program.get("date") or entry.get("date") or race_key.split("|", 1)[0])[:10]
+
         if program.get("published_arrival"):
-            print(f"Skipping completed race {entry.get('race_key')}: published arrival is present.")
+            print(f"Skipping completed race {race_key}: published arrival is present.")
             continue
+
+        if _already_notified_for_same_day_snapshot(race_key, race_date):
+            print(
+                f"Skipping race {race_key}: the identical prediction was already "
+                "delivered for this race date."
+            )
+            continue
+
         return entry, program
     return None, None
 
