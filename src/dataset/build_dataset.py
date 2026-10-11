@@ -247,7 +247,6 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
         return []
 
     arrival_positions_available = len(arrival)
-    winner_label_known = arrival_positions_available >= 1
     rows: List[Dict[str, Any]] = []
     seen_numbers = set()
 
