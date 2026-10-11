@@ -26,6 +26,16 @@ def test_partial_three_place_arrival_masks_top4_top5_negatives():
     assert all(not r["target_top4_known"] and not r["target_top5_known"] for r in rows)
 
 
+def test_two_place_arrival_keeps_observed_top3_positives_but_masks_unknown_negatives():
+    rows = extract_race_rows(_matched_record([2, 1]))
+    by_number = {r["horse_number"]: r for r in rows}
+    assert by_number[1]["top3"] == 1
+    assert by_number[2]["top3"] == 1
+    assert all(by_number[n]["top3"] is None for n in (3, 4, 5, 6))
+    assert by_number[1]["top4"] == 1
+    assert by_number[2]["top5"] == 1
+
+
 def test_four_place_arrival_only_defines_top4_not_top5():
     rows = extract_race_rows(_matched_record([4, 2, 1, 5]))
     by_number = {r["horse_number"]: r for r in rows}
