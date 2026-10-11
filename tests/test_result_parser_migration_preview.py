@@ -1,3 +1,4 @@
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -36,7 +37,7 @@ class ResultParserMigrationPreviewTests(unittest.TestCase):
     def test_preview_only_includes_roster_checked_tail_trims_and_never_writes_sources(self):
         with TemporaryDirectory() as temporary:
             root = Path(temporary)
-            _, source = _fixture(root, "result_a", "4ième 9 - 10 - 4 10 1 400 74", [9, 10, 4, 1])
+            text_path, source = _fixture(root, "result_a", "4ième 9 - 10 - 4 10 1 400 74", [9, 10, 4, 1])
             original = source.read_text(encoding="utf-8")
             index = {
                 "2026-10-10|CAEN|4": {
@@ -50,6 +51,12 @@ class ResultParserMigrationPreviewTests(unittest.TestCase):
             self.assertEqual(report["migration_preview_eligible_groups"], 1)
             self.assertEqual(report["eligible_groups"][0]["proposed_arrival"], [9, 10, 4])
             self.assertFalse(report["policy"]["modifies_structured_results"])
+            self.assertEqual(report["schema_version"], 2)
+            self.assertTrue(report["policy"]["each_candidate_records_input_sha256"])
+            copy = report["eligible_groups"][0]["structured_result_copies"][0]
+            self.assertEqual(copy["structured_sha256"], hashlib.sha256(source.read_bytes()).hexdigest())
+            self.assertEqual(copy["processed_text_sha256"], hashlib.sha256(text_path.read_bytes()).hexdigest())
+            self.assertEqual(len(copy["roster_evidence_sha256"]), 64)
             self.assertEqual(source.read_text(encoding="utf-8"), original)
 
     def test_conflicting_result_copies_are_not_eligible(self):
