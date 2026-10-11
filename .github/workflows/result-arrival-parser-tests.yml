@@ -1,0 +1,33 @@
+name: Result arrival parser regression tests
+
+on:
+  push:
+    branches: [fix/result-arrival-payout-leakage]
+    paths:
+      - "src/parsers/results_parser.py"
+      - "tests/test_result_parser_truth.py"
+      - ".github/workflows/result-arrival-parser-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: result-arrival-parser-tests
+  cancel-in-progress: true
+
+jobs:
+  result-parser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout isolated parser-fix branch
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile parser and tests
+        run: python -m py_compile src/parsers/results_parser.py tests/test_result_parser_truth.py
+      - name: Run focused result-arrival regression tests
+        run: python -m unittest discover -s tests -p "test_result_parser_truth.py" -v
