@@ -1,5 +1,7 @@
 import json
+import unittest
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from scripts.preview_result_parser_migration import preview_migration
 from scripts.validate_result_parser_migration_manifest import preflight_manifest
@@ -30,21 +32,30 @@ def _make_fixture(root: Path, stale_text: bool = False):
     return processed, structured, index, manifest
 
 
-def test_preflight_accepts_current_preview_but_never_applies_it(tmp_path: Path):
-    processed, structured, index, manifest = _make_fixture(tmp_path)
-    report = preflight_manifest(manifest, processed, structured, index)
-    assert report["status"] == "all_current"
-    assert report["candidate_groups_seen"] == 1
-    assert report["candidate_groups_passed"] == 1
-    assert report["candidate_groups_failed"] == 0
-    assert report["policy"]["applies_corrections"] is False
-    current = json.loads((structured / "result_a.json").read_text(encoding="utf-8"))
-    assert current["races"][0]["arrival"] == [9, 10, 4, 1]
+class ResultParserMigrationPreflightTests(unittest.TestCase):
+    def test_preflight_accepts_current_preview_but_never_applies_it(self):
+        with TemporaryDirectory() as temporary:
+            processed, structured, index, manifest = _make_fixture(Path(temporary))
+            report = preflight_manifest(manifest, processed, structured, index)
+            self.assertEqual(report["status"], "all_current")
+            self.assertEqual(report["candidate_groups_seen"], 1)
+            self.assertEqual(report["candidate_groups_passed"], 1)
+            self.assertEqual(report["candidate_groups_failed"], 0)
+            self.assertFalse(report["policy"]["applies_corrections"])
+            current = json.loads((structured / "result_a.json").read_text(encoding="utf-8"))
+            self.assertEqual(current["races"][0]["arrival"], [9, 10, 4, 1])
+
+    def test_preflight_blocks_manifest_if_source_text_changed(self):
+        with TemporaryDirectory() as temporary:
+            processed, structured, index, manifest = _make_fixture(Path(temporary), stale_text=True)
+            report = preflight_manifest(manifest, processed, structured, index)
+            self.assertEqual(report["status"], "stale_or_invalid_candidates_found")
+            self.assertEqual(report["candidate_groups_failed"], 1)
+            self.assertEqual(
+                report["failure_reason_counts"]["one_or_more_copies_are_stale_or_invalid"],
+                1,
+            )
 
 
-def test_preflight_blocks_manifest_if_source_text_changed(tmp_path: Path):
-    processed, structured, index, manifest = _make_fixture(tmp_path, stale_text=True)
-    report = preflight_manifest(manifest, processed, structured, index)
-    assert report["status"] == "stale_or_invalid_candidates_found"
-    assert report["candidate_groups_failed"] == 1
-    assert report["failure_reason_counts"]["one_or_more_copies_are_stale_or_invalid"] == 1
+if __name__ == "__main__":
+    unittest.main()
