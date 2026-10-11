@@ -206,7 +206,27 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
     if not arrival_map or not horses:
         return []
 
-    rows: List[Dict[str, Any]] = []
+    # Reject ambiguous result data instead of training on conflicting identities.
+    valid_program_numbers = [
+        number for horse in horses
+        if not is_non_runner(horse)
+        for number in [safe_int(horse.get("number"))]
+        if number is not None and number > 0
+    ]
+    if len(valid_program_numbers) != len(set(valid_program_numbers)):
+        return []
+    if len(arrival) != len(set(arrival)):
+        return []
+    if not set(arrival).issubset(set(valid_program_numbers)):
+        return []
+
+    arrival_positions_available = len(arrival)
+    winner_label_known = arrival_positions_available >= 1
+    top3_label_known = arrival_positions_available >= 3
+    top4_label_known = arrival_positions_available >= 4
+    top5_label_known = arrival_positions_available >= 5
+
+    rows: List[Dict[str, Any]]
     seen_numbers = set()
 
     for horse in horses:
@@ -223,10 +243,12 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
         seen_numbers.add(horse_number)
 
         finish_position = arrival_map.get(horse_number)
-        top3 = 1 if finish_position is not None and finish_position <= 3 else 0
-        top4 = 1 if finish_position is not None and finish_position <= 4 else 0
-        top5 = 1 if finish_position is not None and finish_position <= 5 else 0
-        won = 1 if finish_position == 1 else 0
+        # A positive is known when observed; a negative is only known when
+        # the official arrival contains at least that many places.
+        won = (1 if finish_position == 1 else 0) if winner_label_known else None
+        top3 = (1 if finish_position is not None and finish_position <= 3 else 0) if top3_label_known else None
+        top4 = (1 if finish_position is not None and finish_position <= 4 else 0) if top4_label_known else None
+        top5 = (1 if finish_position is not None and finish_position <= 5 else 0) if top5_label_known else None
 
         ranking_values = {
             "favorites_rank": ranking_position(rankings.get("favorites"), horse_number),
@@ -273,6 +295,11 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
                 "top3": top3,
                 "top4": top4,
                 "top5": top5,
+                "arrival_positions_available": arrival_positions_available,
+                "target_won_known": winner_label_known,
+                "target_top3_known": top3_label_known,
+                "target_top4_known": top4_label_known,
+                "target_top5_known": top5_label_known,
                 "source_program": program.get("source_file"),
                 "source_result": result.get("source_file"),
             }
@@ -328,7 +355,9 @@ def write_csv(rows: List[Dict[str, Any]]) -> None:
         "progress_rank", "regularity_rank", "ranking_average", "ranking_presence",
         "press_paris_turf_fractional", "press_paris_turf_decimal",
         "press_tierce_magazine_fractional", "press_tierce_magazine_decimal", "press_odds_status",
-        "finish_position", "won", "top3", "top4", "top5", "source_program", "source_result",
+        "finish_position", "won", "top3", "top4", "top5",
+        "arrival_positions_available", "target_won_known", "target_top3_known",
+        "target_top4_known", "target_top5_known", "source_program", "source_result",
     ]
 
     with DATASET_CSV.open("w", newline="", encoding="utf-8") as file:
