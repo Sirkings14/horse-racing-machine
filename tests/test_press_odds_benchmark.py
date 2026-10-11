@@ -59,3 +59,36 @@ def test_drawdown_is_computed_chronologically():
     ]
     result = accounting(races, "paris_turf", value_only=False)
     assert result["maximum_drawdown_units"] >= 0
+
+def test_missing_benchmark_data_is_reported_not_treated_as_a_crash_or_market_evidence():
+    from src.model.press_odds_benchmark import benchmark_availability
+
+    report = {
+        "status": "no_benchmark_races",
+        "benchmark_races": 0,
+        "sources": {
+            "paris_turf": {"priced_races": 0},
+            "tierce_magazine": {"priced_races": 0},
+        },
+        "market_evidence_gate_unlocked": False,
+    }
+    state = benchmark_availability(report)
+    assert state["available"] is False
+    assert state["status"] == "awaiting_comparable_program_prices"
+    assert state["priced_races_by_source"] == {"paris_turf": 0, "tierce_magazine": 0}
+    assert state["market_evidence_gate_unlocked"] is False
+
+
+def test_benchmark_available_requires_at_least_one_race_with_prices():
+    from src.model.press_odds_benchmark import benchmark_availability
+
+    report = {
+        "status": "benchmark_available",
+        "sources": {
+            "paris_turf": {"priced_races": 0},
+            "tierce_magazine": {"priced_races": 2},
+        },
+    }
+    state = benchmark_availability(report)
+    assert state["available"] is True
+    assert state["market_evidence_gate_unlocked"] is False
