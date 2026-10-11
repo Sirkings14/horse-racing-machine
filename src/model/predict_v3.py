@@ -70,6 +70,20 @@ def _save(result):
 def no_prediction(reason,**extra):
     result={"prediction_id":None,"generated_at":datetime.now(timezone.utc).isoformat(),"model_version":None,"mode":"v3_unavailable","reason":reason,"recommended_numbers":[],"ranked_horses":[],**extra}; _save(result); return result
 
+def _first_unfinished_program(races):
+    """Select the earliest current/future race that has no published result.
+
+    A race-day PDF can be updated with its official arrival after the event.
+    Such a document must not be treated as a fresh pre-race opportunity.
+    """
+    for entry in races:
+        program = _json(LIVE_DIR / str(entry["structured_file"]))
+        if program.get("published_arrival"):
+            print(f"Skipping completed race {entry.get('race_key')}: published arrival is present.")
+            continue
+        return entry, program
+    return None, None
+
 def main():
     try:
         history=_json(DATASET_FILE)
@@ -84,9 +98,12 @@ def main():
 
     races=eligible_races(date.today().isoformat())
     if not races: return no_prediction("no_validated_current_or_future_race")
-    entry=races[0]
-    try: program=_json(LIVE_DIR/str(entry["structured_file"]))
-    except Exception as error: return no_prediction(f"live_program_unreadable: {error}")
+    try:
+        entry, program = _first_unfinished_program(races)
+    except Exception as error:
+        return no_prediction(f"live_program_unreadable: {error}")
+    if entry is None or program is None:
+        return no_prediction("no_unfinished_current_or_future_race")
     gate=validate_program(program)
     if not gate["valid"]: return no_prediction("live_program_truth_gate_failed",truth_gate=gate)
     current=_live_rows(program); key=_key(program)
