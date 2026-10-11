@@ -70,17 +70,27 @@ def _save(result):
 def no_prediction(reason,**extra):
     result={"prediction_id":None,"generated_at":datetime.now(timezone.utc).isoformat(),"model_version":None,"mode":"v3_unavailable","reason":reason,"recommended_numbers":[],"ranked_horses":[],**extra}; _save(result); return result
 
-def _first_unfinished_program(races):
-    """Select the earliest current/future race that has no published result.
+def _first_unfinished_program(races, today_iso=None):
+    """Select the earliest current/future race without a same-day/past arrival.
 
-    A race-day PDF can be updated with its official arrival after the event.
-    Such a document must not be treated as a fresh pre-race opportunity.
+    LONAB program PDFs can include older race results elsewhere in the document.
+    The parser currently extracts an ARRIVEE line without proving that it belongs
+    to the program race. A result-like field on a future-dated program is therefore
+    treated as embedded historical text, not as an official result for that race.
     """
+    today_iso = today_iso or date.today().isoformat()
     for entry in races:
         program = _json(LIVE_DIR / str(entry["structured_file"]))
         if program.get("published_arrival"):
-            print(f"Skipping completed race {entry.get('race_key')}: published arrival is present.")
-            continue
+            program_date = str(program.get("date") or entry.get("date") or "")[:10]
+            if program_date and program_date > today_iso:
+                print(
+                    f"Ignoring embedded arrival on future-dated program "
+                    f"{entry.get('race_key')}; it is not trusted as this race's result."
+                )
+            else:
+                print(f"Skipping completed or date-ambiguous race {entry.get('race_key')}: published arrival is present.")
+                continue
         return entry, program
     return None, None
 
