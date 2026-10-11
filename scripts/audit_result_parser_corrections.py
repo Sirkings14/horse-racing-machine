@@ -19,6 +19,7 @@ if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
 
 from src.parsers.results_parser import parse_result_file
+from src.learning.result_truth import build_program_runner_index, canonical_key, validate_arrival
 DEFAULT_PROCESSED_DIR = BASE_DIR / "data" / "processed" / "results"
 DEFAULT_STRUCTURED_DIR = BASE_DIR / "data" / "structured" / "results"
 DEFAULT_OUTPUT = BASE_DIR / "data" / "evaluation" / "result_parser_correction_audit.json"
@@ -77,8 +78,11 @@ def audit_corpus(
     processed_dir: Path = DEFAULT_PROCESSED_DIR,
     structured_dir: Path = DEFAULT_STRUCTURED_DIR,
     sample_limit: int = SAMPLE_LIMIT,
+    program_index: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    """Compare old and proposed race arrivals, leaving all source files unchanged."""
+    """Compare proposed corrections and validate their runner numbers; no source mutations."""
+    if program_index is None:
+        program_index = build_program_runner_index()
     report: dict[str, Any] = {
         "schema_version": 1,
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -99,6 +103,10 @@ def audit_corpus(
         "legacy_only_races": 0,
         "reparsed_only_races": 0,
         "change_type_counts": {},
+        "candidate_races_checked_against_roster": 0,
+        "roster_valid_correction_candidates": 0,
+        "roster_rejected_correction_candidates": 0,
+        "roster_rejection_reason_counts": {},
         "error_samples": [],
         "changed_race_samples": [],
         "legacy_only_race_samples": [],
@@ -165,15 +173,37 @@ def audit_corpus(
                 continue
             report["changed_races"] += 1
             counts[kind] += 1
+            date_value = previous.get("date") or reparsed.get("date")
+            track_value = previous.get("track") or reparsed.get("track")
+            roster_check = {
+                "accepted_for_learning": False,
+                "reason": "not_a_tail_only_correction_candidate",
+            }
+            if kind == "legacy_has_extra_trailing_values":
+                race_key = canonical_key(date_value, track_value, number)
+                roster_check = validate_arrival(race_key or "", new_arrival, program_index)
+                report["candidate_races_checked_against_roster"] += 1
+                if roster_check.get("accepted_for_learning"):
+                    report["roster_valid_correction_candidates"] += 1
+                else:
+                    report["roster_rejected_correction_candidates"] += 1
+                    reason = str(roster_check.get("reason") or "unknown")
+                    rejection_counts = report["roster_rejection_reason_counts"]
+                    rejection_counts[reason] = rejection_counts.get(reason, 0) + 1
             if len(report["changed_race_samples"]) < sample_limit:
                 report["changed_race_samples"].append({
                     "file": text_path.name,
-                    "date": previous.get("date") or reparsed.get("date"),
-                    "track": previous.get("track") or reparsed.get("track"),
+                    "date": date_value,
+                    "track": track_value,
                     "race_number": number,
                     "legacy_arrival": old_arrival,
                     "reparsed_arrival": new_arrival,
                     "change_type": kind,
+                    "roster_validation": roster_check,
+                    "migration_candidate": bool(
+                        kind == "legacy_has_extra_trailing_values"
+                        and roster_check.get("accepted_for_learning")
+                    ),
                 })
 
     report["legacy_has_extra_trailing_values"] = counts["legacy_has_extra_trailing_values"]
@@ -199,6 +229,8 @@ def main() -> int:
         "unreadable_structured_files", "parser_errors", "races_compared", "unchanged_races",
         "changed_races", "legacy_has_extra_trailing_values", "reparse_has_more_positions",
         "arrival_sequence_changed", "legacy_only_races", "reparsed_only_races", "change_type_counts",
+        "candidate_races_checked_against_roster", "roster_valid_correction_candidates",
+        "roster_rejected_correction_candidates", "roster_rejection_reason_counts",
     )
     summary = {key: report[key] for key in fields}
     summary["output"] = str(output)

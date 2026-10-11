@@ -25,8 +25,8 @@ class ResultParserCorrectionAuditTests(unittest.TestCase):
 
             payout_space = chr(0x202F)
             text_file.write_text(
-                "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\\n"
-                f"4ième 9 - 10 - 4 10 1{payout_space}400 74 9 - 4 10 700\\n",
+                "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\n"
+                f"4ième 9 - 10 - 4 10 1{payout_space}400 74 9 - 4 10 700\n",
                 encoding="utf-8",
             )
             legacy = {
@@ -39,13 +39,24 @@ class ResultParserCorrectionAuditTests(unittest.TestCase):
             legacy_file.write_text(json.dumps(legacy), encoding="utf-8")
             original = legacy_file.read_text(encoding="utf-8")
 
-            report = audit_corpus(processed, structured)
+            approved_index = {
+                "2026-10-10|CAEN|4": {
+                    "horse_numbers": {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+                    "runners_count": 10,
+                    "source_file": "test_program.json",
+                    "conflict": False,
+                }
+            }
+            report = audit_corpus(processed, structured, program_index=approved_index)
             self.assertEqual(report["races_compared"], 1)
             self.assertEqual(report["changed_races"], 1)
             self.assertEqual(report["legacy_has_extra_trailing_values"], 1)
             self.assertEqual(report["changed_race_samples"][0]["legacy_arrival"], [9, 10, 4, 1])
             self.assertEqual(report["changed_race_samples"][0]["reparsed_arrival"], [9, 10, 4])
             self.assertFalse(report["policy"]["rewrites_structured_results"])
+            self.assertEqual(report["candidate_races_checked_against_roster"], 1)
+            self.assertEqual(report["roster_valid_correction_candidates"], 1)
+            self.assertTrue(report["changed_race_samples"][0]["migration_candidate"])
             self.assertEqual(legacy_file.read_text(encoding="utf-8"), original)
 
 
