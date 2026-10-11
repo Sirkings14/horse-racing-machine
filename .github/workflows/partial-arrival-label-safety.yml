@@ -51,3 +51,36 @@ jobs:
         run: python -m py_compile src/dataset/build_dataset.py src/model/v3_model.py src/model/v3_backtest.py src/model/v3_train.py scripts/build_historical_dataset.py
       - name: Run label-safety regression tests
         run: python -m pytest -q tests/test_partial_arrival_labels.py
+
+  full-regression:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            .github
+            data/model
+            data/matched
+            data/processed/programs
+            data/structured/programs
+            data/structured/results
+            data/predictions
+            data/evaluation
+            data/live
+            data/rosters
+            requirements.txt
+            scripts
+            src
+            tests
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install project dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install pytest
+      - name: Run full regression suite
+        run: python -m pytest -q
