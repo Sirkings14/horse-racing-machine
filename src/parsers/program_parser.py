@@ -626,14 +626,29 @@ def extract_published_arrival(text, program_date=None):
     Treating any 'ARRIVEE DU' in the whole PDF as this race's result causes
     future races to be incorrectly marked complete. Unknown heading dates fail closed.
     """
-    for match in re.finditer(r"ARRIVEE\s+DU(?P<header>[^:\n]{1,120}):\s*(?P<arrival>[0-9\s\-–]+)(?:NPO|NP|$)", text, re.IGNORECASE):
-        if program_date:
-            heading_date = _arrival_heading_date(match.group("header"), program_date)
-            if heading_date != str(program_date)[:10]:
-                continue
+    if not program_date:
+        return []
+
+    for match in re.finditer(
+        r"ARRIV(?:E|É)E\s+DU(?P<header>[^:\n]{1,120}):\s*(?P<arrival>[0-9\s\-–]+)(?:NPO|NP|$)",
+        text,
+        re.IGNORECASE,
+    ):
+        heading_date = _arrival_heading_date(match.group("header"), program_date)
+        if heading_date != str(program_date)[:10]:
+            continue
+
         values = [int(value) for value in re.findall(r"\d+", match.group("arrival"))]
-        if values:
-            return values
+        # Only a plausible, unambiguous runner sequence may mark a program
+        # completed. Do not mistake payout digits or malformed lists for arrivals.
+        if (
+            not values
+            or len(values) > 5
+            or len(values) != len(set(values))
+            or any(number < 1 or number > 20 for number in values)
+        ):
+            return []
+        return values
     return []
 
 
