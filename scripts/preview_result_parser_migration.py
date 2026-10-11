@@ -349,8 +349,15 @@ def validate_preview_copy_snapshot(
         return reject("legacy_arrival_changed_since_preview")
     if new_arrival != copy.get("new_arrival"):
         return reject("reparsed_arrival_changed_since_preview")
-    if not _pure_tail_trim(old_arrival, new_arrival):
-        return reject("correction_is_not_a_pure_tail_trim")
+    copy_change_type = copy.get("change_type")
+    if copy_change_type == "unchanged":
+        if old_arrival != new_arrival:
+            return reject("unchanged_copy_arrival_changed")
+    elif copy_change_type == "tail_trim_candidate":
+        if not _pure_tail_trim(old_arrival, new_arrival):
+            return reject("correction_is_not_a_pure_tail_trim")
+    else:
+        return reject("copy_not_eligible_for_migration_preview")
 
     roster_meta = program_index.get(race_key)
     current_roster_hash = _roster_sha256(roster_meta)
@@ -403,6 +410,8 @@ def validate_preview_group_snapshot(
         return {"valid": False, "reason": "candidate_group_race_key_mismatch", "copy_checks": checks}
     if any(item.get("proposed_arrival") != expected_arrival for item in checks):
         return {"valid": False, "reason": "candidate_group_proposed_arrivals_disagree", "copy_checks": checks}
+    if not any(copy.get("change_type") == "tail_trim_candidate" for copy in copies):
+        return {"valid": False, "reason": "candidate_group_has_no_required_tail_trim", "copy_checks": checks}
     return {
         "valid": True,
         "reason": "all_snapshots_current_and_consistent",

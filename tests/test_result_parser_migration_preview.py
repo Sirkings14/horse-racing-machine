@@ -153,5 +153,49 @@ class ResultParserMigrationPreviewTests(unittest.TestCase):
             self.assertFalse(check["valid"])
             self.assertEqual(check["reason"], "roster_evidence_sha256_mismatch")
 
+
+    def test_group_preflight_accepts_matching_unchanged_and_tail_trim_copies(self):
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            processed = root / "processed"
+            structured = root / "structured"
+            processed.mkdir()
+            structured.mkdir()
+            header = "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\\n"
+            text_a = processed / "result_a.txt"
+            text_b = processed / "result_b.txt"
+            text_a.write_text(header + "4ième 9 - 10 - 4 10 1 400 74\\n", encoding="utf-8")
+            text_b.write_text(header + "4ième 9 - 10 - 4 10 1 400 74\\n", encoding="utf-8")
+
+            payload_template = {
+                "document_type": "result",
+                "date": "2026-10-10",
+                "meeting": 1,
+                "track": "CAEN",
+            }
+            changed = dict(payload_template)
+            changed["races"] = [{"race_number": 4, "arrival": [9, 10, 4, 1]}]
+            unchanged = dict(payload_template)
+            unchanged["races"] = [{"race_number": 4, "arrival": [9, 10, 4]}]
+            (structured / "result_a.json").write_text(json.dumps(changed), encoding="utf-8")
+            (structured / "result_b.json").write_text(json.dumps(unchanged), encoding="utf-8")
+
+            index = {
+                "2026-10-10|CAEN|4": {
+                    "horse_numbers": {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+                    "runners_count": 10,
+                    "source_file": "program.json",
+                    "conflict": False,
+                }
+            }
+            report = preview_migration(processed, structured, index)
+            self.assertEqual(report["migration_preview_eligible_groups"], 1)
+            group = report["eligible_groups"][0]
+            changes = {copy["change_type"] for copy in group["structured_result_copies"]}
+            self.assertEqual(changes, {"unchanged", "tail_trim_candidate"})
+            checked = validate_preview_group_snapshot(group, processed, structured, index)
+            self.assertTrue(checked["valid"])
+            self.assertEqual(checked["checked_copies"], 2)
+
 if __name__ == "__main__":
     unittest.main()
