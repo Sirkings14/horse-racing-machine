@@ -47,6 +47,28 @@ jobs:
           pip install pytest
       - name: Build verified historical dataset
         run: python scripts/build_historical_dataset.py
+      - name: Summarize recent verified-result supplement
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path("data/dataset/recent_supplement_audit.json")
+          if not path.exists():
+              raise SystemExit("Recent-result supplement audit file is missing.")
+          report = json.loads(path.read_text(encoding="utf-8"))
+          keys = (
+              "status", "cutoff_date", "as_of_date", "program_files_seen",
+              "result_files_seen", "recent_result_races_seen",
+              "validated_result_records", "rejected_result_records",
+              "conflicting_result_races", "program_content_conflicts",
+              "supplemented_races", "supplemented_runner_rows",
+              "top5_label_complete_races", "top5_label_incomplete_races",
+              "last_supplemented_date", "rejection_reasons",
+          )
+          print(json.dumps({key: report.get(key) for key in keys}, indent=2, ensure_ascii=False))
+          if report.get("supplemented_races", 0) != 0 and report.get("supplemented_runner_rows", 0) <= 0:
+              raise SystemExit("Supplement audit inconsistent: races counted but no runner rows.")
+          PY
       - name: Run V3 tests
         run: python -m pytest -q
       - name: Audit result truth using validated historical rosters
