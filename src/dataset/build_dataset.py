@@ -222,11 +222,7 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
 
     arrival_positions_available = len(arrival)
     winner_label_known = arrival_positions_available >= 1
-    top3_label_known = arrival_positions_available >= 3
-    top4_label_known = arrival_positions_available >= 4
-    top5_label_known = arrival_positions_available >= 5
-
-    rows: List[Dict[str, Any]]
+    rows: List[Dict[str, Any]] = []
     seen_numbers = set()
 
     for horse in horses:
@@ -243,8 +239,11 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
         seen_numbers.add(horse_number)
 
         finish_position = arrival_map.get(horse_number)
-        # A positive is known when observed; a negative is only known when
-        # the official arrival contains at least that many places.
+        # Observed positives are known even in a short arrival. Unlisted runners
+        # are negatives only when the official arrival reaches that cutoff.
+        top3_label_known = (finish_position is not None and finish_position <= 3) or arrival_positions_available >= 3
+        top4_label_known = (finish_position is not None and finish_position <= 4) or arrival_positions_available >= 4
+        top5_label_known = (finish_position is not None and finish_position <= 5) or arrival_positions_available >= 5
         won = (1 if finish_position == 1 else 0) if winner_label_known else None
         top3 = (1 if finish_position is not None and finish_position <= 3 else 0) if top3_label_known else None
         top4 = (1 if finish_position is not None and finish_position <= 4 else 0) if top4_label_known else None
