@@ -8,6 +8,7 @@ on:
       - "src/model/market_odds_capture.py"
       - "src/model/turf_bzh_odds.py"
       - "src/model/profitability.py"
+      - "scripts/**"
       - "tests/**"
       - "requirements.txt"
       - ".github/workflows/odds-evidence-ci.yml"
@@ -29,6 +30,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Syntax check
-        run: python -m compileall -q src
+        run: python -m compileall -q src scripts
       - name: Run regression tests
         run: python -m unittest discover -s tests -v
