@@ -20,3 +20,20 @@ def test_arrival_heading_without_year_uses_program_year_but_still_checks_day():
     text = "ARRIVEE DU DIMANCHE 11 OCTOBRE : 8-13-12"
     assert extract_published_arrival(text, "2026-10-11") == [8, 13, 12]
     assert extract_published_arrival(text, "2026-10-12") == []
+
+
+
+def test_arrival_requires_a_known_program_date():
+    text = "ARRIVEE DU DIMANCHE 11 OCTOBRE 2026 : 8-13-12"
+    assert extract_published_arrival(text) == []
+
+
+def test_accented_arrivee_heading_is_supported():
+    text = "PROGRAMME DU DIMANCHE 11 OCTOBRE 2026\\nARRIVÉE DU DIMANCHE 11 OCTOBRE 2026 : 8-13-12"
+    assert extract_published_arrival(text, "2026-10-11") == [8, 13, 12]
+
+
+def test_malformed_arrival_sequences_fail_closed():
+    assert extract_published_arrival("ARRIVEE DU DIMANCHE 11 OCTOBRE 2026 : 8-8-12", "2026-10-11") == []
+    assert extract_published_arrival("ARRIVEE DU DIMANCHE 11 OCTOBRE 2026 : 8-13-24", "2026-10-11") == []
+    assert extract_published_arrival("ARRIVEE DU DIMANCHE 11 OCTOBRE 2026 : 1-2-3-4-5-6", "2026-10-11") == []
