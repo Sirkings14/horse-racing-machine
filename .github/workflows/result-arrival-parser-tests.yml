@@ -32,11 +32,12 @@ jobs:
         with:
           python-version: "3.11"
       - name: Compile parser, audit utility, and tests
-        run: python -m py_compile src/parsers/results_parser.py scripts/audit_result_parser_corrections.py tests/test_result_parser_truth.py tests/test_result_parser_correction_audit.py
+        run: python -m py_compile src/parsers/results_parser.py scripts/audit_result_parser_corrections.py scripts/preview_result_parser_migration.py tests/test_result_parser_truth.py tests/test_result_parser_correction_audit.py tests/test_result_parser_migration_preview.py
       - name: Run focused result-arrival regression tests
         run: |
           python -m unittest discover -s tests -p "test_result_parser_truth.py" -v
           python -m unittest discover -s tests -p "test_result_parser_correction_audit.py" -v
+          python -m unittest discover -s tests -p "test_result_parser_migration_preview.py" -v
       - name: Audit saved-result impact without modifying result files
         run: python scripts/audit_result_parser_corrections.py --output data/evaluation/result_parser_correction_audit.json
       - name: Preview roster-validated corrections without applying them

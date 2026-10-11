@@ -14,8 +14,8 @@ def _fixture(root: Path, name: str, arrival_line: str, legacy_arrival: list[int]
     text_path = processed / f"{name}.txt"
     json_path = structured / f"{name}.json"
     text_path.write_text(
-        "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\\n"
-        + arrival_line + "\\n",
+        "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\n"
+        + arrival_line + "\n",
         encoding="utf-8",
     )
     json_path.write_text(json.dumps({
