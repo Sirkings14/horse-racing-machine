@@ -23,6 +23,7 @@ def test_turf_bzh_adapter_maps_only_pre_race_prices_with_matching_roster():
         race_key="2026-10-12|AUTEUIL|1",
         race_off_at="2026-10-12T10:15:00+00:00",
         source_url="https://www.turf.bzh/api/v1/courses/2026-10-12/R1C1/cotes",
+        expected_course_code="R1C1",
         expected_runner_numbers={1, 2},
         captured_at="2026-10-12T10:01:00+00:00",
     )
@@ -35,6 +36,7 @@ def test_turf_bzh_adapter_rejects_post_off_prices_and_roster_mismatch():
         "race_key": "2026-10-12|AUTEUIL|1",
         "race_off_at": "2026-10-12T10:15:00+00:00",
         "source_url": "https://www.turf.bzh/api/v1/courses/2026-10-12/R1C1/cotes",
+        "expected_course_code": "R1C1",
         "expected_runner_numbers": {1, 2},
         "captured_at": "2026-10-12T10:16:00+00:00",
     }
