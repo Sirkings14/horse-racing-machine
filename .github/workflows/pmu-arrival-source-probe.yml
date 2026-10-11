@@ -12,11 +12,11 @@ on:
       race_date:
         description: "Race date (YYYY-MM-DD)"
         required: true
-        default: "2026-10-10"
+        default: "2026-10-07"
       track:
         description: "Racecourse"
         required: true
-        default: "CAEN"
+        default: "ENGHIEN"
       meeting:
         description: "Meeting number"
         required: true
@@ -55,8 +55,8 @@ jobs:
       - name: Probe one known race; never change training or production artifacts
         continue-on-error: true
         env:
-          RACE_DATE: ${{ github.event.inputs.race_date || '2026-10-10' }}
-          TRACK: ${{ github.event.inputs.track || 'CAEN' }}
+          RACE_DATE: ${{ github.event.inputs.race_date || '2026-10-07' }}
+          TRACK: ${{ github.event.inputs.track || 'ENGHIEN' }}
           MEETING: ${{ github.event.inputs.meeting || '1' }}
           RACE_NUMBER: ${{ github.event.inputs.race_number || '1' }}
         run: |
