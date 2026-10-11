@@ -65,7 +65,7 @@ def normalize_snapshot(snapshot: dict[str, Any]) -> dict[str, Any] | None:
         return None
     if captured is None or priced is None or race_off is None:
         return None
-    if captured > race_off or priced > race_off:
+    if priced > captured or captured > race_off or priced > race_off:
         return None
 
     prices: dict[int, float] = {}
