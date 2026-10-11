@@ -9,6 +9,7 @@ truth approval.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from collections import Counter, defaultdict
@@ -26,6 +27,31 @@ from src.parsers.results_parser import parse_result_file
 DEFAULT_PROCESSED_DIR = BASE_DIR / "data" / "processed" / "results"
 DEFAULT_STRUCTURED_DIR = BASE_DIR / "data" / "structured" / "results"
 DEFAULT_OUTPUT = BASE_DIR / "data" / "evaluation" / "result_parser_migration_preview.json"
+
+
+def _sha256_file(path: Path) -> str:
+    """Fingerprint exact input bytes so a later migration can detect stale previews."""
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _roster_sha256(meta: dict[str, Any] | None) -> str | None:
+    if not isinstance(meta, dict):
+        return None
+    numbers = meta.get("horse_numbers")
+    if not isinstance(numbers, (set, list, tuple)):
+        return None
+    canonical = {
+        "horse_numbers": sorted(_int(number) for number in numbers if _int(number) is not None),
+        "runners_count": _int(meta.get("runners_count")),
+        "source_file": meta.get("source_file"),
+        "conflict": bool(meta.get("conflict")),
+    }
+    encoded = json.dumps(canonical, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def _int(value: Any) -> int | None:
@@ -88,7 +114,7 @@ def preview_migration(
 
     text_paths = sorted(processed_dir.glob("*.txt")) if processed_dir.exists() else []
     report: dict[str, Any] = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "status": "preview_only",
         "processed_text_files_seen": len(text_paths),
@@ -111,6 +137,9 @@ def preview_migration(
             "live_prediction_or_betting_effect": "none",
             "eligibility_is_not_official_truth_approval": True,
             "apply_requires_a_separate_reviewed_migration": True,
+            "each_candidate_records_input_sha256": True,
+            "stale_inputs_must_be_repreviewed_before_any_future_apply": True,
+            "source_files_are_never_rewritten_by_this_preview": True,
         },
     }
 
@@ -120,6 +149,8 @@ def preview_migration(
             report["structured_files_missing_text"] += 1
             continue
         try:
+            structured_sha256 = _sha256_file(structured_path)
+            processed_text_sha256 = _sha256_file(text_path)
             previous = json.loads(structured_path.read_text(encoding="utf-8"))
             reparsed = parse_result_file(text_path)
         except Exception as error:
@@ -146,6 +177,11 @@ def preview_migration(
                     "text_file": text_path.name,
                     "old_arrival": old_arrival,
                     "new_arrival": None,
+                    "race_number": number,
+                    "race_key": key,
+                    "structured_sha256": structured_sha256,
+                    "processed_text_sha256": processed_text_sha256,
+                    "roster_evidence_sha256": _roster_sha256(program_index.get(key)),
                     "change_type": "source_reparse_missing",
                     "roster_validation": {"accepted_for_learning": False, "reason": "source_reparse_missing"},
                 })
@@ -170,8 +206,13 @@ def preview_migration(
             groups[key].append({
                 "file": structured_path.name,
                 "text_file": text_path.name,
+                "race_number": number,
+                "race_key": key,
                 "old_arrival": old_arrival,
                 "new_arrival": proposed,
+                "structured_sha256": structured_sha256,
+                "processed_text_sha256": processed_text_sha256,
+                "roster_evidence_sha256": _roster_sha256(program_index.get(key)),
                 "change_type": change_type,
                 "roster_validation": validation,
             })
