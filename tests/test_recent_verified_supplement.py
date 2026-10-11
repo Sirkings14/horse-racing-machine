@@ -64,7 +64,7 @@ def _write_program(directory: Path):
     (directory / "program.json").write_text(json.dumps(_program()), encoding="utf-8")
 
 
-def _write_result(directory: Path, file_name: str, arrival: list[int]):
+def _write_result(directory: Path, file_name: str, arrival: list[int], source_file: str | None = None):
     directory.mkdir(parents=True, exist_ok=True)
     payload = {
         "document_type": "result",
@@ -72,7 +72,18 @@ def _write_result(directory: Path, file_name: str, arrival: list[int]):
         "track": "CAEN",
         "races": [{"race_number": 1, "arrival": arrival}],
     }
+    if source_file:
+        payload["source_file"] = source_file
     (directory / file_name).write_text(json.dumps(payload), encoding="utf-8")
+
+
+def _write_raw_result(directory: Path, file_name: str, arrival_line: str):
+    directory.mkdir(parents=True, exist_ok=True)
+    text = (
+        "DU : 01 - 06 - 2026 - REUNION - 1 - ( CAEN )\n"
+        f"{arrival_line}\n"
+    )
+    (directory / file_name).write_text(text, encoding="utf-8")
 
 
 def test_strict_arrival_rejects_ambiguous_shapes_and_invalid_numbers():
@@ -155,6 +166,38 @@ def test_conflicting_official_arrivals_quarantine_the_whole_race(tmp_path):
     assert rows == []
     assert audit["conflicting_result_races"] == 1
     assert audit["supplemented_races"] == 0
+
+
+def test_recent_supplement_reparses_raw_txt_and_does_not_invent_fourth_place(tmp_path):
+    programs = tmp_path / "programs"
+    results = tmp_path / "results"
+    raw_results = tmp_path / "processed_results"
+    _write_program(programs)
+    _write_result(results, "result.json", [1, 2, 3, 5], source_file="result.txt")
+    _write_raw_result(
+        raw_results,
+        "result.txt",
+        "1ère 1 - 2 - 3 6 1 000 33 1 - 2 4 500 90",
+    )
+    rows, audit = collect_recent_verified_rows(
+        [{"date": "2026-05-05", "track": "VINCENNES", "race_number": 1}],
+        after_date="2026-05-05",
+        program_index=_program_index(),
+        program_dir=programs,
+        result_dir=results,
+        audit_path=None,
+        as_of_date="2026-06-02",
+        raw_result_dir=raw_results,
+    )
+    assert len(rows) == 6
+    assert audit["raw_result_documents_reparsed"] == 1
+    assert audit["supplemented_races"] == 1
+    assert audit["top5_label_complete_races"] == 0
+    assert audit["top5_label_incomplete_races"] == 1
+    assert {row["top3"] for row in rows} == {0, 1}
+    assert all(row["top4"] is None for row in rows)
+    assert all(row["top5"] is None for row in rows)
+    assert {row["finish_position"] for row in rows if row["finish_position"] is not None} == {1, 2, 3}
 
 
 def test_recent_supplement_skips_races_already_in_base_dataset(tmp_path):

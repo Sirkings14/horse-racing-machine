@@ -18,11 +18,13 @@ from typing import Any
 
 from src.learning.result_truth import canonical_key, validate_arrival
 from src.model.race_type import canonical_race_type
+from src.parsers.results_parser import parse_result_file
 
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DEFAULT_PROGRAM_DIR = BASE_DIR / "data" / "structured" / "programs"
 DEFAULT_RESULT_DIR = BASE_DIR / "data" / "structured" / "results"
+DEFAULT_RAW_RESULT_DIR = BASE_DIR / "data" / "processed" / "results"
 DEFAULT_AUDIT_FILE = BASE_DIR / "data" / "dataset" / "recent_supplement_audit.json"
 
 PRE_RACE_FIELDS = (
@@ -247,6 +249,7 @@ def collect_recent_verified_rows(
     result_dir: Path = DEFAULT_RESULT_DIR,
     audit_path: Path | None = DEFAULT_AUDIT_FILE,
     as_of_date: str | None = None,
+    raw_result_dir: Path = DEFAULT_RAW_RESULT_DIR,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Supplement rows strictly after the base dataset cutoff, failing closed."""
     cutoff = _parse_iso_date(after_date)
@@ -274,6 +277,10 @@ def collect_recent_verified_rows(
         "program_files_seen": 0,
         "program_races_after_cutoff": 0,
         "result_files_seen": 0,
+        "raw_result_documents_reparsed": 0,
+        "raw_result_source_text_missing": 0,
+        "raw_result_source_identity_conflicts": 0,
+        "raw_result_reparse_failures": 0,
         "result_races_seen": 0,
         "recent_result_races_seen": 0,
         "validated_result_records": 0,
@@ -350,6 +357,40 @@ def collect_recent_verified_rows(
                 continue
             if not isinstance(payload, dict) or payload.get("document_type") != "result":
                 continue
+
+            # Structured result JSON may contain false fourth/fifth places because
+            # older parsing consumed payout columns after the official Top-3 line.
+            # Rebuild arrivals from the retained source TXT before learning labels.
+            source_file = str(payload.get("source_file") or "").strip()
+            if source_file:
+                raw_path = raw_result_dir / Path(source_file).name
+                if not raw_path.is_file():
+                    audit["raw_result_source_text_missing"] += 1
+                    reject("raw_result_source_text_missing")
+                    continue
+                try:
+                    raw_payload = parse_result_file(raw_path)
+                except Exception:
+                    audit["raw_result_reparse_failures"] += 1
+                    reject("raw_result_source_text_reparse_failed")
+                    continue
+
+                original_date = _parse_iso_date(payload.get("date"))
+                parsed_date = _parse_iso_date(raw_payload.get("date"))
+                original_identity = canonical_key(original_date, payload.get("track"), 1)
+                parsed_identity = canonical_key(parsed_date, raw_payload.get("track"), 1)
+                if (
+                    not original_date
+                    or not parsed_date
+                    or original_date != parsed_date
+                    or original_identity != parsed_identity
+                ):
+                    audit["raw_result_source_identity_conflicts"] += 1
+                    reject("raw_result_source_identity_conflict")
+                    continue
+                payload = raw_payload
+                audit["raw_result_documents_reparsed"] += 1
+
             result_date = _parse_iso_date(payload.get("date"))
             track = payload.get("track")
             if not result_date or not track or result_date <= cutoff or result_date > today:

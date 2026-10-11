@@ -15,6 +15,7 @@ on:
       - "src/model/form_analysis.py"
       - "src/notifications/telegram.py"
       - "src/parsers/program_parser.py"
+      - "src/parsers/results_parser.py"
       - "src/dataset/build_dataset.py"
       - "src/model/predict_v3.py"
       - "scripts/audit_race_type_coverage.py"
