@@ -182,6 +182,32 @@ def build_race_key(date: Any, track: Any, race_number: Any) -> Optional[str]:
     return f"{normalized_date}|{normalized_track}|{normalized_race_number}"
 
 
+def labels_from_partial_arrival(finish_position: Any, arrival_positions_available: Any) -> Dict[str, Any]:
+    """Build cutoff labels without treating unlisted runners as losses.
+
+    An observed finisher inside a cutoff is a known positive even when the
+    official arrival is shorter than that cutoff. Unlisted runners are known
+    negatives only when the arrival reaches the cutoff.
+    """
+    position = safe_int(finish_position)
+    available = max(0, safe_int(arrival_positions_available) or 0)
+    winner_known = available >= 1
+    top3_known = (position is not None and position <= 3) or available >= 3
+    top4_known = (position is not None and position <= 4) or available >= 4
+    top5_known = (position is not None and position <= 5) or available >= 5
+    return {
+        "arrival_positions_available": available,
+        "won": (1 if position == 1 else 0) if winner_known else None,
+        "top3": (1 if position is not None and position <= 3 else 0) if top3_known else None,
+        "top4": (1 if position is not None and position <= 4 else 0) if top4_known else None,
+        "top5": (1 if position is not None and position <= 5 else 0) if top5_known else None,
+        "target_won_known": winner_known,
+        "target_top3_known": top3_known,
+        "target_top4_known": top4_known,
+        "target_top5_known": top5_known,
+    }
+
+
 def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
     if not is_verified_match(record):
         return []
@@ -239,15 +265,11 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
         seen_numbers.add(horse_number)
 
         finish_position = arrival_map.get(horse_number)
-        # Observed positives are known even in a short arrival. Unlisted runners
-        # are negatives only when the official arrival reaches that cutoff.
-        top3_label_known = (finish_position is not None and finish_position <= 3) or arrival_positions_available >= 3
-        top4_label_known = (finish_position is not None and finish_position <= 4) or arrival_positions_available >= 4
-        top5_label_known = (finish_position is not None and finish_position <= 5) or arrival_positions_available >= 5
-        won = (1 if finish_position == 1 else 0) if winner_label_known else None
-        top3 = (1 if finish_position is not None and finish_position <= 3 else 0) if top3_label_known else None
-        top4 = (1 if finish_position is not None and finish_position <= 4 else 0) if top4_label_known else None
-        top5 = (1 if finish_position is not None and finish_position <= 5 else 0) if top5_label_known else None
+        target_labels = labels_from_partial_arrival(finish_position, arrival_positions_available)
+        won = target_labels["won"]
+        top3 = target_labels["top3"]
+        top4 = target_labels["top4"]
+        top5 = target_labels["top5"]
 
         ranking_values = {
             "favorites_rank": ranking_position(rankings.get("favorites"), horse_number),
@@ -294,11 +316,10 @@ def extract_race_rows(record: Dict[str, Any]) -> List[Dict[str, Any]]:
                 "top3": top3,
                 "top4": top4,
                 "top5": top5,
-                "arrival_positions_available": arrival_positions_available,
-                "target_won_known": winner_label_known,
-                "target_top3_known": top3_label_known,
-                "target_top4_known": top4_label_known,
-                "target_top5_known": top5_label_known,
+                **{key: target_labels[key] for key in (
+                    "arrival_positions_available", "target_won_known", "target_top3_known",
+                    "target_top4_known", "target_top5_known",
+                )},
                 "source_program": program.get("source_file"),
                 "source_result": result.get("source_file"),
             }
