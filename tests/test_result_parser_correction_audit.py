@@ -25,9 +25,9 @@ class ResultParserCorrectionAuditTests(unittest.TestCase):
 
             payout_space = chr(0x202F)
             text_file.write_text(
-                "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\\n"
-                f"4ième 9 - 10 - 4 10 1{payout_space}400 74 9 - 4 10 700\\n"
-                f"8ième 3 1{payout_space}400 5 8 - 5 9{payout_space}200 93\\n",
+                "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\n"
+                f"4ième 9 - 10 - 4 10 1{payout_space}400 74 9 - 4 10 700\n"
+                f"8ième 3 1{payout_space}400 5 8 - 5 9{payout_space}200 93\n",
                 encoding="utf-8",
             )
             legacy = {
