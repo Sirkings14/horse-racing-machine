@@ -279,6 +279,145 @@ def preview_migration(
     return report
 
 
+def validate_preview_copy_snapshot(
+    copy: dict[str, Any],
+    processed_dir: Path = DEFAULT_PROCESSED_DIR,
+    structured_dir: Path = DEFAULT_STRUCTURED_DIR,
+    program_index: dict[str, dict[str, Any]] | None = None,
+) -> dict[str, Any]:
+    """Read-only preflight: prove a previewed copy still matches its exact inputs.
+
+    This is not an apply operation. It detects stale files, edited arrivals,
+    source changes, and roster drift before a separately reviewed migration.
+    """
+    if program_index is None:
+        program_index = build_program_runner_index()
+
+    def reject(reason: str) -> dict[str, Any]:
+        return {"valid": False, "reason": reason}
+
+    file_name = copy.get("file")
+    text_name = copy.get("text_file")
+    if (
+        not isinstance(file_name, str) or not file_name
+        or Path(file_name).name != file_name
+        or not isinstance(text_name, str) or not text_name
+        or Path(text_name).name != text_name
+    ):
+        return reject("invalid_snapshot_path")
+
+    structured_path = structured_dir / file_name
+    text_path = processed_dir / text_name
+    if not structured_path.is_file() or not text_path.is_file():
+        return reject("snapshot_input_missing")
+    try:
+        if _sha256_file(structured_path) != copy.get("structured_sha256"):
+            return reject("structured_file_sha256_mismatch")
+        if _sha256_file(text_path) != copy.get("processed_text_sha256"):
+            return reject("processed_text_sha256_mismatch")
+        current_payload = json.loads(structured_path.read_text(encoding="utf-8"))
+        reparsed_payload = parse_result_file(text_path)
+    except Exception as error:
+        return reject("snapshot_input_unreadable:" + type(error).__name__)
+
+    race_number = _int(copy.get("race_number"))
+    race_key = copy.get("race_key")
+    if race_number is None or not isinstance(race_key, str) or not race_key:
+        return reject("snapshot_race_identity_missing")
+
+    old_race = _races(current_payload).get(race_number)
+    new_race = _races(reparsed_payload).get(race_number)
+    if old_race is None or new_race is None:
+        return reject("snapshot_race_not_found_in_current_inputs")
+
+    current_key = canonical_key(
+        current_payload.get("date") or reparsed_payload.get("date"),
+        current_payload.get("track") or reparsed_payload.get("track"),
+        race_number,
+    )
+    reparsed_key = canonical_key(
+        reparsed_payload.get("date"),
+        reparsed_payload.get("track"),
+        race_number,
+    )
+    if current_key != race_key or reparsed_key != race_key:
+        return reject("snapshot_race_identity_changed")
+
+    old_arrival = _arrival(old_race.get("arrival"))
+    new_arrival = _arrival(new_race.get("arrival"))
+    if old_arrival != copy.get("old_arrival"):
+        return reject("legacy_arrival_changed_since_preview")
+    if new_arrival != copy.get("new_arrival"):
+        return reject("reparsed_arrival_changed_since_preview")
+    if not _pure_tail_trim(old_arrival, new_arrival):
+        return reject("correction_is_not_a_pure_tail_trim")
+
+    roster_meta = program_index.get(race_key)
+    current_roster_hash = _roster_sha256(roster_meta)
+    if not current_roster_hash or current_roster_hash != copy.get("roster_evidence_sha256"):
+        return reject("roster_evidence_sha256_mismatch")
+    roster_validation = validate_arrival(race_key, new_arrival or [], program_index)
+    if roster_validation.get("accepted_for_learning") is not True:
+        return reject("current_roster_validation_rejected")
+
+    return {
+        "valid": True,
+        "reason": "snapshot_matches_current_inputs",
+        "race_key": race_key,
+        "race_number": race_number,
+        "old_arrival": old_arrival,
+        "proposed_arrival": new_arrival,
+        "structured_sha256": copy["structured_sha256"],
+        "processed_text_sha256": copy["processed_text_sha256"],
+        "roster_evidence_sha256": current_roster_hash,
+        "policy": {
+            "read_only": True,
+            "applies_correction": False,
+            "marks_official_truth": False,
+        },
+    }
+
+
+def validate_preview_group_snapshot(
+    group: dict[str, Any],
+    processed_dir: Path = DEFAULT_PROCESSED_DIR,
+    structured_dir: Path = DEFAULT_STRUCTURED_DIR,
+    program_index: dict[str, dict[str, Any]] | None = None,
+) -> dict[str, Any]:
+    """Check every copy in one candidate group and fail closed on any stale copy."""
+    copies = group.get("structured_result_copies")
+    if not isinstance(copies, list) or not copies:
+        return {"valid": False, "reason": "candidate_group_has_no_copies", "copy_checks": []}
+
+    expected_key = group.get("race_key")
+    expected_arrival = _arrival(group.get("proposed_arrival"))
+    checks = [
+        validate_preview_copy_snapshot(copy, processed_dir, structured_dir, program_index)
+        for copy in copies if isinstance(copy, dict)
+    ]
+    if len(checks) != len(copies):
+        return {"valid": False, "reason": "candidate_group_contains_malformed_copy", "copy_checks": checks}
+    if not all(item.get("valid") for item in checks):
+        return {"valid": False, "reason": "one_or_more_copies_are_stale_or_invalid", "copy_checks": checks}
+    if any(item.get("race_key") != expected_key for item in checks):
+        return {"valid": False, "reason": "candidate_group_race_key_mismatch", "copy_checks": checks}
+    if any(item.get("proposed_arrival") != expected_arrival for item in checks):
+        return {"valid": False, "reason": "candidate_group_proposed_arrivals_disagree", "copy_checks": checks}
+    return {
+        "valid": True,
+        "reason": "all_snapshots_current_and_consistent",
+        "race_key": expected_key,
+        "proposed_arrival": expected_arrival,
+        "checked_copies": len(checks),
+        "copy_checks": checks,
+        "policy": {
+            "read_only": True,
+            "applies_correction": False,
+            "requires_separate_reviewed_migration": True,
+        },
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Preview safe-looking result corrections without applying them.")
     parser.add_argument("--processed-dir", default=str(DEFAULT_PROCESSED_DIR))
