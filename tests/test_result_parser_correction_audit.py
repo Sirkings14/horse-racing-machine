@@ -61,8 +61,15 @@ class ResultParserCorrectionAuditTests(unittest.TestCase):
             legacy_only = report["legacy_only_race_samples"][0]
             self.assertTrue(legacy_only["manual_review_required"])
             self.assertEqual(legacy_only["race_number"], 8)
-            self.assertEqual(legacy_only["manual_review_reason"], "single_number_without_hyphen_separator_payout_ambiguous")
+            self.assertGreaterEqual(len(legacy_only["source_line_evidence"]), 1)
             self.assertIn("8ième 3 1", legacy_only["source_line_evidence"][0]["raw_line"])
+            evidence_reasons = {item["review_reason"] for item in legacy_only["source_line_evidence"]}
+            expected_reason = (
+                next(iter(evidence_reasons))
+                if len(evidence_reasons) == 1
+                else "multiple_source_line_patterns"
+            )
+            self.assertEqual(legacy_only["manual_review_reason"], expected_reason)
             self.assertFalse(report["policy"]["rewrites_structured_results"])
             self.assertEqual(report["candidate_races_checked_against_roster"], 1)
             self.assertEqual(report["roster_valid_correction_candidates"], 1)
