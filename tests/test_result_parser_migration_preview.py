@@ -118,7 +118,7 @@ class ResultParserMigrationPreviewTests(unittest.TestCase):
             }
             report = preview_migration(root / "processed", root / "structured", index)
             copy = report["eligible_groups"][0]["structured_result_copies"][0]
-            text_path.write_text(text_path.read_text(encoding="utf-8") + "edited\\n", encoding="utf-8")
+            text_path.write_text(text_path.read_text(encoding="utf-8") + "edited\n", encoding="utf-8")
             check = validate_preview_copy_snapshot(
                 copy, root / "processed", root / "structured", index
             )
@@ -161,11 +161,11 @@ class ResultParserMigrationPreviewTests(unittest.TestCase):
             structured = root / "structured"
             processed.mkdir()
             structured.mkdir()
-            header = "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\\n"
+            header = "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\n"
             text_a = processed / "result_a.txt"
             text_b = processed / "result_b.txt"
-            text_a.write_text(header + "4ième 9 - 10 - 4 10 1 400 74\\n", encoding="utf-8")
-            text_b.write_text(header + "4ième 9 - 10 - 4 10 1 400 74\\n", encoding="utf-8")
+            text_a.write_text(header + "4ième 9 - 10 - 4 10 1 400 74\n", encoding="utf-8")
+            text_b.write_text(header + "4ième 9 - 10 - 4 10 1 400 74\n", encoding="utf-8")
 
             payload_template = {
                 "document_type": "result",
