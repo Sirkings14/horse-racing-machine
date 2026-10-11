@@ -133,8 +133,10 @@ def extract_arrival_from_line(
         2ième 6 - 10 - 11
         3ème 5 - 2 - 14 - 7 - 9
 
-    The parser captures every horse number that appears
-    in the arrival portion of the line.
+    The parser captures only the first contiguous sequence of horse
+    numbers separated by hyphens after the rank label. It stops before payout
+    columns, where thousands-separated amounts can otherwise leak digits
+    (for example, the "1" in "1 400") into the horse arrival.
 
     It does NOT invent missing positions.
     """
@@ -145,6 +147,7 @@ def extract_arrival_from_line(
         r"\s*"
         r"(?:"
         r"ère|"
+        r"ere|"
         r"er|"
         r"ieme|"
         r"ième|"
@@ -153,8 +156,8 @@ def extract_arrival_from_line(
         r"e"
         r")"
         r"\s*"
-        r"(?P<arrival>.+?)"
-        r"\s*$",
+        r"(?P<arrival>\d+(?:\s*-\s*\d+){1,4})"
+        r"(?=\s|$)",
         re.IGNORECASE,
     )
 
@@ -211,6 +214,7 @@ def extract_arrival_from_text_fallback(
         r"\s*"
         r"(?:"
         r"ère|"
+        r"ere|"
         r"er|"
         r"ieme|"
         r"ième|"
