@@ -87,7 +87,9 @@ class PreraceProgramSelectionTests(unittest.TestCase):
 
     def test_selects_first_race_when_no_arrival_is_published(self):
         self.programs["today.json"]["published_arrival"] = []
-        with patch.object(predict_v3, "_json", side_effect=self._fake_load):
+        with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
+             patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
+             patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
             entry, program = predict_v3._first_unfinished_program(self.races)
 
         self.assertEqual(entry["race_key"], "2026-10-11|AUTEUIL|3")
