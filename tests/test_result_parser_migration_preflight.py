@@ -12,9 +12,9 @@ def _make_fixture(root: Path, stale_text: bool = False):
     structured = root / "structured"
     processed.mkdir()
     structured.mkdir()
-    header = "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\\n"
+    header = "DU : 10 - 10 - 2026 - REUNION - 1 - ( CAEN )\n"
     text_path = processed / "result_a.txt"
-    text_path.write_text(header + "4ième 9 - 10 - 4 10 1 400 74\\n", encoding="utf-8")
+    text_path.write_text(header + "4ième 9 - 10 - 4 10 1 400 74\n", encoding="utf-8")
     json_path = structured / "result_a.json"
     json_path.write_text(json.dumps({
         "document_type": "result", "date": "2026-10-10", "meeting": 1, "track": "CAEN",
@@ -28,7 +28,7 @@ def _make_fixture(root: Path, stale_text: bool = False):
     }
     manifest = preview_migration(processed, structured, index)
     if stale_text:
-        text_path.write_text(text_path.read_text(encoding="utf-8") + "edited\\n", encoding="utf-8")
+        text_path.write_text(text_path.read_text(encoding="utf-8") + "edited\n", encoding="utf-8")
     return processed, structured, index, manifest
 
 
