@@ -22,8 +22,10 @@ def test_partial_three_place_arrival_masks_top4_top5_negatives():
     rows = extract_race_rows(_matched_record([1, 2, 3]))
     assert len(rows) == 6
     assert [r["top3"] for r in rows[:3]] == [1, 1, 1]
-    assert all(r["top4"] is None and r["top5"] is None for r in rows)
-    assert all(not r["target_top4_known"] and not r["target_top5_known"] for r in rows)
+    assert [r["top4"] for r in rows] == [1, 1, 1, None, None, None]
+    assert [r["top5"] for r in rows] == [1, 1, 1, None, None, None]
+    assert [r["target_top4_known"] for r in rows] == [True, True, True, False, False, False]
+    assert [r["target_top5_known"] for r in rows] == [True, True, True, False, False, False]
 
 
 def test_two_place_arrival_keeps_observed_top3_positives_but_masks_unknown_negatives():
@@ -40,7 +42,7 @@ def test_four_place_arrival_only_defines_top4_not_top5():
     rows = extract_race_rows(_matched_record([4, 2, 1, 5]))
     by_number = {r["horse_number"]: r for r in rows}
     assert [by_number[n]["top4"] for n in range(1, 7)] == [1, 1, 0, 1, 1, 0]
-    assert all(r["top5"] is None for r in rows)
+    assert [by_number[n]["top5"] for n in range(1, 7)] == [1, 1, None, 1, 1, None]
 
 
 def test_full_five_place_arrival_defines_top5():
