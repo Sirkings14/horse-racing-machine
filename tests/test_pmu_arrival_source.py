@@ -99,7 +99,7 @@ def test_runner_outside_roster_is_rejected():
 def test_local_prefix_mismatch_is_rejected():
     result = validate_pmu_payload(_payload(), {1, 2, 3, 4, 5, 9, 10}, [9, 10, 5, 1])
     assert result["accepted"] is False
-    assert result["reason"] == "pmu_top5_disagrees_with_local_result_prefix"
+    assert result["reason"] == "pmu_top3_disagrees_with_local_result_prefix"
 
 
 def test_local_evidence_requires_exact_roster_and_local_result_prefix(tmp_path: Path):
