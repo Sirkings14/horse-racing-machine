@@ -12,10 +12,13 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-
-from src.parsers.results_parser import parse_result_file
+import sys
 
 BASE_DIR = Path(__file__).resolve().parents[1]
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+from src.parsers.results_parser import parse_result_file
 DEFAULT_PROCESSED_DIR = BASE_DIR / "data" / "processed" / "results"
 DEFAULT_STRUCTURED_DIR = BASE_DIR / "data" / "structured" / "results"
 DEFAULT_OUTPUT = BASE_DIR / "data" / "evaluation" / "result_parser_correction_audit.json"
