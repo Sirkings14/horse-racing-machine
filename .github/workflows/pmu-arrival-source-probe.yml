@@ -65,6 +65,10 @@ jobs:
         continue-on-error: true
         run: |
           python -m src.dataset.pmu_arrival_source --date 2026-10-09 --track "PARIS-VINCENNES NOCTURNE" --meeting 1 --race 4 --report data/evaluation/pmu_arrival_source_probe_vincennes.json
+      - name: Probe independent historical Vincennes meeting result
+        continue-on-error: true
+        run: |
+          python -m src.dataset.pmu_arrival_source --date 2026-09-05 --track "PARIS-VINCENNES" --meeting 1 --race 4 --report data/evaluation/pmu_arrival_source_probe_vincennes_sep05.json
       - name: Upload probe report
         if: always()
         uses: actions/upload-artifact@v4
