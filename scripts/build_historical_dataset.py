@@ -13,6 +13,7 @@ BASE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BASE))
 from src.model.historical_profile import build_walk_forward_profiles
 from src.learning.result_truth import canonical_key
+from src.dataset.build_dataset import labels_from_partial_arrival
 OUT = BASE / "data" / "dataset" / "training_dataset_clean.json"
 ROSTER_OUT = BASE / "data" / "rosters" / "historical_rosters.json"
 SOURCE = "annaelmoussa/horse-racing-france"
@@ -130,9 +131,12 @@ def _arrival(v):
         vals = item if isinstance(item, list) else [item]
         for x in vals:
             try:
-                out.append(int(x))
-            except Exception:
-                pass
+                number = int(x)
+            except (TypeError, ValueError, OverflowError):
+                return []
+            if number <= 0:
+                return []
+            out.append(number)
     return out
 
 def main():
@@ -168,6 +172,8 @@ def main():
     rows, columns_seen = [], set()
     matched_meta = matched_arrival = matched_number = 0
     roster_candidates: dict[str, dict[str, dict[str, Any]]] = {}
+    participant_numbers_by_key: dict[str, set[int]] = {}
+    participant_number_occurrences_by_key: dict[str, list[int]] = {}
 
     for i, p in enumerate(participants):
         columns_seen.update(p.keys())
@@ -182,6 +188,10 @@ def main():
             if raw_horse_number is not None and raw_horse_number > 0 and raw_horse_number.is_integer()
             else None
         )
+
+        if meta and horse_number is not None:
+            participant_numbers_by_key.setdefault(key, set()).add(horse_number)
+            participant_number_occurrences_by_key.setdefault(key, []).append(horse_number)
 
         # Build roster candidates from all participants before consulting arrival.
         # This is an independent roster source, not a result-derived finisher list.
@@ -203,11 +213,10 @@ def main():
         matched_arrival += 1
         if horse_number is None:
             continue
-        try:
-            pos = meta["arrival"].index(horse_number) + 1
-        except ValueError:
-            continue
-        matched_number += 1
+        pos = meta["arrival"].index(horse_number) + 1 if horse_number in meta["arrival"] else None
+        if pos is not None:
+            matched_number += 1
+        target_labels = labels_from_partial_arrival(pos, len(meta["arrival"]))
         horse_name = str(_pick(p, ["cheval", "nomCheval", "horse", "horse_name", "nom"], f"HORSE_{horse_number}") or f"HORSE_{horse_number}").strip()
         horse_id = _pick(p, ["horse_id", "horseId", "horse_uid", "horseUid", "idCheval", "id_cheval", "identifiantCheval", "identifiant_cheval"])
         rows.append({
@@ -215,8 +224,14 @@ def main():
             "race_number": meta["race_number"], "distance": meta["distance"],
             "runners_count": meta["runners_count"], "prize_euros": meta["prize_euros"],
             "race_type": meta["race_type"], "horse_number": horse_number,
-            "horse_name": horse_name, "horse_id": horse_id, "finish_position": pos, "won": int(pos == 1),
-            "top3": int(pos <= 3), "top5": int(pos <= 5),
+            "horse_name": horse_name, "horse_id": horse_id, "finish_position": pos,
+            "won": target_labels["won"], "top3": target_labels["top3"],
+            "top4": target_labels["top4"], "top5": target_labels["top5"],
+            "arrival_positions_available": target_labels["arrival_positions_available"],
+            "target_won_known": target_labels["target_won_known"],
+            "target_top3_known": target_labels["target_top3_known"],
+            "target_top4_known": target_labels["target_top4_known"],
+            "target_top5_known": target_labels["target_top5_known"],
             "weight": _num(_pick(p, ["poids", "weight", "carried_weight", "poidsporte"])),
             "draw": _num(_pick(p, ["corde", "draw", "stall", "numCorde", "placeCorde"])),
             "win_odds_decimal": _num(_pick(p, [
@@ -226,6 +241,30 @@ def main():
         })
         if i and i % 100000 == 0:
             print("participants:", i, "meta_matches:", matched_meta, "arrival_matches:", matched_arrival, "usable:", len(rows))
+
+    # Fail closed for races whose result duplicates a runner or names a runner
+    # absent from the complete participant roster. Short but internally valid
+    # arrivals are retained with unknown labels masked per cutoff.
+    invalid_arrival_races = set()
+    for race_key, meta in race_meta.items():
+        arrival = meta.get("arrival") or []
+        if not arrival:
+            continue
+        roster_numbers = participant_numbers_by_key.get(race_key, set())
+        occurrences = participant_number_occurrences_by_key.get(race_key, [])
+        if (
+            len(arrival) != len(set(arrival))
+            or not set(arrival).issubset(roster_numbers)
+            or len(occurrences) != len(set(occurrences))
+        ):
+            invalid_arrival_races.add(race_key)
+    if invalid_arrival_races:
+        before = len(rows)
+        rows = [row for row in rows if row["race_key"] not in invalid_arrival_races]
+        print(json.dumps({
+            "invalid_arrival_races_rejected": len(invalid_arrival_races),
+            "rows_removed_for_ambiguous_arrivals": before - len(rows),
+        }, indent=2))
 
     print(json.dumps({
         "participant_columns": sorted(columns_seen),
