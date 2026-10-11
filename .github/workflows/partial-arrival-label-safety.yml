@@ -17,6 +17,7 @@ on:
       - "src/model/v3_model.py"
       - "src/model/v3_backtest.py"
       - "src/model/v3_train.py"
+      - "scripts/build_historical_dataset.py"
       - "tests/test_partial_arrival_labels.py"
       - ".github/workflows/partial-arrival-label-safety.yml"
   workflow_dispatch:
