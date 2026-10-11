@@ -29,6 +29,7 @@ class PreraceProgramSelectionTests(unittest.TestCase):
 
     def test_returns_none_when_every_candidate_has_past_or_same_day_arrival(self):
         self.programs["tomorrow.json"]["date"] = "2026-10-11"
+        self.programs["tomorrow.json"]["published_arrival"] = [3, 4, 1]
         with patch.object(predict_v3, "_json", side_effect=self._fake_load):
             entry, program = predict_v3._first_unfinished_program(self.races, today_iso="2026-10-11")
 
