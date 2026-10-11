@@ -1,6 +1,6 @@
 {
-  "prediction_id": "2026-10-11|AUTEUIL|3|2026-10-11T17:44:24.396192+00:00",
-  "generated_at": "2026-10-11T17:44:24.396204+00:00",
+  "prediction_id": "2026-10-11|AUTEUIL|3|2026-10-11T23:02:41.551704+00:00",
+  "generated_at": "2026-10-11T23:02:41.551715+00:00",
   "model_version": "v4-evidence-no-press",
   "mode": "v5_market_opportunity_layer",
   "race_key": "2026-10-11|AUTEUIL|3",
@@ -16,9 +16,7 @@
   "truth_gate": {
     "valid": true,
     "errors": [],
-    "warnings": [
-      "published_arrival_present_but_excluded_from_features"
-    ],
+    "warnings": [],
     "press_independent": true,
     "post_race_data_excluded": true
   },
