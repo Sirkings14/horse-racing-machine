@@ -208,8 +208,9 @@ def audit_corpus(
                 "change_type": "legacy_race_not_reparsed",
                 "manual_review_required": True,
                 "manual_review_reason": (
-                    line_reasons[0] if len(line_reasons) == 1
-                    else "multiple_or_missing_source_line_patterns"
+                    "no_matching_ordinal_source_line_found" if not source_lines
+                    else line_reasons[0] if len(line_reasons) == 1
+                    else "multiple_source_line_patterns"
                 ),
                 "source_line_evidence": source_lines,
             })
