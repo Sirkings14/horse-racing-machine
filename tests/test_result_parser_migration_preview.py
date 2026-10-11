@@ -4,7 +4,11 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from scripts.preview_result_parser_migration import preview_migration
+from scripts.preview_result_parser_migration import (
+    preview_migration,
+    validate_preview_copy_snapshot,
+    validate_preview_group_snapshot,
+)
 
 
 def _fixture(root: Path, name: str, arrival_line: str, legacy_arrival: list[int]) -> tuple[Path, Path]:
@@ -76,6 +80,78 @@ class ResultParserMigrationPreviewTests(unittest.TestCase):
             self.assertEqual(report["migration_preview_eligible_groups"], 0)
             self.assertEqual(report["blocked_reason_counts"].get("copies_disagree_after_reparse"), 1)
 
+
+
+    def test_snapshot_preflight_accepts_unchanged_inputs_without_applying(self):
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            text_path, source = _fixture(root, "result_a", "4ième 9 - 10 - 4 10 1 400 74", [9, 10, 4, 1])
+            index = {
+                "2026-10-10|CAEN|4": {
+                    "horse_numbers": {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+                    "runners_count": 10,
+                    "source_file": "program.json",
+                    "conflict": False,
+                }
+            }
+            report = preview_migration(root / "processed", root / "structured", index)
+            group = report["eligible_groups"][0]
+            check = validate_preview_group_snapshot(
+                group, root / "processed", root / "structured", index
+            )
+            self.assertTrue(check["valid"])
+            self.assertEqual(check["checked_copies"], 1)
+            self.assertFalse(check["policy"]["applies_correction"])
+            self.assertEqual(json.loads(source.read_text(encoding="utf-8"))["races"][0]["arrival"], [9, 10, 4, 1])
+
+    def test_snapshot_preflight_rejects_modified_processed_text(self):
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            text_path, source = _fixture(root, "result_a", "4ième 9 - 10 - 4 10 1 400 74", [9, 10, 4, 1])
+            index = {
+                "2026-10-10|CAEN|4": {
+                    "horse_numbers": {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+                    "runners_count": 10,
+                    "source_file": "program.json",
+                    "conflict": False,
+                }
+            }
+            report = preview_migration(root / "processed", root / "structured", index)
+            copy = report["eligible_groups"][0]["structured_result_copies"][0]
+            text_path.write_text(text_path.read_text(encoding="utf-8") + "edited\\n", encoding="utf-8")
+            check = validate_preview_copy_snapshot(
+                copy, root / "processed", root / "structured", index
+            )
+            self.assertFalse(check["valid"])
+            self.assertEqual(check["reason"], "processed_text_sha256_mismatch")
+
+    def test_snapshot_preflight_rejects_changed_roster_evidence(self):
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            _, source = _fixture(root, "result_a", "4ième 9 - 10 - 4 10 1 400 74", [9, 10, 4, 1])
+            index = {
+                "2026-10-10|CAEN|4": {
+                    "horse_numbers": {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+                    "runners_count": 10,
+                    "source_file": "program.json",
+                    "conflict": False,
+                }
+            }
+            report = preview_migration(root / "processed", root / "structured", index)
+            copy = report["eligible_groups"][0]["structured_result_copies"][0]
+            changed_index = {
+                "2026-10-10|CAEN|4": {
+                    "horse_numbers": {1, 2, 3, 4, 5, 6, 7, 8, 9, 11},
+                    "runners_count": 10,
+                    "source_file": "program.json",
+                    "conflict": False,
+                }
+            }
+            check = validate_preview_copy_snapshot(
+                copy, root / "processed", root / "structured", changed_index
+            )
+            self.assertFalse(check["valid"])
+            self.assertEqual(check["reason"], "roster_evidence_sha256_mismatch")
 
 if __name__ == "__main__":
     unittest.main()
