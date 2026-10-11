@@ -60,6 +60,17 @@ class ResultParserTruthTests(unittest.TestCase):
         race = next(item for item in payload["races"] if item["race_number"] == 4)
         self.assertEqual(race["arrival"], [14, 6, 15])
 
+    def test_ambiguous_single_number_followed_by_payout_is_not_treated_as_arrival(self):
+        lines = [
+            "1ère 5 550 14 6 - 7 7\\u202f300 60",
+            "8ième 3 1\\u202f400 5 8 - 5 9\\u202f200 93",
+            "7ième x 14 1\\u202f000 251 7 - 1 5\\u202f950 2987",
+            "9ième - - 0 0 5 - 0 0 271",
+        ]
+        for line in lines:
+            with self.subTest(line=line):
+                self.assertIsNone(extract_arrival_from_line(line))
+
     def test_first_arrival_sequence_stops_before_later_payout_combinations(self):
         line = "1ère 5 - 6 - 9 6 1\\u202f100 3 5 - 6 2\\u202f400 62"
         result = extract_arrival_from_line(line)
