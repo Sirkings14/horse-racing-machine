@@ -1,0 +1,71 @@
+name: PMU arrival cross-check after parser fix
+
+on:
+  push:
+    branches: [feat/pmu-arrival-crosscheck-after-parser-fix]
+    paths:
+      - "src/dataset/pmu_arrival_source.py"
+      - "tests/test_pmu_arrival_source.py"
+      - ".github/workflows/pmu-arrival-source-probe.yml"
+  workflow_dispatch:
+    inputs:
+      race_date:
+        description: "Race date (YYYY-MM-DD)"
+        required: true
+        default: "2026-10-01"
+      track:
+        description: "Racecourse"
+        required: true
+        default: "AUTEUIL"
+      meeting:
+        description: "Meeting number"
+        required: true
+        default: "1"
+      race_number:
+        description: "Race number to probe"
+        required: true
+        default: "1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pmu-arrival-shadow-probe
+  cancel-in-progress: true
+
+jobs:
+  read-only-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout probe branch
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install only probe dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pytest
+      - name: Compile probe
+        run: python -m py_compile src/dataset/pmu_arrival_source.py tests/test_pmu_arrival_source.py
+      - name: Run isolated offline tests
+        run: python -m pytest -q tests/test_pmu_arrival_source.py
+      - name: Probe one known race; never change training or production artifacts
+        continue-on-error: true
+        env:
+          RACE_DATE: ${{ github.event.inputs.race_date || '2026-10-01' }}
+          TRACK: ${{ github.event.inputs.track || 'AUTEUIL' }}
+          MEETING: ${{ github.event.inputs.meeting || '1' }}
+          RACE_NUMBER: ${{ github.event.inputs.race_number || '1' }}
+        run: |
+          python -m src.dataset.pmu_arrival_source --date "$RACE_DATE" --track "$TRACK" --meeting "$MEETING" --race "$RACE_NUMBER"
+      - name: Upload probe report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pmu-arrival-shadow-report
+          path: data/evaluation/pmu_arrival_source_probe.json
+          if-no-files-found: warn
+          retention-days: 14
