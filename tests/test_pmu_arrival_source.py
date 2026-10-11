@@ -50,7 +50,7 @@ def test_valid_top5_must_match_roster_and_local_four_place_prefix():
     assert result["accepted"] is True
     assert result["top5_numbers"] == [9, 10, 4, 1, 5]
     assert result["matched_local_prefix_positions"] == 4
-    assert result["policy"]["odds_and_market_fields_used"] is False
+    assert result["policy"]["odds_and_market_fields_ignored"] is True
 
 
 def test_missing_fifth_position_is_rejected():
