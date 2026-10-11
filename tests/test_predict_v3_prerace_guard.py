@@ -23,12 +23,6 @@ class PreraceProgramSelectionTests(unittest.TestCase):
         self.predictions_dir.mkdir()
         self.ledger_file = Path(self.temp_dir.name) / "telegram_delivery_ledger.json"
 
-    def _selection_patches(self):
-        return (
-            patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir),
-            patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file),
-        )
-
     def _write_notified_snapshot(self, horse_numbers):
         race_key = "2026-10-11|AUTEUIL|3"
         reasons = ["economic_validation_unavailable", "insufficient_verified_history"]
@@ -94,7 +88,6 @@ class PreraceProgramSelectionTests(unittest.TestCase):
 
         self.assertEqual(entry["race_key"], "2026-10-11|AUTEUIL|3")
         self.assertEqual(program["date"], "2026-10-11")
-
 
     def test_skips_identical_same_day_snapshot_after_confirmed_telegram_delivery(self):
         self.programs["today.json"]["published_arrival"] = []
