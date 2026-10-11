@@ -296,25 +296,56 @@ def validate_pmu_payload(
             "outside_roster_numbers": outside_roster,
         }
 
-    prefix = local_result_prefix[:min(5, len(local_result_prefix))]
-    if top5[:len(prefix)] != prefix:
+    # Local LONAB result rows consistently agree on the first three places,
+    # while positions after third have shown a different reporting convention.
+    # Therefore only the local Top-3 is a hard cross-check; later positions are
+    # separately flagged and must never be silently reconciled or called verified.
+    prefix_length = min(3, len(local_result_prefix))
+    local_prefix = local_result_prefix[:prefix_length]
+    pmu_prefix = top5[:prefix_length]
+    if pmu_prefix != local_prefix:
         return {
             "accepted": False,
-            "reason": "pmu_top5_disagrees_with_local_result_prefix",
-            "local_prefix": prefix,
-            "pmu_prefix": top5[:len(prefix)],
+            "reason": "pmu_top3_disagrees_with_local_result_prefix",
+            "local_prefix": local_prefix,
+            "pmu_prefix": pmu_prefix,
             "pmu_top5_details": top5_details,
+            "source_approved_for_training": False,
         }
 
+    tail_conflicts = []
+    for position in range(4, min(5, len(local_result_prefix)) + 1):
+        local_number = local_result_prefix[position - 1]
+        pmu_number = top5[position - 1] if position <= len(top5) else None
+        if pmu_number != local_number:
+            tail_conflicts.append({
+                "rank": position,
+                "local_number": local_number,
+                "pmu_number": pmu_number,
+                "requires_manual_resolution": True,
+            })
+
+    local_tail_match = not tail_conflicts
+    reason = (
+        "top3_roster_match_but_local_tail_conflict"
+        if tail_conflicts
+        else "top3_and_roster_match_full_top5_shadow_only"
+    )
     return {
         "accepted": True,
-        "reason": "five_positions_match_local_result_prefix_and_declared_roster",
+        "reason": reason,
         "top5_numbers": top5,
         "top5_details": top5_details,
-        "matched_local_prefix_positions": len(prefix),
+        "local_top3_match": True,
+        "matched_local_prefix_positions": prefix_length,
+        "local_tail_match": local_tail_match,
+        "local_tail_conflicts": tail_conflicts,
+        "source_approved_for_training": False,
         "policy": {
             "odds_and_market_fields_ignored": True,
             "local_program_published_arrival_ignored": True,
+            "only_local_top3_is_hard_crosscheck": True,
+            "tail_conflicts_need_manual_resolution": True,
             "not_yet_approved_for_training": True,
         },
     }
@@ -397,7 +428,10 @@ def probe(
                         )
                         report["source_validation"] = validation
                         if validation.get("accepted"):
-                            report["status"] = "top5_crosscheck_passed_shadow_only"
+                            if validation.get("local_tail_match") is False:
+                                report["status"] = "top5_shadow_only_local_tail_conflict"
+                            else:
+                                report["status"] = "top5_crosscheck_passed_shadow_only"
                             report["reason"] = validation["reason"]
                         else:
                             report["reason"] = validation.get("reason", "source_validation_rejected")

@@ -41,7 +41,7 @@ def _payload(order=(9, 10, 4, 1, 5)):
     }
 
 
-def test_valid_top5_must_match_roster_and_local_four_place_prefix():
+def test_valid_top5_with_local_fourth_place_match_is_shadow_only():
     result = validate_pmu_payload(
         _payload(),
         {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
@@ -50,8 +50,30 @@ def test_valid_top5_must_match_roster_and_local_four_place_prefix():
     assert result["accepted"] is True
     assert result["top5_numbers"] == [9, 10, 4, 1, 5]
     assert result["top5_details"][3] == {"rank": 4, "horse_number": 1, "horse_name": "HORSE 1"}
-    assert result["matched_local_prefix_positions"] == 4
+    assert result["matched_local_prefix_positions"] == 3
+    assert result["local_top3_match"] is True
+    assert result["local_tail_match"] is True
+    assert result["source_approved_for_training"] is False
     assert result["policy"]["odds_and_market_fields_ignored"] is True
+
+
+def test_top3_match_with_later_local_place_conflict_is_flagged_not_reconciled():
+    result = validate_pmu_payload(
+        _payload(order=(9, 10, 4, 7, 5)),
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        [9, 10, 4, 1],
+    )
+    assert result["accepted"] is True
+    assert result["local_top3_match"] is True
+    assert result["local_tail_match"] is False
+    assert result["reason"] == "top3_roster_match_but_local_tail_conflict"
+    assert result["local_tail_conflicts"] == [{
+        "rank": 4,
+        "local_number": 1,
+        "pmu_number": 7,
+        "requires_manual_resolution": True,
+    }]
+    assert result["source_approved_for_training"] is False
 
 
 def test_missing_fifth_position_is_rejected():
