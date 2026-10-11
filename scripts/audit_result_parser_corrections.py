@@ -63,7 +63,7 @@ def compare_arrivals(legacy: list[int], reparsed: list[int]) -> str:
 
 
 _RANK_PREFIX_PATTERN = re.compile(
-    r"^\\s*(?P<race>\\d+)\\s*(?:i[eè]me|ère|ere|er|ème|eme|e)\\s*(?P<rest>.*)$",
+    r"^\s*(?P<race>\d+)\s*(?:i[eè]me|ère|ere|er|ème|eme|e)\s*(?P<rest>.*)$",
     re.IGNORECASE,
 )
 
@@ -75,9 +75,9 @@ def _classify_unparsed_rank_line(rest: str) -> str:
         return "rank_label_without_arrival_text"
     if re.match(r"^(?:x|np|da|dai|disq|ab|abd|ret|pulled)", value, re.IGNORECASE):
         return "status_marker_before_arrival_number"
-    if re.match(r"^(?:[-–—]\\s*){1,}", value):
+    if re.match(r"^(?:[-–—]\s*){1,}", value):
         return "arrival_sequence_missing_or_corrupt"
-    if re.match(r"^\\d+\\s+", value):
+    if re.match(r"^\d+\s+", value):
         return "single_number_without_hyphen_separator_payout_ambiguous"
     return "unsupported_or_corrupted_rank_line"
 
