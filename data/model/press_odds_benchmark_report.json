@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T15:50:33.237319+00:00",
+  "generated_at": "2026-10-11T16:30:44.131541+00:00",
   "status": "benchmark_available",
   "method": "out_of_sample_v4_scoring_on_stored_lonab_programs_vs_published_press_prices",
   "training_history_end_date": "2026-05-05",
@@ -56,7 +56,7 @@
         "total_return": 451.0,
         "profit": 321.0,
         "roi": 2.4692,
-        "average_probability_edge": 0.0799,
+        "average_probability_edge": 0.0529,
         "maximum_drawdown_units": 20.0,
         "chronological": [
           {
@@ -66,7 +66,7 @@
               14,
               11,
               8,
-              3
+              6
             ],
             "profit": 59.0
           },
@@ -76,8 +76,8 @@
               14,
               11,
               10,
-              9,
-              7
+              7,
+              9
             ],
             "profit": 73.0
           },
@@ -98,8 +98,8 @@
               4,
               1,
               6,
-              7,
-              12
+              12,
+              7
             ],
             "profit": 3.0
           },
@@ -130,8 +130,8 @@
             "selected": [
               8,
               2,
-              6,
               1,
+              6,
               9
             ],
             "profit": -5.0
@@ -172,8 +172,8 @@
           {
             "race_key": "2026-06-27|ENGHIEN|2",
             "selected": [
-              13,
               14,
+              13,
               12,
               8,
               15
@@ -183,8 +183,8 @@
           {
             "race_key": "2026-06-28|SAINT-CLOUD|3",
             "selected": [
-              4,
               1,
+              4,
               8,
               7,
               9
@@ -217,8 +217,8 @@
             "race_key": "2026-07-20|VICHY|8",
             "selected": [
               5,
-              4,
               1,
+              4,
               8,
               13
             ],
@@ -227,11 +227,11 @@
           {
             "race_key": "2026-08-05|SAINT MALO|5",
             "selected": [
+              8,
               6,
               5,
-              8,
               10,
-              3
+              12
             ],
             "profit": 2.0
           },
@@ -242,7 +242,7 @@
               8,
               13,
               6,
-              1
+              12
             ],
             "profit": 7.0
           },
@@ -261,8 +261,8 @@
             "race_key": "2026-09-16|FEURS|1",
             "selected": [
               15,
-              14,
               5,
+              14,
               4,
               1
             ],
@@ -286,15 +286,15 @@
               11,
               12,
               8,
-              2
+              7
             ],
             "profit": 14.0
           },
           {
             "race_key": "2026-09-21|LA CAPELLE|1",
             "selected": [
-              16,
               13,
+              16,
               4,
               3,
               9
@@ -306,8 +306,8 @@
             "selected": [
               4,
               5,
-              15,
               12,
+              15,
               18
             ],
             "profit": -5.0
@@ -318,19 +318,19 @@
               12,
               2,
               9,
-              3,
-              6
+              6,
+              3
             ],
             "profit": -5.0
           },
           {
             "race_key": "2026-10-09|PARIS-VINCENNES NOCTURNE|4",
             "selected": [
-              6,
               13,
+              6,
               15,
               14,
-              5
+              2
             ],
             "profit": 20.0
           },
@@ -340,23 +340,23 @@
               15,
               8,
               18,
-              1,
-              10
+              10,
+              1
             ],
             "profit": -5.0
           }
         ]
       },
       "value_filtered_accounting": {
-        "bets": 73,
-        "wins": 9,
-        "win_rate": 0.1233,
-        "total_stake": 73.0,
-        "total_return": 364.0,
-        "profit": 291.0,
-        "roi": 3.9863,
-        "average_probability_edge": 0.1206,
-        "maximum_drawdown_units": 20.0,
+        "bets": 42,
+        "wins": 4,
+        "win_rate": 0.0952,
+        "total_stake": 42.0,
+        "total_return": 213.0,
+        "profit": 171.0,
+        "roi": 4.0714,
+        "average_probability_edge": 0.1075,
+        "maximum_drawdown_units": 13.0,
         "chronological": [
           {
             "race_key": "2026-05-13|PARIS-VINCENNES|1",
@@ -369,19 +369,14 @@
           {
             "race_key": "2026-05-15|PARIS-VINCENNES NOCTURNE|4",
             "selected": [
-              14,
-              10,
-              9
+              14
             ],
-            "profit": 75.0
+            "profit": -1.0
           },
           {
             "race_key": "2026-05-18|MARSEILLE-BORELY|4",
-            "selected": [
-              15,
-              10
-            ],
-            "profit": -2.0
+            "selected": [],
+            "profit": 0.0
           },
           {
             "race_key": "2026-05-19|CHANTILLY|1",
@@ -396,48 +391,41 @@
             "race_key": "2026-05-29|PARIS-VINCENNES NOCTURNE|4",
             "selected": [
               9,
-              8,
-              10,
-              12
+              8
             ],
-            "profit": 23.0
+            "profit": 25.0
           },
           {
             "race_key": "2026-06-06|PARIS-VINCENNES|4",
             "selected": [
               4,
               13,
-              11,
               12
             ],
-            "profit": 9.0
+            "profit": -3.0
           },
           {
             "race_key": "2026-06-07|PARISLONGCHAMP|3",
             "selected": [
-              8,
-              9
+              8
             ],
-            "profit": -2.0
+            "profit": -1.0
           },
           {
             "race_key": "2026-06-08|ANGERS EVENTARD|8",
             "selected": [
               10,
-              16,
-              9
+              16
             ],
-            "profit": -3.0
+            "profit": -2.0
           },
           {
             "race_key": "2026-06-09|COMPIEGNE|8",
             "selected": [
               1,
-              16,
-              11,
-              12
+              16
             ],
-            "profit": -4.0
+            "profit": -2.0
           },
           {
             "race_key": "2026-06-14|CHANTILLY|4",
@@ -451,21 +439,19 @@
             "race_key": "2026-06-27|ENGHIEN|2",
             "selected": [
               13,
-              14,
               12,
               8,
               15
             ],
-            "profit": 95.0
+            "profit": 96.0
           },
           {
             "race_key": "2026-06-28|SAINT-CLOUD|3",
             "selected": [
               4,
-              8,
-              9
+              8
             ],
-            "profit": -3.0
+            "profit": -2.0
           },
           {
             "race_key": "2026-06-30|VICHY|5",
@@ -477,12 +463,8 @@
           },
           {
             "race_key": "2026-07-19|CHANTILLY|3",
-            "selected": [
-              7,
-              11,
-              9
-            ],
-            "profit": -3.0
+            "selected": [],
+            "profit": 0.0
           },
           {
             "race_key": "2026-07-20|VICHY|8",
@@ -494,8 +476,8 @@
           {
             "race_key": "2026-08-05|SAINT MALO|5",
             "selected": [
-              6,
-              8
+              8,
+              6
             ],
             "profit": -2.0
           },
@@ -504,27 +486,24 @@
             "selected": [
               9,
               8,
-              13,
-              1
+              13
             ],
-            "profit": -4.0
+            "profit": -3.0
           },
           {
             "race_key": "2026-08-31|SAINT-CLOUD|1",
             "selected": [
-              2,
-              5
+              2
             ],
-            "profit": -2.0
+            "profit": -1.0
           },
           {
             "race_key": "2026-09-16|FEURS|1",
             "selected": [
               15,
-              5,
-              1
+              5
             ],
-            "profit": -3.0
+            "profit": -2.0
           },
           {
             "race_key": "2026-09-19|CHANTILLY|4",
@@ -535,57 +514,44 @@
           },
           {
             "race_key": "2026-09-20|PARIS-VINCENNES|4",
-            "selected": [
-              1,
-              8
-            ],
-            "profit": 17.0
+            "selected": [],
+            "profit": 0.0
           },
           {
             "race_key": "2026-09-21|LA CAPELLE|1",
             "selected": [
-              16,
-              13,
-              4,
-              3,
-              9
+              16
             ],
-            "profit": 11.0
+            "profit": -1.0
           },
           {
             "race_key": "2026-10-07|ENGHIEN|1",
             "selected": [
               4,
-              5,
-              15
+              5
             ],
-            "profit": -3.0
+            "profit": -2.0
           },
           {
             "race_key": "2026-10-08|SAINT-CLOUD|1",
             "selected": [
-              12,
-              2,
-              9
+              2
             ],
-            "profit": -3.0
+            "profit": -1.0
           },
           {
             "race_key": "2026-10-09|PARIS-VINCENNES NOCTURNE|4",
             "selected": [
-              6,
-              15,
-              14
+              6
             ],
-            "profit": 22.0
+            "profit": -1.0
           },
           {
             "race_key": "2026-10-10|CAEN|4",
             "selected": [
-              15,
-              8
+              15
             ],
-            "profit": -2.0
+            "profit": -1.0
           }
         ]
       }
@@ -672,42 +638,42 @@
         {
           "horse_number": 12,
           "horse_name": "LORD DELO",
-          "probability_winner": 0.176584,
-          "probability_top3": 0.388223,
-          "probability_top5": 0.626059,
-          "ensemble_score": 0.361062
+          "probability_winner": 0.141933,
+          "probability_top3": 0.302012,
+          "probability_top5": 0.473966,
+          "ensemble_score": 0.280078
         },
         {
           "horse_number": 14,
           "horse_name": "LUNELLA LEMAN",
-          "probability_winner": 0.149667,
-          "probability_top3": 0.362196,
-          "probability_top5": 0.598684,
-          "ensemble_score": 0.33451
+          "probability_winner": 0.120674,
+          "probability_top3": 0.284359,
+          "probability_top5": 0.458791,
+          "ensemble_score": 0.261687
         },
         {
           "horse_number": 11,
           "horse_name": "KEY OF LOVE",
-          "probability_winner": 0.146443,
-          "probability_top3": 0.359107,
-          "probability_top5": 0.593462,
-          "ensemble_score": 0.331003
+          "probability_winner": 0.118251,
+          "probability_top3": 0.28239,
+          "probability_top5": 0.456269,
+          "ensemble_score": 0.259474
         },
         {
           "horse_number": 8,
           "horse_name": "LUDIVINE",
-          "probability_winner": 0.12684,
-          "probability_top3": 0.33665,
-          "probability_top5": 0.570164,
-          "ensemble_score": 0.309327
+          "probability_winner": 0.101149,
+          "probability_top3": 0.262793,
+          "probability_top5": 0.436019,
+          "ensemble_score": 0.240573
         },
         {
-          "horse_number": 3,
-          "horse_name": "NELSON GREENWOOD",
-          "probability_winner": 0.116294,
-          "probability_top3": 0.330706,
-          "probability_top5": 0.557568,
-          "ensemble_score": 0.300723
+          "horse_number": 6,
+          "horse_name": "KEVIN PRINCE",
+          "probability_winner": 0.091481,
+          "probability_top3": 0.252636,
+          "probability_top5": 0.421278,
+          "ensemble_score": 0.229773
         }
       ]
     },
@@ -783,42 +749,42 @@
         {
           "horse_number": 14,
           "horse_name": "COMES WITH AGE",
-          "probability_winner": 0.231517,
-          "probability_top3": 0.458504,
-          "probability_top5": 0.712442,
-          "ensemble_score": 0.429172
+          "probability_winner": 0.189853,
+          "probability_top3": 0.362002,
+          "probability_top5": 0.549957,
+          "ensemble_score": 0.338946
         },
         {
           "horse_number": 11,
           "horse_name": "INVICTUS DE NILREM",
-          "probability_winner": 0.120102,
-          "probability_top3": 0.330027,
-          "probability_top5": 0.555521,
-          "ensemble_score": 0.301263
+          "probability_winner": 0.095209,
+          "probability_top3": 0.259323,
+          "probability_top5": 0.431161,
+          "ensemble_score": 0.236058
         },
         {
           "horse_number": 10,
           "horse_name": "JAMAIS",
-          "probability_winner": 0.118402,
-          "probability_top3": 0.32713,
-          "probability_top5": 0.547697,
-          "ensemble_score": 0.297892
-        },
-        {
-          "horse_number": 9,
-          "horse_name": "MAX OCCAGNES",
-          "probability_winner": 0.116221,
-          "probability_top3": 0.327682,
-          "probability_top5": 0.547833,
-          "ensemble_score": 0.297483
+          "probability_winner": 0.093173,
+          "probability_top3": 0.256233,
+          "probability_top5": 0.425036,
+          "ensemble_score": 0.232779
         },
         {
           "horse_number": 7,
           "horse_name": "HASHTAG SIMONI",
-          "probability_winner": 0.110816,
-          "probability_top3": 0.321902,
-          "probability_top5": 0.550909,
-          "ensemble_score": 0.293375
+          "probability_winner": 0.088028,
+          "probability_top3": 0.253292,
+          "probability_top5": 0.428391,
+          "ensemble_score": 0.230223
+        },
+        {
+          "horse_number": 9,
+          "horse_name": "MAX OCCAGNES",
+          "probability_winner": 0.088355,
+          "probability_top3": 0.253354,
+          "probability_top5": 0.422861,
+          "ensemble_score": 0.229393
         }
       ]
     },
@@ -902,42 +868,42 @@
         {
           "horse_number": 3,
           "horse_name": "STARNBERG",
-          "probability_winner": 0.164316,
-          "probability_top3": 0.375574,
-          "probability_top5": 0.607502,
-          "ensemble_score": 0.347502
+          "probability_winner": 0.140853,
+          "probability_top3": 0.306968,
+          "probability_top5": 0.481544,
+          "ensemble_score": 0.283531
         },
         {
           "horse_number": 1,
           "horse_name": "KOURPLUVIX",
-          "probability_winner": 0.152429,
-          "probability_top3": 0.365991,
-          "probability_top5": 0.594503,
-          "ensemble_score": 0.336573
+          "probability_winner": 0.127015,
+          "probability_top3": 0.296935,
+          "probability_top5": 0.471794,
+          "ensemble_score": 0.272311
         },
         {
           "horse_number": 15,
           "horse_name": "GO LOVE",
-          "probability_winner": 0.129099,
-          "probability_top3": 0.334447,
-          "probability_top5": 0.55441,
-          "ensemble_score": 0.306202
+          "probability_winner": 0.111397,
+          "probability_top3": 0.276926,
+          "probability_top5": 0.448614,
+          "ensemble_score": 0.253174
         },
         {
           "horse_number": 10,
           "horse_name": "MARCHEMALO",
-          "probability_winner": 0.108356,
-          "probability_top3": 0.311616,
-          "probability_top5": 0.522502,
-          "ensemble_score": 0.282462
+          "probability_winner": 0.089477,
+          "probability_top3": 0.254098,
+          "probability_top5": 0.422742,
+          "ensemble_score": 0.230109
         },
         {
           "horse_number": 2,
           "horse_name": "CAROMB",
-          "probability_winner": 0.101405,
-          "probability_top3": 0.311604,
-          "probability_top5": 0.535103,
-          "ensemble_score": 0.282402
+          "probability_winner": 0.081933,
+          "probability_top3": 0.25275,
+          "probability_top5": 0.431339,
+          "ensemble_score": 0.228488
         }
       ]
     },
@@ -1021,42 +987,42 @@
         {
           "horse_number": 4,
           "horse_name": "BOTICELLI",
-          "probability_winner": 0.200759,
-          "probability_top3": 0.411298,
-          "probability_top5": 0.6511,
-          "ensemble_score": 0.384838
+          "probability_winner": 0.169101,
+          "probability_top3": 0.328978,
+          "probability_top5": 0.505338,
+          "ensemble_score": 0.307881
         },
         {
           "horse_number": 1,
           "horse_name": "ZELZARI",
-          "probability_winner": 0.169812,
-          "probability_top3": 0.387758,
-          "probability_top5": 0.626313,
-          "ensemble_score": 0.358673
+          "probability_winner": 0.143175,
+          "probability_top3": 0.312052,
+          "probability_top5": 0.490783,
+          "ensemble_score": 0.288445
         },
         {
           "horse_number": 6,
           "horse_name": "AL MAX",
-          "probability_winner": 0.164213,
-          "probability_top3": 0.38481,
-          "probability_top5": 0.623599,
-          "ensemble_score": 0.354904
-        },
-        {
-          "horse_number": 7,
-          "horse_name": "SAUCEPOT",
-          "probability_winner": 0.152841,
-          "probability_top3": 0.371091,
-          "probability_top5": 0.605069,
-          "ensemble_score": 0.341106
+          "probability_winner": 0.133463,
+          "probability_top3": 0.303078,
+          "probability_top5": 0.481107,
+          "ensemble_score": 0.279108
         },
         {
           "horse_number": 12,
           "horse_name": "HUMAN EVOLUTION",
-          "probability_winner": 0.142875,
-          "probability_top3": 0.355966,
-          "probability_top5": 0.59042,
-          "ensemble_score": 0.327741
+          "probability_winner": 0.121051,
+          "probability_top3": 0.288113,
+          "probability_top5": 0.465886,
+          "ensemble_score": 0.264928
+        },
+        {
+          "horse_number": 7,
+          "horse_name": "SAUCEPOT",
+          "probability_winner": 0.116827,
+          "probability_top3": 0.285292,
+          "probability_top5": 0.45914,
+          "ensemble_score": 0.260965
         }
       ]
     },
@@ -1140,42 +1106,42 @@
         {
           "horse_number": 9,
           "horse_name": "IENISSE DE BARBRAY",
-          "probability_winner": 0.149697,
-          "probability_top3": 0.360734,
-          "probability_top5": 0.592526,
-          "ensemble_score": 0.33271
+          "probability_winner": 0.118393,
+          "probability_top3": 0.279465,
+          "probability_top5": 0.449188,
+          "ensemble_score": 0.256818
         },
         {
           "horse_number": 8,
           "horse_name": "IROISE DE MADKER",
-          "probability_winner": 0.147846,
-          "probability_top3": 0.359604,
-          "probability_top5": 0.590659,
-          "ensemble_score": 0.331217
+          "probability_winner": 0.117249,
+          "probability_top3": 0.279535,
+          "probability_top5": 0.449521,
+          "ensemble_score": 0.256539
         },
         {
           "horse_number": 14,
           "horse_name": "ILTON DE BELLANDE",
-          "probability_winner": 0.115326,
-          "probability_top3": 0.322143,
-          "probability_top5": 0.548143,
-          "ensemble_score": 0.294477
+          "probability_winner": 0.090227,
+          "probability_top3": 0.250377,
+          "probability_top5": 0.420204,
+          "ensemble_score": 0.228048
         },
         {
           "horse_number": 10,
           "horse_name": "IDOLE ELDE",
-          "probability_winner": 0.114935,
-          "probability_top3": 0.319686,
-          "probability_top5": 0.537383,
-          "ensemble_score": 0.291239
+          "probability_winner": 0.088651,
+          "probability_top3": 0.246809,
+          "probability_top5": 0.410874,
+          "ensemble_score": 0.224119
         },
         {
           "horse_number": 12,
           "horse_name": "GITANO JACK",
-          "probability_winner": 0.113297,
-          "probability_top3": 0.31905,
-          "probability_top5": 0.533726,
-          "ensemble_score": 0.289748
+          "probability_winner": 0.086204,
+          "probability_top3": 0.244688,
+          "probability_top5": 0.407151,
+          "ensemble_score": 0.221612
         }
       ]
     },
@@ -1251,42 +1217,42 @@
         {
           "horse_number": 4,
           "horse_name": "MANASLU",
-          "probability_winner": 0.204518,
-          "probability_top3": 0.425409,
-          "probability_top5": 0.678144,
-          "ensemble_score": 0.397848
+          "probability_winner": 0.165578,
+          "probability_top3": 0.332072,
+          "probability_top5": 0.515729,
+          "ensemble_score": 0.310101
         },
         {
           "horse_number": 13,
           "horse_name": "MAITRE JACQUES",
-          "probability_winner": 0.177976,
-          "probability_top3": 0.391507,
-          "probability_top5": 0.635059,
-          "ensemble_score": 0.364731
+          "probability_winner": 0.144568,
+          "probability_top3": 0.306687,
+          "probability_top5": 0.483869,
+          "ensemble_score": 0.285005
         },
         {
           "horse_number": 11,
           "horse_name": "MAGIC MAN",
-          "probability_winner": 0.162413,
-          "probability_top3": 0.383275,
-          "probability_top5": 0.629026,
-          "ensemble_score": 0.354501
+          "probability_winner": 0.130572,
+          "probability_top3": 0.299807,
+          "probability_top5": 0.480731,
+          "ensemble_score": 0.276467
         },
         {
           "horse_number": 12,
           "horse_name": "MAESTRO VRIE",
-          "probability_winner": 0.15468,
-          "probability_top3": 0.369244,
-          "probability_top5": 0.607264,
-          "ensemble_score": 0.341164
+          "probability_winner": 0.123554,
+          "probability_top3": 0.288436,
+          "probability_top5": 0.463717,
+          "ensemble_score": 0.265523
         },
         {
           "horse_number": 9,
           "horse_name": "MOUSTIK LA GOVELLE",
-          "probability_winner": 0.141496,
-          "probability_top3": 0.360179,
-          "probability_top5": 0.601263,
-          "ensemble_score": 0.331297
+          "probability_winner": 0.114094,
+          "probability_top3": 0.2828,
+          "probability_top5": 0.462306,
+          "ensemble_score": 0.259384
         }
       ]
     },
@@ -1370,42 +1336,42 @@
         {
           "horse_number": 8,
           "horse_name": "INTERACTIV",
-          "probability_winner": 0.208084,
-          "probability_top3": 0.43402,
-          "probability_top5": 0.685829,
-          "ensemble_score": 0.404657
+          "probability_winner": 0.172383,
+          "probability_top3": 0.345213,
+          "probability_top5": 0.531053,
+          "ensemble_score": 0.321566
         },
         {
           "horse_number": 2,
           "horse_name": "ALEM",
-          "probability_winner": 0.175788,
-          "probability_top3": 0.39119,
-          "probability_top5": 0.628939,
-          "ensemble_score": 0.362791
-        },
-        {
-          "horse_number": 6,
-          "horse_name": "TEN HORNS",
-          "probability_winner": 0.122385,
-          "probability_top3": 0.327157,
-          "probability_top5": 0.547741,
-          "ensemble_score": 0.299208
+          "probability_winner": 0.149041,
+          "probability_top3": 0.315847,
+          "probability_top5": 0.49373,
+          "ensemble_score": 0.292764
         },
         {
           "horse_number": 1,
           "horse_name": "TORTISAMBERT",
-          "probability_winner": 0.122276,
-          "probability_top3": 0.326206,
-          "probability_top5": 0.546738,
-          "ensemble_score": 0.298522
+          "probability_winner": 0.103313,
+          "probability_top3": 0.264994,
+          "probability_top5": 0.435975,
+          "ensemble_score": 0.242369
+        },
+        {
+          "horse_number": 6,
+          "horse_name": "TEN HORNS",
+          "probability_winner": 0.101963,
+          "probability_top3": 0.263676,
+          "probability_top5": 0.43381,
+          "ensemble_score": 0.240893
         },
         {
           "horse_number": 9,
           "horse_name": "TALENTUOSO",
-          "probability_winner": 0.112373,
-          "probability_top3": 0.314341,
-          "probability_top5": 0.52914,
-          "ensemble_score": 0.286291
+          "probability_winner": 0.092782,
+          "probability_top3": 0.25354,
+          "probability_top5": 0.421678,
+          "ensemble_score": 0.230718
         }
       ]
     },
@@ -1489,42 +1455,42 @@
         {
           "horse_number": 10,
           "horse_name": "BRITANIA",
-          "probability_winner": 0.209422,
-          "probability_top3": 0.421927,
-          "probability_top5": 0.667293,
-          "ensemble_score": 0.395802
+          "probability_winner": 0.172429,
+          "probability_top3": 0.331664,
+          "probability_top5": 0.507897,
+          "ensemble_score": 0.310753
         },
         {
           "horse_number": 6,
           "horse_name": "DARK SECRET",
-          "probability_winner": 0.175261,
-          "probability_top3": 0.396278,
-          "probability_top5": 0.642323,
-          "ensemble_score": 0.367505
+          "probability_winner": 0.141849,
+          "probability_top3": 0.311605,
+          "probability_top5": 0.491985,
+          "ensemble_score": 0.288001
         },
         {
           "horse_number": 16,
           "horse_name": "MR TEE",
-          "probability_winner": 0.177321,
-          "probability_top3": 0.391709,
-          "probability_top5": 0.620426,
-          "ensemble_score": 0.362058
+          "probability_winner": 0.136545,
+          "probability_top3": 0.299268,
+          "probability_top5": 0.466165,
+          "ensemble_score": 0.27559
         },
         {
           "horse_number": 9,
           "horse_name": "KING TREZY",
-          "probability_winner": 0.140294,
-          "probability_top3": 0.354272,
-          "probability_top5": 0.587134,
-          "ensemble_score": 0.32548
+          "probability_winner": 0.113697,
+          "probability_top3": 0.279258,
+          "probability_top5": 0.452162,
+          "ensemble_score": 0.255709
         },
         {
           "horse_number": 8,
           "horse_name": "MISTERWINNER",
-          "probability_winner": 0.140311,
-          "probability_top3": 0.353011,
-          "probability_top5": 0.583244,
-          "ensemble_score": 0.324174
+          "probability_winner": 0.112356,
+          "probability_top3": 0.276874,
+          "probability_top5": 0.447984,
+          "ensemble_score": 0.25335
         }
       ]
     },
@@ -1608,42 +1574,42 @@
         {
           "horse_number": 1,
           "horse_name": "BON VIVEUR",
-          "probability_winner": 0.215928,
-          "probability_top3": 0.425868,
-          "probability_top5": 0.668961,
-          "ensemble_score": 0.400179
+          "probability_winner": 0.191024,
+          "probability_top3": 0.351908,
+          "probability_top5": 0.530912,
+          "ensemble_score": 0.330946
         },
         {
           "horse_number": 3,
           "horse_name": "DEUX PONTS",
-          "probability_winner": 0.1598,
-          "probability_top3": 0.379762,
-          "probability_top5": 0.62179,
-          "ensemble_score": 0.350629
+          "probability_winner": 0.137491,
+          "probability_top3": 0.311521,
+          "probability_top5": 0.494462,
+          "ensemble_score": 0.286976
         },
         {
           "horse_number": 16,
           "horse_name": "HEY JO",
-          "probability_winner": 0.141803,
-          "probability_top3": 0.350371,
-          "probability_top5": 0.573189,
-          "ensemble_score": 0.32158
+          "probability_winner": 0.116641,
+          "probability_top3": 0.282382,
+          "probability_top5": 0.452793,
+          "ensemble_score": 0.258338
         },
         {
           "horse_number": 11,
           "horse_name": "FAOLIO",
-          "probability_winner": 0.129295,
-          "probability_top3": 0.342527,
-          "probability_top5": 0.567873,
-          "ensemble_score": 0.312662
+          "probability_winner": 0.109547,
+          "probability_top3": 0.280811,
+          "probability_top5": 0.456079,
+          "ensemble_score": 0.255822
         },
         {
           "horse_number": 12,
           "horse_name": "EGYPTIAN GLORY",
-          "probability_winner": 0.122918,
-          "probability_top3": 0.326941,
-          "probability_top5": 0.538123,
-          "ensemble_score": 0.29759
+          "probability_winner": 0.098367,
+          "probability_top3": 0.261566,
+          "probability_top5": 0.426497,
+          "ensemble_score": 0.237389
         }
       ]
     },
@@ -1735,42 +1701,42 @@
         {
           "horse_number": 10,
           "horse_name": "AL MAX",
-          "probability_winner": 0.157305,
-          "probability_top3": 0.368382,
-          "probability_top5": 0.599025,
-          "ensemble_score": 0.340145
+          "probability_winner": 0.138235,
+          "probability_top3": 0.304786,
+          "probability_top5": 0.480056,
+          "ensemble_score": 0.281329
         },
         {
           "horse_number": 11,
           "horse_name": "SAUCEPOT",
-          "probability_winner": 0.154393,
-          "probability_top3": 0.367148,
-          "probability_top5": 0.596842,
-          "ensemble_score": 0.338199
+          "probability_winner": 0.12818,
+          "probability_top3": 0.296388,
+          "probability_top5": 0.469759,
+          "ensemble_score": 0.27206
         },
         {
           "horse_number": 1,
           "horse_name": "MANEKI",
-          "probability_winner": 0.142187,
-          "probability_top3": 0.348393,
-          "probability_top5": 0.569383,
-          "ensemble_score": 0.320049
+          "probability_winner": 0.115726,
+          "probability_top3": 0.279203,
+          "probability_top5": 0.44693,
+          "ensemble_score": 0.255425
         },
         {
           "horse_number": 9,
           "horse_name": "SIYOUKING",
-          "probability_winner": 0.114536,
-          "probability_top3": 0.310668,
-          "probability_top5": 0.519293,
-          "ensemble_score": 0.283434
+          "probability_winner": 0.099039,
+          "probability_top3": 0.258499,
+          "probability_top5": 0.424273,
+          "ensemble_score": 0.235685
         },
         {
           "horse_number": 16,
           "horse_name": "FEARLESS CHEETAH",
-          "probability_winner": 0.106688,
-          "probability_top3": 0.297827,
-          "probability_top5": 0.499642,
-          "ensemble_score": 0.271024
+          "probability_winner": 0.092569,
+          "probability_top3": 0.247734,
+          "probability_top5": 0.409917,
+          "ensemble_score": 0.225687
         }
       ]
     },
@@ -1852,44 +1818,44 @@
       },
       "top5": [
         {
-          "horse_number": 13,
-          "horse_name": "GERONIMO MATICA",
-          "probability_winner": 0.165436,
-          "probability_top3": 0.373869,
-          "probability_top5": 0.604143,
-          "ensemble_score": 0.346426
-        },
-        {
           "horse_number": 14,
           "horse_name": "IDEAL DE CASTELLE",
-          "probability_winner": 0.160061,
-          "probability_top3": 0.370233,
-          "probability_top5": 0.606842,
-          "ensemble_score": 0.343334
+          "probability_winner": 0.129092,
+          "probability_top3": 0.289263,
+          "probability_top5": 0.462273,
+          "ensemble_score": 0.267484
+        },
+        {
+          "horse_number": 13,
+          "horse_name": "GERONIMO MATICA",
+          "probability_winner": 0.130025,
+          "probability_top3": 0.287392,
+          "probability_top5": 0.453993,
+          "ensemble_score": 0.265403
         },
         {
           "horse_number": 12,
           "horse_name": "INDIC",
-          "probability_winner": 0.148219,
-          "probability_top3": 0.357921,
-          "probability_top5": 0.587792,
-          "ensemble_score": 0.329996
+          "probability_winner": 0.118909,
+          "probability_top3": 0.279315,
+          "probability_top5": 0.448817,
+          "ensemble_score": 0.256846
         },
         {
           "horse_number": 8,
           "horse_name": "IALKO JENILAT",
-          "probability_winner": 0.132205,
-          "probability_top3": 0.344847,
-          "probability_top5": 0.579336,
-          "ensemble_score": 0.316774
+          "probability_winner": 0.104751,
+          "probability_top3": 0.267647,
+          "probability_top5": 0.440544,
+          "ensemble_score": 0.244963
         },
         {
           "horse_number": 15,
           "horse_name": "IXELLE BLEUE",
-          "probability_winner": 0.126282,
-          "probability_top3": 0.333589,
-          "probability_top5": 0.558401,
-          "ensemble_score": 0.305556
+          "probability_winner": 0.099606,
+          "probability_top3": 0.259115,
+          "probability_top5": 0.427393,
+          "ensemble_score": 0.236724
         }
       ]
     },
@@ -1971,44 +1937,44 @@
       },
       "top5": [
         {
-          "horse_number": 4,
-          "horse_name": "SHRIHARA",
-          "probability_winner": 0.178302,
-          "probability_top3": 0.396779,
-          "probability_top5": 0.638995,
-          "ensemble_score": 0.368162
-        },
-        {
           "horse_number": 1,
           "horse_name": "QUIET KING",
-          "probability_winner": 0.181878,
-          "probability_top3": 0.395268,
-          "probability_top5": 0.633044,
-          "ensemble_score": 0.367527
+          "probability_winner": 0.149994,
+          "probability_top3": 0.313141,
+          "probability_top5": 0.488149,
+          "ensemble_score": 0.290745
+        },
+        {
+          "horse_number": 4,
+          "horse_name": "SHRIHARA",
+          "probability_winner": 0.145158,
+          "probability_top3": 0.311417,
+          "probability_top5": 0.489025,
+          "ensemble_score": 0.288464
         },
         {
           "horse_number": 8,
           "horse_name": "TALGAT",
-          "probability_winner": 0.171024,
-          "probability_top3": 0.391059,
-          "probability_top5": 0.626805,
-          "ensemble_score": 0.360803
+          "probability_winner": 0.136361,
+          "probability_top3": 0.304698,
+          "probability_top5": 0.479416,
+          "ensemble_score": 0.280564
         },
         {
           "horse_number": 7,
           "horse_name": "MARINALEDA",
-          "probability_winner": 0.160737,
-          "probability_top3": 0.382723,
-          "probability_top5": 0.620829,
-          "ensemble_score": 0.352246
+          "probability_winner": 0.130973,
+          "probability_top3": 0.302275,
+          "probability_top5": 0.479917,
+          "ensemble_score": 0.277689
         },
         {
           "horse_number": 9,
           "horse_name": "MISS TARKEN",
-          "probability_winner": 0.11078,
-          "probability_top3": 0.323004,
-          "probability_top5": 0.550937,
-          "ensemble_score": 0.29392
+          "probability_winner": 0.086121,
+          "probability_top3": 0.251627,
+          "probability_top5": 0.426239,
+          "ensemble_score": 0.228395
         }
       ]
     },
@@ -2080,42 +2046,42 @@
         {
           "horse_number": 13,
           "horse_name": "INO DU LUPIN",
-          "probability_winner": 0.223443,
-          "probability_top3": 0.432201,
-          "probability_top5": 0.681135,
-          "ensemble_score": 0.407918
+          "probability_winner": 0.186059,
+          "probability_top3": 0.340842,
+          "probability_top5": 0.519896,
+          "ensemble_score": 0.321872
         },
         {
           "horse_number": 10,
           "horse_name": "ISTER MAN",
-          "probability_winner": 0.157728,
-          "probability_top3": 0.373548,
-          "probability_top5": 0.616389,
-          "ensemble_score": 0.345904
+          "probability_winner": 0.130449,
+          "probability_top3": 0.296293,
+          "probability_top5": 0.476348,
+          "ensemble_score": 0.273903
         },
         {
           "horse_number": 2,
           "horse_name": "IMPLORA MAUZUN",
-          "probability_winner": 0.140597,
-          "probability_top3": 0.353391,
-          "probability_top5": 0.588254,
-          "ensemble_score": 0.325334
+          "probability_winner": 0.114014,
+          "probability_top3": 0.278068,
+          "probability_top5": 0.453659,
+          "ensemble_score": 0.255479
         },
         {
           "horse_number": 1,
           "horse_name": "JOLIE STAR",
-          "probability_winner": 0.112666,
-          "probability_top3": 0.320911,
-          "probability_top5": 0.546203,
-          "ensemble_score": 0.292657
+          "probability_winner": 0.087833,
+          "probability_top3": 0.24931,
+          "probability_top5": 0.420043,
+          "ensemble_score": 0.226708
         },
         {
           "horse_number": 3,
           "horse_name": "JEANNETTE PRIORY",
-          "probability_winner": 0.108052,
-          "probability_top3": 0.315614,
-          "probability_top5": 0.540081,
-          "ensemble_score": 0.287438
+          "probability_winner": 0.084896,
+          "probability_top3": 0.24649,
+          "probability_top5": 0.417579,
+          "ensemble_score": 0.223913
         }
       ]
     },
@@ -2199,42 +2165,42 @@
         {
           "horse_number": 7,
           "horse_name": "HIGHARA",
-          "probability_winner": 0.170954,
-          "probability_top3": 0.386949,
-          "probability_top5": 0.628532,
-          "ensemble_score": 0.359028
+          "probability_winner": 0.137334,
+          "probability_top3": 0.301667,
+          "probability_top5": 0.477696,
+          "ensemble_score": 0.279064
         },
         {
           "horse_number": 11,
           "horse_name": "ANOTHER LIGHT",
-          "probability_winner": 0.161775,
-          "probability_top3": 0.379818,
-          "probability_top5": 0.621573,
-          "ensemble_score": 0.351261
+          "probability_winner": 0.125419,
+          "probability_top3": 0.293708,
+          "probability_top5": 0.471622,
+          "ensemble_score": 0.270149
         },
         {
           "horse_number": 9,
           "horse_name": "MARINALEDA",
-          "probability_winner": 0.146704,
-          "probability_top3": 0.369673,
-          "probability_top5": 0.607345,
-          "ensemble_score": 0.338801
+          "probability_winner": 0.118189,
+          "probability_top3": 0.290629,
+          "probability_top5": 0.468367,
+          "ensemble_score": 0.26569
         },
         {
           "horse_number": 2,
           "horse_name": "HASAPIKO",
-          "probability_winner": 0.138686,
-          "probability_top3": 0.347311,
-          "probability_top5": 0.570079,
-          "ensemble_score": 0.318492
+          "probability_winner": 0.110907,
+          "probability_top3": 0.271777,
+          "probability_top5": 0.438999,
+          "ensemble_score": 0.248758
         },
         {
           "horse_number": 5,
           "horse_name": "PRETTY QUEEN",
-          "probability_winner": 0.131138,
-          "probability_top3": 0.346998,
-          "probability_top5": 0.576205,
-          "ensemble_score": 0.316955
+          "probability_winner": 0.100804,
+          "probability_top3": 0.266938,
+          "probability_top5": 0.438511,
+          "ensemble_score": 0.24297
         }
       ]
     },
@@ -2318,42 +2284,42 @@
         {
           "horse_number": 5,
           "horse_name": "TESTIFY",
-          "probability_winner": 0.183364,
-          "probability_top3": 0.40011,
-          "probability_top5": 0.635064,
-          "ensemble_score": 0.370784
-        },
-        {
-          "horse_number": 4,
-          "horse_name": "RIASSOU",
-          "probability_winner": 0.134499,
-          "probability_top3": 0.338897,
-          "probability_top5": 0.560173,
-          "ensemble_score": 0.311191
+          "probability_winner": 0.146727,
+          "probability_top3": 0.312406,
+          "probability_top5": 0.484614,
+          "ensemble_score": 0.288697
         },
         {
           "horse_number": 1,
           "horse_name": "TEN HORNS",
-          "probability_winner": 0.13036,
-          "probability_top3": 0.33803,
-          "probability_top5": 0.562504,
-          "ensemble_score": 0.30982
+          "probability_winner": 0.109034,
+          "probability_top3": 0.272487,
+          "probability_top5": 0.442921,
+          "ensemble_score": 0.24919
+        },
+        {
+          "horse_number": 4,
+          "horse_name": "RIASSOU",
+          "probability_winner": 0.110688,
+          "probability_top3": 0.270497,
+          "probability_top5": 0.437986,
+          "ensemble_score": 0.247869
         },
         {
           "horse_number": 8,
           "horse_name": "SASKATOON",
-          "probability_winner": 0.108926,
-          "probability_top3": 0.303616,
-          "probability_top5": 0.511509,
-          "ensemble_score": 0.276723
+          "probability_winner": 0.089141,
+          "probability_top3": 0.243193,
+          "probability_top5": 0.405132,
+          "ensemble_score": 0.221465
         },
         {
           "horse_number": 13,
           "horse_name": "THE DOCTOR",
-          "probability_winner": 0.093505,
-          "probability_top3": 0.287656,
-          "probability_top5": 0.492816,
-          "ensemble_score": 0.26046
+          "probability_winner": 0.074224,
+          "probability_top3": 0.227951,
+          "probability_top5": 0.389242,
+          "ensemble_score": 0.206215
         }
       ]
     },
@@ -2427,44 +2393,44 @@
       },
       "top5": [
         {
+          "horse_number": 8,
+          "horse_name": "HOMARD LAND",
+          "probability_winner": 0.126772,
+          "probability_top3": 0.292745,
+          "probability_top5": 0.471931,
+          "ensemble_score": 0.270161
+        },
+        {
           "horse_number": 6,
           "horse_name": "LORD DELO",
-          "probability_winner": 0.156623,
-          "probability_top3": 0.376549,
-          "probability_top5": 0.61868,
-          "ensemble_score": 0.347446
+          "probability_winner": 0.120125,
+          "probability_top3": 0.287985,
+          "probability_top5": 0.465457,
+          "ensemble_score": 0.264488
         },
         {
           "horse_number": 5,
           "horse_name": "KATCHI QUICK",
-          "probability_winner": 0.15841,
-          "probability_top3": 0.369006,
-          "probability_top5": 0.601051,
-          "ensemble_score": 0.34117
-        },
-        {
-          "horse_number": 8,
-          "horse_name": "HOMARD LAND",
-          "probability_winner": 0.153274,
-          "probability_top3": 0.368679,
-          "probability_top5": 0.6098,
-          "ensemble_score": 0.340868
+          "probability_winner": 0.125298,
+          "probability_top3": 0.28524,
+          "probability_top5": 0.454695,
+          "ensemble_score": 0.262914
         },
         {
           "horse_number": 10,
           "horse_name": "L'AS DESBOIS",
-          "probability_winner": 0.138936,
-          "probability_top3": 0.351366,
-          "probability_top5": 0.587544,
-          "ensemble_score": 0.323658
+          "probability_winner": 0.11012,
+          "probability_top3": 0.272851,
+          "probability_top5": 0.446568,
+          "ensemble_score": 0.250364
         },
         {
-          "horse_number": 3,
-          "horse_name": "LASKO DES BROUSSES",
-          "probability_winner": 0.136877,
-          "probability_top3": 0.349735,
-          "probability_top5": 0.588205,
-          "ensemble_score": 0.322288
+          "horse_number": 12,
+          "horse_name": "IALTO D'HERTALS",
+          "probability_winner": 0.108534,
+          "probability_top3": 0.272633,
+          "probability_top5": 0.448473,
+          "ensemble_score": 0.250073
         }
       ]
     },
@@ -2536,42 +2502,42 @@
         {
           "horse_number": 9,
           "horse_name": "MILA DES COUPERIES",
-          "probability_winner": 0.240776,
-          "probability_top3": 0.456561,
-          "probability_top5": 0.706958,
-          "ensemble_score": 0.43025
+          "probability_winner": 0.196236,
+          "probability_top3": 0.357394,
+          "probability_top5": 0.539854,
+          "ensemble_score": 0.336948
         },
         {
           "horse_number": 8,
           "horse_name": "MARINELLA VRIE",
-          "probability_winner": 0.193524,
-          "probability_top3": 0.415302,
-          "probability_top5": 0.664743,
-          "ensemble_score": 0.386876
+          "probability_winner": 0.155272,
+          "probability_top3": 0.323622,
+          "probability_top5": 0.506396,
+          "ensemble_score": 0.300894
         },
         {
           "horse_number": 13,
           "horse_name": "MAGIC NIGHT",
-          "probability_winner": 0.193046,
-          "probability_top3": 0.406015,
-          "probability_top5": 0.651288,
-          "ensemble_score": 0.379723
+          "probability_winner": 0.159713,
+          "probability_top3": 0.320157,
+          "probability_top5": 0.498121,
+          "ensemble_score": 0.299156
         },
         {
           "horse_number": 6,
           "horse_name": "MOLLY MADRIK",
-          "probability_winner": 0.135694,
-          "probability_top3": 0.351869,
-          "probability_top5": 0.592183,
-          "ensemble_score": 0.323667
+          "probability_winner": 0.1085,
+          "probability_top3": 0.275593,
+          "probability_top5": 0.454946,
+          "ensemble_score": 0.252674
         },
         {
-          "horse_number": 1,
-          "horse_name": "MY GIRL PIYA",
-          "probability_winner": 0.123897,
-          "probability_top3": 0.336838,
-          "probability_top5": 0.566055,
-          "ensemble_score": 0.307745
+          "horse_number": 12,
+          "horse_name": "MADRID HAUFOR",
+          "probability_winner": 0.09464,
+          "probability_top3": 0.257581,
+          "probability_top5": 0.433125,
+          "ensemble_score": 0.235345
         }
       ]
     },
@@ -2655,42 +2621,42 @@
         {
           "horse_number": 2,
           "horse_name": "NITY GALESTE",
-          "probability_winner": 0.231557,
-          "probability_top3": 0.435856,
-          "probability_top5": 0.674599,
-          "ensemble_score": 0.411239
+          "probability_winner": 0.180535,
+          "probability_top3": 0.3355,
+          "probability_top5": 0.507412,
+          "ensemble_score": 0.315221
         },
         {
           "horse_number": 5,
           "horse_name": "LOHENGREEN",
-          "probability_winner": 0.155255,
-          "probability_top3": 0.373954,
-          "probability_top5": 0.610881,
-          "ensemble_score": 0.344339
+          "probability_winner": 0.122194,
+          "probability_top3": 0.289175,
+          "probability_top5": 0.463826,
+          "ensemble_score": 0.26547
         },
         {
           "horse_number": 3,
           "horse_name": "SORANO",
-          "probability_winner": 0.148569,
-          "probability_top3": 0.363672,
-          "probability_top5": 0.595317,
-          "ensemble_score": 0.334301
+          "probability_winner": 0.122271,
+          "probability_top3": 0.288329,
+          "probability_top5": 0.462719,
+          "ensemble_score": 0.264878
         },
         {
           "horse_number": 4,
           "horse_name": "BASQUIAT",
-          "probability_winner": 0.142535,
-          "probability_top3": 0.354082,
-          "probability_top5": 0.583837,
-          "ensemble_score": 0.325537
+          "probability_winner": 0.114167,
+          "probability_top3": 0.27663,
+          "probability_top5": 0.447297,
+          "ensemble_score": 0.253696
         },
         {
           "horse_number": 1,
           "horse_name": "COSY BEAR",
-          "probability_winner": 0.12676,
-          "probability_top3": 0.336012,
-          "probability_top5": 0.566377,
-          "ensemble_score": 0.308319
+          "probability_winner": 0.097751,
+          "probability_top3": 0.260149,
+          "probability_top5": 0.432701,
+          "ensemble_score": 0.237566
         }
       ]
     },
@@ -2770,42 +2736,42 @@
         {
           "horse_number": 15,
           "horse_name": "IL VIENT DU LUDE",
-          "probability_winner": 0.156922,
-          "probability_top3": 0.370471,
-          "probability_top5": 0.606355,
-          "ensemble_score": 0.342347
-        },
-        {
-          "horse_number": 14,
-          "horse_name": "INSTINCT SAINT BAR",
-          "probability_winner": 0.143966,
-          "probability_top3": 0.356377,
-          "probability_top5": 0.584861,
-          "ensemble_score": 0.327328
+          "probability_winner": 0.127676,
+          "probability_top3": 0.290702,
+          "probability_top5": 0.465199,
+          "ensemble_score": 0.268255
         },
         {
           "horse_number": 5,
           "horse_name": "ISIS DE POULINE",
-          "probability_winner": 0.139952,
-          "probability_top3": 0.349576,
-          "probability_top5": 0.580603,
-          "ensemble_score": 0.321878
+          "probability_winner": 0.112535,
+          "probability_top3": 0.273706,
+          "probability_top5": 0.4465,
+          "ensemble_score": 0.251564
+        },
+        {
+          "horse_number": 14,
+          "horse_name": "INSTINCT SAINT BAR",
+          "probability_winner": 0.111619,
+          "probability_top3": 0.273806,
+          "probability_top5": 0.44289,
+          "ensemble_score": 0.250685
         },
         {
           "horse_number": 4,
           "horse_name": "JONQUILLE DE MEAT",
-          "probability_winner": 0.135311,
-          "probability_top3": 0.348736,
-          "probability_top5": 0.580128,
-          "ensemble_score": 0.319867
+          "probability_winner": 0.108148,
+          "probability_top3": 0.273547,
+          "probability_top5": 0.448149,
+          "ensemble_score": 0.250348
         },
         {
           "horse_number": 1,
           "horse_name": "IVAN DE L'ERDRE",
-          "probability_winner": 0.12882,
-          "probability_top3": 0.341062,
-          "probability_top5": 0.570919,
-          "ensemble_score": 0.312308
+          "probability_winner": 0.100614,
+          "probability_top3": 0.264018,
+          "probability_top5": 0.43573,
+          "ensemble_score": 0.240961
         }
       ]
     },
@@ -2889,42 +2855,42 @@
         {
           "horse_number": 5,
           "horse_name": "INTERACTIV",
-          "probability_winner": 0.241872,
-          "probability_top3": 0.455863,
-          "probability_top5": 0.703302,
-          "ensemble_score": 0.429618
+          "probability_winner": 0.208698,
+          "probability_top3": 0.369071,
+          "probability_top5": 0.551273,
+          "ensemble_score": 0.348835
         },
         {
           "horse_number": 2,
           "horse_name": "PROFUMO DI IENA",
-          "probability_winner": 0.142487,
-          "probability_top3": 0.346762,
-          "probability_top5": 0.56586,
-          "ensemble_score": 0.318715
+          "probability_winner": 0.117262,
+          "probability_top3": 0.276406,
+          "probability_top5": 0.442703,
+          "ensemble_score": 0.253786
         },
         {
           "horse_number": 13,
           "horse_name": "HEROISTE",
-          "probability_winner": 0.116617,
-          "probability_top3": 0.329485,
-          "probability_top5": 0.562952,
-          "ensemble_score": 0.301159
+          "probability_winner": 0.0908,
+          "probability_top3": 0.258737,
+          "probability_top5": 0.436995,
+          "ensemble_score": 0.235353
         },
         {
           "horse_number": 1,
           "horse_name": "LESSLEPASSER",
-          "probability_winner": 0.106949,
-          "probability_top3": 0.30225,
-          "probability_top5": 0.51254,
-          "ensemble_score": 0.275578
+          "probability_winner": 0.088729,
+          "probability_top3": 0.243229,
+          "probability_top5": 0.407376,
+          "ensemble_score": 0.221742
         },
         {
           "horse_number": 9,
           "horse_name": "CIAO PA'",
-          "probability_winner": 0.095918,
-          "probability_top3": 0.286966,
-          "probability_top5": 0.487832,
-          "ensemble_score": 0.260027
+          "probability_winner": 0.078798,
+          "probability_top3": 0.23146,
+          "probability_top5": 0.392789,
+          "ensemble_score": 0.210078
         }
       ]
     },
@@ -2996,42 +2962,42 @@
         {
           "horse_number": 1,
           "horse_name": "TOSCANA SOUTHWIND",
-          "probability_winner": 0.150941,
-          "probability_top3": 0.382993,
-          "probability_top5": 0.634417,
-          "ensemble_score": 0.351575
+          "probability_winner": 0.118472,
+          "probability_top3": 0.29687,
+          "probability_top5": 0.484776,
+          "ensemble_score": 0.271775
         },
         {
           "horse_number": 11,
           "horse_name": "IDOLE JALLERIE",
-          "probability_winner": 0.148821,
-          "probability_top3": 0.363882,
-          "probability_top5": 0.601416,
-          "ensemble_score": 0.335556
+          "probability_winner": 0.120095,
+          "probability_top3": 0.286008,
+          "probability_top5": 0.463146,
+          "ensemble_score": 0.263086
         },
         {
           "horse_number": 12,
           "horse_name": "JITANE VALLEE",
-          "probability_winner": 0.149772,
-          "probability_top3": 0.363641,
-          "probability_top5": 0.599447,
-          "ensemble_score": 0.335399
+          "probability_winner": 0.119963,
+          "probability_top3": 0.284532,
+          "probability_top5": 0.459502,
+          "ensemble_score": 0.261667
         },
         {
           "horse_number": 8,
           "horse_name": "JANE CASH",
-          "probability_winner": 0.134487,
-          "probability_top3": 0.344031,
-          "probability_top5": 0.568991,
-          "ensemble_score": 0.315297
+          "probability_winner": 0.105342,
+          "probability_top3": 0.266957,
+          "probability_top5": 0.435708,
+          "ensemble_score": 0.243963
         },
         {
-          "horse_number": 2,
-          "horse_name": "DILVA JET",
-          "probability_winner": 0.114722,
-          "probability_top3": 0.333148,
-          "probability_top5": 0.574101,
-          "ensemble_score": 0.304326
+          "horse_number": 7,
+          "horse_name": "JUNON DE LOU",
+          "probability_winner": 0.095267,
+          "probability_top3": 0.258409,
+          "probability_top5": 0.431238,
+          "ensemble_score": 0.235633
         }
       ]
     },
@@ -3113,44 +3079,44 @@
       },
       "top5": [
         {
-          "horse_number": 16,
-          "horse_name": "I STILL LOVING YOU",
-          "probability_winner": 0.154103,
-          "probability_top3": 0.363581,
-          "probability_top5": 0.592405,
-          "ensemble_score": 0.335545
-        },
-        {
           "horse_number": 13,
           "horse_name": "INDIEN DE FONTAINE",
-          "probability_winner": 0.147568,
-          "probability_top3": 0.357301,
-          "probability_top5": 0.586366,
-          "ensemble_score": 0.329224
+          "probability_winner": 0.11958,
+          "probability_top3": 0.280846,
+          "probability_top5": 0.451772,
+          "ensemble_score": 0.258346
+        },
+        {
+          "horse_number": 16,
+          "horse_name": "I STILL LOVING YOU",
+          "probability_winner": 0.120924,
+          "probability_top3": 0.280657,
+          "probability_top5": 0.448244,
+          "ensemble_score": 0.258072
         },
         {
           "horse_number": 4,
           "horse_name": "IMAKER",
-          "probability_winner": 0.146145,
-          "probability_top3": 0.354369,
-          "probability_top5": 0.580655,
-          "ensemble_score": 0.326296
+          "probability_winner": 0.116544,
+          "probability_top3": 0.275521,
+          "probability_top5": 0.442846,
+          "ensemble_score": 0.253135
         },
         {
           "horse_number": 3,
           "horse_name": "HEAVEN D'ECAJEUL",
-          "probability_winner": 0.125621,
-          "probability_top3": 0.330789,
-          "probability_top5": 0.555568,
-          "ensemble_score": 0.303446
+          "probability_winner": 0.100632,
+          "probability_top3": 0.258856,
+          "probability_top5": 0.428506,
+          "ensemble_score": 0.237122
         },
         {
           "horse_number": 9,
           "horse_name": "JAPAROV LIRE",
-          "probability_winner": 0.121423,
-          "probability_top3": 0.327978,
-          "probability_top5": 0.545531,
-          "ensemble_score": 0.29892
+          "probability_winner": 0.095194,
+          "probability_top3": 0.25511,
+          "probability_top5": 0.420758,
+          "ensemble_score": 0.232126
         }
       ]
     },
@@ -3242,42 +3208,42 @@
         {
           "horse_number": 4,
           "horse_name": "JAHIA DU TRIO",
-          "probability_winner": 0.186123,
-          "probability_top3": 0.397334,
-          "probability_top5": 0.637697,
-          "ensemble_score": 0.370754
+          "probability_winner": 0.150166,
+          "probability_top3": 0.307254,
+          "probability_top5": 0.477747,
+          "ensemble_score": 0.286036
         },
         {
           "horse_number": 5,
           "horse_name": "JEUNE ORANGE COTON",
-          "probability_winner": 0.182573,
-          "probability_top3": 0.391688,
-          "probability_top5": 0.628557,
-          "ensemble_score": 0.365178
-        },
-        {
-          "horse_number": 15,
-          "horse_name": "IXELLE BLEUE",
-          "probability_winner": 0.121297,
-          "probability_top3": 0.323636,
-          "probability_top5": 0.541905,
-          "ensemble_score": 0.296073
+          "probability_winner": 0.149621,
+          "probability_top3": 0.307038,
+          "probability_top5": 0.478008,
+          "ensemble_score": 0.285797
         },
         {
           "horse_number": 12,
           "horse_name": "JUNON DE LOU",
-          "probability_winner": 0.118611,
-          "probability_top3": 0.322136,
-          "probability_top5": 0.543729,
-          "ensemble_score": 0.294769
+          "probability_winner": 0.095027,
+          "probability_top3": 0.252487,
+          "probability_top5": 0.419484,
+          "ensemble_score": 0.230537
+        },
+        {
+          "horse_number": 15,
+          "horse_name": "IXELLE BLEUE",
+          "probability_winner": 0.094674,
+          "probability_top3": 0.249587,
+          "probability_top5": 0.412149,
+          "ensemble_score": 0.227689
         },
         {
           "horse_number": 18,
           "horse_name": "JOIE DE LA COTE",
-          "probability_winner": 0.10978,
-          "probability_top3": 0.310171,
-          "probability_top5": 0.527059,
-          "ensemble_score": 0.282999
+          "probability_winner": 0.085398,
+          "probability_top3": 0.240008,
+          "probability_top5": 0.40366,
+          "ensemble_score": 0.218399
         }
       ]
     },
@@ -3361,42 +3327,42 @@
         {
           "horse_number": 12,
           "horse_name": "DERAWAR",
-          "probability_winner": 0.185922,
-          "probability_top3": 0.406578,
-          "probability_top5": 0.648651,
-          "ensemble_score": 0.377228
+          "probability_winner": 0.150217,
+          "probability_top3": 0.31866,
+          "probability_top5": 0.497018,
+          "ensemble_score": 0.295129
         },
         {
           "horse_number": 2,
           "horse_name": "CHILL Y FLAMA",
-          "probability_winner": 0.181813,
-          "probability_top3": 0.39469,
-          "probability_top5": 0.631266,
-          "ensemble_score": 0.366906
+          "probability_winner": 0.148681,
+          "probability_top3": 0.312184,
+          "probability_top5": 0.487019,
+          "ensemble_score": 0.289641
         },
         {
           "horse_number": 9,
           "horse_name": "FAOLIO",
-          "probability_winner": 0.126073,
-          "probability_top3": 0.334846,
-          "probability_top5": 0.560495,
-          "ensemble_score": 0.306483
-        },
-        {
-          "horse_number": 3,
-          "horse_name": "LAPENTY",
-          "probability_winner": 0.121206,
-          "probability_top3": 0.33305,
-          "probability_top5": 0.557211,
-          "ensemble_score": 0.303429
+          "probability_winner": 0.099328,
+          "probability_top3": 0.263226,
+          "probability_top5": 0.435566,
+          "ensemble_score": 0.240118
         },
         {
           "horse_number": 6,
           "horse_name": "SAGARMATHA",
-          "probability_winner": 0.11952,
-          "probability_top3": 0.330805,
-          "probability_top5": 0.56094,
-          "ensemble_score": 0.302411
+          "probability_winner": 0.092865,
+          "probability_top3": 0.258895,
+          "probability_top5": 0.434019,
+          "ensemble_score": 0.235582
+        },
+        {
+          "horse_number": 3,
+          "horse_name": "LAPENTY",
+          "probability_winner": 0.092627,
+          "probability_top3": 0.256648,
+          "probability_top5": 0.426366,
+          "ensemble_score": 0.233042
         }
       ]
     },
@@ -3474,44 +3440,44 @@
       },
       "top5": [
         {
-          "horse_number": 6,
-          "horse_name": "JANNIG D'EREVAN",
-          "probability_winner": 0.161088,
-          "probability_top3": 0.373098,
-          "probability_top5": 0.607355,
-          "ensemble_score": 0.34519
-        },
-        {
           "horse_number": 13,
           "horse_name": "I STILL LOVING YOU",
-          "probability_winner": 0.158983,
-          "probability_top3": 0.371935,
-          "probability_top5": 0.605512,
-          "ensemble_score": 0.343602
+          "probability_winner": 0.12701,
+          "probability_top3": 0.290705,
+          "probability_top5": 0.462902,
+          "ensemble_score": 0.267639
+        },
+        {
+          "horse_number": 6,
+          "horse_name": "JANNIG D'EREVAN",
+          "probability_winner": 0.128085,
+          "probability_top3": 0.289038,
+          "probability_top5": 0.45984,
+          "ensemble_score": 0.266618
         },
         {
           "horse_number": 15,
           "horse_name": "ILEO PIERJI",
-          "probability_winner": 0.145373,
-          "probability_top3": 0.356585,
-          "probability_top5": 0.589879,
-          "ensemble_score": 0.328767
+          "probability_winner": 0.115073,
+          "probability_top3": 0.276618,
+          "probability_top5": 0.447919,
+          "ensemble_score": 0.254094
         },
         {
           "horse_number": 14,
           "horse_name": "INDIEN DE FONTAINE",
-          "probability_winner": 0.133058,
-          "probability_top3": 0.346532,
-          "probability_top5": 0.578218,
-          "ensemble_score": 0.317698
+          "probability_winner": 0.105782,
+          "probability_top3": 0.27131,
+          "probability_top5": 0.444776,
+          "ensemble_score": 0.24787
         },
         {
-          "horse_number": 5,
-          "horse_name": "JYTRACE DE HOUELLE",
-          "probability_winner": 0.127178,
-          "probability_top3": 0.336337,
-          "probability_top5": 0.565025,
-          "ensemble_score": 0.308381
+          "horse_number": 2,
+          "horse_name": "HEAVEN D'ECAJEUL",
+          "probability_winner": 0.097144,
+          "probability_top3": 0.261624,
+          "probability_top5": 0.434777,
+          "ensemble_score": 0.23847
         }
       ]
     },
@@ -3603,42 +3569,42 @@
         {
           "horse_number": 15,
           "horse_name": "IGUANE DE CAPONET",
-          "probability_winner": 0.226223,
-          "probability_top3": 0.425173,
-          "probability_top5": 0.659081,
-          "ensemble_score": 0.401448
+          "probability_winner": 0.190472,
+          "probability_top3": 0.336146,
+          "probability_top5": 0.502393,
+          "ensemble_score": 0.317895
         },
         {
           "horse_number": 8,
           "horse_name": "ISIA DU CHENE",
-          "probability_winner": 0.172619,
-          "probability_top3": 0.377344,
-          "probability_top5": 0.603987,
-          "ensemble_score": 0.350471
+          "probability_winner": 0.141382,
+          "probability_top3": 0.2964,
+          "probability_top5": 0.461394,
+          "ensemble_score": 0.274893
         },
         {
           "horse_number": 18,
           "horse_name": "KAPTAIN DU LIAMONE",
-          "probability_winner": 0.125295,
-          "probability_top3": 0.330625,
-          "probability_top5": 0.550213,
-          "ensemble_score": 0.302321
-        },
-        {
-          "horse_number": 1,
-          "horse_name": "HORUS DE VAL",
-          "probability_winner": 0.123073,
-          "probability_top3": 0.32378,
-          "probability_top5": 0.535402,
-          "ensemble_score": 0.295584
+          "probability_winner": 0.097077,
+          "probability_top3": 0.254093,
+          "probability_top5": 0.416606,
+          "ensemble_score": 0.231503
         },
         {
           "horse_number": 10,
           "horse_name": "KASH DES CAILLONS",
-          "probability_winner": 0.114164,
-          "probability_top3": 0.317141,
-          "probability_top5": 0.531101,
-          "ensemble_score": 0.288617
+          "probability_winner": 0.090675,
+          "probability_top3": 0.247958,
+          "probability_top5": 0.410441,
+          "ensemble_score": 0.225275
+        },
+        {
+          "horse_number": 1,
+          "horse_name": "HORUS DE VAL",
+          "probability_winner": 0.092855,
+          "probability_top3": 0.246374,
+          "probability_top5": 0.403372,
+          "ensemble_score": 0.223955
         }
       ]
     }
