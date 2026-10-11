@@ -41,7 +41,7 @@ def test_three_place_arrival_does_not_create_false_top4_or_top5_negatives():
 def test_four_place_arrival_has_known_top4_but_not_top5_labels():
     rows = extract_race_rows(_matched_record([4, 2, 1, 5]))
     by_number = {row["horse_number"]: row for row in rows}
-    assert [by_number[number]["top4"] for number in range(1, 7)] == [1, 1, 1, 1, None, None]
+    assert [by_number[number]["top4"] for number in range(1, 7)] == [1, 1, 0, 1, 1, 0]
     assert all(row["top5"] is None for row in rows)
     assert all(row["target_top4_known"] is True for row in rows)
     assert all(row["target_top5_known"] is False for row in rows)
