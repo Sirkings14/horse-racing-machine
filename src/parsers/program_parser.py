@@ -598,11 +598,43 @@ def extract_rankings(text):
     }
 
 
-def extract_published_arrival(text):
-    match = re.search(r"ARRIVEE\s+DU.*?:\s*([0-9\s\-–]+)(?:NPO|NP|$)", text, re.IGNORECASE)
-    if not match:
-        return []
-    return [int(value) for value in re.findall(r"\d+", match.group(1))]
+def _arrival_heading_date(header, program_date):
+    """Read the date named by an arrival heading; never infer it from the PDF date."""
+    months = r"(JANVIER|FEVRIER|FÉVRIER|MARS|AVRIL|MAI|JUIN|JUILLET|AOUT|AOÛT|SEPTEMBRE|OCTOBRE|NOVEMBRE|DECEMBRE|DÉCEMBRE)"
+    match = re.search(r"(?<!\d)(\d{1,2})\s+" + months + r"(?:\s+(20\d{2}))?", header, re.IGNORECASE)
+    if match:
+        try:
+            day = int(match.group(1))
+            month = MONTHS[match.group(2).upper()]
+            year = int(match.group(3)) if match.group(3) else int(str(program_date)[:4])
+            return datetime(year, month, day).date().isoformat()
+        except (KeyError, ValueError, TypeError):
+            return None
+    numeric = re.search(r"(?<!\d)(\d{1,2})[./-](\d{1,2})[./-](20\d{2})(?!\d)", header)
+    if numeric:
+        try:
+            return datetime(int(numeric.group(3)), int(numeric.group(2)), int(numeric.group(1))).date().isoformat()
+        except ValueError:
+            return None
+    return None
+
+
+def extract_published_arrival(text, program_date=None):
+    """Extract an arrival only when its explicit heading matches this program's race date.
+
+    LONAB PDFs may append old result tables after the next day's race program.
+    Treating any 'ARRIVEE DU' in the whole PDF as this race's result causes
+    future races to be incorrectly marked complete. Unknown heading dates fail closed.
+    """
+    for match in re.finditer(r"ARRIVEE\s+DU(?P<header>[^:\n]{1,120}):\s*(?P<arrival>[0-9\s\-–]+)(?:NPO|NP|$)", text, re.IGNORECASE):
+        if program_date:
+            heading_date = _arrival_heading_date(match.group("header"), program_date)
+            if heading_date != str(program_date)[:10]:
+                continue
+        values = [int(value) for value in re.findall(r"\d+", match.group("arrival"))]
+        if values:
+            return values
+    return []
 
 
 def parse_program_text(text, source_file="unknown.txt"):
@@ -627,7 +659,7 @@ def parse_program_text(text, source_file="unknown.txt"):
         "rankings": extract_rankings(text),
         "press_odds": extract_press_odds(text, race_info.get("runners_count")),
         "press_odds_status": "observed_in_program" if extract_press_odds(text, race_info.get("runners_count")) else "unavailable",
-        "published_arrival": extract_published_arrival(text),
+        "published_arrival": extract_published_arrival(text, extract_date(text)),
     }
 
 
