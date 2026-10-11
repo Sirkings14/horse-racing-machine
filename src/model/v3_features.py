@@ -2,6 +2,15 @@ from __future__ import annotations
 from typing import Any, Sequence
 import numpy as np
 
+# Bump whenever live/training feature semantics change, even if dimensions stay equal.
+FEATURE_PIPELINE_VERSION = "v3-race-aware-features-2026-10-10"
+
+
+def feature_pipeline_compatible(bundle: Any) -> bool:
+    """Fail closed when a saved model was trained under different semantics."""
+    return isinstance(bundle, dict) and bundle.get("feature_pipeline_version") == FEATURE_PIPELINE_VERSION
+from src.model.race_type import race_type_feature_groups
+
 # All features are pre-race and press-independent. Race-relative fields are
 # calculated only from other runners' pre-race features in the same race.
 FEATURE_NAMES=[
@@ -40,7 +49,7 @@ def _base_features(row:dict[str,Any])->list[float]:
     recent_avg_norm=0.0 if recent_avg is None else _clamp(1.0-(_float(recent_avg)-1.0)/19.0)
     days=_float(row.get("days_since_last_run"))
     days_norm=0.0 if days<=0 else _clamp(1.0-abs(days-21.0)/60.0)
-    race_type=str(row.get("race_type") or "").upper()
+    race_type_flat,race_type_trot,race_type_jump=race_type_feature_groups(row.get("race_type"))
     completeness=sum(row.get(k) not in (None,"") for k in (
         "date","track","distance","runners_count","horse_number","horse_name"
     ))/6.0
@@ -64,24 +73,65 @@ def _base_features(row:dict[str,Any])->list[float]:
         _clamp(_float(row.get("distance_top5_rate"))),
         avg_norm,days_norm,_clamp(distance/3500.0),distance_valid,
         _clamp(runners/20.0),_clamp(prize/100000.0),_clamp(race_number/12.0),
-        1.0 if race_type=="PLAT" else 0.0,
-        1.0 if race_type in {"ATTELE","MONTE"} else 0.0,
-        1.0 if race_type in {"OBSTACLE","HAIES","STEEPLE-CHASE"} else 0.0,
+        race_type_flat,race_type_trot,race_type_jump,
         completeness,weight_norm,draw_norm
     ]
 
-def _relative(rows:Sequence[dict[str,Any]])->np.ndarray:
-    base=np.asarray([_base_features(r) for r in rows],dtype=float)
+def _relative(rows:Sequence[dict[str,Any]],base:np.ndarray|None=None)->np.ndarray:
+    """Normalize relative features independently inside each race.
+
+    Training passes many races at once, while live inference normally passes a
+    single race. Grouping by race_key guarantees unrelated races cannot change
+    relative features. Rows without a race key are isolated conservatively.
+    """
+    if base is None:
+        base=np.asarray([_base_features(r) for r in rows],dtype=float)
     if len(base)==0:return np.empty((0,10),dtype=float)
-    # Percentile-like relative strength within the race. A zero-history horse
-    # is not treated as weak: its raw prior-history values remain zero while
-    # these relative features expose only observed differences.
     cols=[1,2,3,4,5,6,8,11,24,0]
-    selected=base[:,cols]
-    means=selected.mean(axis=0)
-    stds=selected.std(axis=0)
-    safe_stds=np.where(stds>1e-9,stds,1.0)
-    return (selected-means)/safe_stds
+    relative=np.zeros((len(base),len(cols)),dtype=float)
+    groups:dict[str,list[int]]={}
+    for index,row in enumerate(rows):
+        key=str(row.get("race_key") or "").strip()
+        if not key:
+            key=f"__row_without_race_key__:{index}"
+        groups.setdefault(key,[]).append(index)
+    for indices in groups.values():
+        # These are within-race standardized values; single-runner races stay neutral.
+        selected=base[indices][:,cols]
+        means=selected.mean(axis=0)
+        stds=selected.std(axis=0)
+        safe_stds=np.where(stds>1e-9,stds,1.0)
+        relative[indices]=(selected-means)/safe_stds
+    return relative
+
+def tail_complete_races(rows:Sequence[dict[str,Any]],max_rows:int)->list[dict[str,Any]]:
+    """Keep the newest complete race groups while bounding training size.
+
+    The threshold is approximate: a race is never cut in half just to hit an
+    exact row count. Rows lacking a race key are conservatively isolated.
+    """
+    if max_rows <= 0 or not rows:
+        return []
+    groups:dict[str,list[dict[str,Any]]]={}
+    order:list[str]=[]
+    for index,row in enumerate(rows):
+        key=str(row.get("race_key") or "").strip()
+        if not key:
+            key=f"__row_without_race_key__:{index}"
+        if key not in groups:
+            groups[key]=[]
+            order.append(key)
+        groups[key].append(row)
+    selected:list[list[dict[str,Any]]]=[]
+    count=0
+    for key in reversed(order):
+        if selected and count >= max_rows:
+            break
+        group=groups[key]
+        selected.append(group)
+        count += len(group)
+    return [row for group in reversed(selected) for row in group]
+
 
 def row_to_v3_features(row:dict[str,Any])->list[float]:
     base=_base_features(row)
@@ -92,5 +142,5 @@ def row_to_v3_features(row:dict[str,Any])->list[float]:
 def build_v3_matrix(rows:Sequence[dict[str,Any]])->np.ndarray:
     if not rows:return np.empty((0,len(FEATURE_NAMES)),dtype=float)
     base=np.asarray([_base_features(r) for r in rows],dtype=float)
-    rel=_relative(rows)
+    rel=_relative(rows,base=base)
     return np.concatenate([base,rel],axis=1)
