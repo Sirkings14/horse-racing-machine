@@ -233,6 +233,13 @@ def load_local_evidence(
                 "reason": "corrected_local_arrival_has_fewer_than_three_positions",
                 "processed_file": text_path.name,
             }
+        if not set(corrected_arrival).issubset(programs[0][2]):
+            return {
+                "accepted": False,
+                "reason": "corrected_local_arrival_has_runner_outside_declared_roster",
+                "processed_file": text_path.name,
+                "corrected_arrival": corrected_arrival,
+            }
         # At least the first three places must agree between legacy JSON and raw text.
         if len(legacy_arrival) < 3 or legacy_arrival[:3] != corrected_arrival[:3]:
             return {

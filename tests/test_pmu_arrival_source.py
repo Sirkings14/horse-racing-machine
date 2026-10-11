@@ -188,7 +188,8 @@ def test_corrected_raw_result_prefix_removes_legacy_payout_digit_before_pmu_chec
         "document_type": "program",
         "date": "2026-10-10",
         "race": {"track": "CAEN", "race_number": 4, "race_type": "ATTELE", "runners_count": 5},
-        "horses": [{"number": number, "horse": f"H{number}"} for number in range(1, 6)],
+        "race": {"track": "CAEN", "race_number": 4, "race_type": "ATTELE", "runners_count": 10},
+        "horses": [{"number": number, "horse": f"H{number}"} for number in range(1, 11)],
     }
     legacy = {
         "document_type": "result",
@@ -207,9 +208,7 @@ def test_corrected_raw_result_prefix_removes_legacy_payout_digit_before_pmu_chec
         encoding="utf-8",
     )
     local = load_local_evidence("2026-10-10", "CAEN", 1, 4, programs, results, processed)
-    assert local["accepted"] is False
-    assert local["reason"] in {
-        "program_roster_has_invalid_or_duplicate_numbers",
-        "legacy_and_corrected_local_top3_disagree",
-        "top5_contains_runner_outside_declared_roster",
-    }
+    assert local["accepted"] is True
+    assert local["local_result_prefix"] == [9, 10, 4]
+    assert local["legacy_structured_arrival"] == [9, 10, 4, 1]
+    assert local["legacy_extra_tail_removed_by_corrected_parser"] == [1]
