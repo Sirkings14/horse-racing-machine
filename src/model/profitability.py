@@ -63,7 +63,7 @@ def _economic_snapshot(row: Any) -> bool:
         captured_time = datetime.fromisoformat(str(row["captured_at"]).replace("Z", "+00:00"))
         if any(value.tzinfo is None or value.utcoffset() is None for value in (price_time, off_time, captured_time)):
             return False
-        if price_time > off_time or captured_time > off_time:
+        if price_time > captured_time or price_time > off_time or captured_time > off_time:
             return False
     except (KeyError, TypeError, ValueError):
         return False
