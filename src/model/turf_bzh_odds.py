@@ -55,7 +55,7 @@ def build_snapshot(
     capture_time = _timestamp(captured_at)
     if priced_time is None or off_time is None or capture_time is None:
         return None
-    if priced_time > off_time or capture_time > off_time:
+    if priced_time > capture_time or priced_time > off_time or capture_time > off_time:
         return None
 
     odds: dict[str, float] = {}
