@@ -614,9 +614,9 @@ def extract_published_arrival(text, program_date=None):
 
     month_pattern = "|".join(sorted((re.escape(name) for name in MONTHS), key=len, reverse=True))
     pattern = re.compile(
-        r"^\\s*ARRIV(?:E|É)E\\s+DU\\s+(?P<day>\\d{1,2})\\s+"
-        rf"(?P<month>{month_pattern})(?:\\s+(?P<year>20\\d{{2}}))?\\s*[:\\-–]\\s*"
-        r"(?P<arrival>\\d[\\d\\s\\-–]*?)\\s*(?:NPO|NP)?\\s*$",
+        r"^\s*ARRIV(?:E|É)E\s+DU\s+(?P<day>\d{1,2})\s+"
+        rf"(?P<month>{month_pattern})(?:\s+(?P<year>20\d{{2}}))?\s*[:\-–]\s*"
+        r"(?P<arrival>\d[\d\s\-–]*?)\s*(?:NPO|NP)?\s*$",
         re.IGNORECASE | re.MULTILINE,
     )
     for match in pattern.finditer(text):
@@ -629,7 +629,7 @@ def extract_published_arrival(text, program_date=None):
         if arrival_date != target_date:
             continue
 
-        arrival = [int(value) for value in re.findall(r"\\d+", match.group("arrival"))]
+        arrival = [int(value) for value in re.findall(r"\d+", match.group("arrival"))]
         if not arrival or len(arrival) > 5:
             return []
         if any(number < 1 or number > 20 for number in arrival) or len(set(arrival)) != len(arrival):
