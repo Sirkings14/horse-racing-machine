@@ -12,6 +12,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+import re
 import sys
 
 BASE_DIR = Path(__file__).resolve().parents[1]
@@ -59,6 +60,48 @@ def compare_arrivals(legacy: list[int], reparsed: list[int]) -> str:
     if len(reparsed) > len(legacy) and legacy and reparsed[:len(legacy)] == legacy:
         return "reparse_has_more_positions"
     return "arrival_sequence_changed"
+
+
+_RANK_PREFIX_PATTERN = re.compile(
+    r"^\\s*(?P<race>\\d+)\\s*(?:i[eè]me|ère|ere|er|ème|eme|e)\\s*(?P<rest>.*)$",
+    re.IGNORECASE,
+)
+
+
+def _classify_unparsed_rank_line(rest: str) -> str:
+    """Give reviewers a conservative reason; never infer a missing finish."""
+    value = str(rest or "").strip()
+    if not value:
+        return "rank_label_without_arrival_text"
+    if re.match(r"^(?:x|np|da|dai|disq|ab|abd|ret|pulled)", value, re.IGNORECASE):
+        return "status_marker_before_arrival_number"
+    if re.match(r"^(?:[-–—]\\s*){1,}", value):
+        return "arrival_sequence_missing_or_corrupt"
+    if re.match(r"^\\d+\\s+", value):
+        return "single_number_without_hyphen_separator_payout_ambiguous"
+    return "unsupported_or_corrupted_rank_line"
+
+
+def _source_line_evidence(text_path: Path, race_number: int, max_lines: int = 3) -> list[dict[str, Any]]:
+    """Return raw ordinal lines for audit review when legacy race is not reparsed."""
+    try:
+        lines = text_path.read_text(encoding="utf-8", errors="replace").splitlines()
+    except OSError:
+        return []
+    evidence: list[dict[str, Any]] = []
+    for line_number, raw_line in enumerate(lines, start=1):
+        match = _RANK_PREFIX_PATTERN.match(raw_line)
+        if not match or _positive_int(match.group("race")) != race_number:
+            continue
+        rest = match.group("rest")
+        evidence.append({
+            "line_number": line_number,
+            "raw_line": raw_line[:500],
+            "review_reason": _classify_unparsed_rank_line(rest),
+        })
+        if len(evidence) >= max_lines:
+            break
+    return evidence
 
 
 def _race_map(payload: Any) -> dict[int, dict[str, Any]]:
@@ -154,6 +197,8 @@ def audit_corpus(
         for number in legacy_only:
             if len(report["legacy_only_race_samples"]) >= sample_limit:
                 break
+            source_lines = _source_line_evidence(text_path, number)
+            line_reasons = sorted({item["review_reason"] for item in source_lines})
             report["legacy_only_race_samples"].append({
                 "file": text_path.name,
                 "date": previous.get("date") or reparsed.get("date"),
@@ -161,6 +206,12 @@ def audit_corpus(
                 "race_number": number,
                 "legacy_arrival": _arrival(old_map[number].get("arrival")),
                 "change_type": "legacy_race_not_reparsed",
+                "manual_review_required": True,
+                "manual_review_reason": (
+                    line_reasons[0] if len(line_reasons) == 1
+                    else "multiple_or_missing_source_line_patterns"
+                ),
+                "source_line_evidence": source_lines,
             })
 
         for number in sorted(set(old_map) & set(new_map)):
