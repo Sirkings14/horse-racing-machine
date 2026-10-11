@@ -2,7 +2,7 @@ name: V3 evidence brain validation
 
 on:
   push:
-    branches: [main, v3-evidence-brain, v4-production-edge, v4-press-odds-benchmark, press-odds-benchmark-engine, press-odds-cleanup-v2, v5-market-opportunity-layer, fix/telegram-idempotency-result-truth-audit, fix/result-truth-telegram-safety, fix/market-evidence-latest-test, fix/skip-published-results-live-prediction, fix/live-arrival-date-mismatch, fix/skip-already-notified-race-day]
+    branches: [main, v3-evidence-brain, v4-production-edge, v4-press-odds-benchmark, press-odds-benchmark-engine, press-odds-cleanup-v2, v5-market-opportunity-layer, fix/telegram-idempotency-result-truth-audit, fix/result-truth-telegram-safety, fix/market-evidence-latest-test, fix/skip-published-results-live-prediction, fix/live-arrival-date-mismatch, fix/skip-already-notified-race-day, fix/notification-dedupe-fingerprints]
   workflow_dispatch:
 
 # Generated model-artifact commits must not start another validation cycle.
