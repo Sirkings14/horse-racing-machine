@@ -9,6 +9,7 @@ truth approval.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from collections import Counter, defaultdict
@@ -26,6 +27,31 @@ from src.parsers.results_parser import parse_result_file
 DEFAULT_PROCESSED_DIR = BASE_DIR / "data" / "processed" / "results"
 DEFAULT_STRUCTURED_DIR = BASE_DIR / "data" / "structured" / "results"
 DEFAULT_OUTPUT = BASE_DIR / "data" / "evaluation" / "result_parser_migration_preview.json"
+
+
+def _sha256_file(path: Path) -> str:
+    """Fingerprint exact input bytes so a later migration can detect stale previews."""
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _roster_sha256(meta: dict[str, Any] | None) -> str | None:
+    if not isinstance(meta, dict):
+        return None
+    numbers = meta.get("horse_numbers")
+    if not isinstance(numbers, (set, list, tuple)):
+        return None
+    canonical = {
+        "horse_numbers": sorted(_int(number) for number in numbers if _int(number) is not None),
+        "runners_count": _int(meta.get("runners_count")),
+        "source_file": meta.get("source_file"),
+        "conflict": bool(meta.get("conflict")),
+    }
+    encoded = json.dumps(canonical, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def _int(value: Any) -> int | None:
@@ -88,7 +114,7 @@ def preview_migration(
 
     text_paths = sorted(processed_dir.glob("*.txt")) if processed_dir.exists() else []
     report: dict[str, Any] = {
-        "schema_version": 1,
+        "schema_version": 2,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "status": "preview_only",
         "processed_text_files_seen": len(text_paths),
@@ -111,6 +137,9 @@ def preview_migration(
             "live_prediction_or_betting_effect": "none",
             "eligibility_is_not_official_truth_approval": True,
             "apply_requires_a_separate_reviewed_migration": True,
+            "each_candidate_records_input_sha256": True,
+            "stale_inputs_must_be_repreviewed_before_any_future_apply": True,
+            "source_files_are_never_rewritten_by_this_preview": True,
         },
     }
 
@@ -120,6 +149,8 @@ def preview_migration(
             report["structured_files_missing_text"] += 1
             continue
         try:
+            structured_sha256 = _sha256_file(structured_path)
+            processed_text_sha256 = _sha256_file(text_path)
             previous = json.loads(structured_path.read_text(encoding="utf-8"))
             reparsed = parse_result_file(text_path)
         except Exception as error:
@@ -146,6 +177,11 @@ def preview_migration(
                     "text_file": text_path.name,
                     "old_arrival": old_arrival,
                     "new_arrival": None,
+                    "race_number": number,
+                    "race_key": key,
+                    "structured_sha256": structured_sha256,
+                    "processed_text_sha256": processed_text_sha256,
+                    "roster_evidence_sha256": _roster_sha256(program_index.get(key)),
                     "change_type": "source_reparse_missing",
                     "roster_validation": {"accepted_for_learning": False, "reason": "source_reparse_missing"},
                 })
@@ -170,8 +206,13 @@ def preview_migration(
             groups[key].append({
                 "file": structured_path.name,
                 "text_file": text_path.name,
+                "race_number": number,
+                "race_key": key,
                 "old_arrival": old_arrival,
                 "new_arrival": proposed,
+                "structured_sha256": structured_sha256,
+                "processed_text_sha256": processed_text_sha256,
+                "roster_evidence_sha256": _roster_sha256(program_index.get(key)),
                 "change_type": change_type,
                 "roster_validation": validation,
             })
@@ -236,6 +277,154 @@ def preview_migration(
     report["blocked_reason_counts"] = dict(sorted(counts.items()))
     report["eligible_groups"] = eligible
     return report
+
+
+def validate_preview_copy_snapshot(
+    copy: dict[str, Any],
+    processed_dir: Path = DEFAULT_PROCESSED_DIR,
+    structured_dir: Path = DEFAULT_STRUCTURED_DIR,
+    program_index: dict[str, dict[str, Any]] | None = None,
+) -> dict[str, Any]:
+    """Read-only preflight: prove a previewed copy still matches its exact inputs.
+
+    This is not an apply operation. It detects stale files, edited arrivals,
+    source changes, and roster drift before a separately reviewed migration.
+    """
+    if program_index is None:
+        program_index = build_program_runner_index()
+
+    def reject(reason: str) -> dict[str, Any]:
+        return {"valid": False, "reason": reason}
+
+    file_name = copy.get("file")
+    text_name = copy.get("text_file")
+    if (
+        not isinstance(file_name, str) or not file_name
+        or Path(file_name).name != file_name
+        or not isinstance(text_name, str) or not text_name
+        or Path(text_name).name != text_name
+    ):
+        return reject("invalid_snapshot_path")
+
+    structured_path = structured_dir / file_name
+    text_path = processed_dir / text_name
+    if not structured_path.is_file() or not text_path.is_file():
+        return reject("snapshot_input_missing")
+    try:
+        if _sha256_file(structured_path) != copy.get("structured_sha256"):
+            return reject("structured_file_sha256_mismatch")
+        if _sha256_file(text_path) != copy.get("processed_text_sha256"):
+            return reject("processed_text_sha256_mismatch")
+        current_payload = json.loads(structured_path.read_text(encoding="utf-8"))
+        reparsed_payload = parse_result_file(text_path)
+    except Exception as error:
+        return reject("snapshot_input_unreadable:" + type(error).__name__)
+
+    race_number = _int(copy.get("race_number"))
+    race_key = copy.get("race_key")
+    if race_number is None or not isinstance(race_key, str) or not race_key:
+        return reject("snapshot_race_identity_missing")
+
+    old_race = _races(current_payload).get(race_number)
+    new_race = _races(reparsed_payload).get(race_number)
+    if old_race is None or new_race is None:
+        return reject("snapshot_race_not_found_in_current_inputs")
+
+    current_key = canonical_key(
+        current_payload.get("date") or reparsed_payload.get("date"),
+        current_payload.get("track") or reparsed_payload.get("track"),
+        race_number,
+    )
+    reparsed_key = canonical_key(
+        reparsed_payload.get("date"),
+        reparsed_payload.get("track"),
+        race_number,
+    )
+    if current_key != race_key or reparsed_key != race_key:
+        return reject("snapshot_race_identity_changed")
+
+    old_arrival = _arrival(old_race.get("arrival"))
+    new_arrival = _arrival(new_race.get("arrival"))
+    if old_arrival != copy.get("old_arrival"):
+        return reject("legacy_arrival_changed_since_preview")
+    if new_arrival != copy.get("new_arrival"):
+        return reject("reparsed_arrival_changed_since_preview")
+    copy_change_type = copy.get("change_type")
+    if copy_change_type == "unchanged":
+        if old_arrival != new_arrival:
+            return reject("unchanged_copy_arrival_changed")
+    elif copy_change_type == "tail_trim_candidate":
+        if not _pure_tail_trim(old_arrival, new_arrival):
+            return reject("correction_is_not_a_pure_tail_trim")
+    else:
+        return reject("copy_not_eligible_for_migration_preview")
+
+    roster_meta = program_index.get(race_key)
+    current_roster_hash = _roster_sha256(roster_meta)
+    if not current_roster_hash or current_roster_hash != copy.get("roster_evidence_sha256"):
+        return reject("roster_evidence_sha256_mismatch")
+    roster_validation = validate_arrival(race_key, new_arrival or [], program_index)
+    if roster_validation.get("accepted_for_learning") is not True:
+        return reject("current_roster_validation_rejected")
+
+    return {
+        "valid": True,
+        "reason": "snapshot_matches_current_inputs",
+        "race_key": race_key,
+        "race_number": race_number,
+        "old_arrival": old_arrival,
+        "proposed_arrival": new_arrival,
+        "structured_sha256": copy["structured_sha256"],
+        "processed_text_sha256": copy["processed_text_sha256"],
+        "roster_evidence_sha256": current_roster_hash,
+        "policy": {
+            "read_only": True,
+            "applies_correction": False,
+            "marks_official_truth": False,
+        },
+    }
+
+
+def validate_preview_group_snapshot(
+    group: dict[str, Any],
+    processed_dir: Path = DEFAULT_PROCESSED_DIR,
+    structured_dir: Path = DEFAULT_STRUCTURED_DIR,
+    program_index: dict[str, dict[str, Any]] | None = None,
+) -> dict[str, Any]:
+    """Check every copy in one candidate group and fail closed on any stale copy."""
+    copies = group.get("structured_result_copies")
+    if not isinstance(copies, list) or not copies:
+        return {"valid": False, "reason": "candidate_group_has_no_copies", "copy_checks": []}
+
+    expected_key = group.get("race_key")
+    expected_arrival = _arrival(group.get("proposed_arrival"))
+    checks = [
+        validate_preview_copy_snapshot(copy, processed_dir, structured_dir, program_index)
+        for copy in copies if isinstance(copy, dict)
+    ]
+    if len(checks) != len(copies):
+        return {"valid": False, "reason": "candidate_group_contains_malformed_copy", "copy_checks": checks}
+    if not all(item.get("valid") for item in checks):
+        return {"valid": False, "reason": "one_or_more_copies_are_stale_or_invalid", "copy_checks": checks}
+    if any(item.get("race_key") != expected_key for item in checks):
+        return {"valid": False, "reason": "candidate_group_race_key_mismatch", "copy_checks": checks}
+    if any(item.get("proposed_arrival") != expected_arrival for item in checks):
+        return {"valid": False, "reason": "candidate_group_proposed_arrivals_disagree", "copy_checks": checks}
+    if not any(copy.get("change_type") == "tail_trim_candidate" for copy in copies):
+        return {"valid": False, "reason": "candidate_group_has_no_required_tail_trim", "copy_checks": checks}
+    return {
+        "valid": True,
+        "reason": "all_snapshots_current_and_consistent",
+        "race_key": expected_key,
+        "proposed_arrival": expected_arrival,
+        "checked_copies": len(checks),
+        "copy_checks": checks,
+        "policy": {
+            "read_only": True,
+            "applies_correction": False,
+            "requires_separate_reviewed_migration": True,
+        },
+    }
 
 
 def main() -> int:
