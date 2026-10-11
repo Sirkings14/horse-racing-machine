@@ -1,0 +1,44 @@
+name: Partial-arrival label safety
+
+on:
+  push:
+    branches: [fix/partial-arrival-label-safety-clean]
+    paths:
+      - "src/dataset/build_dataset.py"
+      - "src/model/v3_model.py"
+      - "src/model/v3_backtest.py"
+      - "src/model/v3_train.py"
+      - "tests/test_partial_arrival_labels.py"
+      - ".github/workflows/partial-arrival-label-safety.yml"
+  pull_request:
+    paths:
+      - "src/dataset/build_dataset.py"
+      - "src/model/v3_model.py"
+      - "src/model/v3_backtest.py"
+      - "src/model/v3_train.py"
+      - "tests/test_partial_arrival_labels.py"
+      - ".github/workflows/partial-arrival-label-safety.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: partial-arrival-label-safety
+  cancel-in-progress: true
+
+jobs:
+  focused-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install focused test dependencies
+        run: python -m pip install numpy pytest
+      - name: Compile changed modules
+        run: python -m py_compile src/dataset/build_dataset.py src/model/v3_model.py src/model/v3_backtest.py src/model/v3_train.py
+      - name: Run label-safety regression tests
+        run: python -m pytest -q tests/test_partial_arrival_labels.py
