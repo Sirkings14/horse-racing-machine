@@ -24,7 +24,7 @@ on:
       race_number:
         description: "Race number to probe"
         required: true
-        default: "4"
+        default: "1"
 
 permissions:
   contents: read
@@ -58,7 +58,7 @@ jobs:
           RACE_DATE: ${{ github.event.inputs.race_date || '2026-10-09' }}
           TRACK: ${{ github.event.inputs.track || 'PARIS-VINCENNES NOCTURNE' }}
           MEETING: ${{ github.event.inputs.meeting || '1' }}
-          RACE_NUMBER: ${{ github.event.inputs.race_number || '4' }}
+          RACE_NUMBER: ${{ github.event.inputs.race_number || '1' }}
         run: |
           python -m src.dataset.pmu_arrival_source --date "$RACE_DATE" --track "$TRACK" --meeting "$MEETING" --race "$RACE_NUMBER"
       - name: Upload probe report
