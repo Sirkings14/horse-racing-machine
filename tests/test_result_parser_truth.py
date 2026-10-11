@@ -31,14 +31,14 @@ class ResultParserTruthTests(unittest.TestCase):
 
 
     def test_caen_thousands_separated_payout_does_not_create_horse_1(self):
-        line = "4ième 9 - 10 - 4 10 1\\u202f400 74 9 - 4 10 700"
+        line = "4ième 9 - 10 - 4 10 1\u202f400 74 9 - 4 10 700"
         result = extract_arrival_from_line(line)
         self.assertIsNotNone(result)
         self.assertEqual(result["race_number"], 4)
         self.assertEqual(result["arrival"], [9, 10, 4])
 
     def test_vincennes_thousands_separated_payout_does_not_replace_fourth_place(self):
-        line = "4ième 14 - 6 - 15 6 1\\u202f000 114 14 - 15 6\\u202f650 2110"
+        line = "4ième 14 - 6 - 15 6 1\u202f000 114 14 - 15 6\u202f650 2110"
         result = extract_arrival_from_line(line)
         self.assertIsNotNone(result)
         self.assertEqual(result["arrival"], [14, 6, 15])
@@ -62,9 +62,9 @@ class ResultParserTruthTests(unittest.TestCase):
 
     def test_ambiguous_single_number_followed_by_payout_is_not_treated_as_arrival(self):
         lines = [
-            "1ère 5 550 14 6 - 7 7\\u202f300 60",
-            "8ième 3 1\\u202f400 5 8 - 5 9\\u202f200 93",
-            "7ième x 14 1\\u202f000 251 7 - 1 5\\u202f950 2987",
+            "1ère 5 550 14 6 - 7 7\u202f300 60",
+            "8ième 3 1\u202f400 5 8 - 5 9\u202f200 93",
+            "7ième x 14 1\u202f000 251 7 - 1 5\u202f950 2987",
             "9ième - - 0 0 5 - 0 0 271",
         ]
         for line in lines:
@@ -72,7 +72,7 @@ class ResultParserTruthTests(unittest.TestCase):
                 self.assertIsNone(extract_arrival_from_line(line))
 
     def test_first_arrival_sequence_stops_before_later_payout_combinations(self):
-        line = "1ère 5 - 6 - 9 6 1\\u202f100 3 5 - 6 2\\u202f400 62"
+        line = "1ère 5 - 6 - 9 6 1\u202f100 3 5 - 6 2\u202f400 62"
         result = extract_arrival_from_line(line)
         self.assertIsNotNone(result)
         self.assertEqual(result["arrival"], [5, 6, 9])
