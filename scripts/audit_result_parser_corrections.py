@@ -101,6 +101,7 @@ def audit_corpus(
         "change_type_counts": {},
         "error_samples": [],
         "changed_race_samples": [],
+        "legacy_only_race_samples": [],
         "policy": {
             "read_only": True,
             "rewrites_structured_results": False,
@@ -138,8 +139,21 @@ def audit_corpus(
 
         old_map = _race_map(previous)
         new_map = _race_map(reparsed)
-        report["legacy_only_races"] += len(set(old_map) - set(new_map))
-        report["reparsed_only_races"] += len(set(new_map) - set(old_map))
+        legacy_only = sorted(set(old_map) - set(new_map))
+        reparsed_only = sorted(set(new_map) - set(old_map))
+        report["legacy_only_races"] += len(legacy_only)
+        report["reparsed_only_races"] += len(reparsed_only)
+        for number in legacy_only:
+            if len(report["legacy_only_race_samples"]) >= sample_limit:
+                break
+            report["legacy_only_race_samples"].append({
+                "file": text_path.name,
+                "date": previous.get("date") or reparsed.get("date"),
+                "track": previous.get("track") or reparsed.get("track"),
+                "race_number": number,
+                "legacy_arrival": _arrival(old_map[number].get("arrival")),
+                "change_type": "legacy_race_not_reparsed",
+            })
 
         for number in sorted(set(old_map) & set(new_map)):
             old_arrival = _arrival(old_map[number].get("arrival"))
