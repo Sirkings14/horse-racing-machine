@@ -3,7 +3,7 @@ import json
 from collections import defaultdict
 from pathlib import Path
 from src.model.historical_profile import build_walk_forward_profiles
-from src.model.v3_model import fit_v3_model
+from src.model.v3_model import fit_v3_model, known_binary_targets
 from src.model.calibration import fit_sigmoid_calibrator, apply_sigmoid_calibrator, calibration_metrics
 from src.model.v3_backtest import run as run_v3_backtest
 from src.model.backtest import run_backtest as run_legacy_backtest  # legacy benchmark is informational
@@ -57,13 +57,21 @@ def main():
     cal_eval_rows=cal_rows[cal_split:][-60000:]
     for name,target in (("winner","won"),("top3","top3"),("top5","top5")):
         base=fit_v3_model(fit_rows,target_field=target,epochs=20)
-        raw_fit=base.predict_proba(cal_fit_rows)
-        labels_fit=[int(r.get(target,0)) for r in cal_fit_rows]
+        raw_fit_all=base.predict_proba(cal_fit_rows)
+        fit_indices,labels_fit=known_binary_targets(cal_fit_rows,target)
+        raw_fit=[float(raw_fit_all[index]) for index in fit_indices]
+        raw_eval_all=base.predict_proba(cal_eval_rows)
+        eval_indices,labels_eval=known_binary_targets(cal_eval_rows,target)
+        raw_eval=[float(raw_eval_all[index]) for index in eval_indices]
+        # Calibration must use observed labels only. Fail explicitly if masking
+        # leaves no usable calibration evidence instead of fabricating negatives.
+        if len(set(labels_fit))<2 or len(set(labels_eval))<2:
+            raise ValueError(f"Calibration split for {target} lacks both labelled classes after masking unknown outcomes.")
         calibration=fit_sigmoid_calibrator(raw_fit,labels_fit)
-        raw_eval=base.predict_proba(cal_eval_rows)
-        labels_eval=[int(r.get(target,0)) for r in cal_eval_rows]
         calibrated_eval=[apply_sigmoid_calibrator(v,calibration) for v in raw_eval]
         validation=calibration_metrics(calibrated_eval,labels_eval)
+        validation["labelled_evaluation_rows"]=len(labels_eval)
+        validation["masked_unknown_evaluation_rows"]=len(cal_eval_rows)-len(eval_indices)
         prevalence=(sum(labels_eval)/len(labels_eval)) if labels_eval else 0.0
         validation["brier_baseline"]=round(prevalence*(1.0-prevalence),6)
         final=fit_v3_model(final_rows,target_field=target,epochs=20)
