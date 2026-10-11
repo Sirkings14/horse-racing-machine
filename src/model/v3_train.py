@@ -1,9 +1,11 @@
 from __future__ import annotations
 import json
 from collections import defaultdict
+from datetime import date as date_type
 from pathlib import Path
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.v3_model import fit_v3_model, known_binary_targets
+from src.model.v3_features import tail_complete_races
 from src.model.calibration import fit_sigmoid_calibrator, apply_sigmoid_calibrator, calibration_metrics
 from src.model.v3_backtest import run as run_v3_backtest
 from src.model.backtest import run_backtest as run_legacy_backtest  # legacy benchmark is informational
@@ -13,6 +15,44 @@ from src.dataset.program_history import load_program_history
 BASE_DIR=Path(__file__).resolve().parents[2]
 DATASET_FILE=BASE_DIR/"data/dataset/training_dataset_clean.json"
 OUTPUT_FILE=BASE_DIR/"data/model/v3_models.json"
+
+
+def chronological_group_split(groups, train_fraction: float = 0.8):
+    """Split whole race groups by date, never placing same-day races on both sides."""
+    if not groups:
+        raise ValueError("Cannot split an empty race-group dataset.")
+    if not 0.0 < train_fraction < 1.0:
+        raise ValueError("train_fraction must be between zero and one.")
+
+    date_by_key = {}
+    for key, race_rows in groups.items():
+        if not race_rows:
+            continue
+        raw_dates = {str(row.get("date") or "")[:10] for row in race_rows}
+        if len(raw_dates) != 1:
+            raise ValueError(f"Race group {key} contains multiple or missing dates.")
+        race_date = next(iter(raw_dates))
+        try:
+            date_type.fromisoformat(race_date)
+        except ValueError as error:
+            raise ValueError(f"Race group {key} has an invalid ISO date: {race_date!r}") from error
+        date_by_key[str(key)] = race_date
+
+    dates = sorted(set(date_by_key.values()))
+    # Need one training date and at least two distinct calibration dates so
+    # calibrator fit and evaluation remain chronologically separated.
+    if len(dates) < 3:
+        raise ValueError("V3 training needs at least three distinct dates for chronological calibration.")
+
+    split = max(1, min(len(dates) - 2, int(len(dates) * train_fraction)))
+    train_dates = set(dates[:split])
+    calibration_dates = set(dates[split:])
+    ordered_keys = sorted(date_by_key, key=lambda key: (date_by_key[key], key))
+    train_keys = [key for key in ordered_keys if date_by_key[key] in train_dates]
+    calibration_keys = [key for key in ordered_keys if date_by_key[key] in calibration_dates]
+    return train_keys, calibration_keys, date_by_key
+
+
 
 def _promotion_decision(v3m:dict, n_races:int, calibration_gate:dict|None=None)->tuple[bool,list[str]]:
     reasons=[]
@@ -41,20 +81,27 @@ def main():
     for row in profiled:
         if row.get("race_key") and not row.get("_program_only_history"): groups[str(row["race_key"])].append(row)
     keys=sorted(groups,key=lambda k:min((str(r.get("date") or "")[:10],k) for r in groups[k]))
-    split=max(1,int(len(keys)*0.8))
-    train_rows=[r for k in keys[:split] for r in groups[k]]
-    cal_rows=[r for k in keys[split:] for r in groups[k]]
-    # Keep final fitting bounded; validation remains full walk-forward and unchanged.
-    fit_rows=train_rows[-25000:]
-    final_rows=[r for r in profiled if not r.get("_program_only_history")][-25000:]
+    train_keys,cal_keys,date_by_key=chronological_group_split(groups,train_fraction=0.8)
+    train_rows=[r for k in train_keys for r in groups[k]]
+    cal_rows=[r for k in cal_keys for r in groups[k]]
+    # Row budgets keep whole race groups; a race is never silently split.
+    fit_rows=tail_complete_races(train_rows,25000)
+    final_rows=tail_complete_races([r for r in profiled if not r.get("_program_only_history")],25000)
     models={}
     calibration_reports={}
     calibration_validation_reports={}
-    # Evaluate calibration on a chronological sample that was not used to fit
-    # the calibrator. Bound the calibration samples to keep CI practical.
-    cal_split=max(30,int(len(cal_rows)*0.70))
-    cal_fit_rows=cal_rows[:cal_split][-60000:]
-    cal_eval_rows=cal_rows[cal_split:][-60000:]
+    # Split calibration by whole dates, not runner rows or race keys, so every
+    # same-day race remains on the same side of the calibrator boundary.
+    cal_dates=sorted({date_by_key[k] for k in cal_keys})
+    cal_split=max(1,min(len(cal_dates)-1,int(len(cal_dates)*0.70)))
+    cal_fit_dates=set(cal_dates[:cal_split])
+    cal_eval_dates=set(cal_dates[cal_split:])
+    cal_fit_keys=[k for k in cal_keys if date_by_key[k] in cal_fit_dates]
+    cal_eval_keys=[k for k in cal_keys if date_by_key[k] in cal_eval_dates]
+    cal_fit_rows=tail_complete_races([r for k in cal_fit_keys for r in groups[k]],60000)
+    cal_eval_rows=tail_complete_races([r for k in cal_eval_keys for r in groups[k]],60000)
+    if not cal_fit_rows or not cal_eval_rows:
+        raise ValueError("Chronological calibration split produced an empty fit or evaluation sample.")
     for name,target in (("winner","won"),("top3","top3"),("top5","top5")):
         base=fit_v3_model(fit_rows,target_field=target,epochs=20)
         raw_fit_all=base.predict_proba(cal_fit_rows)
@@ -108,7 +155,7 @@ def main():
         "press_dependency":False,
         "post_race_feature_policy":"hard_exclusion",
         "calibration_method":"out_of_sample_sigmoid",
-        "calibration_races":len(keys)-split,
+        "calibration_races":len(cal_keys),
         "production_approved":approved,
         "economic_validation_status":economic_report.get("status"),
         "economic_validation_report":economic_report,
