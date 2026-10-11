@@ -74,6 +74,30 @@ def _sigmoid(values: np.ndarray) -> np.ndarray:
     return 1.0 / (1.0 + np.exp(-values))
 
 
+def known_binary_targets(
+    rows: Sequence[Dict[str, Any]],
+    target_field: str,
+) -> tuple[list[int], list[int]]:
+    """Return only explicitly observed binary labels; unknowns are never losses."""
+    indices: list[int] = []
+    labels: list[int] = []
+    for index, row in enumerate(rows):
+        value = row.get(target_field)
+        if isinstance(value, bool):
+            label = int(value)
+        else:
+            try:
+                numeric = float(value)
+            except (TypeError, ValueError, OverflowError):
+                continue
+            if not np.isfinite(numeric) or numeric not in (0.0, 1.0):
+                continue
+            label = int(numeric)
+        indices.append(index)
+        labels.append(label)
+    return indices, labels
+
+
 def fit_top3_model(
     rows: Sequence[Dict[str, Any]],
     target_field: str = "top3",
@@ -84,11 +108,15 @@ def fit_top3_model(
     if not rows:
         raise ValueError("Cannot train a model with no rows.")
 
-    matrix = build_matrix(rows)
-    target = np.asarray(
-        [1.0 if int(row.get(target_field, 0)) == 1 else 0.0 for row in rows],
-        dtype=float,
-    )
+    known_indices, known_labels = known_binary_targets(rows, target_field)
+    if not known_indices:
+        raise ValueError(f"No known binary labels available for target {target_field}.")
+
+    # Compute the feature statistics only on rows whose target is known.
+    # Partial arrivals deliberately leave some Top-4/Top-5 labels unknown;
+    # treating those None values as negatives would corrupt the model.
+    matrix = build_matrix(rows)[known_indices]
+    target = np.asarray(known_labels, dtype=float)
 
     positive = float(target.sum())
     negative = float(len(target) - positive)
