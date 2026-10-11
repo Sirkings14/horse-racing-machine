@@ -12,11 +12,11 @@ on:
       race_date:
         description: "Race date (YYYY-MM-DD)"
         required: true
-        default: "2026-10-09"
+        default: "2026-09-29"
       track:
         description: "Racecourse"
         required: true
-        default: "PARIS-VINCENNES NOCTURNE"
+        default: "CHANTILLY"
       meeting:
         description: "Meeting number"
         required: true
@@ -55,10 +55,10 @@ jobs:
       - name: Probe one known race; never change training or production artifacts
         continue-on-error: true
         env:
-          RACE_DATE: ${{ github.event.inputs.race_date || '2026-10-09' }}
-          TRACK: ${{ github.event.inputs.track || 'PARIS-VINCENNES NOCTURNE' }}
+          RACE_DATE: ${{ github.event.inputs.race_date || '2026-09-29' }}
+          TRACK: ${{ github.event.inputs.track || 'CHANTILLY' }}
           MEETING: ${{ github.event.inputs.meeting || '1' }}
-          RACE_NUMBER: ${{ github.event.inputs.race_number || '4' }}
+          RACE_NUMBER: ${{ github.event.inputs.race_number || '1' }}
         run: |
           python -m src.dataset.pmu_arrival_source --date "$RACE_DATE" --track "$TRACK" --meeting "$MEETING" --race "$RACE_NUMBER"
       - name: Upload probe report
