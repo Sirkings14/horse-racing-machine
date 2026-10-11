@@ -5,7 +5,8 @@ import math
 import random
 
 from src.model.historical_profile import build_walk_forward_profiles
-from src.model.v3_model import fit_v3_model
+from src.model.v3_features import tail_complete_races
+from src.model.v3_model import fit_v3_model, evaluation_labels_complete
 from src.model.calibration import calibration_metrics
 from src.dataset.program_history import load_program_history
 
@@ -56,6 +57,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
     # available for training; only the final holdout window is scored.
     evaluation_keys=set(keys[-max_eval_races:]) if max_eval_races and len(keys)>max_eval_races else set(keys)
     predictions=[]; probabilities=[]; labels=[]
+    skipped_incomplete_evaluation_labels=0
     # Refit once per calendar date, preserving the rule that same-day races
     # cannot teach one another while making large walk-forward validation viable.
     date_to_keys=defaultdict(list)
@@ -70,7 +72,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
             prior_keys=[k for d in dates[:di] for k in date_to_keys[d]]
             train=[r for k in prior_keys for r in groups[k]]
             if len(train) > max_train_rows:
-                train = train[-max_train_rows:]
+                train = tail_complete_races(train, max_train_rows)
             models={}
             try:
                 models["winner"]=fit_v3_model(train,target_field="won",epochs=epochs)
@@ -82,6 +84,12 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
             if key not in evaluation_keys:
                 continue
             test=groups[key]
+            # Backtest metrics require an observed winner and a complete Top-3
+            # label set for the entire declared field. Keep training on known
+            # targets, but never score an incomplete result as if it were final.
+            if not evaluation_labels_complete(test, ("won", "top3")):
+                skipped_incomplete_evaluation_labels += 1
+                continue
             p1=models["winner"].predict_proba(test); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
             ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1,p3,p5)]
             ranked=sorted((dict(r,ensemble_score=float(s),p_winner=float(a),p_top3=float(b),p_top5=float(c)) for r,a,b,c,s in zip(test,p1,p3,p5,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
@@ -131,6 +139,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
         "refit_every_days":refit_every_days,
         "dataset_races":len(keys),
         "evaluated_races":n,
+        "evaluation_races_skipped_for_unknown_labels":skipped_incomplete_evaluation_labels,
         "press_dependency":False,
         "post_race_feature_policy":"hard_exclusion",
         "metrics":{
