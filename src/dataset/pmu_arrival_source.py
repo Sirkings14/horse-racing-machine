@@ -211,6 +211,14 @@ def load_local_evidence(
     if meeting_from_result and meeting not in meeting_from_result:
         return {"accepted": False, "reason": "requested_meeting_conflicts_with_local_result"}
 
+    horse_names_by_number = {
+        str(number): str(horse.get("horse") or horse.get("horse_name") or "")
+        for horse in (program.get("horses") or [])
+        if isinstance(horse, dict)
+        for number in [strict_positive_int(horse.get("number"))]
+        if number is not None
+    }
+    local_prefix = longest[:min(5, len(longest))]
     return {
         "accepted": True,
         "race_key": target_key,
@@ -222,7 +230,12 @@ def load_local_evidence(
         "race_type": (program.get("race") or {}).get("race_type"),
         "declared_runner_count": len(roster),
         "roster_numbers": sorted(roster),
-        "local_result_prefix": longest[:min(5, len(longest))],
+        "horse_names_by_number": horse_names_by_number,
+        "local_result_prefix": local_prefix,
+        "local_result_details": [
+            {"rank": rank, "horse_number": number, "horse_name": horse_names_by_number.get(str(number))}
+            for rank, number in enumerate(local_prefix, start=1)
+        ],
         "local_result_positions_available": len(longest),
         "local_program_file": program_file,
         "local_result_files": sorted(name for name, _ in result_candidates),
@@ -247,6 +260,7 @@ def validate_pmu_payload(
         return {"accepted": False, "reason": "participants_list_missing_or_malformed"}
 
     ranked: dict[int, int] = {}
+    ranked_names: dict[int, str | None] = {}
     used_numbers: set[int] = set()
     for item in participants:
         if not isinstance(item, dict):
@@ -259,13 +273,21 @@ def validate_pmu_payload(
             return {"accepted": False, "reason": "duplicate_or_tied_arrival_position"}
         if number in used_numbers:
             return {"accepted": False, "reason": "runner_number_repeated_in_top5"}
+        name = next((str(item[field]).strip() for field in (
+            "nom", "nomCheval", "nomChevalEngage", "nomCourt", "horseName"
+        ) if item.get(field) not in (None, "")), None)
         ranked[rank] = number
+        ranked_names[rank] = name
         used_numbers.add(number)
 
     if set(ranked) != {1, 2, 3, 4, 5}:
         return {"accepted": False, "reason": "five_unique_arrival_positions_unavailable"}
 
     top5 = [ranked[position] for position in range(1, 6)]
+    top5_details = [
+        {"rank": position, "horse_number": ranked[position], "horse_name": ranked_names.get(position)}
+        for position in range(1, 6)
+    ]
     outside_roster = [number for number in top5 if number not in roster_numbers]
     if outside_roster:
         return {
@@ -281,12 +303,14 @@ def validate_pmu_payload(
             "reason": "pmu_top5_disagrees_with_local_result_prefix",
             "local_prefix": prefix,
             "pmu_prefix": top5[:len(prefix)],
+            "pmu_top5_details": top5_details,
         }
 
     return {
         "accepted": True,
         "reason": "five_positions_match_local_result_prefix_and_declared_roster",
         "top5_numbers": top5,
+        "top5_details": top5_details,
         "matched_local_prefix_positions": len(prefix),
         "policy": {
             "odds_and_market_fields_ignored": True,

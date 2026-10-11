@@ -35,7 +35,7 @@ def test_strict_arrival_rejects_duplicates_and_nested_shapes():
 def _payload(order=(9, 10, 4, 1, 5)):
     return {
         "participants": [
-            {"numPmu": horse, "ordreArrivee": rank, "cotes": [99.0]}
+            {"numPmu": horse, "ordreArrivee": rank, "nomCheval": f"HORSE {horse}", "cotes": [99.0]}
             for rank, horse in enumerate(order, start=1)
         ]
     }
@@ -49,6 +49,7 @@ def test_valid_top5_must_match_roster_and_local_four_place_prefix():
     )
     assert result["accepted"] is True
     assert result["top5_numbers"] == [9, 10, 4, 1, 5]
+    assert result["top5_details"][3] == {"rank": 4, "horse_number": 1, "horse_name": "HORSE 1"}
     assert result["matched_local_prefix_positions"] == 4
     assert result["policy"]["odds_and_market_fields_ignored"] is True
 
