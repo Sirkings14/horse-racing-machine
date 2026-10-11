@@ -1,0 +1,378 @@
+{
+  "document_type": "program",
+  "source_file": "live_program_JH_PMUB_DU_13-10-2026_9d83cc1a94.pdf",
+  "parsed_at": "2026-10-11T16:21:37.755461Z",
+  "date": "2026-10-13",
+  "race": {
+    "race_name": "PRIX DE LA GALERIE DES V ARIETES",
+    "track": "PARISLONGCHAMP",
+    "race_number": 1,
+    "race_type": "PLAT",
+    "runners_count": 16,
+    "distance": 1600,
+    "prize_euros": 50900
+  },
+  "horses": [
+    {
+      "number": 1,
+      "horse": "FELIX AUX ORMES",
+      "description": "",
+      "performance": "0.0.2.7.5",
+      "gains": 124847,
+      "sex": "M",
+      "age": 4,
+      "trainer": "Y.BARBEROT",
+      "jockey": "H.JOURNIAC",
+      "driver": "H.JOURNIAC",
+      "owner": "Y.LENOIR/JN.BOCAHUT",
+      "weight": 60.0,
+      "draw": 9
+    },
+    {
+      "number": 2,
+      "horse": "JUSEARTH FAL",
+      "description": "",
+      "performance": "1.5.1.7.6",
+      "gains": 42559,
+      "sex": "H",
+      "age": 4,
+      "trainer": "M.PITART",
+      "jockey": "C.LECOEUVRE",
+      "driver": "C.LECOEUVRE",
+      "owner": "B.LION",
+      "weight": 60.0,
+      "draw": 13
+    },
+    {
+      "number": 3,
+      "horse": "MR FLEURANT",
+      "description": "",
+      "performance": "3.5.4.4.1",
+      "gains": 90227,
+      "sex": "H",
+      "age": 5,
+      "trainer": "A.WATRIGANT",
+      "jockey": "M.BARZALONA",
+      "driver": "M.BARZALONA",
+      "owner": "C.MARCELLIN",
+      "weight": 59.0,
+      "draw": 16
+    },
+    {
+      "number": 4,
+      "horse": "AQUITAIN",
+      "description": "",
+      "performance": "4.2.5.1.0",
+      "gains": 49841,
+      "sex": "H",
+      "age": 4,
+      "trainer": "S.GAVILAN",
+      "jockey": "T.BLANCHOUIN",
+      "driver": "T.BLANCHOUIN",
+      "owner": "E.HARIVEL/P.SEBAOUN",
+      "weight": 58.0,
+      "draw": 4
+    },
+    {
+      "number": 5,
+      "horse": "REVE DE VALLARSA",
+      "description": "",
+      "performance": "8.8.1.6.0",
+      "gains": 153866,
+      "sex": "M",
+      "age": 6,
+      "trainer": "LD.RACCO",
+      "jockey": "D.SANTIAGO",
+      "driver": "D.SANTIAGO",
+      "owner": "A.LEVOIR",
+      "weight": 57.5,
+      "draw": 1
+    },
+    {
+      "number": 6,
+      "horse": "REVERSO",
+      "description": "",
+      "performance": "2.7.3.5.5",
+      "gains": 151690,
+      "sex": "H",
+      "age": 5,
+      "trainer": "I.JANA. KOPLIKOVA",
+      "jockey": "A.LEMAITRE",
+      "driver": "A.LEMAITRE",
+      "owner": "J.DUFKOVA",
+      "weight": 57.5,
+      "draw": 14
+    },
+    {
+      "number": 7,
+      "horse": "BOTICELLI",
+      "description": "",
+      "performance": "0.4.0.9.2",
+      "gains": 72334,
+      "sex": "H",
+      "age": 4,
+      "trainer": "M.RULEC",
+      "jockey": "C.SOUMILLON",
+      "driver": "C.SOUMILLON",
+      "owner": "S.MOLKS",
+      "weight": 57.5,
+      "draw": 8
+    },
+    {
+      "number": 8,
+      "horse": "MONTGAUDRY",
+      "description": "",
+      "performance": "7.1.0.8.3",
+      "gains": 115882,
+      "sex": "H",
+      "age": 6,
+      "trainer": "D.SMAGA",
+      "jockey": "S.PASQUIER",
+      "driver": "S.PASQUIER",
+      "owner": "G.AU.NORMAND",
+      "weight": 57.0,
+      "draw": 11
+    },
+    {
+      "number": 9,
+      "horse": "BOLKHOV",
+      "description": "",
+      "performance": "2.1.1.1.3",
+      "gains": 49561,
+      "sex": "H",
+      "age": 4,
+      "trainer": "A.BOTTI",
+      "jockey": "PC.BOUDOT",
+      "driver": "PC.BOUDOT",
+      "owner": "M.CAZAUBON/A.BOTTI",
+      "weight": 56.5,
+      "draw": 10
+    },
+    {
+      "number": 10,
+      "horse": "WOOD MING",
+      "description": "",
+      "performance": "1.5.1.1.7",
+      "gains": 39585,
+      "sex": "H",
+      "age": 3,
+      "trainer": "C.BARANDE BARBE",
+      "jockey": "F.VALLE SKAR",
+      "driver": "F.VALLE SKAR",
+      "owner": "C.BARANDE BARBE",
+      "weight": 56.5,
+      "draw": 12
+    },
+    {
+      "number": 11,
+      "horse": "PUMALIN PARK",
+      "description": "",
+      "performance": "7.0.0.8.4",
+      "gains": 85184,
+      "sex": "H",
+      "age": 6,
+      "trainer": "G.MOSSE",
+      "jockey": "A.POUCHIN",
+      "driver": "A.POUCHIN",
+      "owner": "R.NG",
+      "weight": 56.5,
+      "draw": 7
+    },
+    {
+      "number": 12,
+      "horse": "DUTY",
+      "description": "",
+      "performance": "4.2.0.0.4",
+      "gains": 49145,
+      "sex": "H",
+      "age": 4,
+      "trainer": "M.DELZANGLES",
+      "jockey": "I.MENDIZABAL",
+      "driver": "I.MENDIZABAL",
+      "owner": "R.NG",
+      "weight": 56.0,
+      "draw": 5
+    },
+    {
+      "number": 13,
+      "horse": "LORD OF WAR",
+      "description": "",
+      "performance": "0.0.0.0.7",
+      "gains": 109333,
+      "sex": "H",
+      "age": 5,
+      "trainer": "N.PERRET",
+      "jockey": "M.GUYON",
+      "driver": "M.GUYON",
+      "owner": "J.N.TEMAM/S.LAHMI",
+      "weight": 56.0,
+      "draw": 15
+    },
+    {
+      "number": 14,
+      "horse": "MUENCHEN",
+      "description": "",
+      "performance": "2.1.6.3.7",
+      "gains": 53273,
+      "sex": "H",
+      "age": 3,
+      "trainer": "C.ESCUDER",
+      "jockey": "C.DEMURO",
+      "driver": "C.DEMURO",
+      "owner": "B.GIRAUDON",
+      "weight": 55.5,
+      "draw": 3
+    },
+    {
+      "number": 15,
+      "horse": "HERMES WOOD",
+      "description": "",
+      "performance": "0.0.4.3.4",
+      "gains": 78109,
+      "sex": "H",
+      "age": 4,
+      "trainer": "C.FEY",
+      "jockey": "T.BACHELOT",
+      "driver": "T.BACHELOT",
+      "owner": "A.HEYNE",
+      "weight": 55.0,
+      "draw": 6
+    },
+    {
+      "number": 16,
+      "horse": "GALORD",
+      "description": "",
+      "performance": "5.4.0.0.0",
+      "gains": 145316,
+      "sex": "H",
+      "age": 7,
+      "trainer": "C.FEY",
+      "jockey": "E.HARDOUIN",
+      "driver": "E.HARDOUIN",
+      "owner": "E.DECOSTER",
+      "weight": 55.0,
+      "draw": 2
+    }
+  ],
+  "program_table_mapping_status": "mapped",
+  "rankings": {
+    "favorites": [
+      16,
+      12,
+      14,
+      1,
+      10,
+      15,
+      6
+    ],
+    "form": [
+      10,
+      14,
+      2,
+      6,
+      4
+    ],
+    "class": [
+      16,
+      12,
+      1,
+      15,
+      9
+    ],
+    "progress": [
+      7,
+      5,
+      1,
+      12,
+      13
+    ],
+    "regularity": [
+      4,
+      9,
+      10,
+      2,
+      14
+    ]
+  },
+  "press_odds": {
+    "tierce_magazine": {
+      "1": {
+        "fractional": "13/1",
+        "decimal": 14.0
+      },
+      "2": {
+        "fractional": "27/1",
+        "decimal": 28.0
+      },
+      "3": {
+        "fractional": "38/1",
+        "decimal": 39.0
+      },
+      "4": {
+        "fractional": "23/1",
+        "decimal": 24.0
+      },
+      "5": {
+        "fractional": "22/1",
+        "decimal": 23.0
+      },
+      "6": {
+        "fractional": "25/1",
+        "decimal": 26.0
+      },
+      "7": {
+        "fractional": "12/1",
+        "decimal": 13.0
+      },
+      "8": {
+        "fractional": "34/1",
+        "decimal": 35.0
+      },
+      "9": {
+        "fractional": "7/1",
+        "decimal": 8.0
+      },
+      "10": {
+        "fractional": "18/1",
+        "decimal": 19.0
+      },
+      "11": {
+        "fractional": "9/1",
+        "decimal": 10.0
+      },
+      "12": {
+        "fractional": "16/1",
+        "decimal": 17.0
+      },
+      "13": {
+        "fractional": "5/1",
+        "decimal": 6.0
+      },
+      "14": {
+        "fractional": "15/1",
+        "decimal": 16.0
+      },
+      "15": {
+        "fractional": "20/1",
+        "decimal": 21.0
+      },
+      "16": {
+        "fractional": "32/1",
+        "decimal": 33.0
+      }
+    }
+  },
+  "press_odds_status": "observed_in_program",
+  "published_arrival": [
+    15,
+    2,
+    3,
+    12,
+    1
+  ],
+  "source_url": "https://lonab.bf/sites/default/files/2026-10/JH_PMUB_DU_13-10-2026.pdf",
+  "source_domain": "lonab.bf",
+  "source_sha256": "2dbfb03ecb92a843ec2a6df1a7670bce680a865e080a08586303a18347d99403",
+  "validation_status": "validated",
+  "validation_reason": "validated"
+}
