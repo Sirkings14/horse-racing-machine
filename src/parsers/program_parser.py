@@ -598,15 +598,49 @@ def extract_rankings(text):
     }
 
 
-def extract_published_arrival(text):
-    match = re.search(r"ARRIVEE\s+DU.*?:\s*([0-9\s\-–]+)(?:NPO|NP|$)", text, re.IGNORECASE)
-    if not match:
+def extract_published_arrival(text, program_date=None):
+    """Return an arrival only when its printed date matches this program's race date.
+
+    LONAB program PDFs can include a previous day's result in the same document.
+    An unscoped "ARRIVEE DU" sequence is not evidence that the program's race is
+    already complete. Fail closed when either date is missing or unparseable.
+    """
+    if not program_date:
         return []
-    return [int(value) for value in re.findall(r"\d+", match.group(1))]
+    try:
+        target_date = datetime.strptime(str(program_date)[:10], "%Y-%m-%d").date()
+    except (TypeError, ValueError):
+        return []
+
+    month_pattern = "|".join(sorted((re.escape(name) for name in MONTHS), key=len, reverse=True))
+    pattern = re.compile(
+        r"^\\s*ARRIV(?:E|É)E\\s+DU\\s+(?P<day>\\d{1,2})\\s+"
+        rf"(?P<month>{month_pattern})(?:\\s+(?P<year>20\\d{{2}}))?\\s*[:\\-–]\\s*"
+        r"(?P<arrival>\\d[\\d\\s\\-–]*?)\\s*(?:NPO|NP)?\\s*$",
+        re.IGNORECASE | re.MULTILINE,
+    )
+    for match in pattern.finditer(text):
+        try:
+            month_name = match.group("month").upper()
+            year = int(match.group("year")) if match.group("year") else target_date.year
+            arrival_date = datetime(year, MONTHS[month_name], int(match.group("day"))).date()
+        except (KeyError, TypeError, ValueError):
+            continue
+        if arrival_date != target_date:
+            continue
+
+        arrival = [int(value) for value in re.findall(r"\\d+", match.group("arrival"))]
+        if not arrival or len(arrival) > 5:
+            return []
+        if any(number < 1 or number > 20 for number in arrival) or len(set(arrival)) != len(arrival):
+            return []
+        return arrival
+    return []
 
 
 def parse_program_text(text, source_file="unknown.txt"):
     text = clean_text(text)
+    program_date = extract_date(text)
     race_info = extract_race_info(text)
     horses = extract_horses(text, expected_runners=race_info.get("runners_count"))
     table = extract_program_table_fields(
@@ -620,14 +654,14 @@ def parse_program_text(text, source_file="unknown.txt"):
         "document_type": "program",
         "source_file": source_file,
         "parsed_at": datetime.utcnow().isoformat() + "Z",
-        "date": extract_date(text),
+        "date": program_date,
         "race": race_info,
         "horses": horses,
         "program_table_mapping_status": table["status"],
         "rankings": extract_rankings(text),
         "press_odds": extract_press_odds(text, race_info.get("runners_count")),
         "press_odds_status": "observed_in_program" if extract_press_odds(text, race_info.get("runners_count")) else "unavailable",
-        "published_arrival": extract_published_arrival(text),
+        "published_arrival": extract_published_arrival(text, program_date),
     }
 
 
