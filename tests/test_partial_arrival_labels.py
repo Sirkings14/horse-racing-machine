@@ -60,6 +60,7 @@ def test_full_five_place_arrival_defines_top5():
 def test_ambiguous_arrivals_are_rejected():
     assert extract_race_rows(_matched_record([1, 2, 2, 4, 5])) == []
     assert extract_race_rows(_matched_record([1, 2, 3, 7, 5])) == []
+    assert extract_race_rows(_matched_record([1, "invalid", 3])) == []
 
 
 def test_unknown_targets_are_masked_not_counted_as_losses():
