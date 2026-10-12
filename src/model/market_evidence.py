@@ -36,7 +36,7 @@ def _positive_float(value: Any) -> float | None:
 
 
 def normalize_snapshot(snapshot: dict[str, Any]) -> dict[str, Any] | None:
-    """Validate independently observed, source-attributed pre-race prices.
+    """Validate source-attributed pre-race prices and their capture timestamps.
 
     Press estimates, model probabilities, result-time prices, and snapshots
     without an auditable source/timestamp are not economic market evidence.
@@ -82,7 +82,25 @@ def normalize_snapshot(snapshot: dict[str, Any]) -> dict[str, Any] | None:
     if not prices:
         return None
 
-    return {
+    # Preserve per-runner quote-update times when a source explicitly provides
+    # them. They are supplementary provenance; price_timestamp remains the time
+    # this complete quote response was observed by the collector.
+    runner_price_timestamps: dict[int, str] = {}
+    raw_runner_times = snapshot.get("runner_price_timestamps")
+    if isinstance(raw_runner_times, dict):
+        for number, value in raw_runner_times.items():
+            try:
+                horse = int(number)
+            except (TypeError, ValueError):
+                continue
+            if horse not in prices:
+                continue
+            parsed = _parse_aware_timestamp(value)
+            if parsed is None or parsed > captured or parsed > race_off:
+                return None
+            runner_price_timestamps[horse] = parsed.isoformat()
+
+    normalized = {
         "race_key": race_key,
         "captured_at": captured.isoformat(),
         "source": source,
@@ -97,6 +115,9 @@ def normalize_snapshot(snapshot: dict[str, Any]) -> dict[str, Any] | None:
         "evidence_grade": "verified_pre_race_market_odds",
         "observed": True,
     }
+    if runner_price_timestamps:
+        normalized["runner_price_timestamps"] = runner_price_timestamps
+    return normalized
 
 
 def observed_snapshots_for_race(race_key: str, market_type: str = "winner") -> list[dict[str, Any]]:
