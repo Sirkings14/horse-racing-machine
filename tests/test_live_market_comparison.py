@@ -135,6 +135,7 @@ class LiveMarketComparisonTests(unittest.TestCase):
         evaluation = {
             "race_key": "2026-10-12|MARSEILLE-BORELY|4",
             "status": "result_verified",
+            "verified_at": "2026-10-12T12:20:00+00:00",
             "result": {"winner": 3},
             "result_validation": {"accepted_for_learning": True},
         }
