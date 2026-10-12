@@ -50,6 +50,9 @@ def _daily_program(include_date=True):
             }
         ],
     }
+    if not include_date:
+        payload.pop("date", None)
+    return payload
 
 
 def _participants():
@@ -132,15 +135,14 @@ def test_build_snapshot_preserves_direct_win_prices_and_runner_quote_times():
 def test_ambiguous_payout_field_is_not_accepted_as_a_live_odds_quote():
     course = iter_pmu_courses(_daily_program())[0]
     course["participants_url"] = _participants_url(date(2026, 10, 12), 3, 4)
-    payload = {"participants": [{
-        "numPmu": 1,
-        "nom": "BAYAMOON",
-        "dernierRapportDirect": {
+    payload = _participants()
+    for participant in payload["participants"]:
+        participant.pop("cotes", None)
+        participant["dernierRapportDirect"] = {
             "typePari": "SIMPLE_GAGNANT",
             "rapport": 3.4,
             "dateRapport": "2026-10-12T13:59:00+02:00",
-        },
-    }]}
+        }
     now = datetime(2026, 10, 12, 12, 0, tzinfo=timezone.utc)
     assert build_snapshot(
         "2026-10-12|MARSEILLE-BORELY|4", _program(), course, payload, now
