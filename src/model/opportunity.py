@@ -91,7 +91,7 @@ def score_race_opportunity(
                 "horse_number": number,
                 "observed_decimal_odds": round(odds, 4),
                 "probability_winner": round(probability, 6),
-                "raw_model_probability_winner": round(raw_probability, 6),
+                "raw_model_probability_winner": round(float(horse.get("raw_probability_winner", raw_probability)), 6),
                 "implied_probability": round(implied, 6),
                 "edge": round(edge, 6),
             })
