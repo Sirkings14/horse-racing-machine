@@ -328,6 +328,146 @@ def _current_win_quote(participant: dict[str, Any]) -> tuple[float, datetime | N
     return None
 
 
+def summarize_participant_schema(
+    program: dict[str, Any],
+    participants_payload: Any,
+) -> dict[str, Any]:
+    """Summarize why current PMU participant quotes did or did not match.
+
+    Deliberately omits quoted price values. This is diagnostic output only and
+    never changes whether a market-evidence snapshot is accepted.
+    """
+    if isinstance(participants_payload, dict):
+        participants = next((
+            participants_payload.get(key)
+            for key in ("participants", "partants")
+            if isinstance(participants_payload.get(key), list)
+        ), [])
+    elif isinstance(participants_payload, list):
+        participants = participants_payload
+    else:
+        participants = []
+
+    local_horses = {}
+    for horse in program.get("horses") or []:
+        if not isinstance(horse, dict):
+            continue
+        number = _as_int(horse.get("number"))
+        name = normalize_text(horse.get("horse"))
+        if number and name:
+            local_horses[number] = name
+
+    matched_identity = set()
+    matched_direct = 0
+    matched_direct_typed_win = 0
+    matched_direct_positive_report = 0
+    matched_direct_timestamp = 0
+    matched_explicit_cote = 0
+    direct_type_counts: dict[str, int] = {}
+    direct_kind_counts: dict[str, int] = {}
+    status_counts: dict[str, int] = {}
+    samples: list[dict[str, Any]] = []
+
+    for participant in participants:
+        if not isinstance(participant, dict):
+            continue
+        number = _as_int(participant.get("numPmu") or participant.get("number") or participant.get("num"))
+        participant_name = normalize_text(participant.get("nom") or participant.get("horse") or participant.get("name"))
+        if number in local_horses and participant_name:
+            local_name = local_horses[number]
+            if participant_name == local_name or SequenceMatcher(None, participant_name, local_name).ratio() >= 0.90:
+                matched_identity.add(number)
+            else:
+                continue
+        elif number not in local_horses:
+            continue
+
+        status = normalize_text(participant.get("statut") or participant.get("status") or "UNKNOWN")
+        status_counts[status] = status_counts.get(status, 0) + 1
+        direct = participant.get("dernierRapportDirect")
+        direct_summary = None
+        cotes_summary = None
+
+        if isinstance(direct, dict):
+            matched_direct += 1
+            bet_type = normalize_text(direct.get("typePari") or direct.get("type") or "")
+            report_kind = normalize_text(direct.get("typeRapport") or "")
+            direct_type_counts[bet_type or "(missing)"] = direct_type_counts.get(bet_type or "(missing)", 0) + 1
+            direct_kind_counts[report_kind or "(missing)"] = direct_kind_counts.get(report_kind or "(missing)", 0) + 1
+            if bet_type in {"SIMPLEGAGNANT", "GAGNANT", "SG", "WINNER"}:
+                matched_direct_typed_win += 1
+            if _as_positive_decimal(direct.get("rapport")) is not None:
+                matched_direct_positive_report += 1
+            raw_time = direct.get("dateRapport") or direct.get("date_rapport")
+            if raw_time is not None:
+                matched_direct_timestamp += 1
+            direct_summary = {
+                "keys": sorted(str(key) for key in direct.keys()),
+                "typePari": direct.get("typePari"),
+                "typeRapport": direct.get("typeRapport"),
+                "rapport_value_type": type(direct.get("rapport")).__name__ if "rapport" in direct else "missing",
+                "rapport_positive_numeric": _as_positive_decimal(direct.get("rapport")) is not None,
+                "timestamp_field_present": raw_time is not None,
+                "timestamp_value_type": type(raw_time).__name__ if raw_time is not None else "missing",
+                "timestamp_parseable": _parse_timestamp(raw_time) is not None if raw_time is not None else False,
+            }
+
+        for key in ("cote", "coteGagnant", "coteSimpleGagnant", "coteDirecteGagnant"):
+            if participant.get(key) is not None:
+                matched_explicit_cote += 1
+                break
+        cotes = participant.get("cotes")
+        if isinstance(cotes, list):
+            typed_items = []
+            for item in cotes[:3]:
+                if not isinstance(item, dict):
+                    typed_items.append({"item_type": type(item).__name__})
+                    continue
+                typed_items.append({
+                    "keys": sorted(str(key) for key in item.keys()),
+                    "typePari": item.get("typePari"),
+                    "type": item.get("type"),
+                    "quote_field_names": [
+                        field for field in ("cote", "coteGagnant", "coteSimpleGagnant", "coteDirecteGagnant")
+                        if item.get(field) is not None
+                    ],
+                    "timestamp_field_names": [
+                        field for field in ("dateCote", "dateMajCote", "dateMiseAJourCote", "coteTimestamp", "timestampCote")
+                        if item.get(field) is not None
+                    ],
+                })
+            cotes_summary = {"shape": "list", "length": len(cotes), "sample_items": typed_items}
+        elif isinstance(cotes, dict):
+            cotes_summary = {"shape": "dict", "keys": sorted(str(key) for key in cotes.keys())[:20]}
+        elif cotes is not None:
+            cotes_summary = {"shape": type(cotes).__name__}
+
+        if len(samples) < 3:
+            samples.append({
+                "runner_number": number,
+                "runner_name_normalized": participant_name,
+                "participant_keys": sorted(str(key) for key in participant.keys()),
+                "status": status,
+                "direct_quote": direct_summary,
+                "cotes": cotes_summary,
+            })
+
+    return {
+        "participant_count": len(participants),
+        "program_runner_count": len(local_horses),
+        "identity_matches": len(matched_identity),
+        "direct_report_dict_count": matched_direct,
+        "direct_report_win_type_count": matched_direct_typed_win,
+        "direct_report_positive_numeric_count": matched_direct_positive_report,
+        "direct_report_timestamp_present_count": matched_direct_timestamp,
+        "explicit_cote_field_count": matched_explicit_cote,
+        "direct_type_counts": direct_type_counts,
+        "direct_report_kind_counts": direct_kind_counts,
+        "status_counts": status_counts,
+        "runner_samples_without_price_values": samples,
+    }
+
+
 def build_snapshot(
     race_key: str,
     program: dict[str, Any],
@@ -579,6 +719,11 @@ def collect_for_day(race_day: date | None = None, now: datetime | None = None) -
         snapshot = build_snapshot(race_key, program, course, participants_payload, now)
         if snapshot is None:
             print(f"PMU odds capture skipped for {race_key}: runner identity, prices or pre-off evidence was insufficient.")
+            print(json.dumps({
+                "diagnostic": "pmu_runner_quote_schema",
+                "race_key": race_key,
+                **summarize_participant_schema(program, participants_payload),
+            }, ensure_ascii=False))
             stats["skipped"] += 1
             continue
 
