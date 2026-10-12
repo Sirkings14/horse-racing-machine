@@ -3,7 +3,7 @@
 The PMU JSON endpoint used here is an undocumented public web feed, not a
 supported public API. The adapter is deliberately conservative: a race must
 match by venue, name, distance and field size; runner numbers and names must
-match the live card; only explicit SIMPLE_GAGNANT current quotes are accepted; and no
+match the live card; only timestamped direct win quotes are accepted; and no
 snapshot is written at or after the scheduled off-time. Source failure or an
 unknown response shape results in no evidence, never guessed prices.
 """
@@ -280,9 +280,23 @@ def _current_win_quote(participant: dict[str, Any]) -> tuple[float, datetime | N
     if direct is not None and any(participant.get(key) is not None for key in quote_fields):
         return direct
 
-    # Quote arrays/maps require an explicit winner market label. Do not
-    # interpret `dernierRapportDirect` or generic `rapport` fields as live odds:
-    # they can describe a payout/report rather than the current market price.
+    # In PMU participant responses, dernierRapportDirect is the latest direct
+    # quote (rapport), while dernierRapportReference is a separate reference
+    # quote. Accept only the direct quote with a recognized winner-market type
+    # and an explicit source timestamp; never substitute the reference quote.
+    direct_report = participant.get("dernierRapportDirect")
+    if isinstance(direct_report, dict):
+        bet_type = normalize_text(direct_report.get("typePari") or direct_report.get("type") or "")
+        report_kind = normalize_text(direct_report.get("typeRapport") or "")
+        if bet_type in winner_types and report_kind not in {"DEFINITIF", "FINAL", "RESULTAT", "PAYOUT", "OFFICIEL"}:
+            price = _as_positive_decimal(direct_report.get("rapport"))
+            raw_timestamp = direct_report.get("dateRapport") or direct_report.get("date_rapport")
+            quote_time = _parse_timestamp(raw_timestamp) if raw_timestamp is not None else None
+            if price is not None and quote_time is not None:
+                return price, quote_time
+
+    # Other explicit current-cote shapes may be supported where the market is
+    # identified. Generic report/payout fields and reference prices are not.
     raw_quotes = participant.get("cotes")
     if isinstance(raw_quotes, list):
         matched = [
