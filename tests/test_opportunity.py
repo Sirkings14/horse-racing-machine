@@ -1,3 +1,5 @@
+import unittest
+
 from src.model.opportunity import score_race_opportunity
 
 
@@ -27,3 +29,27 @@ def test_only_observed_market_prices_create_value_candidates():
     assert out["market_edge_available"] is True
     assert out["value_candidates"][0]["horse_number"] == 1
     assert out["value_candidates"][0]["edge"] > 0
+
+
+class OpportunityOddsKeyRegressionTests(unittest.TestCase):
+    def test_string_odds_keys_are_matched_and_probabilities_are_race_normalized(self):
+        ranked = [
+            {"horse_number": 1, "probability_winner": 0.40, "probability_top3": 0.70, "probability_top5": 0.90,
+             "ensemble_score": 0.60, "model_disagreement": 0.02, "data_completeness": 1.0},
+            {"horse_number": 2, "probability_winner": 0.15, "probability_top3": 0.35, "probability_top5": 0.60,
+             "ensemble_score": 0.40, "model_disagreement": 0.03, "data_completeness": 1.0},
+        ]
+
+        out = score_race_opportunity(ranked, {"1": 3.0, "2": 5.0})
+
+        self.assertTrue(out["market_edge_available"])
+        self.assertEqual({row["horse_number"] for row in out["value_candidates"]}, {1, 2})
+        self.assertAlmostEqual(sum(row["probability_winner"] for row in out["value_candidates"]), 1.0, places=6)
+        first = next(row for row in out["value_candidates"] if row["horse_number"] == 1)
+        self.assertAlmostEqual(first["raw_model_probability_winner"], 0.40, places=6)
+        self.assertAlmostEqual(first["probability_winner"], 0.40 / 0.55, places=6)
+        self.assertTrue(out["policy"]["market_edge_does_not_authorize_betting"])
+
+
+if __name__ == "__main__":
+    unittest.main()
