@@ -97,7 +97,9 @@ def _parse_timestamp(value: Any, race_date: str | None = None) -> datetime | Non
 
 
 def _course_number(node: dict[str, Any]) -> int | None:
-    for key in ("numExterne", "numOrdre", "numCourse", "numeroCourse", "courseNumber", "numero", "num"):
+    # Use course-specific identifiers only; generic num/numero fields also
+    # occur on participant rows and could create false course matches.
+    for key in ("numExterne", "numCourse", "numeroCourse", "courseNumber"):
         value = _as_int(node.get(key))
         if value is not None and 1 <= value <= 30:
             return value
@@ -201,15 +203,20 @@ def course_matches_program(course: dict[str, Any], program: dict[str, Any]) -> b
 
     # Some LONAB program editions abbreviate the venue as PARIS, with the
     # actual venue embedded in the race heading. Only resolve known explicit
-    # venue names; otherwise fail closed.
+    # venue names; otherwise fail closed. Remove that venue prefix before
+    # comparing the actual race title to the PMU course title.
+    resolved_from_paris_label = False
     if local_track == "PARIS":
         title = normalize_text(race.get("race_name"))
         known_venues = ("VINCENNES", "AUTEUIL", "LONGCHAMP", "SAINTCLOUD")
         local_track = next((venue for venue in known_venues if venue in title), "")
+        resolved_from_paris_label = bool(local_track)
     if local_track != source_track:
         return False
 
     local_name = normalize_text(race.get("race_name"))
+    if resolved_from_paris_label and local_name.startswith(local_track):
+        local_name = local_name[len(local_track):]
     source_name = normalize_text(course.get("race_name"))
     if not local_name or not source_name:
         return False
