@@ -56,6 +56,30 @@ class LiveMarketComparisonTests(unittest.TestCase):
         self.assertFalse(report["real_money_authorized"])
         self.assertFalse(report["roi_claim_permitted"])
 
+    def test_race_normalizes_independent_winner_estimates_before_market_comparison(self):
+        prediction = valid_prediction(ranked_horses=[
+            {"horse_number": 1, "horse_name": "HORSE ONE", "probability_winner": 0.50, "predicted_rank": 1},
+            {"horse_number": 2, "horse_name": "HORSE TWO", "probability_winner": 0.40, "predicted_rank": 2},
+            {"horse_number": 3, "horse_name": "HORSE THREE", "probability_winner": 0.30, "predicted_rank": 3},
+            {"horse_number": 4, "horse_name": "HORSE FOUR", "probability_winner": 0.20, "predicted_rank": 4},
+            {"horse_number": 5, "horse_name": "HORSE FIVE", "probability_winner": 0.10, "predicted_rank": 5},
+        ])
+        report = build_comparison(prediction, valid_snapshot())
+
+        self.assertIsNotNone(report)
+        self.assertAlmostEqual(report["model_probability_sum_before_normalization"], 1.50, places=8)
+        self.assertAlmostEqual(report["model_probability_sum_after_normalization"], 1.0, places=10)
+        first = next(row for row in report["runner_comparison"] if row["horse_number"] == 1)
+        self.assertAlmostEqual(first["raw_model_probability_winner"], 0.50, places=8)
+        self.assertAlmostEqual(first["model_probability_winner"], 0.50 / 1.50, places=8)
+        self.assertAlmostEqual(
+            first["model_minus_market_share"],
+            first["model_probability_winner"] - first["normalized_market_share"],
+            places=8,
+        )
+        self.assertTrue(report["research_only"])
+        self.assertFalse(report["real_money_authorized"])
+
     def test_never_converts_no_bet_into_a_bet(self):
         prediction = valid_prediction(live_decision="NO_BET", recommended_numbers=[])
         report = build_comparison(prediction, valid_snapshot())

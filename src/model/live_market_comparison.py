@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from src.model.market_evidence import load_ledger, normalize_snapshot
+from src.model.v3_model import normalize_race_probabilities
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
@@ -85,19 +86,38 @@ def build_comparison(
         if number > 0 and math.isfinite(price) and price > 1.0:
             odds[number] = price
 
-    matched: list[dict[str, Any]] = []
-    valid_ranked_count = 0
+    ranked_entries: list[tuple[int, dict[str, Any], int, float]] = []
+    seen_numbers: set[int] = set()
     for index, horse in enumerate(ranked, start=1):
         if not isinstance(horse, dict):
             continue
-        probability = _as_valid_probability(horse)
-        if probability is None:
+        raw_probability = _as_valid_probability(horse)
+        if raw_probability is None:
             continue
-        valid_ranked_count += 1
         try:
             number = int(horse.get("horse_number"))
         except (TypeError, ValueError, OverflowError):
             continue
+        if number <= 0 or number in seen_numbers:
+            # An ambiguous field is not suitable for probability comparisons.
+            return None
+        seen_numbers.add(number)
+        ranked_entries.append((index, horse, number, raw_probability))
+
+    valid_ranked_count = len(ranked_entries)
+    if valid_ranked_count == 0:
+        return None
+    raw_model_probability_sum = sum(entry[3] for entry in ranked_entries)
+    try:
+        normalized_model_probabilities = normalize_race_probabilities(
+            [entry[3] for entry in ranked_entries]
+        ).tolist()
+    except ValueError:
+        return None
+
+    matched: list[dict[str, Any]] = []
+    for entry, normalized_probability in zip(ranked_entries, normalized_model_probabilities):
+        index, horse, number, raw_probability = entry
         price = odds.get(number)
         if price is None:
             continue
@@ -115,7 +135,8 @@ def build_comparison(
             "horse_name": str(horse.get("horse_name") or ""),
             "model_rank": model_rank,
             "market_odds_decimal": price,
-            "model_probability_winner": probability,
+            "model_probability_winner": float(normalized_probability),
+            "raw_model_probability_winner": raw_probability,
             "raw_market_implied_probability": raw_implied,
         })
 
@@ -163,10 +184,15 @@ def build_comparison(
         "no_bet_reason": prediction.get("no_bet_reason") or [],
         "runner_count": len(matched),
         "ranked_runner_count": valid_ranked_count,
+        "model_probability_sum_before_normalization": round(raw_model_probability_sum, 8),
+        "model_probability_sum_after_normalization": round(sum(normalized_model_probabilities), 8),
+        "model_probability_normalization_method": "race-level normalization of per-runner win estimates",
         "runner_comparison": matched,
         "interpretation": (
-            "Normalized implied market shares are a margin-normalized price benchmark, "
-            "not calibrated true probabilities. Differences are descriptive research signals only."
+            "Model win estimates are normalized across the full field to form a coherent "
+            "single-winner distribution; this rescaling alone does not establish calibration. "
+            "Normalized implied market shares are a margin-normalized price benchmark, not "
+            "calibrated true probabilities. Differences are descriptive research signals only."
         ),
         "research_only": True,
         "real_money_authorized": False,
@@ -412,6 +438,8 @@ def main() -> dict[str, Any]:
             "does_not_change_no_bet": True,
             "does_not_calculate_roi_from_unsettled_races": True,
             "normalized_market_shares_are_not_true_probabilities": True,
+            "model_winner_probabilities_are_race_normalized": True,
+            "normalization_does_not_prove_model_calibration": True,
             "settled_metrics_require_accepted_official_result": True,
             "single_race_hit_rates_are_not_profitability_evidence": True,
         },
