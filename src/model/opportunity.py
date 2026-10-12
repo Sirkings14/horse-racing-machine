@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 from typing import Any
+import math
 
 from src.model.market_evidence import latest_observed_snapshot
+from src.model.v3_model import normalize_race_probabilities
 
 
 def _mean(values: list[float]) -> float:
@@ -53,25 +55,43 @@ def score_race_opportunity(
             market_odds = snapshot.get("odds") or {}
             evidence_source = snapshot.get("source")
             evidence_captured_at = snapshot.get("captured_at")
-    if isinstance(market_odds, dict):
-        for horse in ranked_horses[:5]:
-            number = int(horse["horse_number"])
-            odds = market_odds.get(number)
+
+    normalized_winner_probabilities: list[float] | None = None
+    try:
+        raw_winner_probabilities = [float(horse.get("probability_winner")) for horse in ranked_horses]
+        normalized_winner_probabilities = normalize_race_probabilities(raw_winner_probabilities).tolist()
+    except (TypeError, ValueError, OverflowError):
+        # Invalid win-probability mass must never create an apparent value edge.
+        normalized_winner_probabilities = None
+
+    if isinstance(market_odds, dict) and normalized_winner_probabilities is not None:
+        normalized_odds: dict[int, float] = {}
+        for raw_number, raw_price in market_odds.items():
+            try:
+                number = int(raw_number)
+                odds = float(raw_price)
+            except (TypeError, ValueError, OverflowError):
+                continue
+            if number > 0 and math.isfinite(odds) and odds > 1.0:
+                normalized_odds[number] = odds
+
+        for index, horse in enumerate(ranked_horses[:5]):
+            try:
+                number = int(horse["horse_number"])
+                raw_probability = float(horse.get("probability_winner", 0.0))
+            except (TypeError, ValueError, OverflowError):
+                continue
+            odds = normalized_odds.get(number)
             if odds is None:
                 continue
-            try:
-                odds = float(odds)
-            except (TypeError, ValueError):
-                continue
-            if odds <= 1.0:
-                continue
-            probability = float(horse.get("probability_winner", 0.0))
+            probability = float(normalized_winner_probabilities[index])
             implied = 1.0 / odds
             edge = probability - implied
             values.append({
                 "horse_number": number,
                 "observed_decimal_odds": round(odds, 4),
                 "probability_winner": round(probability, 6),
+                "raw_model_probability_winner": round(raw_probability, 6),
                 "implied_probability": round(implied, 6),
                 "edge": round(edge, 6),
             })
@@ -120,5 +140,8 @@ def score_race_opportunity(
             "race_quality_is_not_profitability": True,
             "market_prices_must_be_observed": True,
             "probabilities_are_not_prices": True,
+            "winner_probabilities_are_race_normalized": True,
+            "normalization_does_not_prove_calibration": True,
+            "market_edge_does_not_authorize_betting": True,
         },
     }
