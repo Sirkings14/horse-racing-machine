@@ -8,7 +8,8 @@ on:
       - "src/model/live_pmu_odds_capture.py"
       - "src/model/market_evidence.py"
   schedule:
-    - cron: "*/30 * * * *"
+    # Offset away from the hour/half-hour peaks; scheduled runs can be delayed or dropped under load.
+    - cron: "7,37 * * * *"
   workflow_dispatch:
 
 # Serialize the evidence writer with the autonomous machine. The collector
