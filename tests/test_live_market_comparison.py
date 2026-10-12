@@ -1,6 +1,6 @@
 import unittest
 
-from src.model.live_market_comparison import build_comparison
+from src.model.live_market_comparison import build_comparison, build_settlement_metrics
 
 
 def valid_snapshot(**overrides):
@@ -25,6 +25,7 @@ def valid_prediction(**overrides):
         "generated_at": "2026-10-12T02:04:22+00:00",
         "model_version": "test-model",
         "model_fingerprint": "abc123",
+        "race": {"runners_count": 5},
         "live_decision": "NO_BET",
         "confidence": "low",
         "model_agreement": "low",
@@ -78,6 +79,59 @@ class LiveMarketComparisonTests(unittest.TestCase):
             price_timestamp="2026-10-12T11:56:00+00:00",
         )
         self.assertIsNone(build_comparison(valid_prediction(), snapshot))
+
+    def test_attaches_only_verified_settlement_and_scores_full_field(self):
+        comparison = build_comparison(valid_prediction(), valid_snapshot())
+        evaluation = {
+            "race_key": "2026-10-12|MARSEILLE-BORELY|4",
+            "status": "result_verified",
+            "verified_at": "2026-10-12T12:20:00+00:00",
+            "result": {"winner": 3, "arrival": [3, 1, 2]},
+            "result_validation": {"accepted_for_learning": True, "reason": "validated_against_program_roster"},
+        }
+
+        settled = build_settlement_metrics(comparison, evaluation)
+        self.assertIsNotNone(settled)
+        self.assertEqual(settled["winner_number"], 3)
+        self.assertTrue(settled["winner_in_model_top3"])
+        self.assertTrue(settled["winner_in_market_top3"])
+        self.assertTrue(settled["full_field_probability_metrics_available"])
+        self.assertIsNotNone(settled["model_multiclass_brier_score"])
+        self.assertIsNotNone(settled["market_multiclass_brier_score"])
+        self.assertTrue(settled["research_only"])
+        self.assertFalse(settled["real_money_authorized"])
+        self.assertFalse(settled["roi_claim_permitted"])
+
+    def test_unaccepted_or_unsettled_result_cannot_update_comparison(self):
+        comparison = build_comparison(valid_prediction(), valid_snapshot())
+        rejected = {
+            "race_key": "2026-10-12|MARSEILLE-BORELY|4",
+            "status": "result_verified",
+            "result": {"winner": 3},
+            "result_validation": {"accepted_for_learning": False},
+        }
+        self.assertIsNone(build_settlement_metrics(comparison, rejected))
+        rejected["result_validation"]["accepted_for_learning"] = True
+        rejected["status"] = "pending"
+        self.assertIsNone(build_settlement_metrics(comparison, rejected))
+
+    def test_partial_field_must_not_emit_probability_error_scores(self):
+        comparison = build_comparison(
+            valid_prediction(),
+            valid_snapshot(odds={"1": 3.0, "2": 5.0, "3": 10.0, "4": 20.0}),
+        )
+        self.assertIsNotNone(comparison)
+        evaluation = {
+            "race_key": "2026-10-12|MARSEILLE-BORELY|4",
+            "status": "result_verified",
+            "result": {"winner": 3},
+            "result_validation": {"accepted_for_learning": True},
+        }
+        settled = build_settlement_metrics(comparison, evaluation)
+        self.assertIsNotNone(settled)
+        self.assertFalse(settled["full_field_probability_metrics_available"])
+        self.assertIsNone(settled["model_multiclass_brier_score"])
+        self.assertIsNone(settled["market_multiclass_brier_score"])
 
     def test_rejects_insufficient_price_coverage(self):
         snapshot = valid_snapshot(odds={"1": 3.0, "2": 5.0, "3": 10.0})
