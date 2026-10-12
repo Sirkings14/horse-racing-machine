@@ -23,6 +23,7 @@ from src.model.autopilot_guard import main as run_autopilot_guard
 from src.model.race_difficulty import main as run_race_difficulty
 from src.model.model_evolution import main as record_model_evolution
 from src.model.profitability import main as run_profitability_report
+from src.model.live_market_comparison import main as run_live_market_comparison_report
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 REVIEW_FILE = BASE_DIR / "data" / "dataset" / "dataset_review.json"
@@ -102,28 +103,30 @@ def run_results_cycle():
     rebuild_knowledge()
     print_step(2, "VERIFYING STORED PREDICTIONS AGAINST RESULTS")
     evaluate_predictions()
-    print_step(3, "MEASURING PAPER PROFITABILITY / MARKET-PRICE COVERAGE")
+    print_step(3, "UPDATING RESEARCH-ONLY MODEL VS MARKET SETTLEMENT AUDIT")
+    run_live_market_comparison_report()
+    print_step(4, "MEASURING PAPER PROFITABILITY / MARKET-PRICE COVERAGE")
     run_profitability_report()
-    print_step(4, "TRAINING UPDATED CHALLENGER + ORDER ENGINE")
+    print_step(5, "TRAINING UPDATED CHALLENGER + ORDER ENGINE")
     candidate_version = train_model()
 
     if candidate_version:
-        print_step(5, "RUNNING WALK-FORWARD TOP-3/4/5 BACKTEST")
+        print_step(6, "RUNNING WALK-FORWARD TOP-3/4/5 BACKTEST")
         run_backtest()
-        print_step(6, "RUNNING FINISHING-ORDER HOLDOUT BACKTEST")
+        print_step(7, "RUNNING FINISHING-ORDER HOLDOUT BACKTEST")
         run_order_backtest()
-        print_step(7, "RECORDING MODEL EVOLUTION SNAPSHOT")
+        print_step(8, "RECORDING MODEL EVOLUTION SNAPSHOT")
         record_model_evolution(candidate_version)
-        print_step(8, "PROMOTING ONLY A MEASURED CHALLENGER")
+        print_step(9, "PROMOTING ONLY A MEASURED CHALLENGER")
         promote_model(candidate_version)
     else:
-        print_step(5, "SKIPPING CHALLENGER BACKTEST AND PROMOTION")
+        print_step(6, "SKIPPING CHALLENGER BACKTEST AND PROMOTION")
         print("No valid challenger was trained because at least one target lacked both observed classes.")
         print("The previous approved model remains in place; no incomplete candidate will be evaluated or promoted.")
 
-    print_step(9, "UPDATING RACE DIFFICULTY REPORT")
+    print_step(10, "UPDATING RACE DIFFICULTY REPORT")
     run_race_difficulty()
-    print_step(10, "UPDATING AUTOPILOT HEALTH GUARD")
+    print_step(11, "UPDATING AUTOPILOT HEALTH GUARD")
     run_autopilot_guard()
 
 
@@ -148,9 +151,11 @@ def run_learning_cycle():
 
     print_step(15, "VERIFYING STORED PREDICTIONS AGAINST RESULTS")
     evaluate_predictions()
-    print_step(16, "UPDATING RACE DIFFICULTY REPORT")
+    print_step(16, "UPDATING RESEARCH-ONLY MODEL VS MARKET SETTLEMENT AUDIT")
+    run_live_market_comparison_report()
+    print_step(17, "UPDATING RACE DIFFICULTY REPORT")
     run_race_difficulty()
-    print_step(17, "UPDATING AUTOPILOT HEALTH GUARD")
+    print_step(18, "UPDATING AUTOPILOT HEALTH GUARD")
     run_autopilot_guard()
 
 

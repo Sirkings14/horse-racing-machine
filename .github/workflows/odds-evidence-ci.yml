@@ -8,6 +8,7 @@ on:
       - "src/model/market_odds_capture.py"
       - "src/model/live_pmu_odds_capture.py"
       - "src/model/live_market_comparison.py"
+      - "src/main.py"
       - "src/model/turf_bzh_odds.py"
       - "src/model/profitability.py"
       - "scripts/**"
