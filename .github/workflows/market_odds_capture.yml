@@ -54,7 +54,8 @@ jobs:
           fi
 
           python -m src.model.profitability
-          git add data/evaluation/profitability_report.json
+          python -m src.model.live_market_comparison
+          git add data/evaluation/profitability_report.json data/evaluation/live_market_comparison.json
           git config user.name "Horse Racing Market Evidence"
           git config user.email "market-evidence@users.noreply.github.com"
           git commit -m "Capture verified pre-race PMU odds [skip ci]"
