@@ -91,8 +91,8 @@ def build_comparison(
     for index, horse in enumerate(ranked, start=1):
         if not isinstance(horse, dict):
             continue
-        raw_probability = _as_valid_probability(horse)
-        if raw_probability is None:
+        reported_probability = _as_valid_probability(horse)
+        if reported_probability is None:
             continue
         try:
             number = int(horse.get("horse_number"))
@@ -102,6 +102,16 @@ def build_comparison(
             # An ambiguous field is not suitable for probability comparisons.
             return None
         seen_numbers.add(number)
+        # New predictions carry the original independently estimated win score
+        # alongside the race-normalized value. Prefer the raw estimate as the
+        # normalization source so audits remain consistent across old and new
+        # saved prediction formats.
+        raw_probability = _as_valid_probability({
+            "horse_number": number,
+            "probability_winner": horse.get("raw_probability_winner", reported_probability),
+        })
+        if raw_probability is None:
+            return None
         ranked_entries.append((index, horse, number, raw_probability))
 
     valid_ranked_count = len(ranked_entries)

@@ -86,7 +86,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
             if not evaluation_labels_complete(test, ("won", "top3")):
                 skipped_incomplete_evaluation_labels += 1
                 continue
-            p1=normalize_race_probabilities(models["winner"].predict_proba(test)); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
+            p1_raw=models["winner"].predict_proba(test); p1=normalize_race_probabilities(p1_raw); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
             winner_labels_for_race = [int(float(row.get("won", 0))) for row in test]
             if len(test) and all(label in (0, 1) for label in winner_labels_for_race) and sum(winner_labels_for_race) == 1:
                 winner_brier_scores.append(sum(
@@ -98,13 +98,14 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
                     (uniform_probability - label) ** 2
                     for label in winner_labels_for_race
                 ))
-            ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1,p3,p5)]
-            ranked=sorted((dict(r,ensemble_score=float(s),p_winner=float(a),p_top3=float(b),p_top5=float(c)) for r,a,b,c,s in zip(test,p1,p3,p5,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
+            ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1_raw,p3,p5)]
+            ranked=sorted((dict(r,ensemble_score=float(s),p_winner=float(a),p_winner_raw=float(raw_a),p_top3=float(b),p_top5=float(c)) for r,a,raw_a,b,c,s in zip(test,p1,p1_raw,p3,p5,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
             ev=_evaluate(ranked); ev["race_key"]=key; ev["field_size"]=len(ranked)
             ev["top5_candidates"]=[{
                 "horse_number":int(r["horse_number"]),
                 "ensemble_score":float(r["ensemble_score"]),
                 "probability_winner":float(r.get("p_winner",0.0)),
+                "raw_probability_winner":float(r.get("p_winner_raw",0.0)),
                 "probability_top3":float(r.get("p_top3",0.0)),
                 "probability_top5":float(r.get("p_top5",0.0)),
                 "won":int(r.get("won",0)),

@@ -34,9 +34,9 @@ def test_only_observed_market_prices_create_value_candidates():
 class OpportunityOddsKeyRegressionTests(unittest.TestCase):
     def test_string_odds_keys_are_matched_and_probabilities_are_race_normalized(self):
         ranked = [
-            {"horse_number": 1, "probability_winner": 0.40, "probability_top3": 0.70, "probability_top5": 0.90,
+            {"horse_number": 1, "probability_winner": 0.40 / 0.55, "raw_probability_winner": 0.40, "probability_top3": 0.70, "probability_top5": 0.90,
              "ensemble_score": 0.60, "model_disagreement": 0.02, "data_completeness": 1.0},
-            {"horse_number": 2, "probability_winner": 0.15, "probability_top3": 0.35, "probability_top5": 0.60,
+            {"horse_number": 2, "probability_winner": 0.15 / 0.55, "raw_probability_winner": 0.15, "probability_top3": 0.35, "probability_top5": 0.60,
              "ensemble_score": 0.40, "model_disagreement": 0.03, "data_completeness": 1.0},
         ]
 
