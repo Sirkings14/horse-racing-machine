@@ -80,6 +80,29 @@ class LiveMarketComparisonTests(unittest.TestCase):
         self.assertTrue(report["research_only"])
         self.assertFalse(report["real_money_authorized"])
 
+    def test_uses_saved_raw_win_estimates_when_prediction_also_has_normalized_values(self):
+        raw = [0.50, 0.40, 0.30, 0.20, 0.10]
+        total = sum(raw)
+        prediction = valid_prediction(ranked_horses=[
+            {
+                "horse_number": number,
+                "horse_name": f"HORSE {number}",
+                "probability_winner": value / total,
+                "raw_probability_winner": value,
+                "predicted_rank": index,
+            }
+            for index, (number, value) in enumerate(zip(range(1, 6), raw), start=1)
+        ])
+
+        report = build_comparison(prediction, valid_snapshot())
+
+        self.assertIsNotNone(report)
+        self.assertAlmostEqual(report["model_probability_sum_before_normalization"], total, places=8)
+        self.assertAlmostEqual(report["model_probability_sum_after_normalization"], 1.0, places=10)
+        first = next(row for row in report["runner_comparison"] if row["horse_number"] == 1)
+        self.assertAlmostEqual(first["raw_model_probability_winner"], 0.50, places=8)
+        self.assertAlmostEqual(first["model_probability_winner"], 0.50 / total, places=8)
+
     def test_never_converts_no_bet_into_a_bet(self):
         prediction = valid_prediction(live_decision="NO_BET", recommended_numbers=[])
         report = build_comparison(prediction, valid_snapshot())
