@@ -116,7 +116,7 @@ def _meeting_number(node: dict[str, Any], inherited: int | None) -> int | None:
     return inherited
 
 
-def iter_pmu_courses(payload: Any) -> list[dict[str, Any]]:
+def iter_pmu_courses(payload: Any, race_date: str | None = None) -> list[dict[str, Any]]:
     """Extract course cards while inheriting venue and meeting identifiers."""
     found: list[dict[str, Any]] = []
     seen: set[tuple[Any, ...]] = set()
@@ -151,8 +151,8 @@ def iter_pmu_courses(payload: Any) -> list[dict[str, Any]]:
                 break
         source_track = track or next_context.get("track")
         meeting_number = meeting or _as_int(next_context.get("meeting_number"))
-        race_date = str(payload.get("date") or "")[:10] if isinstance(payload, dict) else ""
-        off_at = _parse_timestamp(off_value, race_date or None)
+        payload_date = str(payload.get("date") or "")[:10] if isinstance(payload, dict) else ""
+        off_at = _parse_timestamp(off_value, race_date or payload_date or None)
 
         # Do not yield records until the source provides all identifiers required
         # to build a precise Rn/Cn endpoint and a scheduled off-time.
@@ -240,23 +240,62 @@ def match_pmu_course(courses: list[dict[str, Any]], program: dict[str, Any]) -> 
     return matches[0] if len(matches) == 1 else None
 
 
-def _direct_win_report(participant: dict[str, Any]) -> dict[str, Any] | None:
-    report = participant.get("dernierRapportDirect")
-    if isinstance(report, list):
-        eligible = []
-        for item in report:
-            if not isinstance(item, dict):
+def _current_win_quote(participant: dict[str, Any]) -> tuple[float, datetime | None] | None:
+    """Extract only explicitly labelled current win quotes; never payouts/results."""
+    winner_types = {"SIMPLEGAGNANT", "GAGNANT", "SG", "WINNER"}
+    quote_fields = ("cote", "coteGagnant", "coteSimpleGagnant", "coteDirecteGagnant")
+    timestamp_fields = ("dateCote", "dateMajCote", "dateMiseAJourCote", "coteTimestamp", "timestampCote")
+
+    def parse_quote(record: Any, require_win_type: bool) -> tuple[float, datetime | None] | None:
+        if isinstance(record, (int, float, str)) and not require_win_type:
+            price = _as_positive_decimal(record)
+            return (price, None) if price is not None else None
+        if not isinstance(record, dict):
+            return None
+        if require_win_type:
+            bet_type = normalize_text(record.get("typePari") or record.get("type") or "")
+            if bet_type not in winner_types:
+                return None
+        raw_price = next((record.get(key) for key in quote_fields if record.get(key) is not None), None)
+        price = _as_positive_decimal(raw_price)
+        if price is None:
+            return None
+        raw_timestamp = next((record.get(key) for key in timestamp_fields if record.get(key) is not None), None)
+        if raw_timestamp is None:
+            return price, None
+        parsed_timestamp = _parse_timestamp(raw_timestamp)
+        if parsed_timestamp is None:
+            return None
+        return price, parsed_timestamp
+
+    # Direct, clearly named current-quote properties are supported.
+    direct = parse_quote(participant, require_win_type=False)
+    if direct is not None and any(participant.get(key) is not None for key in quote_fields):
+        return direct
+
+    # Quote arrays/maps require an explicit winner market label. Do not
+    # interpret `dernierRapportDirect` or generic `rapport` fields as live odds:
+    # they can describe a payout/report rather than the current market price.
+    raw_quotes = participant.get("cotes")
+    if isinstance(raw_quotes, list):
+        matched = [
+            quote for quote in (parse_quote(item, require_win_type=True) for item in raw_quotes)
+            if quote is not None
+        ]
+        return matched[0] if len(matched) == 1 else None
+    if isinstance(raw_quotes, dict):
+        matched = []
+        for market, value in raw_quotes.items():
+            if normalize_text(market) not in winner_types:
                 continue
-            bet_type = normalize_text(item.get("typePari"))
-            if not bet_type or bet_type in {"SIMPLEGAGNANT", "GAGNANT", "SG", "WINNER"}:
-                eligible.append(item)
-        report = eligible[0] if eligible else None
-    if not isinstance(report, dict):
-        return None
-    bet_type = normalize_text(report.get("typePari"))
-    if bet_type and bet_type not in {"SIMPLEGAGNANT", "GAGNANT", "SG", "WINNER"}:
-        return None
-    return report
+            if isinstance(value, dict):
+                quote = parse_quote({"typePari": market, **value}, require_win_type=True)
+            else:
+                quote = parse_quote(value, require_win_type=False)
+            if quote is not None:
+                matched.append(quote)
+        return matched[0] if len(matched) == 1 else None
+    return None
 
 
 def build_snapshot(
@@ -319,22 +358,18 @@ def build_snapshot(
         if status in {"NP", "NONPARTANT", "FORFAIT", "SCRATCHED"}:
             continue
 
-        report = _direct_win_report(participant)
-        if report is None:
+        quote = _current_win_quote(participant)
+        if quote is None:
             continue
-        price = _as_positive_decimal(report.get("rapport"))
-        if price is None:
-            continue
-
-        report_time = _parse_timestamp(report.get("dateRapport") or report.get("date_rapport"))
-        if report_time and (report_time > captured or report_time > off_at):
-            # Ignore a source record whose own timestamp is after observation
-            # or after the scheduled off-time.
+        price, quote_time = quote
+        if quote_time and (quote_time > captured or quote_time > off_at):
+            # Ignore a quote whose explicit timestamp is after observation
+            # or after scheduled off-time.
             continue
 
         odds[str(number)] = price
-        if report_time:
-            source_timestamps[str(number)] = report_time.isoformat()
+        if quote_time:
+            source_timestamps[str(number)] = quote_time.isoformat()
 
     total_horses = len(local_horses)
     if total_horses == 0:
@@ -444,7 +479,7 @@ def collect_for_day(race_day: date | None = None, now: datetime | None = None) -
         print(f"PMU odds capture unavailable: daily program request failed: {error}")
         return stats
 
-    source_courses = iter_pmu_courses(daily_program)
+    source_courses = iter_pmu_courses(daily_program, race_date=race_day.isoformat())
     if not source_courses:
         print("PMU odds capture skipped: response did not contain safely parseable meeting/course cards.")
         return stats
