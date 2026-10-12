@@ -258,7 +258,7 @@ def match_pmu_course(courses: list[dict[str, Any]], program: dict[str, Any]) -> 
 
 def _current_win_quote(participant: dict[str, Any]) -> tuple[float, datetime | None] | None:
     """Extract only explicitly labelled current win quotes; never payouts/results."""
-    winner_types = {"SIMPLEGAGNANT", "GAGNANT", "SG", "WINNER"}
+    winner_types = {"SIMPLEGAGNANT", "ESIMPLEGAGNANT", "GAGNANT", "SG", "WINNER"}
     quote_fields = ("cote", "coteGagnant", "coteSimpleGagnant", "coteDirecteGagnant")
     timestamp_fields = ("dateCote", "dateMajCote", "dateMiseAJourCote", "coteTimestamp", "timestampCote")
 
@@ -394,7 +394,7 @@ def summarize_participant_schema(
             report_kind = normalize_text(direct.get("typeRapport") or "")
             direct_type_counts[bet_type or "(missing)"] = direct_type_counts.get(bet_type or "(missing)", 0) + 1
             direct_kind_counts[report_kind or "(missing)"] = direct_kind_counts.get(report_kind or "(missing)", 0) + 1
-            if bet_type in {"SIMPLEGAGNANT", "GAGNANT", "SG", "WINNER"}:
+            if bet_type in {"SIMPLEGAGNANT", "ESIMPLEGAGNANT", "GAGNANT", "SG", "WINNER"}:
                 matched_direct_typed_win += 1
             if _as_positive_decimal(direct.get("rapport")) is not None:
                 matched_direct_positive_report += 1
