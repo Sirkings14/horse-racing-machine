@@ -132,14 +132,34 @@ def test_build_snapshot_preserves_direct_win_prices_and_runner_quote_times():
     assert normalized["runner_price_timestamps"][1] == "2026-10-12T11:59:00+00:00"
 
 
-def test_ambiguous_payout_field_is_not_accepted_as_a_live_odds_quote():
+def test_build_snapshot_accepts_timestamped_direct_win_quotes():
+    course = iter_pmu_courses(_daily_program())[0]
+    course["participants_url"] = _participants_url(date(2026, 10, 12), 3, 4)
+    payload = _participants()
+    for index, participant in enumerate(payload["participants"], 1):
+        participant.pop("cotes", None)
+        participant["dernierRapportDirect"] = {
+            "typePari": "SIMPLE_GAGNANT",
+            "typeRapport": "PROBABLE",
+            "rapport": float(index + 2),
+            "dateRapport": "2026-10-12T13:59:00+02:00",
+        }
+    now = datetime(2026, 10, 12, 12, 0, tzinfo=timezone.utc)
+    snapshot = build_snapshot(
+        "2026-10-12|MARSEILLE-BORELY|4", _program(), course, payload, now
+    )
+    assert snapshot is not None
+    assert snapshot["odds"] == {"1": 3.0, "2": 4.0, "3": 5.0, "4": 6.0, "5": 7.0}
+    assert snapshot["runner_price_timestamps"]["1"] == "2026-10-12T11:59:00+00:00"
+
+
+def test_untyped_generic_report_is_not_accepted_as_a_live_odds_quote():
     course = iter_pmu_courses(_daily_program())[0]
     course["participants_url"] = _participants_url(date(2026, 10, 12), 3, 4)
     payload = _participants()
     for participant in payload["participants"]:
         participant.pop("cotes", None)
         participant["dernierRapportDirect"] = {
-            "typePari": "SIMPLE_GAGNANT",
             "rapport": 3.4,
             "dateRapport": "2026-10-12T13:59:00+02:00",
         }
