@@ -130,6 +130,8 @@ class LiveMarketComparisonTests(unittest.TestCase):
         settled = build_settlement_metrics(comparison, evaluation)
         self.assertIsNotNone(settled)
         self.assertFalse(settled["full_field_probability_metrics_available"])
+        self.assertIsNone(settled["market_rank_of_winner"])
+        self.assertIsNone(settled["winner_in_market_top3"])
         self.assertIsNone(settled["model_multiclass_brier_score"])
         self.assertIsNone(settled["market_multiclass_brier_score"])
 
