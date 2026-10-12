@@ -1,0 +1,373 @@
+{
+  "prediction_id": "2026-10-13|PARISLONGCHAMP|1|2026-10-12T01:36:16.556295+00:00",
+  "generated_at": "2026-10-12T01:36:16.556307+00:00",
+  "model_version": "v4-evidence-no-press",
+  "model_fingerprint": "c05853a99d368ff60c27f4e1c12b6d4b63edb86bbd403c84105a611ecda882ac",
+  "source_program_fingerprint": "7e463c3a677acb62666541ed27150bc54bdee64d1466dadae5b1d297a09a39fe",
+  "mode": "v5_market_opportunity_layer",
+  "race_key": "2026-10-13|PARISLONGCHAMP|1",
+  "race": {
+    "date": "2026-10-13",
+    "track": "PARISLONGCHAMP",
+    "race_number": 1,
+    "race_name": "PRIX DE LA GALERIE DES V ARIETES",
+    "race_type": "PLAT",
+    "distance": 1600,
+    "runners_count": 16
+  },
+  "truth_gate": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "press_independent": true,
+    "post_race_data_excluded": true
+  },
+  "press_dependency": false,
+  "post_race_feature_policy": "hard_exclusion",
+  "feature_health": {
+    "runners": 16,
+    "history_coverage": 0.938,
+    "course_coverage": 0.562,
+    "distance_coverage": 0.875,
+    "complete_rows": 1.0,
+    "identity_sources": {
+      "normalized_name": 16
+    },
+    "history_starts_sorted": [
+      0,
+      2,
+      2,
+      2,
+      4,
+      5,
+      5,
+      6,
+      7,
+      7,
+      7,
+      14,
+      17,
+      21,
+      22,
+      28
+    ],
+    "distance_starts_sorted": [
+      0,
+      0,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      9,
+      11,
+      12,
+      15,
+      19
+    ]
+  },
+  "confidence": "low",
+  "model_agreement": "low",
+  "recommended_numbers": [],
+  "final_five": [],
+  "ranked_horses": [
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 6,
+      "horse_name": "REVERSO",
+      "probability_winner": 0.218626,
+      "probability_top3": 0.369113,
+      "probability_top5": 0.541412,
+      "ensemble_score": 0.354784,
+      "model_disagreement": 0.131877,
+      "data_completeness": 1.0,
+      "predicted_rank": 1
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 11,
+      "horse_name": "PUMALIN PARK",
+      "probability_winner": 0.204977,
+      "probability_top3": 0.349767,
+      "probability_top5": 0.518138,
+      "ensemble_score": 0.336467,
+      "model_disagreement": 0.127968,
+      "data_completeness": 1.0,
+      "predicted_rank": 2
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 1,
+      "horse_name": "FELIX AUX ORMES",
+      "probability_winner": 0.113313,
+      "probability_top3": 0.282447,
+      "probability_top5": 0.460422,
+      "ensemble_score": 0.263399,
+      "model_disagreement": 0.141722,
+      "data_completeness": 1.0,
+      "predicted_rank": 3
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 13,
+      "horse_name": "LORD OF WAR",
+      "probability_winner": 0.116121,
+      "probability_top3": 0.277831,
+      "probability_top5": 0.448069,
+      "ensemble_score": 0.259633,
+      "model_disagreement": 0.135532,
+      "data_completeness": 1.0,
+      "predicted_rank": 4
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 16,
+      "horse_name": "GALORD",
+      "probability_winner": 0.112439,
+      "probability_top3": 0.274199,
+      "probability_top5": 0.448099,
+      "ensemble_score": 0.256674,
+      "model_disagreement": 0.137062,
+      "data_completeness": 1.0,
+      "predicted_rank": 5
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 5,
+      "horse_name": "REVE DE VALLARSA",
+      "probability_winner": 0.111986,
+      "probability_top3": 0.273309,
+      "probability_top5": 0.447322,
+      "ensemble_score": 0.255942,
+      "model_disagreement": 0.136933,
+      "data_completeness": 1.0,
+      "predicted_rank": 6
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 15,
+      "horse_name": "HERMES WOOD",
+      "probability_winner": 0.066872,
+      "probability_top3": 0.227996,
+      "probability_top5": 0.399863,
+      "ensemble_score": 0.210287,
+      "model_disagreement": 0.135966,
+      "data_completeness": 1.0,
+      "predicted_rank": 7
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 7,
+      "horse_name": "BOTICELLI",
+      "probability_winner": 0.037877,
+      "probability_top3": 0.176564,
+      "probability_top5": 0.324116,
+      "ensemble_score": 0.161249,
+      "model_disagreement": 0.116875,
+      "data_completeness": 1.0,
+      "predicted_rank": 8
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 14,
+      "horse_name": "MUENCHEN",
+      "probability_winner": 0.037861,
+      "probability_top3": 0.176131,
+      "probability_top5": 0.323351,
+      "ensemble_score": 0.160883,
+      "model_disagreement": 0.11657,
+      "data_completeness": 1.0,
+      "predicted_rank": 9
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 10,
+      "horse_name": "WOOD MING",
+      "probability_winner": 0.037174,
+      "probability_top3": 0.17468,
+      "probability_top5": 0.321382,
+      "ensemble_score": 0.159572,
+      "model_disagreement": 0.116048,
+      "data_completeness": 1.0,
+      "predicted_rank": 10
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 9,
+      "horse_name": "BOLKHOV",
+      "probability_winner": 0.036857,
+      "probability_top3": 0.173138,
+      "probability_top5": 0.318931,
+      "ensemble_score": 0.15824,
+      "model_disagreement": 0.115178,
+      "data_completeness": 1.0,
+      "predicted_rank": 11
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 12,
+      "horse_name": "DUTY",
+      "probability_winner": 0.036483,
+      "probability_top3": 0.171206,
+      "probability_top5": 0.315582,
+      "ensemble_score": 0.156524,
+      "model_disagreement": 0.113965,
+      "data_completeness": 1.0,
+      "predicted_rank": 12
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 8,
+      "horse_name": "MONTGAUDRY",
+      "probability_winner": 0.036114,
+      "probability_top3": 0.170519,
+      "probability_top5": 0.314336,
+      "ensemble_score": 0.155831,
+      "model_disagreement": 0.113605,
+      "data_completeness": 1.0,
+      "predicted_rank": 13
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 2,
+      "horse_name": "JUSEARTH FAL",
+      "probability_winner": 0.03588,
+      "probability_top3": 0.169818,
+      "probability_top5": 0.313606,
+      "ensemble_score": 0.15527,
+      "model_disagreement": 0.113405,
+      "data_completeness": 1.0,
+      "predicted_rank": 14
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 4,
+      "horse_name": "AQUITAIN",
+      "probability_winner": 0.035885,
+      "probability_top3": 0.168528,
+      "probability_top5": 0.310463,
+      "ensemble_score": 0.154033,
+      "model_disagreement": 0.112117,
+      "data_completeness": 1.0,
+      "predicted_rank": 15
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "horse_number": 3,
+      "horse_name": "MR FLEURANT",
+      "probability_winner": 0.034702,
+      "probability_top3": 0.165569,
+      "probability_top5": 0.30603,
+      "ensemble_score": 0.151349,
+      "model_disagreement": 0.110792,
+      "data_completeness": 1.0,
+      "predicted_rank": 16
+    }
+  ],
+  "race_opportunity": {
+    "tier": "C",
+    "model_quality_score": 47.82,
+    "market_edge_available": false,
+    "market_evidence_source": null,
+    "market_evidence_captured_at": null,
+    "value_candidates": [],
+    "top_candidate_margin": 0.018317,
+    "top5_mean_top3_probability": 0.310671,
+    "top5_mean_top5_probability": 0.483228,
+    "top5_mean_model_agreement": 0.865168,
+    "top5_mean_data_completeness": 1.0,
+    "reasons": [
+      "tight_top_candidates",
+      "elevated_model_disagreement",
+      "complete_pre_race_data"
+    ],
+    "policy": {
+      "race_quality_is_not_profitability": true,
+      "market_prices_must_be_observed": true,
+      "probabilities_are_not_prices": true
+    }
+  },
+  "selection_policy": "independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity",
+  "autopilot_guard": {
+    "health": "stable_observation",
+    "decision": "PASS",
+    "gate_reasons": [
+      "insufficient_verified_history",
+      "low_model_confidence",
+      "economic_validation_unavailable"
+    ],
+    "recent_verified_predictions": 12,
+    "recent_winner_hit_rate": 0.1667,
+    "recent_winner_in_top3_rate": 0.4167,
+    "recent_order_engine_winner_hit_rate": 0.1667,
+    "recent_exact_top3_order_rate": 0.0,
+    "recent_exact_top5_order_rate": 0.0,
+    "recent_recommended_hit_average": 1.917,
+    "engine_attribution": {
+      "strength": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.833,
+        "avg_actual_top5_covered_by_top5": 2.083,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      },
+      "order": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.25,
+        "winner_in_top5_rate": 0.3333,
+        "avg_actual_top3_covered_by_top3": 1.0,
+        "avg_actual_top3_covered_by_top5": 1.167,
+        "avg_actual_top5_covered_by_top5": 1.25,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.25
+      },
+      "fused": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.667,
+        "avg_actual_top5_covered_by_top5": 1.917,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      }
+    },
+    "order_walk_forward_pairwise_accuracy": 0.6013,
+    "feature_drift_severity": "unrated",
+    "economic_validation_status": "awaiting_market_odds",
+    "economic_validation_roi": null,
+    "prediction_confidence": "low",
+    "confidence_reasons": [
+      "top candidates are tightly separated"
+    ],
+    "difficulty": {},
+    "gate_policy": {
+      "PASS_means_insufficient_or_unstable_evidence": true,
+      "PLAY_CANDIDATE_is_not_a_guarantee_of_outcome_or_profit": true,
+      "insufficient_verified_history_blocks": true,
+      "severe_feature_drift_blocks": true,
+      "low_confidence_blocks": true,
+      "engine_disagreement_blocks": false,
+      "high_difficulty_blocks": true,
+      "degraded_recent_winner_accuracy_blocks": true,
+      "order_engine_below_random_baseline_blocks": true,
+      "missing_or_negative_economic_validation_blocks": true
+    }
+  },
+  "live_decision": "NO_BET",
+  "no_bet_reason": [
+    "insufficient_verified_history",
+    "low_model_confidence",
+    "economic_validation_unavailable"
+  ]
+}
