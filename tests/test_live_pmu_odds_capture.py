@@ -96,6 +96,12 @@ def test_race_matching_requires_venue_name_distance_and_field_size():
     assert course_matches_program(course, program)
     assert match_pmu_course([course], program) == course
 
+    # PMU prefixes its venue with "HIPPODROME DE"; it must still match the
+    # shortened canonical LONAB venue when every other field agrees.
+    pmu_venue = dict(course, track="HIPPODROME DE MARSEILLE BORELY")
+    assert course_matches_program(pmu_venue, program)
+    assert match_pmu_course([pmu_venue], program) == pmu_venue
+
     wrong_venue = dict(course, track="CHANTILLY")
     wrong_distance = dict(course, distance=1800)
     wrong_name = dict(course, race_name="PRIX SANS RAPPORT")
