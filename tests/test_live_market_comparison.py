@@ -102,6 +102,17 @@ class LiveMarketComparisonTests(unittest.TestCase):
         self.assertFalse(settled["real_money_authorized"])
         self.assertFalse(settled["roi_claim_permitted"])
 
+    def test_result_verification_must_not_precede_race_off_time(self):
+        comparison = build_comparison(valid_prediction(), valid_snapshot())
+        evaluation = {
+            "race_key": "2026-10-12|MARSEILLE-BORELY|4",
+            "status": "result_verified",
+            "verified_at": "2026-10-12T11:54:00+00:00",
+            "result": {"winner": 3},
+            "result_validation": {"accepted_for_learning": True},
+        }
+        self.assertIsNone(build_settlement_metrics(comparison, evaluation))
+
     def test_unaccepted_or_unsettled_result_cannot_update_comparison(self):
         comparison = build_comparison(valid_prediction(), valid_snapshot())
         rejected = {
