@@ -23,18 +23,27 @@ class PreraceProgramSelectionTests(unittest.TestCase):
         self.predictions_dir.mkdir()
         self.ledger_file = Path(self.temp_dir.name) / "telegram_delivery_ledger.json"
 
-    def _write_notified_snapshot(self, horse_numbers):
-        race_key = "2026-10-11|AUTEUIL|3"
+    def _write_notified_snapshot(
+        self,
+        horse_numbers,
+        race_key="2026-10-11|AUTEUIL|3",
+        program_key="today.json",
+        generated_at="2026-10-11T16:21:42.327711+00:00",
+        sent_at="2026-10-11T16:21:42.705918+00:00",
+    ):
         reasons = ["economic_validation_unavailable", "insufficient_verified_history"]
+        program = self.programs[program_key]
         payload = {
-            "generated_at": "2026-10-11T16:21:42.327711+00:00",
+            "generated_at": generated_at,
             "race_key": race_key,
             "mode": "v5_market_opportunity_layer",
             "live_decision": "NO_BET",
             "ranked_horses": [{"horse_number": number} for number in horse_numbers],
             "autopilot_guard": {"decision": "PASS", "gate_reasons": reasons},
+            "source_program_fingerprint": predict_v3._program_fingerprint(program),
+            "model_fingerprint": "test-model-fingerprint",
         }
-        safe_key = "2026-10-11_AUTEUIL_3"
+        safe_key = race_key.replace("|", "_")
         (self.predictions_dir / f"{safe_key}_v3.json").write_text(
             json.dumps(payload), encoding="utf-8"
         )
@@ -49,7 +58,7 @@ class PreraceProgramSelectionTests(unittest.TestCase):
                 "notifications": {
                     race_key: {
                         "signature": signature,
-                        "sent_at": "2026-10-11T16:21:42.705918+00:00",
+                        "sent_at": sent_at,
                         "prediction_id": "test-prediction",
                         "model_version": "v4-evidence-no-press",
                         "telegram_message_id": 235,
@@ -66,7 +75,7 @@ class PreraceProgramSelectionTests(unittest.TestCase):
         with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
              patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
              patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
-            entry, program = predict_v3._first_unfinished_program(self.races)
+            entry, program = predict_v3._first_unfinished_program(self.races, model_fingerprint="test-model-fingerprint")
 
         self.assertEqual(entry["race_key"], "2026-10-12|MARSEILLE-BORELY|4")
         self.assertEqual(program["date"], "2026-10-12")
@@ -74,7 +83,7 @@ class PreraceProgramSelectionTests(unittest.TestCase):
     def test_returns_none_when_every_candidate_has_published_arrival(self):
         self.programs["tomorrow.json"]["published_arrival"] = [3, 4, 1]
         with patch.object(predict_v3, "_json", side_effect=self._fake_load):
-            entry, program = predict_v3._first_unfinished_program(self.races)
+            entry, program = predict_v3._first_unfinished_program(self.races, model_fingerprint="test-model-fingerprint")
 
         self.assertIsNone(entry)
         self.assertIsNone(program)
@@ -84,7 +93,7 @@ class PreraceProgramSelectionTests(unittest.TestCase):
         with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
              patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
              patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
-            entry, program = predict_v3._first_unfinished_program(self.races)
+            entry, program = predict_v3._first_unfinished_program(self.races, model_fingerprint="test-model-fingerprint")
 
         self.assertEqual(entry["race_key"], "2026-10-11|AUTEUIL|3")
         self.assertEqual(program["date"], "2026-10-11")
@@ -96,7 +105,7 @@ class PreraceProgramSelectionTests(unittest.TestCase):
         with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
              patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
              patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
-            entry, program = predict_v3._first_unfinished_program(self.races)
+            entry, program = predict_v3._first_unfinished_program(self.races, model_fingerprint="test-model-fingerprint")
 
         self.assertEqual(entry["race_key"], "2026-10-12|MARSEILLE-BORELY|4")
         self.assertEqual(program["date"], "2026-10-12")
@@ -112,7 +121,7 @@ class PreraceProgramSelectionTests(unittest.TestCase):
         with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
              patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
              patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
-            entry, program = predict_v3._first_unfinished_program(self.races)
+            entry, program = predict_v3._first_unfinished_program(self.races, model_fingerprint="test-model-fingerprint")
 
         self.assertEqual(entry["race_key"], "2026-10-11|AUTEUIL|3")
         self.assertEqual(program["date"], "2026-10-11")
@@ -133,10 +142,60 @@ class PreraceProgramSelectionTests(unittest.TestCase):
         with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
              patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
              patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
-            entry, program = predict_v3._first_unfinished_program(self.races)
+            entry, program = predict_v3._first_unfinished_program(self.races, model_fingerprint="test-model-fingerprint")
 
         self.assertEqual(entry["race_key"], "2026-10-11|AUTEUIL|3")
         self.assertEqual(program["date"], "2026-10-11")
+
+    def test_skips_future_race_notified_the_day_before_when_card_and_model_match(self):
+        self.programs["today.json"]["published_arrival"] = [8, 13, 12, 7, 4]
+        self._write_notified_snapshot(
+            [2, 5, 13, 8, 1],
+            race_key="2026-10-12|MARSEILLE-BORELY|4",
+            program_key="tomorrow.json",
+            generated_at="2026-10-11T23:33:30+00:00",
+            sent_at="2026-10-11T23:33:30+00:00",
+        )
+
+        with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
+             patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
+             patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
+            entry, program = predict_v3._first_unfinished_program(
+                self.races, model_fingerprint="test-model-fingerprint"
+            )
+
+        self.assertIsNone(entry)
+        self.assertIsNone(program)
+
+    def test_same_race_is_recomputed_when_card_fingerprint_changes(self):
+        self.programs["today.json"]["published_arrival"] = []
+        self._write_notified_snapshot([1, 16, 14, 13, 2])
+        self.programs["today.json"]["source_sha256"] = "new-program-sha"
+
+        with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
+             patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
+             patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
+            entry, program = predict_v3._first_unfinished_program(
+                self.races, model_fingerprint="test-model-fingerprint"
+            )
+
+        self.assertEqual(entry["race_key"], "2026-10-11|AUTEUIL|3")
+        self.assertEqual(program["date"], "2026-10-11")
+
+    def test_same_race_is_recomputed_when_model_fingerprint_changes(self):
+        self.programs["today.json"]["published_arrival"] = []
+        self._write_notified_snapshot([1, 16, 14, 13, 2])
+
+        with patch.object(predict_v3, "_json", side_effect=self._fake_load), \
+             patch.object(predict_v3, "PREDICTIONS_DIR", self.predictions_dir), \
+             patch.object(predict_v3, "NOTIFICATION_LEDGER_FILE", self.ledger_file):
+            entry, program = predict_v3._first_unfinished_program(
+                self.races, model_fingerprint="different-model-fingerprint"
+            )
+
+        self.assertEqual(entry["race_key"], "2026-10-11|AUTEUIL|3")
+        self.assertEqual(program["date"], "2026-10-11")
+
 
 
 if __name__ == "__main__":

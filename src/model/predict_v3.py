@@ -1,5 +1,5 @@
 from __future__ import annotations
-import json, re
+import hashlib, json, re
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -18,6 +18,27 @@ MODEL_FILE=BASE_DIR/"data/model/v3_models.json"
 OUTPUT_FILE=BASE_DIR/"data/model/latest_v3_prediction.json"
 PREDICTIONS_DIR=BASE_DIR/"data/predictions"
 NOTIFICATION_LEDGER_FILE=BASE_DIR/"data/notifications/telegram_delivery_ledger.json"
+
+
+def _stable_fingerprint(payload: Any) -> str:
+    serialized = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"), default=str)
+    return hashlib.sha256(serialized.encode("utf-8")).hexdigest()
+
+
+def _program_fingerprint(program: dict[str, Any]) -> str:
+    """Fingerprint only the pre-race card fields available to this predictor."""
+    return _stable_fingerprint({
+        "date": program.get("date"),
+        "race": program.get("race"),
+        "horses": program.get("horses") or [],
+        "rankings": program.get("rankings") or {},
+        "source_sha256": program.get("source_sha256"),
+    })
+
+
+def _model_fingerprint(bundle: dict[str, Any]) -> str:
+    """Detect changes to trained weights, calibration, or the model's evidence policy."""
+    return _stable_fingerprint(bundle)
 
 def _json(path): return json.loads(path.read_text(encoding="utf-8"))
 
@@ -115,8 +136,13 @@ def _read_json_mapping(path: Path) -> dict[str, Any] | None:
     return payload if isinstance(payload, dict) else None
 
 
-def _already_notified_for_same_day_snapshot(race_key: str, race_date: str) -> bool:
-    """Skip a race only when its current-date snapshot matches confirmed Telegram delivery."""
+def _already_notified_for_same_day_snapshot(
+    race_key: str,
+    race_date: str,
+    program: dict[str, Any],
+    model_fingerprint: str,
+) -> bool:
+    """Skip only if a confirmed notification matches the current race card and model."""
     try:
         target_date = date.fromisoformat(str(race_date)[:10])
     except (TypeError, ValueError):
@@ -128,6 +154,8 @@ def _already_notified_for_same_day_snapshot(race_key: str, race_date: str) -> bo
     if snapshot is None:
         return False
 
+    # A program scheduled for tomorrow may be notified today. Earlier timestamps
+    # are valid; snapshots or deliveries after the race date are not.
     try:
         generated_at = datetime.fromisoformat(str(snapshot.get("generated_at") or "").replace("Z", "+00:00"))
         if generated_at.tzinfo is None:
@@ -135,7 +163,12 @@ def _already_notified_for_same_day_snapshot(race_key: str, race_date: str) -> bo
         generated_date = generated_at.astimezone(timezone.utc).date()
     except (TypeError, ValueError):
         return False
-    if generated_date != target_date:
+    if generated_date > target_date:
+        return False
+
+    if snapshot.get("source_program_fingerprint") != _program_fingerprint(program):
+        return False
+    if snapshot.get("model_fingerprint") != model_fingerprint:
         return False
 
     ledger = _read_json_mapping(NOTIFICATION_LEDGER_FILE)
@@ -146,8 +179,6 @@ def _already_notified_for_same_day_snapshot(race_key: str, race_date: str) -> bo
     if not isinstance(delivery, dict) or not isinstance(delivery.get("signature"), dict):
         return False
 
-    # A matching old ledger entry is not enough: its confirmed delivery must
-    # belong to this race date as well as matching the current snapshot.
     try:
         sent_at = datetime.fromisoformat(str(delivery.get("sent_at") or "").replace("Z", "+00:00"))
         if sent_at.tzinfo is None:
@@ -155,14 +186,14 @@ def _already_notified_for_same_day_snapshot(race_key: str, race_date: str) -> bo
         sent_date = sent_at.astimezone(timezone.utc).date()
     except (TypeError, ValueError):
         return False
-    if sent_date != target_date:
+    if sent_date > target_date:
         return False
 
     return delivery["signature"] == _notification_signature(snapshot)
 
 
-def _first_unfinished_program(races):
-    """Select the earliest eligible race not already completed or identically notified."""
+def _first_unfinished_program(races, model_fingerprint: str):
+    """Select the earliest race not already completed or identically notified."""
     for entry in races:
         program = _json(LIVE_DIR / str(entry["structured_file"]))
         race_key = str(entry.get("race_key") or "")
@@ -172,10 +203,10 @@ def _first_unfinished_program(races):
             print(f"Skipping completed race {race_key}: published arrival is present.")
             continue
 
-        if _already_notified_for_same_day_snapshot(race_key, race_date):
+        if _already_notified_for_same_day_snapshot(race_key, race_date, program, model_fingerprint):
             print(
                 f"Skipping race {race_key}: the identical prediction was already "
-                "delivered for this race date."
+                "delivered, and its race card and model have not changed."
             )
             continue
 
@@ -197,7 +228,7 @@ def main():
     races=eligible_races(date.today().isoformat())
     if not races: return no_prediction("no_validated_current_or_future_race")
     try:
-        entry, program = _first_unfinished_program(races)
+        entry, program = _first_unfinished_program(races, _model_fingerprint(bundle))
     except Exception as error:
         return no_prediction(f"live_program_unreadable: {error}")
     if entry is None or program is None:
@@ -241,7 +272,7 @@ def main():
     disagreement=float(np.mean([x["model_disagreement"] for x in ranked[:5]])) if ranked else 1.0
     confidence="high" if margin>=0.08 and disagreement<0.06 else "medium" if margin>=0.03 and disagreement<0.10 else "low"
     opportunity=score_race_opportunity(ranked)
-    result={"prediction_id":f"{key}|{datetime.now(timezone.utc).isoformat()}","generated_at":datetime.now(timezone.utc).isoformat(),"model_version":bundle.get("model_version"),"mode":"v5_market_opportunity_layer","race_key":key,"race":_meta(program),"truth_gate":gate,"press_dependency":False,"post_race_feature_policy":"hard_exclusion","feature_health":feature_health,"confidence":confidence,"model_agreement":"high" if disagreement<0.06 else "medium" if disagreement<0.10 else "low","recommended_numbers":[x["horse_number"] for x in ranked[:5]],"final_five":[x["horse_number"] for x in ranked[:5]],"ranked_horses":ranked,"race_opportunity":opportunity,"selection_policy":"independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity"}
+    result={"prediction_id":f"{key}|{datetime.now(timezone.utc).isoformat()}","generated_at":datetime.now(timezone.utc).isoformat(),"model_version":bundle.get("model_version"),"model_fingerprint":_model_fingerprint(bundle),"source_program_fingerprint":_program_fingerprint(program),"mode":"v5_market_opportunity_layer","race_key":key,"race":_meta(program),"truth_gate":gate,"press_dependency":False,"post_race_feature_policy":"hard_exclusion","feature_health":feature_health,"confidence":confidence,"model_agreement":"high" if disagreement<0.06 else "medium" if disagreement<0.10 else "low","recommended_numbers":[x["horse_number"] for x in ranked[:5]],"final_five":[x["horse_number"] for x in ranked[:5]],"ranked_horses":ranked,"race_opportunity":opportunity,"selection_policy":"independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity"}
     guard=build_autopilot_guard({"ranked_horses":ranked,"monitoring":{"agreement":result["model_agreement"]},"difficulty":{}})
     result["autopilot_guard"]=guard
     if guard.get("decision")=="PASS":
