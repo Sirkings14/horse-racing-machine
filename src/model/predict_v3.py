@@ -7,7 +7,7 @@ import numpy as np
 from src.live.registry import eligible_races, LIVE_DIR
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.truth_gate import validate_program
-from src.model.v3_model import V3LogisticModel, normalize_race_probabilities
+from src.model.v3_model import V3LogisticModel, normalize_race_probabilities, v3_ranking_score
 from src.model.autopilot_guard import build_autopilot_guard
 from src.model.opportunity import score_race_opportunity
 from src.dataset.program_history import load_program_history
@@ -254,16 +254,15 @@ def main():
     distance_start_counts=sorted(int(r.get("distance_starts") or 0) for r in current_profile)
     feature_health={"runners":len(current_profile),"history_coverage":round(history_coverage,3),"course_coverage":round(course_coverage,3),"distance_coverage":round(distance_coverage,3),"complete_rows":round(sum(float(r.get("data_completeness") or 0.0) for r in current_profile)/len(current_profile),3) if current_profile else 0.0,
         "identity_sources":identity_sources,"history_starts_sorted":history_start_counts,"distance_starts_sorted":distance_start_counts}
-    p1=normalize_race_probabilities(models["winner"].predict_proba(current_profile))
+    p1_raw=models["winner"].predict_proba(current_profile)
+    p1=normalize_race_probabilities(p1_raw)
     p3=models["top3"].predict_proba(current_profile)
     p5=models["top5"].predict_proba(current_profile)
     ranked=[]
-    for row,a,b,c in zip(current_profile,p1,p3,p5):
-        completeness=float(row.get("data_completeness") or 0.0) 
-        raw_score=0.25*float(a)+0.50*float(b)+0.25*float(c)
-        disagreement=float(np.std([a,b,c]))
-        score=max(0.0,raw_score-0.15*disagreement)
-        ranked.append({"race_key":key,"horse_number":int(row["horse_number"]),"horse_name":row.get("horse_name"),"probability_winner":round(float(a),6),"probability_top3":round(float(b),6),"probability_top5":round(float(c),6),"ensemble_score":round(score,6),"model_disagreement":round(disagreement,6),"data_completeness":round(completeness,3)})
+    for row,a,raw_a,b,c in zip(current_profile,p1,p1_raw,p3,p5):
+        completeness=float(row.get("data_completeness") or 0.0)
+        score,disagreement=v3_ranking_score(float(raw_a),float(b),float(c))
+        ranked.append({"race_key":key,"horse_number":int(row["horse_number"]),"horse_name":row.get("horse_name"),"probability_winner":round(float(a),6),"raw_probability_winner":round(float(raw_a),6),"probability_top3":round(float(b),6),"probability_top5":round(float(c),6),"ensemble_score":round(score,6),"model_disagreement":round(disagreement,6),"data_completeness":round(completeness,3)})
     ranked.sort(key=lambda x:(-x["ensemble_score"],-x["probability_top3"],x["horse_number"]))
     for i,item in enumerate(ranked,1): item["predicted_rank"]=i
 
