@@ -41,6 +41,15 @@ def normalize_text(value: Any) -> str:
     return "".join(char for char in without_marks.upper() if char.isalnum())
 
 
+def normalize_track(value: Any) -> str:
+    """Normalize LONAB venue names against PMU's 'HIPPODROME DE ...' labels."""
+    track = normalize_text(value)
+    for prefix in ("HIPPODROMEDE", "HIPPODROMED"):
+        if track.startswith(prefix):
+            return track[len(prefix):]
+    return track
+
+
 def _first_text(payload: dict[str, Any], keys: tuple[str, ...]) -> str | None:
     for key in keys:
         value = payload.get(key)
@@ -196,8 +205,8 @@ def iter_pmu_courses(payload: Any, race_date: str | None = None) -> list[dict[st
 
 def course_matches_program(course: dict[str, Any], program: dict[str, Any]) -> bool:
     race = program.get("race") or {}
-    local_track = normalize_text(race.get("track"))
-    source_track = normalize_text(course.get("track"))
+    local_track = normalize_track(race.get("track"))
+    source_track = normalize_track(course.get("track"))
     if not local_track or not source_track:
         return False
 
