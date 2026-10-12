@@ -6,6 +6,23 @@ from src.model.v3_features import FEATURE_NAMES, build_v3_matrix
 from src.model.calibration import apply_sigmoid_calibrator
 
 
+def v3_ranking_score(raw_winner_probability: float, top3_probability: float, top5_probability: float, disagreement_penalty: float = 0.15) -> tuple[float, float]:
+    """Preserve the ranking ensemble's original scale using raw classifier outputs.
+
+    Race-normalized winner probabilities are for coherent reporting and
+    probability evaluation; they must not replace this raw winner score inside
+    the established mixed-target ranking formula.
+    """
+    values = np.asarray([raw_winner_probability, top3_probability, top5_probability], dtype=float)
+    if not np.all(np.isfinite(values)) or np.any(values < 0.0) or np.any(values > 1.0):
+        raise ValueError("Ranking inputs must be finite values in [0, 1].")
+    if not np.isfinite(disagreement_penalty) or disagreement_penalty < 0.0:
+        raise ValueError("Disagreement penalty must be finite and non-negative.")
+    disagreement = float(np.std(values))
+    raw_score = 0.25 * float(values[0]) + 0.50 * float(values[1]) + 0.25 * float(values[2])
+    return max(0.0, raw_score - disagreement_penalty * disagreement), disagreement
+
+
 def normalize_race_probabilities(probabilities: Sequence[float]) -> np.ndarray:
     """Turn independent per-runner win estimates into a single-winner distribution."""
     values = np.asarray(probabilities, dtype=float)
