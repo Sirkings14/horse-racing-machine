@@ -7,7 +7,7 @@ import numpy as np
 from src.live.registry import eligible_races, LIVE_DIR
 from src.model.historical_profile import build_walk_forward_profiles
 from src.model.truth_gate import validate_program
-from src.model.v3_model import V3LogisticModel
+from src.model.v3_model import V3LogisticModel, normalize_race_probabilities
 from src.model.autopilot_guard import build_autopilot_guard
 from src.model.opportunity import score_race_opportunity
 from src.dataset.program_history import load_program_history
@@ -254,7 +254,7 @@ def main():
     distance_start_counts=sorted(int(r.get("distance_starts") or 0) for r in current_profile)
     feature_health={"runners":len(current_profile),"history_coverage":round(history_coverage,3),"course_coverage":round(course_coverage,3),"distance_coverage":round(distance_coverage,3),"complete_rows":round(sum(float(r.get("data_completeness") or 0.0) for r in current_profile)/len(current_profile),3) if current_profile else 0.0,
         "identity_sources":identity_sources,"history_starts_sorted":history_start_counts,"distance_starts_sorted":distance_start_counts}
-    p1=models["winner"].predict_proba(current_profile)
+    p1=normalize_race_probabilities(models["winner"].predict_proba(current_profile))
     p3=models["top3"].predict_proba(current_profile)
     p5=models["top5"].predict_proba(current_profile)
     ranked=[]
