@@ -3,7 +3,7 @@
 The PMU JSON endpoint used here is an undocumented public web feed, not a
 supported public API. The adapter is deliberately conservative: a race must
 match by venue, name, distance and field size; runner numbers and names must
-match the live card; only SIMPLE_GAGNANT direct reports are accepted; and no
+match the live card; only explicit SIMPLE_GAGNANT current quotes are accepted; and no
 snapshot is written at or after the scheduled off-time. Source failure or an
 unknown response shape results in no evidence, never guessed prices.
 """
@@ -395,7 +395,7 @@ def build_snapshot(
         "race_key": race_key,
         "captured_at": captured_iso,
         # This is the timestamp at which the current PMU response was observed.
-        # Per-runner PMU dateRapport timestamps are also preserved where supplied.
+        # Per-runner quote-update timestamps are also preserved where supplied.
         "price_timestamp": captured_iso,
         "race_off_at": off_at.isoformat(),
         "source": SOURCE_LABEL,
