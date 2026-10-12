@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-11T00:26:49.513746+00:00",
+  "generated_at": "2026-10-12T02:07:30.207570+00:00",
   "status": "awaiting_market_odds",
   "total_verified_predictions": 12,
-  "predictions_with_observed_market_odds": 0,
+  "predictions_with_complete_pre_race_market_odds": 0,
   "pricing_coverage": 0.0,
   "paper_accounting": {
     "stake_per_selection": 1.0,
@@ -14,11 +14,13 @@
   "rows": [],
   "market_evidence": {
     "ledger_path": "/home/runner/work/horse-racing-machine/horse-racing-machine/data/evaluation/market_evidence.json",
-    "observed_snapshot_count": 0,
-    "source_attributed_prices_only": true
+    "verified_pre_race_snapshot_count": 1,
+    "source_attributed_prices_only": true,
+    "complete_recommendation_price_coverage_required": true
   },
   "requirements_for_real_edge_measurement": [
-    "capture market odds at prediction time",
+    "capture actual market odds before the race starts",
+    "store source identity, source URL, price timestamp, capture timestamp, and race-off time",
     "store the bet type and exact stake rule",
     "store official payout/dividend for the same bet type",
     "calculate ROI and maximum drawdown on chronological out-of-sample predictions",
@@ -26,6 +28,9 @@
   ],
   "policy": {
     "never_invent_odds": true,
+    "press_estimates_are_not_market_odds": true,
+    "post-race_prices_are_rejected": true,
+    "partial_recommendation_price_coverage_is_excluded": true,
     "no_profitability_claim_without_observed_prices": true,
     "paper_results_are_not_live_betting_results": true
   }
