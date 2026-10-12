@@ -224,10 +224,15 @@ def build_settlement_metrics(
     except (TypeError, ValueError, OverflowError):
         declared_runner_count = 0
     runner_numbers = {_runner_number(row) for row in rows if isinstance(row, dict)}
+    try:
+        ranked_runner_count = int(comparison.get("ranked_runner_count") or 0)
+    except (TypeError, ValueError, OverflowError):
+        ranked_runner_count = 0
     full_field_coverage = (
         declared_runner_count > 0
         and len(runner_numbers) >= declared_runner_count
         and len(rows) >= declared_runner_count
+        and ranked_runner_count >= declared_runner_count
     )
 
     model_brier: float | None = None
@@ -263,11 +268,12 @@ def build_settlement_metrics(
         "model_winner_probability": model_probability,
         "normalized_market_share_for_winner": market_share,
         "model_rank_of_winner": model_rank,
-        "market_rank_of_winner": market_rank,
+        "market_rank_among_priced_runners": market_rank,
+        "market_rank_of_winner": market_rank if full_field_coverage else None,
         "winner_in_model_top3": model_rank <= 3,
         "winner_in_model_top5": model_rank <= 5,
-        "winner_in_market_top3": market_rank <= 3,
-        "winner_in_market_top5": market_rank <= 5,
+        "winner_in_market_top3": (market_rank <= 3) if full_field_coverage else None,
+        "winner_in_market_top5": (market_rank <= 5) if full_field_coverage else None,
         "full_field_probability_metrics_available": (
             full_field_coverage
             and model_brier is not None
