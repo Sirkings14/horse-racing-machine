@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_09-03-2026_R3_1e3c69133c_596ce37dfa.txt",
-    "parsed_at": "2026-10-11T00:24:45.108405Z",
+    "parsed_at": "2026-10-12T08:45:02.686549Z",
     "date": "2026-03-09",
     "meeting": 3,
     "track": "PONT DE VIVAUX",
@@ -33,15 +33,11 @@
             "arrival": [
                 10,
                 5,
-                14,
-                4,
-                2
+                14
             ],
             "winner": 10,
             "second": 5,
-            "third": 14,
-            "fourth": 4,
-            "fifth": 2
+            "third": 14
         },
         {
             "race_number": 4,
@@ -59,13 +55,11 @@
             "arrival": [
                 7,
                 8,
-                3,
-                1
+                3
             ],
             "winner": 7,
             "second": 8,
-            "third": 3,
-            "fourth": 1
+            "third": 3
         },
         {
             "race_number": 6,
@@ -93,13 +87,11 @@
             "arrival": [
                 3,
                 5,
-                1,
-                2
+                1
             ],
             "winner": 3,
             "second": 5,
-            "third": 1,
-            "fourth": 2
+            "third": 1
         }
     ]
 }

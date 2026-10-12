@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_Res_ECD_16-08-2023_R3_e5d1b8f200_8f6961cae9.txt",
-    "parsed_at": "2026-10-11T00:24:46.265669Z",
+    "parsed_at": "2026-10-12T08:45:03.823093Z",
     "date": "2023-08-16",
     "meeting": 3,
     "track": "LE TOUQUET",
@@ -21,24 +21,21 @@
             "arrival": [
                 3,
                 4,
-                7,
-                5
+                7
             ],
             "winner": 3,
             "second": 4,
-            "third": 7,
-            "fourth": 5
+            "third": 7
         },
         {
             "race_number": 3,
             "arrival": [
                 6,
-                2,
-                1
+                2
             ],
             "winner": 6,
             "second": 2,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 4,
@@ -89,13 +86,11 @@
             "arrival": [
                 7,
                 11,
-                1,
-                4
+                1
             ],
             "winner": 7,
             "second": 11,
-            "third": 1,
-            "fourth": 4
+            "third": 1
         }
     ]
 }

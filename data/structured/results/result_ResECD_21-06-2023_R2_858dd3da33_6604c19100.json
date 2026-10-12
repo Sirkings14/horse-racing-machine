@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ResECD_21-06-2023_R2_858dd3da33_6604c19100.txt",
-    "parsed_at": "2026-10-11T00:24:46.200283Z",
+    "parsed_at": "2026-10-12T08:45:03.758941Z",
     "date": "2023-06-21",
     "meeting": 2,
     "track": "SALON-DE-PROVENCE",
@@ -20,12 +20,11 @@
             "race_number": 2,
             "arrival": [
                 2,
-                6,
-                1
+                6
             ],
             "winner": 2,
             "second": 6,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 3,
@@ -43,15 +42,11 @@
             "arrival": [
                 2,
                 6,
-                3,
-                1,
-                8
+                3
             ],
             "winner": 2,
             "second": 6,
-            "third": 3,
-            "fourth": 1,
-            "fifth": 8
+            "third": 3
         },
         {
             "race_number": 5,
@@ -91,13 +86,11 @@
             "arrival": [
                 5,
                 8,
-                2,
-                15
+                2
             ],
             "winner": 5,
             "second": 8,
-            "third": 2,
-            "fourth": 15
+            "third": 2
         }
     ]
 }

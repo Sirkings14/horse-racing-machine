@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_01-07-2024_R1_a43aea9475_edcdb61e1e.txt",
-    "parsed_at": "2026-10-11T00:24:44.849459Z",
+    "parsed_at": "2026-10-12T08:45:02.432293Z",
     "date": null,
     "meeting": 1,
     "track": "CLAIREFONTAINE",
@@ -11,52 +11,44 @@
             "arrival": [
                 2,
                 13,
-                6,
-                1
+                6
             ],
             "winner": 2,
             "second": 13,
-            "third": 6,
-            "fourth": 1
+            "third": 6
         },
         {
             "race_number": 2,
             "arrival": [
                 14,
                 12,
-                6,
-                2
+                6
             ],
             "winner": 14,
             "second": 12,
-            "third": 6,
-            "fourth": 2
+            "third": 6
         },
         {
             "race_number": 3,
             "arrival": [
                 11,
                 7,
-                14,
-                2
+                14
             ],
             "winner": 11,
             "second": 7,
-            "third": 14,
-            "fourth": 2
+            "third": 14
         },
         {
             "race_number": 4,
             "arrival": [
                 6,
                 7,
-                2,
-                1
+                2
             ],
             "winner": 6,
             "second": 7,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 5,
@@ -85,24 +77,21 @@
             "arrival": [
                 3,
                 9,
-                2,
-                1
+                2
             ],
             "winner": 3,
             "second": 9,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 8,
             "arrival": [
                 5,
-                7,
-                1
+                7
             ],
             "winner": 5,
             "second": 7,
-            "third": 1
+            "third": null
         }
     ]
 }

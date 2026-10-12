@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_17-07-2025_R1_11a91beb61_59d9d7f11b.txt",
-    "parsed_at": "2026-10-11T00:24:45.380020Z",
+    "parsed_at": "2026-10-12T08:45:02.951667Z",
     "date": "2025-07-17",
     "meeting": 1,
     "track": "VICHY",
@@ -42,12 +42,11 @@
             "race_number": 4,
             "arrival": [
                 3,
-                7,
-                1
+                7
             ],
             "winner": 3,
             "second": 7,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 5,
@@ -87,13 +86,11 @@
             "arrival": [
                 11,
                 9,
-                12,
-                1
+                12
             ],
             "winner": 11,
             "second": 9,
-            "third": 12,
-            "fourth": 1
+            "third": 12
         },
         {
             "race_number": 9,

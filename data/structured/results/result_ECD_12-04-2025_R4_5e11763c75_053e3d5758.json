@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_12-04-2025_R4_5e11763c75_053e3d5758.txt",
-    "parsed_at": "2026-10-11T00:24:45.207845Z",
+    "parsed_at": "2026-10-12T08:45:02.781723Z",
     "date": "2025-04-12",
     "meeting": 4,
     "track": "FONTAINEBLEAU",
@@ -22,39 +22,33 @@
             "arrival": [
                 3,
                 10,
-                8,
-                1
+                8
             ],
             "winner": 3,
             "second": 10,
-            "third": 8,
-            "fourth": 1
+            "third": 8
         },
         {
             "race_number": 3,
             "arrival": [
                 9,
                 10,
-                8,
-                1
+                8
             ],
             "winner": 9,
             "second": 10,
-            "third": 8,
-            "fourth": 1
+            "third": 8
         },
         {
             "race_number": 4,
             "arrival": [
                 4,
                 10,
-                5,
-                3
+                5
             ],
             "winner": 4,
             "second": 10,
-            "third": 5,
-            "fourth": 3
+            "third": 5
         },
         {
             "race_number": 5,
@@ -83,26 +77,21 @@
             "arrival": [
                 7,
                 5,
-                9,
-                1
+                9
             ],
             "winner": 7,
             "second": 5,
-            "third": 9,
-            "fourth": 1
+            "third": 9
         },
         {
             "race_number": 8,
             "arrival": [
                 2,
-                4,
-                1,
-                17
+                4
             ],
             "winner": 2,
             "second": 4,
-            "third": 1,
-            "fourth": 17
+            "third": null
         }
     ]
 }

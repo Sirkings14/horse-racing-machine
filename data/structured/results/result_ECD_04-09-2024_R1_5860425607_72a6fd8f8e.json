@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_04-09-2024_R1_5860425607_72a6fd8f8e.txt",
-    "parsed_at": "2026-10-11T00:24:44.955032Z",
+    "parsed_at": "2026-10-12T08:45:02.542895Z",
     "date": "2024-09-04",
     "meeting": 1,
     "track": "LA CAPELLE",
@@ -11,37 +11,32 @@
             "arrival": [
                 3,
                 8,
-                5,
-                1
+                5
             ],
             "winner": 3,
             "second": 8,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 2,
             "arrival": [
                 9,
                 4,
-                6,
-                2
+                6
             ],
             "winner": 9,
             "second": 4,
-            "third": 6,
-            "fourth": 2
+            "third": 6
         },
         {
             "race_number": 3,
             "arrival": [
                 6,
-                7,
-                1
+                7
             ],
             "winner": 6,
             "second": 7,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 4,
@@ -59,13 +54,11 @@
             "arrival": [
                 8,
                 6,
-                7,
-                3
+                7
             ],
             "winner": 8,
             "second": 6,
-            "third": 7,
-            "fourth": 3
+            "third": 7
         },
         {
             "race_number": 6,
@@ -94,13 +87,11 @@
             "arrival": [
                 2,
                 6,
-                11,
-                1
+                11
             ],
             "winner": 2,
             "second": 6,
-            "third": 11,
-            "fourth": 1
+            "third": 11
         }
     ]
 }

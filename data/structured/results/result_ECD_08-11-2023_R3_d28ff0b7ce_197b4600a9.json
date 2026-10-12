@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_08-11-2023_R3_d28ff0b7ce_197b4600a9.txt",
-    "parsed_at": "2026-10-11T00:24:45.094246Z",
+    "parsed_at": "2026-10-12T08:45:02.673695Z",
     "date": "2023-11-08",
     "meeting": 3,
     "track": "PAU",
@@ -54,13 +54,11 @@
             "arrival": [
                 9,
                 3,
-                2,
-                1
+                2
             ],
             "winner": 9,
             "second": 3,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 6,
@@ -78,13 +76,11 @@
             "arrival": [
                 9,
                 11,
-                3,
-                6
+                3
             ],
             "winner": 9,
             "second": 11,
-            "third": 3,
-            "fourth": 6
+            "third": 3
         },
         {
             "race_number": 8,
@@ -102,13 +98,11 @@
             "arrival": [
                 8,
                 10,
-                15,
-                2
+                15
             ],
             "winner": 8,
             "second": 10,
-            "third": 15,
-            "fourth": 2
+            "third": 15
         }
     ]
 }

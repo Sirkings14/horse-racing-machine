@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_26-10-2025_R1_c5faff3edb_66253d09bb.txt",
-    "parsed_at": "2026-10-11T00:24:45.686887Z",
+    "parsed_at": "2026-10-12T08:45:03.243553Z",
     "date": "2025-10-26",
     "meeting": 1,
     "track": "SAINT-CLOUD",
@@ -55,50 +55,43 @@
             "arrival": [
                 8,
                 7,
-                9,
-                1
+                9
             ],
             "winner": 8,
             "second": 7,
-            "third": 9,
-            "fourth": 1
+            "third": 9
         },
         {
             "race_number": 6,
             "arrival": [
                 3,
                 4,
-                10,
-                1
+                10
             ],
             "winner": 3,
             "second": 4,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         },
         {
             "race_number": 7,
             "arrival": [
                 5,
                 8,
-                2,
-                1
+                2
             ],
             "winner": 5,
             "second": 8,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 8,
             "arrival": [
                 4,
-                2,
-                1
+                2
             ],
             "winner": 4,
             "second": 2,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 9,
@@ -116,13 +109,11 @@
             "arrival": [
                 1,
                 4,
-                14,
-                2
+                14
             ],
             "winner": 1,
             "second": 4,
-            "third": 14,
-            "fourth": 2
+            "third": 14
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_13-05-2025_R3_b53a9c1097_5764ef69ff.txt",
-    "parsed_at": "2026-10-11T00:24:45.244654Z",
+    "parsed_at": "2026-10-12T08:45:02.818499Z",
     "date": "2025-05-13",
     "meeting": 3,
     "track": "CHOLET",
@@ -22,13 +22,11 @@
             "arrival": [
                 11,
                 12,
-                10,
-                1
+                10
             ],
             "winner": 11,
             "second": 12,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         },
         {
             "race_number": 3,
@@ -46,29 +44,22 @@
             "arrival": [
                 6,
                 10,
-                5,
-                1
+                5
             ],
             "winner": 6,
             "second": 10,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 5,
             "arrival": [
                 5,
                 14,
-                13,
-                1,
-                7,
-                12
+                13
             ],
             "winner": 5,
             "second": 14,
-            "third": 13,
-            "fourth": 1,
-            "fifth": 7
+            "third": 13
         },
         {
             "race_number": 6,
@@ -86,26 +77,22 @@
             "arrival": [
                 11,
                 9,
-                5,
-                1
+                5
             ],
             "winner": 11,
             "second": 9,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 8,
             "arrival": [
                 14,
                 8,
-                5,
-                1
+                5
             ],
             "winner": 14,
             "second": 8,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_06-03-2026_R2_17a9fcd9f2_9b7bd94d35.txt",
-    "parsed_at": "2026-10-11T00:24:45.009802Z",
+    "parsed_at": "2026-10-12T08:45:02.592924Z",
     "date": "2026-03-06",
     "meeting": 2,
     "track": "ARGENTAN",
@@ -10,12 +10,11 @@
             "race_number": 1,
             "arrival": [
                 3,
-                4,
-                1
+                4
             ],
             "winner": 3,
             "second": 4,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 2,
@@ -66,26 +65,22 @@
             "arrival": [
                 7,
                 8,
-                9,
-                2
+                9
             ],
             "winner": 7,
             "second": 8,
-            "third": 9,
-            "fourth": 2
+            "third": 9
         },
         {
             "race_number": 7,
             "arrival": [
                 13,
                 11,
-                2,
-                4
+                2
             ],
             "winner": 13,
             "second": 11,
-            "third": 2,
-            "fourth": 4
+            "third": 2
         }
     ]
 }

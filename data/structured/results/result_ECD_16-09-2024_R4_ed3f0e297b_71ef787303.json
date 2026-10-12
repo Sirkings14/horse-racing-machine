@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_16-09-2024_R4_ed3f0e297b_71ef787303.txt",
-    "parsed_at": "2026-10-11T00:24:45.353151Z",
+    "parsed_at": "2026-10-12T08:45:02.925547Z",
     "date": "2024-09-16",
     "meeting": 4,
     "track": "LAVAL",
@@ -22,13 +22,11 @@
             "arrival": [
                 10,
                 11,
-                5,
-                3
+                5
             ],
             "winner": 10,
             "second": 11,
-            "third": 5,
-            "fourth": 3
+            "third": 5
         },
         {
             "race_number": 3,
@@ -57,52 +55,44 @@
             "arrival": [
                 8,
                 2,
-                5,
-                1
+                5
             ],
             "winner": 8,
             "second": 2,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 6,
             "arrival": [
                 16,
                 14,
-                4,
-                2
+                4
             ],
             "winner": 16,
             "second": 14,
-            "third": 4,
-            "fourth": 2
+            "third": 4
         },
         {
             "race_number": 7,
             "arrival": [
                 16,
                 8,
-                14,
-                2
+                14
             ],
             "winner": 16,
             "second": 8,
-            "third": 14,
-            "fourth": 2
+            "third": 14
         },
         {
             "race_number": 8,
             "arrival": [
                 10,
                 2,
-                13,
-                1
+                13
             ],
             "winner": 10,
             "second": 2,
-            "third": 13,
-            "fourth": 1
+            "third": 13
         }
     ]
 }

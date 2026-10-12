@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ResultatsECD_26-04-2023_R3_cd6d6db6e0_fa4a61858c.txt",
-    "parsed_at": "2026-10-11T00:24:46.310025Z",
+    "parsed_at": "2026-10-12T08:45:03.866178Z",
     "date": "2023-04-26",
     "meeting": 3,
     "track": "LA TESTE DE BUCH",
@@ -11,29 +11,22 @@
             "arrival": [
                 6,
                 11,
-                9,
-                1,
-                2,
-                10
+                9
             ],
             "winner": 6,
             "second": 11,
-            "third": 9,
-            "fourth": 1,
-            "fifth": 2
+            "third": 9
         },
         {
             "race_number": 2,
             "arrival": [
                 2,
                 4,
-                9,
-                1
+                9
             ],
             "winner": 2,
             "second": 4,
-            "third": 9,
-            "fourth": 1
+            "third": 9
         },
         {
             "race_number": 3,
@@ -82,41 +75,33 @@
             "arrival": [
                 2,
                 10,
-                5,
-                1
+                5
             ],
             "winner": 2,
             "second": 10,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 8,
             "arrival": [
                 2,
                 12,
-                10,
-                1
+                10
             ],
             "winner": 2,
             "second": 12,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         },
         {
             "race_number": 9,
             "arrival": [
                 14,
                 1,
-                4,
-                5,
-                3
+                4
             ],
             "winner": 14,
             "second": 1,
-            "third": 4,
-            "fourth": 5,
-            "fifth": 3
+            "third": 4
         }
     ]
 }

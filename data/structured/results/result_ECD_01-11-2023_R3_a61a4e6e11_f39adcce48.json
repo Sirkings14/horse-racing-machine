@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_01-11-2023_R3_a61a4e6e11_f39adcce48.txt",
-    "parsed_at": "2026-10-11T00:24:44.861800Z",
+    "parsed_at": "2026-10-12T08:45:02.444525Z",
     "date": "2023-11-01",
     "meeting": 2,
     "track": "NANTES",
@@ -11,50 +11,43 @@
             "arrival": [
                 1,
                 5,
-                9,
-                3
+                9
             ],
             "winner": 1,
             "second": 5,
-            "third": 9,
-            "fourth": 3
+            "third": 9
         },
         {
             "race_number": 2,
             "arrival": [
                 9,
                 4,
-                6,
-                2
+                6
             ],
             "winner": 9,
             "second": 4,
-            "third": 6,
-            "fourth": 2
+            "third": 6
         },
         {
             "race_number": 3,
             "arrival": [
                 5,
-                6,
-                1
+                6
             ],
             "winner": 5,
             "second": 6,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 4,
             "arrival": [
                 6,
                 7,
-                5,
-                1
+                5
             ],
             "winner": 6,
             "second": 7,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 5,

@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_13-07-2025_R1_eb21bc86cb_097d25b4f7.txt",
-    "parsed_at": "2026-10-11T00:24:45.249944Z",
+    "parsed_at": "2026-10-12T08:45:02.823511Z",
     "date": "2025-07-13",
     "meeting": 1,
     "track": "LONGCHAMP",
@@ -20,25 +20,22 @@
             "race_number": 2,
             "arrival": [
                 7,
-                3,
-                2
+                3
             ],
             "winner": 7,
             "second": 3,
-            "third": 2
+            "third": null
         },
         {
             "race_number": 3,
             "arrival": [
                 6,
                 7,
-                9,
-                1
+                9
             ],
             "winner": 6,
             "second": 7,
-            "third": 9,
-            "fourth": 1
+            "third": 9
         },
         {
             "race_number": 4,

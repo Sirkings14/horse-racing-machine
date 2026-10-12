@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_03-07-2024_R2_13d8bc36f4_9e831d29f9.txt",
-    "parsed_at": "2026-10-11T00:24:44.916144Z",
+    "parsed_at": "2026-10-12T08:45:02.506501Z",
     "date": "2024-07-03",
     "meeting": 2,
     "track": "NANTES",
@@ -22,13 +22,11 @@
             "arrival": [
                 6,
                 10,
-                2,
-                1
+                2
             ],
             "winner": 6,
             "second": 10,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 3,
@@ -45,15 +43,11 @@
             "arrival": [
                 7,
                 5,
-                10,
-                1,
-                4
+                10
             ],
             "winner": 7,
             "second": 5,
-            "third": 10,
-            "fourth": 1,
-            "fifth": 4
+            "third": 10
         },
         {
             "race_number": 5,
@@ -70,12 +64,11 @@
             "race_number": 6,
             "arrival": [
                 4,
-                7,
-                2
+                7
             ],
             "winner": 4,
             "second": 7,
-            "third": 2
+            "third": null
         },
         {
             "race_number": 7,
@@ -93,13 +86,11 @@
             "arrival": [
                 15,
                 3,
-                4,
-                1
+                4
             ],
             "winner": 15,
             "second": 3,
-            "third": 4,
-            "fourth": 1
+            "third": 4
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_02-12-2023_R3_e22e9aacfa_d238241ef0.txt",
-    "parsed_at": "2026-10-11T00:24:44.897969Z",
+    "parsed_at": "2026-10-12T08:45:02.478916Z",
     "date": "2023-12-02",
     "meeting": 3,
     "track": "D'AUTEUIL",
@@ -21,13 +21,11 @@
             "arrival": [
                 4,
                 5,
-                8,
-                3
+                8
             ],
             "winner": 4,
             "second": 5,
-            "third": 8,
-            "fourth": 3
+            "third": 8
         },
         {
             "race_number": 3,
@@ -88,26 +86,22 @@
             "arrival": [
                 4,
                 7,
-                8,
-                1
+                8
             ],
             "winner": 4,
             "second": 7,
-            "third": 8,
-            "fourth": 1
+            "third": 8
         },
         {
             "race_number": 9,
             "arrival": [
                 5,
                 9,
-                12,
-                1
+                12
             ],
             "winner": 5,
             "second": 9,
-            "third": 12,
-            "fourth": 1
+            "third": 12
         }
     ]
 }

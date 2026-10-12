@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_30-01-2025_R3_e93ec3eef5_249a713bdf.txt",
-    "parsed_at": "2026-10-11T00:24:45.793494Z",
+    "parsed_at": "2026-10-12T08:45:03.344791Z",
     "date": "2025-01-30",
     "meeting": 3,
     "track": "CAGNES-SUR-MER",
@@ -11,26 +11,22 @@
             "arrival": [
                 6,
                 7,
-                2,
-                4
+                2
             ],
             "winner": 6,
             "second": 7,
-            "third": 2,
-            "fourth": 4
+            "third": 2
         },
         {
             "race_number": 2,
             "arrival": [
                 8,
                 3,
-                5,
-                1
+                5
             ],
             "winner": 8,
             "second": 3,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 3,
@@ -48,41 +44,33 @@
             "arrival": [
                 9,
                 6,
-                2,
-                1
+                2
             ],
             "winner": 9,
             "second": 6,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 5,
             "arrival": [
                 5,
                 8,
-                6,
-                1
+                6
             ],
             "winner": 5,
             "second": 8,
-            "third": 6,
-            "fourth": 1
+            "third": 6
         },
         {
             "race_number": 6,
             "arrival": [
                 3,
                 9,
-                11,
-                1,
-                2
+                11
             ],
             "winner": 3,
             "second": 9,
-            "third": 11,
-            "fourth": 1,
-            "fifth": 2
+            "third": 11
         },
         {
             "race_number": 7,
@@ -100,16 +88,11 @@
             "arrival": [
                 9,
                 11,
-                8,
-                1,
-                5,
-                6
+                8
             ],
             "winner": 9,
             "second": 11,
-            "third": 8,
-            "fourth": 1,
-            "fifth": 5
+            "third": 8
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_Res_ECD_10-05-2023_R4_72b2b872cc_8677c0daa9.txt",
-    "parsed_at": "2026-10-11T00:24:46.253794Z",
+    "parsed_at": "2026-10-12T08:45:03.811768Z",
     "date": "2023-05-10",
     "meeting": 4,
     "track": "CHARTRES",
@@ -22,13 +22,11 @@
             "arrival": [
                 9,
                 10,
-                14,
-                1
+                14
             ],
             "winner": 9,
             "second": 10,
-            "third": 14,
-            "fourth": 1
+            "third": 14
         },
         {
             "race_number": 3,
@@ -57,41 +55,33 @@
             "arrival": [
                 7,
                 10,
-                3,
-                1
+                3
             ],
             "winner": 7,
             "second": 10,
-            "third": 3,
-            "fourth": 1
+            "third": 3
         },
         {
             "race_number": 6,
             "arrival": [
                 5,
                 1,
-                8,
-                6,
-                4
+                8
             ],
             "winner": 5,
             "second": 1,
-            "third": 8,
-            "fourth": 6,
-            "fifth": 4
+            "third": 8
         },
         {
             "race_number": 7,
             "arrival": [
                 4,
                 7,
-                10,
-                1
+                10
             ],
             "winner": 4,
             "second": 7,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         },
         {
             "race_number": 8,
@@ -103,15 +93,6 @@
             "winner": 5,
             "second": 4,
             "third": 6
-        },
-        {
-            "race_number": 9,
-            "arrival": [
-                5
-            ],
-            "winner": 5,
-            "second": null,
-            "third": null
         }
     ]
 }

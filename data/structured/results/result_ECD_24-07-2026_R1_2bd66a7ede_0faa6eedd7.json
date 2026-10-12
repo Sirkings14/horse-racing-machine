@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_24-07-2026_R1_2bd66a7ede_0faa6eedd7.txt",
-    "parsed_at": "2026-10-11T00:24:45.611620Z",
+    "parsed_at": "2026-10-12T08:45:03.171235Z",
     "date": "2026-07-24",
     "meeting": 1,
     "track": "CABOURG",
@@ -66,13 +66,11 @@
             "arrival": [
                 10,
                 8,
-                11,
-                2
+                11
             ],
             "winner": 10,
             "second": 8,
-            "third": 11,
-            "fourth": 2
+            "third": 11
         },
         {
             "race_number": 7,
@@ -90,13 +88,11 @@
             "arrival": [
                 8,
                 11,
-                2,
-                1
+                2
             ],
             "winner": 8,
             "second": 11,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         }
     ]
 }

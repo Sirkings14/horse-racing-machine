@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_15-01-2025_R3_c347ceb0d2_c7b6d074f7.txt",
-    "parsed_at": "2026-10-11T00:24:45.299535Z",
+    "parsed_at": "2026-10-12T08:45:02.874493Z",
     "date": "2025-01-15",
     "meeting": 3,
     "track": "CORDEMAIS",
@@ -21,13 +21,11 @@
             "arrival": [
                 10,
                 8,
-                1,
-                2
+                1
             ],
             "winner": 10,
             "second": 8,
-            "third": 1,
-            "fourth": 2
+            "third": 1
         },
         {
             "race_number": 3,
@@ -44,12 +42,11 @@
             "race_number": 4,
             "arrival": [
                 6,
-                2,
-                1
+                2
             ],
             "winner": 6,
             "second": 2,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 5,

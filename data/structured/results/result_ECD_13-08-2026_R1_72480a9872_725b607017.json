@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_13-08-2026_R1_72480a9872_725b607017.txt",
-    "parsed_at": "2026-10-11T00:24:45.254081Z",
+    "parsed_at": "2026-10-12T08:45:02.827566Z",
     "date": "2026-08-13",
     "meeting": 1,
     "track": "DEAUVILLE",
@@ -11,13 +11,11 @@
             "arrival": [
                 11,
                 5,
-                7,
-                3
+                7
             ],
             "winner": 11,
             "second": 5,
-            "third": 7,
-            "fourth": 3
+            "third": 7
         },
         {
             "race_number": 2,
@@ -56,52 +54,44 @@
             "arrival": [
                 7,
                 3,
-                5,
-                4
+                5
             ],
             "winner": 7,
             "second": 3,
-            "third": 5,
-            "fourth": 4
+            "third": 5
         },
         {
             "race_number": 6,
             "arrival": [
                 8,
                 9,
-                10,
-                1
+                10
             ],
             "winner": 8,
             "second": 9,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         },
         {
             "race_number": 7,
             "arrival": [
                 5,
                 11,
-                13,
-                3
+                13
             ],
             "winner": 5,
             "second": 11,
-            "third": 13,
-            "fourth": 3
+            "third": 13
         },
         {
             "race_number": 8,
             "arrival": [
                 3,
                 6,
-                13,
-                1
+                13
             ],
             "winner": 3,
             "second": 6,
-            "third": 13,
-            "fourth": 1
+            "third": 13
         }
     ]
 }

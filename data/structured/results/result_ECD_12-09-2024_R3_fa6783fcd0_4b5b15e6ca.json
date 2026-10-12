@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_12-09-2024_R3_fa6783fcd0_4b5b15e6ca.txt",
-    "parsed_at": "2026-10-11T00:24:45.220376Z",
+    "parsed_at": "2026-10-12T08:45:02.794317Z",
     "date": "2024-09-12",
     "meeting": 3,
     "track": "LA TESTE DE BUCH",
@@ -43,25 +43,22 @@
             "race_number": 4,
             "arrival": [
                 3,
-                6,
-                1
+                6
             ],
             "winner": 3,
             "second": 6,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 5,
             "arrival": [
                 2,
                 9,
-                11,
-                1
+                11
             ],
             "winner": 2,
             "second": 9,
-            "third": 11,
-            "fourth": 1
+            "third": 11
         },
         {
             "race_number": 6,

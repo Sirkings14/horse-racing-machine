@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_06-03-2024_R1_14991ac4c3_aa4c7a7dfc.txt",
-    "parsed_at": "2026-10-11T00:24:45.007733Z",
+    "parsed_at": "2026-10-12T08:45:02.590879Z",
     "date": "2024-03-06",
     "meeting": 1,
     "track": "AMIENS",
@@ -33,55 +33,44 @@
             "arrival": [
                 2,
                 5,
-                3,
-                1
+                3
             ],
             "winner": 2,
             "second": 5,
-            "third": 3,
-            "fourth": 1
+            "third": 3
         },
         {
             "race_number": 4,
             "arrival": [
                 6,
                 13,
-                2,
-                1
+                2
             ],
             "winner": 6,
             "second": 13,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 5,
             "arrival": [
                 4,
                 7,
-                1,
-                3
+                1
             ],
             "winner": 4,
             "second": 7,
-            "third": 1,
-            "fourth": 3
+            "third": 1
         },
         {
             "race_number": 6,
             "arrival": [
                 6,
                 12,
-                2,
-                3,
-                1,
-                7
+                2
             ],
             "winner": 6,
             "second": 12,
-            "third": 2,
-            "fourth": 3,
-            "fifth": 1
+            "third": 2
         },
         {
             "race_number": 7,
@@ -99,15 +88,11 @@
             "arrival": [
                 14,
                 7,
-                4,
-                1,
-                2
+                4
             ],
             "winner": 14,
             "second": 7,
-            "third": 4,
-            "fourth": 1,
-            "fifth": 2
+            "third": 4
         }
     ]
 }

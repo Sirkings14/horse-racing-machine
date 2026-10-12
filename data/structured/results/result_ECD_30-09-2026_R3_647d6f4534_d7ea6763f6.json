@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_30-09-2026_R3_647d6f4534_d7ea6763f6.txt",
-    "parsed_at": "2026-10-11T00:24:45.813711Z",
+    "parsed_at": "2026-10-12T08:45:03.364185Z",
     "date": "2026-09-30",
     "meeting": 3,
     "track": "COMPIEGNE",
@@ -11,13 +11,11 @@
             "arrival": [
                 2,
                 8,
-                7,
-                1
+                7
             ],
             "winner": 2,
             "second": 8,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         },
         {
             "race_number": 2,
@@ -34,12 +32,11 @@
             "race_number": 3,
             "arrival": [
                 4,
-                5,
-                1
+                5
             ],
             "winner": 4,
             "second": 5,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 4,
@@ -90,13 +87,11 @@
             "arrival": [
                 6,
                 5,
-                13,
-                1
+                13
             ],
             "winner": 6,
             "second": 5,
-            "third": 13,
-            "fourth": 1
+            "third": 13
         }
     ]
 }

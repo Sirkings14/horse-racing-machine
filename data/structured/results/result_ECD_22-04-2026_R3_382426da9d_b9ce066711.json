@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_22-04-2026_R3_382426da9d_b9ce066711.txt",
-    "parsed_at": "2026-10-11T00:24:45.538593Z",
+    "parsed_at": "2026-10-12T08:45:03.101127Z",
     "date": "2026-04-22",
     "meeting": 3,
     "track": "CHANTILLY",
@@ -11,13 +11,11 @@
             "arrival": [
                 8,
                 1,
-                10,
-                13
+                10
             ],
             "winner": 8,
             "second": 1,
-            "third": 10,
-            "fourth": 13
+            "third": 10
         },
         {
             "race_number": 2,
@@ -35,13 +33,11 @@
             "arrival": [
                 2,
                 4,
-                10,
-                1
+                10
             ],
             "winner": 2,
             "second": 4,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         },
         {
             "race_number": 4,
@@ -81,26 +77,22 @@
             "arrival": [
                 4,
                 14,
-                7,
-                1
+                7
             ],
             "winner": 4,
             "second": 14,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         },
         {
             "race_number": 8,
             "arrival": [
                 1,
                 10,
-                11,
-                4
+                11
             ],
             "winner": 1,
             "second": 10,
-            "third": 11,
-            "fourth": 4
+            "third": 11
         }
     ]
 }

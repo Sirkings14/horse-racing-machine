@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_Res_ECD_03-10-2023_R3_3d8c5549fe_88bb1c3448.txt",
-    "parsed_at": "2026-10-11T00:24:46.238321Z",
+    "parsed_at": "2026-10-12T08:45:03.797177Z",
     "date": "2023-10-03",
     "meeting": 3,
     "track": "BORDEAUX-LE BOUSCAT",
@@ -20,12 +20,11 @@
             "race_number": 2,
             "arrival": [
                 3,
-                6,
-                1
+                6
             ],
             "winner": 3,
             "second": 6,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 3,
@@ -43,13 +42,11 @@
             "arrival": [
                 4,
                 10,
-                5,
-                1
+                5
             ],
             "winner": 4,
             "second": 10,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 5,
@@ -77,39 +74,33 @@
             "arrival": [
                 5,
                 9,
-                7,
-                4
+                7
             ],
             "winner": 5,
             "second": 9,
-            "third": 7,
-            "fourth": 4
+            "third": 7
         },
         {
             "race_number": 8,
             "arrival": [
                 9,
                 8,
-                2,
-                1
+                2
             ],
             "winner": 9,
             "second": 8,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 9,
             "arrival": [
                 14,
                 9,
-                5,
-                3
+                5
             ],
             "winner": 14,
             "second": 9,
-            "third": 5,
-            "fourth": 3
+            "third": 5
         }
     ]
 }

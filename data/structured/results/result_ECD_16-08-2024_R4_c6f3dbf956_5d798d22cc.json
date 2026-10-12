@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_16-08-2024_R4_c6f3dbf956_5d798d22cc.txt",
-    "parsed_at": "2026-10-11T00:24:45.349674Z",
+    "parsed_at": "2026-10-12T08:45:02.922268Z",
     "date": "2024-08-16",
     "meeting": 4,
     "track": "CLAIREFONTAINE",
@@ -31,12 +31,11 @@
             "race_number": 3,
             "arrival": [
                 2,
-                4,
-                1
+                4
             ],
             "winner": 2,
             "second": 4,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 4,
@@ -75,15 +74,11 @@
             "arrival": [
                 9,
                 5,
-                2,
-                1,
-                4
+                2
             ],
             "winner": 9,
             "second": 5,
-            "third": 2,
-            "fourth": 1,
-            "fifth": 4
+            "third": 2
         },
         {
             "race_number": 8,
@@ -101,13 +96,11 @@
             "arrival": [
                 11,
                 12,
-                3,
-                9
+                3
             ],
             "winner": 11,
             "second": 12,
-            "third": 3,
-            "fourth": 9
+            "third": 3
         }
     ]
 }

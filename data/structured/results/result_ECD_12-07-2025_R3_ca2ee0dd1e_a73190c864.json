@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_12-07-2025_R3_ca2ee0dd1e_a73190c864.txt",
-    "parsed_at": "2026-10-11T00:24:45.216302Z",
+    "parsed_at": "2026-10-12T08:45:02.789997Z",
     "date": "2025-07-12",
     "meeting": 3,
     "track": "DIEPPE",
@@ -21,37 +21,32 @@
             "arrival": [
                 11,
                 5,
-                2,
-                1
+                2
             ],
             "winner": 11,
             "second": 5,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 3,
             "arrival": [
                 8,
                 11,
-                2,
-                1
+                2
             ],
             "winner": 8,
             "second": 11,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 4,
             "arrival": [
                 6,
-                4,
-                1
+                4
             ],
             "winner": 6,
             "second": 4,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 5,
@@ -80,13 +75,11 @@
             "arrival": [
                 13,
                 2,
-                11,
-                4
+                11
             ],
             "winner": 13,
             "second": 2,
-            "third": 11,
-            "fourth": 4
+            "third": 11
         },
         {
             "race_number": 8,

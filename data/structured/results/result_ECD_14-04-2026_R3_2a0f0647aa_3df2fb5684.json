@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_14-04-2026_R3_2a0f0647aa_3df2fb5684.txt",
-    "parsed_at": "2026-10-11T00:24:45.276328Z",
+    "parsed_at": "2026-10-12T08:45:02.850491Z",
     "date": "2026-04-14",
     "meeting": 3,
     "track": "LYON-PARILLY",
@@ -44,13 +44,11 @@
             "arrival": [
                 3,
                 11,
-                1,
-                15
+                1
             ],
             "winner": 3,
             "second": 11,
-            "third": 1,
-            "fourth": 15
+            "third": 1
         },
         {
             "race_number": 5,
@@ -90,13 +88,11 @@
             "arrival": [
                 11,
                 4,
-                15,
-                2
+                15
             ],
             "winner": 11,
             "second": 4,
-            "third": 15,
-            "fourth": 2
+            "third": 15
         }
     ]
 }

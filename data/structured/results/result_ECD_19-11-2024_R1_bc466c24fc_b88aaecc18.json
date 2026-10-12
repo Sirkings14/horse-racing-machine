@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_19-11-2024_R1_bc466c24fc_b88aaecc18.txt",
-    "parsed_at": "2026-10-11T00:24:45.458972Z",
+    "parsed_at": "2026-10-12T08:45:03.025113Z",
     "date": "2024-11-19",
     "meeting": 1,
     "track": "CHANTILLY",
@@ -32,28 +32,22 @@
             "arrival": [
                 7,
                 9,
-                11,
-                1,
-                12
+                11
             ],
             "winner": 7,
             "second": 9,
-            "third": 11,
-            "fourth": 1,
-            "fifth": 12
+            "third": 11
         },
         {
             "race_number": 4,
             "arrival": [
                 3,
                 6,
-                5,
-                1
+                5
             ],
             "winner": 3,
             "second": 6,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 5,
@@ -71,13 +65,11 @@
             "arrival": [
                 10,
                 6,
-                2,
-                1
+                2
             ],
             "winner": 10,
             "second": 6,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 7,
@@ -106,16 +98,11 @@
             "arrival": [
                 10,
                 11,
-                7,
-                1,
-                12,
-                4
+                7
             ],
             "winner": 10,
             "second": 11,
-            "third": 7,
-            "fourth": 1,
-            "fifth": 12
+            "third": 7
         }
     ]
 }

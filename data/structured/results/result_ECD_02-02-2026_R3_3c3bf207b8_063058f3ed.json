@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_02-02-2026_R3_3c3bf207b8_063058f3ed.txt",
-    "parsed_at": "2026-10-11T00:24:44.871595Z",
+    "parsed_at": "2026-10-12T08:45:02.453942Z",
     "date": "2026-02-02",
     "meeting": 3,
     "track": "MAURE DE BRETAGNE",
@@ -10,12 +10,11 @@
             "race_number": 1,
             "arrival": [
                 10,
-                6,
-                1
+                6
             ],
             "winner": 10,
             "second": 6,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 2,
@@ -44,13 +43,11 @@
             "arrival": [
                 8,
                 6,
-                2,
-                1
+                2
             ],
             "winner": 8,
             "second": 6,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 5,
@@ -68,13 +65,11 @@
             "arrival": [
                 4,
                 8,
-                7,
-                1
+                7
             ],
             "winner": 4,
             "second": 8,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         },
         {
             "race_number": 7,
@@ -92,13 +87,11 @@
             "arrival": [
                 2,
                 12,
-                7,
-                1
+                7
             ],
             "winner": 2,
             "second": 12,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         }
     ]
 }

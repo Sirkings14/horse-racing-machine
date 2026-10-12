@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_12-01-2026_R1_2c4274ed7a_c30d4c8fde.txt",
-    "parsed_at": "2026-10-11T00:24:45.200460Z",
+    "parsed_at": "2026-10-12T08:45:02.774739Z",
     "date": "2026-01-12",
     "meeting": 1,
     "track": "CAGNES-SUR-MER",
@@ -10,25 +10,22 @@
             "race_number": 1,
             "arrival": [
                 3,
-                6,
-                1
+                6
             ],
             "winner": 3,
             "second": 6,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 2,
             "arrival": [
                 5,
                 8,
-                2,
-                3
+                2
             ],
             "winner": 5,
             "second": 8,
-            "third": 2,
-            "fourth": 3
+            "third": 2
         },
         {
             "race_number": 3,

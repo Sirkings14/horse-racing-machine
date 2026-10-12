@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_07-09-2025_R5_c53d6c42e1_c5e16aee0c.txt",
-    "parsed_at": "2026-10-11T00:24:45.056281Z",
+    "parsed_at": "2026-10-12T08:45:02.638083Z",
     "date": "2025-09-07",
     "meeting": 5,
     "track": "CRAON",
@@ -20,25 +20,22 @@
             "race_number": 2,
             "arrival": [
                 7,
-                6,
-                1
+                6
             ],
             "winner": 7,
             "second": 6,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 3,
             "arrival": [
                 14,
                 16,
-                10,
-                1
+                10
             ],
             "winner": 14,
             "second": 16,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         },
         {
             "race_number": 4,
@@ -88,12 +85,11 @@
             "race_number": 8,
             "arrival": [
                 2,
-                5,
-                1
+                5
             ],
             "winner": 2,
             "second": 5,
-            "third": 1
+            "third": null
         }
     ]
 }

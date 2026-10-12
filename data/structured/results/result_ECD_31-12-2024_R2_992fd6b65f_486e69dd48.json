@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_31-12-2024_R2_992fd6b65f_486e69dd48.txt",
-    "parsed_at": "2026-10-11T00:24:45.842216Z",
+    "parsed_at": "2026-10-12T08:45:03.389382Z",
     "date": "2024-12-31",
     "meeting": 2,
     "track": "PAU",
@@ -10,25 +10,22 @@
             "race_number": 1,
             "arrival": [
                 4,
-                5,
-                1
+                5
             ],
             "winner": 4,
             "second": 5,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 2,
             "arrival": [
                 5,
                 7,
-                6,
-                1
+                6
             ],
             "winner": 5,
             "second": 7,
-            "third": 6,
-            "fourth": 1
+            "third": 6
         },
         {
             "race_number": 3,
@@ -46,39 +43,33 @@
             "arrival": [
                 4,
                 6,
-                9,
-                2
+                9
             ],
             "winner": 4,
             "second": 6,
-            "third": 9,
-            "fourth": 2
+            "third": 9
         },
         {
             "race_number": 5,
             "arrival": [
                 2,
                 3,
-                9,
-                1
+                9
             ],
             "winner": 2,
             "second": 3,
-            "third": 9,
-            "fourth": 1
+            "third": 9
         },
         {
             "race_number": 6,
             "arrival": [
                 4,
                 6,
-                11,
-                1
+                11
             ],
             "winner": 4,
             "second": 6,
-            "third": 11,
-            "fourth": 1
+            "third": 11
         },
         {
             "race_number": 7,
@@ -96,13 +87,11 @@
             "arrival": [
                 12,
                 1,
-                6,
-                2
+                6
             ],
             "winner": 12,
             "second": 1,
-            "third": 6,
-            "fourth": 2
+            "third": 6
         }
     ]
 }

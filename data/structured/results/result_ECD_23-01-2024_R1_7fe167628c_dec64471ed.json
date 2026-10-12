@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_23-01-2024_R1_7fe167628c_dec64471ed.txt",
-    "parsed_at": "2026-10-11T00:24:45.562177Z",
+    "parsed_at": "2026-10-12T08:45:03.123093Z",
     "date": "2024-01-23",
     "meeting": 1,
     "track": "CAGNES-SUR-MER",
@@ -10,36 +10,32 @@
             "race_number": 1,
             "arrival": [
                 3,
-                1,
-                15
+                1
             ],
             "winner": 3,
             "second": 1,
-            "third": 15
+            "third": null
         },
         {
             "race_number": 2,
             "arrival": [
                 7,
-                5,
-                1
+                5
             ],
             "winner": 7,
             "second": 5,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 3,
             "arrival": [
                 11,
                 15,
-                9,
-                1
+                9
             ],
             "winner": 11,
             "second": 15,
-            "third": 9,
-            "fourth": 1
+            "third": 9
         },
         {
             "race_number": 4,
@@ -79,26 +75,22 @@
             "arrival": [
                 4,
                 2,
-                7,
-                1
+                7
             ],
             "winner": 4,
             "second": 2,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         },
         {
             "race_number": 8,
             "arrival": [
                 5,
                 7,
-                10,
-                1
+                10
             ],
             "winner": 5,
             "second": 7,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         }
     ]
 }

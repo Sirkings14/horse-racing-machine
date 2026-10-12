@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_20-04-2026_R3_69834589f8_8e260308e3.txt",
-    "parsed_at": "2026-10-11T00:24:45.473151Z",
+    "parsed_at": "2026-10-12T08:45:03.039512Z",
     "date": "2026-04-20",
     "meeting": 3,
     "track": "FEURS",
@@ -22,13 +22,11 @@
             "arrival": [
                 6,
                 12,
-                13,
-                1
+                13
             ],
             "winner": 6,
             "second": 12,
-            "third": 13,
-            "fourth": 1
+            "third": 13
         },
         {
             "race_number": 3,
@@ -67,14 +65,11 @@
             "race_number": 6,
             "arrival": [
                 7,
-                1,
-                3,
-                5
+                1
             ],
             "winner": 7,
             "second": 1,
-            "third": 3,
-            "fourth": 5
+            "third": null
         },
         {
             "race_number": 7,

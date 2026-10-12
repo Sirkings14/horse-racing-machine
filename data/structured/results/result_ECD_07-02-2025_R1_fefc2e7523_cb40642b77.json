@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_07-02-2025_R1_fefc2e7523_cb40642b77.txt",
-    "parsed_at": "2026-10-11T00:24:45.038098Z",
+    "parsed_at": "2026-10-12T08:45:02.620083Z",
     "date": "2025-02-07",
     "meeting": 1,
     "track": "PARIS-VINCENNES",
@@ -11,13 +11,11 @@
             "arrival": [
                 8,
                 5,
-                11,
-                1
+                11
             ],
             "winner": 8,
             "second": 5,
-            "third": 11,
-            "fourth": 1
+            "third": 11
         },
         {
             "race_number": 2,
@@ -35,39 +33,33 @@
             "arrival": [
                 7,
                 2,
-                4,
-                1
+                4
             ],
             "winner": 7,
             "second": 2,
-            "third": 4,
-            "fourth": 1
+            "third": 4
         },
         {
             "race_number": 4,
             "arrival": [
                 12,
                 2,
-                8,
-                1
+                8
             ],
             "winner": 12,
             "second": 2,
-            "third": 8,
-            "fourth": 1
+            "third": 8
         },
         {
             "race_number": 5,
             "arrival": [
                 12,
                 3,
-                11,
-                1
+                11
             ],
             "winner": 12,
             "second": 3,
-            "third": 11,
-            "fourth": 1
+            "third": 11
         },
         {
             "race_number": 6,
@@ -84,25 +76,22 @@
             "race_number": 7,
             "arrival": [
                 6,
-                7,
-                1
+                7
             ],
             "winner": 6,
             "second": 7,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 8,
             "arrival": [
                 4,
                 5,
-                13,
-                1
+                13
             ],
             "winner": 4,
             "second": 5,
-            "third": 13,
-            "fourth": 1
+            "third": 13
         }
     ]
 }

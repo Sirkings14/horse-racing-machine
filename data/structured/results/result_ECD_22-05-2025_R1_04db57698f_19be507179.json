@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_22-05-2025_R1_04db57698f_19be507179.txt",
-    "parsed_at": "2026-10-11T00:24:45.539840Z",
+    "parsed_at": "2026-10-12T08:45:03.102355Z",
     "date": "2025-05-22",
     "meeting": 1,
     "track": "LONGCHAMP",
@@ -10,12 +10,11 @@
             "race_number": 1,
             "arrival": [
                 2,
-                5,
-                1
+                5
             ],
             "winner": 2,
             "second": 5,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 2,
@@ -33,26 +32,22 @@
             "arrival": [
                 2,
                 6,
-                11,
-                1
+                11
             ],
             "winner": 2,
             "second": 6,
-            "third": 11,
-            "fourth": 1
+            "third": 11
         },
         {
             "race_number": 4,
             "arrival": [
                 2,
                 15,
-                12,
-                1
+                12
             ],
             "winner": 2,
             "second": 15,
-            "third": 12,
-            "fourth": 1
+            "third": 12
         },
         {
             "race_number": 5,
@@ -80,26 +75,22 @@
             "arrival": [
                 7,
                 6,
-                13,
-                2
+                13
             ],
             "winner": 7,
             "second": 6,
-            "third": 13,
-            "fourth": 2
+            "third": 13
         },
         {
             "race_number": 8,
             "arrival": [
                 8,
                 11,
-                7,
-                4
+                7
             ],
             "winner": 8,
             "second": 11,
-            "third": 7,
-            "fourth": 4
+            "third": 7
         }
     ]
 }

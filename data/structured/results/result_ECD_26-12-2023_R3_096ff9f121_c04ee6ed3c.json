@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_26-12-2023_R3_096ff9f121_c04ee6ed3c.txt",
-    "parsed_at": "2026-10-11T00:24:45.691199Z",
+    "parsed_at": "2026-10-12T08:45:03.247307Z",
     "date": "2023-12-26",
     "meeting": 3,
     "track": "ARGENTAN",
@@ -22,13 +22,11 @@
             "arrival": [
                 12,
                 13,
-                2,
-                1
+                2
             ],
             "winner": 12,
             "second": 13,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 3,
@@ -46,39 +44,33 @@
             "arrival": [
                 1,
                 5,
-                2,
-                15
+                2
             ],
             "winner": 1,
             "second": 5,
-            "third": 2,
-            "fourth": 15
+            "third": 2
         },
         {
             "race_number": 5,
             "arrival": [
                 8,
                 5,
-                2,
-                1
+                2
             ],
             "winner": 8,
             "second": 5,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 6,
             "arrival": [
                 15,
                 11,
-                16,
-                1
+                16
             ],
             "winner": 15,
             "second": 11,
-            "third": 16,
-            "fourth": 1
+            "third": 16
         },
         {
             "race_number": 7,
@@ -96,13 +88,11 @@
             "arrival": [
                 9,
                 5,
-                3,
-                6
+                3
             ],
             "winner": 9,
             "second": 5,
-            "third": 3,
-            "fourth": 6
+            "third": 3
         }
     ]
 }

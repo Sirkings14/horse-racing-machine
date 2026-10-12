@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_02-10-2024_R4_1150f708b4_b7fa43b69f.txt",
-    "parsed_at": "2026-10-11T00:24:44.891873Z",
+    "parsed_at": "2026-10-12T08:45:02.473089Z",
     "date": "2024-10-02",
     "meeting": 4,
     "track": "TOULOUSE",
@@ -32,29 +32,22 @@
             "arrival": [
                 11,
                 3,
-                4,
-                1
+                4
             ],
             "winner": 11,
             "second": 3,
-            "third": 4,
-            "fourth": 1
+            "third": 4
         },
         {
             "race_number": 4,
             "arrival": [
                 6,
                 3,
-                4,
-                1,
-                8,
-                15
+                4
             ],
             "winner": 6,
             "second": 3,
-            "third": 4,
-            "fourth": 1,
-            "fifth": 8
+            "third": 4
         },
         {
             "race_number": 6,
@@ -72,13 +65,11 @@
             "arrival": [
                 2,
                 3,
-                5,
-                1
+                5
             ],
             "winner": 2,
             "second": 3,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         }
     ]
 }

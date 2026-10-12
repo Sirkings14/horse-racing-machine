@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_15-07-2026_R3_063916b6cc_454a5555a9.txt",
-    "parsed_at": "2026-10-11T00:24:45.316201Z",
+    "parsed_at": "2026-10-12T08:45:02.889780Z",
     "date": "2026-07-15",
     "meeting": 3,
     "track": "DEAUVILLE-CLAIREFONTAINE",
@@ -76,24 +76,21 @@
             "arrival": [
                 13,
                 3,
-                7,
-                2
+                7
             ],
             "winner": 13,
             "second": 3,
-            "third": 7,
-            "fourth": 2
+            "third": 7
         },
         {
             "race_number": 8,
             "arrival": [
                 3,
-                2,
-                1
+                2
             ],
             "winner": 3,
             "second": 2,
-            "third": 1
+            "third": null
         }
     ]
 }

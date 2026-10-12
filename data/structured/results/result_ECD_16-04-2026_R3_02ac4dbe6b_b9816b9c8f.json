@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_16-04-2026_R3_02ac4dbe6b_b9816b9c8f.txt",
-    "parsed_at": "2026-10-11T00:24:45.339618Z",
+    "parsed_at": "2026-10-12T08:45:02.913983Z",
     "date": "2026-04-16",
     "meeting": 3,
     "track": "SALON-DE -PROVENCE",
@@ -20,12 +20,11 @@
             "race_number": 2,
             "arrival": [
                 1,
-                7,
-                2
+                7
             ],
             "winner": 1,
             "second": 7,
-            "third": 2
+            "third": null
         },
         {
             "race_number": 3,
@@ -54,13 +53,11 @@
             "arrival": [
                 2,
                 7,
-                11,
-                1
+                11
             ],
             "winner": 2,
             "second": 7,
-            "third": 11,
-            "fourth": 1
+            "third": 11
         },
         {
             "race_number": 6,
@@ -77,13 +74,11 @@
             "arrival": [
                 5,
                 2,
-                14,
-                1
+                14
             ],
             "winner": 5,
             "second": 2,
-            "third": 14,
-            "fourth": 1
+            "third": 14
         },
         {
             "race_number": 8,

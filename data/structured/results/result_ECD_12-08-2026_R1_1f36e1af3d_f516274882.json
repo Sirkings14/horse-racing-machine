@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_12-08-2026_R1_1f36e1af3d_f516274882.txt",
-    "parsed_at": "2026-10-11T00:24:45.219155Z",
+    "parsed_at": "2026-10-12T08:45:02.793015Z",
     "date": "2026-08-12",
     "meeting": 1,
     "track": "ENGHIEN",
@@ -11,26 +11,22 @@
             "arrival": [
                 5,
                 6,
-                8,
-                2
+                8
             ],
             "winner": 5,
             "second": 6,
-            "third": 8,
-            "fourth": 2
+            "third": 8
         },
         {
             "race_number": 2,
             "arrival": [
                 14,
                 4,
-                5,
-                1
+                5
             ],
             "winner": 14,
             "second": 4,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 3,
@@ -70,39 +66,33 @@
             "arrival": [
                 13,
                 7,
-                11,
-                2
+                11
             ],
             "winner": 13,
             "second": 7,
-            "third": 11,
-            "fourth": 2
+            "third": 11
         },
         {
             "race_number": 7,
             "arrival": [
                 5,
                 10,
-                2,
-                8
+                2
             ],
             "winner": 5,
             "second": 10,
-            "third": 2,
-            "fourth": 8
+            "third": 2
         },
         {
             "race_number": 8,
             "arrival": [
                 14,
                 4,
-                3,
-                17
+                3
             ],
             "winner": 14,
             "second": 4,
-            "third": 3,
-            "fourth": 17
+            "third": 3
         }
     ]
 }

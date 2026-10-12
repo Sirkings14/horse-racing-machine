@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_23-11-2025_R3_b3670aecfa_e6f05e48e8.txt",
-    "parsed_at": "2026-10-11T00:24:45.591980Z",
+    "parsed_at": "2026-10-12T08:45:03.151785Z",
     "date": "2025-11-23",
     "meeting": 3,
     "track": "MARSEILLE-BORELY",
@@ -11,15 +11,11 @@
             "arrival": [
                 9,
                 3,
-                1,
-                14,
-                13
+                1
             ],
             "winner": 9,
             "second": 3,
-            "third": 1,
-            "fourth": 14,
-            "fifth": 13
+            "third": 1
         },
         {
             "race_number": 2,
@@ -70,39 +66,33 @@
             "arrival": [
                 7,
                 5,
-                3,
-                2
+                3
             ],
             "winner": 7,
             "second": 5,
-            "third": 3,
-            "fourth": 2
+            "third": 3
         },
         {
             "race_number": 7,
             "arrival": [
                 9,
                 10,
-                5,
-                1
+                5
             ],
             "winner": 9,
             "second": 10,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 8,
             "arrival": [
                 10,
                 11,
-                14,
-                1
+                14
             ],
             "winner": 10,
             "second": 11,
-            "third": 14,
-            "fourth": 1
+            "third": 14
         }
     ]
 }

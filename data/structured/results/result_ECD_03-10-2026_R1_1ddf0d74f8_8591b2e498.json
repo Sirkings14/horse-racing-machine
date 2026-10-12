@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_03-10-2026_R1_1ddf0d74f8_8591b2e498.txt",
-    "parsed_at": "2026-10-11T00:24:44.926263Z",
+    "parsed_at": "2026-10-12T08:45:02.516669Z",
     "date": "2026-10-03",
     "meeting": 1,
     "track": "PARISLONGCHAMP",
@@ -11,24 +11,21 @@
             "arrival": [
                 5,
                 4,
-                2,
-                17
+                2
             ],
             "winner": 5,
             "second": 4,
-            "third": 2,
-            "fourth": 17
+            "third": 2
         },
         {
             "race_number": 2,
             "arrival": [
                 3,
-                1,
-                18
+                1
             ],
             "winner": 3,
             "second": 1,
-            "third": 18
+            "third": null
         },
         {
             "race_number": 3,
@@ -46,13 +43,11 @@
             "arrival": [
                 4,
                 5,
-                8,
-                1
+                8
             ],
             "winner": 4,
             "second": 5,
-            "third": 8,
-            "fourth": 1
+            "third": 8
         },
         {
             "race_number": 5,
@@ -103,13 +98,11 @@
             "arrival": [
                 2,
                 6,
-                8,
-                1
+                8
             ],
             "winner": 2,
             "second": 6,
-            "third": 8,
-            "fourth": 1
+            "third": 8
         }
     ]
 }

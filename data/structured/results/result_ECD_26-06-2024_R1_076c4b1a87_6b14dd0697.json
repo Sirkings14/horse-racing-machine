@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_26-06-2024_R1_076c4b1a87_6b14dd0697.txt",
-    "parsed_at": "2026-10-11T00:24:45.672628Z",
+    "parsed_at": "2026-10-12T08:45:03.230314Z",
     "date": null,
     "meeting": 1,
     "track": "VICHY",
@@ -33,13 +33,11 @@
             "arrival": [
                 2,
                 3,
-                10,
-                1
+                10
             ],
             "winner": 2,
             "second": 3,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         },
         {
             "race_number": 4,
@@ -56,12 +54,11 @@
             "race_number": 5,
             "arrival": [
                 4,
-                7,
-                1
+                7
             ],
             "winner": 4,
             "second": 7,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 6,
@@ -79,13 +76,11 @@
             "arrival": [
                 3,
                 2,
-                7,
-                1
+                7
             ],
             "winner": 3,
             "second": 2,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         },
         {
             "race_number": 8,

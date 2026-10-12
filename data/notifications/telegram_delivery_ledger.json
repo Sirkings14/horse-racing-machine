@@ -46,11 +46,11 @@
       "signature": {
         "decision": "NO_BET",
         "candidates_in_order": [
+          12,
+          1,
           2,
           5,
-          13,
-          8,
-          1
+          13
         ],
         "gate_reasons": [
           "economic_validation_unavailable",
@@ -58,10 +58,10 @@
           "low_model_confidence"
         ]
       },
-      "sent_at": "2026-10-11T23:33:30.600543+00:00",
-      "prediction_id": "2026-10-12|MARSEILLE-BORELY|4|2026-10-11T23:33:30.075716+00:00",
+      "sent_at": "2026-10-12T08:47:16.739414+00:00",
+      "prediction_id": "2026-10-12|MARSEILLE-BORELY|4|2026-10-12T08:47:16.370653+00:00",
       "model_version": "v4-evidence-no-press",
-      "telegram_message_id": 236
+      "telegram_message_id": 238
     },
     "2026-10-13|PARISLONGCHAMP|1": {
       "signature": {

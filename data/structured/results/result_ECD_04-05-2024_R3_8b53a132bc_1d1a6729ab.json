@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_04-05-2024_R3_8b53a132bc_1d1a6729ab.txt",
-    "parsed_at": "2026-10-11T00:24:44.945199Z",
+    "parsed_at": "2026-10-12T08:45:02.533377Z",
     "date": "2024-05-04",
     "meeting": 3,
     "track": "AUTEUIL",
@@ -43,13 +43,11 @@
             "arrival": [
                 10,
                 1,
-                5,
-                2
+                5
             ],
             "winner": 10,
             "second": 1,
-            "third": 5,
-            "fourth": 2
+            "third": 5
         },
         {
             "race_number": 5,
@@ -77,26 +75,22 @@
             "arrival": [
                 3,
                 9,
-                6,
-                2
+                6
             ],
             "winner": 3,
             "second": 9,
-            "third": 6,
-            "fourth": 2
+            "third": 6
         },
         {
             "race_number": 8,
             "arrival": [
                 3,
                 6,
-                9,
-                1
+                9
             ],
             "winner": 3,
             "second": 6,
-            "third": 9,
-            "fourth": 1
+            "third": 9
         }
     ]
 }

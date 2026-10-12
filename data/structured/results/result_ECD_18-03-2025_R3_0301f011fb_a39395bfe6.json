@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_18-03-2025_R3_0301f011fb_a39395bfe6.txt",
-    "parsed_at": "2026-10-11T00:24:45.402969Z",
+    "parsed_at": "2026-10-12T08:45:02.972932Z",
     "date": "2025-03-18",
     "meeting": 3,
     "track": "MESLAY-DU-MAINE",
@@ -43,14 +43,11 @@
             "race_number": 4,
             "arrival": [
                 5,
-                3,
-                1,
-                19
+                3
             ],
             "winner": 5,
             "second": 3,
-            "third": 1,
-            "fourth": 19
+            "third": null
         },
         {
             "race_number": 5,
@@ -79,26 +76,22 @@
             "arrival": [
                 9,
                 14,
-                17,
-                2
+                17
             ],
             "winner": 9,
             "second": 14,
-            "third": 17,
-            "fourth": 2
+            "third": 17
         },
         {
             "race_number": 8,
             "arrival": [
                 2,
                 7,
-                5,
-                1
+                5
             ],
             "winner": 2,
             "second": 7,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         }
     ]
 }

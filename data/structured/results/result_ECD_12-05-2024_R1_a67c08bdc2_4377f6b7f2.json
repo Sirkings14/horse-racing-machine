@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_12-05-2024_R1_a67c08bdc2_4377f6b7f2.txt",
-    "parsed_at": "2026-10-11T00:24:45.209805Z",
+    "parsed_at": "2026-10-12T08:45:02.782981Z",
     "date": null,
     "meeting": 1,
     "track": "LONGCHAMP",
@@ -43,92 +43,76 @@
             "arrival": [
                 13,
                 4,
-                2,
-                1
+                2
             ],
             "winner": 13,
             "second": 4,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 5,
             "arrival": [
                 1,
                 12,
-                2,
-                16
+                2
             ],
             "winner": 1,
             "second": 12,
-            "third": 2,
-            "fourth": 16
+            "third": 2
         },
         {
             "race_number": 6,
             "arrival": [
                 6,
                 7,
-                12,
-                2
+                12
             ],
             "winner": 6,
             "second": 7,
-            "third": 12,
-            "fourth": 2
+            "third": 12
         },
         {
             "race_number": 7,
             "arrival": [
                 4,
-                2,
-                1
+                2
             ],
             "winner": 4,
             "second": 2,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 8,
             "arrival": [
                 2,
                 7,
-                8,
-                1
+                8
             ],
             "winner": 2,
             "second": 7,
-            "third": 8,
-            "fourth": 1
+            "third": 8
         },
         {
             "race_number": 9,
             "arrival": [
                 10,
                 11,
-                7,
-                1
+                7
             ],
             "winner": 10,
             "second": 11,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         },
         {
             "race_number": 10,
             "arrival": [
                 16,
                 2,
-                3,
-                1,
-                10,
-                20
+                3
             ],
             "winner": 16,
             "second": 2,
-            "third": 3,
-            "fourth": 1,
-            "fifth": 10
+            "third": 3
         }
     ]
 }

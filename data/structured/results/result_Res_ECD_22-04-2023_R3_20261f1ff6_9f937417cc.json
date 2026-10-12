@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_Res_ECD_22-04-2023_R3_20261f1ff6_9f937417cc.txt",
-    "parsed_at": "2026-10-11T00:24:46.277927Z",
+    "parsed_at": "2026-10-12T08:45:03.834551Z",
     "date": "2023-04-22",
     "meeting": 3,
     "track": "LYON-PARILLY",
@@ -10,14 +10,11 @@
             "race_number": 1,
             "arrival": [
                 3,
-                2,
-                1,
-                15
+                2
             ],
             "winner": 3,
             "second": 2,
-            "third": 1,
-            "fourth": 15
+            "third": null
         },
         {
             "race_number": 2,
@@ -78,13 +75,11 @@
             "arrival": [
                 8,
                 3,
-                7,
-                1
+                7
             ],
             "winner": 8,
             "second": 3,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         },
         {
             "race_number": 8,
@@ -102,13 +97,11 @@
             "arrival": [
                 5,
                 7,
-                6,
-                2
+                6
             ],
             "winner": 5,
             "second": 7,
-            "third": 6,
-            "fourth": 2
+            "third": 6
         }
     ]
 }

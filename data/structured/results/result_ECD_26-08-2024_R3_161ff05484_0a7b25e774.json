@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_26-08-2024_R3_161ff05484_0a7b25e774.txt",
-    "parsed_at": "2026-10-11T00:24:45.678070Z",
+    "parsed_at": "2026-10-12T08:45:03.235803Z",
     "date": "2024-08-26",
     "meeting": 3,
     "track": "MOULINS",
@@ -10,12 +10,11 @@
             "race_number": 1,
             "arrival": [
                 5,
-                2,
-                1
+                2
             ],
             "winner": 5,
             "second": 2,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 2,
@@ -43,12 +42,11 @@
             "race_number": 4,
             "arrival": [
                 3,
-                1,
-                17
+                1
             ],
             "winner": 3,
             "second": 1,
-            "third": 17
+            "third": null
         },
         {
             "race_number": 5,
@@ -65,13 +63,11 @@
             "arrival": [
                 5,
                 9,
-                3,
-                2
+                3
             ],
             "winner": 5,
             "second": 9,
-            "third": 3,
-            "fourth": 2
+            "third": 3
         },
         {
             "race_number": 7,
@@ -89,13 +85,11 @@
             "arrival": [
                 1,
                 7,
-                10,
-                2
+                10
             ],
             "winner": 1,
             "second": 7,
-            "third": 10,
-            "fourth": 2
+            "third": 10
         }
     ]
 }

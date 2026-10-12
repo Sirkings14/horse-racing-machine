@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_21-05-2025_R3_40a4cff9da_2b9cdec26e.txt",
-    "parsed_at": "2026-10-11T00:24:45.507974Z",
+    "parsed_at": "2026-10-12T08:45:03.072519Z",
     "date": "2025-05-21",
     "meeting": 3,
     "track": "TOULOUSE",
@@ -10,34 +10,31 @@
             "race_number": 1,
             "arrival": [
                 4,
-                3,
-                1
+                3
             ],
             "winner": 4,
             "second": 3,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 2,
             "arrival": [
                 7,
-                5,
-                2
+                5
             ],
             "winner": 7,
             "second": 5,
-            "third": 2
+            "third": null
         },
         {
             "race_number": 3,
             "arrival": [
                 6,
-                7,
-                1
+                7
             ],
             "winner": 6,
             "second": 7,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 4,
@@ -55,26 +52,22 @@
             "arrival": [
                 6,
                 5,
-                3,
-                1
+                3
             ],
             "winner": 6,
             "second": 5,
-            "third": 3,
-            "fourth": 1
+            "third": 3
         },
         {
             "race_number": 6,
             "arrival": [
                 9,
                 6,
-                7,
-                3
+                7
             ],
             "winner": 9,
             "second": 6,
-            "third": 7,
-            "fourth": 3
+            "third": 7
         },
         {
             "race_number": 7,
@@ -92,13 +85,11 @@
             "arrival": [
                 15,
                 5,
-                3,
-                1
+                3
             ],
             "winner": 15,
             "second": 5,
-            "third": 3,
-            "fourth": 1
+            "third": 3
         }
     ]
 }

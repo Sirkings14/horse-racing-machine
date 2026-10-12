@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_08-03-2025_R1_36b0abe554_bf7cd09007.txt",
-    "parsed_at": "2026-10-11T00:24:45.071403Z",
+    "parsed_at": "2026-10-12T08:45:02.652078Z",
     "date": "2025-03-08",
     "meeting": 1,
     "track": "AUTEUIL",
@@ -11,13 +11,11 @@
             "arrival": [
                 3,
                 4,
-                8,
-                1
+                8
             ],
             "winner": 3,
             "second": 4,
-            "third": 8,
-            "fourth": 1
+            "third": 8
         },
         {
             "race_number": 2,
@@ -56,13 +54,11 @@
             "arrival": [
                 9,
                 3,
-                7,
-                1
+                7
             ],
             "winner": 9,
             "second": 3,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         },
         {
             "race_number": 6,
@@ -80,26 +76,22 @@
             "arrival": [
                 10,
                 4,
-                11,
-                14
+                11
             ],
             "winner": 10,
             "second": 4,
-            "third": 11,
-            "fourth": 14
+            "third": 11
         },
         {
             "race_number": 8,
             "arrival": [
                 5,
                 12,
-                10,
-                2
+                10
             ],
             "winner": 5,
             "second": 12,
-            "third": 10,
-            "fourth": 2
+            "third": 10
         }
     ]
 }

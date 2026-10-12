@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_res_ECD_10-07-2023_R3_d33d07c95d_22247e0527.txt",
-    "parsed_at": "2026-10-11T00:24:46.338662Z",
+    "parsed_at": "2026-10-12T08:45:03.892502Z",
     "date": "2023-07-10",
     "meeting": 3,
     "track": "PORNICHET",
@@ -11,13 +11,11 @@
             "arrival": [
                 5,
                 6,
-                3,
-                7
+                3
             ],
             "winner": 5,
             "second": 6,
-            "third": 3,
-            "fourth": 7
+            "third": 3
         },
         {
             "race_number": 2,
@@ -35,39 +33,33 @@
             "arrival": [
                 9,
                 6,
-                5,
-                1
+                5
             ],
             "winner": 9,
             "second": 6,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 4,
             "arrival": [
                 2,
                 8,
-                5,
-                1
+                5
             ],
             "winner": 2,
             "second": 8,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 5,
             "arrival": [
                 11,
                 1,
-                13,
-                4
+                13
             ],
             "winner": 11,
             "second": 1,
-            "third": 13,
-            "fourth": 4
+            "third": 13
         },
         {
             "race_number": 6,
@@ -96,13 +88,11 @@
             "arrival": [
                 11,
                 6,
-                9,
-                1
+                9
             ],
             "winner": 11,
             "second": 6,
-            "third": 9,
-            "fourth": 1
+            "third": 9
         }
     ]
 }

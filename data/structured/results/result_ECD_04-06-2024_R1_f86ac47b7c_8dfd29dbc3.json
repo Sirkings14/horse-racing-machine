@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_04-06-2024_R1_f86ac47b7c_8dfd29dbc3.txt",
-    "parsed_at": "2026-10-11T00:24:44.947291Z",
+    "parsed_at": "2026-10-12T08:45:02.535297Z",
     "date": null,
     "meeting": 1,
     "track": "SAINT-CLOUUD",
@@ -22,26 +22,22 @@
             "arrival": [
                 5,
                 6,
-                8,
-                1
+                8
             ],
             "winner": 5,
             "second": 6,
-            "third": 8,
-            "fourth": 1
+            "third": 8
         },
         {
             "race_number": 3,
             "arrival": [
                 5,
                 8,
-                7,
-                1
+                7
             ],
             "winner": 5,
             "second": 8,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         },
         {
             "race_number": 4,
@@ -89,13 +85,11 @@
             "arrival": [
                 16,
                 6,
-                11,
-                1
+                11
             ],
             "winner": 16,
             "second": 6,
-            "third": 11,
-            "fourth": 1
+            "third": 11
         }
     ]
 }

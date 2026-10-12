@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_29-01-2026_R1_d7fa716e3b_189d176f4e.txt",
-    "parsed_at": "2026-10-11T00:24:45.761908Z",
+    "parsed_at": "2026-10-12T08:45:03.314307Z",
     "date": "2026-01-29",
     "meeting": 1,
     "track": "VINCENNES",
@@ -54,54 +54,44 @@
             "arrival": [
                 8,
                 2,
-                10,
-                1
+                10
             ],
             "winner": 8,
             "second": 2,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         },
         {
             "race_number": 6,
             "arrival": [
                 5,
                 9,
-                7,
-                2
+                7
             ],
             "winner": 5,
             "second": 9,
-            "third": 7,
-            "fourth": 2
+            "third": 7
         },
         {
             "race_number": 7,
             "arrival": [
                 3,
                 4,
-                12,
-                1,
-                2
+                12
             ],
             "winner": 3,
             "second": 4,
-            "third": 12,
-            "fourth": 1,
-            "fifth": 2
+            "third": 12
         },
         {
             "race_number": 8,
             "arrival": [
                 9,
                 7,
-                6,
-                3
+                6
             ],
             "winner": 9,
             "second": 7,
-            "third": 6,
-            "fourth": 3
+            "third": 6
         }
     ]
 }

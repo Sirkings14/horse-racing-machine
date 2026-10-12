@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_28-07-2023_R1.1_47c82e8793_42d92a2e12.txt",
-    "parsed_at": "2026-10-11T00:24:45.742314Z",
+    "parsed_at": "2026-10-12T08:45:03.296163Z",
     "date": "2023-07-28",
     "meeting": 1,
     "track": "CABOURG",
@@ -44,39 +44,33 @@
             "arrival": [
                 8,
                 9,
-                10,
-                2
+                10
             ],
             "winner": 8,
             "second": 9,
-            "third": 10,
-            "fourth": 2
+            "third": 10
         },
         {
             "race_number": 5,
             "arrival": [
                 8,
                 5,
-                12,
-                3
+                12
             ],
             "winner": 8,
             "second": 5,
-            "third": 12,
-            "fourth": 3
+            "third": 12
         },
         {
             "race_number": 6,
             "arrival": [
                 12,
                 10,
-                2,
-                1
+                2
             ],
             "winner": 12,
             "second": 10,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 7,
@@ -94,13 +88,11 @@
             "arrival": [
                 5,
                 10,
-                13,
-                3
+                13
             ],
             "winner": 5,
             "second": 10,
-            "third": 13,
-            "fourth": 3
+            "third": 13
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_01-03-2025_R3_f36907cefe_32f0bbdd20.txt",
-    "parsed_at": "2026-10-11T00:24:44.839688Z",
+    "parsed_at": "2026-10-12T08:45:02.423740Z",
     "date": "2025-03-01",
     "meeting": 3,
     "track": "FONTAINEBLEAU",
@@ -10,38 +10,33 @@
             "race_number": 1,
             "arrival": [
                 6,
-                5,
-                3
+                5
             ],
             "winner": 6,
             "second": 5,
-            "third": 3
+            "third": null
         },
         {
             "race_number": 2,
             "arrival": [
                 6,
                 9,
-                2,
-                1
+                2
             ],
             "winner": 6,
             "second": 9,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 3,
             "arrival": [
                 4,
                 10,
-                2,
-                1
+                2
             ],
             "winner": 4,
             "second": 10,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 4,
@@ -59,13 +54,11 @@
             "arrival": [
                 3,
                 6,
-                11,
-                1
+                11
             ],
             "winner": 3,
             "second": 6,
-            "third": 11,
-            "fourth": 1
+            "third": 11
         },
         {
             "race_number": 6,
@@ -83,13 +76,11 @@
             "arrival": [
                 10,
                 13,
-                7,
-                1
+                7
             ],
             "winner": 10,
             "second": 13,
-            "third": 7,
-            "fourth": 1
+            "third": 7
         },
         {
             "race_number": 8,
@@ -107,13 +98,11 @@
             "arrival": [
                 6,
                 15,
-                8,
-                4
+                8
             ],
             "winner": 6,
             "second": 15,
-            "third": 8,
-            "fourth": 4
+            "third": 8
         }
     ]
 }

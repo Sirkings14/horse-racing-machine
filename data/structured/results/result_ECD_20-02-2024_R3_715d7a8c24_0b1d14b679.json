@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_20-02-2024_R3_715d7a8c24_0b1d14b679.txt",
-    "parsed_at": "2026-10-11T00:24:45.466463Z",
+    "parsed_at": "2026-10-12T08:45:03.032663Z",
     "date": "2024-02-20",
     "meeting": 3,
     "track": "FONTAINEBLEAU",
@@ -54,13 +54,11 @@
             "arrival": [
                 3,
                 4,
-                2,
-                1
+                2
             ],
             "winner": 3,
             "second": 4,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 6,
@@ -78,26 +76,22 @@
             "arrival": [
                 2,
                 4,
-                12,
-                1
+                12
             ],
             "winner": 2,
             "second": 4,
-            "third": 12,
-            "fourth": 1
+            "third": 12
         },
         {
             "race_number": 8,
             "arrival": [
                 12,
                 11,
-                2,
-                1
+                2
             ],
             "winner": 12,
             "second": 11,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         }
     ]
 }

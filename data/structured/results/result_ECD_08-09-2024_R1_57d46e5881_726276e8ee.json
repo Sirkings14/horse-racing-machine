@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_08-09-2024_R1_57d46e5881_726276e8ee.txt",
-    "parsed_at": "2026-10-11T00:24:45.087161Z",
+    "parsed_at": "2026-10-12T08:45:02.666601Z",
     "date": "2024-09-08",
     "meeting": 1,
     "track": "LONGCHAMP",
@@ -21,12 +21,11 @@
             "race_number": 2,
             "arrival": [
                 3,
-                7,
-                1
+                7
             ],
             "winner": 3,
             "second": 7,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 3,
@@ -43,13 +42,11 @@
             "arrival": [
                 5,
                 3,
-                2,
-                1
+                2
             ],
             "winner": 5,
             "second": 3,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 5,
@@ -77,39 +74,33 @@
             "arrival": [
                 8,
                 12,
-                5,
-                3
+                5
             ],
             "winner": 8,
             "second": 12,
-            "third": 5,
-            "fourth": 3
+            "third": 5
         },
         {
             "race_number": 8,
             "arrival": [
                 6,
                 5,
-                2,
-                1
+                2
             ],
             "winner": 6,
             "second": 5,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 9,
             "arrival": [
                 9,
                 14,
-                4,
-                1
+                4
             ],
             "winner": 9,
             "second": 14,
-            "third": 4,
-            "fourth": 1
+            "third": 4
         }
     ]
 }

@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_21-07-2026_R4_778eae0654_61ec160d41.txt",
-    "parsed_at": "2026-10-11T00:24:45.513938Z",
+    "parsed_at": "2026-10-12T08:45:03.078290Z",
     "date": "2026-07-21",
     "meeting": 4,
     "track": "CHATEAUBRIANT",
@@ -22,24 +22,21 @@
             "arrival": [
                 3,
                 6,
-                10,
-                14
+                10
             ],
             "winner": 3,
             "second": 6,
-            "third": 10,
-            "fourth": 14
+            "third": 10
         },
         {
             "race_number": 3,
             "arrival": [
                 4,
-                2,
-                1
+                2
             ],
             "winner": 4,
             "second": 2,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 4,

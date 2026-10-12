@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_08-02-2024_R3_58d9593ed6_b55e3547ab.txt",
-    "parsed_at": "2026-10-11T00:24:45.067669Z",
+    "parsed_at": "2026-10-12T08:45:02.649287Z",
     "date": "2024-02-08",
     "meeting": 3,
     "track": "PAU",
@@ -10,12 +10,11 @@
             "race_number": 1,
             "arrival": [
                 6,
-                2,
-                1
+                2
             ],
             "winner": 6,
             "second": 2,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 2,
@@ -54,15 +53,11 @@
             "arrival": [
                 4,
                 3,
-                7,
-                1,
-                6
+                7
             ],
             "winner": 4,
             "second": 3,
-            "third": 7,
-            "fourth": 1,
-            "fifth": 6
+            "third": 7
         },
         {
             "race_number": 6,
@@ -91,13 +86,11 @@
             "arrival": [
                 5,
                 9,
-                2,
-                1
+                2
             ],
             "winner": 5,
             "second": 9,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         }
     ]
 }

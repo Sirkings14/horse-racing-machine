@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_22-01-2025_R1_6ce36a7006_10525e9100.txt",
-    "parsed_at": "2026-10-11T00:24:45.530263Z",
+    "parsed_at": "2026-10-12T08:45:03.092882Z",
     "date": "2025-01-22",
     "meeting": 1,
     "track": "CAGNES-SUR-MER",
@@ -11,70 +11,55 @@
             "arrival": [
                 3,
                 6,
-                5,
-                1
+                5
             ],
             "winner": 3,
             "second": 6,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 2,
             "arrival": [
                 16,
                 4,
-                13,
-                1,
-                6
+                13
             ],
             "winner": 16,
             "second": 4,
-            "third": 13,
-            "fourth": 1,
-            "fifth": 6
+            "third": 13
         },
         {
             "race_number": 3,
             "arrival": [
                 3,
                 2,
-                8,
-                1
+                8
             ],
             "winner": 3,
             "second": 2,
-            "third": 8,
-            "fourth": 1
+            "third": 8
         },
         {
             "race_number": 4,
             "arrival": [
                 13,
                 2,
-                10,
-                3
+                10
             ],
             "winner": 13,
             "second": 2,
-            "third": 10,
-            "fourth": 3
+            "third": 10
         },
         {
             "race_number": 5,
             "arrival": [
                 16,
                 7,
-                13,
-                1,
-                8,
-                4
+                13
             ],
             "winner": 16,
             "second": 7,
-            "third": 13,
-            "fourth": 1,
-            "fifth": 8
+            "third": 13
         },
         {
             "race_number": 6,
@@ -103,13 +88,11 @@
             "arrival": [
                 5,
                 12,
-                9,
-                1
+                9
             ],
             "winner": 5,
             "second": 12,
-            "third": 9,
-            "fourth": 1
+            "third": 9
         }
     ]
 }

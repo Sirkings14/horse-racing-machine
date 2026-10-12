@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_23-08-2026_R2_985ef528ec_514b108eba.txt",
-    "parsed_at": "2026-10-11T00:24:45.582616Z",
+    "parsed_at": "2026-10-12T08:45:03.143511Z",
     "date": "2026-08-23",
     "meeting": 2,
     "track": "BEAUMONT- DE- LOMAGNE",
@@ -33,26 +33,22 @@
             "arrival": [
                 4,
                 5,
-                3,
-                2
+                3
             ],
             "winner": 4,
             "second": 5,
-            "third": 3,
-            "fourth": 2
+            "third": 3
         },
         {
             "race_number": 4,
             "arrival": [
                 10,
                 4,
-                2,
-                1
+                2
             ],
             "winner": 10,
             "second": 4,
-            "third": 2,
-            "fourth": 1
+            "third": 2
         },
         {
             "race_number": 5,
@@ -70,26 +66,22 @@
             "arrival": [
                 7,
                 10,
-                5,
-                1
+                5
             ],
             "winner": 7,
             "second": 10,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 7,
             "arrival": [
                 7,
                 11,
-                10,
-                1
+                10
             ],
             "winner": 7,
             "second": 11,
-            "third": 10,
-            "fourth": 1
+            "third": 10
         }
     ]
 }

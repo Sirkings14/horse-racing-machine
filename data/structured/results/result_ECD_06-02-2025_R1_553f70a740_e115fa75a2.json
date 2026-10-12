@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_06-02-2025_R1_553f70a740_e115fa75a2.txt",
-    "parsed_at": "2026-10-11T00:24:45.006032Z",
+    "parsed_at": "2026-10-12T08:45:02.589289Z",
     "date": "2025-02-06",
     "meeting": 1,
     "track": "PARIS-VINCENNES",
@@ -55,13 +55,11 @@
             "arrival": [
                 9,
                 7,
-                11,
-                1
+                11
             ],
             "winner": 9,
             "second": 7,
-            "third": 11,
-            "fourth": 1
+            "third": 11
         },
         {
             "race_number": 6,
@@ -79,26 +77,22 @@
             "arrival": [
                 9,
                 7,
-                5,
-                1
+                5
             ],
             "winner": 9,
             "second": 7,
-            "third": 5,
-            "fourth": 1
+            "third": 5
         },
         {
             "race_number": 8,
             "arrival": [
                 6,
                 1,
-                8,
-                2
+                8
             ],
             "winner": 6,
             "second": 1,
-            "third": 8,
-            "fourth": 2
+            "third": 8
         }
     ]
 }

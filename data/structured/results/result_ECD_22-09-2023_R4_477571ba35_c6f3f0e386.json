@@ -1,7 +1,7 @@
 {
     "document_type": "result",
     "source_file": "result_ECD_22-09-2023_R4_477571ba35_c6f3f0e386.txt",
-    "parsed_at": "2026-10-11T00:24:45.550817Z",
+    "parsed_at": "2026-10-12T08:45:03.112819Z",
     "date": "2023-09-22",
     "meeting": 4,
     "track": "SAINT-CLOUD",
@@ -10,12 +10,11 @@
             "race_number": 1,
             "arrival": [
                 2,
-                4,
-                1
+                4
             ],
             "winner": 2,
             "second": 4,
-            "third": 1
+            "third": null
         },
         {
             "race_number": 2,
@@ -97,16 +96,11 @@
             "arrival": [
                 9,
                 8,
-                4,
-                1,
-                10,
-                3
+                4
             ],
             "winner": 9,
             "second": 8,
-            "third": 4,
-            "fourth": 1,
-            "fifth": 10
+            "third": 4
         }
     ]
 }
