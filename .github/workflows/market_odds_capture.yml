@@ -1,0 +1,67 @@
+name: Free PMU live-odds capture
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+# Serialize the evidence writer with the autonomous machine. The collector
+# only commits when it has added a new validated pre-race snapshot.
+concurrency:
+  group: horse-racing-machine-main-writer
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Syntax check
+        run: python -m compileall -q src
+      - name: Capture current PMU win odds
+        run: python -m src.model.live_pmu_odds_capture
+      - name: Commit new evidence snapshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f data/evaluation/market_evidence.json ]; then
+            echo "No verified odds have been captured; leaving the evidence ledger untouched."
+            exit 0
+          fi
+          git add data/evaluation/market_evidence.json
+          if git diff --cached --quiet; then
+            echo "No new market-odds snapshots."
+            exit 0
+          fi
+
+          python -m src.model.profitability
+          git add data/evaluation/profitability_report.json
+          git config user.name "Horse Racing Market Evidence"
+          git config user.email "market-evidence@users.noreply.github.com"
+          git commit -m "Capture verified pre-race PMU odds [skip ci]"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main && git push origin HEAD:main; then
+              echo "Market odds evidence pushed successfully."
+              exit 0
+            fi
+            git rebase --abort || true
+            echo "Push/rebase attempt $attempt failed; refusing to overwrite main unsafely."
+            sleep $((attempt * 3))
+          done
+          echo "Could not safely publish market evidence after 3 attempts."
+          exit 1

@@ -6,12 +6,14 @@ on:
     paths:
       - "src/model/market_evidence.py"
       - "src/model/market_odds_capture.py"
+      - "src/model/live_pmu_odds_capture.py"
       - "src/model/turf_bzh_odds.py"
       - "src/model/profitability.py"
       - "scripts/**"
       - "tests/**"
       - "requirements.txt"
       - ".github/workflows/odds-evidence-ci.yml"
+      - ".github/workflows/market_odds_capture.yml"
   workflow_dispatch:
 
 permissions:
