@@ -508,7 +508,34 @@ def collect_for_day(race_day: date | None = None, now: datetime | None = None) -
     for race_key, program in cards:
         course = match_pmu_course(source_courses, program)
         if course is None:
+            race_meta = program.get("race") or {}
+            target_identity = {
+                "track": race_meta.get("track"),
+                "race_name": race_meta.get("race_name"),
+                "distance": race_meta.get("distance"),
+                "runners_count": race_meta.get("runners_count"),
+                "horse_count": len(program.get("horses") or []),
+            }
+            candidate_summary = [
+                {
+                    "track": item.get("track"),
+                    "race_name": item.get("race_name"),
+                    "meeting_number": item.get("meeting_number"),
+                    "course_number": item.get("course_number"),
+                    "distance": item.get("distance"),
+                    "runners_count": item.get("runners_count"),
+                    "off_at": item.get("off_at").isoformat() if isinstance(item.get("off_at"), datetime) else None,
+                }
+                for item in source_courses[:40]
+            ]
             print(f"PMU odds capture skipped for {race_key}: venue/course match was absent or ambiguous.")
+            print(json.dumps({
+                "diagnostic": "pmu_course_match_failure",
+                "race_key": race_key,
+                "target": target_identity,
+                "parsed_pmu_course_count": len(source_courses),
+                "parsed_pmu_courses_sample": candidate_summary,
+            }, ensure_ascii=False))
             stats["skipped"] += 1
             continue
 
