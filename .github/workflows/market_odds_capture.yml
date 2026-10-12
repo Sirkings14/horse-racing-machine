@@ -51,7 +51,7 @@ jobs:
           git add data/evaluation/profitability_report.json
           git config user.name "Horse Racing Market Evidence"
           git config user.email "market-evidence@users.noreply.github.com"
-          git commit -m "Capture verified pre-race PMU odds"
+          git commit -m "Capture verified pre-race PMU odds [skip ci]"
 
           for attempt in 1 2 3; do
             git fetch origin main
