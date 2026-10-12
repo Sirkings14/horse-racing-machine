@@ -191,6 +191,10 @@ def build_settlement_metrics(
     validation = evaluation.get("result_validation") or result.get("truth_validation") or {}
     if validation.get("accepted_for_learning") is not True:
         return None
+    verified_at = _aware_utc(evaluation.get("verified_at"))
+    race_off_at = _aware_utc(comparison.get("race_off_at"))
+    if verified_at is None or race_off_at is None or verified_at < race_off_at:
+        return None
 
     winner_value = result.get("winner")
     if winner_value is None:
@@ -223,16 +227,21 @@ def build_settlement_metrics(
         declared_runner_count = int(race.get("runners_count") or 0)
     except (TypeError, ValueError, OverflowError):
         declared_runner_count = 0
-    runner_numbers = {_runner_number(row) for row in rows if isinstance(row, dict)}
+    runner_numbers = {
+        number for row in rows
+        if isinstance(row, dict)
+        for number in [_runner_number(row)]
+        if number is not None
+    }
     try:
         ranked_runner_count = int(comparison.get("ranked_runner_count") or 0)
     except (TypeError, ValueError, OverflowError):
         ranked_runner_count = 0
     full_field_coverage = (
         declared_runner_count > 0
-        and len(runner_numbers) >= declared_runner_count
-        and len(rows) >= declared_runner_count
-        and ranked_runner_count >= declared_runner_count
+        and len(runner_numbers) == declared_runner_count
+        and len(rows) == declared_runner_count
+        and ranked_runner_count == declared_runner_count
     )
 
     model_brier: float | None = None
