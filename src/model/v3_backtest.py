@@ -5,7 +5,7 @@ import math
 import random
 
 from src.model.historical_profile import build_walk_forward_profiles
-from src.model.v3_model import fit_v3_model, evaluation_labels_complete
+from src.model.v3_model import fit_v3_model, evaluation_labels_complete, normalize_race_probabilities
 from src.model.calibration import calibration_metrics
 from src.dataset.program_history import load_program_history
 
@@ -55,7 +55,7 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
     # Keep validation chronological but bounded. All earlier races remain
     # available for training; only the final holdout window is scored.
     evaluation_keys=set(keys[-max_eval_races:]) if max_eval_races and len(keys)>max_eval_races else set(keys)
-    predictions=[]; probabilities=[]; labels=[]
+    predictions=[]; probabilities=[]; labels=[]; winner_brier_scores=[]; winner_uniform_brier_scores=[]
     skipped_incomplete_evaluation_labels=0
     # Refit once per calendar date, preserving the rule that same-day races
     # cannot teach one another while making large walk-forward validation viable.
@@ -86,7 +86,18 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
             if not evaluation_labels_complete(test, ("won", "top3")):
                 skipped_incomplete_evaluation_labels += 1
                 continue
-            p1=models["winner"].predict_proba(test); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
+            p1=normalize_race_probabilities(models["winner"].predict_proba(test)); p3=models["top3"].predict_proba(test); p5=models["top5"].predict_proba(test)
+            winner_labels_for_race = [int(float(row.get("won", 0))) for row in test]
+            if len(test) and all(label in (0, 1) for label in winner_labels_for_race) and sum(winner_labels_for_race) == 1:
+                winner_brier_scores.append(sum(
+                    (float(probability) - label) ** 2
+                    for probability, label in zip(p1, winner_labels_for_race)
+                ))
+                uniform_probability = 1.0 / len(test)
+                winner_uniform_brier_scores.append(sum(
+                    (uniform_probability - label) ** 2
+                    for label in winner_labels_for_race
+                ))
             ensemble=[0.25*a+0.50*b+0.25*c for a,b,c in zip(p1,p3,p5)]
             ranked=sorted((dict(r,ensemble_score=float(s),p_winner=float(a),p_top3=float(b),p_top5=float(c)) for r,a,b,c,s in zip(test,p1,p3,p5,ensemble)),key=lambda r:(-r["ensemble_score"],int(r.get("horse_number",9999))))
             ev=_evaluate(ranked); ev["race_key"]=key; ev["field_size"]=len(ranked)
@@ -147,6 +158,9 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
             **{f"{k}_top3":v for k,v in cal.items()},
             "brier_baseline_top3":round(brier_baseline,6),
             "log_loss_baseline_top3":round(logloss_baseline,6),
+            "multiclass_winner_brier_score": round(sum(winner_brier_scores) / len(winner_brier_scores), 6) if winner_brier_scores else None,
+            "uniform_winner_brier_baseline": round(sum(winner_uniform_brier_scores) / len(winner_uniform_brier_scores), 6) if winner_uniform_brier_scores else None,
+            "winner_brier_evaluated_races": len(winner_brier_scores),
             "coverage3_lift_vs_random":round((sum(cov3)/n)/(sum(random_cov)/n)-1.0,4) if sum(random_cov)>0 else None,
         },
         "confidence_intervals":{
