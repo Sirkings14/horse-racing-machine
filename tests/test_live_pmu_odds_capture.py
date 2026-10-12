@@ -165,8 +165,8 @@ def test_unknown_or_low_coverage_runner_data_fails_closed():
     course["participants_url"] = _participants_url(date(2026, 10, 12), 3, 4)
     participants = _participants()
     participants["participants"][0]["nom"] = "WRONG HORSE"
-    participants["participants"][1]["dernierRapportDirect"]["rapport"] = 0
-    participants["participants"][2]["dernierRapportDirect"]["typePari"] = "TRIO"
+    participants["participants"][1]["cotes"][0]["cote"] = 0
+    participants["participants"][2]["cotes"][0]["typePari"] = "TRIO"
     participants["participants"][3]["statut"] = "NON_PARTANT"
     assert build_snapshot(
         "2026-10-12|MARSEILLE-BORELY|4",
