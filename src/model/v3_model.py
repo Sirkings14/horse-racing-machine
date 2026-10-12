@@ -5,6 +5,22 @@ import numpy as np
 from src.model.v3_features import FEATURE_NAMES, build_v3_matrix
 from src.model.calibration import apply_sigmoid_calibrator
 
+
+def normalize_race_probabilities(probabilities: Sequence[float]) -> np.ndarray:
+    """Turn independent per-runner win estimates into a single-winner distribution."""
+    values = np.asarray(probabilities, dtype=float)
+    if values.ndim != 1:
+        raise ValueError("Race probabilities must be a one-dimensional sequence.")
+    if values.size == 0:
+        raise ValueError("Cannot normalize an empty race field.")
+    if not np.all(np.isfinite(values)) or np.any(values < 0.0) or np.any(values > 1.0):
+        raise ValueError("Per-runner win estimates must be finite values in [0, 1].")
+    total = float(np.sum(values))
+    if not np.isfinite(total) or total <= 0.0:
+        raise ValueError("Cannot normalize a race with zero or invalid win-probability mass.")
+    return values / total
+
+
 @dataclass
 class V3LogisticModel:
     feature_names: list[str]
