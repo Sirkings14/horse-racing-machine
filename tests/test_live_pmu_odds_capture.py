@@ -7,6 +7,7 @@ from src.model.live_pmu_odds_capture import (
     course_matches_program,
     iter_pmu_courses,
     match_pmu_course,
+    summarize_participant_schema,
 )
 from src.model.market_evidence import normalize_snapshot
 
@@ -174,6 +175,40 @@ def test_untyped_generic_report_is_not_accepted_as_a_live_odds_quote():
     assert build_snapshot(
         "2026-10-12|MARSEILLE-BORELY|4", _program(), course, payload, now
     ) is None
+
+
+def test_quote_schema_diagnostic_reports_shape_without_price_values():
+    program = _program()
+    payload = _participants()
+    diagnostic = summarize_participant_schema(program, payload)
+
+    assert diagnostic["participant_count"] == 5
+    assert diagnostic["program_runner_count"] == 5
+    assert diagnostic["identity_matches"] == 5
+    assert diagnostic["explicit_cote_field_count"] == 0
+    assert diagnostic["runner_samples_without_price_values"][0]["cotes"]["sample_items"][0]["typePari"] == "SIMPLE_GAGNANT"
+    assert "rapport" not in diagnostic["runner_samples_without_price_values"][0]
+
+
+def test_quote_schema_diagnostic_counts_typed_direct_quotes_and_timestamps():
+    program = _program()
+    payload = _participants()
+    for index, participant in enumerate(payload["participants"], 1):
+        participant.pop("cotes", None)
+        participant["dernierRapportDirect"] = {
+            "typePari": "SIMPLE_GAGNANT",
+            "typeRapport": "PROBABLE",
+            "rapport": float(index + 2),
+            "dateRapport": "2026-10-12T13:59:00+02:00",
+        }
+
+    diagnostic = summarize_participant_schema(program, payload)
+    assert diagnostic["direct_report_dict_count"] == 5
+    assert diagnostic["direct_report_win_type_count"] == 5
+    assert diagnostic["direct_report_positive_numeric_count"] == 5
+    assert diagnostic["direct_report_timestamp_present_count"] == 5
+    assert diagnostic["runner_samples_without_price_values"][0]["direct_quote"]["rapport_positive_numeric"] is True
+    assert diagnostic["runner_samples_without_price_values"][0]["direct_quote"]["timestamp_parseable"] is True
 
 
 def test_no_snapshot_is_built_at_or_after_scheduled_off_time():
