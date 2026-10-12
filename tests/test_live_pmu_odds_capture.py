@@ -1,6 +1,7 @@
 from datetime import date, datetime, timezone
 
 from src.model.live_pmu_odds_capture import (
+    MAX_LOOKAHEAD_MINUTES,
     _participants_url,
     build_snapshot,
     course_matches_program,
@@ -203,3 +204,10 @@ def test_unknown_or_low_coverage_runner_data_fails_closed():
         participants,
         datetime(2026, 10, 12, 12, 0, tzinfo=timezone.utc),
     ) is None
+
+
+
+def test_collector_can_capture_initial_market_quotes_up_to_twelve_hours_pre_off():
+    # Broader look-ahead lets the ledger learn price movement, but quote
+    # timestamps and the strict race-off cutoff still guard every snapshot.
+    assert MAX_LOOKAHEAD_MINUTES == 720
