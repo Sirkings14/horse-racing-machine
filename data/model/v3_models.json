@@ -17,15 +17,18 @@
     "comparison": "strict_walk_forward_predictive_and_calibration_gate",
     "v4_metrics": {
       "winner_hit_rate_at_1": 0.1815,
-      "winner_hit_rate_at_3": 0.439,
+      "winner_hit_rate_at_3": 0.4406,
       "average_actual_top3_covered_by_predicted_top3": 1.0917,
-      "average_actual_top3_covered_by_predicted_top5": 1.6674,
+      "average_actual_top3_covered_by_predicted_top5": 1.6671,
       "random_baseline_top3_coverage": 0.7855,
       "brier_top3": 0.194132,
       "log_loss_top3": 0.595669,
       "ece_top3": 0.12401,
       "brier_baseline_top3": 0.184663,
       "log_loss_baseline_top3": 0.556086,
+      "multiclass_winner_brier_score": 0.904867,
+      "uniform_winner_brier_baseline": 0.912723,
+      "winner_brier_evaluated_races": 2998,
       "coverage3_lift_vs_random": 0.3899
     },
     "legacy_benchmark": {
