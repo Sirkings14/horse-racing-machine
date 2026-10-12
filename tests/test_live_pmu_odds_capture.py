@@ -31,8 +31,8 @@ def _program():
     }
 
 
-def _daily_program():
-    return {
+def _daily_program(include_date=True):
+    payload = {
         "date": "2026-10-12",
         "reunions": [
             {
@@ -60,11 +60,11 @@ def _participants():
                 "numPmu": index,
                 "nom": name,
                 "statut": "PARTANT",
-                "dernierRapportDirect": {
+                "cotes": [{
                     "typePari": "SIMPLE_GAGNANT",
-                    "rapport": float(index + 2),
-                    "dateRapport": "2026-10-12T13:59:00+02:00",
-                },
+                    "cote": float(index + 2),
+                    "dateCote": "2026-10-12T13:59:00+02:00",
+                }],
             }
             for index, name in enumerate(names, 1)
         ]
@@ -79,6 +79,12 @@ def test_daily_program_adapter_inherits_venue_and_meeting_number():
     assert courses[0]["course_number"] == 4
     assert courses[0]["distance"] == 2100
     assert courses[0]["runners_count"] == 5
+
+
+def test_time_only_off_is_parsed_when_daily_payload_omits_date():
+    courses = iter_pmu_courses(_daily_program(include_date=False), race_date="2026-10-12")
+    assert len(courses) == 1
+    assert courses[0]["off_at"] == datetime(2026, 10, 12, 12, 4, tzinfo=timezone.utc)
 
 
 def test_race_matching_requires_venue_name_distance_and_field_size():
@@ -121,6 +127,24 @@ def test_build_snapshot_preserves_direct_win_prices_and_runner_quote_times():
     assert normalized is not None
     assert normalized["evidence_grade"] == "verified_pre_race_market_odds"
     assert normalized["runner_price_timestamps"][1] == "2026-10-12T11:59:00+00:00"
+
+
+def test_ambiguous_payout_field_is_not_accepted_as_a_live_odds_quote():
+    course = iter_pmu_courses(_daily_program())[0]
+    course["participants_url"] = _participants_url(date(2026, 10, 12), 3, 4)
+    payload = {"participants": [{
+        "numPmu": 1,
+        "nom": "BAYAMOON",
+        "dernierRapportDirect": {
+            "typePari": "SIMPLE_GAGNANT",
+            "rapport": 3.4,
+            "dateRapport": "2026-10-12T13:59:00+02:00",
+        },
+    }]}
+    now = datetime(2026, 10, 12, 12, 0, tzinfo=timezone.utc)
+    assert build_snapshot(
+        "2026-10-12|MARSEILLE-BORELY|4", _program(), course, payload, now
+    ) is None
 
 
 def test_no_snapshot_is_built_at_or_after_scheduled_off_time():
