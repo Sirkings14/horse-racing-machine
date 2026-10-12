@@ -17,9 +17,9 @@
     "comparison": "strict_walk_forward_predictive_and_calibration_gate",
     "v4_metrics": {
       "winner_hit_rate_at_1": 0.1815,
-      "winner_hit_rate_at_3": 0.4406,
+      "winner_hit_rate_at_3": 0.439,
       "average_actual_top3_covered_by_predicted_top3": 1.0917,
-      "average_actual_top3_covered_by_predicted_top5": 1.6671,
+      "average_actual_top3_covered_by_predicted_top5": 1.6674,
       "random_baseline_top3_coverage": 0.7855,
       "brier_top3": 0.194132,
       "log_loss_top3": 0.595669,
