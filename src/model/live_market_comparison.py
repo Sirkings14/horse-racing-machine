@@ -12,6 +12,7 @@ from src.model.market_evidence import load_ledger, normalize_snapshot
 BASE_DIR = Path(__file__).resolve().parents[2]
 PREDICTIONS_DIR = BASE_DIR / "data" / "predictions"
 OUTPUT_FILE = BASE_DIR / "data" / "evaluation" / "live_market_comparison.json"
+EVALUATIONS_FILE = BASE_DIR / "data" / "evaluation" / "prediction_evaluations.json"
 MAX_COMPARISON_ROWS = 1000
 
 
@@ -161,6 +162,7 @@ def build_comparison(
         "recommended_numbers": recommended,
         "no_bet_reason": prediction.get("no_bet_reason") or [],
         "runner_count": len(matched),
+        "ranked_runner_count": valid_ranked_count,
         "runner_comparison": matched,
         "interpretation": (
             "Normalized implied market shares are a margin-normalized price benchmark, "
@@ -171,6 +173,150 @@ def build_comparison(
         "decision_policy_preserved": True,
         "roi_claim_permitted": False,
     }
+
+
+def build_settlement_metrics(
+    comparison: dict[str, Any],
+    evaluation: dict[str, Any],
+) -> dict[str, Any] | None:
+    """Attach a verified result to a research comparison, without betting/ROI logic."""
+    if not isinstance(comparison, dict) or not isinstance(evaluation, dict):
+        return None
+    if comparison.get("race_key") != evaluation.get("race_key"):
+        return None
+    if str(evaluation.get("status") or "").lower() not in {"result_verified", "verified"}:
+        return None
+
+    result = evaluation.get("result") or {}
+    validation = evaluation.get("result_validation") or result.get("truth_validation") or {}
+    if validation.get("accepted_for_learning") is not True:
+        return None
+
+    winner_value = result.get("winner")
+    if winner_value is None:
+        arrival = result.get("arrival") or result.get("arrival_order") or []
+        winner_value = arrival[0] if arrival else None
+    try:
+        winner = int(winner_value)
+    except (TypeError, ValueError, OverflowError):
+        return None
+    if winner <= 0:
+        return None
+
+    rows = comparison.get("runner_comparison")
+    if not isinstance(rows, list) or not rows:
+        return None
+    winner_row = next(
+        (row for row in rows if isinstance(row, dict) and _runner_number(row) == winner),
+        None,
+    )
+    if winner_row is None:
+        return None
+
+    model_probability = float(winner_row["model_probability_winner"])
+    market_share = float(winner_row["normalized_market_share"])
+    model_rank = int(winner_row["model_rank"])
+    market_rank = int(winner_row["market_rank"])
+
+    race = comparison.get("race") or {}
+    try:
+        declared_runner_count = int(race.get("runners_count") or 0)
+    except (TypeError, ValueError, OverflowError):
+        declared_runner_count = 0
+    runner_numbers = {_runner_number(row) for row in rows if isinstance(row, dict)}
+    full_field_coverage = (
+        declared_runner_count > 0
+        and len(runner_numbers) >= declared_runner_count
+        and len(rows) >= declared_runner_count
+    )
+
+    model_brier: float | None = None
+    market_brier: float | None = None
+    model_probability_sum = sum(
+        float(row["model_probability_winner"])
+        for row in rows
+        if isinstance(row, dict)
+    )
+    market_share_sum = sum(
+        float(row["normalized_market_share"])
+        for row in rows
+        if isinstance(row, dict)
+    )
+    if full_field_coverage and abs(model_probability_sum - 1.0) <= 0.02:
+        model_brier = sum(
+            (float(row["model_probability_winner"]) - (1.0 if _runner_number(row) == winner else 0.0)) ** 2
+            for row in rows
+            if isinstance(row, dict)
+        )
+    if full_field_coverage and abs(market_share_sum - 1.0) <= 1e-8:
+        market_brier = sum(
+            (float(row["normalized_market_share"]) - (1.0 if _runner_number(row) == winner else 0.0)) ** 2
+            for row in rows
+            if isinstance(row, dict)
+        )
+
+    return {
+        "result_verified": True,
+        "accepted_for_learning": True,
+        "verified_at": evaluation.get("verified_at"),
+        "winner_number": winner,
+        "model_winner_probability": model_probability,
+        "normalized_market_share_for_winner": market_share,
+        "model_rank_of_winner": model_rank,
+        "market_rank_of_winner": market_rank,
+        "winner_in_model_top3": model_rank <= 3,
+        "winner_in_model_top5": model_rank <= 5,
+        "winner_in_market_top3": market_rank <= 3,
+        "winner_in_market_top5": market_rank <= 5,
+        "full_field_probability_metrics_available": (
+            full_field_coverage
+            and model_brier is not None
+            and market_brier is not None
+        ),
+        "model_multiclass_brier_score": model_brier,
+        "market_multiclass_brier_score": market_brier,
+        "interpretation": (
+            "Single-race research diagnostics only. Brier scores are included only when the "
+            "full field is priced and both probability distributions are valid. This is not ROI."
+        ),
+        "research_only": True,
+        "real_money_authorized": False,
+        "roi_claim_permitted": False,
+    }
+
+
+def _runner_number(row: dict[str, Any]) -> int | None:
+    try:
+        return int(row.get("horse_number"))
+    except (TypeError, ValueError, OverflowError):
+        return None
+
+
+def _load_verified_evaluations() -> dict[str, dict[str, Any]]:
+    try:
+        payload = json.loads(EVALUATIONS_FILE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    if not isinstance(payload, list):
+        return {}
+
+    by_race: dict[str, dict[str, Any]] = {}
+    for item in payload:
+        if not isinstance(item, dict):
+            continue
+        if str(item.get("status") or "").lower() not in {"result_verified", "verified"}:
+            continue
+        result = item.get("result") or {}
+        validation = item.get("result_validation") or result.get("truth_validation") or {}
+        if validation.get("accepted_for_learning") is not True:
+            continue
+        race_key = str(item.get("race_key") or "")
+        if not race_key:
+            continue
+        previous = by_race.get(race_key)
+        if previous is None or str(item.get("verified_at") or "") > str(previous.get("verified_at") or ""):
+            by_race[race_key] = item
+    return by_race
 
 
 def _load_prediction_for_race(race_key: str) -> dict[str, Any] | None:
@@ -215,6 +361,17 @@ def main() -> dict[str, Any]:
         matched_this_run += 1
         by_id[comparison["comparison_id"]] = comparison
 
+    evaluations = _load_verified_evaluations()
+    settlement_updates = 0
+    for comparison in by_id.values():
+        evaluation = evaluations.get(str(comparison.get("race_key") or ""))
+        if evaluation is None:
+            continue
+        settlement = build_settlement_metrics(comparison, evaluation)
+        if settlement is not None:
+            comparison["settlement_metrics"] = settlement
+            settlement_updates += 1
+
     comparisons = sorted(
         by_id.values(),
         key=lambda row: (str(row.get("snapshot_captured_at", "")), str(row.get("race_key", ""))),
@@ -229,6 +386,10 @@ def main() -> dict[str, Any]:
         ),
         "comparisons_available": len(comparisons),
         "comparisons_updated_this_run": matched_this_run,
+        "settled_comparisons_available": sum(
+            1 for row in comparisons if isinstance(row.get("settlement_metrics"), dict)
+        ),
+        "settlement_comparisons_updated_this_run": settlement_updates,
         "comparisons": comparisons,
         "policy": {
             "research_only": True,
@@ -236,6 +397,8 @@ def main() -> dict[str, Any]:
             "does_not_change_no_bet": True,
             "does_not_calculate_roi_from_unsettled_races": True,
             "normalized_market_shares_are_not_true_probabilities": True,
+            "settled_metrics_require_accepted_official_result": True,
+            "single_race_hit_rates_are_not_profitability_evidence": True,
         },
     }
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
