@@ -29,6 +29,15 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
+      # The writer may be queued behind the autonomous machine. Refresh after
+      # the queue wait so odds are compared with the newest prediction that
+      # existed before the market snapshot, not the event's older commit SHA.
+      - name: Sync to latest main before market capture
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
