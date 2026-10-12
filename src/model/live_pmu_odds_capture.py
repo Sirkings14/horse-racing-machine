@@ -28,7 +28,7 @@ from src.model.market_evidence import append_snapshot
 PMU_API_ROOT = "https://online.turfinfo.api.pmu.fr/rest/client/61"
 SOURCE_LABEL = "PMU public live JSON (undocumented)"
 PARIS_TZ = ZoneInfo("Europe/Paris")
-MAX_LOOKAHEAD_MINUTES = 360
+MAX_LOOKAHEAD_MINUTES = 720
 MIN_IDENTITY_COVERAGE = 0.80
 MIN_PRICE_COVERAGE = 0.80
 USER_AGENT = "horse-racing-machine/1.0 (low-rate pre-race odds evidence capture)"
