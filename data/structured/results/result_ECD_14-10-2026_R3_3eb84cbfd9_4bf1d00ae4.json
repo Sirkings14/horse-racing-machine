@@ -1,0 +1,107 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_14-10-2026_R3_3eb84cbfd9_4bf1d00ae4.txt",
+    "parsed_at": "2026-10-14T22:30:26.015225Z",
+    "date": "2026-10-14",
+    "meeting": 3,
+    "track": "SAINT-CLOUD",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                4,
+                6
+            ],
+            "winner": 4,
+            "second": 6,
+            "third": null
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                1,
+                3,
+                6
+            ],
+            "winner": 1,
+            "second": 3,
+            "third": 6
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                7,
+                1
+            ],
+            "winner": 7,
+            "second": 1,
+            "third": null
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                6,
+                2,
+                8
+            ],
+            "winner": 6,
+            "second": 2,
+            "third": 8
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                6,
+                4,
+                8
+            ],
+            "winner": 6,
+            "second": 4,
+            "third": 8
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                3,
+                1,
+                2
+            ],
+            "winner": 3,
+            "second": 1,
+            "third": 2
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                7,
+                6,
+                14
+            ],
+            "winner": 7,
+            "second": 6,
+            "third": 14
+        },
+        {
+            "race_number": 8,
+            "arrival": [
+                13,
+                6,
+                15
+            ],
+            "winner": 13,
+            "second": 6,
+            "third": 15
+        },
+        {
+            "race_number": 9,
+            "arrival": [
+                16,
+                9,
+                8
+            ],
+            "winner": 16,
+            "second": 9,
+            "third": 8
+        }
+    ]
+}
