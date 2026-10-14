@@ -104,6 +104,26 @@
       "prediction_id": "2026-10-15|CHANTILLY|1|2026-10-13T16:56:43.434155+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 240
+    },
+    "2026-10-16|PARIS-VINCENNES NOCTURNE|4": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          9,
+          15,
+          2,
+          13,
+          14
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history"
+        ]
+      },
+      "sent_at": "2026-10-14T17:24:58.418894+00:00",
+      "prediction_id": "2026-10-16|PARIS-VINCENNES NOCTURNE|4|2026-10-14T17:24:57.915726+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 241
     }
   }
 }
