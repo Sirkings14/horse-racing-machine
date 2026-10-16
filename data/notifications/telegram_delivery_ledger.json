@@ -145,6 +145,27 @@
       "prediction_id": "2026-10-17|AUTEUIL - PRIX PRINCE D'ECOUEN|3|2026-10-15T17:14:35.963993+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 242
+    },
+    "2026-10-18|PARISLONGCHAMP|3": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          1,
+          9,
+          10,
+          5,
+          4
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-10-16T16:50:23.317049+00:00",
+      "prediction_id": "2026-10-18|PARISLONGCHAMP|3|2026-10-16T16:50:22.761809+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 243
     }
   }
 }
