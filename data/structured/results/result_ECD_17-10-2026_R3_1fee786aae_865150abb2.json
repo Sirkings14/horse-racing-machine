@@ -1,0 +1,94 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_17-10-2026_R3_1fee786aae_865150abb2.txt",
+    "parsed_at": "2026-10-17T21:36:58.516949Z",
+    "date": "2026-10-17",
+    "meeting": 3,
+    "track": "MARSEILLE-BORELY",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                5,
+                2,
+                6
+            ],
+            "winner": 5,
+            "second": 2,
+            "third": 6
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                1,
+                4
+            ],
+            "winner": 1,
+            "second": 4,
+            "third": null
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                6,
+                4
+            ],
+            "winner": 6,
+            "second": 4,
+            "third": null
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                5,
+                6
+            ],
+            "winner": 5,
+            "second": 6,
+            "third": null
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                3,
+                8,
+                2
+            ],
+            "winner": 3,
+            "second": 8,
+            "third": 2
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                2,
+                3
+            ],
+            "winner": 2,
+            "second": 3,
+            "third": null
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                10,
+                9,
+                2
+            ],
+            "winner": 10,
+            "second": 9,
+            "third": 2
+        },
+        {
+            "race_number": 8,
+            "arrival": [
+                5,
+                1,
+                4
+            ],
+            "winner": 5,
+            "second": 1,
+            "third": 4
+        }
+    ]
+}
