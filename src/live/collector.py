@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
@@ -10,6 +11,30 @@ from src.parsers.program_parser import parse_program_text
 from src.processors.pdf_reader import read_pdf_file
 from src.scraper import PROGRAM_URLS, download_pdf, get_pdf_links
 from src.live.registry import LIVE_DIR, upsert_race
+
+
+def _url_program_date(url: str) -> date | None:
+    """Read a race date from common LONAB PDF filename conventions."""
+    filename = Path(urlparse(url).path).name
+    dmy = re.search(r"(?<!\d)(\d{2})[-_](\d{2})[-_](\d{4})(?!\d)", filename)
+    if dmy:
+        try:
+            return date(int(dmy.group(3)), int(dmy.group(2)), int(dmy.group(1)))
+        except ValueError:
+            return None
+    ymd = re.search(r"(?<!\d)(\d{4})[-_](\d{2})[-_](\d{2})(?!\d)", filename)
+    if ymd:
+        try:
+            return date(int(ymd.group(1)), int(ymd.group(2)), int(ymd.group(3)))
+        except ValueError:
+            return None
+    return None
+
+
+def _url_is_stale(url: str, today: date) -> bool:
+    """Only skip URLs whose filename explicitly proves the program is stale."""
+    document_date = _url_program_date(url)
+    return document_date is not None and document_date < today
 
 
 def _race_key(program: dict) -> str | None:
@@ -78,7 +103,10 @@ def collect_live_programs() -> list[dict]:
         except Exception as error:
             print(f"Live source failed: {page_url} | {error}")
 
-    print(f"Live program PDFs discovered: {len(discovered_urls)}")
+    discovered_count = len(discovered_urls)
+    discovered_urls = [url for url in discovered_urls if not _url_is_stale(url, today)]
+    skipped_stale = discovered_count - len(discovered_urls)
+    print(f"Live program PDFs discovered: {discovered_count}; skipped {skipped_stale} stale filename-dated PDFs before download")
     validated = []
 
     for url in discovered_urls:
