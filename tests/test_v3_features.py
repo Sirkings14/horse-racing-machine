@@ -36,8 +36,8 @@ def test_commentary_cannot_change_v3_features():
 
 def test_race_relative_features_change_only_from_pre_race_batch():
     rows=[
-      {"horse_name":"A","history_win_rate":0.8,"history_top3_rate":0.8,"history_top5_rate":0.9,"history_recent_top3_rate":0.8,"history_recent_top5_rate":0.9,"history_recent_avg_finish":2,"course_top3_rate":0.8,"distance_top3_rate":0.8,"history_starts":10,"distance":2400,"runners_count":10},
-      {"horse_name":"B","history_win_rate":0.2,"history_top3_rate":0.2,"history_top5_rate":0.3,"history_recent_top3_rate":0.2,"history_recent_top5_rate":0.3,"history_recent_avg_finish":7,"course_top3_rate":0.2,"distance_top3_rate":0.2,"history_starts":2,"distance":2400,"runners_count":10},
+      {"race_key":"SAME-RACE","horse_name":"A","history_win_rate":0.8,"history_top3_rate":0.8,"history_top5_rate":0.9,"history_recent_top3_rate":0.8,"history_recent_top5_rate":0.9,"history_recent_avg_finish":2,"course_top3_rate":0.8,"distance_top3_rate":0.8,"history_starts":10,"distance":2400,"runners_count":10},
+      {"race_key":"SAME-RACE","horse_name":"B","history_win_rate":0.2,"history_top3_rate":0.2,"history_top5_rate":0.3,"history_recent_top3_rate":0.2,"history_recent_top5_rate":0.3,"history_recent_avg_finish":7,"course_top3_rate":0.2,"distance_top3_rate":0.2,"history_starts":2,"distance":2400,"runners_count":10},
     ]
     matrix=build_v3_matrix(rows)
     assert matrix.shape==(2,len(FEATURE_NAMES))
@@ -93,10 +93,10 @@ def test_jockey_and_trainer_profiles_are_walk_forward_and_same_day_isolated():
     assert out[0]["jockey_history_starts"] == 0
     assert out[1]["trainer_history_starts"] == 0
     assert out[2]["jockey_history_starts"] == 2
-    assert out[2]["jockey_history_win_rate"] == 0.5
-    assert out[2]["jockey_history_top3_rate"] == 0.5
+    assert out[2]["jockey_history_win_rate"] == (1 + 0.10 * 12) / (2 + 12)
+    assert out[2]["jockey_history_top3_rate"] == (1 + 0.30 * 12) / (2 + 12)
     assert out[2]["trainer_history_starts"] == 2
-    assert out[2]["trainer_history_top3_rate"] == 0.5
+    assert out[2]["trainer_history_top3_rate"] == (1 + 0.30 * 20) / (2 + 20)
 
 
 def test_jockey_trainer_features_expand_v3_matrix_consistently():
@@ -119,3 +119,23 @@ def test_relative_features_are_isolated_by_race_key():
     alone = build_v3_matrix(race_a)
     batched = build_v3_matrix(race_a + unrelated_race)
     assert (alone == batched[:len(race_a)]).all()
+
+
+def test_missing_race_key_does_not_create_cross_race_relative_features():
+    rows = [
+        {"horse_name":"A","history_win_rate":0.9,"history_top3_rate":0.9,"distance":2400},
+        {"horse_name":"B","history_win_rate":0.1,"history_top3_rate":0.1,"distance":2400},
+    ]
+    matrix = build_v3_matrix(rows)
+    assert (matrix[:, -10:] == 0.0).all()
+
+
+def test_personnel_rates_are_shrunk_for_small_samples():
+    rows = [
+        {"date":"2026-01-01","race_key":"A","horse_name":"X","finish_position":1,"jockey":"One Start","trainer":"One Start"},
+        {"date":"2026-01-02","race_key":"B","horse_name":"Y","finish_position":2,"jockey":"One Start","trainer":"One Start"},
+    ]
+    out = build_walk_forward_profiles(rows)
+    assert 0.10 < out[1]["jockey_history_win_rate"] < 0.20
+    assert 0.30 < out[1]["jockey_history_top3_rate"] < 0.40
+    assert 0.30 < out[1]["trainer_history_top3_rate"] < 0.40
