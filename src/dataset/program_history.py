@@ -71,6 +71,8 @@ def load_program_history(exclude_on_or_after: str | None = None) -> list[dict[st
                 "horse_number": number,
                 "horse_name": name,
                 "horse_description": horse.get("description"),
+                "jockey": horse.get("jockey") or horse.get("driver"),
+                "trainer": horse.get("trainer") or horse.get("entraineur"),
                 "_program_only_history": True,
             })
     return rows
