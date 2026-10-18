@@ -16,6 +16,7 @@ from src.learning.result_truth import canonical_key
 from src.dataset.build_dataset import labels_from_partial_arrival
 OUT = BASE / "data" / "dataset" / "training_dataset_clean.json"
 ROSTER_OUT = BASE / "data" / "rosters" / "historical_rosters.json"
+PROGRAMS_DIR = BASE / "data" / "structured" / "programs"
 SOURCE = "annaelmoussa/horse-racing-france"
 
 def _pick(d: dict[str, Any], names: list[str], default=None):
@@ -139,7 +140,55 @@ def _arrival(v):
             out.append(number)
     return out
 
+
+def _structured_personnel_index() -> tuple[dict[tuple[str, int], dict[str, str]], int]:
+    """Index explicit jockey/trainer fields; exclude conflicting duplicate identities."""
+    candidates: dict[tuple[str, int], set[tuple[str, str]]] = {}
+    if not PROGRAMS_DIR.exists():
+        return {}, 0
+    for path in sorted(PROGRAMS_DIR.glob("*.json")):
+        try:
+            program = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(program, dict):
+            continue
+        race = program.get("race") if isinstance(program.get("race"), dict) else {}
+        date_text = str(program.get("date") or "")[:10]
+        track = str(race.get("track") or "").strip().upper()
+        try:
+            race_number = int(race.get("race_number"))
+        except (TypeError, ValueError):
+            continue
+        if not date_text or not track or race_number <= 0:
+            continue
+        for horse in program.get("horses") or []:
+            if not isinstance(horse, dict):
+                continue
+            try:
+                number = int(horse.get("number"))
+            except (TypeError, ValueError):
+                continue
+            if number <= 0:
+                continue
+            jockey = str(next((horse.get(k) for k in ("jockey", "driver", "jockey_name", "driver_name", "jockeyName", "driverName") if horse.get(k) not in (None, "")), "") or "").strip()
+            trainer = str(next((horse.get(k) for k in ("trainer", "entraineur", "trainer_name", "trainerName") if horse.get(k) not in (None, "")), "") or "").strip()
+            candidates.setdefault((f"{date_text}|{track}|{race_number}", number), set()).add((jockey, trainer))
+    index: dict[tuple[str, int], dict[str, str]] = {}
+    conflicts = 0
+    for key, identities in candidates.items():
+        nonempty = {pair for pair in identities if pair != ("", "")}
+        if len(nonempty) > 1:
+            conflicts += 1
+            continue
+        if nonempty:
+            jockey, trainer = next(iter(nonempty))
+            index[key] = {"jockey": jockey, "trainer": trainer}
+    return index, conflicts
+
 def main():
+    personnel_index, personnel_conflicts = _structured_personnel_index()
+    print(json.dumps({"structured_personnel_index_rows": len(personnel_index), "conflicting_personnel_identities_excluded": personnel_conflicts}, indent=2))
     print("Loading race metadata...")
     courses = load_dataset(SOURCE, "courses", split="train", streaming=True)
     race_meta = {}
@@ -219,12 +268,16 @@ def main():
         target_labels = labels_from_partial_arrival(pos, len(meta["arrival"]))
         horse_name = str(_pick(p, ["cheval", "nomCheval", "horse", "horse_name", "nom"], f"HORSE_{horse_number}") or f"HORSE_{horse_number}").strip()
         horse_id = _pick(p, ["horse_id", "horseId", "horse_uid", "horseUid", "idCheval", "id_cheval", "identifiantCheval", "identifiant_cheval"])
+        personnel_key = (f"{meta['date']}|{str(meta['track']).strip().upper()}|{int(meta['race_number'])}", horse_number)
+        personnel = personnel_index.get(personnel_key, {})
         rows.append({
             "race_key": key, "date": meta["date"], "track": meta["track"],
             "race_number": meta["race_number"], "distance": meta["distance"],
             "runners_count": meta["runners_count"], "prize_euros": meta["prize_euros"],
             "race_type": meta["race_type"], "horse_number": horse_number,
-            "horse_name": horse_name, "horse_id": horse_id, "finish_position": pos,
+            "horse_name": horse_name, "horse_id": horse_id,
+            "jockey": personnel.get("jockey") or None, "trainer": personnel.get("trainer") or None,
+            "finish_position": pos,
             "won": target_labels["won"], "top3": target_labels["top3"],
             "top4": target_labels["top4"], "top5": target_labels["top5"],
             "arrival_positions_available": target_labels["arrival_positions_available"],

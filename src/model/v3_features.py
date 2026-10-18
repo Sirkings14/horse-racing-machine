@@ -12,7 +12,10 @@ FEATURE_NAMES=[
 "history_avg_finish_norm","days_since_last_run_norm",
 "distance_norm","distance_valid","field_size_norm","prize_norm","race_number_norm",
 "race_type_flat","race_type_trot","race_type_jump","data_completeness",
-"weight_norm","draw_norm","history_win_relative","history_top3_relative",
+"weight_norm","draw_norm",
+"jockey_history_starts","jockey_history_win_rate","jockey_history_top3_rate","jockey_history_top5_rate",
+"trainer_history_starts","trainer_history_win_rate","trainer_history_top3_rate","trainer_history_top5_rate",
+"history_win_relative","history_top3_relative",
 "history_top5_relative","recent_top3_relative","recent_top5_relative",
 "recent_finish_relative","course_top3_relative","distance_top3_relative",
 "weight_relative","experience_relative"
@@ -67,7 +70,15 @@ def _base_features(row:dict[str,Any])->list[float]:
         1.0 if race_type=="PLAT" else 0.0,
         1.0 if race_type in {"ATTELE","MONTE"} else 0.0,
         1.0 if race_type in {"OBSTACLE","HAIES","STEEPLE-CHASE"} else 0.0,
-        completeness,weight_norm,draw_norm
+        completeness,weight_norm,draw_norm,
+        _clamp(_float(row.get("jockey_history_starts"))/100.0),
+        _clamp(_float(row.get("jockey_history_win_rate"))),
+        _clamp(_float(row.get("jockey_history_top3_rate"))),
+        _clamp(_float(row.get("jockey_history_top5_rate"))),
+        _clamp(_float(row.get("trainer_history_starts"))/200.0),
+        _clamp(_float(row.get("trainer_history_win_rate"))),
+        _clamp(_float(row.get("trainer_history_top3_rate"))),
+        _clamp(_float(row.get("trainer_history_top5_rate")))
     ]
 
 def _relative(rows:Sequence[dict[str,Any]])->np.ndarray:
@@ -92,5 +103,19 @@ def row_to_v3_features(row:dict[str,Any])->list[float]:
 def build_v3_matrix(rows:Sequence[dict[str,Any]])->np.ndarray:
     if not rows:return np.empty((0,len(FEATURE_NAMES)),dtype=float)
     base=np.asarray([_base_features(r) for r in rows],dtype=float)
-    rel=_relative(rows)
+    # Relative features must be computed within each race, not across the
+    # entire training/evaluation batch. Live inference passes one race at a
+    # time; this keeps historical training and batched evaluation consistent.
+    groups={}
+    for i,row in enumerate(rows):
+        # Without a verified race key, runners cannot safely be compared with
+        # one another. Leave their race-relative features neutral instead of
+        # treating unrelated records as one synthetic race.
+        key=str(row.get("race_key") or "").strip()
+        if key:
+            groups.setdefault(key,[]).append(i)
+    rel=np.zeros((len(rows),10),dtype=float)
+    for indices in groups.values():
+        group_rows=[rows[i] for i in indices]
+        rel[np.asarray(indices,dtype=int)]=_relative(group_rows)
     return np.concatenate([base,rel],axis=1)
