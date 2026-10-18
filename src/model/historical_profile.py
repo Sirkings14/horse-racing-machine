@@ -82,6 +82,12 @@ def _stats(history:HorseHistory,track:str|None,distance:int|None):
                 ds+=starts; dt+=top3; dt5+=top5; drated+=rated
     return course,ds,dt,dt5,drated
 
+def _smoothed_rate(successes: int, rated_starts: int, prior_rate: float, prior_strength: float) -> float:
+    """Shrink small personnel samples toward a conservative population prior."""
+    denominator = max(0, rated_starts) + prior_strength
+    return (max(0, successes) + prior_rate * prior_strength) / denominator if denominator else prior_rate
+
+
 def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any]]:
     """Build only information that existed before each race; same-date races cannot teach one another."""
     rows_list=list(rows)
@@ -126,13 +132,13 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
                 "distance_top5_rate":dt5/drated if drated else 0.0,
                 "days_since_last_run":((_date_value(row)-h.last_date).days if _date_value(row) and h.last_date else None),
                 "jockey_history_starts":jh.starts,
-                "jockey_history_win_rate":jh.wins/jh.rated_starts if jh.rated_starts else 0.0,
-                "jockey_history_top3_rate":jh.top3/jh.rated_starts if jh.rated_starts else 0.0,
-                "jockey_history_top5_rate":jh.top5/jh.rated_starts if jh.rated_starts else 0.0,
+                "jockey_history_win_rate":_smoothed_rate(jh.wins, jh.rated_starts, 0.10, 12.0) if jockey_key else 0.0,
+                "jockey_history_top3_rate":_smoothed_rate(jh.top3, jh.rated_starts, 0.30, 12.0) if jockey_key else 0.0,
+                "jockey_history_top5_rate":_smoothed_rate(jh.top5, jh.rated_starts, 0.50, 12.0) if jockey_key else 0.0,
                 "trainer_history_starts":th.starts,
-                "trainer_history_win_rate":th.wins/th.rated_starts if th.rated_starts else 0.0,
-                "trainer_history_top3_rate":th.top3/th.rated_starts if th.rated_starts else 0.0,
-                "trainer_history_top5_rate":th.top5/th.rated_starts if th.rated_starts else 0.0,
+                "trainer_history_win_rate":_smoothed_rate(th.wins, th.rated_starts, 0.10, 20.0) if trainer_key else 0.0,
+                "trainer_history_top3_rate":_smoothed_rate(th.top3, th.rated_starts, 0.30, 20.0) if trainer_key else 0.0,
+                "trainer_history_top5_rate":_smoothed_rate(th.top5, th.rated_starts, 0.50, 20.0) if trainer_key else 0.0,
                 "data_completeness": sum(row.get(k) not in (None, "") for k in ("date", "track", "distance", "runners_count", "horse_number", "horse_name")) / 6.0,
             })
         for _,row in ordered[index:end]:
