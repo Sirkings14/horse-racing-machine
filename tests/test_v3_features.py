@@ -106,3 +106,16 @@ def test_jockey_trainer_features_expand_v3_matrix_consistently():
            "trainer_history_starts":20,"trainer_history_win_rate":0.15,
            "trainer_history_top3_rate":0.4,"trainer_history_top5_rate":0.6}
     assert build_v3_matrix([row]).shape == (1, len(FEATURE_NAMES))
+
+def test_relative_features_are_isolated_by_race_key():
+    race_a = [
+      {"race_key":"A","horse_name":"A1","history_win_rate":0.8,"history_top3_rate":0.8,"history_top5_rate":0.9,"history_recent_top3_rate":0.8,"history_recent_top5_rate":0.9,"history_recent_avg_finish":2,"course_top3_rate":0.8,"distance_top3_rate":0.8,"history_starts":10,"distance":2400,"runners_count":2},
+      {"race_key":"A","horse_name":"A2","history_win_rate":0.2,"history_top3_rate":0.2,"history_top5_rate":0.3,"history_recent_top3_rate":0.2,"history_recent_top5_rate":0.3,"history_recent_avg_finish":7,"course_top3_rate":0.2,"distance_top3_rate":0.2,"history_starts":2,"distance":2400,"runners_count":2},
+    ]
+    unrelated_race = [
+      {"race_key":"B","horse_name":"B1","history_win_rate":0.99,"history_top3_rate":0.99,"history_top5_rate":0.99,"history_recent_top3_rate":0.99,"history_recent_top5_rate":0.99,"history_recent_avg_finish":1,"course_top3_rate":0.99,"distance_top3_rate":0.99,"history_starts":100,"distance":1200,"runners_count":2},
+      {"race_key":"B","horse_name":"B2","history_win_rate":0.01,"history_top3_rate":0.01,"history_top5_rate":0.01,"history_recent_top3_rate":0.01,"history_recent_top5_rate":0.01,"history_recent_avg_finish":15,"course_top3_rate":0.01,"distance_top3_rate":0.01,"history_starts":1,"distance":1200,"runners_count":2},
+    ]
+    alone = build_v3_matrix(race_a)
+    batched = build_v3_matrix(race_a + unrelated_race)
+    assert (alone == batched[:len(race_a)]).all()
