@@ -7,6 +7,14 @@ import unicodedata
 from typing import Any, Iterable
 
 @dataclass
+class PersonHistory:
+    starts:int=0
+    wins:int=0
+    top3:int=0
+    top5:int=0
+    rated_starts:int=0
+
+@dataclass
 class HorseHistory:
     starts:int=0
     wins:int=0
@@ -85,6 +93,8 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
     ):
         ordered.sort(key=lambda item:(_date_key(item[1]),str(item[1].get("race_key") or ""),item[0]))
     histories:dict[str,HorseHistory]=defaultdict(HorseHistory)
+    jockey_histories:dict[str,PersonHistory]=defaultdict(PersonHistory)
+    trainer_histories:dict[str,PersonHistory]=defaultdict(PersonHistory)
     output=[]; index=0
     while index<len(ordered):
         current_date=_date_key(ordered[index][1]); end=index
@@ -92,6 +102,10 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
         for _,row in ordered[index:end]:
             key=_horse_key(row)
             h=histories[key]; recent=h.recent_finishes[-5:]
+            jockey_key=_clean_name(row.get("jockey") or row.get("driver"))
+            trainer_key=_clean_name(row.get("trainer") or row.get("entraineur"))
+            jh=jockey_histories[jockey_key] if jockey_key else PersonHistory()
+            th=trainer_histories[trainer_key] if trainer_key else PersonHistory()
             course,ds,dt,dt5,drated=_stats(h,row.get("track"),_distance(row))
             recent_avg=sum(recent)/len(recent) if recent else None
             output.append({**row,
@@ -111,12 +125,30 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
                 "distance_top3_rate":dt/drated if drated else 0.0,
                 "distance_top5_rate":dt5/drated if drated else 0.0,
                 "days_since_last_run":((_date_value(row)-h.last_date).days if _date_value(row) and h.last_date else None),
+                "jockey_history_starts":jh.starts,
+                "jockey_history_win_rate":jh.wins/jh.rated_starts if jh.rated_starts else 0.0,
+                "jockey_history_top3_rate":jh.top3/jh.rated_starts if jh.rated_starts else 0.0,
+                "jockey_history_top5_rate":jh.top5/jh.rated_starts if jh.rated_starts else 0.0,
+                "trainer_history_starts":th.starts,
+                "trainer_history_win_rate":th.wins/th.rated_starts if th.rated_starts else 0.0,
+                "trainer_history_top3_rate":th.top3/th.rated_starts if th.rated_starts else 0.0,
+                "trainer_history_top5_rate":th.top5/th.rated_starts if th.rated_starts else 0.0,
                 "data_completeness": sum(row.get(k) not in (None, "") for k in ("date", "track", "distance", "runners_count", "horse_number", "horse_name")) / 6.0,
             })
         for _,row in ordered[index:end]:
             key=_horse_key(row)
             if not key:continue
             finish=_finish(row)
+            jockey_key=_clean_name(row.get("jockey") or row.get("driver"))
+            trainer_key=_clean_name(row.get("trainer") or row.get("entraineur"))
+            if jockey_key:
+                person=jockey_histories[jockey_key]; person.starts+=1
+                if finish is not None:
+                    person.rated_starts+=1; person.wins+=finish==1; person.top3+=finish<=3; person.top5+=finish<=5
+            if trainer_key:
+                person=trainer_histories[trainer_key]; person.starts+=1
+                if finish is not None:
+                    person.rated_starts+=1; person.wins+=finish==1; person.top3+=finish<=3; person.top5+=finish<=5
             h=histories[key]; track=str(row.get("track") or "").upper(); distance=_distance(row); d=_date_value(row)
             # Count every verified program start, but only verified finishes
             # contribute to performance rates and finish-based recent form.
