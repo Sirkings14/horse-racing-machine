@@ -103,5 +103,15 @@ def row_to_v3_features(row:dict[str,Any])->list[float]:
 def build_v3_matrix(rows:Sequence[dict[str,Any]])->np.ndarray:
     if not rows:return np.empty((0,len(FEATURE_NAMES)),dtype=float)
     base=np.asarray([_base_features(r) for r in rows],dtype=float)
-    rel=_relative(rows)
+    # Relative features must be computed within each race, not across the
+    # entire training/evaluation batch. Live inference passes one race at a
+    # time; this keeps historical training and batched evaluation consistent.
+    groups={}
+    for i,row in enumerate(rows):
+        key=str(row.get("race_key") or "__missing_race_key__")
+        groups.setdefault(key,[]).append(i)
+    rel=np.zeros((len(rows),10),dtype=float)
+    for indices in groups.values():
+        group_rows=[rows[i] for i in indices]
+        rel[np.asarray(indices,dtype=int)]=_relative(group_rows)
     return np.concatenate([base,rel],axis=1)
