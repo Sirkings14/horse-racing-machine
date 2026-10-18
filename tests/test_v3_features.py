@@ -81,3 +81,28 @@ def test_program_history_loader_excludes_cutoff_and_has_no_targets(tmp_path, mon
     assert all(r["_program_only_history"] is True for r in rows)
     assert all("won" not in r and "finish_position" not in r for r in rows)
     assert program_history.load_program_history("2026-01-01")==[]
+
+
+def test_jockey_and_trainer_profiles_are_walk_forward_and_same_day_isolated():
+    rows = [
+      {"date":"2026-01-01","race_key":"2026-01-01|A|1","horse_name":"X","finish_position":1,"jockey":"J. Rider","trainer":"T. Trainer"},
+      {"date":"2026-01-01","race_key":"2026-01-01|A|2","horse_name":"Y","finish_position":5,"jockey":"J. Rider","trainer":"T. Trainer"},
+      {"date":"2026-01-02","race_key":"2026-01-02|A|1","horse_name":"Z","finish_position":2,"jockey":"J. Rider","trainer":"T. Trainer"},
+    ]
+    out = build_walk_forward_profiles(rows)
+    assert out[0]["jockey_history_starts"] == 0
+    assert out[1]["trainer_history_starts"] == 0
+    assert out[2]["jockey_history_starts"] == 2
+    assert out[2]["jockey_history_win_rate"] == 0.5
+    assert out[2]["jockey_history_top3_rate"] == 0.5
+    assert out[2]["trainer_history_starts"] == 2
+    assert out[2]["trainer_history_top3_rate"] == 0.5
+
+
+def test_jockey_trainer_features_expand_v3_matrix_consistently():
+    row = {"horse_name":"X","distance":2400,"runners_count":10,
+           "jockey_history_starts":10,"jockey_history_win_rate":0.2,
+           "jockey_history_top3_rate":0.5,"jockey_history_top5_rate":0.7,
+           "trainer_history_starts":20,"trainer_history_win_rate":0.15,
+           "trainer_history_top3_rate":0.4,"trainer_history_top5_rate":0.6}
+    assert build_v3_matrix([row]).shape == (1, len(FEATURE_NAMES))
