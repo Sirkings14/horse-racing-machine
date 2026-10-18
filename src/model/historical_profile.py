@@ -141,11 +141,11 @@ def build_walk_forward_profiles(rows:Iterable[dict[str,Any]])->list[dict[str,Any
             finish=_finish(row)
             jockey_key=_clean_name(row.get("jockey") or row.get("driver"))
             trainer_key=_clean_name(row.get("trainer") or row.get("entraineur"))
-            if jockey_key:
+            if jockey_key and not row.get("_program_only_history"):
                 person=jockey_histories[jockey_key]; person.starts+=1
                 if finish is not None:
                     person.rated_starts+=1; person.wins+=finish==1; person.top3+=finish<=3; person.top5+=finish<=5
-            if trainer_key:
+            if trainer_key and not row.get("_program_only_history"):
                 person=trainer_histories[trainer_key]; person.starts+=1
                 if finish is not None:
                     person.rated_starts+=1; person.wins+=finish==1; person.top3+=finish<=3; person.top5+=finish<=5
