@@ -12,7 +12,10 @@ FEATURE_NAMES=[
 "history_avg_finish_norm","days_since_last_run_norm",
 "distance_norm","distance_valid","field_size_norm","prize_norm","race_number_norm",
 "race_type_flat","race_type_trot","race_type_jump","data_completeness",
-"weight_norm","draw_norm","history_win_relative","history_top3_relative",
+"weight_norm","draw_norm",
+"jockey_history_starts","jockey_history_win_rate","jockey_history_top3_rate","jockey_history_top5_rate",
+"trainer_history_starts","trainer_history_win_rate","trainer_history_top3_rate","trainer_history_top5_rate",
+"history_win_relative","history_top3_relative",
 "history_top5_relative","recent_top3_relative","recent_top5_relative",
 "recent_finish_relative","course_top3_relative","distance_top3_relative",
 "weight_relative","experience_relative"
@@ -67,7 +70,15 @@ def _base_features(row:dict[str,Any])->list[float]:
         1.0 if race_type=="PLAT" else 0.0,
         1.0 if race_type in {"ATTELE","MONTE"} else 0.0,
         1.0 if race_type in {"OBSTACLE","HAIES","STEEPLE-CHASE"} else 0.0,
-        completeness,weight_norm,draw_norm
+        completeness,weight_norm,draw_norm,
+        _clamp(_float(row.get("jockey_history_starts"))/100.0),
+        _clamp(_float(row.get("jockey_history_win_rate"))),
+        _clamp(_float(row.get("jockey_history_top3_rate"))),
+        _clamp(_float(row.get("jockey_history_top5_rate"))),
+        _clamp(_float(row.get("trainer_history_starts"))/200.0),
+        _clamp(_float(row.get("trainer_history_win_rate"))),
+        _clamp(_float(row.get("trainer_history_top3_rate"))),
+        _clamp(_float(row.get("trainer_history_top5_rate")))
     ]
 
 def _relative(rows:Sequence[dict[str,Any]])->np.ndarray:
