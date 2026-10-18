@@ -22,26 +22,32 @@ def _score(model, rows:list[dict[str,Any]])->dict[str,Any]:
     for row in rows:
         if row.get("race_key"): grouped[str(row["race_key"])].append(row)
     complete={k:g for k,g in grouped.items() if g and all(_label(r,"top3") is not None for r in g)}
+    if not complete: raise ValueError("No holdout races with complete verified top3 labels.")
+    # The production feature builder computes race-relative features from the
+    # rows passed to predict_proba. Score each race as a separate field, just
+    # as a live prediction does; batching unrelated races would change features.
+    probabilities_by_race={
+        k:np.asarray(model.predict_proba(complete[k]),dtype=float)
+        for k in sorted(complete)
+    }
     eval_rows=[r for k in sorted(complete) for r in complete[k]]
-    if not eval_rows: raise ValueError("No holdout races with complete verified top3 labels.")
-    p=model.predict_proba(eval_rows)
+    p=np.concatenate([probabilities_by_race[k] for k in sorted(complete)])
     y=np.asarray([_label(r,"top3") for r in eval_rows],dtype=float)
+    if p.shape != y.shape: raise ValueError(f"Prediction/label shape mismatch: {p.shape} vs {y.shape}")
     brier=float(np.mean((p-y)**2))
     pc=np.clip(p,1e-12,1-1e-12)
     logloss=float(-np.mean(y*np.log(pc)+(1-y)*np.log(1-pc)))
-    by_race=defaultdict(list); i=0
-    for k in sorted(complete):
-        for row in complete[k]:
-            by_race[k].append((float(p[i]),row)); i+=1
     cov3=[];cov5=[];hit3=[]
-    for k,g in by_race.items():
-        ranked=sorted(g,key=lambda x:(-x[0],int(x[1].get("horse_number") or 9999)))
-        actual={int(r["horse_number"]) for r in complete[k] if _label(r,"top3")==1 and r.get("horse_number") is not None}
+    for k in sorted(complete):
+        g=complete[k]
+        race_p=probabilities_by_race[k]
+        if len(race_p)!=len(g): raise ValueError(f"Prediction count mismatch for race {k}")
+        ranked=sorted(zip(race_p,g),key=lambda x:(-float(x[0]),int(x[1].get("horse_number") or 9999)))
+        actual={int(r["horse_number"]) for r in g if _label(r,"top3")==1 and r.get("horse_number") is not None}
         top3={int(r["horse_number"]) for _,r in ranked[:3] if r.get("horse_number") is not None}
         top5={int(r["horse_number"]) for _,r in ranked[:5] if r.get("horse_number") is not None}
         cov3.append(len(actual&top3));cov5.append(len(actual&top5));hit3.append(bool(actual&top3))
     return {"holdout_rows":len(eval_rows),"holdout_races":len(complete),"top3_brier_per_runner":round(brier,6),"top3_logloss_per_runner":round(logloss,6),"mean_actual_top3_covered_by_predicted_top3":round(float(np.mean(cov3)),6),"mean_actual_top3_covered_by_predicted_top5":round(float(np.mean(cov5)),6),"races_with_at_least_one_actual_top3_in_predicted_top3":round(float(np.mean(hit3)),6)}
-
 def compare(rows:list[dict[str,Any]],epochs:int=900,max_train_rows:int=25000)->dict[str,Any]:
     if not rows: raise ValueError("Historical dataset is empty.")
     cutoff=str(max((r.get("date") or "") for r in rows))[:10]
