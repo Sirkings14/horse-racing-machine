@@ -37,17 +37,23 @@ def _score(model, rows:list[dict[str,Any]])->dict[str,Any]:
     brier=float(np.mean((p-y)**2))
     pc=np.clip(p,1e-12,1-1e-12)
     logloss=float(-np.mean(y*np.log(pc)+(1-y)*np.log(1-pc)))
-    cov3=[];cov5=[];hit3=[]
+    cov3=[];cov5=[];hit3=[];race_metrics={}
     for k in sorted(complete):
         g=complete[k]
         race_p=probabilities_by_race[k]
         if len(race_p)!=len(g): raise ValueError(f"Prediction count mismatch for race {k}")
+        race_y=np.asarray([_label(r,"top3") for r in g],dtype=float)
+        race_pc=np.clip(race_p,1e-12,1-1e-12)
+        race_brier=float(np.mean((race_p-race_y)**2))
+        race_logloss=float(-np.mean(race_y*np.log(race_pc)+(1-race_y)*np.log(1-race_pc)))
         ranked=sorted(zip(race_p,g),key=lambda x:(-float(x[0]),int(x[1].get("horse_number") or 9999)))
         actual={int(r["horse_number"]) for r in g if _label(r,"top3")==1 and r.get("horse_number") is not None}
         top3={int(r["horse_number"]) for _,r in ranked[:3] if r.get("horse_number") is not None}
         top5={int(r["horse_number"]) for _,r in ranked[:5] if r.get("horse_number") is not None}
-        cov3.append(len(actual&top3));cov5.append(len(actual&top5));hit3.append(bool(actual&top3))
-    return {"holdout_rows":len(eval_rows),"holdout_races":len(complete),"top3_brier_per_runner":round(brier,6),"top3_logloss_per_runner":round(logloss,6),"mean_actual_top3_covered_by_predicted_top3":round(float(np.mean(cov3)),6),"mean_actual_top3_covered_by_predicted_top5":round(float(np.mean(cov5)),6),"races_with_at_least_one_actual_top3_in_predicted_top3":round(float(np.mean(hit3)),6)}
+        c3=len(actual&top3);c5=len(actual&top5);h3=float(bool(actual&top3))
+        cov3.append(c3);cov5.append(c5);hit3.append(bool(h3))
+        race_metrics[k]={"top3_brier_per_runner":race_brier,"top3_logloss_per_runner":race_logloss,"mean_actual_top3_covered_by_predicted_top3":float(c3),"mean_actual_top3_covered_by_predicted_top5":float(c5),"races_with_at_least_one_actual_top3_in_predicted_top3":h3}
+    return {"holdout_rows":len(eval_rows),"holdout_races":len(complete),"top3_brier_per_runner":round(brier,6),"top3_logloss_per_runner":round(logloss,6),"mean_actual_top3_covered_by_predicted_top3":round(float(np.mean(cov3)),6),"mean_actual_top3_covered_by_predicted_top5":round(float(np.mean(cov5)),6),"races_with_at_least_one_actual_top3_in_predicted_top3":round(float(np.mean(hit3)),6),"_race_metrics":race_metrics}
 def compare(rows:list[dict[str,Any]],epochs:int=900,max_train_rows:int=25000)->dict[str,Any]:
     if not rows: raise ValueError("Historical dataset is empty.")
     cutoff=str(max((r.get("date") or "") for r in rows))[:10]
@@ -68,7 +74,18 @@ def compare(rows:list[dict[str,Any]],epochs:int=900,max_train_rows:int=25000)->d
     baseline=fit_v3_model(baseline_train,target_field="top3",epochs=epochs)
     challenger=fit_v3_model(train,target_field="top3",epochs=epochs)
     b=_score(baseline,baseline_holdout); c=_score(challenger,holdout)
-    return {"status":"completed","method":"chronological 80/20 race-level holdout; same labels, split, training cap and epochs","training_races":len(train_keys),"training_rows_used":len(train),"holdout_races_before_label_filter":len(holdout_keys),"epochs":epochs,"baseline_without_jockey_trainer_features":b,"challenger_with_jockey_trainer_features":c,"delta_challenger_minus_baseline":{k:round(c[k]-b[k],6) for k in ("top3_brier_per_runner","top3_logloss_per_runner","mean_actual_top3_covered_by_predicted_top3","mean_actual_top3_covered_by_predicted_top5")},"interpretation":"Negative Brier/logloss is better; positive coverage deltas are better. This is predictive validation only, not proof of betting profitability."}
+    b_races=b.pop("_race_metrics");c_races=c.pop("_race_metrics")
+    paired_keys=sorted(set(b_races)&set(c_races))
+    if len(paired_keys)<100:raise ValueError(f"Too few paired holdout races for bootstrap intervals: {len(paired_keys)}")
+    metrics=("top3_brier_per_runner","top3_logloss_per_runner","mean_actual_top3_covered_by_predicted_top3","mean_actual_top3_covered_by_predicted_top5","races_with_at_least_one_actual_top3_in_predicted_top3")
+    rng=np.random.default_rng(20261018)
+    bootstrap={}
+    for metric in metrics:
+        deltas=np.asarray([c_races[k][metric]-b_races[k][metric] for k in paired_keys],dtype=float)
+        samples=rng.integers(0,len(deltas),size=(1000,len(deltas)))
+        means=deltas[samples].mean(axis=1)
+        bootstrap[metric]={"paired_races":len(deltas),"mean_race_level_delta":round(float(deltas.mean()),6),"ci95_low":round(float(np.quantile(means,0.025)),6),"ci95_high":round(float(np.quantile(means,0.975)),6),"bootstrap_probability_delta_below_zero":round(float(np.mean(means<0)),4)}
+    return {"status":"completed","method":"chronological 80/20 race-level holdout; same labels, split, training cap and epochs; paired race-level bootstrap with 1000 resamples","training_races":len(train_keys),"training_rows_used":len(train),"holdout_races_before_label_filter":len(holdout_keys),"epochs":epochs,"baseline_without_jockey_trainer_features":b,"challenger_with_jockey_trainer_features":c,"delta_challenger_minus_baseline":{k:round(c[k]-b[k],6) for k in ("top3_brier_per_runner","top3_logloss_per_runner","mean_actual_top3_covered_by_predicted_top3","mean_actual_top3_covered_by_predicted_top5")},"paired_race_bootstrap_95pct_intervals":bootstrap,"interpretation":"Negative Brier/logloss is better; positive coverage deltas are better. Bootstrap intervals measure uncertainty on this holdout only and do not prove betting profitability."}
 
 def main():
     report=compare(json.loads(DATASET_FILE.read_text(encoding="utf-8")))
