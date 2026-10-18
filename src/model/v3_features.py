@@ -108,8 +108,12 @@ def build_v3_matrix(rows:Sequence[dict[str,Any]])->np.ndarray:
     # time; this keeps historical training and batched evaluation consistent.
     groups={}
     for i,row in enumerate(rows):
-        key=str(row.get("race_key") or "__missing_race_key__")
-        groups.setdefault(key,[]).append(i)
+        # Without a verified race key, runners cannot safely be compared with
+        # one another. Leave their race-relative features neutral instead of
+        # treating unrelated records as one synthetic race.
+        key=str(row.get("race_key") or "").strip()
+        if key:
+            groups.setdefault(key,[]).append(i)
     rel=np.zeros((len(rows),10),dtype=float)
     for indices in groups.values():
         group_rows=[rows[i] for i in indices]
