@@ -1,0 +1,40 @@
+name: Jockey and trainer coverage audit
+
+on:
+  push:
+    branches: [audit/jockey-trainer-data-coverage]
+    paths:
+      - "scripts/audit_jockey_trainer_coverage.py"
+      - "tests/test_jockey_trainer_coverage.py"
+      - ".github/workflows/jockey-trainer-coverage-audit.yml"
+  pull_request:
+    paths:
+      - "scripts/audit_jockey_trainer_coverage.py"
+      - "tests/test_jockey_trainer_coverage.py"
+      - ".github/workflows/jockey-trainer-coverage-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile audit and tests
+        run: python -m py_compile scripts/audit_jockey_trainer_coverage.py tests/test_jockey_trainer_coverage.py
+      - name: Run focused tests
+        run: python -m unittest discover -s tests -p "test_jockey_trainer_coverage.py" -v
+      - name: Generate read-only coverage report
+        run: python scripts/audit_jockey_trainer_coverage.py > jockey_trainer_coverage_audit.json
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: jockey-trainer-coverage-audit
+          path: jockey_trainer_coverage_audit.json
+          retention-days: 14
