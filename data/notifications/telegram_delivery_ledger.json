@@ -166,6 +166,26 @@
       "prediction_id": "2026-10-18|PARISLONGCHAMP|3|2026-10-16T16:50:22.761809+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 243
+    },
+    "2026-10-20|DEAUVILLE-CLAIREFONTAINE|1": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          2,
+          5,
+          6,
+          3,
+          7
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history"
+        ]
+      },
+      "sent_at": "2026-10-18T16:02:12.625618+00:00",
+      "prediction_id": "2026-10-20|DEAUVILLE-CLAIREFONTAINE|1|2026-10-18T16:02:12.121197+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 244
     }
   }
 }
