@@ -141,15 +141,17 @@ def audit(programs_dir: Path = PROGRAMS_DIR, matched_file: Path = MATCHED_FILE) 
         match = record.get("match")
         status = norm_text(match.get("status")) if isinstance(match, dict) else ""
         confidence = match.get("confidence") if isinstance(match, dict) else None
-        verified = status in {"MATCHED", "EXACT", "VERIFIED", "CONFIRMED"}
-        if not verified and confidence is not None:
+        program = record.get("program")
+        result = record.get("result")
+        if status:
+            # An explicit status is authoritative; do not override a mismatch.
+            verified = status in {"MATCHED", "EXACT", "VERIFIED", "CONFIRMED"}
+        elif confidence is not None:
             try:
                 verified = float(confidence) >= 100
             except (TypeError, ValueError):
-                pass
-        program = record.get("program")
-        result = record.get("result")
-        if not verified:
+                verified = False
+        else:
             verified = isinstance(program, dict) and isinstance(result, dict)
         if not verified or not isinstance(program, dict) or not isinstance(result, dict):
             continue
