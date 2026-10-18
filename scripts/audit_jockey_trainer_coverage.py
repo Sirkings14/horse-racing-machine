@@ -9,6 +9,7 @@ from typing import Any
 BASE_DIR = Path(__file__).resolve().parents[1]
 PROGRAMS_DIR = BASE_DIR / "data" / "structured" / "programs"
 MATCHED_FILE = BASE_DIR / "data" / "matched" / "matched_races.json"
+TRAINING_DATASET_FILE = BASE_DIR / "data" / "dataset" / "training_dataset_clean.json"
 
 JOCKEY_KEYS = ("jockey", "driver", "jockey_name", "driver_name", "jockeyName", "driverName")
 TRAINER_KEYS = ("trainer", "entraineur", "trainer_name", "trainerName")
@@ -85,7 +86,11 @@ def _coverage(rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
-def audit(programs_dir: Path = PROGRAMS_DIR, matched_file: Path = MATCHED_FILE) -> dict[str, Any]:
+def audit(
+    programs_dir: Path = PROGRAMS_DIR,
+    matched_file: Path = MATCHED_FILE,
+    training_file: Path = TRAINING_DATASET_FILE,
+) -> dict[str, Any]:
     """Audit source coverage and verified result linkage only; never changes model inputs."""
     program_rows: list[dict[str, Any]] = []
     program_races: set[str] = set()
@@ -208,6 +213,66 @@ def audit(programs_dir: Path = PROGRAMS_DIR, matched_file: Path = MATCHED_FILE) 
     linked_program_rows = [program_identity[k] for k in exact_identity_keys]
     linked_result_rows = [matched_identity[k] for k in exact_identity_keys]
 
+    # Measure whether structured program names can be joined to the actual
+    # historical training rows used by the V3 pipeline. Do not silently resolve
+    # conflicting duplicate program identities.
+    training_rows: Any = []
+    training_load_error = None
+    try:
+        training_rows = json.loads(training_file.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        training_load_error = str(exc)
+    if not isinstance(training_rows, list):
+        training_rows = []
+    training_identity_rows: list[dict[str, Any]] = []
+    training_races: set[str] = set()
+    invalid_training_rows = 0
+    for row in training_rows:
+        if not isinstance(row, dict):
+            continue
+        key = race_key(row.get("date"), row.get("track"), row.get("race_number"))
+        try:
+            number = int(row.get("horse_number"))
+        except (TypeError, ValueError):
+            number = 0
+        if not key or number <= 0:
+            invalid_training_rows += 1
+            continue
+        training_races.add(key)
+        training_identity_rows.append({"race_key": key, "horse_number": number, **row})
+
+    program_candidates: dict[tuple[str, int], list[dict[str, Any]]] = {}
+    for row in program_rows:
+        program_candidates.setdefault((row["race_key"], row["horse_number"]), []).append(row)
+    linked_training_rows = 0
+    ambiguous_training_rows = 0
+    training_rows_with_jockey = 0
+    training_rows_with_trainer = 0
+    training_rows_with_both = 0
+    training_already_has_jockey = 0
+    training_already_has_trainer = 0
+    for row in training_identity_rows:
+        candidates = program_candidates.get((row["race_key"], row["horse_number"]), [])
+        if not candidates:
+            continue
+        # Duplicate source files are safe only if all candidate names agree.
+        jockey_values = {norm_text(first_value(candidate, JOCKEY_KEYS)) for candidate in candidates}
+        trainer_values = {norm_text(first_value(candidate, TRAINER_KEYS)) for candidate in candidates}
+        if len(jockey_values) > 1 or len(trainer_values) > 1:
+            ambiguous_training_rows += 1
+            continue
+        candidate = candidates[0]
+        linked_training_rows += 1
+        has_jockey = nonempty(first_value(candidate, JOCKEY_KEYS))
+        has_trainer = nonempty(first_value(candidate, TRAINER_KEYS))
+        training_rows_with_jockey += has_jockey
+        training_rows_with_trainer += has_trainer
+        training_rows_with_both += has_jockey and has_trainer
+        training_already_has_jockey += nonempty(first_value(row, JOCKEY_KEYS))
+        training_already_has_trainer += nonempty(first_value(row, TRAINER_KEYS))
+
+    pct = lambda n, d: round(n / d, 4) if d else 0.0
+
     return {
         "audit_type": "jockey_trainer_coverage_only",
         "production_model_changed": False,
@@ -237,12 +302,30 @@ def audit(programs_dir: Path = PROGRAMS_DIR, matched_file: Path = MATCHED_FILE) 
             "matched_source_program_files": len(matched_program_file_keys),
             "note": "A race-key/horse-number match is a linkage diagnostic, not proof that every source pairing is correct. Inspect duplicate keys and source provenance before feature use.",
         },
+        "training_dataset_join": {
+            "file": str(training_file),
+            "rows_loaded": len(training_rows),
+            "valid_runner_rows": len(training_identity_rows),
+            "distinct_races": len(training_races),
+            "rows_missing_date_track_race_or_horse_number": invalid_training_rows,
+            "rows_linked_to_structured_program_by_race_and_horse_number": linked_training_rows,
+            "link_rate_of_valid_training_rows": pct(linked_training_rows, len(training_identity_rows)),
+            "rows_with_conflicting_duplicate_program_identity": ambiguous_training_rows,
+            "linked_rows_with_available_jockey_or_driver": training_rows_with_jockey,
+            "linked_rows_with_available_trainer": training_rows_with_trainer,
+            "linked_rows_with_both": training_rows_with_both,
+            "linked_rows_already_containing_jockey_or_driver": training_already_has_jockey,
+            "linked_rows_already_containing_trainer": training_already_has_trainer,
+            "note": "Join coverage uses normalized date + track text + race number + horse number. Track aliases are not guessed; low match rates may reflect naming differences as well as missing source records.",
+        },
         "matched_file_error": matched_load_error,
+        "training_file_error": training_load_error,
         "notes": [
             "Audit only; no model training, prediction, or production feature files are modified.",
             "Jockey and trainer names are counted only when explicit structured fields are populated; free-text descriptions are not parsed.",
             "Verified result linkage follows the repository's current permissive convention that a record containing both program and result objects may count as matched when no explicit status is supplied.",
             "This report measures availability and linkage, not historical jockey/trainer performance. Any future performance rates must be walk-forward and exclude same-day outcomes.",
+            "Training-dataset join coverage is reported separately because source-field presence does not prove those fields reach the model training rows.",
         ],
     }
 
