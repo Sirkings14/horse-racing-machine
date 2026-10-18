@@ -16,13 +16,13 @@ from src.live.registry import LIVE_DIR, upsert_race
 def _url_program_date(url: str) -> date | None:
     """Read a race date from common LONAB PDF filename conventions."""
     filename = Path(urlparse(url).path).name
-    dmy = re.search(r"(?<!\\d)(\\d{2})[-_](\\d{2})[-_](\\d{4})(?!\\d)", filename)
+    dmy = re.search(r"(?<!\d)(\d{2})[-_](\d{2})[-_](\d{4})(?!\d)", filename)
     if dmy:
         try:
             return date(int(dmy.group(3)), int(dmy.group(2)), int(dmy.group(1)))
         except ValueError:
             return None
-    ymd = re.search(r"(?<!\\d)(\\d{4})[-_](\\d{2})[-_](\\d{2})(?!\\d)", filename)
+    ymd = re.search(r"(?<!\d)(\d{4})[-_](\d{2})[-_](\d{2})(?!\d)", filename)
     if ymd:
         try:
             return date(int(ymd.group(1)), int(ymd.group(2)), int(ymd.group(3)))
