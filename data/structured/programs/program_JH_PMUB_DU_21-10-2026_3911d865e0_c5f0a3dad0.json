@@ -1,0 +1,271 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMUB_DU_21-10-2026_3911d865e0_c5f0a3dad0.txt",
+    "parsed_at": "2026-10-19T23:02:01.032381Z",
+    "date": "2026-10-21",
+    "race": {
+        "race_name": "GRAND PRIX DE LA VILLE ROSE",
+        "track": "TOULOUSE",
+        "race_number": 1,
+        "race_type": "ATTELE",
+        "runners_count": 13,
+        "distance": 2950,
+        "prize_euros": 39000
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "ENEA FONT",
+            "description": "",
+            "performance": "8.6.4.1.8",
+            "gains": 108724,
+            "trainer": "S. GUARATO",
+            "jockey": "J. CHAVATTE",
+            "driver": "J. CHAVATTE",
+            "owner": "GER. TRADING GMBH",
+            "listed_chrono": "1.12.90"
+        },
+        {
+            "number": 2,
+            "horse": "I AM PHYT'S",
+            "description": "",
+            "performance": "8.0.2.4.3",
+            "gains": 132445,
+            "trainer": "J.H. TREICH",
+            "jockey": "J.H. TREICH",
+            "driver": "J.H. TREICH",
+            "owner": "J.H. TREICH",
+            "listed_chrono": "1.12.80"
+        },
+        {
+            "number": 3,
+            "horse": "INVICTUS NAR",
+            "description": "",
+            "performance": "0.3.6.9.1",
+            "gains": 147940,
+            "trainer": "F. MARTY",
+            "jockey": "F. MARTY",
+            "driver": "F. MARTY",
+            "owner": "N. DELORME",
+            "listed_chrono": "1.12.20"
+        },
+        {
+            "number": 4,
+            "horse": "HARLEM DE L'ITON",
+            "description": "",
+            "performance": "1.1.0.1.D",
+            "gains": 155140,
+            "trainer": "D. CINIER",
+            "jockey": "M. CINIER",
+            "driver": "M. CINIER",
+            "owner": "D. CINIER",
+            "listed_chrono": "1.12.90"
+        },
+        {
+            "number": 5,
+            "horse": "GHOST DE BEAULIEU",
+            "description": "",
+            "performance": "3.3.3.4.1",
+            "gains": 157315,
+            "trainer": "J. ASSELIE",
+            "jockey": "P. GERAY",
+            "driver": "P. GERAY",
+            "owner": "D. CINIER",
+            "listed_chrono": "1.13.40"
+        },
+        {
+            "number": 6,
+            "horse": "IRRATI DUEM",
+            "description": "",
+            "performance": "D.0.0.D.D",
+            "gains": 162370,
+            "trainer": "C. HERSERANT",
+            "jockey": "PIERRICK LE MOEL",
+            "driver": "PIERRICK LE MOEL",
+            "owner": "EC. DUEM",
+            "listed_chrono": "1.13.50"
+        },
+        {
+            "number": 7,
+            "horse": "INCREDIBLE GO",
+            "description": "",
+            "performance": "4.3.D.8.1",
+            "gains": 162425,
+            "trainer": "F. TERRY",
+            "jockey": "TH. DUCOS",
+            "driver": "TH. DUCOS",
+            "owner": "Philippe RENNESSON",
+            "listed_chrono": "1.12.90"
+        },
+        {
+            "number": 8,
+            "horse": "ICARE DE PHYT'S",
+            "description": "",
+            "performance": "D.4.3.D.D",
+            "gains": 235210,
+            "trainer": "S. LALOUM",
+            "jockey": "M. GRASSET",
+            "driver": "M. GRASSET",
+            "owner": "A. LALOUM",
+            "listed_chrono": "1.12.70"
+        },
+        {
+            "number": 9,
+            "horse": "HELIOS D'ELA",
+            "description": "",
+            "performance": "D.D.4.0.4",
+            "gains": 248610,
+            "trainer": "C. GAZENGEL",
+            "jockey": "C. GAZENGEL",
+            "driver": "C. GAZENGEL",
+            "owner": "EC. CHAMPIE",
+            "listed_chrono": "1.12.30"
+        },
+        {
+            "number": 10,
+            "horse": "FREEDOM",
+            "description": "",
+            "performance": "2.1.0.4.1",
+            "gains": 325956,
+            "trainer": "O. RAFFIN",
+            "jockey": "O. RAFFIN",
+            "driver": "O. RAFFIN",
+            "owner": "S. LEFORT",
+            "listed_chrono": "1.10.60"
+        },
+        {
+            "number": 11,
+            "horse": "GALANT DE CAREL",
+            "description": "",
+            "performance": "D.6.6.6.6",
+            "gains": 331360,
+            "trainer": "C. GAZENGEL",
+            "jockey": "M. TIJOU",
+            "driver": "M. TIJOU",
+            "owner": "EC. CHAMPIE",
+            "listed_chrono": "1.11.60"
+        },
+        {
+            "number": 12,
+            "horse": "GERICAULT",
+            "description": "",
+            "performance": "2.2.5.5.2",
+            "gains": 331542,
+            "trainer": "V. MARTENS",
+            "jockey": "TH. BRIAND",
+            "driver": "TH. BRIAND",
+            "owner": "EC. BLACK AND WHITE",
+            "listed_chrono": "1.10.10"
+        },
+        {
+            "number": 13,
+            "horse": "ICARE DU BERYL",
+            "description": "",
+            "performance": "5.2.3.3.3",
+            "gains": 348755,
+            "trainer": "Y. LACOMBE",
+            "jockey": "M. CRIADO",
+            "driver": "M. CRIADO",
+            "owner": "G. LACOMBE",
+            "listed_chrono": "1.11.80"
+        }
+    ],
+    "program_table_mapping_status": "mapped",
+    "rankings": {
+        "favorites": [
+            10,
+            12,
+            13,
+            1,
+            7,
+            6,
+            8
+        ],
+        "form": [
+            10,
+            13,
+            6,
+            12,
+            1
+        ],
+        "class": [
+            1,
+            10,
+            12,
+            8,
+            7
+        ],
+        "progress": [
+            4,
+            7,
+            6,
+            8,
+            5
+        ],
+        "regularity": [
+            6,
+            2,
+            5,
+            3,
+            4
+        ]
+    },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "2": {
+                "fractional": "33/1",
+                "decimal": 34.0
+            },
+            "3": {
+                "fractional": "25/1",
+                "decimal": 26.0
+            },
+            "4": {
+                "fractional": "33/1",
+                "decimal": 34.0
+            },
+            "5": {
+                "fractional": "23/1",
+                "decimal": 24.0
+            },
+            "6": {
+                "fractional": "47/1",
+                "decimal": 48.0
+            },
+            "7": {
+                "fractional": "5/1",
+                "decimal": 6.0
+            },
+            "8": {
+                "fractional": "57/1",
+                "decimal": 58.0
+            },
+            "9": {
+                "fractional": "6/1",
+                "decimal": 7.0
+            },
+            "10": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            },
+            "11": {
+                "fractional": "18/1",
+                "decimal": 19.0
+            },
+            "12": {
+                "fractional": "17/1",
+                "decimal": 18.0
+            },
+            "13": {
+                "fractional": "16/1",
+                "decimal": 17.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
+    "published_arrival": []
+}
