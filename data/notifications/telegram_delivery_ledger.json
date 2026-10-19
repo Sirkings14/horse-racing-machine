@@ -186,6 +186,27 @@
       "prediction_id": "2026-10-20|DEAUVILLE-CLAIREFONTAINE|1|2026-10-18T16:02:12.121197+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 244
+    },
+    "2026-10-21|TOULOUSE|1": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          7,
+          2,
+          3,
+          4,
+          5
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-10-19T16:27:12.547520+00:00",
+      "prediction_id": "2026-10-21|TOULOUSE|1|2026-10-19T16:27:11.903761+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 245
     }
   }
 }
