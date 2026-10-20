@@ -1,0 +1,96 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_20-10-2026_R3_4486101aab_c08401dfd0.txt",
+    "parsed_at": "2026-10-20T22:31:34.316181Z",
+    "date": "2026-10-20",
+    "meeting": 3,
+    "track": "BORDEAUX-LE BOUSCAT",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                3,
+                1
+            ],
+            "winner": 3,
+            "second": 1,
+            "third": null
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                5,
+                1,
+                3
+            ],
+            "winner": 5,
+            "second": 1,
+            "third": 3
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                1,
+                2
+            ],
+            "winner": 1,
+            "second": 2,
+            "third": null
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                7,
+                1,
+                6
+            ],
+            "winner": 7,
+            "second": 1,
+            "third": 6
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                2,
+                1,
+                6
+            ],
+            "winner": 2,
+            "second": 1,
+            "third": 6
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                5,
+                10,
+                13
+            ],
+            "winner": 5,
+            "second": 10,
+            "third": 13
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                9,
+                8,
+                14
+            ],
+            "winner": 9,
+            "second": 8,
+            "third": 14
+        },
+        {
+            "race_number": 8,
+            "arrival": [
+                4,
+                15,
+                3
+            ],
+            "winner": 4,
+            "second": 15,
+            "third": 3
+        }
+    ]
+}
