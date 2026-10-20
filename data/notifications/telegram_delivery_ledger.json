@@ -207,6 +207,27 @@
       "prediction_id": "2026-10-21|TOULOUSE|1|2026-10-19T16:27:11.903761+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 245
+    },
+    "2026-10-22|AUTEUIL|1": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          4,
+          1,
+          2,
+          7,
+          8
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-10-20T17:24:25.421487+00:00",
+      "prediction_id": "2026-10-22|AUTEUIL|1|2026-10-20T17:24:24.824064+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 246
     }
   }
 }
