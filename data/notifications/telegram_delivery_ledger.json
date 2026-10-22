@@ -248,6 +248,26 @@
       "prediction_id": "2026-10-23|PARIS-VINCENNES NOCTURNE|4|2026-10-21T17:27:13.152089+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 247
+    },
+    "2026-10-24|COMPIEGNE|3": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          6,
+          1,
+          3,
+          5,
+          10
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history"
+        ]
+      },
+      "sent_at": "2026-10-22T17:25:54.770927+00:00",
+      "prediction_id": "2026-10-24|COMPIEGNE|3|2026-10-22T17:25:54.247151+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 248
     }
   }
 }
