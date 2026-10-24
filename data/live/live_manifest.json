@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-24T13:18:08.979200+00:00",
+  "updated_at": "2026-10-24T16:09:03.060755+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -847,10 +847,10 @@
       "structured_file": "structured/2026-10-24_COMPIEGNE_3.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-24T13:18:08.978967+00:00",
+      "discovered_at": "2026-10-24T16:09:03.060406+00:00",
       "result_status": "pending",
       "created_at": "2026-10-22T17:25:10.479357+00:00",
-      "updated_at": "2026-10-24T13:18:08.979191+00:00"
+      "updated_at": "2026-10-24T16:09:03.060741+00:00"
     },
     {
       "race_key": "2026-10-25|SAINT-CLOUD|5",
@@ -867,10 +867,30 @@
       "structured_file": "structured/2026-10-25_SAINT-CLOUD_5.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-24T13:18:08.643931+00:00",
+      "discovered_at": "2026-10-24T16:09:02.855852+00:00",
       "result_status": "pending",
       "created_at": "2026-10-23T17:20:20.178956+00:00",
-      "updated_at": "2026-10-24T13:18:08.644151+00:00"
+      "updated_at": "2026-10-24T16:09:02.856158+00:00"
+    },
+    {
+      "race_key": "2026-10-26|CHANTILLY|4",
+      "date": "2026-10-26",
+      "track": "CHANTILLY",
+      "race_number": 4,
+      "race_name": "PRIX DE LA ROUTE DES PRINCES",
+      "race_type": "PLAT",
+      "distance": 1600,
+      "runners_count": 16,
+      "horse_count": 16,
+      "source_url": "https://lonab.bf/sites/default/files/2026-10/JH_PMU_DU_26-10-2026.pdf",
+      "source_file": "live_program_JH_PMU_DU_26-10-2026_962ad2db49.pdf",
+      "structured_file": "structured/2026-10-26_CHANTILLY_4.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-10-24T16:09:02.609028+00:00",
+      "result_status": "pending",
+      "created_at": "2026-10-24T16:08:54.566462+00:00",
+      "updated_at": "2026-10-24T16:09:02.609321+00:00"
     }
   ]
 }

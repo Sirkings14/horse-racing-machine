@@ -289,6 +289,27 @@
       "prediction_id": "2026-10-25|SAINT-CLOUD|5|2026-10-23T17:21:28.479721+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 249
+    },
+    "2026-10-26|CHANTILLY|4": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          13,
+          1,
+          7,
+          12,
+          2
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-10-24T16:09:08.199614+00:00",
+      "prediction_id": "2026-10-26|CHANTILLY|4|2026-10-24T16:09:07.644356+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 250
     }
   }
 }
