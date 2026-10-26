@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-12T03:49:47.107587+00:00",
+  "generated_at": "2026-10-26T15:46:05.780908+00:00",
   "status": "benchmark_available",
   "method": "out_of_sample_v4_scoring_on_stored_lonab_programs_vs_published_press_prices",
   "training_history_end_date": "2026-05-05",
   "programs_found_before_cutoff": 155,
-  "benchmark_races": 26,
+  "benchmark_races": 29,
   "market_evidence_gate_unlocked": false,
   "press_prices_are_market_evidence": false,
   "policy": {
@@ -46,17 +46,17 @@
     },
     "tierce_magazine": {
       "label": "Tierce Magazine",
-      "priced_races": 26,
+      "priced_races": 29,
       "priced_race_coverage": 1.0,
       "all_top5_accounting": {
-        "bets": 130,
-        "wins": 15,
-        "win_rate": 0.1154,
-        "total_stake": 130.0,
-        "total_return": 451.0,
-        "profit": 321.0,
-        "roi": 2.4692,
-        "average_probability_edge": 0.0529,
+        "bets": 145,
+        "wins": 17,
+        "win_rate": 0.1172,
+        "total_stake": 145.0,
+        "total_return": 481.0,
+        "profit": 336.0,
+        "roi": 2.3172,
+        "average_probability_edge": 0.0533,
         "maximum_drawdown_units": 20.0,
         "chronological": [
           {
@@ -344,18 +344,51 @@
               1
             ],
             "profit": -5.0
+          },
+          {
+            "race_key": "2026-10-12|MARSEILLE-BORELY|4",
+            "selected": [
+              11,
+              9,
+              2,
+              3,
+              15
+            ],
+            "profit": 8.0
+          },
+          {
+            "race_key": "2026-10-13|PARISLONGCHAMP|1",
+            "selected": [
+              7,
+              14,
+              4,
+              12,
+              1
+            ],
+            "profit": -5.0
+          },
+          {
+            "race_key": "2026-10-21|TOULOUSE|1",
+            "selected": [
+              3,
+              1,
+              6,
+              4,
+              13
+            ],
+            "profit": 12.0
           }
         ]
       },
       "value_filtered_accounting": {
-        "bets": 42,
+        "bets": 48,
         "wins": 4,
-        "win_rate": 0.0952,
-        "total_stake": 42.0,
+        "win_rate": 0.0833,
+        "total_stake": 48.0,
         "total_return": 213.0,
-        "profit": 171.0,
-        "roi": 4.0714,
-        "average_probability_edge": 0.1075,
+        "profit": 165.0,
+        "roi": 3.4375,
+        "average_probability_edge": 0.1055,
         "maximum_drawdown_units": 13.0,
         "chronological": [
           {
@@ -552,6 +585,30 @@
               15
             ],
             "profit": -1.0
+          },
+          {
+            "race_key": "2026-10-12|MARSEILLE-BORELY|4",
+            "selected": [
+              11
+            ],
+            "profit": -1.0
+          },
+          {
+            "race_key": "2026-10-13|PARISLONGCHAMP|1",
+            "selected": [
+              7,
+              14,
+              4
+            ],
+            "profit": -3.0
+          },
+          {
+            "race_key": "2026-10-21|TOULOUSE|1",
+            "selected": [
+              3,
+              6
+            ],
+            "profit": -2.0
           }
         ]
       }
@@ -3605,6 +3662,351 @@
           "probability_top3": 0.246374,
           "probability_top5": 0.403372,
           "ensemble_score": 0.223955
+        }
+      ]
+    },
+    {
+      "race_key": "2026-10-12|MARSEILLE-BORELY|4",
+      "date": "2026-10-12",
+      "winner": 2,
+      "press_odds": {
+        "tierce_magazine": {
+          "1": {
+            "fractional": "13/1",
+            "decimal": 14.0
+          },
+          "2": {
+            "fractional": "12/1",
+            "decimal": 13.0
+          },
+          "3": {
+            "fractional": "8/1",
+            "decimal": 9.0
+          },
+          "4": {
+            "fractional": "25/1",
+            "decimal": 26.0
+          },
+          "5": {
+            "fractional": "27/1",
+            "decimal": 28.0
+          },
+          "6": {
+            "fractional": "16/1",
+            "decimal": 17.0
+          },
+          "7": {
+            "fractional": "15/1",
+            "decimal": 16.0
+          },
+          "8": {
+            "fractional": "14/1",
+            "decimal": 15.0
+          },
+          "9": {
+            "fractional": "21/1",
+            "decimal": 22.0
+          },
+          "10": {
+            "fractional": "34/1",
+            "decimal": 35.0
+          },
+          "11": {
+            "fractional": "29/1",
+            "decimal": 30.0
+          },
+          "12": {
+            "fractional": "11/1",
+            "decimal": 12.0
+          },
+          "13": {
+            "fractional": "19/1",
+            "decimal": 20.0
+          },
+          "14": {
+            "fractional": "23/1",
+            "decimal": 24.0
+          },
+          "15": {
+            "fractional": "10/1",
+            "decimal": 11.0
+          },
+          "16": {
+            "fractional": "9/1",
+            "decimal": 10.0
+          }
+        }
+      },
+      "complete_top5_prices": {
+        "paris_turf": false,
+        "tierce_magazine": true
+      },
+      "top5": [
+        {
+          "horse_number": 11,
+          "horse_name": "LOHENGREEN",
+          "probability_winner": 0.132956,
+          "probability_top3": 0.305024,
+          "probability_top5": 0.482981,
+          "ensemble_score": 0.280245
+        },
+        {
+          "horse_number": 9,
+          "horse_name": "STARNBERG",
+          "probability_winner": 0.122518,
+          "probability_top3": 0.286186,
+          "probability_top5": 0.457538,
+          "ensemble_score": 0.262981
+        },
+        {
+          "horse_number": 2,
+          "horse_name": "WINDFLOWER",
+          "probability_winner": 0.10904,
+          "probability_top3": 0.272931,
+          "probability_top5": 0.442765,
+          "ensemble_score": 0.249387
+        },
+        {
+          "horse_number": 3,
+          "horse_name": "MORPHEWAN",
+          "probability_winner": 0.108113,
+          "probability_top3": 0.270209,
+          "probability_top5": 0.439807,
+          "ensemble_score": 0.247207
+        },
+        {
+          "horse_number": 15,
+          "horse_name": "NOUS Y SOMMES",
+          "probability_winner": 0.09941,
+          "probability_top3": 0.267253,
+          "probability_top5": 0.442068,
+          "ensemble_score": 0.243297
+        }
+      ]
+    },
+    {
+      "race_key": "2026-10-13|PARISLONGCHAMP|1",
+      "date": "2026-10-13",
+      "winner": 9,
+      "press_odds": {
+        "tierce_magazine": {
+          "1": {
+            "fractional": "13/1",
+            "decimal": 14.0
+          },
+          "2": {
+            "fractional": "27/1",
+            "decimal": 28.0
+          },
+          "3": {
+            "fractional": "38/1",
+            "decimal": 39.0
+          },
+          "4": {
+            "fractional": "23/1",
+            "decimal": 24.0
+          },
+          "5": {
+            "fractional": "22/1",
+            "decimal": 23.0
+          },
+          "6": {
+            "fractional": "25/1",
+            "decimal": 26.0
+          },
+          "7": {
+            "fractional": "12/1",
+            "decimal": 13.0
+          },
+          "8": {
+            "fractional": "34/1",
+            "decimal": 35.0
+          },
+          "9": {
+            "fractional": "7/1",
+            "decimal": 8.0
+          },
+          "10": {
+            "fractional": "18/1",
+            "decimal": 19.0
+          },
+          "11": {
+            "fractional": "9/1",
+            "decimal": 10.0
+          },
+          "12": {
+            "fractional": "16/1",
+            "decimal": 17.0
+          },
+          "13": {
+            "fractional": "5/1",
+            "decimal": 6.0
+          },
+          "14": {
+            "fractional": "15/1",
+            "decimal": 16.0
+          },
+          "15": {
+            "fractional": "20/1",
+            "decimal": 21.0
+          },
+          "16": {
+            "fractional": "32/1",
+            "decimal": 33.0
+          }
+        }
+      },
+      "complete_top5_prices": {
+        "paris_turf": false,
+        "tierce_magazine": true
+      },
+      "top5": [
+        {
+          "horse_number": 7,
+          "horse_name": "BOTICELLI",
+          "probability_winner": 0.172641,
+          "probability_top3": 0.333213,
+          "probability_top5": 0.508988,
+          "ensemble_score": 0.311788
+        },
+        {
+          "horse_number": 14,
+          "horse_name": "MUENCHEN",
+          "probability_winner": 0.159012,
+          "probability_top3": 0.328967,
+          "probability_top5": 0.509937,
+          "ensemble_score": 0.305401
+        },
+        {
+          "horse_number": 4,
+          "horse_name": "AQUITAIN",
+          "probability_winner": 0.129565,
+          "probability_top3": 0.29665,
+          "probability_top5": 0.470406,
+          "ensemble_score": 0.272755
+        },
+        {
+          "horse_number": 12,
+          "horse_name": "DUTY",
+          "probability_winner": 0.102046,
+          "probability_top3": 0.269071,
+          "probability_top5": 0.440739,
+          "ensemble_score": 0.24483
+        },
+        {
+          "horse_number": 1,
+          "horse_name": "FELIX AUX ORMES",
+          "probability_winner": 0.103997,
+          "probability_top3": 0.264877,
+          "probability_top5": 0.432908,
+          "ensemble_score": 0.241996
+        }
+      ]
+    },
+    {
+      "race_key": "2026-10-21|TOULOUSE|1",
+      "date": "2026-10-21",
+      "winner": 13,
+      "press_odds": {
+        "tierce_magazine": {
+          "1": {
+            "fractional": "11/1",
+            "decimal": 12.0
+          },
+          "2": {
+            "fractional": "33/1",
+            "decimal": 34.0
+          },
+          "3": {
+            "fractional": "25/1",
+            "decimal": 26.0
+          },
+          "4": {
+            "fractional": "33/1",
+            "decimal": 34.0
+          },
+          "5": {
+            "fractional": "23/1",
+            "decimal": 24.0
+          },
+          "6": {
+            "fractional": "47/1",
+            "decimal": 48.0
+          },
+          "7": {
+            "fractional": "5/1",
+            "decimal": 6.0
+          },
+          "8": {
+            "fractional": "57/1",
+            "decimal": 58.0
+          },
+          "9": {
+            "fractional": "6/1",
+            "decimal": 7.0
+          },
+          "10": {
+            "fractional": "9/1",
+            "decimal": 10.0
+          },
+          "11": {
+            "fractional": "18/1",
+            "decimal": 19.0
+          },
+          "12": {
+            "fractional": "17/1",
+            "decimal": 18.0
+          },
+          "13": {
+            "fractional": "16/1",
+            "decimal": 17.0
+          }
+        }
+      },
+      "complete_top5_prices": {
+        "paris_turf": false,
+        "tierce_magazine": true
+      },
+      "top5": [
+        {
+          "horse_number": 3,
+          "horse_name": "INVICTUS NAR",
+          "probability_winner": 0.121514,
+          "probability_top3": 0.292274,
+          "probability_top5": 0.474316,
+          "ensemble_score": 0.268635
+        },
+        {
+          "horse_number": 1,
+          "horse_name": "ENEA FONT",
+          "probability_winner": 0.106544,
+          "probability_top3": 0.278333,
+          "probability_top5": 0.452537,
+          "ensemble_score": 0.252987
+        },
+        {
+          "horse_number": 6,
+          "horse_name": "IRRATI DUEM",
+          "probability_winner": 0.10424,
+          "probability_top3": 0.270927,
+          "probability_top5": 0.447983,
+          "ensemble_score": 0.247739
+        },
+        {
+          "horse_number": 4,
+          "horse_name": "HARLEM DE L'ITON",
+          "probability_winner": 0.102264,
+          "probability_top3": 0.267481,
+          "probability_top5": 0.441461,
+          "ensemble_score": 0.244232
+        },
+        {
+          "horse_number": 13,
+          "horse_name": "ICARE DU BERYL",
+          "probability_winner": 0.079978,
+          "probability_top3": 0.240155,
+          "probability_top5": 0.408339,
+          "ensemble_score": 0.21753
         }
       ]
     }
