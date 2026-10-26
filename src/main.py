@@ -14,7 +14,7 @@ from src.model.train_model import main as train_model
 from src.model.backtest import main as run_backtest
 from src.model.order_backtest import main as run_order_backtest
 from src.model.promote_model import main as promote_model
-from src.model.predict_latest import main as generate_prediction
+from src.model.predict_v3 import main as generate_prediction
 from src.memory.update_memory import main as update_memory
 from src.notifications.telegram import send_latest_prediction
 from src.live.collector import collect_live_programs
@@ -92,7 +92,7 @@ def rebuild_knowledge():
 def run_prediction_cycle():
     print_step(1, "DISCOVERING LIVE PROGRAMS")
     collect_live_programs()
-    print_step(2, "GENERATING PREDICTION FROM LIVE REGISTRY")
+    print_step(2, "GENERATING EVIDENCE-GATED V4 PREDICTION")
     generate_prediction()
     print_step(3, "SENDING TELEGRAM PREDICTION")
     send_latest_prediction()
@@ -174,7 +174,7 @@ def main():
         run_results_cycle()
     else:
         run_learning_cycle()
-        print_step(15, "GENERATING LIVE PREDICTION")
+        print_step(15, "GENERATING EVIDENCE-GATED V4 PREDICTION")
         collect_live_programs()
         generate_prediction()
         print_step(16, "SENDING TELEGRAM PREDICTION")
