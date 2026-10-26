@@ -331,6 +331,26 @@
       "prediction_id": "2026-10-27|DEAUVILLE-LA TOUQUES|1|2026-10-25T16:38:34.447490+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 251
+    },
+    "2026-10-28|AUTEUIL|4": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          3,
+          8,
+          6,
+          2,
+          11
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history"
+        ]
+      },
+      "sent_at": "2026-10-26T18:45:49.030257+00:00",
+      "prediction_id": "2026-10-28|AUTEUIL|4|2026-10-26T18:45:48.528619+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 252
     }
   }
 }

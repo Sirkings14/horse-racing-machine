@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T16:15:17.099263+00:00",
+  "updated_at": "2026-10-26T18:45:43.560054+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -887,10 +887,10 @@
       "structured_file": "structured/2026-10-26_CHANTILLY_4.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-26T16:15:17.098955+00:00",
+      "discovered_at": "2026-10-26T18:45:43.559749+00:00",
       "result_status": "pending",
       "created_at": "2026-10-24T16:08:54.566462+00:00",
-      "updated_at": "2026-10-26T16:15:17.099247+00:00"
+      "updated_at": "2026-10-26T18:45:43.560030+00:00"
     },
     {
       "race_key": "2026-10-27|DEAUVILLE-LA TOUQUES|1",
@@ -907,10 +907,30 @@
       "structured_file": "structured/2026-10-27_DEAUVILLE-LA TOUQUES_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-26T16:15:16.841680+00:00",
+      "discovered_at": "2026-10-26T18:45:43.261127+00:00",
       "result_status": "pending",
       "created_at": "2026-10-25T16:38:24.458202+00:00",
-      "updated_at": "2026-10-26T16:15:16.842009+00:00"
+      "updated_at": "2026-10-26T18:45:43.261410+00:00"
+    },
+    {
+      "race_key": "2026-10-28|AUTEUIL|4",
+      "date": "2026-10-28",
+      "track": "AUTEUIL",
+      "race_number": 4,
+      "race_name": "PRIX SANTO PIETRO",
+      "race_type": "MONTE",
+      "distance": 3600,
+      "runners_count": 15,
+      "horse_count": 15,
+      "source_url": "https://lonab.bf/sites/default/files/2026-10/JH_PMUB_DU_28-10-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_28-10-2026_9cd7757080.pdf",
+      "structured_file": "structured/2026-10-28_AUTEUIL_4.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-10-26T18:45:43.008466+00:00",
+      "result_status": "pending",
+      "created_at": "2026-10-26T18:45:38.127186+00:00",
+      "updated_at": "2026-10-26T18:45:43.008778+00:00"
     }
   ]
 }
