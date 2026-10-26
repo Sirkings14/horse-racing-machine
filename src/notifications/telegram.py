@@ -111,8 +111,20 @@ def send_latest_prediction() -> bool:
     if payload is None:
         return False
 
-    if payload.get("mode") not in {"v3_evidence_no_press", "v4_evidence_no_press", "v5_market_opportunity_layer"}:
-        print(f"Telegram skipped: unsupported prediction mode {payload.get('mode')!r}.")
+    mode = payload.get("mode")
+    if mode == "v3_unavailable":
+        reason = str(payload.get("reason") or "unspecified reason")
+        if reason == "no_unfinished_current_or_future_race":
+            print(
+                "Telegram skipped: no new unnotified race is available; "
+                "eligible races have already been handled or none remain."
+            )
+        else:
+            print(f"Telegram skipped: predictor did not produce a usable prediction ({reason}).")
+        return False
+
+    if mode not in {"v3_evidence_no_press", "v4_evidence_no_press", "v5_market_opportunity_layer"}:
+        print(f"Telegram skipped: unsupported prediction mode {mode!r}.")
         return False
 
     race = payload.get("race") or {}
