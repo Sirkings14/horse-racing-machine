@@ -351,6 +351,27 @@
       "prediction_id": "2026-10-28|AUTEUIL|4|2026-10-26T18:45:48.528619+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 252
+    },
+    "2026-10-29|PARIS-VINCENNES|1": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          1,
+          13,
+          2,
+          14,
+          9
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-10-27T18:11:44.397857+00:00",
+      "prediction_id": "2026-10-29|PARIS-VINCENNES|1|2026-10-27T18:11:43.818688+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 253
     }
   }
 }
