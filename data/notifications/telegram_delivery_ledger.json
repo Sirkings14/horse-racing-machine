@@ -393,6 +393,27 @@
       "prediction_id": "2026-10-30|PARIS-VINCENNES NOCTURNE|5|2026-10-28T18:30:18.026610+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 254
+    },
+    "2026-10-31|DEAUVILLE-LA TOUQUES|3": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          6,
+          11,
+          13,
+          10,
+          5
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-10-29T18:36:18.674686+00:00",
+      "prediction_id": "2026-10-31|DEAUVILLE-LA TOUQUES|3|2026-10-29T18:36:18.139821+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 255
     }
   }
 }
