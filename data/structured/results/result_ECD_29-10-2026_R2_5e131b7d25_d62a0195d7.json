@@ -1,0 +1,84 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_29-10-2026_R2_5e131b7d25_d62a0195d7.txt",
+    "parsed_at": "2026-10-29T23:31:29.763972Z",
+    "date": "2026-10-29",
+    "meeting": 2,
+    "track": "FONTAINEBLEAU",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                3,
+                1
+            ],
+            "winner": 3,
+            "second": 1,
+            "third": null
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                8,
+                4,
+                1
+            ],
+            "winner": 8,
+            "second": 4,
+            "third": 1
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                8,
+                4,
+                10
+            ],
+            "winner": 8,
+            "second": 4,
+            "third": 10
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                1,
+                9,
+                10
+            ],
+            "winner": 1,
+            "second": 9,
+            "third": 10
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                15,
+                1,
+                13
+            ],
+            "winner": 15,
+            "second": 1,
+            "third": 13
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                5,
+                4
+            ],
+            "winner": 5,
+            "second": 4,
+            "third": null
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                5,
+                2
+            ],
+            "winner": 5,
+            "second": 2,
+            "third": null
+        }
+    ]
+}
