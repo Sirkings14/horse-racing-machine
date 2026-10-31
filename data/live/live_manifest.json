@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-31T15:18:20.837403+00:00",
+  "updated_at": "2026-10-31T17:18:24.010558+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -987,10 +987,10 @@
       "structured_file": "structured/2026-10-31_DEAUVILLE-LA TOUQUES_3.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-31T15:18:20.837086+00:00",
+      "discovered_at": "2026-10-31T17:18:24.010279+00:00",
       "result_status": "pending",
       "created_at": "2026-10-29T18:36:07.389921+00:00",
-      "updated_at": "2026-10-31T15:18:20.837388+00:00"
+      "updated_at": "2026-10-31T17:18:24.010545+00:00"
     },
     {
       "race_key": "2026-11-01|LA V AL|4",
@@ -1007,10 +1007,30 @@
       "structured_file": "structured/2026-11-01_LA V AL_4.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-10-31T15:18:20.643287+00:00",
+      "discovered_at": "2026-10-31T17:18:23.875770+00:00",
       "result_status": "pending",
       "created_at": "2026-10-30T18:07:41.833093+00:00",
-      "updated_at": "2026-10-31T15:18:20.643596+00:00"
+      "updated_at": "2026-10-31T17:18:23.876027+00:00"
+    },
+    {
+      "race_key": "2026-11-02|FONTAINEBLEAU|3",
+      "date": "2026-11-02",
+      "track": "FONTAINEBLEAU",
+      "race_number": 3,
+      "race_name": "PRIX DE LA SEINE ET MARNE",
+      "race_type": "MONTE",
+      "distance": 1600,
+      "runners_count": 16,
+      "horse_count": 16,
+      "source_url": "https://lonab.bf/sites/default/files/2026-10/JH_PMUB_DU_02-11-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_02-11-2026_fae2feb9e3.pdf",
+      "structured_file": "structured/2026-11-02_FONTAINEBLEAU_3.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-10-31T17:18:23.713906+00:00",
+      "result_status": "pending",
+      "created_at": "2026-10-31T17:18:20.547940+00:00",
+      "updated_at": "2026-10-31T17:18:23.714162+00:00"
     }
   ]
 }

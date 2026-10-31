@@ -435,6 +435,26 @@
       "prediction_id": "2026-11-01|LA V AL|4|2026-10-30T18:07:58.084379+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 256
+    },
+    "2026-11-02|FONTAINEBLEAU|3": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          1,
+          3,
+          5,
+          4,
+          2
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history"
+        ]
+      },
+      "sent_at": "2026-10-31T17:18:27.706047+00:00",
+      "prediction_id": "2026-11-02|FONTAINEBLEAU|3|2026-10-31T17:18:27.365629+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 257
     }
   }
 }
