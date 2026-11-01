@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T15:59:08.445128+00:00",
+  "updated_at": "2026-11-01T18:00:57.368623+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -1007,10 +1007,10 @@
       "structured_file": "structured/2026-11-01_LA V AL_4.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-11-01T15:59:08.444823+00:00",
+      "discovered_at": "2026-11-01T18:00:57.368276+00:00",
       "result_status": "pending",
       "created_at": "2026-10-30T18:07:41.833093+00:00",
-      "updated_at": "2026-11-01T15:59:08.445112+00:00"
+      "updated_at": "2026-11-01T18:00:57.368607+00:00"
     },
     {
       "race_key": "2026-11-02|FONTAINEBLEAU|3",
@@ -1027,10 +1027,30 @@
       "structured_file": "structured/2026-11-02_FONTAINEBLEAU_3.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-11-01T15:59:08.247301+00:00",
+      "discovered_at": "2026-11-01T18:00:57.167496+00:00",
       "result_status": "pending",
       "created_at": "2026-10-31T17:18:20.547940+00:00",
-      "updated_at": "2026-11-01T15:59:08.247603+00:00"
+      "updated_at": "2026-11-01T18:00:57.167866+00:00"
+    },
+    {
+      "race_key": "2026-11-03|PARIS-VINCENNES|1",
+      "date": "2026-11-03",
+      "track": "PARIS-VINCENNES",
+      "race_number": 1,
+      "race_name": "PRIX DE VIENNE",
+      "race_type": "ATTELE",
+      "distance": 2850,
+      "runners_count": 17,
+      "horse_count": 17,
+      "source_url": "https://lonab.bf/sites/default/files/2026-11/JH_PMUB_DU_03-11-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_03-11-2026_70d5f9d3f3.pdf",
+      "structured_file": "structured/2026-11-03_PARIS-VINCENNES_1.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-11-01T18:00:56.966888+00:00",
+      "result_status": "pending",
+      "created_at": "2026-11-01T18:00:52.873624+00:00",
+      "updated_at": "2026-11-01T18:00:56.967217+00:00"
     }
   ]
 }
