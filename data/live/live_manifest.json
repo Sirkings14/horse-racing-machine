@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-05T15:41:07.698853+00:00",
+  "updated_at": "2026-11-05T17:21:49.488597+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -1067,10 +1067,10 @@
       "structured_file": "structured/2026-11-05_PARIS-VINCENNES - PRIX D'A VRANCHES_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-11-05T15:41:07.698477+00:00",
+      "discovered_at": "2026-11-05T17:21:49.488223+00:00",
       "result_status": "pending",
       "created_at": "2026-11-03T17:00:17.611166+00:00",
-      "updated_at": "2026-11-05T15:41:07.698832+00:00"
+      "updated_at": "2026-11-05T17:21:49.488581+00:00"
     },
     {
       "race_key": "2026-11-06|PARIS-VINCENNES NOCTURNE|4",
@@ -1087,10 +1087,30 @@
       "structured_file": "structured/2026-11-06_PARIS-VINCENNES NOCTURNE_4.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-11-05T15:41:07.451273+00:00",
+      "discovered_at": "2026-11-05T17:21:49.278943+00:00",
       "result_status": "pending",
       "created_at": "2026-11-04T17:11:31.142695+00:00",
-      "updated_at": "2026-11-05T15:41:07.451636+00:00"
+      "updated_at": "2026-11-05T17:21:49.279325+00:00"
+    },
+    {
+      "race_key": "2026-11-07|DEAUVILLE-LA TOUQUES|3",
+      "date": "2026-11-07",
+      "track": "DEAUVILLE-LA TOUQUES",
+      "race_number": 3,
+      "race_name": "PRIX DE L'OPERATION EPSOM",
+      "race_type": "MONTÉ",
+      "distance": 1900,
+      "runners_count": 16,
+      "horse_count": 16,
+      "source_url": "https://lonab.bf/sites/default/files/2026-11/JH_PMUB_DU_07-11-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_07-11-2026_98db58cab8.pdf",
+      "structured_file": "structured/2026-11-07_DEAUVILLE-LA TOUQUES_3.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-11-05T17:21:48.993043+00:00",
+      "result_status": "pending",
+      "created_at": "2026-11-05T17:21:37.118478+00:00",
+      "updated_at": "2026-11-05T17:21:48.993426+00:00"
     }
   ]
 }
