@@ -1,0 +1,83 @@
+{
+    "document_type": "result",
+    "source_file": "result_ECD_04-11-2026_R3_4d433f28ad_d9e0de0bef.txt",
+    "parsed_at": "2026-11-05T00:30:56.412380Z",
+    "date": "2026-11-04",
+    "meeting": 3,
+    "track": "AUTEUIL",
+    "races": [
+        {
+            "race_number": 1,
+            "arrival": [
+                4,
+                6
+            ],
+            "winner": 4,
+            "second": 6,
+            "third": null
+        },
+        {
+            "race_number": 2,
+            "arrival": [
+                1,
+                3
+            ],
+            "winner": 1,
+            "second": 3,
+            "third": null
+        },
+        {
+            "race_number": 3,
+            "arrival": [
+                4,
+                3
+            ],
+            "winner": 4,
+            "second": 3,
+            "third": null
+        },
+        {
+            "race_number": 4,
+            "arrival": [
+                3,
+                1,
+                4
+            ],
+            "winner": 3,
+            "second": 1,
+            "third": 4
+        },
+        {
+            "race_number": 5,
+            "arrival": [
+                5,
+                3
+            ],
+            "winner": 5,
+            "second": 3,
+            "third": null
+        },
+        {
+            "race_number": 6,
+            "arrival": [
+                11,
+                2,
+                7
+            ],
+            "winner": 11,
+            "second": 2,
+            "third": 7
+        },
+        {
+            "race_number": 7,
+            "arrival": [
+                4,
+                12,
+                11
+            ],
+            "winner": 4,
+            "second": 12,
+            "third": 11
+        }
+    ]
+}
