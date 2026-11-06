@@ -10,6 +10,7 @@ from src.model.truth_gate import validate_program
 from src.model.v3_model import V3LogisticModel, normalize_race_probabilities, v3_ranking_score
 from src.model.autopilot_guard import build_autopilot_guard
 from src.model.opportunity import score_race_opportunity
+from src.model.selection_filters import decide_live_play
 from src.dataset.program_history import load_program_history
 
 BASE_DIR=Path(__file__).resolve().parents[2]
@@ -58,9 +59,6 @@ def _live_rows(program):
     for horse in program.get("horses") or []:
         try: number=int(horse.get("number"))
         except (TypeError,ValueError): continue
-        # Preserve only fields supplied by the live program. This keeps the
-        # prediction path schema-compatible with historical rows without
-        # inventing horse attributes or importing post-race information.
         row={
             "race_key":key,"date":m["date"],"track":m["track"],
             "race_number":m["race_number"],"race_name":m["race_name"],
@@ -75,7 +73,7 @@ def _live_rows(program):
             "trainer","entraineur","form_rank","recent_form_rank","forme_rank",
             "class_rank","classe_rank","favorite_rank","odds_rank","market_rank",
             "progress_rank","improvement_rank","regularity_rank","consistency_rank",
-            "horse_description","description",
+            "horse_description","description","gains","age","sex","performance",
         ):
             if field_name in horse:
                 row[field_name]=horse.get(field_name)
@@ -93,7 +91,6 @@ def no_prediction(reason,**extra):
     result={"prediction_id":None,"generated_at":datetime.now(timezone.utc).isoformat(),"model_version":None,"mode":"v3_unavailable","reason":reason,"recommended_numbers":[],"ranked_horses":[],**extra}; _save(result); return result
 
 def _notification_signature(payload: dict[str, Any]) -> dict[str, Any]:
-    """Build the same semantic signature used by the Telegram delivery ledger."""
     ranked = payload.get("ranked_horses") or []
     candidates = [
         item.get("horse_number")
@@ -142,7 +139,6 @@ def _already_notified_for_same_day_snapshot(
     program: dict[str, Any],
     model_fingerprint: str,
 ) -> bool:
-    """Skip only if a confirmed notification matches the current race card and model."""
     try:
         target_date = date.fromisoformat(str(race_date)[:10])
     except (TypeError, ValueError):
@@ -154,8 +150,6 @@ def _already_notified_for_same_day_snapshot(
     if snapshot is None:
         return False
 
-    # A program scheduled for tomorrow may be notified today. Earlier timestamps
-    # are valid; snapshots or deliveries after the race date are not.
     try:
         generated_at = datetime.fromisoformat(str(snapshot.get("generated_at") or "").replace("Z", "+00:00"))
         if generated_at.tzinfo is None:
@@ -193,7 +187,6 @@ def _already_notified_for_same_day_snapshot(
 
 
 def _first_unfinished_program(races, model_fingerprint: str):
-    """Select the earliest race not already completed or identically notified."""
     for entry in races:
         program = _json(LIVE_DIR / str(entry["structured_file"]))
         race_key = str(entry.get("race_key") or "")
@@ -271,18 +264,61 @@ def main():
     disagreement=float(np.mean([x["model_disagreement"] for x in ranked[:5]])) if ranked else 1.0
     confidence="high" if margin>=0.08 and disagreement<0.06 else "medium" if margin>=0.03 and disagreement<0.10 else "low"
     opportunity=score_race_opportunity(ranked)
-    result={"prediction_id":f"{key}|{datetime.now(timezone.utc).isoformat()}","generated_at":datetime.now(timezone.utc).isoformat(),"model_version":bundle.get("model_version"),"model_fingerprint":_model_fingerprint(bundle),"source_program_fingerprint":_program_fingerprint(program),"mode":"v5_market_opportunity_layer","race_key":key,"race":_meta(program),"truth_gate":gate,"press_dependency":False,"post_race_feature_policy":"hard_exclusion","feature_health":feature_health,"confidence":confidence,"model_agreement":"high" if disagreement<0.06 else "medium" if disagreement<0.10 else "low","recommended_numbers":[x["horse_number"] for x in ranked[:5]],"final_five":[x["horse_number"] for x in ranked[:5]],"ranked_horses":ranked,"race_opportunity":opportunity,"selection_policy":"independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity"}
+    runners_count=int((_meta(program)["runners_count"] or len(ranked) or 0))
+    selection=decide_live_play(
+        ranked=ranked,
+        profiled_rows=current_profile,
+        runners_count=runners_count,
+    )
+    result={
+        "prediction_id":f"{key}|{datetime.now(timezone.utc).isoformat()}",
+        "generated_at":datetime.now(timezone.utc).isoformat(),
+        "model_version":bundle.get("model_version"),
+        "model_fingerprint":_model_fingerprint(bundle),
+        "source_program_fingerprint":_program_fingerprint(program),
+        "mode":"v5_market_opportunity_layer",
+        "race_key":key,
+        "race":_meta(program),
+        "truth_gate":gate,
+        "press_dependency":False,
+        "post_race_feature_policy":"hard_exclusion",
+        "feature_health":feature_health,
+        "confidence":confidence,
+        "model_agreement":"high" if disagreement<0.06 else "medium" if disagreement<0.10 else "low",
+        "recommended_numbers":[x["horse_number"] for x in ranked[:5]],
+        "final_five":[x["horse_number"] for x in ranked[:5]],
+        "ranked_horses":ranked,
+        "race_opportunity":opportunity,
+        "selection_filter":selection,
+        "selection_policy":"independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity_and_strict_selection_filters",
+    }
     guard=build_autopilot_guard({"ranked_horses":ranked,"monitoring":{"agreement":result["model_agreement"]},"difficulty":{}})
     result["autopilot_guard"]=guard
-    if guard.get("decision")=="PASS":
-        result["live_decision"]="NO_BET"
-        result["no_bet_reason"]=guard.get("gate_reasons") or ["autopilot_guard_blocked_live_play"]
-        result["recommended_numbers"]=[]
-        result["final_five"]=[]
+
+    # Both gates must clear: autopilot_guard AND selection_filters.
+    no_bet_reasons: list[str] = []
+    if guard.get("decision") == "PASS":
+        no_bet_reasons.extend(guard.get("gate_reasons") or ["autopilot_guard_blocked_live_play"])
+    if selection.get("decision") != "PLAY_CANDIDATE":
+        no_bet_reasons.extend(selection.get("gate_reasons") or ["selection_filter_blocked_live_play"])
+
+    if no_bet_reasons:
+        result["live_decision"] = "NO_BET"
+        result["no_bet_reason"] = no_bet_reasons
+        result["recommended_numbers"] = []
+        result["final_five"] = []
     else:
-        result["live_decision"]="PLAY_CANDIDATE"
+        result["live_decision"] = "PLAY_CANDIDATE"
+        shortlist = selection.get("recommended_numbers") or [x["horse_number"] for x in ranked[:3]]
+        result["recommended_numbers"] = shortlist
+        result["final_five"] = [x["horse_number"] for x in ranked[:5]]
+
     _save(result)
-    print("V3 FINAL 5:",result["final_five"])
+    print("V3 live_decision:", result["live_decision"])
+    print("V3 recommended:", result["recommended_numbers"])
+    print("V3 FINAL 5:", result["final_five"])
+    if result.get("no_bet_reason"):
+        print("V3 no_bet_reason:", result["no_bet_reason"])
     return result
 
 if __name__=="__main__": main()
