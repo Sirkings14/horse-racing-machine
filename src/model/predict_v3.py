@@ -295,30 +295,42 @@ def main():
     guard=build_autopilot_guard({"ranked_horses":ranked,"monitoring":{"agreement":result["model_agreement"]},"difficulty":{}})
     result["autopilot_guard"]=guard
 
-    # Both gates must clear: autopilot_guard AND selection_filters.
-    no_bet_reasons: list[str] = []
-    if guard.get("decision") == "PASS":
-        no_bet_reasons.extend(guard.get("gate_reasons") or ["autopilot_guard_blocked_live_play"])
-    if selection.get("decision") != "PLAY_CANDIDATE":
-        no_bet_reasons.extend(selection.get("gate_reasons") or ["selection_filter_blocked_live_play"])
+    # Research vs play split:
+    # - Rankings / final_five / research_numbers are ALWAYS kept for analysis.
+    # - live_decision PLAY_CANDIDATE only when both selection_filters AND
+    #   autopilot_guard clear. Economic / history autopilot blocks affect
+    #   betting mode only, not the research ranking.
+    research_top5 = [x["horse_number"] for x in ranked[:5]]
+    research_top3 = selection.get("research_numbers") or [x["horse_number"] for x in ranked[:3]]
+    result["final_five"] = research_top5
+    result["research_numbers"] = research_top3
+    result["ranked_horses"] = ranked
 
-    if no_bet_reasons:
+    play_blockers: list[str] = []
+    if guard.get("decision") == "PASS":
+        play_blockers.extend(guard.get("gate_reasons") or ["autopilot_guard_blocked_live_play"])
+    if selection.get("decision") != "PLAY_CANDIDATE":
+        play_blockers.extend(selection.get("gate_reasons") or ["selection_filter_blocked_live_play"])
+
+    if play_blockers:
         result["live_decision"] = "NO_BET"
-        result["no_bet_reason"] = no_bet_reasons
+        result["mode_detail"] = "research_only"
+        result["no_bet_reason"] = play_blockers
         result["recommended_numbers"] = []
-        result["final_five"] = []
     else:
         result["live_decision"] = "PLAY_CANDIDATE"
-        shortlist = selection.get("recommended_numbers") or [x["horse_number"] for x in ranked[:3]]
-        result["recommended_numbers"] = shortlist
-        result["final_five"] = [x["horse_number"] for x in ranked[:5]]
+        result["mode_detail"] = "research_and_play"
+        result["recommended_numbers"] = (
+            selection.get("recommended_numbers") or research_top3
+        )
 
     _save(result)
-    print("V3 live_decision:", result["live_decision"])
-    print("V3 recommended:", result["recommended_numbers"])
-    print("V3 FINAL 5:", result["final_five"])
+    print("V3 live_decision:", result["live_decision"], f"({result.get('mode_detail')})")
+    print("V3 research top5:", result["final_five"])
+    print("V3 research top3:", result["research_numbers"])
+    print("V3 play recommended:", result["recommended_numbers"])
     if result.get("no_bet_reason"):
-        print("V3 no_bet_reason:", result["no_bet_reason"])
+        print("V3 play blockers:", result["no_bet_reason"])
     return result
 
 if __name__=="__main__": main()
