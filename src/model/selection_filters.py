@@ -39,11 +39,12 @@ def decide_live_play(
     profiled_rows: list[dict[str, Any]],
     runners_count: int,
     *,
-    min_top_prob: float = 0.18,
-    min_separation: float = 0.04,
-    min_history_coverage: float = 0.35,
-    min_mean_history_starts: float = 1.5,
-    max_field_size: int = 16,
+    min_top_prob: float = 0.20,
+    min_separation: float = 0.05,
+    min_history_coverage: float = 0.40,
+    min_mean_history_starts: float = 2.0,
+    min_jockey_coverage: float = 0.25,
+    max_field_size: int = 14,
 ) -> dict[str, Any]:
     """Return a conservative play decision for the current race.
 
@@ -72,13 +73,16 @@ def decide_live_play(
         reasons.append(
             f"mean_history_starts_low:{coverage['mean_history_starts']:.2f}<{min_mean_history_starts}"
         )
-    if edge_vs_uniform < 0.03:
-        reasons.append(f"edge_vs_uniform_low:{edge_vs_uniform:.3f}<0.03")
+    if coverage["jockey_coverage"] < min_jockey_coverage:
+        reasons.append(
+            f"jockey_coverage_low:{coverage['jockey_coverage']:.2f}<{min_jockey_coverage}"
+        )
+    if edge_vs_uniform < 0.04:
+        reasons.append(f"edge_vs_uniform_low:{edge_vs_uniform:.3f}<0.04")
 
     decision = "NO_BET" if reasons else "PLAY_CANDIDATE"
     recommended = []
     if decision == "PLAY_CANDIDATE":
-        # Prefer a shortlist: top 1 for winner-style, top 3 for place-style research.
         recommended = [int(r["horse_number"]) for r in ranked[:3] if r.get("horse_number") is not None]
 
     return {
