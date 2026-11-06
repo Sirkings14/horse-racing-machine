@@ -13,9 +13,6 @@ def _key(row): return str(row.get("race_key") or "")
 def _sort(row): return (str(row.get("date") or "")[:10],_key(row))
 
 def _valid_rows(rows):
-    # Keep the complete race field. Unfinished/non-starter rows are still
-    # valid pre-race candidates; only races without a verified outcome are
-    # excluded from evaluation later.
     return [r for r in rows if _key(r)]
 
 def _evaluate(ranked):
@@ -24,8 +21,6 @@ def _evaluate(ranked):
     top3={int(r["horse_number"]) for r in ranked[:3]}
     top5={int(r["horse_number"]) for r in ranked[:5]}
     field=max(len(ranked),1)
-    # Expected random Top-3 coverage is 9/field for a 3-runner prediction
-    # under a simple uniform benchmark.
     random_top3_coverage=min(3.0,3.0*len(actual)/field)
     return {
         "winner_hit_at_1":bool(ranked and winner==int(ranked[0]["horse_number"])),
@@ -52,13 +47,9 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
     for row in profiled:
         if not row.get("_program_only_history"): groups[_key(row)].append(row)
     keys=sorted(groups,key=lambda k:min(_sort(r) for r in groups[k]))
-    # Keep validation chronological but bounded. All earlier races remain
-    # available for training; only the final holdout window is scored.
     evaluation_keys=set(keys[-max_eval_races:]) if max_eval_races and len(keys)>max_eval_races else set(keys)
     predictions=[]; probabilities=[]; labels=[]; winner_brier_scores=[]; winner_uniform_brier_scores=[]
     skipped_incomplete_evaluation_labels=0
-    # Refit once per calendar date, preserving the rule that same-day races
-    # cannot teach one another while making large walk-forward validation viable.
     date_to_keys=defaultdict(list)
     for key in keys:
         row=min(groups[key], key=lambda r: _sort(r))
@@ -76,7 +67,11 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
             try:
                 models["winner"]=fit_v3_model(train,target_field="won",epochs=epochs)
                 models["top3"]=fit_v3_model(train,target_field="top3",epochs=epochs)
-                models["top5"]=fit_v3_model(train,target_field="top5",epochs=epochs)
+                try:
+                    models["top5"]=fit_v3_model(train,target_field="top5",epochs=epochs)
+                except ValueError:
+                    # LONAB often publishes only top-3 arrivals; reuse top3 head.
+                    models["top5"]=fit_v3_model(train,target_field="top3",epochs=epochs)
             except ValueError:
                 continue
         for key in date_to_keys[date]:
@@ -126,7 +121,6 @@ def run(rows:list[dict[str,Any]],min_train_races:int=100,refit_every_days:int=36
     brier_baseline=prevalence*(1.0-prevalence)
     logloss_baseline=-(prevalence*math.log(max(prevalence,1e-6))+(1-prevalence)*math.log(max(1-prevalence,1e-6)))
 
-    # Time stability: divide the holdout sequence into up to four chronological blocks.
     block_metrics=[]
     block_count=min(4,max(1,n//25))
     if block_count:
