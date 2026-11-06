@@ -52,6 +52,19 @@ class V3LogisticModel:
         x = build_v3_matrix(rows)
         if len(x) == 0:
             return np.empty(0, dtype=float)
+        # Align matrix columns to this artifact's feature_names so an older
+        # production model (e.g. 36 features) still works after the feature
+        # vector is extended for challenger training.
+        from src.model.v3_features import FEATURE_NAMES as CURRENT_FEATURE_NAMES
+        if list(self.feature_names) != list(CURRENT_FEATURE_NAMES):
+            index = {name: i for i, name in enumerate(CURRENT_FEATURE_NAMES)}
+            cols = []
+            for name in self.feature_names:
+                if name in index:
+                    cols.append(x[:, index[name]])
+                else:
+                    cols.append(np.zeros(len(x), dtype=float))
+            x = np.column_stack(cols) if cols else np.zeros((len(x), 0), dtype=float)
         mean = np.asarray(self.mean, dtype=float)
         std = np.where(np.asarray(self.std, dtype=float) < 1e-9, 1.0, np.asarray(self.std, dtype=float))
         z = (x - mean) / std
