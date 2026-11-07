@@ -558,6 +558,27 @@
       "prediction_id": "2026-11-08|SAINT-CLOUD|5|2026-11-06T21:42:27.588246+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 262
+    },
+    "2026-11-09|BORDEAUX-LE BOUSCAT|2": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          10,
+          13,
+          5,
+          15,
+          4
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-11-07T17:49:12.738390+00:00",
+      "prediction_id": "2026-11-09|BORDEAUX-LE BOUSCAT|2|2026-11-07T17:49:12.338077+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 263
     }
   }
 }

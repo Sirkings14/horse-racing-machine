@@ -1,0 +1,414 @@
+{
+  "prediction_id": "2026-11-09|BORDEAUX-LE BOUSCAT|2|2026-11-07T17:49:12.338077+00:00",
+  "generated_at": "2026-11-07T17:49:12.338108+00:00",
+  "model_version": "v4-evidence-no-press",
+  "model_fingerprint": "85e56c02ff8b9f009959f1c8ec4b1d0c0b71b5424c7d01e08a1d787fab68af90",
+  "source_program_fingerprint": "48bd3a3229f45219381a72f2443d3b9bfa620dc5ce71595fb4dc8e81b3cafdce",
+  "mode": "v5_market_opportunity_layer",
+  "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+  "race": {
+    "date": "2026-11-09",
+    "track": "BORDEAUX-LE BOUSCAT",
+    "race_number": 2,
+    "race_name": "GRAND PRIX DE L'HIPPODROME DU BOUSCAT",
+    "race_type": "ATTELE",
+    "distance": 2650,
+    "runners_count": 15
+  },
+  "truth_gate": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "press_independent": true,
+    "post_race_data_excluded": true
+  },
+  "press_dependency": false,
+  "post_race_feature_policy": "hard_exclusion",
+  "feature_health": {
+    "runners": 15,
+    "history_coverage": 0.867,
+    "course_coverage": 0.0,
+    "distance_coverage": 0.733,
+    "complete_rows": 1.0,
+    "identity_sources": {
+      "normalized_name": 15
+    },
+    "history_starts_sorted": [
+      0,
+      0,
+      1,
+      1,
+      5,
+      5,
+      5,
+      5,
+      8,
+      8,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "distance_starts_sorted": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      4,
+      4,
+      6,
+      6,
+      6,
+      6,
+      7
+    ]
+  },
+  "confidence": "low",
+  "model_agreement": "low",
+  "recommended_numbers": [],
+  "final_five": [
+    10,
+    13,
+    5,
+    15,
+    4
+  ],
+  "ranked_horses": [
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 10,
+      "horse_name": "IRIS DES ROSEAUX",
+      "probability_winner": 0.142365,
+      "raw_probability_winner": 0.177047,
+      "probability_top3": 0.336298,
+      "probability_top5": 0.511909,
+      "ensemble_score": 0.319874,
+      "model_disagreement": 0.136761,
+      "data_completeness": 1.0,
+      "predicted_rank": 1
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 13,
+      "horse_name": "ICARE DU BERYL",
+      "probability_winner": 0.137935,
+      "raw_probability_winner": 0.171538,
+      "probability_top3": 0.328077,
+      "probability_top5": 0.499361,
+      "ensemble_score": 0.311682,
+      "model_disagreement": 0.133878,
+      "data_completeness": 1.0,
+      "predicted_rank": 2
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 5,
+      "horse_name": "KEROSEN DU GERS",
+      "probability_winner": 0.124477,
+      "raw_probability_winner": 0.154802,
+      "probability_top3": 0.327924,
+      "probability_top5": 0.511771,
+      "ensemble_score": 0.308742,
+      "model_disagreement": 0.145754,
+      "data_completeness": 1.0,
+      "predicted_rank": 3
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 15,
+      "horse_name": "ELEGANCE KRONOS",
+      "probability_winner": 0.119178,
+      "raw_probability_winner": 0.148212,
+      "probability_top3": 0.316901,
+      "probability_top5": 0.497165,
+      "ensemble_score": 0.298422,
+      "model_disagreement": 0.142486,
+      "data_completeness": 1.0,
+      "predicted_rank": 4
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 4,
+      "horse_name": "NELSON GREENWOOD",
+      "probability_winner": 0.117215,
+      "raw_probability_winner": 0.145771,
+      "probability_top3": 0.313148,
+      "probability_top5": 0.49292,
+      "ensemble_score": 0.294984,
+      "model_disagreement": 0.141753,
+      "data_completeness": 1.0,
+      "predicted_rank": 5
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 11,
+      "horse_name": "GERICAULT",
+      "probability_winner": 0.095463,
+      "raw_probability_winner": 0.118719,
+      "probability_top3": 0.287354,
+      "probability_top5": 0.466638,
+      "ensemble_score": 0.268707,
+      "model_disagreement": 0.14206,
+      "data_completeness": 1.0,
+      "predicted_rank": 6
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 8,
+      "horse_name": "GALANT DE CAREL",
+      "probability_winner": 0.030362,
+      "raw_probability_winner": 0.037759,
+      "probability_top3": 0.1756,
+      "probability_top5": 0.323031,
+      "ensemble_score": 0.160525,
+      "model_disagreement": 0.116484,
+      "data_completeness": 1.0,
+      "predicted_rank": 7
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 1,
+      "horse_name": "DUNA DI GIRIFALCO",
+      "probability_winner": 0.02977,
+      "raw_probability_winner": 0.037023,
+      "probability_top3": 0.1731,
+      "probability_top5": 0.319415,
+      "ensemble_score": 0.158363,
+      "model_disagreement": 0.115311,
+      "data_completeness": 1.0,
+      "predicted_rank": 8
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 3,
+      "horse_name": "STARO RAILI",
+      "probability_winner": 0.02977,
+      "raw_probability_winner": 0.037023,
+      "probability_top3": 0.1731,
+      "probability_top5": 0.319415,
+      "ensemble_score": 0.158363,
+      "model_disagreement": 0.115311,
+      "data_completeness": 1.0,
+      "predicted_rank": 9
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 2,
+      "horse_name": "ROSSI GARLINE",
+      "probability_winner": 0.029618,
+      "raw_probability_winner": 0.036834,
+      "probability_top3": 0.172311,
+      "probability_top5": 0.318011,
+      "ensemble_score": 0.157645,
+      "model_disagreement": 0.114815,
+      "data_completeness": 1.0,
+      "predicted_rank": 10
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 7,
+      "horse_name": "JACKSON D'ARC",
+      "probability_winner": 0.029606,
+      "raw_probability_winner": 0.036819,
+      "probability_top3": 0.172229,
+      "probability_top5": 0.317413,
+      "ensemble_score": 0.157486,
+      "model_disagreement": 0.114575,
+      "data_completeness": 1.0,
+      "predicted_rank": 11
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 6,
+      "horse_name": "KASSIOPEE WIND",
+      "probability_winner": 0.029485,
+      "raw_probability_winner": 0.036668,
+      "probability_top3": 0.171749,
+      "probability_top5": 0.31706,
+      "ensemble_score": 0.157133,
+      "model_disagreement": 0.114495,
+      "data_completeness": 1.0,
+      "predicted_rank": 12
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 14,
+      "horse_name": "HOLD UP DES VENTES",
+      "probability_winner": 0.028627,
+      "raw_probability_winner": 0.035602,
+      "probability_top3": 0.167529,
+      "probability_top5": 0.309607,
+      "ensemble_score": 0.153283,
+      "model_disagreement": 0.111888,
+      "data_completeness": 1.0,
+      "predicted_rank": 13
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 9,
+      "horse_name": "IDOLE OF LOVE",
+      "probability_winner": 0.028316,
+      "raw_probability_winner": 0.035214,
+      "probability_top3": 0.165853,
+      "probability_top5": 0.306394,
+      "ensemble_score": 0.151719,
+      "model_disagreement": 0.110733,
+      "data_completeness": 1.0,
+      "predicted_rank": 14
+    },
+    {
+      "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
+      "horse_number": 12,
+      "horse_name": "HOLLYWOOD DU BOIS",
+      "probability_winner": 0.027811,
+      "raw_probability_winner": 0.034586,
+      "probability_top3": 0.163607,
+      "probability_top5": 0.30269,
+      "ensemble_score": 0.149701,
+      "model_disagreement": 0.109479,
+      "data_completeness": 1.0,
+      "predicted_rank": 15
+    }
+  ],
+  "race_opportunity": {
+    "tier": "C",
+    "model_quality_score": 47.16,
+    "market_edge_available": false,
+    "market_evidence_source": null,
+    "market_evidence_captured_at": null,
+    "value_candidates": [],
+    "top_candidate_margin": 0.008192,
+    "top5_mean_top3_probability": 0.32447,
+    "top5_mean_top5_probability": 0.502625,
+    "top5_mean_model_agreement": 0.859874,
+    "top5_mean_data_completeness": 1.0,
+    "reasons": [
+      "tight_top_candidates",
+      "elevated_model_disagreement",
+      "complete_pre_race_data"
+    ],
+    "policy": {
+      "race_quality_is_not_profitability": true,
+      "market_prices_must_be_observed": true,
+      "probabilities_are_not_prices": true,
+      "winner_probabilities_are_race_normalized": true,
+      "normalization_does_not_prove_calibration": true,
+      "market_edge_does_not_authorize_betting": true
+    }
+  },
+  "selection_filter": {
+    "decision": "NO_BET",
+    "gate_reasons": [
+      "top_win_prob_low:0.142<0.18"
+    ],
+    "recommended_numbers": [],
+    "research_numbers": [
+      10,
+      13,
+      5
+    ],
+    "top_win_probability": 0.142365,
+    "edge_vs_uniform": 0.075698,
+    "score_separation": 0.161511,
+    "coverage": {
+      "history_coverage": 0.8667,
+      "jockey_coverage": 0.9333,
+      "trainer_coverage": 0.8667,
+      "mean_history_starts": 5.8667
+    },
+    "baseline_win_prob": 0.066667,
+    "history_requirement_relaxed": true,
+    "effective_min_mean_history_starts": 0.8
+  },
+  "selection_policy": "independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity_and_strict_selection_filters",
+  "autopilot_guard": {
+    "health": "stable_observation",
+    "decision": "PASS",
+    "gate_reasons": [
+      "insufficient_verified_history",
+      "low_model_confidence",
+      "economic_validation_unavailable"
+    ],
+    "recent_verified_predictions": 12,
+    "recent_winner_hit_rate": 0.1667,
+    "recent_winner_in_top3_rate": 0.4167,
+    "recent_order_engine_winner_hit_rate": 0.1667,
+    "recent_exact_top3_order_rate": 0.0,
+    "recent_exact_top5_order_rate": 0.0,
+    "recent_recommended_hit_average": 1.917,
+    "engine_attribution": {
+      "strength": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.833,
+        "avg_actual_top5_covered_by_top5": 2.083,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      },
+      "order": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.25,
+        "winner_in_top5_rate": 0.3333,
+        "avg_actual_top3_covered_by_top3": 1.0,
+        "avg_actual_top3_covered_by_top5": 1.167,
+        "avg_actual_top5_covered_by_top5": 1.25,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.25
+      },
+      "fused": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.667,
+        "avg_actual_top5_covered_by_top5": 1.917,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      }
+    },
+    "order_walk_forward_pairwise_accuracy": 0.6013,
+    "feature_drift_severity": "unrated",
+    "economic_validation_status": "awaiting_market_odds",
+    "economic_validation_roi": null,
+    "prediction_confidence": "low",
+    "confidence_reasons": [
+      "top candidates are tightly separated"
+    ],
+    "difficulty": {},
+    "gate_policy": {
+      "PASS_means_insufficient_or_unstable_evidence": true,
+      "PLAY_CANDIDATE_is_not_a_guarantee_of_outcome_or_profit": true,
+      "insufficient_verified_history_blocks": true,
+      "severe_feature_drift_blocks": true,
+      "low_confidence_blocks": true,
+      "engine_disagreement_blocks": false,
+      "high_difficulty_blocks": true,
+      "degraded_recent_winner_accuracy_blocks": true,
+      "order_engine_below_random_baseline_blocks": true,
+      "missing_or_negative_economic_validation_blocks": true
+    }
+  },
+  "research_numbers": [
+    10,
+    13,
+    5
+  ],
+  "live_decision": "NO_BET",
+  "mode_detail": "research_only",
+  "no_bet_reason": [
+    "insufficient_verified_history",
+    "low_model_confidence",
+    "economic_validation_unavailable",
+    "top_win_prob_low:0.142<0.18"
+  ]
+}
