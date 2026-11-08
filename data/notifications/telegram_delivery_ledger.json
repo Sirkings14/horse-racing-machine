@@ -579,6 +579,27 @@
       "prediction_id": "2026-11-09|BORDEAUX-LE BOUSCAT|2|2026-11-07T17:49:12.338077+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 263
+    },
+    "2026-11-10|FONTAINEBLEAU|4": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          2,
+          11,
+          14,
+          4,
+          1
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-11-08T18:00:28.329846+00:00",
+      "prediction_id": "2026-11-10|FONTAINEBLEAU|4|2026-11-08T18:00:27.887335+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 264
     }
   }
 }

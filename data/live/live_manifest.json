@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08T15:57:02.224503+00:00",
+  "updated_at": "2026-11-08T18:00:22.972629+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -1127,10 +1127,10 @@
       "structured_file": "structured/2026-11-08_SAINT-CLOUD_5.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-11-08T15:57:02.224096+00:00",
+      "discovered_at": "2026-11-08T18:00:22.972171+00:00",
       "result_status": "pending",
       "created_at": "2026-11-06T21:42:07.794371+00:00",
-      "updated_at": "2026-11-08T15:57:02.224484+00:00"
+      "updated_at": "2026-11-08T18:00:22.972606+00:00"
     },
     {
       "race_key": "2026-11-09|BORDEAUX-LE BOUSCAT|2",
@@ -1147,10 +1147,30 @@
       "structured_file": "structured/2026-11-09_BORDEAUX-LE BOUSCAT_2.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-11-08T15:57:02.006262+00:00",
+      "discovered_at": "2026-11-08T18:00:22.770637+00:00",
       "result_status": "pending",
       "created_at": "2026-11-07T17:49:02.462714+00:00",
-      "updated_at": "2026-11-08T15:57:02.006651+00:00"
+      "updated_at": "2026-11-08T18:00:22.771017+00:00"
+    },
+    {
+      "race_key": "2026-11-10|FONTAINEBLEAU|4",
+      "date": "2026-11-10",
+      "track": "FONTAINEBLEAU",
+      "race_number": 4,
+      "race_name": "PRIX ROLAND FOUGEDOIRE",
+      "race_type": "PLAT",
+      "distance": 1200,
+      "runners_count": 16,
+      "horse_count": 16,
+      "source_url": "https://lonab.bf/sites/default/files/2026-11/JH_PMUB_DU_10-11-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_10-11-2026_e83b46d9b4.pdf",
+      "structured_file": "structured/2026-11-10_FONTAINEBLEAU_4.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-11-08T18:00:22.574759+00:00",
+      "result_status": "pending",
+      "created_at": "2026-11-08T18:00:18.118092+00:00",
+      "updated_at": "2026-11-08T18:00:22.575162+00:00"
     }
   ]
 }
