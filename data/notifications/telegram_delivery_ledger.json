@@ -621,6 +621,27 @@
       "prediction_id": "2026-11-11|TOULOUSE|3|2026-11-09T17:43:13.170646+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 265
+    },
+    "2026-11-12|PARIS-VINCENNES - PRIX MARCEL LAURENT|1": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          12,
+          13,
+          4,
+          9,
+          16
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-11-10T17:00:33.192186+00:00",
+      "prediction_id": "2026-11-12|PARIS-VINCENNES - PRIX MARCEL LAURENT|1|2026-11-10T17:00:32.768186+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 266
     }
   }
 }
