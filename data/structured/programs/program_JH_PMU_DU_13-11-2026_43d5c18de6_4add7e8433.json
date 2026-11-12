@@ -1,0 +1,276 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMU_DU_13-11-2026_43d5c18de6_4add7e8433.txt",
+    "parsed_at": "2026-11-12T01:38:45.077197Z",
+    "date": "2026-11-13",
+    "race": {
+        "race_name": null,
+        "track": null,
+        "race_number": 4,
+        "race_type": "ATTELE",
+        "runners_count": 18,
+        "distance": 2100,
+        "prize_euros": 53000
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "KAISER DES GRANGES",
+            "description": "",
+            "performance": "0.5.1.2.7",
+            "gains": 157595,
+            "trainer": "Ch. NICOLE",
+            "jockey": "P.PH. PLOQUIN",
+            "driver": "P.PH. PLOQUIN",
+            "owner": "P. DEQUEKER",
+            "listed_chrono": "1.11.30"
+        },
+        {
+            "number": 2,
+            "horse": "KATIA DHELPA",
+            "description": "",
+            "performance": "2.7.1.3.3",
+            "gains": 168500,
+            "trainer": "C. BUHIGNE",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "C. BUHIGNE",
+            "listed_chrono": "1.11.40"
+        },
+        {
+            "number": 3,
+            "horse": "KAZY MERITE",
+            "description": "",
+            "performance": "0.0.8.4.6",
+            "gains": 155470,
+            "trainer": "A. BUISSON",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "EC. A. BUISSON",
+            "listed_chrono": "1.11.00"
+        },
+        {
+            "number": 4,
+            "horse": "KINGSTON DE BLARY",
+            "description": "",
+            "performance": "0.5.2.5.2",
+            "gains": 148160,
+            "trainer": "CL. THOMAIN",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "EC. du HS. D'ERABLE",
+            "listed_chrono": "1.11.30"
+        },
+        {
+            "number": 5,
+            "horse": "KING LOOK",
+            "description": "",
+            "performance": "D.7.1.4.1",
+            "gains": 165730,
+            "trainer": "TH. DUVALDESTIN",
+            "jockey": "THEO DUVALDESTIN",
+            "driver": "THEO DUVALDESTIN",
+            "owner": "EC. des CHARMES",
+            "listed_chrono": "1.10.70"
+        },
+        {
+            "number": 6,
+            "horse": "EMINENT KRONOS",
+            "description": "",
+            "performance": "D.9.2.0.1",
+            "gains": 164412,
+            "trainer": "J. UNTERSTEINER",
+            "jockey": "J. UNTERSTEINER",
+            "driver": "J. UNTERSTEINER",
+            "owner": "A. RACING STABLE",
+            "listed_chrono": "1.12.20"
+        },
+        {
+            "number": 7,
+            "horse": "KELLY JANE",
+            "description": "",
+            "performance": "6.0.2.8.2",
+            "gains": 155485,
+            "trainer": "J. DUBOIS",
+            "jockey": "J. DUBOIS",
+            "driver": "J. DUBOIS",
+            "owner": "J. DUBOIS",
+            "listed_chrono": "1.12.30"
+        },
+        {
+            "number": 8,
+            "horse": "SAVASTANO",
+            "description": "",
+            "performance": "4.8.0.0.3",
+            "gains": 160949,
+            "trainer": "A. KOLGJINI",
+            "jockey": "F. NIVARD",
+            "driver": "F. NIVARD",
+            "owner": "VALLRO AB",
+            "listed_chrono": "0.00.00"
+        },
+        {
+            "number": 9,
+            "horse": "KOOL AND THE GANG",
+            "description": "",
+            "performance": "6.5.2.7.2",
+            "gains": 161670,
+            "trainer": "V. MARTENS",
+            "jockey": "N. BAZIRE",
+            "driver": "N. BAZIRE",
+            "owner": "R. TAMBURRINI",
+            "listed_chrono": "1.12.80"
+        },
+        {
+            "number": 10,
+            "horse": "KHARTOUM DE LA FYE",
+            "description": "",
+            "performance": "0.2.1.D.9",
+            "gains": 104090,
+            "trainer": "R. DERIEUX",
+            "jockey": "M. IONESCU",
+            "driver": "M. IONESCU",
+            "owner": "EC. SERENITE",
+            "listed_chrono": "1.13.80"
+        },
+        {
+            "number": 11,
+            "horse": "I CAN WIN GARDENIA",
+            "description": "",
+            "performance": "6.6.4.8.3",
+            "gains": 92062,
+            "trainer": "J. LORENTZEN",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "T. LORENTZEN",
+            "listed_chrono": "1.11.50"
+        },
+        {
+            "number": 12,
+            "horse": "QUINTUS TOOMA",
+            "description": "",
+            "performance": "5.0.4.1.6",
+            "gains": 81190,
+            "trainer": "Vitale CIOTOLA",
+            "jockey": "A. ANDRE",
+            "driver": "A. ANDRE",
+            "owner": "K. M. HASTFARM I HOLM",
+            "listed_chrono": "1.11.30"
+        },
+        {
+            "number": 13,
+            "horse": "COSMEA",
+            "description": "",
+            "performance": "4.2.1.7.0",
+            "gains": 141862,
+            "trainer": "W. NIMCZYK",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "Hermann LEHNER",
+            "listed_chrono": "1.10.90"
+        },
+        {
+            "number": 14,
+            "horse": "KOQUERY DU BUISSON",
+            "description": "",
+            "performance": "0.0.6.4.5",
+            "gains": 140110,
+            "trainer": "TH. RAFFEGEAU",
+            "jockey": "R. LAMY",
+            "driver": "R. LAMY",
+            "owner": "EC. Thierry RAFFEGEAU",
+            "listed_chrono": "1.11.00"
+        },
+        {
+            "number": 15,
+            "horse": "JUBII VANG",
+            "description": "",
+            "performance": "5.4.8.9.4",
+            "gains": 125934,
+            "trainer": "CH. ERIKSSON",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "JAMAV SYD FASTIGHETER",
+            "listed_chrono": "1.11.50"
+        },
+        {
+            "number": 16,
+            "horse": "NO TALKING YOU",
+            "description": "",
+            "performance": "8.D.7.4.7",
+            "gains": 87220,
+            "trainer": "L. CHARBONNEL",
+            "jockey": "F. OUVRIE",
+            "driver": "F. OUVRIE",
+            "owner": "Michael SULTANA",
+            "listed_chrono": "1.11.70"
+        },
+        {
+            "number": 17,
+            "horse": "ELEONORA GRIF",
+            "description": "",
+            "performance": "2.1.D.5.8",
+            "gains": 140258,
+            "trainer": "M. MOTTIER",
+            "jockey": "M. MOTTIER",
+            "driver": "M. MOTTIER",
+            "owner": "CHELSEA SRLS",
+            "listed_chrono": "1.10.00"
+        },
+        {
+            "number": 18,
+            "horse": "PURE STEEL",
+            "description": "",
+            "performance": "0.D.2.4.1",
+            "gains": 136126,
+            "trainer": "H.E. BONDO",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "ENGHA . AALBORG",
+            "listed_chrono": "1.10.60"
+        }
+    ],
+    "program_table_mapping_status": "mapped",
+    "rankings": {
+        "favorites": [
+            6,
+            8,
+            5,
+            2,
+            13,
+            17,
+            12
+        ],
+        "form": [
+            13,
+            2,
+            6,
+            8,
+            5
+        ],
+        "class": [
+            4,
+            17,
+            12,
+            13,
+            18
+        ],
+        "progress": [
+            7,
+            11,
+            6,
+            8,
+            16
+        ],
+        "regularity": [
+            2,
+            4,
+            13,
+            5,
+            17
+        ]
+    },
+    "press_odds": {},
+    "press_odds_status": "unavailable",
+    "published_arrival": []
+}
