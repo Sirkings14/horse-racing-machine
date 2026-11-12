@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-12T16:05:26.463268+00:00",
+  "updated_at": "2026-11-12T17:33:24.500501+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -1207,10 +1207,30 @@
       "structured_file": "structured/2026-11-12_PARIS-VINCENNES - PRIX MARCEL LAURENT_1.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-11-12T16:05:26.462940+00:00",
+      "discovered_at": "2026-11-12T17:33:24.500136+00:00",
       "result_status": "pending",
       "created_at": "2026-11-10T17:00:12.564815+00:00",
-      "updated_at": "2026-11-12T16:05:26.463252+00:00"
+      "updated_at": "2026-11-12T17:33:24.500485+00:00"
+    },
+    {
+      "race_key": "2026-11-14|PARIS-VINCENNES|4",
+      "date": "2026-11-14",
+      "track": "PARIS-VINCENNES",
+      "race_number": 4,
+      "race_name": "PRIX ATLANTIC",
+      "race_type": "ATTELE",
+      "distance": 2700,
+      "runners_count": 18,
+      "horse_count": 18,
+      "source_url": "https://lonab.bf/sites/default/files/2026-11/JH_PMU%27B_DU_14-11-2026.pdf",
+      "source_file": "live_program_JH_PMU_B_DU_14-11-2026_b014779b58.pdf",
+      "structured_file": "structured/2026-11-14_PARIS-VINCENNES_4.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-11-12T17:33:23.694623+00:00",
+      "result_status": "pending",
+      "created_at": "2026-11-12T17:33:11.213569+00:00",
+      "updated_at": "2026-11-12T17:33:23.695007+00:00"
     }
   ]
 }
