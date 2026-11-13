@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-13T15:32:48.073729+00:00",
+  "updated_at": "2026-11-13T17:11:03.731684+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -1227,10 +1227,30 @@
       "structured_file": "structured/2026-11-14_PARIS-VINCENNES_4.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-11-13T15:32:48.073396+00:00",
+      "discovered_at": "2026-11-13T17:11:03.731436+00:00",
       "result_status": "pending",
       "created_at": "2026-11-12T17:33:11.213569+00:00",
-      "updated_at": "2026-11-13T15:32:48.073712+00:00"
+      "updated_at": "2026-11-13T17:11:03.731674+00:00"
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "date": "2026-11-15",
+      "track": "AUTEUIL",
+      "race_number": 6,
+      "race_name": "PRIX LA HAYE JOUSSELIN",
+      "race_type": "STEEPLE-CHASE",
+      "distance": 5500,
+      "runners_count": 15,
+      "horse_count": 15,
+      "source_url": "https://lonab.bf/sites/default/files/2026-11/JH_PMUB_DU_15-11-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_15-11-2026_6106a50b22.pdf",
+      "structured_file": "structured/2026-11-15_AUTEUIL_6.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-11-13T17:11:01.237921+00:00",
+      "result_status": "pending",
+      "created_at": "2026-11-13T17:10:25.851260+00:00",
+      "updated_at": "2026-11-13T17:11:01.238137+00:00"
     }
   ]
 }

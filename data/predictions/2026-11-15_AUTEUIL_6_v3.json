@@ -1,0 +1,414 @@
+{
+  "prediction_id": "2026-11-15|AUTEUIL|6|2026-11-13T17:11:18.221909+00:00",
+  "generated_at": "2026-11-13T17:11:18.221921+00:00",
+  "model_version": "v4-evidence-no-press",
+  "model_fingerprint": "85e56c02ff8b9f009959f1c8ec4b1d0c0b71b5424c7d01e08a1d787fab68af90",
+  "source_program_fingerprint": "046f0a4b0323fb4301e6ce34f92dc1c76057ce34bd79a3d5a0f7053908c31991",
+  "mode": "v5_market_opportunity_layer",
+  "race_key": "2026-11-15|AUTEUIL|6",
+  "race": {
+    "date": "2026-11-15",
+    "track": "AUTEUIL",
+    "race_number": 6,
+    "race_name": "PRIX LA HAYE JOUSSELIN",
+    "race_type": "STEEPLE-CHASE",
+    "distance": 5500,
+    "runners_count": 15
+  },
+  "truth_gate": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "press_independent": true,
+    "post_race_data_excluded": true
+  },
+  "press_dependency": false,
+  "post_race_feature_policy": "hard_exclusion",
+  "feature_health": {
+    "runners": 15,
+    "history_coverage": 0.867,
+    "course_coverage": 0.533,
+    "distance_coverage": 0.0,
+    "complete_rows": 1.0,
+    "identity_sources": {
+      "normalized_name": 15
+    },
+    "history_starts_sorted": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      4,
+      7,
+      8,
+      10
+    ],
+    "distance_starts_sorted": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "confidence": "low",
+  "model_agreement": "low",
+  "recommended_numbers": [],
+  "final_five": [
+    5,
+    11,
+    2,
+    14,
+    4
+  ],
+  "ranked_horses": [
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 5,
+      "horse_name": "KALIBRE",
+      "probability_winner": 0.210424,
+      "raw_probability_winner": 0.214951,
+      "probability_top3": 0.360473,
+      "probability_top5": 0.538158,
+      "ensemble_score": 0.348689,
+      "model_disagreement": 0.132166,
+      "data_completeness": 1.0,
+      "predicted_rank": 1
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 11,
+      "horse_name": "LE PETIT CHEVAL",
+      "probability_winner": 0.183541,
+      "raw_probability_winner": 0.18749,
+      "probability_top3": 0.341411,
+      "probability_top5": 0.519923,
+      "ensemble_score": 0.327183,
+      "model_disagreement": 0.135839,
+      "data_completeness": 1.0,
+      "predicted_rank": 2
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 2,
+      "horse_name": "AMY DU KIFF",
+      "probability_winner": 0.156245,
+      "raw_probability_winner": 0.159607,
+      "probability_top3": 0.329742,
+      "probability_top5": 0.518995,
+      "ensemble_score": 0.312503,
+      "model_disagreement": 0.146789,
+      "data_completeness": 1.0,
+      "predicted_rank": 3
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 14,
+      "horse_name": "GINJA DES TAILLONS",
+      "probability_winner": 0.037968,
+      "raw_probability_winner": 0.038785,
+      "probability_top3": 0.177279,
+      "probability_top5": 0.329315,
+      "ensemble_score": 0.162867,
+      "model_disagreement": 0.118651,
+      "data_completeness": 1.0,
+      "predicted_rank": 4
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 4,
+      "horse_name": "ROYAL SAGA",
+      "probability_winner": 0.037815,
+      "raw_probability_winner": 0.038628,
+      "probability_top3": 0.176865,
+      "probability_top5": 0.328327,
+      "ensemble_score": 0.162425,
+      "model_disagreement": 0.11831,
+      "data_completeness": 1.0,
+      "predicted_rank": 5
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 7,
+      "horse_name": "KILOMETRE ILLIMITE",
+      "probability_winner": 0.037815,
+      "raw_probability_winner": 0.038628,
+      "probability_top3": 0.176865,
+      "probability_top5": 0.328327,
+      "ensemble_score": 0.162425,
+      "model_disagreement": 0.11831,
+      "data_completeness": 1.0,
+      "predicted_rank": 6
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 1,
+      "horse_name": "BON GARCON",
+      "probability_winner": 0.037583,
+      "raw_probability_winner": 0.038392,
+      "probability_top3": 0.175902,
+      "probability_top5": 0.326616,
+      "ensemble_score": 0.161547,
+      "model_disagreement": 0.117708,
+      "data_completeness": 1.0,
+      "predicted_rank": 7
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 9,
+      "horse_name": "KOLOKICO",
+      "probability_winner": 0.037583,
+      "raw_probability_winner": 0.038392,
+      "probability_top3": 0.175902,
+      "probability_top5": 0.326616,
+      "ensemble_score": 0.161547,
+      "model_disagreement": 0.117708,
+      "data_completeness": 1.0,
+      "predicted_rank": 8
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 13,
+      "horse_name": "KIVALA DU BERLAIS",
+      "probability_winner": 0.037583,
+      "raw_probability_winner": 0.038392,
+      "probability_top3": 0.175902,
+      "probability_top5": 0.326616,
+      "ensemble_score": 0.161547,
+      "model_disagreement": 0.117708,
+      "data_completeness": 1.0,
+      "predicted_rank": 9
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 15,
+      "horse_name": "LACOKOKELDY",
+      "probability_winner": 0.037583,
+      "raw_probability_winner": 0.038392,
+      "probability_top3": 0.175902,
+      "probability_top5": 0.326616,
+      "ensemble_score": 0.161547,
+      "model_disagreement": 0.117708,
+      "data_completeness": 1.0,
+      "predicted_rank": 10
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 6,
+      "horse_name": "JOJO LAPIN",
+      "probability_winner": 0.037416,
+      "raw_probability_winner": 0.038221,
+      "probability_top3": 0.175278,
+      "probability_top5": 0.325809,
+      "ensemble_score": 0.161029,
+      "model_disagreement": 0.11745,
+      "data_completeness": 1.0,
+      "predicted_rank": 11
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 12,
+      "horse_name": "FEU DE DIEU",
+      "probability_winner": 0.037353,
+      "raw_probability_winner": 0.038157,
+      "probability_top3": 0.174943,
+      "probability_top5": 0.32491,
+      "ensemble_score": 0.160672,
+      "model_disagreement": 0.117108,
+      "data_completeness": 1.0,
+      "predicted_rank": 12
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 3,
+      "horse_name": "TOSCANA DU BERLAIS",
+      "probability_winner": 0.037186,
+      "raw_probability_winner": 0.037987,
+      "probability_top3": 0.174322,
+      "probability_top5": 0.324104,
+      "ensemble_score": 0.160156,
+      "model_disagreement": 0.11685,
+      "data_completeness": 1.0,
+      "predicted_rank": 13
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 8,
+      "horse_name": "JUNTOS GANAMOS",
+      "probability_winner": 0.037186,
+      "raw_probability_winner": 0.037987,
+      "probability_top3": 0.174322,
+      "probability_top5": 0.324104,
+      "ensemble_score": 0.160156,
+      "model_disagreement": 0.11685,
+      "data_completeness": 1.0,
+      "predicted_rank": 14
+    },
+    {
+      "race_key": "2026-11-15|AUTEUIL|6",
+      "horse_number": 10,
+      "horse_name": "JOHNNY ROQUE",
+      "probability_winner": 0.036717,
+      "raw_probability_winner": 0.037507,
+      "probability_top3": 0.172213,
+      "probability_top5": 0.320885,
+      "ensemble_score": 0.158344,
+      "model_disagreement": 0.115735,
+      "data_completeness": 1.0,
+      "predicted_rank": 15
+    }
+  ],
+  "race_opportunity": {
+    "tier": "C",
+    "model_quality_score": 46.3,
+    "market_edge_available": false,
+    "market_evidence_source": null,
+    "market_evidence_captured_at": null,
+    "value_candidates": [],
+    "top_candidate_margin": 0.021506,
+    "top5_mean_top3_probability": 0.277154,
+    "top5_mean_top5_probability": 0.446944,
+    "top5_mean_model_agreement": 0.869649,
+    "top5_mean_data_completeness": 1.0,
+    "reasons": [
+      "elevated_model_disagreement",
+      "complete_pre_race_data"
+    ],
+    "policy": {
+      "race_quality_is_not_profitability": true,
+      "market_prices_must_be_observed": true,
+      "probabilities_are_not_prices": true,
+      "winner_probabilities_are_race_normalized": true,
+      "normalization_does_not_prove_calibration": true,
+      "market_edge_does_not_authorize_betting": true
+    }
+  },
+  "selection_filter": {
+    "decision": "PLAY_CANDIDATE",
+    "gate_reasons": [],
+    "recommended_numbers": [
+      5,
+      11,
+      2
+    ],
+    "research_numbers": [
+      5,
+      11,
+      2
+    ],
+    "top_win_probability": 0.210424,
+    "edge_vs_uniform": 0.143757,
+    "score_separation": 0.187142,
+    "coverage": {
+      "history_coverage": 0.8667,
+      "jockey_coverage": 0.9333,
+      "trainer_coverage": 1.0,
+      "mean_history_starts": 2.8667
+    },
+    "baseline_win_prob": 0.066667,
+    "history_requirement_relaxed": true,
+    "effective_min_mean_history_starts": 0.8
+  },
+  "selection_policy": "independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity_and_strict_selection_filters",
+  "autopilot_guard": {
+    "health": "stable_observation",
+    "decision": "PASS",
+    "gate_reasons": [
+      "insufficient_verified_history",
+      "low_model_confidence",
+      "economic_validation_unavailable"
+    ],
+    "recent_verified_predictions": 12,
+    "recent_winner_hit_rate": 0.1667,
+    "recent_winner_in_top3_rate": 0.4167,
+    "recent_order_engine_winner_hit_rate": 0.1667,
+    "recent_exact_top3_order_rate": 0.0,
+    "recent_exact_top5_order_rate": 0.0,
+    "recent_recommended_hit_average": 1.917,
+    "engine_attribution": {
+      "strength": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.833,
+        "avg_actual_top5_covered_by_top5": 2.083,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      },
+      "order": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.25,
+        "winner_in_top5_rate": 0.3333,
+        "avg_actual_top3_covered_by_top3": 1.0,
+        "avg_actual_top3_covered_by_top5": 1.167,
+        "avg_actual_top5_covered_by_top5": 1.25,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.25
+      },
+      "fused": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.667,
+        "avg_actual_top5_covered_by_top5": 1.917,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      }
+    },
+    "order_walk_forward_pairwise_accuracy": 0.6013,
+    "feature_drift_severity": "unrated",
+    "economic_validation_status": "awaiting_market_odds",
+    "economic_validation_roi": null,
+    "prediction_confidence": "low",
+    "confidence_reasons": [
+      "top candidates are tightly separated"
+    ],
+    "difficulty": {},
+    "gate_policy": {
+      "PASS_means_insufficient_or_unstable_evidence": true,
+      "PLAY_CANDIDATE_is_not_a_guarantee_of_outcome_or_profit": true,
+      "insufficient_verified_history_blocks": true,
+      "severe_feature_drift_blocks": true,
+      "low_confidence_blocks": true,
+      "engine_disagreement_blocks": false,
+      "high_difficulty_blocks": true,
+      "degraded_recent_winner_accuracy_blocks": true,
+      "order_engine_below_random_baseline_blocks": true,
+      "missing_or_negative_economic_validation_blocks": true
+    }
+  },
+  "research_numbers": [
+    5,
+    11,
+    2
+  ],
+  "live_decision": "NO_BET",
+  "mode_detail": "research_only",
+  "no_bet_reason": [
+    "insufficient_verified_history",
+    "low_model_confidence",
+    "economic_validation_unavailable"
+  ]
+}
