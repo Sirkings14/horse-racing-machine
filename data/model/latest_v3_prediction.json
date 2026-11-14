@@ -1,9 +1,414 @@
 {
-  "prediction_id": null,
-  "generated_at": "2026-11-14T15:46:38.172439+00:00",
-  "model_version": null,
-  "mode": "v3_unavailable",
-  "reason": "no_unfinished_current_or_future_race",
+  "prediction_id": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1|2026-11-14T18:22:17.211958+00:00",
+  "generated_at": "2026-11-14T18:22:17.211969+00:00",
+  "model_version": "v4-evidence-no-press",
+  "model_fingerprint": "85e56c02ff8b9f009959f1c8ec4b1d0c0b71b5424c7d01e08a1d787fab68af90",
+  "source_program_fingerprint": "bfb8ff8067fbc8c147044bcb8201a2a08d7e2ecf37d782a9ef17dbf0a1d9f56b",
+  "mode": "v5_market_opportunity_layer",
+  "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+  "race": {
+    "date": "2026-11-16",
+    "track": "PARIS-VINCENNES - PRIX D'AIGUES MORTES",
+    "race_number": 1,
+    "race_name": "ATTELE",
+    "race_type": "ATTELE",
+    "distance": 2100,
+    "runners_count": 15
+  },
+  "truth_gate": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "press_independent": true,
+    "post_race_data_excluded": true
+  },
+  "press_dependency": false,
+  "post_race_feature_policy": "hard_exclusion",
+  "feature_health": {
+    "runners": 15,
+    "history_coverage": 0.933,
+    "course_coverage": 0.0,
+    "distance_coverage": 0.4,
+    "complete_rows": 1.0,
+    "identity_sources": {
+      "normalized_name": 15
+    },
+    "history_starts_sorted": [
+      0,
+      1,
+      2,
+      3,
+      3,
+      5,
+      5,
+      5,
+      5,
+      6,
+      7,
+      8,
+      10,
+      10,
+      12
+    ],
+    "distance_starts_sorted": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      3,
+      6
+    ]
+  },
+  "confidence": "low",
+  "model_agreement": "low",
   "recommended_numbers": [],
-  "ranked_horses": []
+  "final_five": [
+    15,
+    13,
+    8,
+    12,
+    6
+  ],
+  "ranked_horses": [
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 15,
+      "horse_name": "JAG HAUFOR",
+      "probability_winner": 0.127817,
+      "raw_probability_winner": 0.162896,
+      "probability_top3": 0.323959,
+      "probability_top5": 0.498784,
+      "ensemble_score": 0.306825,
+      "model_disagreement": 0.137164,
+      "data_completeness": 1.0,
+      "predicted_rank": 1
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 13,
+      "horse_name": "MAX OCCAGNES",
+      "probability_winner": 0.127264,
+      "raw_probability_winner": 0.162191,
+      "probability_top3": 0.322257,
+      "probability_top5": 0.49575,
+      "ensemble_score": 0.305182,
+      "model_disagreement": 0.136212,
+      "data_completeness": 1.0,
+      "predicted_rank": 2
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 8,
+      "horse_name": "KAXIG IN",
+      "probability_winner": 0.12075,
+      "raw_probability_winner": 0.153889,
+      "probability_top3": 0.321927,
+      "probability_top5": 0.502381,
+      "ensemble_score": 0.303686,
+      "model_disagreement": 0.142301,
+      "data_completeness": 1.0,
+      "predicted_rank": 3
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 12,
+      "horse_name": "JUNKIE",
+      "probability_winner": 0.12627,
+      "raw_probability_winner": 0.160924,
+      "probability_top3": 0.320536,
+      "probability_top5": 0.493557,
+      "ensemble_score": 0.303513,
+      "model_disagreement": 0.135834,
+      "data_completeness": 1.0,
+      "predicted_rank": 4
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 6,
+      "horse_name": "JEWEL DE BANVILLE",
+      "probability_winner": 0.092627,
+      "raw_probability_winner": 0.118048,
+      "probability_top3": 0.289432,
+      "probability_top5": 0.471376,
+      "ensemble_score": 0.270432,
+      "model_disagreement": 0.144267,
+      "data_completeness": 1.0,
+      "predicted_rank": 5
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 2,
+      "horse_name": "JAZZ D'OURVILLE",
+      "probability_winner": 0.090823,
+      "raw_probability_winner": 0.115749,
+      "probability_top3": 0.284887,
+      "probability_top5": 0.464956,
+      "ensemble_score": 0.266232,
+      "model_disagreement": 0.142586,
+      "data_completeness": 1.0,
+      "predicted_rank": 6
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 7,
+      "horse_name": "IQUEM",
+      "probability_winner": 0.088121,
+      "raw_probability_winner": 0.112306,
+      "probability_top3": 0.279355,
+      "probability_top5": 0.457776,
+      "ensemble_score": 0.261039,
+      "model_disagreement": 0.141063,
+      "data_completeness": 1.0,
+      "predicted_rank": 7
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 10,
+      "horse_name": "DOMENIK JET",
+      "probability_winner": 0.028871,
+      "raw_probability_winner": 0.036795,
+      "probability_top3": 0.173449,
+      "probability_top5": 0.320457,
+      "ensemble_score": 0.158663,
+      "model_disagreement": 0.11583,
+      "data_completeness": 1.0,
+      "predicted_rank": 8
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 5,
+      "horse_name": "JAVA DES CAILLONS",
+      "probability_winner": 0.028561,
+      "raw_probability_winner": 0.036399,
+      "probability_top3": 0.172258,
+      "probability_top5": 0.31904,
+      "ensemble_score": 0.157676,
+      "model_disagreement": 0.115416,
+      "data_completeness": 1.0,
+      "predicted_rank": 9
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 14,
+      "horse_name": "ISIS DE POULINE",
+      "probability_winner": 0.028523,
+      "raw_probability_winner": 0.036351,
+      "probability_top3": 0.171866,
+      "probability_top5": 0.318057,
+      "ensemble_score": 0.15728,
+      "model_disagreement": 0.115034,
+      "data_completeness": 1.0,
+      "predicted_rank": 10
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 4,
+      "horse_name": "HARPY",
+      "probability_winner": 0.0284,
+      "raw_probability_winner": 0.036194,
+      "probability_top3": 0.171392,
+      "probability_top5": 0.317492,
+      "ensemble_score": 0.156887,
+      "model_disagreement": 0.114868,
+      "data_completeness": 1.0,
+      "predicted_rank": 11
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 1,
+      "horse_name": "ILIANO DES PLAINES",
+      "probability_winner": 0.02824,
+      "raw_probability_winner": 0.03599,
+      "probability_top3": 0.170529,
+      "probability_top5": 0.315949,
+      "ensemble_score": 0.156101,
+      "model_disagreement": 0.114322,
+      "data_completeness": 1.0,
+      "predicted_rank": 12
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 11,
+      "horse_name": "DILVA JET",
+      "probability_winner": 0.028037,
+      "raw_probability_winner": 0.035731,
+      "probability_top3": 0.169465,
+      "probability_top5": 0.313808,
+      "ensemble_score": 0.155085,
+      "model_disagreement": 0.113552,
+      "data_completeness": 1.0,
+      "predicted_rank": 13
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 3,
+      "horse_name": "DESTINO D.J.",
+      "probability_winner": 0.027934,
+      "raw_probability_winner": 0.0356,
+      "probability_top3": 0.168739,
+      "probability_top5": 0.312527,
+      "ensemble_score": 0.154439,
+      "model_disagreement": 0.113083,
+      "data_completeness": 1.0,
+      "predicted_rank": 14
+    },
+    {
+      "race_key": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1",
+      "horse_number": 9,
+      "horse_name": "I LOVE JOSSELYN",
+      "probability_winner": 0.027764,
+      "raw_probability_winner": 0.035384,
+      "probability_top3": 0.167963,
+      "probability_top5": 0.311342,
+      "ensemble_score": 0.15376,
+      "model_disagreement": 0.112688,
+      "data_completeness": 1.0,
+      "predicted_rank": 15
+    }
+  ],
+  "race_opportunity": {
+    "tier": "C",
+    "model_quality_score": 45.63,
+    "market_edge_available": false,
+    "market_evidence_source": null,
+    "market_evidence_captured_at": null,
+    "value_candidates": [],
+    "top_candidate_margin": 0.001643,
+    "top5_mean_top3_probability": 0.315622,
+    "top5_mean_top5_probability": 0.49237,
+    "top5_mean_model_agreement": 0.860844,
+    "top5_mean_data_completeness": 1.0,
+    "reasons": [
+      "tight_top_candidates",
+      "elevated_model_disagreement",
+      "complete_pre_race_data"
+    ],
+    "policy": {
+      "race_quality_is_not_profitability": true,
+      "market_prices_must_be_observed": true,
+      "probabilities_are_not_prices": true,
+      "winner_probabilities_are_race_normalized": true,
+      "normalization_does_not_prove_calibration": true,
+      "market_edge_does_not_authorize_betting": true
+    }
+  },
+  "selection_filter": {
+    "decision": "NO_BET",
+    "gate_reasons": [
+      "top_win_prob_low:0.128<0.18"
+    ],
+    "recommended_numbers": [],
+    "research_numbers": [
+      15,
+      13,
+      8
+    ],
+    "top_win_probability": 0.127817,
+    "edge_vs_uniform": 0.06115,
+    "score_separation": 0.148162,
+    "coverage": {
+      "history_coverage": 0.9333,
+      "jockey_coverage": 1.0,
+      "trainer_coverage": 0.9333,
+      "mean_history_starts": 5.4667
+    },
+    "baseline_win_prob": 0.066667,
+    "history_requirement_relaxed": true,
+    "effective_min_mean_history_starts": 0.8
+  },
+  "selection_policy": "independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity_and_strict_selection_filters",
+  "autopilot_guard": {
+    "health": "stable_observation",
+    "decision": "PASS",
+    "gate_reasons": [
+      "insufficient_verified_history",
+      "low_model_confidence",
+      "economic_validation_unavailable"
+    ],
+    "recent_verified_predictions": 12,
+    "recent_winner_hit_rate": 0.1667,
+    "recent_winner_in_top3_rate": 0.4167,
+    "recent_order_engine_winner_hit_rate": 0.1667,
+    "recent_exact_top3_order_rate": 0.0,
+    "recent_exact_top5_order_rate": 0.0,
+    "recent_recommended_hit_average": 1.917,
+    "engine_attribution": {
+      "strength": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.833,
+        "avg_actual_top5_covered_by_top5": 2.083,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      },
+      "order": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.25,
+        "winner_in_top5_rate": 0.3333,
+        "avg_actual_top3_covered_by_top3": 1.0,
+        "avg_actual_top3_covered_by_top5": 1.167,
+        "avg_actual_top5_covered_by_top5": 1.25,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.25
+      },
+      "fused": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.667,
+        "avg_actual_top5_covered_by_top5": 1.917,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      }
+    },
+    "order_walk_forward_pairwise_accuracy": 0.6013,
+    "feature_drift_severity": "unrated",
+    "economic_validation_status": "awaiting_market_odds",
+    "economic_validation_roi": null,
+    "prediction_confidence": "low",
+    "confidence_reasons": [
+      "top candidates are tightly separated"
+    ],
+    "difficulty": {},
+    "gate_policy": {
+      "PASS_means_insufficient_or_unstable_evidence": true,
+      "PLAY_CANDIDATE_is_not_a_guarantee_of_outcome_or_profit": true,
+      "insufficient_verified_history_blocks": true,
+      "severe_feature_drift_blocks": true,
+      "low_confidence_blocks": true,
+      "engine_disagreement_blocks": false,
+      "high_difficulty_blocks": true,
+      "degraded_recent_winner_accuracy_blocks": true,
+      "order_engine_below_random_baseline_blocks": true,
+      "missing_or_negative_economic_validation_blocks": true
+    }
+  },
+  "research_numbers": [
+    15,
+    13,
+    8
+  ],
+  "live_decision": "NO_BET",
+  "mode_detail": "research_only",
+  "no_bet_reason": [
+    "insufficient_verified_history",
+    "low_model_confidence",
+    "economic_validation_unavailable",
+    "top_win_prob_low:0.128<0.18"
+  ]
 }

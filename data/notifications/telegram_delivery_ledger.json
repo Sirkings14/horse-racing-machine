@@ -684,6 +684,27 @@
       "prediction_id": "2026-11-15|AUTEUIL|6|2026-11-13T17:11:18.221909+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 268
+    },
+    "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          15,
+          13,
+          8,
+          12,
+          6
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-11-14T18:22:17.584054+00:00",
+      "prediction_id": "2026-11-16|PARIS-VINCENNES - PRIX D'AIGUES MORTES|1|2026-11-14T18:22:17.211958+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 269
     }
   }
 }
