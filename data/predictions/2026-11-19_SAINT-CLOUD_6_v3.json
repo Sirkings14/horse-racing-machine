@@ -1,0 +1,429 @@
+{
+  "prediction_id": "2026-11-19|SAINT-CLOUD|6|2026-11-17T16:59:21.924200+00:00",
+  "generated_at": "2026-11-17T16:59:21.924210+00:00",
+  "model_version": "v4-evidence-no-press",
+  "model_fingerprint": "85e56c02ff8b9f009959f1c8ec4b1d0c0b71b5424c7d01e08a1d787fab68af90",
+  "source_program_fingerprint": "3ef9ae5d8bf86ca7c1670b84e758d611fc307931eaeb221be1432d9feb8ff2c9",
+  "mode": "v5_market_opportunity_layer",
+  "race_key": "2026-11-19|SAINT-CLOUD|6",
+  "race": {
+    "date": "2026-11-19",
+    "track": "SAINT-CLOUD",
+    "race_number": 6,
+    "race_name": "PRIX DE WINDSOR",
+    "race_type": "PLAT",
+    "distance": 2000,
+    "runners_count": 16
+  },
+  "truth_gate": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "press_independent": true,
+    "post_race_data_excluded": true
+  },
+  "press_dependency": false,
+  "post_race_feature_policy": "hard_exclusion",
+  "feature_health": {
+    "runners": 16,
+    "history_coverage": 0.875,
+    "course_coverage": 0.375,
+    "distance_coverage": 0.688,
+    "complete_rows": 1.0,
+    "identity_sources": {
+      "normalized_name": 16
+    },
+    "history_starts_sorted": [
+      0,
+      0,
+      3,
+      5,
+      6,
+      6,
+      7,
+      8,
+      13,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      22
+    ],
+    "distance_starts_sorted": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4,
+      5,
+      5,
+      7,
+      10,
+      14
+    ]
+  },
+  "confidence": "low",
+  "model_agreement": "low",
+  "recommended_numbers": [],
+  "final_five": [
+    13,
+    10,
+    2,
+    1,
+    14
+  ],
+  "ranked_horses": [
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 13,
+      "horse_name": "DOURIANN",
+      "probability_winner": 0.128003,
+      "raw_probability_winner": 0.2068,
+      "probability_top3": 0.354217,
+      "probability_top5": 0.522302,
+      "ensemble_score": 0.34005,
+      "model_disagreement": 0.128895,
+      "data_completeness": 1.0,
+      "predicted_rank": 1
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 10,
+      "horse_name": "GUILLERETTE",
+      "probability_winner": 0.126383,
+      "raw_probability_winner": 0.204183,
+      "probability_top3": 0.351103,
+      "probability_top5": 0.519548,
+      "ensemble_score": 0.337157,
+      "model_disagreement": 0.128847,
+      "data_completeness": 1.0,
+      "predicted_rank": 2
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 2,
+      "horse_name": "BAYAMOON",
+      "probability_winner": 0.092089,
+      "raw_probability_winner": 0.148778,
+      "probability_top3": 0.31574,
+      "probability_top5": 0.491555,
+      "ensemble_score": 0.29696,
+      "model_disagreement": 0.139954,
+      "data_completeness": 1.0,
+      "predicted_rank": 3
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 1,
+      "horse_name": "DOUBLE UP",
+      "probability_winner": 0.091204,
+      "raw_probability_winner": 0.147348,
+      "probability_top3": 0.315167,
+      "probability_top5": 0.493587,
+      "ensemble_score": 0.296611,
+      "model_disagreement": 0.141374,
+      "data_completeness": 1.0,
+      "predicted_rank": 4
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 14,
+      "horse_name": "COMME QUOI",
+      "probability_winner": 0.08441,
+      "raw_probability_winner": 0.136372,
+      "probability_top3": 0.309,
+      "probability_top5": 0.489427,
+      "ensemble_score": 0.289328,
+      "model_disagreement": 0.144146,
+      "data_completeness": 1.0,
+      "predicted_rank": 5
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 9,
+      "horse_name": "AMERICAN GLORY",
+      "probability_winner": 0.088487,
+      "raw_probability_winner": 0.142958,
+      "probability_top3": 0.301309,
+      "probability_top5": 0.471831,
+      "ensemble_score": 0.284208,
+      "model_disagreement": 0.134292,
+      "data_completeness": 1.0,
+      "predicted_rank": 6
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 3,
+      "horse_name": "GET SET",
+      "probability_winner": 0.080812,
+      "raw_probability_winner": 0.130559,
+      "probability_top3": 0.291734,
+      "probability_top5": 0.463373,
+      "ensemble_score": 0.273966,
+      "model_disagreement": 0.135893,
+      "data_completeness": 1.0,
+      "predicted_rank": 7
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 7,
+      "horse_name": "HOMO DEUS",
+      "probability_winner": 0.064017,
+      "raw_probability_winner": 0.103425,
+      "probability_top3": 0.271624,
+      "probability_top5": 0.448639,
+      "ensemble_score": 0.252686,
+      "model_disagreement": 0.140948,
+      "data_completeness": 1.0,
+      "predicted_rank": 8
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 16,
+      "horse_name": "JUST JIM",
+      "probability_winner": 0.064356,
+      "raw_probability_winner": 0.103972,
+      "probability_top3": 0.270454,
+      "probability_top5": 0.445766,
+      "ensemble_score": 0.251729,
+      "model_disagreement": 0.139552,
+      "data_completeness": 1.0,
+      "predicted_rank": 9
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 15,
+      "horse_name": "TRABUCO",
+      "probability_winner": 0.062776,
+      "raw_probability_winner": 0.101421,
+      "probability_top3": 0.267244,
+      "probability_top5": 0.441871,
+      "ensemble_score": 0.248594,
+      "model_disagreement": 0.139004,
+      "data_completeness": 1.0,
+      "predicted_rank": 10
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 11,
+      "horse_name": "PLATA D OCTOBRE",
+      "probability_winner": 0.020034,
+      "raw_probability_winner": 0.032366,
+      "probability_top3": 0.16277,
+      "probability_top5": 0.303009,
+      "ensemble_score": 0.148652,
+      "model_disagreement": 0.110514,
+      "data_completeness": 1.0,
+      "predicted_rank": 11
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 12,
+      "horse_name": "BON VIVEUR",
+      "probability_winner": 0.02006,
+      "raw_probability_winner": 0.032408,
+      "probability_top3": 0.162628,
+      "probability_top5": 0.302453,
+      "ensemble_score": 0.148489,
+      "model_disagreement": 0.110269,
+      "data_completeness": 1.0,
+      "predicted_rank": 12
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 6,
+      "horse_name": "ZARAMIX",
+      "probability_winner": 0.019575,
+      "raw_probability_winner": 0.031626,
+      "probability_top3": 0.160451,
+      "probability_top5": 0.299674,
+      "ensemble_score": 0.146632,
+      "model_disagreement": 0.109458,
+      "data_completeness": 1.0,
+      "predicted_rank": 13
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 8,
+      "horse_name": "FLASH GIRL",
+      "probability_winner": 0.019495,
+      "raw_probability_winner": 0.031496,
+      "probability_top3": 0.160151,
+      "probability_top5": 0.299253,
+      "ensemble_score": 0.146362,
+      "model_disagreement": 0.109339,
+      "data_completeness": 1.0,
+      "predicted_rank": 14
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 5,
+      "horse_name": "MR FLEURANT",
+      "probability_winner": 0.019512,
+      "raw_probability_winner": 0.031523,
+      "probability_top3": 0.15934,
+      "probability_top5": 0.296817,
+      "ensemble_score": 0.145506,
+      "model_disagreement": 0.10833,
+      "data_completeness": 1.0,
+      "predicted_rank": 15
+    },
+    {
+      "race_key": "2026-11-19|SAINT-CLOUD|6",
+      "horse_number": 4,
+      "horse_name": "CENTRICAL",
+      "probability_winner": 0.018787,
+      "raw_probability_winner": 0.030352,
+      "probability_top3": 0.154046,
+      "probability_top5": 0.287668,
+      "ensemble_score": 0.140767,
+      "model_disagreement": 0.105075,
+      "data_completeness": 1.0,
+      "predicted_rank": 16
+    }
+  ],
+  "race_opportunity": {
+    "tier": "C",
+    "model_quality_score": 46.61,
+    "market_edge_available": false,
+    "market_evidence_source": null,
+    "market_evidence_captured_at": null,
+    "value_candidates": [],
+    "top_candidate_margin": 0.002893,
+    "top5_mean_top3_probability": 0.329045,
+    "top5_mean_top5_probability": 0.503284,
+    "top5_mean_model_agreement": 0.863357,
+    "top5_mean_data_completeness": 1.0,
+    "reasons": [
+      "tight_top_candidates",
+      "elevated_model_disagreement",
+      "complete_pre_race_data"
+    ],
+    "policy": {
+      "race_quality_is_not_profitability": true,
+      "market_prices_must_be_observed": true,
+      "probabilities_are_not_prices": true,
+      "winner_probabilities_are_race_normalized": true,
+      "normalization_does_not_prove_calibration": true,
+      "market_edge_does_not_authorize_betting": true
+    }
+  },
+  "selection_filter": {
+    "decision": "NO_BET",
+    "gate_reasons": [
+      "top_win_prob_low:0.128<0.18"
+    ],
+    "recommended_numbers": [],
+    "research_numbers": [
+      13,
+      10,
+      2
+    ],
+    "top_win_probability": 0.128003,
+    "edge_vs_uniform": 0.065503,
+    "score_separation": 0.088321,
+    "coverage": {
+      "history_coverage": 0.875,
+      "jockey_coverage": 0.9375,
+      "trainer_coverage": 0.9375,
+      "mean_history_starts": 10.3125
+    },
+    "baseline_win_prob": 0.0625,
+    "history_requirement_relaxed": true,
+    "effective_min_mean_history_starts": 0.8
+  },
+  "selection_policy": "independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity_and_strict_selection_filters",
+  "autopilot_guard": {
+    "health": "stable_observation",
+    "decision": "PASS",
+    "gate_reasons": [
+      "insufficient_verified_history",
+      "low_model_confidence",
+      "economic_validation_unavailable"
+    ],
+    "recent_verified_predictions": 12,
+    "recent_winner_hit_rate": 0.1667,
+    "recent_winner_in_top3_rate": 0.4167,
+    "recent_order_engine_winner_hit_rate": 0.1667,
+    "recent_exact_top3_order_rate": 0.0,
+    "recent_exact_top5_order_rate": 0.0,
+    "recent_recommended_hit_average": 1.917,
+    "engine_attribution": {
+      "strength": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.833,
+        "avg_actual_top5_covered_by_top5": 2.083,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      },
+      "order": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.25,
+        "winner_in_top5_rate": 0.3333,
+        "avg_actual_top3_covered_by_top3": 1.0,
+        "avg_actual_top3_covered_by_top5": 1.167,
+        "avg_actual_top5_covered_by_top5": 1.25,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.25
+      },
+      "fused": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.667,
+        "avg_actual_top5_covered_by_top5": 1.917,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      }
+    },
+    "order_walk_forward_pairwise_accuracy": 0.6013,
+    "feature_drift_severity": "unrated",
+    "economic_validation_status": "awaiting_market_odds",
+    "economic_validation_roi": null,
+    "prediction_confidence": "low",
+    "confidence_reasons": [
+      "top candidates are tightly separated"
+    ],
+    "difficulty": {},
+    "gate_policy": {
+      "PASS_means_insufficient_or_unstable_evidence": true,
+      "PLAY_CANDIDATE_is_not_a_guarantee_of_outcome_or_profit": true,
+      "insufficient_verified_history_blocks": true,
+      "severe_feature_drift_blocks": true,
+      "low_confidence_blocks": true,
+      "engine_disagreement_blocks": false,
+      "high_difficulty_blocks": true,
+      "degraded_recent_winner_accuracy_blocks": true,
+      "order_engine_below_random_baseline_blocks": true,
+      "missing_or_negative_economic_validation_blocks": true
+    }
+  },
+  "research_numbers": [
+    13,
+    10,
+    2
+  ],
+  "live_decision": "NO_BET",
+  "mode_detail": "research_only",
+  "no_bet_reason": [
+    "insufficient_verified_history",
+    "low_model_confidence",
+    "economic_validation_unavailable",
+    "top_win_prob_low:0.128<0.18"
+  ]
+}

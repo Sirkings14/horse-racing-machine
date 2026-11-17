@@ -1,0 +1,372 @@
+{
+  "document_type": "program",
+  "source_file": "live_program_JH_PMUB_DU_19-11-2026_a80273380b.pdf",
+  "parsed_at": "2026-11-17T16:59:14.557789Z",
+  "date": "2026-11-19",
+  "race": {
+    "race_name": "PRIX DE WINDSOR",
+    "track": "SAINT-CLOUD",
+    "race_number": 6,
+    "race_type": "PLAT",
+    "runners_count": 16,
+    "distance": 2000,
+    "prize_euros": 50900
+  },
+  "horses": [
+    {
+      "number": 1,
+      "horse": "DOUBLE UP",
+      "description": "",
+      "performance": "6.6.1.3.6",
+      "gains": 71277,
+      "sex": "H",
+      "age": 4,
+      "trainer": "S.WATTEL",
+      "jockey": "A.MADAMET",
+      "driver": "A.MADAMET",
+      "owner": "I.CORBANI",
+      "weight": 60.0,
+      "draw": 15
+    },
+    {
+      "number": 2,
+      "horse": "BAYAMOON",
+      "description": "",
+      "performance": "3.7.2.0.8",
+      "gains": 111133,
+      "sex": "M",
+      "age": 5,
+      "trainer": "J.REYNIER",
+      "jockey": "F.VERON",
+      "driver": "F.VERON",
+      "owner": "UNDER BLUE SKY",
+      "weight": 59.5,
+      "draw": 9
+    },
+    {
+      "number": 3,
+      "horse": "GET SET",
+      "description": "",
+      "performance": "1.1.0.1.1",
+      "gains": 269880,
+      "sex": "H",
+      "age": 9,
+      "trainer": "L.GADBIN",
+      "jockey": "T.BREBION",
+      "driver": "T.BREBION",
+      "owner": "C.VIDEMENT",
+      "weight": 59.5,
+      "draw": 1
+    },
+    {
+      "number": 4,
+      "horse": "CENTRICAL",
+      "description": "",
+      "performance": "1.3.6.2.1",
+      "gains": 146685,
+      "sex": "H",
+      "age": 8,
+      "trainer": "K.KEREKES",
+      "jockey": "B.MARIE",
+      "driver": "B.MARIE",
+      "owner": "U.KLEIN",
+      "weight": 58.0,
+      "draw": 8
+    },
+    {
+      "number": 5,
+      "horse": "MR FLEURANT",
+      "description": "",
+      "performance": "4.6.3.5.4",
+      "gains": 96080,
+      "sex": "H",
+      "age": 5,
+      "trainer": "A.WATRIGANT",
+      "jockey": "A.HAMELIN",
+      "driver": "A.HAMELIN",
+      "owner": "C.MARCELLIN",
+      "weight": 57.5,
+      "draw": 11
+    },
+    {
+      "number": 6,
+      "horse": "ZARAMIX",
+      "description": "",
+      "performance": "3.2.6.4.7",
+      "gains": 27007,
+      "sex": "H",
+      "age": 3,
+      "trainer": "P&J.BRANDT",
+      "jockey": "M.GUYON",
+      "driver": "M.GUYON",
+      "owner": "STALL PERLEN AB",
+      "weight": 57.5,
+      "draw": 12
+    },
+    {
+      "number": 7,
+      "horse": "HOMO DEUS",
+      "description": "",
+      "performance": "0.8.9.5.5",
+      "gains": 299839,
+      "sex": "H",
+      "age": 8,
+      "trainer": "H.GHABRI",
+      "jockey": "C.LECOEUVRE",
+      "driver": "C.LECOEUVRE",
+      "owner": "A.ANEIZI",
+      "weight": 56.5,
+      "draw": 13
+    },
+    {
+      "number": 8,
+      "horse": "FLASH GIRL",
+      "description": "",
+      "performance": "4.5.1.4.1",
+      "gains": 46871,
+      "sex": "F",
+      "age": 3,
+      "trainer": "HA.PANTALL",
+      "jockey": "T.PICCONE",
+      "driver": "T.PICCONE",
+      "owner": "A.JATHIERE",
+      "weight": 55.5,
+      "draw": 14
+    },
+    {
+      "number": 9,
+      "horse": "AMERICAN GLORY",
+      "description": "",
+      "performance": "5.0.3.8.2",
+      "gains": 136106,
+      "sex": "F",
+      "age": 5,
+      "trainer": "N.PERRET",
+      "jockey": "A.LEMAITRE",
+      "driver": "A.LEMAITRE",
+      "owner": "A.REN",
+      "weight": 55.5,
+      "draw": 16
+    },
+    {
+      "number": 10,
+      "horse": "GUILLERETTE",
+      "description": "",
+      "performance": "0.0.1.0.0",
+      "gains": 98792,
+      "sex": "F",
+      "age": 4,
+      "trainer": "C.BARANDE BARBE",
+      "jockey": "F.VALLE SKAR",
+      "driver": "F.VALLE SKAR",
+      "owner": "C.BARANDE BARBE",
+      "weight": 55.0,
+      "draw": 6
+    },
+    {
+      "number": 11,
+      "horse": "PLATA D OCTOBRE",
+      "description": "",
+      "performance": "7.8.1.5.1",
+      "gains": 54061,
+      "sex": "F",
+      "age": 4,
+      "trainer": "N.SIGAUD",
+      "jockey": "H.BOUTIN",
+      "driver": "H.BOUTIN",
+      "owner": "N.SIGAUD",
+      "weight": 55.0,
+      "draw": 5
+    },
+    {
+      "number": 12,
+      "horse": "BON VIVEUR",
+      "description": "",
+      "performance": "0.5.3.1.7",
+      "gains": 44368,
+      "sex": "M",
+      "age": 3,
+      "trainer": "G.PANNIER",
+      "jockey": "H.LEBOUC",
+      "driver": "H.LEBOUC",
+      "owner": "J.MAHIQUES",
+      "weight": 55.0,
+      "draw": 2
+    },
+    {
+      "number": 13,
+      "horse": "DOURIANN",
+      "description": "",
+      "performance": "7.0.0.4.4",
+      "gains": 170416,
+      "sex": "H",
+      "age": 7,
+      "trainer": "G.PANNIER",
+      "jockey": "L.ROUSSEL",
+      "driver": "L.ROUSSEL",
+      "owner": "EC. INITIAL",
+      "weight": 55.0,
+      "draw": 4
+    },
+    {
+      "number": 14,
+      "horse": "COMME QUOI",
+      "description": "",
+      "performance": "2.9.0.5.5",
+      "gains": 108433,
+      "sex": "H",
+      "age": 5,
+      "trainer": "N.PERRET",
+      "jockey": "S.PASQUIER",
+      "driver": "S.PASQUIER",
+      "owner": "JC.SEROUL",
+      "weight": 55.0,
+      "draw": 7
+    },
+    {
+      "number": 15,
+      "horse": "TRABUCO",
+      "description": "",
+      "performance": "1.0.1.6.9",
+      "gains": 208451,
+      "sex": "H",
+      "age": 8,
+      "trainer": "P.CHEVIGNY DE",
+      "jockey": "A.MOLINS",
+      "driver": "A.MOLINS",
+      "owner": "JP.FICHAUX",
+      "weight": 55.0,
+      "draw": 10
+    },
+    {
+      "number": 16,
+      "horse": "JUST JIM",
+      "description": "",
+      "performance": "3.6.4.0.3",
+      "gains": 55626,
+      "sex": "H",
+      "age": 5,
+      "trainer": "A.COUETIL",
+      "jockey": "O.ANDIGNE",
+      "driver": "O.ANDIGNE",
+      "owner": "SC THIERRY PIGEON",
+      "weight": 55.0,
+      "draw": 3
+    }
+  ],
+  "program_table_mapping_status": "mapped",
+  "rankings": {
+    "favorites": [
+      16,
+      2,
+      1,
+      6,
+      5,
+      15,
+      14
+    ],
+    "form": [
+      16,
+      6,
+      14,
+      1,
+      15
+    ],
+    "class": [
+      2,
+      15,
+      14,
+      16,
+      13
+    ],
+    "progress": [
+      16,
+      5,
+      13,
+      6,
+      8
+    ],
+    "regularity": [
+      9,
+      16,
+      8,
+      13,
+      10
+    ]
+  },
+  "press_odds": {
+    "tierce_magazine": {
+      "1": {
+        "fractional": "8/1",
+        "decimal": 9.0
+      },
+      "2": {
+        "fractional": "10/1",
+        "decimal": 11.0
+      },
+      "3": {
+        "fractional": "25/1",
+        "decimal": 26.0
+      },
+      "4": {
+        "fractional": "35/1",
+        "decimal": 36.0
+      },
+      "5": {
+        "fractional": "13/1",
+        "decimal": 14.0
+      },
+      "6": {
+        "fractional": "21/1",
+        "decimal": 22.0
+      },
+      "7": {
+        "fractional": "31/1",
+        "decimal": 32.0
+      },
+      "8": {
+        "fractional": "36/1",
+        "decimal": 37.0
+      },
+      "9": {
+        "fractional": "29/1",
+        "decimal": 30.0
+      },
+      "10": {
+        "fractional": "20/1",
+        "decimal": 21.0
+      },
+      "11": {
+        "fractional": "14/1",
+        "decimal": 15.0
+      },
+      "12": {
+        "fractional": "16/1",
+        "decimal": 17.0
+      },
+      "13": {
+        "fractional": "37/1",
+        "decimal": 38.0
+      },
+      "14": {
+        "fractional": "22/1",
+        "decimal": 23.0
+      },
+      "15": {
+        "fractional": "6/1",
+        "decimal": 7.0
+      },
+      "16": {
+        "fractional": "7/1",
+        "decimal": 8.0
+      }
+    }
+  },
+  "press_odds_status": "observed_in_program",
+  "published_arrival": [],
+  "source_url": "https://lonab.bf/sites/default/files/2026-11/JH_PMUB_DU_19-11-2026.pdf",
+  "source_domain": "lonab.bf",
+  "source_sha256": "2ca2a012ba0c223f23e51ac66a5613b33b9262efe0bdca2e606c6da8520013da",
+  "validation_status": "validated",
+  "validation_reason": "validated"
+}
