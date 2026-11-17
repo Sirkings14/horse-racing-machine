@@ -1,0 +1,351 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMUB_DU_18-11-2026_0208d16286_2874af091f.txt",
+    "parsed_at": "2026-11-17T02:35:53.051840Z",
+    "date": "2026-11-18",
+    "race": {
+        "race_name": null,
+        "track": null,
+        "race_number": 1,
+        "race_type": "ATTELE",
+        "runners_count": 18,
+        "distance": 2850,
+        "prize_euros": 90000
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "KEMIA DU CHENE",
+            "description": "",
+            "performance": "1.7.1.4.1",
+            "gains": 303640,
+            "trainer": "J. LE MER",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "Y. GUEDJ",
+            "listed_chrono": "1.10.90"
+        },
+        {
+            "number": 2,
+            "horse": "ILEO PIERJI",
+            "description": "",
+            "performance": "D.3.2.5.6",
+            "gains": 307785,
+            "trainer": "CH.A. MARY",
+            "jockey": "A. BARRIER",
+            "driver": "A. BARRIER",
+            "owner": "Ec. Pierre JULIENNE",
+            "listed_chrono": "1.12.40"
+        },
+        {
+            "number": 3,
+            "horse": "LIGHT MY FIRE",
+            "description": "",
+            "performance": "4.0.D.7.0",
+            "gains": 322275,
+            "trainer": "S. GUARATO",
+            "jockey": "A. GUARATO",
+            "driver": "A. GUARATO",
+            "owner": "EC. ELAG",
+            "listed_chrono": "1.09.80"
+        },
+        {
+            "number": 4,
+            "horse": "HELIOS SI",
+            "description": "",
+            "performance": "0.0.7.4.0",
+            "gains": 329670,
+            "trainer": "S. HARDY",
+            "jockey": "S. HARDY",
+            "driver": "S. HARDY",
+            "owner": "J.Ch. SIOUR",
+            "listed_chrono": "1.11.30"
+        },
+        {
+            "number": 5,
+            "horse": "LOULOU DE MYE",
+            "description": "",
+            "performance": "5.D.D.8.7",
+            "gains": 330210,
+            "trainer": "R.CH. LARUE",
+            "jockey": "R.CH. LARUE",
+            "driver": "R.CH. LARUE",
+            "owner": "EC. du MONT JOLY",
+            "listed_chrono": "1.10.80"
+        },
+        {
+            "number": 6,
+            "horse": "IGUANE DE CAPONET",
+            "description": "",
+            "performance": "5.0.D.2.1",
+            "gains": 342630,
+            "trainer": "C. RAIMBAUD",
+            "jockey": "Y. LEBOURGEOIS",
+            "driver": "Y. LEBOURGEOIS",
+            "owner": "C. RAIMBAUD",
+            "listed_chrono": "1.11.20"
+        },
+        {
+            "number": 7,
+            "horse": "HAMILTON DU HAM",
+            "description": "",
+            "performance": "4.D.D.7.1",
+            "gains": 396360,
+            "trainer": "Y. DESMET",
+            "jockey": "CH. MARTENS",
+            "driver": "CH. MARTENS",
+            "owner": "Y. DESMET",
+            "listed_chrono": "1.10.00"
+        },
+        {
+            "number": 8,
+            "horse": "IALTO D'HERTALS",
+            "description": "",
+            "performance": "3.3.6.2.3",
+            "gains": 500700,
+            "trainer": "TH. DUVALDESTIN",
+            "jockey": "THEO DUVALDESTIN",
+            "driver": "THEO DUVALDESTIN",
+            "owner": "Stal D'ATOM",
+            "listed_chrono": "1.10.20"
+        },
+        {
+            "number": 9,
+            "horse": "ISOFOU DU CHENE",
+            "description": "",
+            "performance": "0.6.3.D.2",
+            "gains": 521640,
+            "trainer": "J. LE MER",
+            "jockey": "P.PH. PLOQUIN",
+            "driver": "P.PH. PLOQUIN",
+            "owner": "Y. GUEDJ",
+            "listed_chrono": "1.10.20"
+        },
+        {
+            "number": 10,
+            "horse": "J'AIME LE FOOT",
+            "description": "",
+            "performance": "0.0.9.5.9",
+            "gains": 552650,
+            "trainer": "Antoine LHERETE",
+            "jockey": "A. LHERETE",
+            "driver": "A. LHERETE",
+            "owner": "EC. Olivier MOREL",
+            "listed_chrono": "1.10.20"
+        },
+        {
+            "number": 11,
+            "horse": "HIDALGO DES NOES",
+            "description": "",
+            "performance": "8.7.2.6.5",
+            "gains": 584230,
+            "trainer": "St. PROVOOST",
+            "jockey": "J. TRAVERS",
+            "driver": "J. TRAVERS",
+            "owner": "EC. DANOVER",
+            "listed_chrono": "1.10.30"
+        },
+        {
+            "number": 12,
+            "horse": "JINGLE DU PONT",
+            "description": "",
+            "performance": "4.0.2.3.3",
+            "gains": 600030,
+            "trainer": "N. BAZIRE",
+            "jockey": "N. BAZIRE",
+            "driver": "N. BAZIRE",
+            "owner": "R. PADOVANI",
+            "listed_chrono": "1.09.30"
+        },
+        {
+            "number": 13,
+            "horse": "IDEAL DU ROCHER",
+            "description": "",
+            "performance": "D.1.2.1.5",
+            "gains": 612792,
+            "trainer": "TH. DUVALDESTIN",
+            "jockey": "CL. DUVALDESTIN",
+            "driver": "CL. DUVALDESTIN",
+            "owner": "EC. Charley MOTTIER",
+            "listed_chrono": "1.10.60"
+        },
+        {
+            "number": 14,
+            "horse": "HULYSSE DIGEO",
+            "description": "",
+            "performance": "3.5.5.3.6",
+            "gains": 633150,
+            "trainer": "J.W. HALLAIS",
+            "jockey": "J.W. HALLAIS",
+            "driver": "J.W. HALLAIS",
+            "owner": "EC. J.CL. HALLAIS",
+            "listed_chrono": "1.09.80"
+        },
+        {
+            "number": 15,
+            "horse": "JUSTIN BOLD",
+            "description": "",
+            "performance": "0.D.D.7.2",
+            "gains": 640770,
+            "trainer": "J.R. DELLIAUX",
+            "jockey": "P.Y. VERVA",
+            "driver": "P.Y. VERVA",
+            "owner": "EC. du DAMIER",
+            "listed_chrono": "1.10.00"
+        },
+        {
+            "number": 16,
+            "horse": "JEROBOAM D'ERABLE",
+            "description": "",
+            "performance": "8.D.3.7.1",
+            "gains": 679790,
+            "trainer": "CL. THOMAIN",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "EC. du HS. D'ERABLE",
+            "listed_chrono": "1.10.80"
+        },
+        {
+            "number": 17,
+            "horse": "JEAN BALTHAZAR",
+            "description": "",
+            "performance": "0.8.8.0.D",
+            "gains": 1047120,
+            "trainer": "P. CASTEL",
+            "jockey": "P. CASTEL",
+            "driver": "P. CASTEL",
+            "owner": "Sandrine LONCKE",
+            "listed_chrono": "1.10.50"
+        },
+        {
+            "number": 18,
+            "horse": "INA DU RIB",
+            "description": "",
+            "performance": "0.0.0.0.2",
+            "gains": 1176360,
+            "trainer": "JOEL HALLAIS",
+            "jockey": "J.L.CL. DERSOIR",
+            "driver": "J.L.CL. DERSOIR",
+            "owner": "EC. RIB",
+            "listed_chrono": "1.09.60"
+        }
+    ],
+    "program_table_mapping_status": "mapped",
+    "rankings": {
+        "favorites": [
+            9,
+            3,
+            13,
+            8,
+            12,
+            14,
+            1
+        ],
+        "form": [
+            9,
+            8,
+            3,
+            13,
+            14
+        ],
+        "class": [
+            3,
+            6,
+            14,
+            12,
+            1
+        ],
+        "progress": [
+            4,
+            1,
+            2,
+            5,
+            6
+        ],
+        "regularity": [
+            5,
+            4,
+            11,
+            6,
+            1
+        ]
+    },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "14/1",
+                "decimal": 15.0
+            },
+            "2": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "3": {
+                "fractional": "7/1",
+                "decimal": 8.0
+            },
+            "4": {
+                "fractional": "72/1",
+                "decimal": 73.0
+            },
+            "5": {
+                "fractional": "19/1",
+                "decimal": 20.0
+            },
+            "6": {
+                "fractional": "6/1",
+                "decimal": 7.0
+            },
+            "7": {
+                "fractional": "42/1",
+                "decimal": 43.0
+            },
+            "8": {
+                "fractional": "57/1",
+                "decimal": 58.0
+            },
+            "9": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "10": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            },
+            "11": {
+                "fractional": "12/1",
+                "decimal": 13.0
+            },
+            "12": {
+                "fractional": "150/1",
+                "decimal": 151.0
+            },
+            "13": {
+                "fractional": "157/1",
+                "decimal": 158.0
+            },
+            "14": {
+                "fractional": "16/1",
+                "decimal": 17.0
+            },
+            "15": {
+                "fractional": "148/1",
+                "decimal": 149.0
+            },
+            "16": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            },
+            "17": {
+                "fractional": "197/1",
+                "decimal": 198.0
+            },
+            "18": {
+                "fractional": "199/1",
+                "decimal": 200.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
+    "published_arrival": []
+}
