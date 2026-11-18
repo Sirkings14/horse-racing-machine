@@ -1,9 +1,411 @@
 {
-  "prediction_id": null,
-  "generated_at": "2026-11-18T14:25:37.136680+00:00",
-  "model_version": null,
-  "mode": "v3_unavailable",
-  "reason": "no_unfinished_current_or_future_race",
+  "prediction_id": "2026-11-20|PARIS-VINCENNES NOCTURNE|4|2026-11-18T16:38:25.346694+00:00",
+  "generated_at": "2026-11-18T16:38:25.346706+00:00",
+  "model_version": "v4-evidence-no-press",
+  "model_fingerprint": "85e56c02ff8b9f009959f1c8ec4b1d0c0b71b5424c7d01e08a1d787fab68af90",
+  "source_program_fingerprint": "69a16c3515fc76a90117627eff8dbe8561451772ce6f1c3a9450fd98b8a8a9a9",
+  "mode": "v5_market_opportunity_layer",
+  "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+  "race": {
+    "date": "2026-11-20",
+    "track": "PARIS-VINCENNES NOCTURNE",
+    "race_number": 4,
+    "race_name": "PRIX TRITON",
+    "race_type": "ATTELE",
+    "distance": 2700,
+    "runners_count": 15
+  },
+  "truth_gate": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "press_independent": true,
+    "post_race_data_excluded": true
+  },
+  "press_dependency": false,
+  "post_race_feature_policy": "hard_exclusion",
+  "feature_health": {
+    "runners": 15,
+    "history_coverage": 0.8,
+    "course_coverage": 0.333,
+    "distance_coverage": 0.467,
+    "complete_rows": 1.0,
+    "identity_sources": {
+      "normalized_name": 15
+    },
+    "history_starts_sorted": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      6
+    ],
+    "distance_starts_sorted": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3,
+      3,
+      3,
+      3,
+      4,
+      5
+    ]
+  },
+  "confidence": "low",
+  "model_agreement": "low",
   "recommended_numbers": [],
-  "ranked_horses": []
+  "final_five": [
+    5,
+    6,
+    14,
+    7,
+    9
+  ],
+  "ranked_horses": [
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 5,
+      "horse_name": "KELLER DE L'ITON",
+      "probability_winner": 0.233404,
+      "raw_probability_winner": 0.232815,
+      "probability_top3": 0.374791,
+      "probability_top5": 0.547896,
+      "ensemble_score": 0.363247,
+      "model_disagreement": 0.12884,
+      "data_completeness": 1.0,
+      "predicted_rank": 1
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 6,
+      "horse_name": "KETBERNY",
+      "probability_winner": 0.161534,
+      "raw_probability_winner": 0.161127,
+      "probability_top3": 0.327435,
+      "probability_top5": 0.511356,
+      "ensemble_score": 0.310382,
+      "model_disagreement": 0.143041,
+      "data_completeness": 1.0,
+      "predicted_rank": 2
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 14,
+      "horse_name": "KANCALAIS",
+      "probability_winner": 0.13807,
+      "raw_probability_winner": 0.137721,
+      "probability_top3": 0.306207,
+      "probability_top5": 0.488453,
+      "ensemble_score": 0.288164,
+      "model_disagreement": 0.143222,
+      "data_completeness": 1.0,
+      "predicted_rank": 3
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 7,
+      "horse_name": "KHARNAS",
+      "probability_winner": 0.039652,
+      "raw_probability_winner": 0.039552,
+      "probability_top3": 0.177784,
+      "probability_top5": 0.325408,
+      "ensemble_score": 0.162624,
+      "model_disagreement": 0.116721,
+      "data_completeness": 1.0,
+      "predicted_rank": 4
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 9,
+      "horse_name": "KANNABIS JELOCA",
+      "probability_winner": 0.039652,
+      "raw_probability_winner": 0.039552,
+      "probability_top3": 0.177784,
+      "probability_top5": 0.325408,
+      "ensemble_score": 0.162624,
+      "model_disagreement": 0.116721,
+      "data_completeness": 1.0,
+      "predicted_rank": 5
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 1,
+      "horse_name": "KING FROMENTRO",
+      "probability_winner": 0.039499,
+      "raw_probability_winner": 0.0394,
+      "probability_top3": 0.177322,
+      "probability_top5": 0.325236,
+      "ensemble_score": 0.162313,
+      "model_disagreement": 0.116716,
+      "data_completeness": 1.0,
+      "predicted_rank": 6
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 8,
+      "horse_name": "JORLANDO",
+      "probability_winner": 0.039499,
+      "raw_probability_winner": 0.0394,
+      "probability_top3": 0.177322,
+      "probability_top5": 0.325236,
+      "ensemble_score": 0.162313,
+      "model_disagreement": 0.116716,
+      "data_completeness": 1.0,
+      "predicted_rank": 7
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 11,
+      "horse_name": "KER POULGWEN",
+      "probability_winner": 0.039499,
+      "raw_probability_winner": 0.0394,
+      "probability_top3": 0.177322,
+      "probability_top5": 0.325236,
+      "ensemble_score": 0.162313,
+      "model_disagreement": 0.116716,
+      "data_completeness": 1.0,
+      "predicted_rank": 8
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 2,
+      "horse_name": "KOQUERY DU BUISSON",
+      "probability_winner": 0.039154,
+      "raw_probability_winner": 0.039056,
+      "probability_top3": 0.175945,
+      "probability_top5": 0.322805,
+      "ensemble_score": 0.161058,
+      "model_disagreement": 0.115864,
+      "data_completeness": 1.0,
+      "predicted_rank": 9
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 13,
+      "horse_name": "KING D'HERMES",
+      "probability_winner": 0.039154,
+      "raw_probability_winner": 0.039056,
+      "probability_top3": 0.175945,
+      "probability_top5": 0.322805,
+      "ensemble_score": 0.161058,
+      "model_disagreement": 0.115864,
+      "data_completeness": 1.0,
+      "predicted_rank": 10
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 10,
+      "horse_name": "KARMA",
+      "probability_winner": 0.038955,
+      "raw_probability_winner": 0.038857,
+      "probability_top3": 0.175208,
+      "probability_top5": 0.321216,
+      "ensemble_score": 0.160328,
+      "model_disagreement": 0.115295,
+      "data_completeness": 1.0,
+      "predicted_rank": 11
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 12,
+      "horse_name": "KIKI AND CO",
+      "probability_winner": 0.038812,
+      "raw_probability_winner": 0.038714,
+      "probability_top3": 0.174576,
+      "probability_top5": 0.320383,
+      "ensemble_score": 0.15981,
+      "model_disagreement": 0.115015,
+      "data_completeness": 1.0,
+      "predicted_rank": 12
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 4,
+      "horse_name": "KERVELEAN",
+      "probability_winner": 0.0383,
+      "raw_probability_winner": 0.038204,
+      "probability_top3": 0.172652,
+      "probability_top5": 0.317021,
+      "ensemble_score": 0.158054,
+      "model_disagreement": 0.113851,
+      "data_completeness": 1.0,
+      "predicted_rank": 13
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 3,
+      "horse_name": "IVON DE LA MONERIE",
+      "probability_winner": 0.038011,
+      "raw_probability_winner": 0.037915,
+      "probability_top3": 0.171715,
+      "probability_top5": 0.315711,
+      "ensemble_score": 0.157249,
+      "model_disagreement": 0.113436,
+      "data_completeness": 1.0,
+      "predicted_rank": 14
+    },
+    {
+      "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
+      "horse_number": 15,
+      "horse_name": "JACK DES MALBERAUX",
+      "probability_winner": 0.036805,
+      "raw_probability_winner": 0.036712,
+      "probability_top3": 0.166928,
+      "probability_top5": 0.3072,
+      "ensemble_score": 0.152874,
+      "model_disagreement": 0.110452,
+      "data_completeness": 1.0,
+      "predicted_rank": 15
+    }
+  ],
+  "race_opportunity": {
+    "tier": "C",
+    "model_quality_score": 50.69,
+    "market_edge_available": false,
+    "market_evidence_source": null,
+    "market_evidence_captured_at": null,
+    "value_candidates": [],
+    "top_candidate_margin": 0.052865,
+    "top5_mean_top3_probability": 0.2728,
+    "top5_mean_top5_probability": 0.439704,
+    "top5_mean_model_agreement": 0.870291,
+    "top5_mean_data_completeness": 1.0,
+    "reasons": [
+      "clear_top_candidate",
+      "elevated_model_disagreement",
+      "complete_pre_race_data"
+    ],
+    "policy": {
+      "race_quality_is_not_profitability": true,
+      "market_prices_must_be_observed": true,
+      "probabilities_are_not_prices": true,
+      "winner_probabilities_are_race_normalized": true,
+      "normalization_does_not_prove_calibration": true,
+      "market_edge_does_not_authorize_betting": true
+    }
+  },
+  "selection_filter": {
+    "decision": "PLAY_CANDIDATE",
+    "gate_reasons": [],
+    "recommended_numbers": [
+      5,
+      6,
+      14
+    ],
+    "research_numbers": [
+      5,
+      6,
+      14
+    ],
+    "top_win_probability": 0.233404,
+    "edge_vs_uniform": 0.166737,
+    "score_separation": 0.200934,
+    "coverage": {
+      "history_coverage": 0.8,
+      "jockey_coverage": 0.9333,
+      "trainer_coverage": 0.9333,
+      "mean_history_starts": 2.4667
+    },
+    "baseline_win_prob": 0.066667,
+    "history_requirement_relaxed": true,
+    "effective_min_mean_history_starts": 0.8
+  },
+  "selection_policy": "independent_evidence_ensemble_with_disagreement_penalty_plus_race_opportunity_and_strict_selection_filters",
+  "autopilot_guard": {
+    "health": "stable_observation",
+    "decision": "PASS",
+    "gate_reasons": [
+      "insufficient_verified_history",
+      "economic_validation_unavailable"
+    ],
+    "recent_verified_predictions": 12,
+    "recent_winner_hit_rate": 0.1667,
+    "recent_winner_in_top3_rate": 0.4167,
+    "recent_order_engine_winner_hit_rate": 0.1667,
+    "recent_exact_top3_order_rate": 0.0,
+    "recent_exact_top5_order_rate": 0.0,
+    "recent_recommended_hit_average": 1.917,
+    "engine_attribution": {
+      "strength": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.833,
+        "avg_actual_top5_covered_by_top5": 2.083,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      },
+      "order": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.25,
+        "winner_in_top5_rate": 0.3333,
+        "avg_actual_top3_covered_by_top3": 1.0,
+        "avg_actual_top3_covered_by_top5": 1.167,
+        "avg_actual_top5_covered_by_top5": 1.25,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.25
+      },
+      "fused": {
+        "winner_hit_rate": 0.1667,
+        "winner_in_top3_rate": 0.4167,
+        "winner_in_top5_rate": 0.5,
+        "avg_actual_top3_covered_by_top3": 1.25,
+        "avg_actual_top3_covered_by_top5": 1.667,
+        "avg_actual_top5_covered_by_top5": 1.917,
+        "exact_top3_order_rate": 0.0,
+        "exact_top5_order_rate": 0.0,
+        "avg_top5_position_hits": 0.5
+      }
+    },
+    "order_walk_forward_pairwise_accuracy": 0.6013,
+    "feature_drift_severity": "unrated",
+    "economic_validation_status": "awaiting_market_odds",
+    "economic_validation_roi": null,
+    "prediction_confidence": "medium",
+    "confidence_reasons": [],
+    "difficulty": {},
+    "gate_policy": {
+      "PASS_means_insufficient_or_unstable_evidence": true,
+      "PLAY_CANDIDATE_is_not_a_guarantee_of_outcome_or_profit": true,
+      "insufficient_verified_history_blocks": true,
+      "severe_feature_drift_blocks": true,
+      "low_confidence_blocks": true,
+      "engine_disagreement_blocks": false,
+      "high_difficulty_blocks": true,
+      "degraded_recent_winner_accuracy_blocks": true,
+      "order_engine_below_random_baseline_blocks": true,
+      "missing_or_negative_economic_validation_blocks": true
+    }
+  },
+  "research_numbers": [
+    5,
+    6,
+    14
+  ],
+  "live_decision": "NO_BET",
+  "mode_detail": "research_only",
+  "no_bet_reason": [
+    "insufficient_verified_history",
+    "economic_validation_unavailable"
+  ]
 }
