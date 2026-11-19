@@ -767,6 +767,27 @@
       "prediction_id": "2026-11-20|PARIS-VINCENNES NOCTURNE|4|2026-11-18T16:38:25.346694+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 272
+    },
+    "2026-11-21|AUTEUIL|6": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          8,
+          2,
+          10,
+          14,
+          4
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-11-19T16:42:11.749250+00:00",
+      "prediction_id": "2026-11-21|AUTEUIL|6|2026-11-19T16:42:11.165156+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 273
     }
   }
 }

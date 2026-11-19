@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-19T14:36:11.844130+00:00",
+  "updated_at": "2026-11-19T16:41:50.806695+00:00",
   "races": [
     {
       "race_key": "2026-09-13|PARISLONGCHAMP|3",
@@ -1307,10 +1307,10 @@
       "structured_file": "structured/2026-11-19_SAINT-CLOUD_6.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-11-19T14:36:11.843789+00:00",
+      "discovered_at": "2026-11-19T16:41:50.806445+00:00",
       "result_status": "pending",
       "created_at": "2026-11-17T16:59:03.620884+00:00",
-      "updated_at": "2026-11-19T14:36:11.844116+00:00"
+      "updated_at": "2026-11-19T16:41:50.806684+00:00"
     },
     {
       "race_key": "2026-11-20|PARIS-VINCENNES NOCTURNE|4",
@@ -1327,10 +1327,30 @@
       "structured_file": "structured/2026-11-20_PARIS-VINCENNES NOCTURNE_4.json",
       "status": "validated",
       "prediction_status": "pending",
-      "discovered_at": "2026-11-19T14:36:11.575113+00:00",
+      "discovered_at": "2026-11-19T16:41:50.361878+00:00",
       "result_status": "pending",
       "created_at": "2026-11-18T16:37:36.228897+00:00",
-      "updated_at": "2026-11-19T14:36:11.575418+00:00"
+      "updated_at": "2026-11-19T16:41:50.362120+00:00"
+    },
+    {
+      "race_key": "2026-11-21|AUTEUIL|6",
+      "date": "2026-11-21",
+      "track": "AUTEUIL",
+      "race_number": 6,
+      "race_name": "PRIX MARC ANTONY",
+      "race_type": "PLAT",
+      "distance": 3900,
+      "runners_count": 14,
+      "horse_count": 14,
+      "source_url": "https://lonab.bf/sites/default/files/2026-11/JH_PMUB_DU_21-11-2026.pdf",
+      "source_file": "live_program_JH_PMUB_DU_21-11-2026_0b85594194.pdf",
+      "structured_file": "structured/2026-11-21_AUTEUIL_6.json",
+      "status": "validated",
+      "prediction_status": "pending",
+      "discovered_at": "2026-11-19T16:41:49.146326+00:00",
+      "result_status": "pending",
+      "created_at": "2026-11-19T16:41:27.287996+00:00",
+      "updated_at": "2026-11-19T16:41:49.146570+00:00"
     }
   ]
 }
