@@ -1,0 +1,230 @@
+{
+  "document_type": "program",
+  "source_file": "live_program_JH_PMUB_DU_22-11-2026_b7e6428643.pdf",
+  "parsed_at": "2026-11-20T17:45:56.203504Z",
+  "date": "2026-11-22",
+  "race": {
+    "race_name": "PRIX DE BRETAGNE-AMERIQUE RACES Q1",
+    "track": "PARIS-VINCENNES",
+    "race_number": 4,
+    "race_type": "ATTELE",
+    "runners_count": 18,
+    "distance": 2700,
+    "prize_euros": 120000
+  },
+  "horses": [
+    {
+      "number": 1,
+      "horse": "KUIPER",
+      "description": ""
+    },
+    {
+      "number": 2,
+      "horse": "HORATIUS D'ELA",
+      "description": ""
+    },
+    {
+      "number": 3,
+      "horse": "JEANNETTE PRIORY",
+      "description": ""
+    },
+    {
+      "number": 4,
+      "horse": "KING OPERA",
+      "description": ""
+    },
+    {
+      "number": 5,
+      "horse": "KANTO AVIS",
+      "description": ""
+    },
+    {
+      "number": 6,
+      "horse": "HARMONY DU RABUTIN",
+      "description": ""
+    },
+    {
+      "number": 7,
+      "horse": "HARLEY GEMA",
+      "description": ""
+    },
+    {
+      "number": 8,
+      "horse": "KEEP GOING",
+      "description": ""
+    },
+    {
+      "number": 9,
+      "horse": "LIONHEART",
+      "description": ""
+    },
+    {
+      "number": 10,
+      "horse": "FREE TIME JEPSON",
+      "description": ""
+    },
+    {
+      "number": 11,
+      "horse": "IDEAL LIGNERIES",
+      "description": ""
+    },
+    {
+      "number": 12,
+      "horse": "LOMBOK JIEL",
+      "description": ""
+    },
+    {
+      "number": 13,
+      "horse": "KRACK TIME ATOUT",
+      "description": ""
+    },
+    {
+      "number": 14,
+      "horse": "INMAROSA",
+      "description": ""
+    },
+    {
+      "number": 15,
+      "horse": "BORUPS VICTORY",
+      "description": ""
+    },
+    {
+      "number": 16,
+      "horse": "FRANK GIO",
+      "description": ""
+    },
+    {
+      "number": 17,
+      "horse": "HOKKAIDO JIEL",
+      "description": ""
+    },
+    {
+      "number": 18,
+      "horse": "HOOKER BERRY",
+      "description": ""
+    }
+  ],
+  "program_table_mapping_status": "unmapped",
+  "rankings": {
+    "favorites": [
+      16,
+      15,
+      10,
+      8,
+      14,
+      1,
+      12
+    ],
+    "form": [
+      15,
+      10,
+      16,
+      14,
+      12
+    ],
+    "class": [
+      16,
+      14,
+      12,
+      15,
+      5
+    ],
+    "progress": [
+      1,
+      10,
+      11,
+      6,
+      13
+    ],
+    "regularity": [
+      4,
+      6,
+      13,
+      5,
+      3
+    ]
+  },
+  "press_odds": {
+    "tierce_magazine": {
+      "1": {
+        "fractional": "18/1",
+        "decimal": 19.0
+      },
+      "2": {
+        "fractional": "96/1",
+        "decimal": 97.0
+      },
+      "3": {
+        "fractional": "21/1",
+        "decimal": 22.0
+      },
+      "4": {
+        "fractional": "41/1",
+        "decimal": 42.0
+      },
+      "5": {
+        "fractional": "23/1",
+        "decimal": 24.0
+      },
+      "6": {
+        "fractional": "147/1",
+        "decimal": 148.0
+      },
+      "7": {
+        "fractional": "12/1",
+        "decimal": 13.0
+      },
+      "8": {
+        "fractional": "31/1",
+        "decimal": 32.0
+      },
+      "9": {
+        "fractional": "20/1",
+        "decimal": 21.0
+      },
+      "10": {
+        "fractional": "24/1",
+        "decimal": 25.0
+      },
+      "11": {
+        "fractional": "15/1",
+        "decimal": 16.0
+      },
+      "12": {
+        "fractional": "7/1",
+        "decimal": 8.0
+      },
+      "13": {
+        "fractional": "6/1",
+        "decimal": 7.0
+      },
+      "14": {
+        "fractional": "25/1",
+        "decimal": 26.0
+      },
+      "15": {
+        "fractional": "28/1",
+        "decimal": 29.0
+      },
+      "16": {
+        "fractional": "16/1",
+        "decimal": 17.0
+      },
+      "17": {
+        "fractional": "47/1",
+        "decimal": 48.0
+      },
+      "18": {
+        "fractional": "58/1",
+        "decimal": 59.0
+      }
+    }
+  },
+  "press_odds_status": "observed_in_program",
+  "published_arrival": [],
+  "source_url": "https://lonab.bf/sites/default/files/2026-11/JH_PMUB_DU_22-11-2026.pdf",
+  "source_domain": "lonab.bf",
+  "source_sha256": "0a732454d3bd180c72a47209e2e505d2c14b05b1c65240886985b464c54675d5",
+  "validation_status": "validated",
+  "validation_reason": "validated"
+}
