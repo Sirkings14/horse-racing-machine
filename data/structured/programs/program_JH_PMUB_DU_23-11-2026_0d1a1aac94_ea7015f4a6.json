@@ -1,0 +1,335 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMUB_DU_23-11-2026_0d1a1aac94_ea7015f4a6.txt",
+    "parsed_at": "2026-11-21T23:53:37.030477Z",
+    "date": "2026-11-23",
+    "race": {
+        "race_name": "PRIX DE MONTIGNAC-CHARENTE",
+        "track": "PARIS-VINCENNES",
+        "race_number": 1,
+        "race_type": "ATTELE",
+        "runners_count": 17,
+        "distance": 2700,
+        "prize_euros": 90000
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "KELMEC",
+            "description": "",
+            "performance": "0.1.1.1.1",
+            "gains": 157340,
+            "trainer": "R. DERIEUX",
+            "jockey": "M. IONESCU",
+            "driver": "M. IONESCU",
+            "owner": "Ec. AB TROT",
+            "listed_chrono": "1.11.90"
+        },
+        {
+            "number": 2,
+            "horse": "FREEDOM",
+            "description": "",
+            "performance": "3.2.1.0.4",
+            "gains": 331416,
+            "trainer": "O. RAFFIN",
+            "jockey": "O. RAFFIN",
+            "driver": "O. RAFFIN",
+            "owner": "S. LEFORT",
+            "listed_chrono": "1.10.60"
+        },
+        {
+            "number": 3,
+            "horse": "CHITCHAT",
+            "description": "",
+            "performance": "2.5.3.3.1",
+            "gains": 357143,
+            "trainer": "Daniel WAJERSTEN",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "Stall SOFO",
+            "listed_chrono": "1.10.40"
+        },
+        {
+            "number": 4,
+            "horse": "KAMEHAMEHA",
+            "description": "",
+            "performance": "0.7.D.7.3",
+            "gains": 365000,
+            "trainer": "Antoine LHERETE",
+            "jockey": "A. LHERETE",
+            "driver": "A. LHERETE",
+            "owner": "Ec. ELEVAGE JC",
+            "listed_chrono": "1.11.00"
+        },
+        {
+            "number": 5,
+            "horse": "NINEPOINTS LASSE",
+            "description": "",
+            "performance": "3.4.D.5.7",
+            "gains": 373064,
+            "trainer": "J. WESTHOLM",
+            "jockey": "TH. BRIAND",
+            "driver": "TH. BRIAND",
+            "owner": "John FARRUGIA",
+            "listed_chrono": "1.09.90"
+        },
+        {
+            "number": 6,
+            "horse": "ELEGANCE KRONOS",
+            "description": "",
+            "performance": "3.6.4.0.5",
+            "gains": 386305,
+            "trainer": "L.CL. ABRIVARD",
+            "jockey": "LEO ABRIVARD",
+            "driver": "LEO ABRIVARD",
+            "owner": "Ec.Jean-Pierre BARJON",
+            "listed_chrono": "1.09.60"
+        },
+        {
+            "number": 7,
+            "horse": "IN RED",
+            "description": "",
+            "performance": "9.4.3.7.3",
+            "gains": 400400,
+            "trainer": "A. CHAVATTE",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "Patrice FOUBET",
+            "listed_chrono": "1.09.90"
+        },
+        {
+            "number": 8,
+            "horse": "HEADSCOTT",
+            "description": "",
+            "performance": "0.3.2.D.5",
+            "gains": 401170,
+            "trainer": "A. CHAVATTE",
+            "jockey": "A.A. CHAVATTE",
+            "driver": "A.A. CHAVATTE",
+            "owner": "Louis CHAUVIERE",
+            "listed_chrono": "1.11.50"
+        },
+        {
+            "number": 9,
+            "horse": "JONGLEUSE DE LUNE",
+            "description": "",
+            "performance": "6.2.5.A.0",
+            "gains": 404720,
+            "trainer": "K. LEBLANC",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "ELE. ALWAYS WITH ME",
+            "listed_chrono": "1.11.20"
+        },
+        {
+            "number": 10,
+            "horse": "RIKITA JP",
+            "description": "",
+            "performance": "8.D.8.D.3",
+            "gains": 405723,
+            "trainer": "J. ROBERT",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "S. ROBERT",
+            "listed_chrono": "1.08.40"
+        },
+        {
+            "number": 11,
+            "horse": "JET EXPRESS",
+            "description": "",
+            "performance": "2.2.2.2.1",
+            "gains": 414050,
+            "trainer": "PH. DAUGEARD",
+            "jockey": "PH. DAUGEARD",
+            "driver": "PH. DAUGEARD",
+            "owner": "R. DE HANNUNA",
+            "listed_chrono": "1.10.80"
+        },
+        {
+            "number": 12,
+            "horse": "JE REVE DU BOIS",
+            "description": "",
+            "performance": "D.3.5.7.0",
+            "gains": 419565,
+            "trainer": "CH.M. BRUNEAU",
+            "jockey": "E. RAFFIN",
+            "driver": "E. RAFFIN",
+            "owner": "V. MARC-MARTIN",
+            "listed_chrono": "1.10.40"
+        },
+        {
+            "number": 13,
+            "horse": "HOMARD LAND",
+            "description": "",
+            "performance": "4.1.1.5.3",
+            "gains": 421000,
+            "trainer": "L.A. MARTIN",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "L.A. MARTIN",
+            "listed_chrono": "1.11.70"
+        },
+        {
+            "number": 14,
+            "horse": "KARAMBAR",
+            "description": "",
+            "performance": "0.2.0.8.2",
+            "gains": 421365,
+            "trainer": "L.CL. ABRIVARD",
+            "jockey": "A. ABRIVARD",
+            "driver": "A. ABRIVARD",
+            "owner": "H. KARROUCHI",
+            "listed_chrono": "1.11.50"
+        },
+        {
+            "number": 15,
+            "horse": "INDY ROCK",
+            "description": "",
+            "performance": "7.0.1.D.D",
+            "gains": 435165,
+            "trainer": "J. WESTHOLM",
+            "jockey": "P.PH. PLOQUIN",
+            "driver": "P.PH. PLOQUIN",
+            "owner": "Stall VERRAZZANO",
+            "listed_chrono": "1.09.80"
+        },
+        {
+            "number": 16,
+            "horse": "IBIZA BELLA",
+            "description": "",
+            "performance": "4.D.5.3.2",
+            "gains": 438970,
+            "trainer": "J.P. MARMION",
+            "jockey": "A. WIELS",
+            "driver": "A. WIELS",
+            "owner": "Ec. Jean Paul MARMION",
+            "listed_chrono": "1.10.40"
+        },
+        {
+            "number": 17,
+            "horse": "IDYLLE EXPRESS",
+            "description": "",
+            "performance": "9.6.1.4.7",
+            "gains": 446970,
+            "trainer": "P. LELIEVRE",
+            "jockey": "J.M. BAZIRE",
+            "driver": "J.M. BAZIRE",
+            "owner": "Ec. Hervé GUERIN",
+            "listed_chrono": "1.09.50"
+        }
+    ],
+    "program_table_mapping_status": "mapped",
+    "rankings": {
+        "favorites": [
+            14,
+            11,
+            17,
+            3,
+            13,
+            16,
+            12
+        ],
+        "form": [
+            11,
+            13,
+            3,
+            14,
+            16
+        ],
+        "class": [
+            14,
+            5,
+            12,
+            17,
+            6
+        ],
+        "progress": [
+            5,
+            6,
+            9,
+            17,
+            7
+        ],
+        "regularity": [
+            3,
+            11,
+            13,
+            16,
+            14
+        ]
+    },
+    "press_odds": {
+        "tierce_magazine": {
+            "1": {
+                "fractional": "195/1",
+                "decimal": 196.0
+            },
+            "2": {
+                "fractional": "97/1",
+                "decimal": 98.0
+            },
+            "3": {
+                "fractional": "13/1",
+                "decimal": 14.0
+            },
+            "4": {
+                "fractional": "58/1",
+                "decimal": 59.0
+            },
+            "5": {
+                "fractional": "29/1",
+                "decimal": 30.0
+            },
+            "6": {
+                "fractional": "43/1",
+                "decimal": 44.0
+            },
+            "7": {
+                "fractional": "38/1",
+                "decimal": 39.0
+            },
+            "8": {
+                "fractional": "9/1",
+                "decimal": 10.0
+            },
+            "9": {
+                "fractional": "16/1",
+                "decimal": 17.0
+            },
+            "10": {
+                "fractional": "11/1",
+                "decimal": 12.0
+            },
+            "11": {
+                "fractional": "6/1",
+                "decimal": 7.0
+            },
+            "12": {
+                "fractional": "23/1",
+                "decimal": 24.0
+            },
+            "13": {
+                "fractional": "15/1",
+                "decimal": 16.0
+            },
+            "14": {
+                "fractional": "27/1",
+                "decimal": 28.0
+            },
+            "15": {
+                "fractional": "48/1",
+                "decimal": 49.0
+            },
+            "16": {
+                "fractional": "79/1",
+                "decimal": 80.0
+            },
+            "17": {
+                "fractional": "10/1",
+                "decimal": 11.0
+            }
+        }
+    },
+    "press_odds_status": "observed_in_program",
+    "published_arrival": []
+}
