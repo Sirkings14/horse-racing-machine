@@ -830,6 +830,27 @@
       "prediction_id": "2026-11-23|PARIS-VINCENNES|1|2026-11-21T16:45:37.457520+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 275
+    },
+    "2026-11-24|DEAUVILLE-LA TOUQUES|1": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          3,
+          4,
+          12,
+          1,
+          2
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-11-22T17:07:04.908845+00:00",
+      "prediction_id": "2026-11-24|DEAUVILLE-LA TOUQUES|1|2026-11-22T17:07:04.356576+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 276
     }
   }
 }
