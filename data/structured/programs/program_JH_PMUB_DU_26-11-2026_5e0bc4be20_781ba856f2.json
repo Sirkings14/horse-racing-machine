@@ -1,0 +1,252 @@
+{
+    "document_type": "program",
+    "source_file": "program_JH_PMUB_DU_26-11-2026_5e0bc4be20_781ba856f2.txt",
+    "parsed_at": "2026-11-25T03:08:39.041338Z",
+    "date": "2026-11-26",
+    "race": {
+        "race_name": "PRIX DE SILLE LE GUILLAUME",
+        "track": "PARIS-VINCENNES",
+        "race_number": 1,
+        "race_type": "ATTELE",
+        "runners_count": 16,
+        "distance": 2850,
+        "prize_euros": 68000
+    },
+    "horses": [
+        {
+            "number": 1,
+            "horse": "OSCAR VAN HALBEEK",
+            "description": "",
+            "performance": "3.8.2.D.D",
+            "gains": 210792,
+            "trainer": "S. LAVIGNE",
+            "jockey": "D. THOMAIN",
+            "driver": "D. THOMAIN",
+            "owner": "S. LAVIGNE",
+            "listed_chrono": "1.10.90"
+        },
+        {
+            "number": 2,
+            "horse": "HARPY",
+            "description": "",
+            "performance": "2.5.2.2.4",
+            "gains": 213610,
+            "trainer": "R. BERGH",
+            "jockey": "R. BERGH",
+            "driver": "R. BERGH",
+            "owner": "Stall SEDIN HB",
+            "listed_chrono": "1.11.10"
+        },
+        {
+            "number": 3,
+            "horse": "RUGER",
+            "description": "",
+            "performance": "9.1.2.1.1",
+            "gains": 224272,
+            "trainer": "E. LINDEGREN",
+            "jockey": "F. DESMIGNEUX",
+            "driver": "F. DESMIGNEUX",
+            "owner": "FJ KONSULT AB",
+            "listed_chrono": "1.11.40"
+        },
+        {
+            "number": 4,
+            "horse": "JUSSEO",
+            "description": "",
+            "performance": "D.9.6.1.D",
+            "gains": 226680,
+            "trainer": "Julien RAFFESTIN",
+            "jockey": "E. RAFFIN",
+            "driver": "E. RAFFIN",
+            "owner": "PH. GENTIL",
+            "listed_chrono": "1.09.70"
+        },
+        {
+            "number": 5,
+            "horse": "MATEO DI QUATTRO",
+            "description": "",
+            "performance": "0.9.4.6.0",
+            "gains": 228130,
+            "trainer": "B. GOOP",
+            "jockey": "B. GOOP",
+            "driver": "B. GOOP",
+            "owner": "PETER BRONSMAN AB",
+            "listed_chrono": "1.10.10"
+        },
+        {
+            "number": 6,
+            "horse": "DIVA DEL RONCO",
+            "description": "",
+            "performance": "0.2.8.6.D",
+            "gains": 245668,
+            "trainer": "Vitale CIOTOLA",
+            "jockey": "V. CIOTOLA",
+            "driver": "V. CIOTOLA",
+            "owner": "Sc. ALLE. TEAM MINOPOLI",
+            "listed_chrono": "1.09.70"
+        },
+        {
+            "number": 7,
+            "horse": "LAREDO BOKO",
+            "description": "",
+            "performance": "9.0.7.2.6",
+            "gains": 256038,
+            "trainer": "R. BERGH",
+            "jockey": "G. GELORMINI",
+            "driver": "G. GELORMINI",
+            "owner": "Roland WIKSTEN",
+            "listed_chrono": "1.12.00"
+        },
+        {
+            "number": 8,
+            "horse": "READY STAR",
+            "description": "",
+            "performance": "1.1.2.1.2",
+            "gains": 264748,
+            "trainer": "J. WESTHOLM",
+            "jockey": "MATS DJUSE",
+            "driver": "MATS DJUSE",
+            "owner": "EC. OLOF BRODIN AB",
+            "listed_chrono": "1.11.50"
+        },
+        {
+            "number": 9,
+            "horse": "DIABEL",
+            "description": "",
+            "performance": "7.9.8.5.2",
+            "gains": 266435,
+            "trainer": "H.E. BONDO",
+            "jockey": "B. ROCHARD",
+            "driver": "B. ROCHARD",
+            "owner": "Scu. ZB SPORT SRL",
+            "listed_chrono": "1.10.60"
+        },
+        {
+            "number": 10,
+            "horse": "HALL BLACK MESS",
+            "description": "",
+            "performance": "4.D.7.0.0",
+            "gains": 271290,
+            "trainer": "CH. CHALON",
+            "jockey": "TH. CHALON",
+            "driver": "TH. CHALON",
+            "owner": "F. CHARBIT",
+            "listed_chrono": "1.12.60"
+        },
+        {
+            "number": 11,
+            "horse": "JACK DES ASS",
+            "description": "",
+            "performance": "D.1.D.3.1",
+            "gains": 275510,
+            "trainer": "TH. DUVALDESTIN",
+            "jockey": "THEO DUVALDESTIN",
+            "driver": "THEO DUVALDESTIN",
+            "owner": "EC. HS. DES QUATRE VENTS",
+            "listed_chrono": "1.12.70"
+        },
+        {
+            "number": 12,
+            "horse": "IBIS PETTEVINIERE",
+            "description": "",
+            "performance": "3.1.2.9.0",
+            "gains": 278870,
+            "trainer": "F. TERRY",
+            "jockey": "A. COLLETTE",
+            "driver": "A. COLLETTE",
+            "owner": "M. MAIGE",
+            "listed_chrono": "1.11.80"
+        },
+        {
+            "number": 13,
+            "horse": "HONEY KING",
+            "description": "",
+            "performance": "7.5.0.D.0",
+            "gains": 280750,
+            "trainer": "M. IZZO",
+            "jockey": "P.PH. PLOQUIN",
+            "driver": "P.PH. PLOQUIN",
+            "owner": "S. BLANCHETIERE",
+            "listed_chrono": "1.11.90"
+        },
+        {
+            "number": 14,
+            "horse": "IRISH NICE ELGE",
+            "description": "",
+            "performance": "5.5.1.3.D",
+            "gains": 284370,
+            "trainer": "Lucka STAEL",
+            "jockey": "M. ABRIVARD",
+            "driver": "M. ABRIVARD",
+            "owner": "Stables ART",
+            "listed_chrono": "1.11.10"
+        },
+        {
+            "number": 15,
+            "horse": "COOL KRONOS",
+            "description": "",
+            "performance": "6.4.5.3.7",
+            "gains": 292482,
+            "trainer": "Sté. Ent. Chr. MARTENS",
+            "jockey": "CH. MARTENS",
+            "driver": "CH. MARTENS",
+            "owner": "PH. VAN WEEHAEGHE",
+            "listed_chrono": "1.09.70"
+        },
+        {
+            "number": 16,
+            "horse": "GREG DE NIRO",
+            "description": "",
+            "performance": "4.5.2.2.1",
+            "gains": 294300,
+            "trainer": "F. TERRY",
+            "jockey": "CEDRIC TERRY",
+            "driver": "CEDRIC TERRY",
+            "owner": "EC. SM CRACK",
+            "listed_chrono": "1.12.60"
+        }
+    ],
+    "program_table_mapping_status": "mapped",
+    "rankings": {
+        "favorites": [
+            8,
+            2,
+            11,
+            9,
+            7,
+            5,
+            1
+        ],
+        "form": [
+            8,
+            2,
+            11,
+            9,
+            5
+        ],
+        "class": [
+            5,
+            3,
+            8,
+            9,
+            1
+        ],
+        "progress": [
+            1,
+            3,
+            15,
+            7,
+            14
+        ],
+        "regularity": [
+            3,
+            15,
+            16,
+            12,
+            14
+        ]
+    },
+    "press_odds": {},
+    "press_odds_status": "unavailable",
+    "published_arrival": []
+}
