@@ -891,6 +891,27 @@
       "prediction_id": "2026-11-26|PARIS-VINCENNES|1|2026-11-24T19:00:08.748878+00:00",
       "model_version": "v4-evidence-no-press",
       "telegram_message_id": 278
+    },
+    "2026-11-28|PARIS-VINCENNES|4": {
+      "signature": {
+        "decision": "NO_BET",
+        "candidates_in_order": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "gate_reasons": [
+          "economic_validation_unavailable",
+          "insufficient_verified_history",
+          "low_model_confidence"
+        ]
+      },
+      "sent_at": "2026-11-26T17:49:59.223606+00:00",
+      "prediction_id": "2026-11-28|PARIS-VINCENNES|4|2026-11-26T17:49:58.766898+00:00",
+      "model_version": "v4-evidence-no-press",
+      "telegram_message_id": 279
     }
   }
 }
